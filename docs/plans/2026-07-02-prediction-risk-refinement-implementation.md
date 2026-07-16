@@ -102,3 +102,7 @@ Chạy lại các script phân tích và báo cáo để kiểm tra kết quả 
 3. Chạy xuất báo cáo Dashboard:
    `uv run --with mysql-connector-python --with openpyxl --with numpy scratch/generate_three_recent_courses_report.py`
    *Kết quả mong đợi:* Báo cáo `data/three_recent_courses_report.md` được cập nhật chính xác với các dự báo tương thích.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

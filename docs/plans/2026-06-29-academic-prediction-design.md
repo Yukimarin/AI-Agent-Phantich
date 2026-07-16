@@ -60,3 +60,7 @@ Trong đó:
     - **KS25**: Dự báo kết quả môn Database (ID 183) dựa trên môn JS (ID 124).
     - **KS24**: Dự báo kết quả môn Java Web Service (ID 194) dựa trên môn Java Web Application (ID 177).
 *   So sánh tỷ lệ qua môn dự báo với kết quả thực tế trong DB để chứng minh sai số trung bình (MAE) đạt $< 10\%$.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

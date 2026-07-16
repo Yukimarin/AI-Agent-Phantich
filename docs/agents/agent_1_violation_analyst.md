@@ -45,3 +45,7 @@ ViolationAnalyst đóng vai trò là kiểm toán viên tuân thủ học đư�
 
 ## 5. Mã nguồn liên quan
 - **Script đọc và xử lý chính**: Tích hợp trong [generate_kpi_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_kpi_report.py) và [excel_loader.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/excel_loader.py).
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

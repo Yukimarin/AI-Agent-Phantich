@@ -63,3 +63,7 @@
 ### Manual Verification
 1. Xem báo cáo [report_kpi_gv_tg.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/report_kpi_gv_tg.md), xác nhận điểm KPI tổng hợp của từng GV/TG được tính theo công thức mới.
 2. Mở file [unified_dashboard.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/unified_dashboard.html) trên trình duyệt, thử nghiệm gõ tìm kiếm lớp, chọn lọc khóa học, và xuất dữ liệu ra file CSV để xác nhận tiếng Việt hiển thị chuẩn xác, không lỗi font.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

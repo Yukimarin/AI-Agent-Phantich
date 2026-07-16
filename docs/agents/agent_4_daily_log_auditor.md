@@ -59,3 +59,7 @@ Trong đó:
 ## 5. Mã nguồn liên quan
 - **Script phân tích & fetch Worklane**: [analyze_daily_logs_mcp.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/analyze_daily_logs_mcp.py)
 - **Script sinh dashboard HTML**: [generate_agent4_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_agent4_report.py)
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

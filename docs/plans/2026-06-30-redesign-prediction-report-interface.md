@@ -52,3 +52,7 @@ Rút gọn cấu trúc bảng, loại bỏ các cột điểm trung bình, chỉ
 ### 4.2. [MODIFY] [export_online_reports.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/export_online_reports.py) (Hoặc script convert HTML tương ứng)
 *   Sửa đổi hàm `md_to_html_fallback` để parse cấu trúc Markdown mới và render ra CSS Progress Bars, KPI Cards.
 *   Sử dụng template CSS Linear cao cấp không chứa thẻ script Tailwind CSS.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

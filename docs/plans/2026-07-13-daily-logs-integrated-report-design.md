@@ -27,3 +27,7 @@ Tài liệu này đặc tả thiết kế và kiến trúc cho việc nâng cấ
 ## 4. Tích hợp Báo cáo KPI Lead
 - Điểm Work Score của chế độ xem Tháng 7 sẽ được sử dụng làm điểm Báo cáo ngày chính thức để tính KPI tổng hợp học kỳ cho các thầy cô trong file `report_kpi_gv_tg.md`.
 - Các nhận xét định tính trong `report_kpi_gv_tg.md` sẽ chỉ ghi nhận các vi phạm khai báo vượt định mức thực sự (không còn chứa cảnh báo task lạ).
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

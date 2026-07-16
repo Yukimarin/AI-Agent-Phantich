@@ -38,3 +38,7 @@ Tài liệu này định nghĩa cấu trúc giao diện, cách bố trí biểu 
 ## 🛠️ 3. Thiết kế Kỹ thuật & Đồng bộ Hóa
 *   **Đọc dữ liệu tự động**: Script Python `scratch/generate_unified_dashboard.py` sẽ đọc tệp JSON `scratch/predictions_cv_data.json` và tệp HTML `output/kpi_report.html` để render động toàn bộ trang.
 *   **Tích hợp Pipeline**: Đưa script sinh dashboard vào cuối tệp `scratch/run_pipeline.py` (Bước 4) để tự động hóa hoàn toàn quy trình cập nhật mỗi khi chạy đường ống chính.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

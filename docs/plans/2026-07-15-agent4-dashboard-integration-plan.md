@@ -98,3 +98,7 @@ Expected: Complete execution without errors, culminating in a fully rendered `ou
 ```bash
 git commit -am "feat: verified dynamic unified dashboard with 3 Tailwind tabs"
 ```
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

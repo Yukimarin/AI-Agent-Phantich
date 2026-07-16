@@ -55,3 +55,7 @@ TaskAggregator đóng vai trò là kiểm toán viên kỷ luật tác nghiệp 
 ## 5. Mã nguồn liên quan
 - **Script phân tích lỗi**: [analyze_gvtg_violations.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/analyze_gvtg_violations.py)
 - **Script xuất bản báo cáo**: [generate_agent3_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_agent3_report.py)
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

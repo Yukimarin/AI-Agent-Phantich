@@ -58,3 +58,7 @@ Báo cáo chi tiết sinh viên yếu sẽ chia danh sách của mỗi lớp th�
 1.  [scratch/analyze_student_risk_real.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/analyze_student_risk_real.py): Cập nhật logic lọc sinh viên yếu, tính điểm năng lực môn trước mịn hơn, loại bỏ chốt chặn cấm thi môn trước, phân loại sinh viên thành 2 nhóm trong Markdown đầu ra.
 2.  [scratch/run_academic_predictions_v3.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/run_academic_predictions_v3.py): Đồng bộ hóa logic tính điểm năng lực học tập môn trước mịn hơn cho mô hình dự báo lớp học.
 3.  [scratch/generate_three_recent_courses_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_three_recent_courses_report.py): Đồng bộ hóa logic dự báo lớp học để đảm bảo tỷ lệ dự báo qua môn ở Mục 2 của Dashboard nhất quán với mô hình cá nhân mới.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

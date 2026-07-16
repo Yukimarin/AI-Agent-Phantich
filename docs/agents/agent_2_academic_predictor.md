@@ -68,3 +68,7 @@ $$P_{final} = P_{eligible} \times Multiplier_{env}$$
 - **Script dự báo chính**: [analyze_student_risk_real.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/analyze_student_risk_real.py)
 - **Script xuất bản dashboard**: [export_prediction_dashboard_html.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/export_prediction_dashboard_html.py)
 - **Bộ khung đo đạc sai số**: [evaluation_harness.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/evaluation_harness.py)
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

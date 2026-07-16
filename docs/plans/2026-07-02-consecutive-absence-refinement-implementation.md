@@ -94,3 +94,7 @@ Chạy lại các script phân tích và báo cáo để kiểm tra kết quả 
    `uv run --with mysql-connector-python --with openpyxl --with numpy scratch/generate_three_recent_courses_report.py`
 4. Xuất HTML Dashboard:
    `uv run --with markdown --with requests scratch/export_prediction_html.py`
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

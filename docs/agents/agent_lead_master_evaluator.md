@@ -54,3 +54,7 @@ Trong đó:
 - **Script tính toán chính**: [generate_kpi_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_kpi_report.py)
 - **Script ghép dashboard**: [generate_unified_dashboard.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_unified_dashboard.py)
 - **Đường ống tự động**: [run_pipeline.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/run_pipeline.py)
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

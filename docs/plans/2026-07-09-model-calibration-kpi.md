@@ -92,3 +92,7 @@ Expected: Tạo thành công hai tệp HTML trong thư mục `output/`.
 
 **Step 2: Xác minh trực quan qua Browser**
 - Dùng Browser subagent mở hai tệp HTML này để kiểm tra cấu trúc giao diện, màu sắc cảnh báo (Đỏ/Vàng/Xanh) hiển thị đúng thiết kế premium.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

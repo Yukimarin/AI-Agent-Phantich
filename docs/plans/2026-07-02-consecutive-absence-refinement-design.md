@@ -66,3 +66,7 @@ Duyệt lịch sử điểm danh và bài tập sắp xếp theo thời gian tă
 1.  [scratch/analyze_student_risk_real.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/analyze_student_risk_real.py): Sửa logic tính kỷ luật đa môn, phát hiện bảo lưu, phạt nghỉ/nợ liên tiếp, ước lượng điểm thi và phân bảng Markdown báo cáo sinh viên yếu.
 2.  [scratch/run_academic_predictions_v3.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/run_academic_predictions_v3.py): Đồng bộ hóa mô hình tính toán cá nhân cho mô hình dự báo lớp học. Đồng thời sửa đổi để tính tỷ lệ qua môn dự báo của lớp bằng trung bình cộng xác suất đỗ của từng học viên trong lớp.
 3.  [scratch/generate_three_recent_courses_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_three_recent_courses_report.py): Đồng bộ hóa logic dự báo lớp học tại Mục 1 và Mục 2 của Dashboard sử dụng trung bình cộng xác suất cá nhân thay vì Class-level Model cũ, nhằm đảm bảo số liệu lớp học thay đổi tương ứng và chính xác.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

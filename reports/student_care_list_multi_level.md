@@ -161,3 +161,7 @@
 | K25 | HN-KS25-CNTT8_HL | **Nguyễn Hữu Đại** | **58.6%** | 15.4% | 4.1% | 1 bài | Cận vắng chuyên cần (15.4%) |
 | K25 | HN-KS25-CNTT8_HL | **Hà Bích Ngọc** | **60.0%** | 15.4% | 4.1% | 1 bài | Cận vắng chuyên cần (15.4%) |
 | K25 | HN-KS25-CNTT8_HL | **Nguyễn Tùng Dương** | **61.0%** | 15.4% | 4.1% | 1 bài | Cận vắng chuyên cần (15.4%) |
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

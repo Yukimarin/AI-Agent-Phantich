@@ -88,3 +88,7 @@
 
 **Step 2: Đăng ký Scheduled Job trong Agent**
 - Gọi tool `default_api:schedule` của hệ thống để đặt lịch Cron Job hệ thống lúc 7h sáng hàng ngày (`0 7 * * *`).
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

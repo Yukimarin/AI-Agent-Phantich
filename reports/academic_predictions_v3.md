@@ -228,3 +228,7 @@ Bảng dưới đây dự báo tỷ lệ qua môn của các lớp học nếu �
 | K24 | HN-KS24-CNTT4 | [IT210 - K24] - Java Web  | 29 | 72.7% | **72.7%** | 0.0% |
 | K24 | HN-KS24-CNTT4 | [SKL01 - CNTT] Kỹ năng là | 32 | 93.0% | **93.0%** | 0.0% |
 | K24 | HN-KS24-CNTT5 | IT105-K24 Phân tích thiết | 28 | 64.7% | **0.0%** | **-64.7%** |
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

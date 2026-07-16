@@ -41,3 +41,7 @@ Trong đó:
 ## 5. Tích hợp báo cáo
 - Các task khai báo vượt định mức hoặc task lạ sẽ được liệt kê chi tiết trong file phân tích `data/daily_log_analysis.json`.
 - Agent Lead sẽ tự động chèn nhận xét định tính (ví dụ: *"Khai báo vượt định mức ở task X thực tế Y giờ so với định mức Z giờ"*) vào phần đánh giá chi tiết của GV/TG trên báo cáo Markdown `report_kpi_gv_tg.md`.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

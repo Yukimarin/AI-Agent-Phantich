@@ -126,3 +126,6 @@ This file acts as the persistent memory for the AI agent working on the training
 - [2026-07-16] **Bổ sung Trần Minh Cường**:
   - Tích hợp thầy Trần Minh Cường vào danh sách theo dõi của Agent 4 (`target_groups` trong `analyze_daily_logs_mcp.py` và `generate_agent4_report.py`) thuộc Khối CNTT HN KS25.
   - Cập nhật `generate_kpi_report.py` để phân thầy Trần Minh Cường vào Khối CNTT của Agent 5, nạp tên hiển thị đẹp mắt và chạy lại pipeline thành công.
+- [2026-07-16] **Chuẩn hóa Wiki-links & Đồng bộ GitHub**:
+  - Chuyển đổi toàn bộ liên kết tĩnh sang Wiki-links Obsidian tương đối (dạng `[[docs/super_memory]]`, `[[data/report_kpi_gv_tg]]`), khắc phục đứt gãy để kích hoạt thành công Graph view.
+  - Cấu hình `.gitignore` loại trừ tệp lớn, khởi tạo Git local, và đẩy code lên remote GitHub `https://github.com/Yukimarin/AI-Agent-Phantich` nhánh `main` thành công.

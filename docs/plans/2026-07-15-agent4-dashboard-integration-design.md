@@ -41,3 +41,7 @@ Giao diện Tab 3 được chia làm 3 phân khu chức năng:
 - **Tương thích giao diện**: Kiểm tra hiển thị giao diện Tab 3 ở cả hai chế độ Sáng (Light) và Tối (Dark).
 - **Tương tác**: Kiểm tra việc chuyển đổi giữa 2 Sub-tab (Tuần/Tháng), thanh tìm kiếm tên, các nút lọc theo Khối/Nhóm (bảng dữ liệu và biểu đồ bar chart phải tự động cập nhật tương ứng).
 - **Lập lịch tự động**: Đảm bảo pipeline sinh báo cáo tổng hợp chạy thành công mà không gây lỗi cú pháp Javascript.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

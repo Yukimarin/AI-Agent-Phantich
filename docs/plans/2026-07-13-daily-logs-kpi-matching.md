@@ -197,3 +197,7 @@ Expected: PASS, tất cả 6 file HTML được cập nhật và lưu trữ đú
 git add scratch/run_pipeline.py
 git commit -m "feat: run final integrated pipeline with time compliance"
 ```
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

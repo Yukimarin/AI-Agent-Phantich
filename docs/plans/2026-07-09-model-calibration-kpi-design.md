@@ -94,3 +94,7 @@ graph TD
 3.  **Dashboard HTML premium**:
     *   Dashboard kiểm chứng và dự đoán lớp học: `output/class_predictions_dashboard.html`.
     *   Dashboard danh sách sinh viên nguy cơ: `output/student_risk_dashboard.html`.
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]

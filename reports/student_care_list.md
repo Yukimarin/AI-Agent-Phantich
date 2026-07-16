@@ -157,3 +157,7 @@
 | HCM-KS24-CNTT2 | **Cao Tất Thành** | 582 | 85.0 | 13.8% | 4.9% | 10 | 83.2% | 🔴 Chưa nộp hoặc trượt Project, Cấm thi: Vi phạm Elearning quá nặng (10.0 bài) |
 | HCM-KS24-CNTT2 | **Cao Tất Thành** | 582 | 80.0 | 100.0% | 0.0% | 18 | 82.0% | 🔴 Chưa nộp hoặc trượt Project, Cấm thi: Vắng học quá nặng (100.0%), Cấm thi: Vi phạm Elearning quá nặng (18.0 bài) |
 | HCM-KS24-CNTT2 | **Cao Tất Thành** | 582 | 19.2 | 53.2% | 18.4% | 0 | 46.0% | 🔴 Cấm thi: Vắng học quá nặng (53.2%) |
+
+
+---
+Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]
