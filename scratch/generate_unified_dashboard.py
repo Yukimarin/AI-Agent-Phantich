@@ -5,10 +5,10 @@ import re
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
-def extract_body_and_js(filepath):
+def extract_body_style_and_js(filepath, prefix=""):
     if not os.path.exists(filepath):
         print(f"Warning: File {filepath} không tồn tại để trích xuất.")
-        return "", ""
+        return "", "", ""
         
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
@@ -20,6 +20,22 @@ def extract_body_and_js(filepath):
     # Loại bỏ thẻ script khỏi body_html để tránh thực thi đúp
     body_html = re.sub(r"<script[^>]*?>.*?</script>", "", body_html, flags=re.DOTALL | re.IGNORECASE)
     
+    # Trích xuất styles
+    style_matches = re.findall(r"<style[^>]*?>(.*?)</style>", content, re.DOTALL | re.IGNORECASE)
+    combined_style = "\n".join(style_matches)
+    
+    # Cô lập CSS bằng prefix để tránh xung đột
+    if prefix and combined_style:
+        # Loại bỏ :root, html, body
+        combined_style = re.sub(r':root\s*\{[^}]*\}', '', combined_style, flags=re.DOTALL)
+        combined_style = combined_style.replace('html', prefix)
+        combined_style = combined_style.replace('body', prefix)
+        selectors = ['.card', '.header', '.logo-section', '.logo-box', '.logo-title', '.logo-subtitle', '.week-badge', '.markdown-body', 'table', 'th', 'td', 'tr', 'h1', 'h2', 'h3', 'h4', 'ul', 'li', 'p', 'a']
+        for sel in selectors:
+            combined_style = combined_style.replace(sel + ' ', prefix + ' ' + sel + ' ')
+            combined_style = combined_style.replace(sel + '{', prefix + ' ' + sel + '{')
+            combined_style = combined_style.replace(sel + ',', prefix + ' ' + sel + ',')
+            
     # Trích xuất các script độc lập
     script_matches = re.findall(r"<script[^>]*?>(.*?)</script>", content, re.DOTALL | re.IGNORECASE)
     scripts = []
@@ -34,7 +50,7 @@ def extract_body_and_js(filepath):
         # Cách ly các biến JS của các tab con bằng block IIFE tự chạy
         combined_js = "\n".join([f"(function() {{\n{s}\n}})();" for s in scripts])
         
-    return body_html, combined_js
+    return body_html, combined_style, combined_js
 
 def parse_kpi_report():
     kpi_list = []
@@ -105,12 +121,62 @@ def main():
     print("Trích xuất và biên dịch SPA Dashboard Native không dùng Iframe...")
 
     # Trích xuất nội dung các tab con
-    body_a1, js_a1 = extract_body_and_js("output/1_kpi_report.html")
-    body_a2, js_a2 = extract_body_and_js("output/2_class_predictions_dashboard.html")
-    body_a3, js_a3 = extract_body_and_js("output/3_gvtg_violations_report.html")
-    body_a4, js_a4 = extract_body_and_js("output/4_daily_logs_report.html")
+    body_a1, style_a1, js_a1 = extract_body_style_and_js("output/1_kpi_report.html", "#tab-agent1-container")
+    body_a2, style_a2, js_a2 = extract_body_style_and_js("output/2_class_predictions_dashboard.html", "#tab-agent2-pred-container")
+    body_a3, style_a3, js_a3 = extract_body_style_and_js("output/3_gvtg_violations_report.html", "#tab-agent3-container")
+    body_a4, style_a4, js_a4 = extract_body_style_and_js("output/4_daily_logs_report.html", "#tab-agent4-container")
 
     kpis = parse_kpi_report()
+    
+    # Tính toán thống kê theo phòng ban
+    dept_stats = {}
+    for item in kpis:
+        dept = item["dept"]
+        if dept not in dept_stats:
+            dept_stats[dept] = {"count": 0, "sum": 0.0, "max_score": 0.0, "best_staff": ""}
+        dept_stats[dept]["count"] += 1
+        dept_stats[dept]["sum"] += item["score_total"]
+        if item["score_total"] > dept_stats[dept]["max_score"]:
+            dept_stats[dept]["max_score"] = item["score_total"]
+            dept_stats[dept]["best_staff"] = item["name"]
+            
+    # Tạo các card HTML thống kê phòng ban
+    dept_cards_html = ""
+    colors = {
+        "Khối CNTT": "from-blue-500 to-blue-700 dark:from-blue-650 dark:to-blue-850",
+        "Khối QTKD": "from-emerald-500 to-emerald-700 dark:from-emerald-650 dark:to-emerald-850",
+        "Khối Ngoại ngữ và kỹ năng mềm": "from-amber-500 to-amber-700 dark:from-amber-650 dark:to-amber-850",
+        "Khối QLCLĐT": "from-purple-500 to-purple-700 dark:from-purple-650 dark:to-purple-850"
+    }
+    icons = {
+        "Khối CNTT": "fa-laptop-code",
+        "Khối QTKD": "fa-chart-line",
+        "Khối Ngoại ngữ và kỹ năng mềm": "fa-language",
+        "Khối QLCLĐT": "fa-shield-halved"
+    }
+    
+    for dept_name in ["Khối CNTT", "Khối QTKD", "Khối Ngoại ngữ và kỹ năng mềm", "Khối QLCLĐT"]:
+        stats = dept_stats.get(dept_name, {"count": 0, "sum": 0.0, "max_score": 0.0, "best_staff": "N/A"})
+        avg_score = stats["sum"] / stats["count"] if stats["count"] > 0 else 0.0
+        color = colors.get(dept_name, "from-slate-500 to-slate-700")
+        icon = icons.get(dept_name, "fa-users")
+        short_name = dept_name.replace("Khối ", "")
+        
+        dept_cards_html += f"""
+        <div class="bg-gradient-to-br {color} rounded-3xl p-5 text-white shadow-sm flex items-center justify-between transition-transform hover:scale-[1.02] duration-300">
+            <div>
+                <p class="text-[10px] font-black uppercase tracking-wider opacity-90">{short_name}</p>
+                <h3 class="text-2xl font-black mt-1 font-mono">{avg_score:.2f} <span class="text-xs font-normal opacity-85">KPI TB</span></h3>
+                <div class="flex flex-col gap-0.5 mt-2 text-[10px] opacity-90 font-medium">
+                    <span><i class="fas fa-user-friends mr-1"></i>{stats["count"]} Thầy/Cô</span>
+                    <span class="truncate max-w-[150px]"><i class="fas fa-award mr-1"></i>Tốt nhất: {stats["best_staff"]}</span>
+                </div>
+            </div>
+            <div class="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center text-white text-lg">
+                <i class="fas {icon}"></i>
+            </div>
+        </div>
+        """
     
     # Tạo các dòng bảng xếp hạng Leaderboard
     leaderboard_html = ""
@@ -236,6 +302,12 @@ def main():
         .spa-tab-content .pb-6.mb-8.border-b {{
             display: none !important;
         }}
+        
+        /* Nhúng CSS con đã được cô lập */
+        {style_a1}
+        {style_a2}
+        {style_a3}
+        {style_a4}
     </style>
 </head>
 <body class="min-h-screen pb-10">
@@ -289,6 +361,11 @@ def main():
         <!-- TAB 1: KPI TỔNG HỢP (KPI LEADERBOARD) -->
         <!-- ========================================== -->
         <div id="tab-kpi-container" class="spa-tab-content transition-opacity duration-300">
+            <!-- Thống kê KPI các Phòng ban -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                {dept_cards_html}
+            </div>
+
             <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm mb-6">
                 <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
                     <div>
@@ -443,6 +520,20 @@ def main():
             
             event.currentTarget.classList.remove("text-slate-500", "dark:text-slate-400", "hover:bg-slate-200/50");
             event.currentTarget.classList.add("bg-indigo-600", "text-white", "dark:bg-indigo-500");
+        }}
+        function toggleRiskRows(panelId) {{
+            const panel = document.getElementById('risk-panel-' + panelId);
+            const icon = document.getElementById('icon-' + panelId);
+            if (panel) {{
+                const isHidden = panel.classList.toggle('hidden');
+                if (icon) {{
+                    if (isHidden) {{
+                        icon.style.transform = 'rotate(0deg)';
+                    }} else {{
+                        icon.style.transform = 'rotate(180deg)';
+                    }}
+                }}
+            }}
         }}
     </script>
 </body>

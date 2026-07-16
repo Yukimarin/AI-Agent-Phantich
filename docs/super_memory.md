@@ -129,3 +129,7 @@ This file acts as the persistent memory for the AI agent working on the training
 - [2026-07-16] **Chuẩn hóa Wiki-links & Đồng bộ GitHub**:
   - Chuyển đổi toàn bộ liên kết tĩnh sang Wiki-links Obsidian tương đối (dạng `[[docs/super_memory]]`, `[[data/report_kpi_gv_tg]]`), khắc phục đứt gãy để kích hoạt thành công Graph view.
   - Cấu hình `.gitignore` loại trừ tệp lớn, khởi tạo Git local, và đẩy code lên remote GitHub `https://github.com/Yukimarin/AI-Agent-Phantich` nhánh `main` thành công.
+- [2026-07-16] **Thiết lập Bản đồ Tri thức (MOC)**:
+  - Tạo cổng kết nối trung tâm `docs/knowledge_map.md` phân nhóm 35+ tệp ghi chú trong Vault.
+  - Sửa đổi tệp quy chế lỗi encoding thành `data/QUY_DINH_KHUNG_CHE_TAI_VA_KHEN_THUONG_NANG_SUAT_DAO_TAO.md` sạch sẽ.
+  - Phát triển script `scratch/link_all_nodes.py` tự động chèn backlinks `[[docs/knowledge_map|Bản đồ Tri thức dự án]]` cho toàn bộ các ghi chú con rời rạc thành công và đồng bộ lên GitHub.

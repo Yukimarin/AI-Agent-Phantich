@@ -65,13 +65,9 @@ target_groups = {
         "Nguyễn Thị Hồng Minh",
         "Đặng Quỳnh Trang",
         "Nguyễn Ngọc Vân Khanh",
-        "Triệu Thị Thanh Tâm",
-        "Lê Thành Ngọc",
-        "Nguyễn Thị Như Quỳnh",
-        "Lê Nhựt Mi",
-        "Lê Thị Bảo Yến"
+        "Lê Thành Ngọc"
     ],
-    "Khối CNTT - Cơ sở HN (KS25)": [
+    "Khối CNTT": [
         "Trịnh Quốc Hai",
         "Nguyễn Quảng An",
         "Lương Quốc Tuấn",
@@ -79,47 +75,48 @@ target_groups = {
         "Lại Trung Lâm",
         "Lâm Tùng Dương",
         "Ngọ Văn Quý",
-        "Trần Minh Cường"
-    ],
-    "Khối CNTT - Cơ sở HN (KS24)": [
+        "Trần Minh Cường",
         "Bùi Thanh Hải",
         "Mai Xuân Chinh",
         "Đinh Thành Nam",
         "Nguyễn Công Hưởng",
         "Phạm Tuấn Bình",
-        "Nguyễn Bá Minh Đạo"
-    ],
-    "Khối CNTT - Cơ sở HCM": [
+        "Nguyễn Bá Minh Đạo",
         "Lê Hà Thanh Sang",
         "Phạm Viết Hùng",
         "Trần Quốc Tuấn",
-        "Lưu Xuân Hoàng Nguyên",
-        "Nguyễn Đức Minh",
-        "Nguyễn Ngọc Sơn",
-        "Phan Ngọc Tài",
-        "Đặng Minh Luân"
+        "Nguyễn Văn A",
+        "Nguyễn Thanh Bình Phước"
     ],
-    "Khối Ngoại ngữ - Kỹ năng mềm": [
+    "Khối Ngoại ngữ và kỹ năng mềm": [
         "Giáp Thị Minh Hằng",
         "Lò Thị Ngọc Anh",
         "Lê Thị Đỏ",
-        "Ngô Quang Huấn"
+        "Ngô Quang Huấn",
+        "Lê Nhựt Mi",
+        "Lê Thị Bảo Yến",
+        "Triệu Thị Thanh Tâm"
     ],
-    "Khối Quản lý Đào tạo (QLĐT)": [
+    "Khối QLCLĐT": [
         "Nguyễn Thị Tươi",
         "Trần Thị Mỹ Phước",
         "Nguyễn Huyền Trang",
-        "Nguyễn Xuân Bách"
+        "Nguyễn Xuân Bách",
+        "Đặng Minh Luân",
+        "Nguyễn Ngọc Sơn",
+        "Lưu Xuân Hoàng Nguyên",
+        "Nguyễn Đức Minh",
+        "Nguyễn Thị Như Quỳnh",
+        "Phan Ngọc Tài",
+        "Trần Thị B"
     ]
 }
 
 groups_ordered = [
-    "Khối QTKD", 
-    "Khối CNTT - Cơ sở HN (KS25)", 
-    "Khối CNTT - Cơ sở HN (KS24)", 
-    "Khối CNTT - Cơ sở HCM", 
-    "Khối Ngoại ngữ - Kỹ năng mềm",
-    "Khối Quản lý Đào tạo (QLĐT)"
+    "Khối CNTT",
+    "Khối QTKD",
+    "Khối Ngoại ngữ và kỹ năng mềm",
+    "Khối QLCLĐT"
 ]
 
 # Process project issues & Critical Alerts
