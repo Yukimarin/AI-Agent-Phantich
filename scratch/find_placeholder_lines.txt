@@ -1,0 +1,6 @@
+Line 778: <p>$$\text{CMI}<em _text_prev="\text{prev">{X} = 0.5 \times X</em> + 15.0\%$$}} - X_{\text{curr}</p>
+Line 780: - $X_{\text{prev}}$ là tỷ lệ vi phạm của lớp ở môn học trước.
+Line 781: - $X_{\text{curr}}$ là tỷ lệ vi phạm của lớp ở môn học hiện tại.
+Line 782: - Hằng số $+15.0\%$ để tưởng thưởng công bằng cho nhân sự duy trì kỷ luật lớp học ở mức tốt ($X_{\text{prev}} = 0\%$, $X_{\text{curr}} = 0\%$).</p>
+Line 782: - Hằng số $+15.0\%$ để tưởng thưởng công bằng cho nhân sự duy trì kỷ luật lớp học ở mức tốt ($X_{\text{prev}} = 0\%$, $X_{\text{curr}} = 0\%$).</p>
+Line 7718: csvContent += `"${s.class_name}","${s.student_id}","${s.full_name}",${s.att.toFixed(1)},${(100.0 - s.hw).toFixed(1)},${s.el},${s.p_final.toFixed(1)},"${riskLabel}","${reasons}"\n`;

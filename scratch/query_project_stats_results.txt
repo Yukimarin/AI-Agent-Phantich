@@ -1,0 +1,117 @@
+=== DỮ LIỆU BÁO CÁO NGÀY (DAILY CLASS REPORT) ===
+Khoảng ngày báo cáo: 2026-05-26 đến 2026-07-07. Tổng số báo cáo ngày: 736
+
+Thống kê báo cáo ngày Tuần 28 (06/07 - 12/07/2026):
+Ngày 2026-07-06: 17 lớp học, Vắng 125 SV, Nợ BT 35 SV, Chậm EL 48 SV, Tổng 665 SV
+Ngày 2026-07-07: 16 lớp học, Vắng 111 SV, Nợ BT 30 SV, Chậm EL 42 SV, Tổng 584 SV
+
+=== CẤU TRÚC BẢNG LỚP HỌC & MÔN HỌC ===
+Các bảng trong MySQL liên quan tới Course/Class/Student/User:
+  class_course
+  class_group
+  class_minutes
+  class_officer_bonus
+  classes
+  classes_students
+  classes_users
+  classes_users_user
+  config_class
+  course_repeat_request
+  course_retake_request
+  course_semester
+  courses
+  daily_class_report
+  process_student_study
+  project_students
+  quiz_classes
+  session_class_quiz_status
+  session_student
+  student_answers
+  student_class
+  students
+  systems_users
+  take_care_student
+  user
+  user_roles
+  user_roles_roles
+
+Table courses:
+  id (int)
+  name (varchar(255))
+  hour (int)
+  created_at (timestamp)
+  course_cover (varchar(255))
+  description (longtext)
+  position (int)
+  is_visible (tinyint)
+  scoring_method (enum('FULL_PROJECT','HACKATHON_30_PROJECT_70','AVERAGE_PROJECT_AND_TEST','OJT_50RPOINTS_50PROJECT','PROJECT_70_QUIZZI_30','FIX_DSA_SCORING','SKL_30_HKT_70_FULL_PROJECT','REACT_30_HKT_70_FULL_PROJECT','ONLY_PROJECT','SEL101','ATTENDANCE_QUIZ_HACKATHON_TEST','ATTENDANCE_QUIZ_HACKATHON_INTERVIEW_TEST','ATTENDANCE_QUIZ_HACKATHON_INTERVIEW_TEST_PROJECT','QTKD_TU_LUAN','HACKATHON_PROJECT'))
+  course_code (varchar(255))
+  exam_type (enum('PROJECT','TỰ LUẬN'))
+  whitelist (tinyint)
+  updated_at (timestamp)
+  updated_by_id (int)
+  scoring_formula (text)
+  Sample rows:
+    (16, 'IT102-K24', 27, datetime.datetime(2024, 8, 13, 14, 26, 38), None, None, 2, 1, 'FULL_PROJECT', 'IT102-K24', 'PROJECT', 0, datetime.datetime(2026, 1, 14, 11, 50, 29), 13, None)
+    (17, 'IT103-K24', 30, datetime.datetime(2024, 8, 24, 7, 49, 21), None, None, 3, 1, 'HACKATHON_30_PROJECT_70', 'IT103-K24', 'PROJECT', 0, datetime.datetime(2026, 1, 14, 11, 50, 26), 13, None)
+    (18, 'IT101-K24', 16, datetime.datetime(2024, 8, 26, 2, 33, 7), None, None, 1, 1, 'FULL_PROJECT', 'IT101-K24', 'PROJECT', 0, datetime.datetime(2026, 1, 14, 11, 50, 23), 13, None)
+
+Table classes:
+  id (int)
+  name (varchar(255))
+  class_code (varchar(255))
+  created_by (timestamp)
+  created_at (timestamp)
+  updated_at (timestamp)
+  updated_by (timestamp)
+  specializes_id (int)
+  type (enum('REGULAR','RETAKE'))
+  Sample rows:
+    (8, 'HN-ENG-KS24A-PTIT', 'HN-ENG-KS24A', None, datetime.datetime(2024, 9, 26, 15, 21, 32), None, None, 8, 'REGULAR')
+    (9, 'HN-ENG-KS24B-PTIT', 'HN-ENG-KS24B', None, datetime.datetime(2024, 9, 26, 15, 21, 47), None, None, 8, 'REGULAR')
+    (12, 'HN-ENG-KS24C-PTIT', 'HN-ENG-KS24C', None, datetime.datetime(2024, 9, 26, 15, 22, 28), None, None, 8, 'REGULAR')
+
+Table students:
+  id (int)
+  student_code (varchar(255))
+  full_name (varchar(255))
+  phone (varchar(255))
+  email (varchar(255))
+  password (varchar(255))
+  gender (int)
+  identity_card (varchar(255))
+  address (varchar(255))
+  hometown (varchar(255))
+  languages (varchar(255))
+  facebook_address (varchar(255))
+  created_by (timestamp)
+  created_at (timestamp)
+  updated_at (timestamp)
+  updated_by (timestamp)
+  date_of_birth (date)
+  status (enum('ĐANG HỌC','BỎ HỌC','TỐT NGHIỆP','TỐT NGHIỆP SỚM','BẢO LƯU','CHỜ BẢO LƯU','ĐÌNH CHỈ'))
+  avatar (longtext)
+  role (varchar(255))
+  location (varchar(255))
+  system_id (int)
+  is_locked (tinyint)
+  locked_until (timestamp)
+  Sample rows:
+    (4, 'RE3698', 'Nguyễn Ánh Viên', '0325698741', 'vien@gmail.com', '$2b$10$mTQ2OUgQRpn/gqrSENSLpucLnYujBL.7PJC4w7/UTjiI.2goIJ1xC', 0, None, '', None, None, None, None, datetime.datetime(2024, 6, 14, 11, 22, 2), None, None, datetime.date(2024, 9, 11), 'ĐANG HỌC', 'http://res.cloudinary.com/dzg2u23iy/image/upload/v1727165691/n8iqhc6lmcdois99vvca.png', 'student', 'HN', 9, 0, None)
+    (67, 'PTIT-HN-003', 'Nguyễn Thị Huyền Diệp', '0982369910', 'Diepnd2006@gmail.com', '$2b$10$vQe5pNmrK1YsQNLneuncKeZy7Iysyj3NPKbDXXro7H60OB2G2Z/HC', 1, '001306031167', None, None, None, None, None, datetime.datetime(2024, 9, 16, 16, 4, 55), None, None, datetime.date(2006, 5, 10), 'ĐANG HỌC', 'http://res.cloudinary.com/dzg2u23iy/image/upload/v1750067863/rbdo20ymuwoyrvrfbqy8.jpg', 'student', 'HN', 21, 0, None)
+    (68, 'PTIT-HN-004', 'Đỗ Tiến Đạt', '0338281662', 'dat.70.k3@gmail.com', '$2b$10$y2VenQclsY.DYbGt.4x1h.8OZwHujC5bNxKvfV6VFDbqxoGBACtVS', 0, '001206025302', None, None, None, None, None, datetime.datetime(2024, 9, 16, 16, 4, 55), None, None, datetime.date(2006, 8, 2), 'ĐANG HỌC', 'http://res.cloudinary.com/dzg2u23iy/image/upload/v1750050854/kyvmdcruenpm7zdacgef.jpg', 'student', 'HN', 8, 0, None)
+
+Table student_class:
+  id (int)
+  is_active (tinyint)
+  created_at (timestamp)
+  status (varchar(255))
+  student_id (int)
+  class_id (int)
+  updated_by (int)
+  Sample rows:
+    (32, 1, datetime.datetime(2024, 9, 26, 18, 25, 52), 'ĐANG HỌC', 711, 16, None)
+    (33, 1, datetime.datetime(2024, 9, 26, 18, 25, 52), 'ĐANG HỌC', 712, 16, None)
+    (34, 1, datetime.datetime(2024, 9, 26, 18, 25, 52), 'ĐANG HỌC', 710, 16, None)
+
+Queries executed successfully.

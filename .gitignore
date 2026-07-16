@@ -1,0 +1,19 @@
+# Database and binary data
+data/mysql_data/
+data/mysql_data_97/
+*.db
+*.db-journal
+*.xlsx
+*.docx
+
+# Obsidian local config
+.obsidian/
+
+# Python temporary
+__pycache__/
+*.pyc
+.venv/
+.uv/
+
+# Gemini/Antigravity artifacts & logs
+.gemini/

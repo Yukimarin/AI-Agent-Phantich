@@ -1,0 +1,1598 @@
+{
+    "HN-KS24-CNTT1": {
+        "total_students": 36,
+        "risk_count": 10,
+        "risk_rate": 27.77777777777778,
+        "risk_students": [
+            {
+                "code": "PTIT - 02",
+                "name": "Tôn Phạm Quang Huy",
+                "att": 131.818,
+                "hw": 31.8182,
+                "el": 0.0,
+                "rp": 40.5,
+                "p_eligible": 21.767723999999998,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (131.8%), Cảnh báo nợ bài tập (31.8% xong), Cảnh báo Rpoint thấp (40.5/80), Xác suất đỗ thấp (21.8%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "PTIT",
+                "name": "Lê Tiến Đức",
+                "att": 34.0909,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 76.45455,
+                "p_eligible": 48.129935333333336,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (34.1%), Cảnh báo Rpoint thấp (76.5/80), Xác suất đỗ thấp (48.1%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-054",
+                "name": "Mai Duy Anh",
+                "att": 45.4545,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 67.27275,
+                "p_eligible": 41.182772400000005,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (45.5%), Cảnh báo Rpoint thấp (67.3/80), Xác suất đỗ thấp (41.2%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "PTIT-HN-220",
+                "name": "Nguyễn Văn Tùng",
+                "att": 45.4545,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 77.27275,
+                "p_eligible": 42.594566666666665,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (45.5%), Cảnh báo Rpoint thấp (77.3/80), Xác suất đỗ thấp (42.6%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-248",
+                "name": "Nguyễn Hoàng Phúc",
+                "att": 25.0,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 78.0,
+                "p_eligible": 35.52027600000001,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (25.0%), Cảnh báo Rpoint thấp (78.0/80), Xác suất đỗ thấp (35.5%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "STU-PTIT-HN-233",
+                "name": "Hoàng Cương Cát",
+                "att": 43.1818,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 69.4091,
+                "p_eligible": 49.521192600000006,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (43.2%), Cảnh báo Rpoint thấp (69.4/80), Xác suất đỗ thấp (49.5%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "PTIT-HN-138",
+                "name": "Nguyễn Sỹ Trung",
+                "att": 65.9091,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 57.04545,
+                "p_eligible": 48.8277042,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (65.9%), Cảnh báo Rpoint thấp (57.0/80), Xác suất đỗ thấp (48.8%) [Cảnh báo] Nghỉ liên tiếp (11 buổi)"
+            },
+            {
+                "code": "PTIT - HN",
+                "name": "Lê Duy Minh",
+                "att": 47.7273,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 68.13635,
+                "p_eligible": 40.96196095199999,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (47.7%), Cảnh báo Rpoint thấp (68.1/80), Xác suất đỗ thấp (41.0%) [Cảnh báo] Nghỉ liên tiếp (2 buổi) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            },
+            {
+                "code": "PTIT-HN-136",
+                "name": "Trần Quang Hiệp",
+                "att": 27.2727,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 80.36365,
+                "p_eligible": 49.60760933333334,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (27.3%), Xác suất đỗ thấp (49.6%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-147",
+                "name": "Vũ Nguyễn Hoàng Dương",
+                "att": 38.6364,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 74.1818,
+                "p_eligible": 48.979160560000004,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (38.6%), Cảnh báo Rpoint thấp (74.2/80), Xác suất đỗ thấp (49.0%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            }
+        ],
+        "teacher": "Bùi Thanh Hải"
+    },
+    "HN-KS24-CNTT2": {
+        "total_students": 39,
+        "risk_count": 0,
+        "risk_rate": 0.0,
+        "risk_students": [],
+        "teacher": "Hồ Xuân Hùng"
+    },
+    "HN-KS24-CNTT3": {
+        "total_students": 42,
+        "risk_count": 14,
+        "risk_rate": 33.33333333333333,
+        "risk_students": [
+            {
+                "code": "PTIT-HNK23-027",
+                "name": "Đặng Tô Ngọc Dũng",
+                "att": 9.09091,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 85.954545,
+                "p_eligible": 39.96829980000001,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (40.0%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-172",
+                "name": "Nguyễn Ngọc Thanh",
+                "att": 36.3636,
+                "hw": 90.9091,
+                "el": 0.0,
+                "rp": 66.8182,
+                "p_eligible": 31.535006800000005,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (36.4%), Cảnh báo Rpoint thấp (66.8/80), Xác suất đỗ thấp (31.5%) [Cảnh báo] Học viên mới / quay lại sau bảo lưu"
+            },
+            {
+                "code": "PTIT-HN-151",
+                "name": "Hoàng Trung Dũng",
+                "att": 29.5455,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 70.22725,
+                "p_eligible": 32.8099915,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (29.5%), Cảnh báo Rpoint thấp (70.2/80), Xác suất đỗ thấp (32.8%) [Cảnh báo] Học viên mới / quay lại sau bảo lưu"
+            },
+            {
+                "code": "PTIT-HN-273",
+                "name": "Nguyễn Hoàng Nhật",
+                "att": 31.8182,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 69.0909,
+                "p_eligible": 37.695017433333334,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (31.8%), Cảnh báo Rpoint thấp (69.1/80), Xác suất đỗ thấp (37.7%) [Cảnh báo] Học viên mới / quay lại sau bảo lưu"
+            },
+            {
+                "code": "PTIT-HN-185",
+                "name": "Lê Thành Long",
+                "att": 9.09091,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 80.454545,
+                "p_eligible": 40.81522899666667,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (40.8%) [Cảnh báo] Học viên mới / quay lại sau bảo lưu"
+            },
+            {
+                "code": "PTIT-HN-155",
+                "name": "Hà Quang Huy",
+                "att": 15.9091,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 85.04545,
+                "p_eligible": 48.90975466666667,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (48.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HNK23-019",
+                "name": "Trịnh Khắc Hưng",
+                "att": 20.4545,
+                "hw": 50.0,
+                "el": 0.0,
+                "rp": 74.77275,
+                "p_eligible": 34.510008500000005,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (20.5%), Cảnh báo nợ bài tập (50.0% xong), Cảnh báo Rpoint thấp (74.8/80), Xác suất đỗ thấp (34.5%) [Cảnh báo] Học viên mới / quay lại sau bảo lưu"
+            },
+            {
+                "code": "PTIT-HN-0615",
+                "name": "Đỗ Thảo Minh",
+                "att": 9.09091,
+                "hw": 90.9091,
+                "el": 0.0,
+                "rp": 88.454545,
+                "p_eligible": 49.00241646666667,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (49.0%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-205",
+                "name": "Nguyễn Tiến Thành",
+                "att": 2.27273,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 93.863635,
+                "p_eligible": 48.541409400000006,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (48.5%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-159",
+                "name": "Hoàng Thiên Sơn",
+                "att": 25.0,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 72.5,
+                "p_eligible": 49.025166666666664,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (25.0%), Cảnh báo Rpoint thấp (72.5/80), Xác suất đỗ thấp (49.0%) [Cảnh báo] Học viên mới / quay lại sau bảo lưu"
+            },
+            {
+                "code": "PTIT-HNK23-050",
+                "name": "Ngô Quang Anh",
+                "att": 59.0909,
+                "hw": 68.1818,
+                "el": 0.0,
+                "rp": 55.45455,
+                "p_eligible": 35.645460033333336,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (59.1%), Cảnh báo nợ bài tập (68.2% xong), Cảnh báo Rpoint thấp (55.5/80), Xác suất đỗ thấp (35.6%) [Cảnh báo] Học viên mới / quay lại sau bảo lưu"
+            },
+            {
+                "code": "PTIT-HN-237",
+                "name": "Đỗ Chung Hiếu",
+                "att": 29.5455,
+                "hw": 86.3636,
+                "el": 0.0,
+                "rp": 75.22725,
+                "p_eligible": 34.48599000000001,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (29.5%), Cảnh báo Rpoint thấp (75.2/80), Xác suất đỗ thấp (34.5%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-275",
+                "name": "Phan Phước Anh",
+                "att": 86.3636,
+                "hw": 22.7273,
+                "el": 0.0,
+                "rp": 41.8182,
+                "p_eligible": 22.185006800000004,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (86.4%), Cảnh báo nợ bài tập (22.7% xong), Cảnh báo Rpoint thấp (41.8/80), Xác suất đỗ thấp (22.2%) [Cảnh báo] Học viên mới / quay lại sau bảo lưu"
+            },
+            {
+                "code": "PTIT-HNK23-004",
+                "name": "Nguyễn Minh Hoàng",
+                "att": 20.4545,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 74.77275,
+                "p_eligible": 40.723862666666676,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (20.5%), Cảnh báo Rpoint thấp (74.8/80), Xác suất đỗ thấp (40.7%) [Cảnh báo] Học viên mới / quay lại sau bảo lưu"
+            }
+        ],
+        "teacher": "Phạm Tuấn Bình"
+    },
+    "HN-KS24-CNTT4": {
+        "total_students": 32,
+        "risk_count": 5,
+        "risk_rate": 15.625,
+        "risk_students": [
+            {
+                "code": "PTIT-HNK23-005",
+                "name": "Nguyễn Quang Vinh",
+                "att": 25.0,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 76.75,
+                "p_eligible": 38.938284,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (25.0%), Cảnh báo Rpoint thấp (76.8/80), Xác suất đỗ thấp (38.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "PTIT-HN-030",
+                "name": "Nguyễn Thị Phương",
+                "att": 36.3636,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 75.5682,
+                "p_eligible": 47.70458220000001,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (36.4%), Cảnh báo Rpoint thấp (75.6/80), Xác suất đỗ thấp (47.7%) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "PTIT-HN-043",
+                "name": "Đoàn Mạnh Duy",
+                "att": 109.091,
+                "hw": 45.4545,
+                "el": 0.0,
+                "rp": 42.5,
+                "p_eligible": 25.991460000000004,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (109.1%), Cảnh báo nợ bài tập (45.5% xong), Cảnh báo Rpoint thấp (42.5/80), Xác suất đỗ thấp (26.0%) [Cảnh báo] Nghỉ liên tiếp (24 buổi)"
+            },
+            {
+                "code": "PTIT-HN-150",
+                "name": "Nguyễn Văn Ánh",
+                "att": 15.9091,
+                "hw": 90.9091,
+                "el": 0.0,
+                "rp": 86.79545,
+                "p_eligible": 46.86644820000001,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (46.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "PTIT-HNK23-015",
+                "name": "Ngô Thị Hoài Phương",
+                "att": 18.1818,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 85.4091,
+                "p_eligible": 46.34784000000001,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (46.3%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            }
+        ],
+        "teacher": "Bùi Thanh Hải"
+    },
+    "HCM-KS24-CNTT1": {
+        "total_students": 44,
+        "risk_count": 4,
+        "risk_rate": 9.090909090909092,
+        "risk_students": [
+            {
+                "code": "PTIT-HCM-061",
+                "name": "Đoàn Nhật Cường",
+                "att": 18.1818,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 82.1591,
+                "p_eligible": 49.92347066666667,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (49.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HCM-044",
+                "name": "Phạm Quang Huy",
+                "att": 11.3636,
+                "hw": 86.3636,
+                "el": 1.0,
+                "rp": 88.81819999999999,
+                "p_eligible": 39.2959116,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (39.3%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "PTIT-HCM-057",
+                "name": "Võ Thanh Khang",
+                "att": 6.81818,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 87.84091000000001,
+                "p_eligible": 49.68446706666668,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (49.7%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HCM-050",
+                "name": "Trần Minh Đức",
+                "att": 6.81818,
+                "hw": 95.4545,
+                "el": 0.0,
+                "rp": 88.09091000000001,
+                "p_eligible": 48.35933373333334,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (48.4%)"
+            }
+        ],
+        "teacher": "Nguyễn Thanh Bình Phước"
+    },
+    "HN-KS25-CNTT1": {
+        "total_students": 40,
+        "risk_count": 21,
+        "risk_rate": 52.5,
+        "risk_students": [
+            {
+                "code": "B25DTCN064",
+                "name": "Nguyễn Hoàng Anh 7",
+                "att": 12.069,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 89.96549999999999,
+                "p_eligible": 42.36926999999999,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (42.4%)"
+            },
+            {
+                "code": "B25dtcn067",
+                "name": "Hoàng Triệu Gia Bách",
+                "att": 44.8276,
+                "hw": 93.1034,
+                "el": 0.0,
+                "rp": 69.5862,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (44.8%), Cảnh báo Rpoint thấp (69.6/80)"
+            },
+            {
+                "code": "B25DTCN154",
+                "name": "Nguyễn Đức Đạt 3",
+                "att": 17.2414,
+                "hw": 93.1034,
+                "el": 0.0,
+                "rp": 71.6293,
+                "p_eligible": 38.0646609,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (71.6/80), Xác suất đỗ thấp (38.1%)"
+            },
+            {
+                "code": "B25dtcn079",
+                "name": "Trịnh Anh Đức",
+                "att": 22.4138,
+                "hw": 93.1034,
+                "el": 0.0,
+                "rp": 79.04310000000001,
+                "p_eligible": 22.163455177499998,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (22.4%), Cảnh báo Rpoint thấp (79.0/80), Xác suất đỗ thấp (22.2%) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "B25DTCN232",
+                "name": "Nguyễn Minh Đức 9",
+                "att": 31.0345,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 77.23275,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (31.0%), Cảnh báo Rpoint thấp (77.2/80)"
+            },
+            {
+                "code": "B25DTCN083",
+                "name": "Nguyễn Quý Dũng",
+                "att": 24.1379,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 81.93105,
+                "p_eligible": 30.2959590375,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (24.1%), Xác suất đỗ thấp (30.3%) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "B25dtcn081",
+                "name": "Nguyễn Tấn Dũng 2",
+                "att": 41.3793,
+                "hw": 79.3103,
+                "el": 0.0,
+                "rp": 74.31035,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (41.4%), Cảnh báo nợ bài tập (79.3% xong), Cảnh báo Rpoint thấp (74.3/80)"
+            },
+            {
+                "code": "B25DTCN324",
+                "name": "Khổng Ngô Gia Hưng",
+                "att": 20.6897,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 69.65514999999999,
+                "p_eligible": 27.562922204999992,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (20.7%), Cảnh báo Rpoint thấp (69.7/80), Xác suất đỗ thấp (27.6%)"
+            },
+            {
+                "code": "B25DTCN249",
+                "name": "Phạm Hồ Nam Khánh",
+                "att": 65.5172,
+                "hw": 41.3793,
+                "el": 0.0,
+                "rp": 47.7414,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (65.5%), Cấm thi: Nợ bài tập quá nặng (41.4% xong), Cấm thi: Rpoint quá thấp (47.7/80)"
+            },
+            {
+                "code": "B25DTCN111",
+                "name": "Hà Đức Minh",
+                "att": 24.1379,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 85.93105,
+                "p_eligible": 31.4810715375,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (24.1%), Xác suất đỗ thấp (31.5%) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "B25DTCN114",
+                "name": "Phạm Thị Na Na",
+                "att": 20.6897,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 85.65514999999999,
+                "p_eligible": 43.19006315000001,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (20.7%), Xác suất đỗ thấp (43.2%)"
+            },
+            {
+                "code": "PTIT-HN-193",
+                "name": "Dương Văn Chiến",
+                "att": 20.6897,
+                "hw": 68.9655,
+                "el": 0.0,
+                "rp": 84.65514999999999,
+                "p_eligible": 20.354366305,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (20.7%), Cảnh báo nợ bài tập (69.0% xong), Xác suất đỗ thấp (20.4%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-221",
+                "name": "Lê Minh Sơn",
+                "att": 31.0345,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 79.48275,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (31.0%), Cảnh báo Rpoint thấp (79.5/80)"
+            },
+            {
+                "code": "PTIT-HN-098",
+                "name": "Nguyễn Vũ Hoàng",
+                "att": 44.8276,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 77.5862,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (44.8%), Cảnh báo Rpoint thấp (77.6/80)"
+            },
+            {
+                "code": "B25DTCN156",
+                "name": "Đồng Nguyễn Tiến Đạt",
+                "att": 22.4138,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 78.79310000000001,
+                "p_eligible": 19.679432443125,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (22.4%), Cảnh báo Rpoint thấp (78.8/80), Xác suất đỗ thấp (19.7%) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "B25DTCN203",
+                "name": "Nguyễn Xuân Sơn 2",
+                "att": 20.6897,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 87.90514999999999,
+                "p_eligible": 32.368798149999996,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (20.7%), Xác suất đỗ thấp (32.4%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN128",
+                "name": "Hà Duy Thành",
+                "att": 29.3103,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 78.59485000000001,
+                "p_eligible": 18.1638413775,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (29.3%), Cảnh báo Rpoint thấp (78.6/80), Xác suất đỗ thấp (18.2%) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "B25DTCN146",
+                "name": "Nùng Gia Bảo",
+                "att": 53.4483,
+                "hw": 48.2759,
+                "el": 0.0,
+                "rp": 63.27585,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (53.4%), Cấm thi: Nợ bài tập quá nặng (48.3% xong), Cấm thi: Rpoint quá thấp (63.3/80)"
+            },
+            {
+                "code": "B25DTCN084",
+                "name": "Vi Anh Dũng",
+                "att": 44.8276,
+                "hw": 62.069,
+                "el": 0.0,
+                "rp": 68.8362,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (44.8%), Cảnh báo nợ bài tập (62.1% xong), Cảnh báo Rpoint thấp (68.8/80)"
+            },
+            {
+                "code": "B25DTCN158",
+                "name": "Nguyễn Đình Đức",
+                "att": 27.5862,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 79.45689999999999,
+                "p_eligible": 20.523882697499996,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (27.6%), Cảnh báo Rpoint thấp (79.5/80), Xác suất đỗ thấp (20.5%) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "PTIT-HN-109",
+                "name": "Trần Anh Quốc",
+                "att": 32.7586,
+                "hw": 68.9655,
+                "el": 0.0,
+                "rp": 83.6207,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (32.8%), Cảnh báo nợ bài tập (69.0% xong)"
+            }
+        ],
+        "teacher": "Trịnh Quốc Hai"
+    },
+    "HN-KS25-CNTT2": {
+        "total_students": 38,
+        "risk_count": 5,
+        "risk_rate": 13.157894736842104,
+        "risk_students": [
+            {
+                "code": "B25DTCN155",
+                "name": "Phùng Duy Đạt",
+                "att": 17.2414,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 78.8793,
+                "p_eligible": 44.0250734,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (78.9/80), Xác suất đỗ thấp (44.0%)"
+            },
+            {
+                "code": "B25DTCN169",
+                "name": "Nguyễn Minh Hiếu 6",
+                "att": 12.069,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 79.46549999999999,
+                "p_eligible": 37.11446375,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (79.5/80), Xác suất đỗ thấp (37.1%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN137",
+                "name": "Phạm Ngọc Vinh",
+                "att": 18.9655,
+                "hw": 72.4138,
+                "el": 0.0,
+                "rp": 75.51725,
+                "p_eligible": 21.715643599999996,
+                "is_failed": false,
+                "reasons": "Cảnh báo nợ bài tập (72.4% xong), Cảnh báo Rpoint thấp (75.5/80), Xác suất đỗ thấp (21.7%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-192",
+                "name": "Hoàng Minh Chiến",
+                "att": 72.4138,
+                "hw": 44.8276,
+                "el": 0.0,
+                "rp": 53.7931,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (72.4%), Cấm thi: Nợ bài tập quá nặng (44.8% xong), Cấm thi: Rpoint quá thấp (53.8/80)"
+            },
+            {
+                "code": "PTIT-HN-139",
+                "name": "Hoàng Văn Quân",
+                "att": 12.069,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 78.96549999999999,
+                "p_eligible": 39.31162025,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (79.0/80), Xác suất đỗ thấp (39.3%)"
+            }
+        ],
+        "teacher": "Nguyễn Quảng An"
+    },
+    "HN-KS25-CNTT3": {
+        "total_students": 35,
+        "risk_count": 9,
+        "risk_rate": 25.71428571428571,
+        "risk_students": [
+            {
+                "code": "B25DTCN141",
+                "name": "Trần Tuấn Anh 2",
+                "att": 77.5862,
+                "hw": 34.4828,
+                "el": 0.0,
+                "rp": 46.4569,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (77.6%), Cấm thi: Nợ bài tập quá nặng (34.5% xong), Cấm thi: Rpoint quá thấp (46.5/80)"
+            },
+            {
+                "code": "B25DTCN294",
+                "name": "Nguyễn Tiến Đạt 6",
+                "att": 10.3448,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 90.5776,
+                "p_eligible": 48.9772465,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (49.0%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN175",
+                "name": "Vũ Mạnh Hùng 3",
+                "att": 6.89655,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 81.551725,
+                "p_eligible": 39.282274,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (39.3%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN326",
+                "name": "Vũ Quốc Khánh",
+                "att": 8.62069,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 84.439655,
+                "p_eligible": 47.3939702,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (47.4%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN258",
+                "name": "Trần Ngọc Sơn 2",
+                "att": 82.7586,
+                "hw": 34.4828,
+                "el": 0.0,
+                "rp": 43.8707,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (82.8%), Cấm thi: Nợ bài tập quá nặng (34.5% xong), Cấm thi: Rpoint quá thấp (43.9/80)"
+            },
+            {
+                "code": "PTIT-HN-111",
+                "name": "Nguyễn Danh Nam Khánh",
+                "att": 5.17241,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 95.913795,
+                "p_eligible": 49.758165299999995,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (49.8%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-120",
+                "name": "Nguyễn Công Thắng",
+                "att": 10.3448,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 79.8276,
+                "p_eligible": 21.470096739000002,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (79.8/80), Xác suất đỗ thấp (21.5%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            },
+            {
+                "code": "PTIT-HN-236",
+                "name": "Nguyễn Hải Dương",
+                "att": 6.89655,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 86.551725,
+                "p_eligible": 46.230599000000005,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (46.2%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "PTIT-HN-140",
+                "name": "Nguyễn Gia Bảo",
+                "att": 17.2414,
+                "hw": 93.1034,
+                "el": 0.0,
+                "rp": 77.1293,
+                "p_eligible": 42.0395584,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (77.1/80), Xác suất đỗ thấp (42.0%)"
+            }
+        ],
+        "teacher": "Lương Quốc Tuấn"
+    },
+    "HN-KS25-CNTT4": {
+        "total_students": 40,
+        "risk_count": 9,
+        "risk_rate": 22.5,
+        "risk_students": [
+            {
+                "code": "B25DTCN139",
+                "name": "Phạm Danh Quốc Anh",
+                "att": 65.5172,
+                "hw": 44.8276,
+                "el": 0.0,
+                "rp": 52.2414,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (65.5%), Cấm thi: Nợ bài tập quá nặng (44.8% xong), Cấm thi: Rpoint quá thấp (52.2/80)"
+            },
+            {
+                "code": "B25DTCN303",
+                "name": "Hà Minh Đăng",
+                "att": 53.4483,
+                "hw": 55.1724,
+                "el": 0.0,
+                "rp": 58.27585,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (53.4%), Cảnh báo nợ bài tập (55.2% xong), Cấm thi: Rpoint quá thấp (58.3/80)"
+            },
+            {
+                "code": "B25DTCN180",
+                "name": "Trần Gia Huy",
+                "att": 1.72414,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 90.13793,
+                "p_eligible": 48.3739947,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (48.4%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25dtcn106",
+                "name": "Ngô Trung Kiên",
+                "att": 86.2069,
+                "hw": 24.1379,
+                "el": 0.0,
+                "rp": 46.39655,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (86.2%), Cấm thi: Nợ bài tập quá nặng (24.1% xong), Cấm thi: Rpoint quá thấp (46.4/80)"
+            },
+            {
+                "code": "B25DTCN328",
+                "name": "Nguyễn Đức Phong 2",
+                "att": 70.6897,
+                "hw": 37.931,
+                "el": 0.0,
+                "rp": 52.15515,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (70.7%), Cấm thi: Nợ bài tập quá nặng (37.9% xong), Cấm thi: Rpoint quá thấp (52.2/80)"
+            },
+            {
+                "code": "B25DTCN315",
+                "name": "Nguyễn Đức Tuấn",
+                "att": 44.8276,
+                "hw": 55.1724,
+                "el": 0.0,
+                "rp": 67.5862,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (44.8%), Cảnh báo nợ bài tập (55.2% xong), Cảnh báo Rpoint thấp (67.6/80)"
+            },
+            {
+                "code": "B25DTCN277",
+                "name": "Lê Thị Ngọc Lê",
+                "att": 10.3448,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 79.8276,
+                "p_eligible": 43.4620368,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (79.8/80), Xác suất đỗ thấp (43.5%)"
+            },
+            {
+                "code": "B25DTCN062",
+                "name": "Trần Tuấn Anh",
+                "att": 12.069,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 88.96549999999999,
+                "p_eligible": 45.770714999999996,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (45.8%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN192",
+                "name": "Nguyễn Duy Minh 3",
+                "att": 10.3448,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 86.3276,
+                "p_eligible": 47.926009,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (47.9%)"
+            }
+        ],
+        "teacher": "Ngọ Văn Quý"
+    },
+    "HN-KS25-CNTT5": {
+        "total_students": 37,
+        "risk_count": 8,
+        "risk_rate": 21.62162162162162,
+        "risk_students": [
+            {
+                "code": "B25DTCN224",
+                "name": "Vi Gia Bảo",
+                "att": 8.62069,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 75.689655,
+                "p_eligible": 40.131983639999994,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (75.7/80), Xác suất đỗ thấp (40.1%)"
+            },
+            {
+                "code": "SVCNTT51633",
+                "name": "Trần Khắc Huy Hoàng",
+                "att": 10.3448,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 57.327600000000004,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Rpoint quá thấp (57.3/80)"
+            },
+            {
+                "code": "B25DTCN094",
+                "name": "Đào Nguyễn Lâm Hoàng",
+                "att": 5.17241,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 79.913795,
+                "p_eligible": 42.60453945999999,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (79.9/80), Xác suất đỗ thấp (42.6%)"
+            },
+            {
+                "code": "B25DTCN096",
+                "name": "Phùng Đỗ Việt Hùng",
+                "att": 8.62069,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 78.439655,
+                "p_eligible": 39.74580484,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (78.4/80), Xác suất đỗ thấp (39.7%)"
+            },
+            {
+                "code": "B25DTCN112",
+                "name": "Nguyễn Minh 2",
+                "att": 25.8621,
+                "hw": 82.7586,
+                "el": 0.0,
+                "rp": 74.56895,
+                "p_eligible": 21.219069689999998,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (25.9%), Cảnh báo Rpoint thấp (74.6/80), Xác suất đỗ thấp (21.2%)"
+            },
+            {
+                "code": "SV1462",
+                "name": "Nguyễn Trần Anh Dũng",
+                "att": 10.3448,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 79.8276,
+                "p_eligible": 37.994343799999996,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (79.8/80), Xác suất đỗ thấp (38.0%)"
+            },
+            {
+                "code": "B25DTCN309",
+                "name": "Nguyễn Hữu Bảo Lâm",
+                "att": 44.8276,
+                "hw": 82.7586,
+                "el": 0.0,
+                "rp": 62.586200000000005,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (44.8%), Cấm thi: Rpoint quá thấp (62.6/80)"
+            },
+            {
+                "code": "B25DTCN172",
+                "name": "Phạm Đức Huân",
+                "att": 10.3448,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 79.8276,
+                "p_eligible": 32.7097918,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (79.8/80), Xác suất đỗ thấp (32.7%)"
+            }
+        ],
+        "teacher": "Trịnh Quốc Hai"
+    },
+    "HN-KS25-CNTT6": {
+        "total_students": 31,
+        "risk_count": 17,
+        "risk_rate": 54.83870967741935,
+        "risk_students": [
+            {
+                "code": "B25DTCN059",
+                "name": "Bùi Nguyễn Thanh An",
+                "att": 5.17241,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 93.913795,
+                "p_eligible": 43.498944683999994,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (43.5%) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            },
+            {
+                "code": "B25dtcn220",
+                "name": "Nguyễn Đức Anh 12",
+                "att": 5.17241,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 81.663795,
+                "p_eligible": 43.65097058400001,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (43.7%) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            },
+            {
+                "code": "B25ĐTCN144",
+                "name": "Nguyễn Ngọc Tuấn Anh",
+                "att": 0.0,
+                "hw": 93.1034,
+                "el": 0.0,
+                "rp": 87.75,
+                "p_eligible": 36.810224100000006,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (36.8%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            },
+            {
+                "code": "1559",
+                "name": "Hoàng Đức Duy Anh",
+                "att": 15.5172,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 81.4914,
+                "p_eligible": 45.8860685,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (45.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN149",
+                "name": "Nguyễn Văn Cường 3",
+                "att": 12.069,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 78.96549999999999,
+                "p_eligible": 21.304487294999998,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (79.0/80), Xác suất đỗ thấp (21.3%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            },
+            {
+                "code": "B25DTCN233",
+                "name": "Trần Nguyễn Duy Đức",
+                "att": 27.5862,
+                "hw": 93.1034,
+                "el": 0.0,
+                "rp": 71.20689999999999,
+                "p_eligible": 20.042065679999997,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (27.6%), Cảnh báo Rpoint thấp (71.2/80), Xác suất đỗ thấp (20.0%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN234",
+                "name": "Nguyễn Trần Trọng Đức",
+                "att": 79.3103,
+                "hw": 13.7931,
+                "el": 0.0,
+                "rp": 45.34485,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (79.3%), Cấm thi: Nợ bài tập quá nặng (13.8% xong), Cấm thi: Rpoint quá thấp (45.3/80)"
+            },
+            {
+                "code": "B25dtcn241",
+                "name": "Đoàn Huy Hoàng 2",
+                "att": 74.1379,
+                "hw": 55.1724,
+                "el": 0.0,
+                "rp": 51.68105,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (74.1%), Cảnh báo nợ bài tập (55.2% xong), Cấm thi: Rpoint quá thấp (51.7/80)"
+            },
+            {
+                "code": "B25DTCN243",
+                "name": "Trịnh Xuân Hùng",
+                "att": 8.62069,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 69.939655,
+                "p_eligible": 36.93275789,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (69.9/80), Xác suất đỗ thấp (36.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN245",
+                "name": "Lê Quang Huy 3",
+                "att": 6.89655,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 81.301725,
+                "p_eligible": 46.09984197,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (46.1%) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            },
+            {
+                "code": "B25DTCN120",
+                "name": "Nguyễn Tấn Phong",
+                "att": 12.069,
+                "hw": 93.1034,
+                "el": 0.0,
+                "rp": 79.96549999999999,
+                "p_eligible": 38.371222749999994,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (80.0/80), Xác suất đỗ thấp (38.4%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN129",
+                "name": "Hoàng Văn Thắng",
+                "att": 10.3448,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 79.8276,
+                "p_eligible": 32.4542988,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (79.8/80), Xác suất đỗ thấp (32.5%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN132",
+                "name": "Nguyễn Thiện Thuật",
+                "att": 3.44828,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 78.27586,
+                "p_eligible": 33.79263467999999,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (78.3/80), Xác suất đỗ thấp (33.8%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN263",
+                "name": "Trịnh Quốc Trung",
+                "att": 8.62069,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 95.689655,
+                "p_eligible": 45.780670199999996,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (45.8%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTCN281",
+                "name": "Tăng Thanh Tú",
+                "att": 5.17241,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 86.913795,
+                "p_eligible": 44.547147684,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (44.5%) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            },
+            {
+                "code": "1642",
+                "name": "Nguyễn Ngọc Hiển Vinh",
+                "att": 15.5172,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 76.4914,
+                "p_eligible": 30.823206140999993,
+                "is_failed": false,
+                "reasons": "Cảnh báo Rpoint thấp (76.5/80), Xác suất đỗ thấp (30.8%) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            },
+            {
+                "code": "1649",
+                "name": "Trần Đại Vũ",
+                "att": 3.44828,
+                "hw": 96.5517,
+                "el": 0.0,
+                "rp": 82.77586,
+                "p_eligible": 35.647417571999995,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (35.6%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước) [Cảnh báo] Nợ bài tập liên tiếp (2 bài)"
+            }
+        ],
+        "teacher": "Nguyễn Quảng An"
+    },
+    "HN-K25-QTKD1": {
+        "total_students": 32,
+        "risk_count": 15,
+        "risk_rate": 46.875,
+        "risk_students": [
+            {
+                "code": "B25DTQT076",
+                "name": "Nguyễn Hoàng Bách 3",
+                "att": 23.0769,
+                "hw": 92.3077,
+                "el": 0.0,
+                "rp": 70.71155,
+                "p_eligible": 24.654562400000003,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (23.1%), Xác suất đỗ thấp (24.7%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT020",
+                "name": "Nguyễn Bảo Châu",
+                "att": 50.0,
+                "hw": 38.4615,
+                "el": 1.0,
+                "rp": 48.75,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (50.0%), Cấm thi: Nợ bài tập quá nặng (38.5% xong)"
+            },
+            {
+                "code": "304077862",
+                "name": "Trịnh Bảo Châu",
+                "att": 11.5385,
+                "hw": 84.6154,
+                "el": 0.0,
+                "rp": 77.23075,
+                "p_eligible": 45.85784,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (45.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT098",
+                "name": "Đỗ Viết Hào",
+                "att": 15.3846,
+                "hw": 92.3077,
+                "el": 0.0,
+                "rp": 82.3077,
+                "p_eligible": 46.930464,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (46.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT028",
+                "name": "Trần Vũ Hoàng",
+                "att": 15.3846,
+                "hw": 92.3077,
+                "el": 0.0,
+                "rp": 77.3077,
+                "p_eligible": 45.210464,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (45.2%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT029",
+                "name": "Lê Vũ Hoàng",
+                "att": 26.9231,
+                "hw": 100.0,
+                "el": 1.0,
+                "rp": 75.78845,
+                "p_eligible": 29.1487976,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (26.9%), Xác suất đỗ thấp (29.1%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT035",
+                "name": "Phan Viết Khánh",
+                "att": 23.0769,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 64.71155,
+                "p_eligible": 26.766802400000003,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (23.1%), Xác suất đỗ thấp (26.8%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT039",
+                "name": "Đỗ Thùy Linh",
+                "att": 26.9231,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 66.53845,
+                "p_eligible": 13.839997600000002,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (26.9%), Xác suất đỗ thấp (13.8%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT119",
+                "name": "Hùng Gia Linh",
+                "att": 26.9231,
+                "hw": 92.3077,
+                "el": 1.0,
+                "rp": 78.28845,
+                "p_eligible": 30.324598199999997,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (26.9%), Xác suất đỗ thấp (30.3%) [Cảnh báo] Nghỉ liên tiếp (2 buổi)"
+            },
+            {
+                "code": "B25DTQT107",
+                "name": "Lãnh Thái Ngọc",
+                "att": 15.3846,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 84.0577,
+                "p_eligible": 48.042463999999995,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (48.0%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "SV1789",
+                "name": "Phạm Cao Thảo Nguyên",
+                "att": 26.9231,
+                "hw": 100.0,
+                "el": 1.0,
+                "rp": 72.78845,
+                "p_eligible": 25.086557600000006,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (26.9%), Xác suất đỗ thấp (25.1%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT124",
+                "name": "Trần Thị Diễm Quỳnh",
+                "att": 19.2308,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 77.8846,
+                "p_eligible": 45.851072,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (45.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT110",
+                "name": "Lưu Anh Tuấn",
+                "att": 11.5385,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 67.98075,
+                "p_eligible": 38.49624,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (38.5%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "SV1800",
+                "name": "Lê Thị Thanh Vân",
+                "att": 19.2308,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 70.3846,
+                "p_eligible": 39.43827200000001,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (39.4%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "SV1792",
+                "name": "Đinh Hà Vy",
+                "att": 61.5385,
+                "hw": 84.6154,
+                "el": 1.0,
+                "rp": 59.23075,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (61.5%)"
+            }
+        ],
+        "teacher": "Hoàng Thị Hậu"
+    },
+    "HN-K25-QTKD2": {
+        "total_students": 40,
+        "risk_count": 8,
+        "risk_rate": 20.0,
+        "risk_students": [
+            {
+                "code": "B25DTQT102",
+                "name": "Đặng Gia Hưng",
+                "att": 11.5385,
+                "hw": 92.3077,
+                "el": 1.0,
+                "rp": 82.98075,
+                "p_eligible": 47.96184000000001,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (48.0%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "SV1764",
+                "name": "Lê Anh Khôi",
+                "att": 0.0,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 88.75,
+                "p_eligible": 49.928,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (49.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25dtqt045",
+                "name": "Phạm Lê",
+                "att": 15.3846,
+                "hw": 92.3077,
+                "el": 0.0,
+                "rp": 79.8077,
+                "p_eligible": 46.994464,
+                "is_failed": false,
+                "reasons": "Xác suất đỗ thấp (47.0%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT104",
+                "name": "Nguyễn Phương Linh",
+                "att": 53.8462,
+                "hw": 61.5385,
+                "el": 1.0,
+                "rp": 65.5769,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (53.8%), Cảnh báo nợ bài tập (61.5% xong)"
+            },
+            {
+                "code": "B25dtqt061",
+                "name": "Trần Võ Huy Thành",
+                "att": 65.3846,
+                "hw": 69.2308,
+                "el": 0.0,
+                "rp": 59.0577,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (65.4%), Cảnh báo nợ bài tập (69.2% xong)"
+            },
+            {
+                "code": "B25DTQT051",
+                "name": "Nguyễn Phương Thảo 3",
+                "att": 57.6923,
+                "hw": 76.9231,
+                "el": 1.0,
+                "rp": 50.40385,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (57.7%), Cảnh báo nợ bài tập (76.9% xong)"
+            },
+            {
+                "code": "B25DTQT072",
+                "name": "Nguyễn Văn Việt",
+                "att": 65.3846,
+                "hw": 53.8462,
+                "el": 1.0,
+                "rp": 58.5577,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (65.4%), Cảnh báo nợ bài tập (53.8% xong)"
+            },
+            {
+                "code": "B25DTQT121",
+                "name": "Hoàng Thanh Nam",
+                "att": 42.3077,
+                "hw": 92.3077,
+                "el": 0.0,
+                "rp": 67.59615,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (42.3%)"
+            }
+        ],
+        "teacher": "Hoàng Thị Kim Oanh"
+    },
+    "HN-K25-QTKD3": {
+        "total_students": 26,
+        "risk_count": 10,
+        "risk_rate": 38.46153846153847,
+        "risk_students": [
+            {
+                "code": "B25DTQT023",
+                "name": "Đinh Ngọc Đỉnh",
+                "att": 23.0769,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 78.46155,
+                "p_eligible": 43.7552024,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (23.1%), Xác suất đỗ thấp (43.8%)"
+            },
+            {
+                "code": "B25DTQT097",
+                "name": "Nguyễn Thị Hồng Hạnh",
+                "att": 23.0769,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 79.46155,
+                "p_eligible": 44.74320240000001,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (23.1%), Xác suất đỗ thấp (44.7%)"
+            },
+            {
+                "code": "B25DTQT027",
+                "name": "Nguyễn Minh Hiếu 7",
+                "att": 23.0769,
+                "hw": 92.3077,
+                "el": 0.0,
+                "rp": 68.46155,
+                "p_eligible": 14.240002400000002,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (23.1%), Xác suất đỗ thấp (14.2%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQT117",
+                "name": "Vũ Ruy Hoàng",
+                "att": 26.9231,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 61.53845,
+                "p_eligible": 34.015997600000006,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (26.9%), Xác suất đỗ thấp (34.0%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25dtqt042",
+                "name": "Vũ Khánh Linh 2",
+                "att": 26.9231,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 76.78845,
+                "p_eligible": 40.1623976,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (26.9%), Xác suất đỗ thấp (40.2%)"
+            },
+            {
+                "code": "B25DTQT047",
+                "name": "Nguyễn Bảo Ngọc 3",
+                "att": 30.7692,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 57.3654,
+                "p_eligible": 0.0,
+                "is_failed": true,
+                "reasons": "Cấm thi: Vắng học quá nặng (30.8%)"
+            },
+            {
+                "code": "B25DTQT056",
+                "name": "Lê Nam Phong",
+                "att": 26.9231,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 66.78845,
+                "p_eligible": 35.232797600000005,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (26.9%), Xác suất đỗ thấp (35.2%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "D25DTQT088",
+                "name": "Vũ Thanh Thảo",
+                "att": 26.9231,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 66.53845,
+                "p_eligible": 35.3305576,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (26.9%), Xác suất đỗ thấp (35.3%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "SV1734",
+                "name": "Bùi Hà Uyên",
+                "att": 26.9231,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 66.78845,
+                "p_eligible": 13.8919976,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (26.9%), Xác suất đỗ thấp (13.9%) [Học lực] Yếu kiến thức nền tảng (Trượt môn trước)"
+            },
+            {
+                "code": "B25DTQ099",
+                "name": "Cao Thị Thảo Hiền",
+                "att": 23.0769,
+                "hw": 100.0,
+                "el": 0.0,
+                "rp": 78.46155,
+                "p_eligible": 40.0476024,
+                "is_failed": false,
+                "reasons": "Cảnh báo vắng học (23.1%), Xác suất đỗ thấp (40.0%)"
+            }
+        ],
+        "teacher": "Đặng Quỳnh Trang"
+    }
+}

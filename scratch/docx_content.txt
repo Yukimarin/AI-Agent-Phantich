@@ -1,0 +1,39 @@
+=== PARAGRAPHS ===
+[0]: [QTKDS] MẪU BÁO CÁO TỔNG HỢP KẾT QUẢ CÔNG VIỆC HÀNG NGÀY
+[1]: Bộ phận: ………………
+[2]: Ngày báo cáo: …………….
+[3]: Thời gian xuất báo cáo: …………………….
+[4]: I. CHỈ SỐ KPI TỔNG HỢP TOÀN ĐỘI NGŨ
+[5]: Tổng số nhân sự hoạt động trong ngày: …. nhân sự (…… Giảng viên, ….. Trợ giảng).
+[6]: Tổng số nhiệm vụ (Tasks) ghi nhận (số lượng task do Leader giao + số lượng task do nhân viên báo cáo): …. nhiệm vụ.
+[7]: Số lượng nhiệm vụ đã hoàn thành đạt chuẩn: …/…. nhiệm vụ (Đạt tỷ lệ 83.3%).
+[8]: Số lượng nhiệm vụ đang xử lý: …/…. (Đạt tỷ lệ …%)
+[9]: Số lượng nhiệm vụ chậm tiến độ: ….. nhiệm vụ.
+[10]: kết quả công việc 
+[12]: II. SỐ LƯỢNG & CHẤT LƯỢNG CÔNG VIỆC
+[13]: 2.1. Đánh giá chung
+[14]: M về tiến độ, hiệu suất công việc chung của cả phòng.
+[16]: 2.2. 
+[17]: Thành tích nổi bật
+[18]: Nêu thành tích, động viên, khuyến khích với nhân sự đạt kết quả về số lượng và chất lượng công việc tốt (hoàn thành đúng tiến độ hoặc nhanh hơn tiến độ được giao, chất lượng công việc tốt, không bị reject).
+[19]: 2.3. Hạn chế
+[20]: Nhắc nhở cải thiện hiệu suất làm việc, tuân thủ nội quy, quy chế đối với các nhân sự không hoàn thành đủ số lượng, đúng chất lượng yêu cầu, bị reject, bị trễ deadline mà không có báo cáo lý do, không báo cáo công việc đúng hạn.
+[21]: Cảnh báo với các nhân sự tái diễn vi phạm các lỗi trên liên tục từ 2 lần trở lên.
+[22]: 2.4. Khuyến nghị
+[24]: III. KẾ HOẠCH TRỌNG TÂM NGÀY TIẾP THEO
+[25]: Các task đến hạn chót hoặc còn cách hạn chót 1 ngày.
+[26]: Các task trễ hạn cần hoàn thành ngay để đảm bảo tiến độ chung.
+
+=== TABLES ===
+
+Table 0 (Rows: 4, Cols: 6):
+  Row 0:  |  |  |  |  | 
+  Row 1:  |  |  |  |  | 
+  Row 2:  |  |  |  |  | 
+  Row 3:  |  |  |  |  | 
+
+Table 1 (Rows: 4, Cols: 6):
+  Row 0:  |  |  |  |  | 
+  Row 1:  |  |  |  |  | 
+  Row 2:  |  |  |  |  | 
+  Row 3:  |  |  |  |  | 

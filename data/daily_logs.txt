@@ -1,0 +1,28 @@
+Date: 2026-06-22
+Instructor: Nguyễn Văn A
+Role: GV
+Report:
+- Soạn slide bài 1 lớp Python Programming L01 (Hoàn thành)
+- Lên lớp dạy bài 1 lớp Python Programming L01 (Hoàn thành)
+- Giải đáp thắc mắc của sinh viên trên LMS (Hoàn thành)
+---
+Date: 2026-06-23
+Instructor: Nguyễn Văn A
+Role: GV
+Report:
+- Soạn slide bài 2 lớp Python Programming L01 (Hoàn thành)
+- Chấm bài tập Lab 1 lớp L01 (Chậm tiến độ do hệ thống LMS lỗi)
+---
+Date: 2026-06-22
+Instructor: Trần Thị B
+Role: TG
+Report:
+- Hỗ trợ giải bài tập buổi 1 cho lớp Cấu trúc dữ liệu L02 (Hoàn thành)
+- Điểm danh sinh viên lớp L02 (Hoàn thành)
+---
+Date: 2026-06-23
+Instructor: Trần Thị B
+Role: TG
+Report:
+- Chấm bài trắc nghiệm chương 1 lớp L02 (Hoàn thành)
+- Chuẩn bị tài liệu ôn tập giữa kỳ lớp L02 (Đang thực hiện)

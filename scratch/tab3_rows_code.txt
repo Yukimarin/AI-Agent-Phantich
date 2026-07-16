@@ -1,0 +1,165 @@
+126:         </div>
+127:     </div>
+128:     """
+129: 
+130:     dates_weekly = analysis_data.get("dates_weekly", [])
+131:     len_weekly = len(dates_weekly)
+132:     
+133:     weekly_rows_html = []
+134:     for group in groups_ordered:
+135:         for name in target_groups.get(group, []):
+136:             norm_name = normalize_name(name)
+137:             s = weekly_stats.get(norm_name, {})
+138:             if s:
+139:                 reported = s.get("reported_days", 0)
+140:                 hours = s.get("declared_hours", 0.0)
+141:                 time_score = s.get("time_score", 100.0)
+142:                 work_score = s.get("work_score", 100.0)
+143:                 
+144:                 time_badge = f"<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>{time_score:.0f}</span>" if time_score >= 85 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>{time_score:.0f}</span>" if time_score >= 70 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>{time_score:.0f}</span>"
+145:                 
+146:                 work_badge = f"<span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>{work_score:.1f}</span>" if work_score >= 85 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>{work_score:.1f}</span>" if work_score >= 70 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>{work_score:.1f}</span>" if work_score >= 50 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>{work_score:.1f}</span>"
+147:                 
+148:                 weekly_rows_html.append(f"""
+149:                 <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="{group}" data-name="{name.lower()}">
+150:                     <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">{name}</td>
+151:                     <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">{group}</td>
+152:                     <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">{reported}/{len_weekly}</td>
+153:                     <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">{hours:.1f}h</td>
+154:                     <td class="px-4 py-3.5 text-center">{time_badge}</td>
+155:                     <td class="px-4 py-3.5 text-center font-black">{work_badge}</td>
+156:                 </tr>
+157:                 """)
+158:     weekly_rows_str = "\n".join(weekly_rows_html)
+159: 
+160:     dates_monthly = analysis_data.get("dates_monthly", [])
+161:     len_monthly = len(dates_monthly)
+162:     
+163:     monthly_rows_html = []
+164:     for group in groups_ordered:
+165:         for name in target_groups.get(group, []):
+166:             norm_name = normalize_name(name)
+167:             s = monthly_stats.get(norm_name, {})
+168:             if s:
+169:                 reported = s.get("reported_days", 0)
+170:                 hours = s.get("declared_hours", 0.0)
+171:                 time_score = s.get("time_score", 100.0)
+172:                 work_score = s.get("work_score", 100.0)
+173:                 
+174:                 time_badge = f"<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>{time_score:.0f}</span>" if time_score >= 85 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>{time_score:.0f}</span>" if time_score >= 70 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>{time_score:.0f}</span>"
+175:                 
+176:                 work_badge = f"<span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>{work_score:.1f}</span>" if work_score >= 85 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>{work_score:.1f}</span>" if work_score >= 70 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>{work_score:.1f}</span>" if work_score >= 50 else f"<span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>{work_score:.1f}</span>"
+177:                 
+178:                 monthly_rows_html.append(f"""
+179:                 <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="{group}" data-name="{name.lower()}">
+180:                     <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">{name}</td>
+181:                     <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">{group}</td>
+182:                     <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">{reported}/{len_monthly}</td>
+183:                     <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">{hours:.1f}h</td>
+184:                     <td class="px-4 py-3.5 text-center">{time_badge}</td>
+185:                     <td class="px-4 py-3.5 text-center font-black">{work_badge}</td>
+186:                 </tr>
+187:                 """)
+188:     monthly_rows_str = "\n".join(monthly_rows_html)
+189: 
+190:     due_issues = []
+191:     overdue_issues = []
+192:     done_count = 0
+193:     pending_count = 0
+194:     todo_count = 0
+195:     cancel_count = 0
+196:     
+197:     today = datetime.now().date()
+198:     start_of_week = today - timedelta(days=today.weekday())
+199:     end_of_week = start_of_week + timedelta(days=4)
+200:     start_of_week_str = start_of_week.strftime("%Y-%m-%d")
+201:     end_of_week_str = end_of_week.strftime("%Y-%m-%d")
+202:     
+203:     for key, p_data in project_data.items():
+204:         proj = p_data["project_info"]
+205:         issues = p_data.get("issues", {}).get("issues", [])
+206:         for issue in issues:
+207:             state = issue.get("state")
+208:             if state == "Hoàn thành":
+209:                 done_count += 1
+210:             elif state == "Chờ duyệt":
+211:                 pending_count += 1
+212:             elif state in ["Cần làm", "Tồn đọng", "Đang làm"]:
+213:                 todo_count += 1
+214:             elif state == "Hủy":
+215:                 cancel_count += 1
+216:                 
+217:             due = issue.get("dueDate")
+218:             if due:
+219:                 day = due.split("T")[0]
+220:                 if start_of_week_str <= day <= end_of_week_str:
+221:                     due_issues.append({
+222:                         "project_key": key,
+223:                         "project_name": proj["name"],
+224:                         "issue_code": issue["code"],
+225:                         "title": issue["title"],
+226:                         "state": state,
+227:                         "assignee": issue["assignee"] if issue["assignee"] else "Chưa phân công",
+228:                         "dueDate": day
+229:                     })
+230:                 if day < start_of_week_str and state not in ["Hoàn thành", "Hủy"]:
+231:                     overdue_issues.append({
+232:                         "project_key": key,
+233:                         "project_name": proj["name"],
+234:                         "issue_code": issue["code"],
+235:                         "title": issue["title"],
+236:                         "state": state,
+237:                         "assignee": issue["assignee"] if issue["assignee"] else "Chưa phân công",
+238:                         "dueDate": day
+239:                     })
+240: 
+241:     def render_issue_rows(issue_list):
+242:         html_list = []
+243:         for issue in issue_list:
+244:             state = issue["state"]
+245:             if state == "Hoàn thành":
+246:                 badge = "<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>Hoàn thành</span>"
+247:             elif state == "Đang làm":
+248:                 badge = "<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>Đang làm</span>"
+249:             elif state in ["Cần làm", "Tồn đọng"]:
+250:                 badge = "<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span>"
+251:             elif state == "Chờ duyệt":
+252:                 badge = "<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span>"
+253:             else:
+254:                 badge = f"<span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200'>{state}</span>"
+255:                 
+256:             d_short = issue["dueDate"].split("-")[2] + "/" + issue["dueDate"].split("-")[1]
+257:             
+258:             html_list.append(f"""
+259:             <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+260:                 <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="{issue['project_name']}">{issue['project_name']}</td>
+261:                 <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">{issue['issue_code']}</td>
+262:                 <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">{issue['title']}</td>
+263:                 <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">{issue['assignee']}</td>
+264:                 <td class="px-4 py-3 text-center">{badge}</td>
+265:                 <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">{d_short}</td>
+266:             </tr>
+267:             """)
+268:         return "\n".join(html_list) if html_list else "<tr><td colspan='6' class='px-4 py-8 text-center text-slate-400'>Không có công việc nào.</td></tr>"
+269:         
+270:     overdue_issues_html = render_issue_rows(overdue_issues)
+271:     due_issues_html = render_issue_rows(due_issues)
+272: 
+273:     off_track_projects = []
+274:     for key, p_data in project_data.items():
+275:         proj = p_data["project_info"]
+276:         if proj.get("health") != "ON_TRACK":
+277:             off_track_projects.append({
+278:                 "key": key,
+279:                 "name": proj["name"],
+280:                 "pic": proj["pic"]["name"] if proj.get("pic") else "None",
+281:                 "health": proj.get("health", "OFF_TRACK")
+282:             })
+283:             
+284:     off_track_html = []
+285:     for p in off_track_projects:
+286:         health_badge = "<span class='px-2.5 py-0.5 rounded-full text-[10px] font-black bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200 uppercase tracking-wider'>Off Track</span>"
+287:         off_track_html.append(f"""
+288:         <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-750 shadow-sm">
+289:             <div>
+290:                 <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm">{p['name']}</h4>

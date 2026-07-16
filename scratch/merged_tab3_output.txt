@@ -1,0 +1,150 @@
+7701:                     }
+7702:                 }
+7703:             });
+7704:         }
+7705: 
+7706:         function exportCareListCSV() {
+7707:             if (!predictionsRawData || !predictionsRawData.care_list) {
+7708:                 alert("Không có dữ liệu Care List để xuất!");
+7709:                 return;
+7710:             }
+7711:             
+7712:             let csvContent = "\uFEFF"; // BOM chống lỗi tiếng Việt trong Excel
+7713:             csvContent += "Lớp,Mã SV,Họ và tên,Chuyên cần vắng (%),Bài tập nợ (%),L LMS vi phạm (bài),Xác suất đỗ (%),Nguy cơ,Lý do\n";
+7714:             
+7715:             predictionsRawData.care_list.forEach(s => {
+7716:                 const reasons = s.reasons.join(" | ");
+7717:                 const riskLabel = s.risk_level === "RED" ? "Đỏ - Cao" : "Vàng - Vừa";
+7718:                 csvContent += `"${s.class_name}","${s.student_id}","${s.full_name}",${s.att.toFixed(1)},${(100.0 - s.hw).toFixed(1)},${s.el},${s.p_final.toFixed(1)},"${riskLabel}","${reasons}"\n`;
+7719:             });
+7720:             
+7721:             const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+7722:             const url = URL.createObjectURL(blob);
+7723:             const link = document.createElement("a");
+7724:             link.setAttribute("href", url);
+7725:             link.setAttribute("download", `care_list_${new Date().toISOString().slice(0,10)}.csv`);
+7726:             document.body.appendChild(link);
+7727:             link.click();
+7728:             document.body.removeChild(link);
+7729:         }
+7730: 
+7731:         function exportKPICSV() {
+7732:             const table = document.querySelector(".tab-1-container table");
+7733:             if (!table) {
+7734:                 alert("Không tìm thấy bảng KPI để xuất!");
+7735:                 return;
+7736:             }
+7737:             
+7738:             let csvContent = "\uFEFF"; // BOM UTF-8
+7739:             const rows = table.querySelectorAll("tr");
+7740:             
+7741:             rows.forEach((row, idx) => {
+7742:                 if (idx === 0) {
+7743:                     // Dòng tiêu đề
+7744:                     const cols = row.querySelectorAll("th");
+7745:                     const rowData = [];
+7746:                     cols.forEach(col => {
+7747:                         rowData.push(`"${col.textContent.trim().replace(/"/g, '""')}"`);
+7748:                     });
+7749:                     csvContent += rowData.join(",") + "\n";
+7750:                     return;
+7751:                 }
+7752:                 const cols = row.querySelectorAll("td");
+7753:                 const rowData = [];
+7754:                 cols.forEach(col => {
+7755:                     let text = col.textContent.replace(/\s+/g, ' ').trim();
+7756:                     text = text.replaceAll("[[", "").replaceAll("]]", "");
+7757:                     rowData.push(`"${text.replace(/"/g, '""')}"`);
+7758:                 });
+7759:                 csvContent += rowData.join(",") + "\n";
+7760:             });
+7761:             
+7762:             const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+7763:             const url = URL.createObjectURL(blob);
+7764:             const link = document.createElement("a");
+7765:             link.setAttribute("href", url);
+7766:             link.setAttribute("download", `kpi_gv_tg_${new Date().toISOString().slice(0,10)}.csv`);
+7767:             document.body.appendChild(link);
+7768:             link.click();
+7769:             document.body.removeChild(link);
+7770:         }
+7771: 
+7772:         function renderChart() {
+7773:             const isDark = document.documentElement.classList.contains('dark');
+7774:             const textColor = isDark ? '#94a3b8' : '#64748b';
+7775:             const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)';
+7776:             
+7777:             const ctx = document.getElementById('passRateChart').getContext('2d');
+7778:             currentChart = new Chart(ctx, {
+7779:                 type: 'bar',
+7780:                 data: {
+7781:                     labels: chartLabels,
+7782:                     datasets: [
+7783:                         {
+7784:                             label: 'Dự báo tỉ lệ đỗ',
+7785:                             data: chartPredData,
+7786:                             backgroundColor: 'rgba(99, 102, 241, 0.75)',
+7787:                             borderColor: 'rgba(99, 102, 241, 1)',
+7788:                             borderWidth: 1.5,
+7789:                             borderRadius: 6,
+7790:                             barPercentage: 0.85,
+7791:                             categoryPercentage: 0.75
+7792:                         },
+7793:                         {
+7794:                             label: 'Thực tế qua môn (DB)',
+7795:                             data: chartActualData,
+7796:                             backgroundColor: 'rgba(16, 185, 129, 0.75)',
+7797:                             borderColor: 'rgba(16, 185, 129, 1)',
+7798:                             borderWidth: 1.5,
+7799:                             borderRadius: 6,
+7800:                             barPercentage: 0.85,
+7801:                             categoryPercentage: 0.75
+7802:                         }
+7803:                     ]
+7804:                 },
+7805:                 options: {
+7806:                     responsive: true,
+7807:                     maintainAspectRatio: false,
+7808:                     plugins: {
+7809:                         legend: {
+7810:                             labels: {
+7811:                                 color: textColor,
+7812:                                 font: {
+7813:                                     family: 'Inter',
+7814:                                     weight: 'bold',
+7815:                                     size: 11
+7816:                                 }
+7817:                             }
+7818:                         },
+7819:                         tooltip: {
+7820:                             padding: 12,
+7821:                             cornerRadius: 12,
+7822:                             bodyFont: { family: 'Inter' },
+7823:                             titleFont: { family: 'Inter', weight: 'bold' }
+7824:                         }
+7825:                     },
+7826:                     scales: {
+7827:                         x: {
+7828:                             grid: {
+7829:                                 display: false
+7830:                             },
+7831:                             ticks: {
+7832:                                 color: textColor,
+7833:                                 font: {
+7834:                                     family: 'Inter',
+7835:                                     size: 10,
+7836:                                     weight: '500'
+7837:                                 }
+7838:                             }
+7839:                         },
+7840:                         y: {
+7841:                             min: 0,
+7842:                             max: 100,
+7843:                             grid: {
+7844:                                 color: gridColor
+7845:                             },
+7846:                             ticks: {
+7847:                                 color: textColor,
+7848:                                 callback: function(value) { return value + '%'; },
+7849:                                 font: {
+7850:                                     family: 'Inter',

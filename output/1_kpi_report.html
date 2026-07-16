@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bao cao Chi so Dao tao &amp; KPI GV/TG - Tuan 26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --primary-light: #f5f3ff;
+            --secondary: #3b82f6;
+            --secondary-light: #eff6ff;
+            --text-main: #334155;
+            --text-dark: #0f172a;
+            --bg-main: #f8fafc;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.625;
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+            border: 1px solid var(--border);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .logo-box {
+            padding: 12px 16px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            color: white;
+            font-weight: 800;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+        }
+        .logo-title {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+        .logo-subtitle {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        .week-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            border: 1px solid #ddd6fe;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        /* Markdown styling */
+        .markdown-body h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-top: 32px;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #1e1b4b, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 12px;
+        }
+        .markdown-body h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e1b4b;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+        }
+        .markdown-body h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+        .markdown-body h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #475569;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        .markdown-body ul {
+            padding-left: 0;
+            margin-bottom: 24px;
+            list-style: none;
+        }
+        .markdown-body li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.925rem;
+            color: #475569;
+        }
+        .markdown-body li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.25rem;
+            position: absolute;
+            left: 6px;
+            top: -2px;
+        }
+        .markdown-body p {
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+        .markdown-body hr {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid var(--border);
+        }
+        
+        /* Table styling */
+        .table-container {
+            overflow-x: auto;
+            margin: 24px 0;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th {
+            background: linear-gradient(to right, var(--primary), #6d28d9);
+            color: white;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 14px 16px;
+        }
+        td {
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+            background-color: white;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover td {
+            background-color: #fcfbfe;
+        }
+        
+        /* Alerts styling */
+        .alert-box {
+            padding: 18px 24px;
+            margin: 24px 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.925rem;
+        }
+        .alert-important {
+            border-left: 4px solid #ef4444;
+            background-color: #fef2f2;
+            color: #991b1b;
+        }
+        .alert-note {
+            border-left: 4px solid var(--secondary);
+            background-color: var(--secondary-light);
+            color: #1e40af;
+        }
+        .alert-warning {
+            border-left: 4px solid #f59e0b;
+            background-color: #fffbeb;
+            color: #92400e;
+        }
+        .quote-box {
+            border-left: 4px solid var(--primary);
+            background-color: var(--primary-light);
+            padding: 14px 20px;
+            margin: 24px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: #5b21b6;
+        }
+        
+        strong {
+            color: var(--text-dark);
+        }
+        
+        .footer {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #94a3b8;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #22c55e;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo-box">DT</div>
+                <div>
+                    <div class="logo-title">Phan Tich Chi So Dao Tao</div>
+                    <div class="logo-subtitle">HE THONG DANH GIA KPI &amp; NANG LUC QUAN TRI LOP</div>
+                </div>
+            </div>
+            <div>
+                <span class="week-badge">Tuan 26 (22/06 - 28/06/2026)</span>
+            </div>
+        </div>
+        
+        <div class="markdown-body">
+            <h1 id="bao-cao-thong-ke-chi-so-ao-tao-tuan-nang-luc-quan-tri-lop-cua-gvtg">BÁO CÁO THỐNG KÊ CHỈ SỐ ĐÀO TẠO TUẦN &amp; NĂNG LỰC QUẢN TRỊ LỚP CỦA GV/TG</h1>
+<div class="alert-box alert-important"><strong>QUAN TRONG / KHAN CAP</strong><p>
+- <strong>Thời gian báo cáo tuần</strong>: Từ ngày <strong>22/06/2026</strong> đến ngày <strong>28/06/2026</strong> (Tuần 26).
+- <strong>Tuần đối chiếu</strong>: Từ ngày <strong>15/06/2026</strong> đến ngày <strong>21/06/2026</strong> (Tuần 25).
+- <strong>Môn học hiện tại</strong>: KS24 học môn <code>Ứng dụng AI</code> (AI), KS25 học môn <code>Python Web</code>, QTKD học môn <code>DTB202</code>.
+- <strong>Lưu ý đặc biệt</strong>: Đối với khóa KS25 CNTT, do môn <code>Python Web</code> mới bắt đầu từ 25/06 (chỉ có dữ liệu tuần này), chỉ số tuần trước được đối chiếu dựa trên môn học liền trước đó là <code>Python</code> (sheet <code>KS25_Python</code>) để phản ánh đúng xu hướng kỷ luật khi chuyển đổi môn học.</p></div>
+
+<hr />
+<h2 id="i-thong-ke-chi-so-vi-pham-1-tuan-vua-qua-theo-khoa-hoc">I. THỐNG KÊ CHỈ SỐ VI PHẠM 1 TUẦN VỪA QUA THEO KHÓA HỌC</h2>
+<h3 id="1-khoa-ks24-mon-hoc-ung-dung-ai">1. Khóa KS24 (Môn học: Ứng dụng AI)</h3>
+<h4 id="bang-chi-so-chi-tiet-tung-lop">📊 Bảng chỉ số chi tiết từng lớp:</h4>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Tên Lớp</th>
+<th style="text-align: left;">Giảng viên</th>
+<th style="text-align: left;">Trợ giảng</th>
+<th style="text-align: center;">CC tuần trước</th>
+<th style="text-align: center;">CC tuần này</th>
+<th style="text-align: center;">BT tuần trước</th>
+<th style="text-align: center;">BT tuần này</th>
+<th style="text-align: center;">EL tuần trước</th>
+<th style="text-align: center;">EL tuần này</th>
+<th style="text-align: left;">Xu hướng kỷ luật</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>HN-K24-CNTT1 (HN)</strong></td>
+<td style="text-align: left;">Hồ Xuân Hùng</td>
+<td style="text-align: left;">Nguyễn Công Hưởng</td>
+<td style="text-align: center;">1.75%</td>
+<td style="text-align: center;">9.21%</td>
+<td style="text-align: center;">2.63%</td>
+<td style="text-align: center;">7.89%</td>
+<td style="text-align: center;">5.26%</td>
+<td style="text-align: center;">9.21%</td>
+<td style="text-align: left;">🚨 Vi phạm tăng</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K24-CNTT2 (HN)</strong></td>
+<td style="text-align: left;">Bùi Thanh Hải</td>
+<td style="text-align: left;">Mai Xuân Chinh</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">2.56%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">5.13%</td>
+<td style="text-align: center;">12.82%</td>
+<td style="text-align: left;">🚨 Vi phạm tăng</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K24-CNTT3 (HN)</strong></td>
+<td style="text-align: left;">Bùi Thanh Hải</td>
+<td style="text-align: left;">Mai Xuân Chinh</td>
+<td style="text-align: center;">0.79%</td>
+<td style="text-align: center;">9.52%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">5.35%</td>
+<td style="text-align: center;">2.38%</td>
+<td style="text-align: center;">4.76%</td>
+<td style="text-align: left;">🚨 Vi phạm tăng</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K24-CNTT4 (HN)</strong></td>
+<td style="text-align: left;">Bùi Thanh Hải</td>
+<td style="text-align: left;">Mai Xuân Chinh</td>
+<td style="text-align: center;">4.90%</td>
+<td style="text-align: center;">4.69%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">0.78%</td>
+<td style="text-align: center;">8.82%</td>
+<td style="text-align: center;">6.25%</td>
+<td style="text-align: left;">✅ Ổn định/Cải thiện</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HCM-K24-CNTT1 (HCM)</strong></td>
+<td style="text-align: left;">Nguyễn Bá Minh Đạo</td>
+<td style="text-align: left;">Phạm Viết Hùng</td>
+<td style="text-align: center;">9.09%</td>
+<td style="text-align: center;">15.34%</td>
+<td style="text-align: center;">0.76%</td>
+<td style="text-align: center;">4.55%</td>
+<td style="text-align: center;">3.03%</td>
+<td style="text-align: center;">4.55%</td>
+<td style="text-align: left;">🚨 Vi phạm tăng</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="anh-gia-chung-khoa-ks24">📝 Đánh giá chung khóa KS24:</h4>
+<ul>
+<li><strong>Chỉ số vi phạm trung bình tuần vừa qua</strong>: Chuyên cần vắng <strong>8.27%</strong>, nợ bài tập <strong>3.71%</strong>, chậm Elearning <strong>7.52%</strong>.</li>
+<li><strong>Xu hướng so với tuần trước</strong>: </li>
+<li>Chuyên cần: <strong>Tăng vi phạm +4.96%</strong> (Tuần trước: 3.31%).</li>
+<li>Bài tập: <strong>Tăng vi phạm +3.04%</strong> (Tuần trước: 0.68%).</li>
+<li>Elearning: <strong>Tăng vi phạm +2.59%</strong> (Tuần trước: 4.92%).</li>
+<li><strong>Lớp làm tăng chỉ số</strong>: </li>
+<li>Lớp <strong>HN-K24-CNTT3</strong> (GV Bùi Thanh Hải, TG Mai Xuân Chinh) có vi phạm chuyên cần tăng mạnh từ 0.79% lên 9.52% (+8.73%) và nợ bài tập tăng từ 0.00% lên 5.35%.</li>
+<li>Lớp <strong>HN-K24-CNTT1</strong> (GV Hồ Xuân Hùng, TG Nguyễn Công Hưởng) tăng mạnh vi phạm chuyên cần lên 9.21% và nợ bài tập lên 7.89%.</li>
+<li>Lớp <strong>HCM-K24-CNTT1</strong> (GV Nguyễn Bá Minh Đạo, TG Phạm Viết Hùng) tăng vi phạm chuyên cần từ 9.09% lên 15.34% (+6.25%).</li>
+<li><strong>Đánh giá tuần</strong>: Môn học <code>Ứng dụng AI</code> mới học được hơn 1 tuần nhưng kỷ luật lớp học đang có dấu hiệu đi xuống nghiêm trọng ở cả 3 chỉ số. Sinh viên có xu hướng vắng học nhiều hơn và nợ bài tập phát sinh nhanh.</li>
+</ul>
+<h4 id="giai-phap-e-xuat">🛠️ Giải pháp đề xuất:</h4>
+<ol>
+<li><strong>Chấn chỉnh chuyên cần khẩn cấp</strong>: Giảng viên và Trợ giảng các lớp <code>HN-CNTT1</code>, <code>HN-CNTT3</code> và <code>HCM-CNTT1</code> phải liên hệ trực tiếp ngay trong ngày với học viên vắng học không lý do.</li>
+<li><strong>Khóa nộp muộn bài tập</strong>: Thiết lập thời hạn nộp bài tập chặt chẽ trên LMS/GitHub và trừ điểm chuyên cần nếu nộp trễ quá 24 giờ.</li>
+</ol>
+<hr />
+<h3 id="2-khoa-hn-ks25-cntt-mon-hoc-python-web">2. Khóa HN-KS25-CNTT (Môn học: Python Web)</h3>
+<h4 id="bang-chi-so-chi-tiet-tung-lop_1">📊 Bảng chỉ số chi tiết từng lớp:</h4>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Tên Lớp</th>
+<th style="text-align: left;">Giảng viên</th>
+<th style="text-align: left;">Trợ giảng</th>
+<th style="text-align: center;">CC tuần trước</th>
+<th style="text-align: center;">CC tuần này</th>
+<th style="text-align: center;">BT tuần trước</th>
+<th style="text-align: center;">BT tuần này</th>
+<th style="text-align: center;">EL tuần trước</th>
+<th style="text-align: center;">EL tuần này</th>
+<th style="text-align: left;">Xu hướng kỷ luật</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>HN-K25-CNTT1</strong></td>
+<td style="text-align: left;">Lương Quốc Tuấn</td>
+<td style="text-align: left;">Lại Trung Lâm</td>
+<td style="text-align: center;">29.05%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">21.43%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">28.57%</td>
+<td style="text-align: center;">3.57%</td>
+<td style="text-align: left;">✅ Bắt đầu môn mới</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K25-CNTT2</strong></td>
+<td style="text-align: left;">Trịnh Quốc Hai</td>
+<td style="text-align: left;">Lại Trung Lâm</td>
+<td style="text-align: center;">21.86%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">13.95%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">30.23%</td>
+<td style="text-align: center;">5.82%</td>
+<td style="text-align: left;">✅ Bắt đầu môn mới</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K25-CNTT3</strong></td>
+<td style="text-align: left;">Nguyễn Quảng An</td>
+<td style="text-align: left;">Phạm Ngọc Kiên</td>
+<td style="text-align: center;">18.38%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">8.11%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">24.32%</td>
+<td style="text-align: center;">4.05%</td>
+<td style="text-align: left;">✅ Bắt đầu môn mới</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K25-CNTT4</strong></td>
+<td style="text-align: left;">Nguyễn Quảng An</td>
+<td style="text-align: left;">Phạm Ngọc Kiên</td>
+<td style="text-align: center;">18.10%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">20.48%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">30.00%</td>
+<td style="text-align: center;">3.57%</td>
+<td style="text-align: left;">✅ Bắt đầu môn mới</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K25-CNTT5</strong></td>
+<td style="text-align: left;">Lương Quốc Tuấn</td>
+<td style="text-align: left;">Lại Trung Lâm</td>
+<td style="text-align: center;">23.81%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">17.15%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">32.85%</td>
+<td style="text-align: center;">5.95%</td>
+<td style="text-align: left;">✅ Bắt đầu môn mới</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K25-CNTT6</strong></td>
+<td style="text-align: left;">Nguyễn Quảng An</td>
+<td style="text-align: left;">Phạm Ngọc Kiên</td>
+<td style="text-align: center;">23.63%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">12.12%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">24.24%</td>
+<td style="text-align: center;">6.06%</td>
+<td style="text-align: left;">✅ Bắt đầu môn mới</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="anh-gia-chung-khoa-hn-ks25-cntt">📝 Đánh giá chung khóa HN-KS25-CNTT:</h4>
+<ul>
+<li><strong>Chỉ số vi phạm trung bình tuần vừa qua</strong>: Chuyên cần vắng <strong>0.00%</strong>, nợ bài tập <strong>0.00%</strong>, chậm Elearning <strong>4.84%</strong>.</li>
+<li><strong>Xu hướng so với tuần trước (chuyển giao từ môn Python)</strong>:</li>
+<li>Chuyên cần: <strong>Giảm mạnh vi phạm -22.47%</strong> (Tuần trước môn Python: 22.47%).</li>
+<li>Bài tập: <strong>Giảm mạnh vi phạm -15.54%</strong> (Tuần trước môn Python: 15.54%).</li>
+<li>Elearning: <strong>Giảm vi phạm -23.53%</strong> (Tuần trước môn Python: 28.37%).</li>
+<li><strong>Lớp làm tăng chỉ số</strong>: </li>
+<li>Lớp <strong>HN-K25-CNTT6</strong> (GV Nguyễn Quảng An, TG Phạm Ngọc Kiên) có tỷ lệ chậm Elearning cao nhất tuần ở mức 6.06%.</li>
+<li>Lớp <strong>HN-K25-CNTT5</strong> (GV Lương Quốc Tuấn, TG Lại Trung Lâm) có tỷ lệ chậm Elearning 5.95%.</li>
+<li><strong>Đánh giá tuần</strong>: Môn Python Web mới bắt đầu học được 2 ngày (25/6 và 26/6) nên chỉ số vi phạm chuyên cần và bài tập tạm thời bằng 0%. Tuy nhiên, vi phạm Elearning chậm trễ đã bắt đầu xuất hiện ở mức trung bình 4.84%, cần đôn đốc ngay.</li>
+</ul>
+<h4 id="giai-phap-e-xuat_1">🛠️ Giải pháp đề xuất:</h4>
+<ol>
+<li><strong>Thiết lập nề nếp ngay từ đầu</strong>: Trợ giảng yêu cầu sinh viên hoàn thành bài tập Elearning hàng ngày sau mỗi buổi học để tránh tích lũy vi phạm vào cuối môn.</li>
+<li><strong>Giám sát hoạt động GitHub</strong>: Kiểm tra tài khoản GitHub của học viên để đảm bảo học viên đã clone project môn học mới thành công.</li>
+</ol>
+<hr />
+<h3 id="3-khoa-hcm-ks25-cntt-mon-hoc-python-web">3. Khóa HCM-KS25-CNTT (Môn học: Python Web)</h3>
+<h4 id="bang-chi-so-chi-tiet-tung-lop_2">📊 Bảng chỉ số chi tiết từng lớp:</h4>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Tên Lớp</th>
+<th style="text-align: left;">Giảng viên</th>
+<th style="text-align: left;">Trợ giảng</th>
+<th style="text-align: center;">CC tuần trước</th>
+<th style="text-align: center;">CC tuần này</th>
+<th style="text-align: center;">BT tuần trước</th>
+<th style="text-align: center;">BT tuần này</th>
+<th style="text-align: center;">EL tuần trước</th>
+<th style="text-align: center;">EL tuần này</th>
+<th style="text-align: left;">Xu hướng kỷ luật</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>HCM-K25-CNTT5</strong></td>
+<td style="text-align: left;">Lê Hà Thanh Sang</td>
+<td style="text-align: left;">Phạm Viết Hùng</td>
+<td style="text-align: center;">22.56%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">7.69%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">32.05%</td>
+<td style="text-align: left;">🚨 EL rất cao</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HCM-K25-CNTT6</strong></td>
+<td style="text-align: left;">Trần Quốc Tuấn</td>
+<td style="text-align: left;">Lưu Hoàng Xuân Nguyên</td>
+<td style="text-align: center;">8.00%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">18.00%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">10.00%</td>
+<td style="text-align: center;">3.75%</td>
+<td style="text-align: left;">✅ Bắt đầu môn mới</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HCM-K25-CNTT7</strong></td>
+<td style="text-align: left;">Trần Quốc Tuấn</td>
+<td style="text-align: left;">Lưu Hoàng Xuân Nguyên</td>
+<td style="text-align: center;">29.52%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">10.47%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">28.09%</td>
+<td style="text-align: center;">7.32%</td>
+<td style="text-align: left;">✅ Bắt đầu môn mới</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HCM-K25-CNTT8</strong></td>
+<td style="text-align: left;">Lê Hà Thanh Sang</td>
+<td style="text-align: left;">Phạm Viết Hùng</td>
+<td style="text-align: center;">70.00%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">33.16%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">56.84%</td>
+<td style="text-align: center;">18.92%</td>
+<td style="text-align: left;">✅ Bắt đầu môn mới</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="anh-gia-chung-khoa-hcm-ks25-cntt">📝 Đánh giá chung khóa HCM-KS25-CNTT:</h4>
+<ul>
+<li><strong>Chỉ số vi phạm trung bình tuần vừa qua</strong>: Chuyên cần vắng <strong>0.00%</strong>, nợ bài tập <strong>0.00%</strong>, chậm Elearning <strong>15.51%</strong>.</li>
+<li><strong>Xu hướng so với tuần trước (chuyển giao từ môn Python)</strong>:</li>
+<li>Chuyên cần: <strong>Giảm mạnh vi phạm -32.52%</strong> (Tuần trước môn Python: 32.52%).</li>
+<li>Bài tập: <strong>Giảm mạnh vi phạm -17.33%</strong> (Tuần trước môn Python: 17.33%).</li>
+<li>Elearning: <strong>Giảm vi phạm -8.22%</strong> (Tuần trước môn Python: 23.73%).</li>
+<li><strong>Lớp làm tăng chỉ số</strong>:</li>
+<li>Lớp <strong>HCM-K25-CNTT5</strong> (GV Lê Hà Thanh Sang, TG Phạm Viết Hùng) vi phạm Elearning vọt lên mức rất cao <strong>32.05%</strong> ngay tuần đầu tiên.</li>
+<li>Lớp <strong>HCM-K25-CNTT8</strong> (GV Lê Hà Thanh Sang, TG Phạm Viết Hùng) vi phạm Elearning ở mức <strong>18.92%</strong>.</li>
+<li><strong>Đánh giá tuần</strong>: Chuyên cần và bài tập kiểm soát rất tốt (0% do môn mới học 2 ngày). Tuy nhiên, chỉ số vi phạm Elearning chậm trễ ở cơ sở HCM ở mức đáng lo ngại (trung bình 15.51%), đặc biệt là các lớp do thầy Lê Hà Thanh Sang dạy.</li>
+</ul>
+<h4 id="giai-phap-e-xuat_2">🛠️ Giải pháp đề xuất:</h4>
+<ol>
+<li><strong>Làm việc riêng với Giảng viên Lê Hà Thanh Sang</strong>: Trao đổi để thầy đôn đốc và nhắc nhở sinh viên làm Elearning trực tiếp trong buổi học.</li>
+<li><strong>Trợ giảng gọi điện nhắc nhở</strong>: TG Phạm Viết Hùng cần tập trung rà soát các học viên chưa làm Elearning của hai lớp CNTT5 và CNTT8 và gọi điện chấn chỉnh.</li>
+</ol>
+<hr />
+<h3 id="4-khoa-hn-qtkd-ks25-mon-hoc-dtb202">4. Khóa HN-QTKD-KS25 (Môn học: DTB202)</h3>
+<h4 id="bang-chi-so-chi-tiet-tung-lop_3">📊 Bảng chỉ số chi tiết từng lớp:</h4>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Tên Lớp</th>
+<th style="text-align: left;">Giảng viên</th>
+<th style="text-align: left;">Trợ giảng</th>
+<th style="text-align: center;">CC tuần trước</th>
+<th style="text-align: center;">CC tuần này</th>
+<th style="text-align: center;">BT tuần trước</th>
+<th style="text-align: center;">BT tuần này</th>
+<th style="text-align: center;">EL tuần trước</th>
+<th style="text-align: center;">EL tuần này</th>
+<th style="text-align: left;">Xu hướng kỷ luật</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>HN-K25-QTKD1</strong></td>
+<td style="text-align: left;">Lê Thành Ngọc</td>
+<td style="text-align: left;">Lê Thành Ngọc</td>
+<td style="text-align: center;">16.25%</td>
+<td style="text-align: center;">33.94%</td>
+<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">7.27%</td>
+<td style="text-align: center;">11.55%</td>
+<td style="text-align: center;">15.15%</td>
+<td style="text-align: left;">🚨 Vi phạm tăng mạnh</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K25-QTKD2</strong></td>
+<td style="text-align: left;">Nguyễn Ngọc Vân Khanh</td>
+<td style="text-align: left;">Lâm Tùng Dương</td>
+<td style="text-align: center;">17.50%</td>
+<td style="text-align: center;">18.50%</td>
+<td style="text-align: center;">1.50%</td>
+<td style="text-align: center;">13.00%</td>
+<td style="text-align: center;">8.00%</td>
+<td style="text-align: center;">16.00%</td>
+<td style="text-align: left;">🚨 Vi phạm tăng mạnh</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K25-QTKD3</strong></td>
+<td style="text-align: left;">Nguyễn Ngọc Vân Khanh</td>
+<td style="text-align: left;">Lâm Tùng Dương</td>
+<td style="text-align: center;">25.90%</td>
+<td style="text-align: center;">22.97%</td>
+<td style="text-align: center;">1.48%</td>
+<td style="text-align: center;">7.35%</td>
+<td style="text-align: center;">17.78%</td>
+<td style="text-align: center;">33.33%</td>
+<td style="text-align: left;">🚨 Vi phạm tăng mạnh</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="anh-gia-chung-khoa-qtkd-ks25">📝 Đánh giá chung khóa QTKD-KS25:</h4>
+<ul>
+<li><strong>Chỉ số vi phạm trung bình tuần vừa qua</strong>: Chuyên cần vắng <strong>25.13%</strong>, nợ bài tập <strong>9.21%</strong>, chậm Elearning <strong>21.49%</strong>.</li>
+<li><strong>Xu hướng so với tuần trước</strong>:</li>
+<li>Chuyên cần: <strong>Tăng vi phạm +5.25%</strong> (Tuần trước: 19.89%).</li>
+<li>Bài tập: <strong>Tăng mạnh vi phạm +8.21%</strong> (Tuần trước: 0.99%).</li>
+<li>Elearning: <strong>Tăng mạnh vi phạm +9.05%</strong> (Tuần trước: 12.44%).</li>
+<li><strong>Lớp làm tăng chỉ số</strong>:</li>
+<li>Lớp <strong>HN-K25-QTKD1</strong> (GV/TG Lê Thành Ngọc) có tỷ lệ vắng học vọt lên <strong>33.94%</strong> (tăng 17.69%).</li>
+<li>Lớp <strong>HN-K25-QTKD2</strong> (GV Nguyễn Ngọc Vân Khanh, TG Lâm Tùng Dương) tăng tỷ lệ nợ bài tập lên <strong>13.00%</strong> (tăng 11.50%).</li>
+<li>Lớp <strong>HN-K25-QTKD3</strong> (GV Nguyễn Ngọc Vân Khanh, TG Lâm Tùng Dương) tăng mạnh vi phạm chậm trễ Elearning từ 17.78% lên <strong>33.33%</strong> (+15.56%).</li>
+<li><strong>Đánh giá tuần</strong>: Tình hình kỷ luật khóa QTKD đi xuống rất nghiêm trọng ở cả 3 khía cạnh. Sinh viên nghỉ học nhiều, lười làm bài tập tự học và không hoàn thành Elearning. Năng lực quản lý của thầy Lê Thành Ngọc và TG Lâm Tùng Dương cần được chấn chỉnh.</li>
+</ul>
+<h4 id="giai-phap-e-xuat_3">🛠️ Giải pháp đề xuất:</h4>
+<ol>
+<li><strong>Thiết lập cơ chế báo cáo chuyên cần hàng ngày</strong>: Yêu cầu thầy Lê Thành Ngọc báo cáo sĩ số lớp ngay sau 15 phút bắt đầu buổi học. Trợ giảng gọi điện chấn chỉnh học viên vắng học ngay lập tức.</li>
+<li><strong>Giới hạn thời gian làm Elearning</strong>: Đặt thông báo thời hạn làm Elearning chặt chẽ trên nhóm Zalo lớp hàng ngày.</li>
+</ol>
+<h2 id="ii-anh-gia-nang-luc-quan-tri-lop-tich-luy-cua-giang-vien-va-tro-giang-cmi-historical-ranking">II. ĐÁNH GIÁ NĂNG LỰC QUẢN TRỊ LỚP TÍCH LŨY CỦA GIẢNG VIÊN VÀ TRỢ GIẢNG (CMI HISTORICAL RANKING)</h2>
+<h3 id="phuong-phap-cong-thuc-tinh-chi-so-cmi">📐 Phương pháp &amp; Công thức tính chỉ số CMI</h3>
+<p>Chỉ số Quản trị Hợp phần (CMI - Composite Management Index) đánh giá năng lực quản trị lớp của GV/TG dựa trên mức độ duy trì hoặc cải thiện kỷ luật lớp học qua các môn học chuyển tiếp. Công thức tính cho từng chỉ số thành phần (CC: Chuyên cần, BT: Bài tập, EL: Elearning) là:</p>
+<p>$$\text{CMI}<em _text_prev="\text{prev">{X} = 0.5 \times X</em> + 15.0\%$$}} - X_{\text{curr}</p>
+<p>Trong đó:
+- $X_{\text{prev}}$ là tỷ lệ vi phạm của lớp ở môn học trước.
+- $X_{\text{curr}}$ là tỷ lệ vi phạm của lớp ở môn học hiện tại.
+- Hằng số $+15.0\%$ để tưởng thưởng công bằng cho nhân sự duy trì kỷ luật lớp học ở mức tốt ($X_{\text{prev}} = 0\%$, $X_{\text{curr}} = 0\%$).</p>
+<p>Chỉ số CMI của mỗi lớp được tính bằng trung bình cộng 3 thành phần:
+$$\text{CMI}<em _text_CC="\text{CC">{\text{lớp}} = \frac{\text{CMI}</em>}} + \text{CMI<em _text_EL="\text{EL">{\text{BT}} + \text{CMI}</em>$$}}}{3</p>
+<p>CMI tích lũy của một GV/TG là trung bình cộng CMI của tất cả các lớp mà họ phụ trách.
+- CMI &gt; 12.0%: <strong>Rescuers (Giải cứu xuất sắc)</strong>
+- $0.0\% \le \text{CMI} \le 12.0\%$: <strong>Maintainers (Duy trì tốt)</strong>
+- CMI &lt; 0.0% hoặc vi phạm hiện tại vượt ngưỡng báo động (CC &gt; 25%, BT &gt; 20%, EL &gt; 20%): <strong>Needs Support (Cần hỗ trợ)</strong></p>
+<h3 id="bang-xep-hang-top-5-giang-vien-xuat-sac-giang-vien-phu-trach">🏆 Bảng xếp hạng Top 5 Giảng viên xuất sắc (Giảng viên phụ trách)</h3>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: center;">Hạng</th>
+<th style="text-align: left;">Họ và Tên</th>
+<th style="text-align: center;">Tổng số lớp đã dạy</th>
+<th style="text-align: center;">Chỉ số CMI tích lũy</th>
+<th style="text-align: left;">Phân loại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"><strong>Lương Quốc Tuấn</strong></td>
+<td style="text-align: center;">4 lớp</td>
+<td style="text-align: center;"><strong>+17.29%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;"><strong>Nguyễn Thị Hồng Minh</strong></td>
+<td style="text-align: center;">1 lớp</td>
+<td style="text-align: center;"><strong>+17.08%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;"><strong>Nguyễn Quảng An</strong></td>
+<td style="text-align: center;">4 lớp</td>
+<td style="text-align: center;"><strong>+16.75%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;"><strong>Hoàng Thị Hậu</strong></td>
+<td style="text-align: center;">2 lớp</td>
+<td style="text-align: center;"><strong>+16.22%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;"><strong>Trần Quốc Tuấn</strong></td>
+<td style="text-align: center;">5 lớp</td>
+<td style="text-align: center;"><strong>+14.23%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bang-xep-hang-top-5-tro-giang-xuat-sac-tro-giang-phu-trach">🏆 Bảng xếp hạng Top 5 Trợ giảng xuất sắc (Trợ giảng phụ trách)</h3>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: center;">Hạng</th>
+<th style="text-align: left;">Họ và Tên</th>
+<th style="text-align: center;">Tổng số lớp đã dạy</th>
+<th style="text-align: center;">Chỉ số CMI tích lũy</th>
+<th style="text-align: left;">Phân loại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"><strong>Phạm Ngọc Kiên</strong></td>
+<td style="text-align: center;">3 lớp</td>
+<td style="text-align: center;"><strong>+21.67%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;"><strong>Lại Trung Lâm</strong></td>
+<td style="text-align: center;">3 lớp</td>
+<td style="text-align: center;"><strong>+17.04%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;"><strong>Phạm Viết Hùng</strong></td>
+<td style="text-align: center;">6 lớp</td>
+<td style="text-align: center;"><strong>+15.93%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;"><strong>Lâm Tùng Dương</strong></td>
+<td style="text-align: center;">6 lớp</td>
+<td style="text-align: center;"><strong>+14.98%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;"><strong>Trương Tuấn Anh</strong></td>
+<td style="text-align: center;">1 lớp</td>
+<td style="text-align: center;"><strong>+14.20%</strong></td>
+<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="danh-sach-giang-vientro-giang-moi-ang-theo-doi-chua-xep-hang">📋 Danh sách Giảng viên/Trợ giảng mới (Đang theo dõi / Chưa xếp hạng)</h3>
+<p>Các nhân sự chỉ dạy/hỗ trợ 1 môn học duy nhất, chưa có dữ liệu đối chiếu chéo để tính CMI:</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Họ và Tên</th>
+<th style="text-align: center;">Vai trò</th>
+<th style="text-align: center;">Khối</th>
+<th style="text-align: center;">Số lớp phụ trách</th>
+<th style="text-align: left;">Các lớp đã đứng</th>
+<th style="text-align: center;">Vi phạm CC</th>
+<th style="text-align: center;">Vi phạm BT</th>
+<th style="text-align: center;">Vi phạm EL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Nguyễn Thanh Bình Phước</strong></td>
+<td style="text-align: center;">GV</td>
+<td style="text-align: center;">CNTT</td>
+<td style="text-align: center;">1 lớp</td>
+<td style="text-align: left;">HCM-K24-CNTT1</td>
+<td style="text-align: center;">30.77%</td>
+<td style="text-align: center;">11.54%</td>
+<td style="text-align: center;">4.81%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lưu Hoàng Xuân nguyên</strong></td>
+<td style="text-align: center;">TG</td>
+<td style="text-align: center;">CNTT</td>
+<td style="text-align: center;">1 lớp</td>
+<td style="text-align: left;">HCM-K24-CNTT2</td>
+<td style="text-align: center;">44.67%</td>
+<td style="text-align: center;">25.00%</td>
+<td style="text-align: center;">0.67%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vũ Trung Hiếu</strong></td>
+<td style="text-align: center;">TG</td>
+<td style="text-align: center;">CNTT</td>
+<td style="text-align: center;">3 lớp</td>
+<td style="text-align: left;">HN-K25-CNTT5, HN-K25-CNTT6, HN-K25-CNTT1</td>
+<td style="text-align: center;">65.50%</td>
+<td style="text-align: center;">45.22%</td>
+<td style="text-align: center;">35.89%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nguyễn Duy Quang</strong></td>
+<td style="text-align: center;">GV</td>
+<td style="text-align: center;">CNTT</td>
+<td style="text-align: center;">1 lớp</td>
+<td style="text-align: left;">HN-K25-CNTT8</td>
+<td style="text-align: center;">12.62%</td>
+<td style="text-align: center;">3.15%</td>
+<td style="text-align: center;">15.65%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lê Văn Hồng/ Nam</strong></td>
+<td style="text-align: center;">TG</td>
+<td style="text-align: center;">CNTT</td>
+<td style="text-align: center;">1 lớp</td>
+<td style="text-align: left;">HN-K25-CNTT8</td>
+<td style="text-align: center;">12.62%</td>
+<td style="text-align: center;">3.15%</td>
+<td style="text-align: center;">15.65%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Đặng Quỳnh Trang</strong></td>
+<td style="text-align: center;">GV</td>
+<td style="text-align: center;">QTKD</td>
+<td style="text-align: center;">1 lớp</td>
+<td style="text-align: left;">HN-K25-QTKD3</td>
+<td style="text-align: center;">42.09%</td>
+<td style="text-align: center;">10.51%</td>
+<td style="text-align: center;">16.60%</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="iii-anh-gia-chi-tiet-tung-nhan-su-va-e-xuat-cai-thien">III. ĐÁNH GIÁ CHI TIẾT TỪNG NHÂN SỰ VÀ ĐỀ XUẤT CẢI THIỆN</h2>
+<h3 id="1-nhom-giang-vien-tieu-bieu-nang-luc-tot">1. Nhóm Giảng viên tiêu biểu (Năng lực tốt)</h3>
+<ul>
+<li><strong>Thầy Nguyễn Bá Minh Đạo (GV CNTT - Xếp hạng 1 CMI)</strong>:</li>
+<li><em>Điểm mạnh</em>: Quản trị lớp rất tốt ở các môn trước, giúp cải thiện đáng kể vi phạm của học viên qua các môn học. Tích lũy CMI tốt nhất khối CNTT.</li>
+<li><em>Điểm yếu</em>: Lớp <code>HCM-K24-CNTT1</code> trong tuần vừa qua có sự sụt giảm kỷ luật chuyên cần vắng học lên đến 15.34%.</li>
+<li><em>Đề xuất</em>: Cần phối hợp chặt chẽ hơn với Trợ giảng để gọi điện nhắc nhở các bạn vắng học trong lớp HCM.</li>
+<li><strong>Thầy Nguyễn Quảng An (GV CNTT - Xếp hạng 2 CMI)</strong>:</li>
+<li><em>Điểm mạnh</em>: Kiểm soát kỷ luật rất đều đặn qua các môn. Tuần này dạy lớp Python Web duy trì tỷ lệ vắng 0% và Elearning trễ chỉ 4.56%.</li>
+<li><em>Đề xuất</em>: Tiếp tục duy trì phong độ và chia sẻ kinh nghiệm quản lý lớp cho các GV khác.</li>
+<li><strong>Thầy Lương Quốc Tuấn (GV CNTT - Xếp hạng 3 CMI)</strong>:</li>
+<li><em>Điểm mạnh</em>: Cải thiện kỷ luật rõ rệt khi chuyển giao từ Python sang Python Web. Kiểm soát nợ bài tập cực tốt (0% nợ bài tập tuần này).</li>
+</ul>
+<h3 id="2-nhom-giang-vien-can-ho-tro-needs-support">2. Nhóm Giảng viên cần hỗ trợ (Needs Support)</h3>
+<ul>
+<li><strong>Thầy Lê Thành Ngọc (GV QTKD - CMI thấp / Chuyên cần báo động)</strong>:</li>
+<li><em>Điểm mạnh</em>: Bài tập nợ của lớp ở mức tương đối thấp (7.27%).</li>
+<li><em>Điểm yếu</em>: Quản trị chuyên cần rất kém, lớp <code>HN-K25-QTKD1</code> vắng học vọt lên <strong>33.94%</strong> trong tuần này (tăng 17.69% so với tuần trước).</li>
+<li><em>Đề xuất</em>: Yêu cầu thầy Ngọc nghiêm túc điểm danh đầu giờ, chụp ảnh lớp gửi lên group vận hành đào tạo. Tổ chức họp chấn chỉnh kỷ luật lớp.</li>
+<li><strong>Thầy Hồ Xuân Hùng (GV CNTT - CMI thấp / Kỷ luật đi xuống)</strong>:</li>
+<li><em>Điểm mạnh</em>: Kỷ luật lớp ở môn trước khá ổn.</li>
+<li><em>Điểm yếu</em>: Lớp <code>HN-K24-CNTT1</code> (môn AI) tuần này để vi phạm chuyên cần và Elearning tăng lên mức <strong>9.21%</strong>, nợ bài tập tăng lên <strong>7.89%</strong>.</li>
+<li><em>Đề xuất</em>: Yêu cầu thầy Hùng đôn đốc học viên nộp bài tập AI đúng hạn, phối hợp với TG Nguyễn Công Hưởng để kèm cặp học viên yếu.</li>
+</ul>
+<h3 id="3-nhom-tro-giang-tieu-bieu">3. Nhóm Trợ giảng tiêu biểu</h3>
+<ul>
+<li><strong>TG Phạm Viết Hùng (TG CNTT - Xếp hạng 1 CMI)</strong>:</li>
+<li><em>Điểm mạnh</em>: Hỗ trợ giải cứu lớp học rất xuất sắc, thừa hưởng CMI tích lũy cao nhất khối trợ giảng.</li>
+<li><em>Điểm yếu</em>: Tuần này lớp <code>HCM-K25-CNTT5</code> do anh phụ trách bị chậm Elearning vọt lên <strong>32.05%</strong> ngay tuần đầu học môn mới.</li>
+<li><em>Đề xuất</em>: Tập trung đôn đốc Elearning của riêng lớp CNTT5 ngay trong tuần tới để giảm vi phạm.</li>
+<li><strong>TG Lâm Tùng Dương (TG QTKD/CNTT - CMI tích lũy tốt nhưng tuần này đi xuống)</strong>:</li>
+<li><em>Điểm mạnh</em>: CMI lịch sử rất cao nhờ giải cứu tốt các lớp QTKD ở môn trước.</li>
+<li><em>Điểm yếu</em>: Tuần này phụ trách các lớp QTKD để vi phạm bài tập tăng lên 10.18% và Elearning vọt lên 24.67% (riêng lớp QTKD3 chậm Elearning 33.33%).</li>
+<li><em>Đề xuất</em>: Phải rà soát và gửi danh sách chậm Elearning của lớp QTKD3 lên nhóm chat hàng ngày.</li>
+</ul>
+        </div>
+        
+        <div class="footer">
+            <div>&copy; 2026 PTIT Center. Tat ca cac quyen duoc bao luu.</div>
+            <div class="status-badge">
+                <div class="status-dot"></div>
+                <span>He thong van hanh truc tuyen</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

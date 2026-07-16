@@ -1,0 +1,101 @@
+
+==================== TABLE: daily_class_report ====================
+Columns:
+  id (int)
+  date (date)
+  absent_count (int)
+  elearning_late_count (int)
+  missing_homework_count (int)
+  total_students (int)
+  created_at (datetime(6))
+  updated_at (datetime(6))
+  class_id (int)
+  course_id (int)
+  type (enum('LÝ THUYẾT','THỰC HÀNH'))
+Total Rows: 736
+Sample Data:
+  (76, datetime.date(2026, 5, 26), 0, 2, 0, 44, datetime.datetime(2026, 5, 26, 23, 0, 0, 455548), datetime.datetime(2026, 5, 26, 23, 0, 0, 455548), 63, 194, 'LÝ THUYẾT')
+  (77, datetime.date(2026, 5, 26), 3, 7, 5, 42, datetime.datetime(2026, 5, 26, 23, 0, 1, 35913), datetime.datetime(2026, 5, 26, 23, 0, 1, 35913), 74, 193, 'THỰC HÀNH')
+  (78, datetime.date(2026, 5, 26), 2, 11, 4, 42, datetime.datetime(2026, 5, 26, 23, 0, 1, 401420), datetime.datetime(2026, 5, 26, 23, 0, 1, 401420), 77, 193, 'THỰC HÀNH')
+  (79, datetime.date(2026, 5, 26), 3, 13, 0, 37, datetime.datetime(2026, 5, 26, 23, 0, 1, 698763), datetime.datetime(2026, 5, 26, 23, 0, 1, 698763), 84, 188, 'THỰC HÀNH')
+  (80, datetime.date(2026, 5, 26), 5, 27, 0, 38, datetime.datetime(2026, 5, 26, 23, 0, 1, 944254), datetime.datetime(2026, 5, 26, 23, 0, 1, 944254), 144, 193, 'LÝ THUYẾT')
+
+==================== TABLE: project ====================
+Columns:
+  id (int)
+  title (varchar(255))
+  days (int)
+  project_topic_id (int)
+  user_id (int)
+Total Rows: 616
+Sample Data:
+  (12, 'Ptit K23B nhóm 7', 15, 17, 17)
+  (14, 'Ptit K23B nhóm 9', 15, 17, 17)
+  (15, 'Ptit K23B nhóm 10', 15, 17, 17)
+  (22, 'Project Scratch đề 1', 5, 18, 12)
+  (23, 'Project Scratch đề 2', 5, 19, 12)
+
+==================== TABLE: project_detail ====================
+Columns:
+  id (int)
+  github (longtext)
+  status (varchar(255))
+  project_id (int)
+  user_id (int)
+  student_id (int)
+Total Rows: 0
+Sample Data:
+
+==================== TABLE: project_students ====================
+Columns:
+  project_id (int)
+  student_id (int)
+Total Rows: 5866
+Sample Data:
+  (12, 929)
+  (12, 930)
+  (12, 935)
+  (14, 927)
+  (14, 931)
+
+==================== TABLE: task ====================
+Columns:
+  id (int)
+  content (text)
+  project_topic_id (int)
+Total Rows: 1485
+Sample Data:
+  (1, 'Hiển thị menu với các chức năng quản lý sách', 27)
+  (2, 'Hiển thị danh sách sách', 27)
+  (3, 'Thêm sách', 27)
+  (4, 'Sửa thông tin sách (Không sửa được id)', 27)
+  (5, 'Xóa sách', 27)
+
+==================== TABLE: task_detail ====================
+Columns:
+  id (int)
+  content (text)
+  point (float)
+  task_id (int)
+Total Rows: 4416
+Sample Data:
+  (1, 'Hiển thị tên hệ thống, tiêu đề menu quản lý sách', 1.0, 1)
+  (2, 'Yêu cầu nhập lựa chọn cho quản lý sách', 1.0, 1)
+  (3, 'Hiển thị danh sách sách', 1.0, 2)
+  (4, 'Yêu cầu nhập lần lượt từng thông tin của sách', 2.0, 3)
+  (5, 'Sau khi thêm sách thành công thì hiển thị thông báo ra màn hình', 2.0, 3)
+
+==================== TABLE: completed_task ====================
+Columns:
+  id (int)
+  point (float)
+  task_detail_id (int)
+  student_id (int)
+  course_id (int)
+Total Rows: 81239
+Sample Data:
+  (1, 1.0, 68, 147, 16)
+  (2, 2.0, 71, 147, 16)
+  (3, 1.0, 72, 147, 16)
+  (4, 1.0, 74, 147, 16)
+  (5, 1.0, 69, 147, 16)

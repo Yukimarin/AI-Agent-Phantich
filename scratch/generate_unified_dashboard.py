@@ -1,0 +1,457 @@
+import os
+import sys
+import re
+
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
+
+def extract_body_and_js(filepath):
+    if not os.path.exists(filepath):
+        print(f"Warning: File {filepath} không tồn tại để trích xuất.")
+        return "", ""
+        
+    with open(filepath, "r", encoding="utf-8") as f:
+        content = f.read()
+        
+    # Trích xuất nội dung bên trong body
+    body_match = re.search(r"<body[^>]*?>(.*?)</body>", content, re.DOTALL | re.IGNORECASE)
+    body_html = body_match.group(1) if body_match else ""
+    
+    # Loại bỏ thẻ script khỏi body_html để tránh thực thi đúp
+    body_html = re.sub(r"<script[^>]*?>.*?</script>", "", body_html, flags=re.DOTALL | re.IGNORECASE)
+    
+    # Trích xuất các script độc lập
+    script_matches = re.findall(r"<script[^>]*?>(.*?)</script>", content, re.DOTALL | re.IGNORECASE)
+    scripts = []
+    for s in script_matches:
+        s_strip = s.strip()
+        # Bỏ qua các script trống hoặc cấu hình Tailwind CDN
+        if s_strip and "tailwind.config" not in s_strip:
+            scripts.append(s_strip)
+            
+    combined_js = ""
+    if scripts:
+        # Cách ly các biến JS của các tab con bằng block IIFE tự chạy
+        combined_js = "\n".join([f"(function() {{\n{s}\n}})();" for s in scripts])
+        
+    return body_html, combined_js
+
+def parse_kpi_report():
+    kpi_list = []
+    filepath = "data/report_kpi_gv_tg.md"
+    if not os.path.exists(filepath):
+        print("Không tìm thấy report_kpi_gv_tg.md")
+        return kpi_list
+        
+    with open(filepath, "r", encoding="utf-8") as f:
+        content = f.read()
+        
+    lines = content.split("\n")
+    table_started = False
+    current_dept = "Khối CNTT"
+    
+    for line in lines:
+        if "### 1." in line:
+            if "CNTT" in line:
+                current_dept = "Khối CNTT"
+            elif "QTKD" in line:
+                current_dept = "Khối QTKD"
+            elif "Ngoại ngữ" in line:
+                current_dept = "Khối Ngoại ngữ và kỹ năng mềm"
+            elif "QLCLĐT" in line or "QLĐT" in line:
+                current_dept = "Khối QLCLĐT"
+            table_started = False
+            continue
+            
+        if "| Họ và tên |" in line:
+            table_started = True
+            continue
+            
+        if table_started:
+            if not line.strip() or not line.startswith("|"):
+                continue
+            if "---" in line:
+                continue
+            
+            line_clean = re.sub(r"\[\[[^\]]*?\|(.*?)\]\]", r"\1", line)
+            parts = [p.strip() for p in line_clean.split("|")[1:-1]]
+            if len(parts) >= 7:
+                name = parts[0].replace("**", "")
+                role = parts[1]
+                classes = parts[2]
+                try:
+                    score_discipline = float(parts[3])
+                    score_academic = float(parts[4])
+                    score_logs = float(parts[5])
+                    score_total = float(parts[6].replace("**", ""))
+                except ValueError:
+                    continue
+                
+                kpi_list.append({
+                    "name": name,
+                    "role": role,
+                    "classes": classes,
+                    "score_discipline": score_discipline,
+                    "score_academic": score_academic,
+                    "score_logs": score_logs,
+                    "score_total": score_total,
+                    "dept": current_dept
+                })
+    return sorted(kpi_list, key=lambda x: x["score_total"], reverse=True)
+
+def main():
+    output_path = "output/5_master_evaluation_dashboard.html"
+
+    print("Trích xuất và biên dịch SPA Dashboard Native không dùng Iframe...")
+
+    # Trích xuất nội dung các tab con
+    body_a1, js_a1 = extract_body_and_js("output/1_kpi_report.html")
+    body_a2, js_a2 = extract_body_and_js("output/2_class_predictions_dashboard.html")
+    body_a3, js_a3 = extract_body_and_js("output/3_gvtg_violations_report.html")
+    body_a4, js_a4 = extract_body_and_js("output/4_daily_logs_report.html")
+
+    kpis = parse_kpi_report()
+    
+    # Tạo các dòng bảng xếp hạng Leaderboard
+    leaderboard_html = ""
+    for idx, item in enumerate(kpis):
+        rank_icon = str(idx + 1)
+        if idx == 0: rank_icon = "🥇"
+        elif idx == 1: rank_icon = "🥈"
+        elif idx == 2: rank_icon = "🥉"
+        
+        role_badge = f'<span class="bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded">GV</span>'
+        if item["role"] == "TG":
+            role_badge = f'<span class="bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-400 text-[10px] font-bold px-2 py-0.5 rounded">TG</span>'
+            
+        color_class = "text-emerald-600 dark:text-emerald-400 font-bold"
+        if item["score_total"] < 65:
+            color_class = "text-red-600 dark:text-red-400 font-bold"
+        elif item["score_total"] < 80:
+            color_class = "text-amber-600 dark:text-amber-400 font-bold"
+            
+        leaderboard_html += f"""
+        <tr data-dept="{item["dept"]}" class="staff-row border-b border-slate-100 dark:border-slate-800/50 hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+            <td class="py-3.5 px-3 font-mono font-bold text-center text-slate-700 dark:text-slate-350">{rank_icon}</td>
+            <td class="py-3.5 px-3 font-bold text-slate-800 dark:text-slate-200">{item["name"]}</td>
+            <td class="py-3.5 px-3">{role_badge}</td>
+            <td class="py-3.5 px-3 text-xs text-slate-400 dark:text-slate-500 font-bold font-mono text-[10px]">{item["dept"]}</td>
+            <td class="py-3.5 px-3 text-xs text-slate-500 max-w-xs truncate" title="{item["classes"]}">{item["classes"]}</td>
+            <td class="py-3.5 px-3 font-mono {color_class}">{item["score_total"]:.2f}</td>
+            <td class="py-3.5 px-3">
+                <div class="w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-indigo-500 dark:bg-indigo-400 h-full rounded-full" style="width: {item["score_total"]}%"></div>
+                </div>
+            </td>
+        </tr>
+        """
+
+    master_html = f"""<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Phân tích &amp; Giám sát Chỉ số Đào tạo PTIT</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {{
+            darkMode: 'class',
+            theme: {{
+                extend: {{
+                    colors: {{
+                        slate: {{
+                            850: '#0e1223',
+                            950: '#020617'
+                        }}
+                    }}
+                }}
+            }}
+        }}
+    </script>
+
+    <!-- Font Awesome, Google Fonts, Chart.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body, html {{
+            font-family: 'Fira Sans', sans-serif !important;
+            background-color: #f8fafc;
+            color: #0f172a;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }}
+        .dark body, .dark html {{
+            background-color: #020617;
+            color: #f8fafc;
+        }}
+        .font-mono {{
+            font-family: 'Fira Code', monospace !important;
+        }}
+        .font-title {{
+            font-family: 'Fira Sans', sans-serif;
+            font-weight: 800;
+        }}
+        .glass {{
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }}
+        .dark .glass {{
+            background: rgba(14, 18, 35, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-color: rgba(30, 41, 59, 0.6);
+        }}
+        .active-tab-btn {{
+            background-color: #1e40af !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+        }}
+        .dark .active-tab-btn {{
+            background-color: #6366f1 !important;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+        }}
+        
+        /* Đồng bộ CSS bảng, bo góc và hiệu ứng bảng con */
+        table, .card, .dashboard-card, .chart-container, canvas {{
+            border-radius: 1.25rem !important;
+            overflow: hidden;
+        }}
+        tr {{
+            transition: background-color 0.2s ease;
+        }}
+        tr:hover {{
+            background-color: rgba(99, 102, 241, 0.04) !important;
+        }}
+        .dark tr:hover {{
+            background-color: rgba(99, 102, 241, 0.1) !important;
+        }}
+        
+        /* Ẩn các tiêu đề lặp của các tab con để giao diện SPA gọn gàng */
+        .spa-tab-content h1, 
+        .spa-tab-content .pb-6.mb-8.border-b {{
+            display: none !important;
+        }}
+    </style>
+</head>
+<body class="min-h-screen pb-10">
+
+    <!-- Header chung -->
+    <header class="glass sticky top-0 z-50 py-3.5 shadow-sm border-b transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between flex-wrap gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-600 dark:bg-indigo-500 rounded-xl flex items-center justify-center text-white shadow-lg font-black text-lg">
+                    P
+                </div>
+                <div>
+                    <h1 class="text-md font-black tracking-tight leading-none text-slate-900 dark:text-slate-100 font-title">PTITxRikkei Joint Venture</h1>
+                    <p class="text-[9px] text-slate-400 dark:text-slate-500 font-bold uppercase mt-1 tracking-wider">Hệ thống Phân tích &amp; Giám sát Đào tạo</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="toggleDarkMode()" class="w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm" title="Đổi chế độ sáng/tối">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Tab Navigation Menu -->
+        <div class="max-w-7xl mx-auto px-6 mt-4">
+            <div class="bg-slate-100 dark:bg-slate-900/60 p-1 rounded-2xl flex flex-wrap gap-1 border border-slate-200/60 dark:border-slate-800">
+                <button onclick="switchTab('tab-kpi')" id="btn-tab-kpi" class="tab-button px-4 py-2 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 active-tab-btn">
+                    <i class="fas fa-calculator mr-1.5"></i> KPI Tổng Hợp (Agent 5)
+                </button>
+                <button onclick="switchTab('tab-agent1')" id="btn-tab-agent1" class="tab-button px-4 py-2 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">
+                    <i class="fas fa-user-slash mr-1.5"></i> Kỷ Luật SV (Agent 1)
+                </button>
+                <button onclick="switchTab('tab-agent2-pred')" id="btn-tab-agent2-pred" class="tab-button px-4 py-2 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">
+                    <i class="fas fa-chart-pie mr-1.5"></i> Dự Báo &amp; Care List (Agent 2)
+                </button>
+                <button onclick="switchTab('tab-agent3')" id="btn-tab-agent3" class="tab-button px-4 py-2 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">
+                    <i class="fas fa-user-clock mr-1.5"></i> Tác Nghiệp GV/TG (Agent 3)
+                </button>
+                <button onclick="switchTab('tab-agent4')" id="btn-tab-agent4" class="tab-button px-4 py-2 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">
+                    <i class="fas fa-clipboard-list mr-1.5"></i> Báo Cáo Ngày (Agent 4)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTAINER CHUNG -->
+    <main class="max-w-7xl mx-auto px-6 mt-6">
+
+        <!-- ========================================== -->
+        <!-- TAB 1: KPI TỔNG HỢP (KPI LEADERBOARD) -->
+        <!-- ========================================== -->
+        <div id="tab-kpi-container" class="spa-tab-content transition-opacity duration-300">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm mb-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                    <div>
+                        <h4 class="font-bold text-slate-850 dark:text-slate-200">Bảng xếp hạng năng lực giảng dạy theo phòng ban</h4>
+                        <p class="text-xs text-slate-400 mt-1">Lọc danh sách thầy/cô theo khối phòng ban tương ứng trong Trung tâm</p>
+                    </div>
+                    <div class="flex items-center gap-1.5 flex-wrap bg-slate-100 dark:bg-slate-950 p-1 rounded-2xl border border-slate-200 dark:border-slate-800">
+                        <button onclick="filterDept('all')" class="dept-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 text-white dark:bg-indigo-500 transition-all shadow-sm">Tất cả</button>
+                        <button onclick="filterDept('Khối CNTT')" class="dept-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-850 transition-all">Khối CNTT</button>
+                        <button onclick="filterDept('Khối QTKD')" class="dept-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-850 transition-all">Khối QTKD</button>
+                        <button onclick="filterDept('Khối Ngoại ngữ và kỹ năng mềm')" class="dept-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-850 transition-all font-title">Ngoại ngữ &amp; KNM</button>
+                        <button onclick="filterDept('Khối QLCLĐT')" class="dept-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-850 transition-all">Khối QLCLĐT</button>
+                    </div>
+                </div>
+                <div class="overflow-x-auto max-h-[550px] overflow-y-auto rounded-2xl border border-slate-150 dark:border-slate-850">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-slate-100/50 dark:bg-slate-950 text-slate-400 dark:text-slate-500 uppercase text-xs font-bold border-b border-slate-200 dark:border-slate-850 sticky top-0 z-10">
+                            <tr>
+                                <th class="py-3 px-3 text-center">Hạng</th>
+                                <th class="py-3 px-3">Họ &amp; Tên</th>
+                                <th class="py-3 px-3">Vai trò</th>
+                                <th class="py-3 px-3">Phòng ban</th>
+                                <th class="py-3 px-3">Lớp phụ trách</th>
+                                <th class="py-3 px-3">KPI</th>
+                                <th class="py-3 px-3 w-28">Thanh KPI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-slate-100 dark:divide-slate-800/50">
+                            {leaderboard_html}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
+                <div class="flex items-center justify-between flex-wrap gap-4">
+                    <div>
+                        <h4 class="font-bold text-slate-850 dark:text-slate-200 text-sm">Báo cáo đánh giá chi tiết Obsidian Wiki-Link</h4>
+                        <p class="text-xs text-slate-400 mt-1">Xem đầy đủ nhận xét điểm mạnh, điểm yếu, và đề xuất cải thiện chi tiết của từng GV/TG</p>
+                    </div>
+                    <a href="data/report_kpi_gv_tg.md" target="_blank" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-250 dark:bg-slate-800 dark:hover:bg-slate-700 text-xs font-bold rounded-xl transition-all shadow-sm">
+                        <i class="fas fa-file-alt mr-1.5 text-indigo-500"></i> Xem file report_kpi_gv_tg.md
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 2: KỶ LUẬT HỌC VIÊN (AGENT 1) -->
+        <!-- ========================================== -->
+        <div id="tab-agent1-container" class="spa-tab-content hidden transition-opacity duration-300">
+            {body_a1}
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 3: DỰ BÁO HỌC LỰC & CARE LIST (AGENT 2) -->
+        <!-- ========================================== -->
+        <div id="tab-agent2-pred-container" class="spa-tab-content hidden transition-opacity duration-300">
+            {body_a2}
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 4: KỶ LUẬT TÁC NGHIỆP GV/TG (AGENT 3) -->
+        <!-- ========================================== -->
+        <div id="tab-agent3-container" class="spa-tab-content hidden transition-opacity duration-300">
+            {body_a3}
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 5: NHẬT KÝ BÁO CÁO NGÀY (AGENT 4) -->
+        <!-- ========================================== -->
+        <div id="tab-agent4-container" class="spa-tab-content hidden transition-opacity duration-300">
+            {body_a4}
+        </div>
+
+    </main>
+
+    <!-- JS của các Tab con được cách ly IIFE -->
+    <script>
+        {js_a1}
+        {js_a2}
+        {js_a3}
+        {js_a4}
+    </script>
+
+    <!-- Script điều khiển Master Portal chính -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {{
+            if (localStorage.getItem('theme') === 'dark' ||
+                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {{
+                document.documentElement.classList.add('dark');
+                updateThemeIcon(true);
+            }} else {{
+                document.documentElement.classList.remove('dark');
+                updateThemeIcon(false);
+            }}
+        }});
+
+        function toggleDarkMode() {{
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcon(isDark);
+            
+            // Kích hoạt sự kiện đổi theme cho biểu đồ Chart.js tự vẽ lại
+            document.dispatchEvent(new CustomEvent('themechanged', {{ detail: {{ isDark: isDark }} }}));
+        }}
+
+        function updateThemeIcon(isDark) {{
+            const icon = document.getElementById("theme-icon");
+            if (isDark) {{
+                icon.className = "fas fa-sun text-amber-400";
+            }} else {{
+                icon.className = "fas fa-moon text-indigo-500";
+            }}
+        }}
+
+        function switchTab(tabId) {{
+            const tabs = [
+                "tab-kpi", "tab-agent1", "tab-agent2-pred", 
+                "tab-agent3", "tab-agent4"
+            ];
+            
+            tabs.forEach(t => {{
+                const container = document.getElementById(t + "-container");
+                const btn = document.getElementById("btn-" + t);
+                if (container) container.classList.add("hidden");
+                if (btn) btn.classList.remove("active-tab-btn");
+            }});
+            
+            const activeContainer = document.getElementById(tabId + "-container");
+            const activeBtn = document.getElementById("btn-" + tabId);
+            if (activeContainer) activeContainer.classList.remove("hidden");
+            if (activeBtn) activeBtn.classList.add("active-tab-btn");
+        }}
+
+        function filterDept(dept) {{
+            const rows = document.querySelectorAll(".staff-row");
+            rows.forEach(row => {{
+                const rDept = row.getAttribute("data-dept");
+                if (dept === "all" || rDept === dept) {{
+                    row.style.display = "";
+                }} else {{
+                    row.style.display = "none";
+                }}
+            }});
+            
+            const btns = document.querySelectorAll(".dept-filter-btn");
+            btns.forEach(btn => {{
+                btn.classList.remove("bg-indigo-600", "text-white", "dark:bg-indigo-500");
+                btn.classList.add("text-slate-500", "dark:text-slate-400", "hover:bg-slate-200/50");
+            }});
+            
+            event.currentTarget.classList.remove("text-slate-500", "dark:text-slate-400", "hover:bg-slate-200/50");
+            event.currentTarget.classList.add("bg-indigo-600", "text-white", "dark:bg-indigo-500");
+        }}
+    </script>
+</body>
+</html>"""
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(master_html)
+
+    print(f"SPA Dashboard Master Portal đã được sinh thành công tại: {output_path}")
+
+if __name__ == "__main__":
+    main()

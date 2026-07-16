@@ -1,0 +1,21 @@
+{
+  "course_difficulty": {
+    "AI (KS24)": {
+      "difficulty_coefficient": 1.8,
+      "notes": "Môn học chuyên sâu, hàm lượng kiến thức cao, bài tập phức tạp"
+    },
+    "[IT202-K25] Cơ sở dữ liệu": {
+      "difficulty_coefficient": 1.5,
+      "notes": "Môn học chuyên ngành"
+    },
+    "[IT205-K25] Lập trình ứng dụng với Python": {
+      "difficulty_coefficient": 1.2,
+      "notes": "Môn học cơ sở"
+    },
+    "[DTB202] Chuyển đổi số trong doanh nghiệp": {
+      "difficulty_coefficient": 1.0,
+      "notes": "Tự động gán và lưu bởi hệ thống"
+    }
+  },
+  "default_difficulty": 1.2
+}

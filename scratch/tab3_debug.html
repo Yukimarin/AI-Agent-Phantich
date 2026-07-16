@@ -1,0 +1,1084 @@
+<div id="tab-daily-logs-container" class="tab-3-container hidden transition-opacity duration-300">
+            
+    <!-- Phân khu A: Cảnh báo & Thẻ chỉ số -->
+    
+        <div class="bg-red-500/5 border border-red-500/20 rounded-3xl p-6 mb-8">
+            <h3 class="text-sm font-extrabold text-red-600 dark:text-red-400 flex items-center gap-2 mb-4 uppercase tracking-wider">
+                <i class="fas fa-exclamation-triangle"></i> Cảnh Báo Nhân Sự Chưa Báo Cáo Ngày Hôm Trước (15/07/2026)
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+            <div class="flex items-center justify-between bg-red-500/5 border border-red-500/20 rounded-xl p-3 text-xs font-semibold text-slate-800 dark:text-slate-200">
+                <div>
+                    <span class="font-bold text-red-600 dark:text-red-400 mr-2">Mai Xuân Chinh</span>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold">Khối CNTT - Cơ sở HN (KS24)</span>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200 uppercase tracking-wider">Giảng viên - Chưa báo báo</span>
+            </div>
+        
+            <div class="flex items-center justify-between bg-red-500/5 border border-red-500/20 rounded-xl p-3 text-xs font-semibold text-slate-800 dark:text-slate-200">
+                <div>
+                    <span class="font-bold text-red-600 dark:text-red-400 mr-2">Ngô Quang Huấn</span>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold">Khối Ngoại ngữ - Kỹ năng mềm</span>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200 uppercase tracking-wider">Giảng viên - Chưa báo báo</span>
+            </div>
+        
+            </div>
+        </div>
+        
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
+            <p class="text-[10px] uppercase font-black tracking-wider text-slate-400 dark:text-slate-500">Tổng nhân sự phòng đào tạo</p>
+            <h3 class="text-3xl font-black mt-2 text-slate-800 dark:text-slate-100">39 người</h3>
+            <p class="text-xs text-slate-400 mt-1 font-medium">Được theo dõi chất lượng báo cáo ngày</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
+            <p class="text-[10px] uppercase font-black tracking-wider text-slate-400 dark:text-slate-500">Work Score trung bình tháng</p>
+            <h3 class="text-3xl font-black mt-2 text-slate-800 dark:text-slate-100">86.2/100</h3>
+            <p class="text-xs text-slate-400 mt-1 font-medium">Chỉ số đánh giá năng suất làm việc</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
+            <p class="text-[10px] uppercase font-black tracking-wider text-slate-400 dark:text-slate-500">Tổng giờ khai báo trong tháng</p>
+            <h3 class="text-3xl font-black mt-2 text-slate-800 dark:text-slate-100">2542.2h</h3>
+            <p class="text-xs text-slate-400 mt-1 font-medium">Tích lũy từ đầu tháng 07</p>
+        </div>
+    </div>
+    
+    
+    <!-- Phân khu B: Nhật ký công việc -->
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm mb-8">
+        <!-- Header & Tabs -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between border-b border-slate-100 dark:border-slate-800 pb-4 mb-6 gap-4">
+            <div class="flex items-center gap-2">
+                <span class="text-lg font-extrabold text-slate-800 dark:text-slate-200">📋 Nhật Ký Báo Cáo Ngày Chi Tiết</span>
+            </div>
+            <!-- Sub tabs Tuần/Tháng -->
+            <div class="bg-slate-100 dark:bg-slate-850 p-1 rounded-xl flex gap-1 border border-slate-200/60 dark:border-slate-700 w-fit">
+                <button onclick="switchViewModeLogs(event, 'weekly')" id="btn-logs-weekly" class="px-4 py-1.5 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 bg-white dark:bg-slate-900 shadow-sm border border-slate-200/40 dark:border-slate-700/60">
+                    Tuần này
+                </button>
+                <button onclick="switchViewModeLogs(event, 'monthly')" id="btn-logs-monthly" class="px-4 py-1.5 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">
+                    Tháng này
+                </button>
+            </div>
+        </div>
+        
+        <!-- Bộ lọc & Ô Tìm kiếm -->
+        <div class="flex flex-col md:flex-row gap-4 mb-6">
+            <div class="flex-1">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <input type="text" id="log-search" oninput="applyFiltersLogs()" placeholder="Tìm kiếm theo tên thầy cô..." class="w-full pl-10 pr-4 py-2 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm text-slate-800 dark:text-slate-200">
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-2 items-center">
+                <button onclick="filterGroupLogs(event, 'ALL')" class="filter-btn-logs px-3.5 py-2 rounded-xl text-xs font-bold border bg-indigo-500 border-indigo-500 text-white hover:bg-indigo-600 shadow-sm">Tất cả</button>
+                <button onclick="filterGroupLogs(event, 'Khối QTKD')" class="filter-btn-logs px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-500 dark:hover:border-indigo-400">Khối QTKD</button>
+                <button onclick="filterGroupLogs(event, 'HN-KS25')" class="filter-btn-logs px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-500 dark:hover:border-indigo-400">HN-KS25</button>
+                <button onclick="filterGroupLogs(event, 'HN-KS24')" class="filter-btn-logs px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-500 dark:hover:border-indigo-400">HN-KS24</button>
+                <button onclick="filterGroupLogs(event, 'HCM')" class="filter-btn-logs px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-500 dark:hover:border-indigo-400">Cơ sở HCM</button>
+                <button onclick="filterGroupLogs(event, 'Ngoại ngữ')" class="filter-btn-logs px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-500 dark:hover:border-indigo-400">Ngoại ngữ</button>
+                <button onclick="filterGroupLogs(event, 'QLĐT')" class="filter-btn-logs px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-500 dark:hover:border-indigo-400">QLĐT</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Cột Trái: Bảng Dữ liệu (Chiếm 2/3) -->
+            <div class="lg:col-span-2">
+                <!-- Chế độ Tuần -->
+                <div id="view-weekly" class="view-mode-container">
+                    <div class="overflow-x-auto border border-slate-100 dark:border-slate-850 rounded-2xl">
+                        <table class="min-w-full divide-y divide-slate-100 dark:divide-slate-850 text-xs text-left">
+                            <thead class="bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">
+                                <tr>
+                                    <th class="px-4 py-3">Thầy/Cô</th>
+                                    <th class="px-4 py-3">Khối/Nhóm</th>
+                                    <th class="px-4 py-3 text-center">Nộp/Tổng</th>
+                                    <th class="px-4 py-3 text-center">Tổng giờ</th>
+                                    <th class="px-4 py-3 text-center">Kỷ luật CC</th>
+                                    <th class="px-4 py-3 text-center">Work Score</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="hoàng thị kim oanh">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Hoàng Thị Kim Oanh</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">24.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>99.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="hoàng thị hậu">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Hoàng Thị Hậu</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">24.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="lại trung lâm">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lại Trung Lâm</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">24.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>80</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>96.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="đặng quỳnh trang">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Đặng Quỳnh Trang</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">24.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>99.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="nguyễn thị hồng minh">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Thị Hồng Minh</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">25.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="nguyễn ngọc vân khanh">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Ngọc Vân Khanh</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">22.8h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="phạm tuấn bình">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Phạm Tuấn Bình</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">24.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>90</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>98.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="lương quốc tuấn">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lương Quốc Tuấn</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">24.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>97.6</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="lâm tùng dương">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lâm Tùng Dương</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">27.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="trịnh quốc hai">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Trịnh Quốc Hai</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">2/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">16.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>86.7</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="ngọ văn quý">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Ngọ Văn Quý</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">2/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">25.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>86.7</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="nguyễn bá minh đạo">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Bá Minh Đạo</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">1/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">7.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>73.3</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS24)" data-name="lê thành ngọc">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lê Thành Ngọc</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS24)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">2/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">17.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>86.7</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS24)" data-name="phạm viết hùng">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Phạm Viết Hùng</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS24)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">24.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>99.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS24)" data-name="bùi thanh hải">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Bùi Thanh Hải</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS24)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">17.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS24)" data-name="trần quốc tuấn">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Trần Quốc Tuấn</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS24)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">22.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HCM" data-name="lê hà thanh sang">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lê Hà Thanh Sang</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HCM</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">22.2h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HCM" data-name="phạm ngọc kiên">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Phạm Ngọc Kiên</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HCM</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">27.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>90</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>98.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HCM" data-name="nguyễn quảng an">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Quảng An</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HCM</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">20.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Ngoại ngữ - Kỹ năng mềm" data-name="giáp thị minh hằng">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Giáp Thị Minh Hằng</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Ngoại ngữ - Kỹ năng mềm</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">2/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">16.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>86.7</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Ngoại ngữ - Kỹ năng mềm" data-name="lò thị ngọc anh">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lò Thị Ngọc Anh</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Ngoại ngữ - Kỹ năng mềm</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">28.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Ngoại ngữ - Kỹ năng mềm" data-name="lê thị đỏ">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lê Thị Đỏ</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Ngoại ngữ - Kỹ năng mềm</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">19.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>90</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>78.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Ngoại ngữ - Kỹ năng mềm" data-name="ngô quang huấn">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Ngô Quang Huấn</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Ngoại ngữ - Kỹ năng mềm</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">2/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">17.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>80.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Quản lý Đào tạo (QLĐT)" data-name="nguyễn thị tươi">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Thị Tươi</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Quản lý Đào tạo (QLĐT)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">23.2h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>81.3</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Quản lý Đào tạo (QLĐT)" data-name="trần thị mỹ phước">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Trần Thị Mỹ Phước</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Quản lý Đào tạo (QLĐT)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">24.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Quản lý Đào tạo (QLĐT)" data-name="nguyễn huyền trang">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Huyền Trang</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Quản lý Đào tạo (QLĐT)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">24.8h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Quản lý Đào tạo (QLĐT)" data-name="nguyễn xuân bách">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Xuân Bách</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Quản lý Đào tạo (QLĐT)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/3</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">20.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Chế độ Tháng -->
+                <div id="view-monthly" class="view-mode-container hidden">
+                    <div class="overflow-x-auto border border-slate-100 dark:border-slate-850 rounded-2xl">
+                        <table class="min-w-full divide-y divide-slate-100 dark:divide-slate-850 text-xs text-left">
+                            <thead class="bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">
+                                <tr>
+                                    <th class="px-4 py-3">Thầy/Cô</th>
+                                    <th class="px-4 py-3">Khối/Nhóm</th>
+                                    <th class="px-4 py-3 text-center">Nộp/Tổng</th>
+                                    <th class="px-4 py-3 text-center">Tổng giờ</th>
+                                    <th class="px-4 py-3 text-center">Kỷ luật CC</th>
+                                    <th class="px-4 py-3 text-center">Work Score</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="hoàng thị kim oanh">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Hoàng Thị Kim Oanh</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">11/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">93.8h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>98.5</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="hoàng thị hậu">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Hoàng Thị Hậu</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">11/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">88.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>96.7</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="lại trung lâm">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lại Trung Lâm</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">8/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">65.8h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>45</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>78.1</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="đặng quỳnh trang">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Đặng Quỳnh Trang</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">9/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">82.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>91.7</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="nguyễn thị hồng minh">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Thị Hồng Minh</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">11/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">89.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>98.9</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="nguyễn ngọc vân khanh">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Ngọc Vân Khanh</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">11/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">83.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>99.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối QTKD" data-name="phạm tuấn bình">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Phạm Tuấn Bình</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối QTKD</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">10/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">82.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>40</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>72.9</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="lương quốc tuấn">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lương Quốc Tuấn</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">5/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">41.2h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>76.8</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="lâm tùng dương">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lâm Tùng Dương</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">10/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">80.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95.3</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="trịnh quốc hai">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Trịnh Quốc Hai</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">4/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">32.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>73.5</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="ngọ văn quý">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Ngọ Văn Quý</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">2/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">25.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>67.3</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS25)" data-name="nguyễn bá minh đạo">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Bá Minh Đạo</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS25)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">2/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">7.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>67.3</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS24)" data-name="lê thành ngọc">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lê Thành Ngọc</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS24)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">3/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">26.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>70.9</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS24)" data-name="phạm viết hùng">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Phạm Viết Hùng</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS24)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">6/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">45.2h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>85</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>78.8</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS24)" data-name="bùi thanh hải">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Bùi Thanh Hải</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS24)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">11/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">57.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HN (KS24)" data-name="trần quốc tuấn">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Trần Quốc Tuấn</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HN (KS24)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">8/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">59.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>90</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>87.1</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HCM" data-name="lê hà thanh sang">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lê Hà Thanh Sang</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HCM</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">8/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">62.2h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>89.1</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HCM" data-name="phạm ngọc kiên">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Phạm Ngọc Kiên</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HCM</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">9/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">82.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>75</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>87.7</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối CNTT - Cơ sở HCM" data-name="nguyễn quảng an">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Quảng An</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối CNTT - Cơ sở HCM</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">8/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">61.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>88.1</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Ngoại ngữ - Kỹ năng mềm" data-name="giáp thị minh hằng">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Giáp Thị Minh Hằng</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Ngoại ngữ - Kỹ năng mềm</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">10/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">81.8h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>93.8</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Ngoại ngữ - Kỹ năng mềm" data-name="lò thị ngọc anh">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lò Thị Ngọc Anh</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Ngoại ngữ - Kỹ năng mềm</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">6/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">42.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>71.4</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Ngoại ngữ - Kỹ năng mềm" data-name="lê thị đỏ">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Lê Thị Đỏ</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Ngoại ngữ - Kỹ năng mềm</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">8/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">41.5h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>90</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>82.9</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Ngoại ngữ - Kỹ năng mềm" data-name="ngô quang huấn">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Ngô Quang Huấn</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Ngoại ngữ - Kỹ năng mềm</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">9/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">76.2h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>81.4</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Quản lý Đào tạo (QLĐT)" data-name="nguyễn thị tươi">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Thị Tươi</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Quản lý Đào tạo (QLĐT)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">8/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">63.2h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200'>81.7</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Quản lý Đào tạo (QLĐT)" data-name="trần thị mỹ phước">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Trần Thị Mỹ Phước</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Quản lý Đào tạo (QLĐT)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">11/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">89.0h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>95</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>99.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Quản lý Đào tạo (QLĐT)" data-name="nguyễn huyền trang">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Huyền Trang</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Quản lý Đào tạo (QLĐT)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">11/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">91.2h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100.0</span></td>
+                </tr>
+                
+
+                <tr class="log-row border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30" data-group="Khối Quản lý Đào tạo (QLĐT)" data-name="nguyễn xuân bách">
+                    <td class="px-4 py-3.5 font-semibold text-slate-800 dark:text-slate-200">Nguyễn Xuân Bách</td>
+                    <td class="px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium">Khối Quản lý Đào tạo (QLĐT)</td>
+                    <td class="px-4 py-3.5 text-center font-bold text-slate-600 dark:text-slate-400">7/11</td>
+                    <td class="px-4 py-3.5 text-center font-semibold text-indigo-600 dark:text-indigo-400">54.8h</td>
+                    <td class="px-4 py-3.5 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>100</span></td>
+                    <td class="px-4 py-3.5 text-center font-black"><span class='px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>85.5</span></td>
+                </tr>
+                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột Phải: Biểu đồ & Xếp hạng (Chiếm 1/3) -->
+            <div class="space-y-8">
+                <!-- Panel Biểu đồ trạng thái công việc (Chỉ hiển thị khi ở tab Tuần) -->
+                <div id="panel-chart-weekly" class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-slate-50/50 dark:bg-slate-900/50 shadow-sm">
+                    <h4 class="font-extrabold text-xs text-slate-500 uppercase tracking-wider mb-4"><i class="fas fa-chart-pie mr-1.5 text-indigo-500"></i> Trạng thái công việc trong tuần</h4>
+                    <div class="h-[220px] relative">
+                        <canvas id="taskStatusChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Panel Biểu đồ hiệu suất & Xu hướng (Chỉ hiển thị khi ở tab Tháng) -->
+                <div id="panel-charts-monthly" class="hidden space-y-8">
+                    <div class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-slate-50/50 dark:bg-slate-900/50 shadow-sm">
+                        <h4 class="font-extrabold text-xs text-slate-500 uppercase tracking-wider mb-4"><i class="fas fa-chart-bar mr-1.5 text-indigo-500"></i> Top 5 Work Score Tháng 7</h4>
+                        <div class="h-[220px] relative">
+                            <canvas id="monthlyPerformanceChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6 bg-slate-50/50 dark:bg-slate-900/50 shadow-sm">
+                        <h4 class="font-extrabold text-xs text-slate-500 uppercase tracking-wider mb-4"><i class="fas fa-chart-line mr-1.5 text-indigo-500"></i> Xu hướng thiếu báo cáo theo ngày</h4>
+                        <div class="h-[220px] relative">
+                            <canvas id="missingLogsTrendChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phân khu C: Tiến độ dự án & Overdue Issues -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Cột Trái: Danh sách Issues (Chiếm 2/3) -->
+        <div class="lg:col-span-2 space-y-8">
+            <!-- Bảng Quá hạn -->
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
+                <h3 class="text-sm font-extrabold text-red-600 dark:text-red-400 flex items-center gap-2 mb-4 uppercase tracking-wider">
+                    <i class="fas fa-clock"></i> Danh Sách Công Việc Quá Hạn (Overdue)
+                </h3>
+                <div class="overflow-x-auto border border-slate-100 dark:border-slate-800 rounded-2xl">
+                    <table class="min-w-full divide-y divide-slate-100 dark:divide-slate-800 text-xs text-left">
+                        <thead class="bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">
+                            <tr>
+                                <th class="px-4 py-3">Dự án</th>
+                                <th class="px-4 py-3">Mã Task</th>
+                                <th class="px-4 py-3">Tiêu đề công việc</th>
+                                <th class="px-4 py-3">PIC phụ trách</th>
+                                <th class="px-4 py-3 text-center">Trạng thái</th>
+                                <th class="px-4 py-3 text-center">Hạn chót</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="[HN-KS25-CNTT]Sản xuất tài nguyên Python Web">[HN-KS25-CNTT]Sản xuất tài nguyên Python Web</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">SANXUAT-32</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">sản xuất tài nguyên session 14</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Ngọ Văn Quý</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">07/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="[HN-KS25-CNTT] giảng dạy">[HN-KS25-CNTT] giảng dạy</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">KS25GIAN-18</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">giảng dạy thực hành</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Phạm Ngọc Kiên</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">09/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="[QLĐT] - Xây dựng Quy trình khảo thí - New">[QLĐT] - Xây dựng Quy trình khảo thí - New</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">QLDTXAY3-10</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">TRAO ĐỔI CÙNG RIKA VỀ NHỮNG TÍNH NĂNG CỦA KHẢO THÍ LMS</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Chưa phân công</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>Đang làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="[QLĐT] - Xây dựng Quy trình khảo thí - New">[QLĐT] - Xây dựng Quy trình khảo thí - New</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">QLDTXAY3-11</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">VIẾT NỘI QUY KHẢO THÍ ĐANG THỰC THI CHO SINH VIÊN</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Chưa phân công</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>Đang làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-3</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT1</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Nguyễn Công Hưởng</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>Đang làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">07/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-8</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Báo cáo ngày 06/07] Tiến độ CNTT4</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">06/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-9</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Báo cáo ngày 07/07] Tiến độ CNTT4</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>Đang làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">07/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-2</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT4</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Mai Xuân Chinh</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">06/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-1</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT4</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">06/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-5</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT2</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Mai Xuân Chinh</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">08/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-4</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT2</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">08/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-7</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT3</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Mai Xuân Chinh</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">09/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-6</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT3</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">09/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-18</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Hỗ trợ SV làm dự án — CNTT4</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Mai Xuân Chinh</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-24</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Hỗ trợ SV làm dự án — CNTT3</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Mai Xuân Chinh</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-22</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Hỗ trợ SV làm dự án — CNTT2</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Mai Xuân Chinh</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-10</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Báo cáo ngày 07/07] Tiến độ CNTT1</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Nguyễn Công Hưởng</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">07/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-11</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Báo cáo ngày 08/07] Tiến độ CNTT4 + CNTT2</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">08/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-12</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Báo cáo ngày 08/07] Tiến độ CNTT1</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Nguyễn Công Hưởng</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">08/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-13</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Báo cáo ngày 09/07] Tiến độ CNTT4 + CNTT2 + CNTT3</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">09/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-14</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Báo cáo ngày 09/07] Tiến độ CNTT1</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Nguyễn Công Hưởng</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">09/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-15</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Báo cáo tuần] Kết quả triển khai CNTT2 + CNTT3 + CNTT4</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-16</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">[Báo cáo tuần] Kết quả triển khai CNTT1</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Nguyễn Công Hưởng</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-17</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Kiểm tra tiến độ + Chăm sóc SV — CNTT4</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-19</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Kiểm tra tiến độ + Chăm sóc SV — CNTT1</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Nguyễn Công Hưởng</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-20</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Hỗ trợ SV làm dự án — CNTT1</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Nguyễn Công Hưởng</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-21</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Kiểm tra tiến độ + Chăm sóc SV — CNTT2</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="Triển khai môn Dự án K24">Triển khai môn Dự án K24</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">TRIEKHAI-23</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Kiểm tra tiến độ + Chăm sóc SV — CNTT3</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Bùi Thanh Hải</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'>Chưa làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">10/07</td>
+            </tr>
+            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Bảng Đến hạn trong tuần -->
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
+                <h3 class="text-sm font-extrabold text-amber-500 dark:text-amber-400 flex items-center gap-2 mb-4 uppercase tracking-wider">
+                    <i class="fas fa-calendar-week"></i> Công Việc Hạn Chót Trong Tuần Này
+                </h3>
+                <div class="overflow-x-auto border border-slate-100 dark:border-slate-800 rounded-2xl">
+                    <table class="min-w-full divide-y divide-slate-100 dark:divide-slate-800 text-xs text-left">
+                        <thead class="bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">
+                            <tr>
+                                <th class="px-4 py-3">Dự án</th>
+                                <th class="px-4 py-3">Mã Task</th>
+                                <th class="px-4 py-3">Tiêu đề công việc</th>
+                                <th class="px-4 py-3">PIC phụ trách</th>
+                                <th class="px-4 py-3 text-center">Trạng thái</th>
+                                <th class="px-4 py-3 text-center">Hạn chót</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật">🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">PTITXAY-4</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Kế hoạch chuẩn bị học liệu/video trước bài giảng</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Lê Thị Đỏ</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200'>Đang làm</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">15/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật">🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">PTITXAY-1</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Xây dựng timeline chi tiết học kỳ I tiếng Nhật - KS26</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Giáp Thị Minh Hằng</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200'>Chờ duyệt</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">15/07</td>
+            </tr>
+            
+
+            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title="🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật">🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật</td>
+                <td class="px-4 py-3 font-bold text-indigo-600 dark:text-indigo-400 font-mono">PTITQUAN-14</td>
+                <td class="px-4 py-3 text-slate-600 dark:text-slate-400 font-medium">Khảo sát JPN-HN</td>
+                <td class="px-4 py-3 text-slate-700 dark:text-slate-300 font-semibold">Giáp Thị Minh Hằng</td>
+                <td class="px-4 py-3 text-center"><span class='px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'>Hoàn thành</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-600 dark:text-slate-400">15/07</td>
+            </tr>
+            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cột Phải: Dự án Off-track (Chiếm 1/3) -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm h-fit">
+            <h3 class="text-sm font-extrabold text-slate-800 dark:text-slate-200 flex items-center gap-2 mb-4 uppercase tracking-wider">
+                <i class="fas fa-exclamation-circle text-red-500"></i> Dự Án Cần Lưu Ý (Off-track)
+            </h3>
+            <div class="space-y-4">
+                
+        <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-750 shadow-sm">
+            <div>
+                <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm">[QTKDS] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG</h4>
+                <p class="text-xs text-slate-400 mt-1">PIC: <strong class="text-slate-600 dark:text-slate-300">Hoàng Thị Kim Oanh</strong></p>
+            </div>
+            <span class='px-2.5 py-0.5 rounded-full text-[10px] font-black bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200 uppercase tracking-wider'>Off Track</span>
+        </div>
+        
+            </div>
+        </div>
+    </div>
+    
+        </div>
+
+    

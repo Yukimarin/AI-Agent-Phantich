@@ -1,0 +1,259 @@
+7841:                             min: 0,
+7842:                             max: 100,
+7843:                             grid: {
+7844:                                 color: gridColor
+7845:                             },
+7846:                             ticks: {
+7847:                                 color: textColor,
+7848:                                 callback: function(value) { return value + '%'; },
+7849:                                 font: {
+7850:                                     family: 'Inter',
+7851:                                     size: 10
+7852:                                 }
+7853:                             }
+7854:                         }
+7855:                     }
+7856:                 }
+7857:             });
+7858:         }
+7859:         
+7860:         /* Tab 3 JavaScript code (Agent 4) */
+7861:         
+7862:         // Dữ liệu cho biểu đồ Tab 3
+7863:         const tab3StaffScores = [{"name": "Bùi Thanh Hải", "group": "Khối CNTT - Cơ sở HN (KS24)", "score": 100.0}, {"name": "Nguyễn Huyền Trang", "group": "Khối Quản lý Đào tạo (QLĐT)", "score": 100.0}, {"name": "Nguyễn Ngọc Vân Khanh", "group": "Khối QTKD", "score": 99.0}, {"name": "Trần Thị Mỹ Phước", "group": "Khối Quản lý Đào tạo (QLĐT)", "score": 99.0}, {"name": "Nguyễn Thị Hồng Minh", "group": "Khối QTKD", "score": 98.8}, {"name": "Hoàng Thị Kim Oanh", "group": "Khối QTKD", "score": 98.5}, {"name": "Hoàng Thị Hậu", "group": "Khối QTKD", "score": 96.4}, {"name": "Lâm Tùng Dương", "group": "Khối CNTT - Cơ sở HN (KS25)", "score": 94.8}, {"name": "Giáp Thị Minh Hằng", "group": "Khối Ngoại ngữ - Kỹ năng mềm", "score": 93.3}, {"name": "Đặng Quỳnh Trang", "group": "Khối QTKD", "score": 91.0}, {"name": "Lê Hà Thanh Sang", "group": "Khối CNTT - Cơ sở HCM", "score": 88.0}, {"name": "Phạm Ngọc Kiên", "group": "Khối CNTT - Cơ sở HCM", "score": 88.0}, {"name": "Nguyễn Quảng An", "group": "Khối CNTT - Cơ sở HCM", "score": 87.0}, {"name": "Trần Quốc Tuấn", "group": "Khối CNTT - Cơ sở HN (KS24)", "score": 86.0}, {"name": "Ngô Quang Huấn", "group": "Khối Ngoại ngữ - Kỹ năng mềm", "score": 84.7}, {"name": "Nguyễn Xuân Bách", "group": "Khối Quản lý Đào tạo (QLĐT)", "score": 84.0}, {"name": "Lê Thị Đỏ", "group": "Khối Ngoại ngữ - Kỹ năng mềm", "score": 81.6}, {"name": "Nguyễn Thị Tươi", "group": "Khối Quản lý Đào tạo (QLĐT)", "score": 79.8}, {"name": "Lại Trung Lâm", "group": "Khối QTKD", "score": 78.0}, {"name": "Phạm Viết Hùng", "group": "Khối CNTT - Cơ sở HN (KS24)", "score": 78.0}, {"name": "Lương Quốc Tuấn", "group": "Khối CNTT - Cơ sở HN (KS25)", "score": 74.3}, {"name": "Phạm Tuấn Bình", "group": "Khối QTKD", "score": 71.7}, {"name": "Trịnh Quốc Hai", "group": "Khối CNTT - Cơ sở HN (KS25)", "score": 71.0}, {"name": "Lê Thành Ngọc", "group": "Khối CNTT - Cơ sở HN (KS24)", "score": 68.0}, {"name": "Lò Thị Ngọc Anh", "group": "Khối Ngoại ngữ - Kỹ năng mềm", "score": 65.9}, {"name": "Ngọ Văn Quý", "group": "Khối CNTT - Cơ sở HN (KS25)", "score": 64.0}, {"name": "Nguyễn Bá Minh Đạo", "group": "Khối CNTT - Cơ sở HN (KS25)", "score": 64.0}];
+7864:         const tab3MissingTrend = [{"date": "01/07", "count": 16}, {"date": "02/07", "count": 16}, {"date": "03/07", "count": 14}, {"date": "06/07", "count": 10}, {"date": "07/07", "count": 13}, {"date": "08/07", "count": 10}, {"date": "09/07", "count": 7}, {"date": "10/07", "count": 8}, {"date": "13/07", "count": 4}, {"date": "14/07", "count": 3}];
+7865:         
+7866:         let taskStatusChart = null;
+7867:         let monthlyPerformanceChart = null;
+7868:         let missingLogsTrendChart = null;
+7869:         
+7870:         function initTab3Charts() {
+7871:             const isDark = document.documentElement.classList.contains('dark');
+7872:             const textColor = isDark ? '#94a3b8' : '#64748b';
+7873:             const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)';
+7874:             
+7875:             // 1. Doughnut Chart
+7876:             const canvasTask = document.getElementById('taskStatusChart');
+7877:             if (canvasTask) {
+7878:                 const ctxTask = canvasTask.getContext('2d');
+7879:                 if (taskStatusChart) taskStatusChart.destroy();
+7880:                 taskStatusChart = new Chart(ctxTask, {
+7881:                     type: 'doughnut',
+7882:                     data: {
+7883:                         labels: ['Hoàn thành', 'Chờ duyệt', 'Chưa làm/Đang làm', 'Đã Hủy'],
+7884:                         datasets: [{
+7885:                             data: [238, 9, 119, 1],
+7886:                             backgroundColor: ['#10b981', '#818cf8', '#f59e0b', '#9ca3af'],
+7887:                             borderWidth: 1,
+7888:                             borderColor: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.05)'
+7889:                         }]
+7890:                     },
+7891:                     options: {
+7892:                         responsive: true,
+7893:                         maintainAspectRatio: false,
+7894:                         plugins: {
+7895:                             legend: {
+7896:                                 position: 'bottom',
+7897:                                 labels: {
+7898:                                     color: textColor,
+7899:                                     font: { family: 'Inter', size: 10, weight: 'bold' }
+7900:                                 }
+7901:                             }
+7902:                         }
+7903:                     }
+7904:                 });
+7905:             }
+7906:             
+7907:             // 2. Cập nhật các biểu đồ phần Tháng
+7908:             updateMonthlyCharts('ALL');
+7909:         }
+7910:         
+7911:         function updateMonthlyCharts(groupFilter) {
+7912:             const isDark = document.documentElement.classList.contains('dark');
+7913:             const textColor = isDark ? '#94a3b8' : '#64748b';
+7914:             const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)';
+7915:             
+7916:             // Lọc dữ liệu nhân sự theo group
+7917:             const filteredStaff = tab3StaffScores.filter(s => {
+7918:                 if (groupFilter === 'ALL') return true;
+7919:                 if (groupFilter === 'HN-KS25') return s.group.includes('KS25');
+7920:                 if (groupFilter === 'HN-KS24') return s.group.includes('KS24');
+7921:                 if (groupFilter === 'HCM') return s.group.includes('HCM');
+7922:                 if (groupFilter === 'Ngoại ngữ') return s.group.includes('Ngoại ngữ');
+7923:                 if (groupFilter === 'QLĐT') return s.group.includes('QLĐT');
+7924:                 return s.group === groupFilter;
+7925:             });
+7926:             
+7927:             // Chỉ lấy top 5 điểm cao nhất sau khi lọc
+7928:             const displayStaff = filteredStaff.slice(0, 5);
+7929:             const labels = displayStaff.map(s => s.name);
+7930:             const scores = displayStaff.map(s => s.score);
+7931:             
+7932:             const canvasMonthly = document.getElementById('monthlyPerformanceChart');
+7933:             if (canvasMonthly) {
+7934:                 const ctxMonthly = canvasMonthly.getContext('2d');
+7935:                 if (monthlyPerformanceChart) monthlyPerformanceChart.destroy();
+7936:                 monthlyPerformanceChart = new Chart(ctxMonthly, {
+7937:                     type: 'bar',
+7938:                     data: {
+7939:                         labels: labels,
+7940:                         datasets: [{
+7941:                             data: scores,
+7942:                             backgroundColor: scores.map(s => s >= 85 ? '#10b981' : s >= 70 ? '#6366f1' : s >= 50 ? '#f59e0b' : '#ef4444'),
+7943:                             borderRadius: 6,
+7944:                             borderWidth: 0
+7945:                         }]
+7946:                     },
+7947:                     options: {
+7948:                         indexAxis: 'y',
+7949:                         responsive: true,
+7950:                         maintainAspectRatio: false,
+7951:                         plugins: {
+7952:                             legend: { display: false },
+7953:                             tooltip: {
+7954:                                 callbacks: {
+7955:                                     label: function(context) { return 'Work Score: ' + context.raw.toFixed(1) + '/100'; }
+7956:                                 }
+7957:                             }
+7958:                         },
+7959:                         scales: {
+7960:                             x: {
+7961:                                 min: 0,
+7962:                                 max: 100,
+7963:                                 grid: { color: gridColor },
+7964:                                 ticks: { color: textColor }
+7965:                             },
+7966:                             y: {
+7967:                                 grid: { display: false },
+7968:                                 ticks: { color: textColor, font: { family: 'Inter', size: 9 } }
+7969:                             }
+7970:                         }
+7971:                     }
+7972:                 });
+7973:             }
+7974:             
+7975:             // 3. Biểu đồ đường xu hướng vắng báo cáo
+7976:             const trendLabels = tab3MissingTrend.map(t => t.date);
+7977:             const trendCounts = tab3MissingTrend.map(t => t.count);
+7978:             
+7979:             const canvasTrend = document.getElementById('missingLogsTrendChart');
+7980:             if (canvasTrend) {
+7981:                 const ctxTrend = canvasTrend.getContext('2d');
+7982:                 if (missingLogsTrendChart) missingLogsTrendChart.destroy();
+7983:                 missingLogsTrendChart = new Chart(ctxTrend, {
+7984:                     type: 'line',
+7985:                     data: {
+7986:                         labels: trendLabels,
+7987:                         datasets: [{
+7988:                             label: 'Số ca thiếu báo cáo',
+7989:                             data: trendCounts,
+7990:                             borderColor: '#ef4444',
+7991:                             backgroundColor: 'rgba(239, 68, 68, 0.1)',
+7992:                             borderWidth: 2,
+7993:                             tension: 0.3,
+7994:                             fill: true,
+7995:                             pointBackgroundColor: '#ef4444',
+7996:                             pointBorderColor: '#fff',
+7997:                             pointBorderWidth: 1.5,
+7998:                             pointRadius: 3
+7999:                         }]
+8000:                     },
+8001:                     options: {
+8002:                         responsive: true,
+8003:                         maintainAspectRatio: false,
+8004:                         plugins: {
+8005:                             legend: { display: false },
+8006:                             tooltip: {
+8007:                                 padding: 10,
+8008:                                 cornerRadius: 8
+8009:                             }
+8010:                         },
+8011:                         scales: {
+8012:                             x: {
+8013:                                 grid: { display: false },
+8014:                                 ticks: { color: textColor, font: { size: 8 } }
+8015:                             },
+8016:                             y: {
+8017:                                 min: 0,
+8018:                                 grid: { color: gridColor },
+8019:                                 ticks: { color: textColor, stepSize: 1 }
+8020:                             }
+8021:                         }
+8022:                     }
+8023:                 });
+8024:             }
+8025:         }
+8026:         
+8027:         // Điều khiển tương tác Tab 3
+8028:         var currentSubTabLogs = 'weekly';
+8029:         var currentGroupFilterLogs = 'ALL';
+8030:         
+8031:         function switchViewModeLogs(evt, mode) {
+8032:             currentSubTabLogs = mode;
+8033:             
+8034:             document.getElementById("view-weekly").classList.toggle("hidden", mode !== 'weekly');
+8035:             document.getElementById("view-monthly").classList.toggle("hidden", mode !== 'monthly');
+8036:             
+8037:             document.getElementById("panel-chart-weekly").classList.toggle("hidden", mode !== 'weekly');
+8038:             document.getElementById("panel-charts-monthly").classList.toggle("hidden", mode !== 'monthly');
+8039:             
+8040:             const btnWeekly = document.getElementById("btn-logs-weekly");
+8041:             const btnMonthly = document.getElementById("btn-logs-monthly");
+8042:             
+8043:             if (mode === 'weekly') {
+8044:                 btnWeekly.className = "px-4 py-1.5 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 bg-white dark:bg-slate-900 shadow-sm border border-slate-200/40 dark:border-slate-700/60";
+8045:                 btnMonthly.className = "px-4 py-1.5 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400";
+8046:             } else {
+8047:                 btnMonthly.className = "px-4 py-1.5 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 bg-white dark:bg-slate-900 shadow-sm border border-slate-200/40 dark:border-slate-700/60";
+8048:                 btnWeekly.className = "px-4 py-1.5 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400";
+8049:             }
+8050:             
+8051:             applyFiltersLogs();
+8052:             
+8053:             setTimeout(() => {
+8054:                 if (taskStatusChart) taskStatusChart.resize();
+8055:                 if (monthlyPerformanceChart) monthlyPerformanceChart.resize();
+8056:                 if (missingLogsTrendChart) missingLogsTrendChart.resize();
+8057:             }, 50);
+8058:         }
+8059:         
+8060:         function filterGroupLogs(evt, group) {
+8061:             currentGroupFilterLogs = group;
+8062:             
+8063:             const buttons = evt.currentTarget.parentNode.getElementsByClassName("filter-btn-logs");
+8064:             for (let i = 0; i < buttons.length; i++) {
+8065:                 buttons[i].className = "filter-btn-logs px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-500 dark:hover:border-indigo-400";
+8066:             }
+8067:             evt.currentTarget.className = "filter-btn-logs px-3.5 py-2 rounded-xl text-xs font-bold border bg-indigo-500 border-indigo-500 text-white hover:bg-indigo-600 shadow-sm";
+8068:             
+8069:             updateMonthlyCharts(group);
+8070:             applyFiltersLogs();
+8071:         }
+8072:         
+8073:         function applyFiltersLogs() {
+8074:             const searchVal = document.getElementById("log-search").value.trim().toLowerCase();
+8075:             const activeContainerId = "view-" + currentSubTabLogs;
+8076:             const activeContainer = document.getElementById(activeContainerId);
+8077:             
+8078:             const rows = activeContainer.querySelectorAll(".log-row");
+8079:             rows.forEach(row => {
+8080:                 const group = row.getAttribute("data-group");
+8081:                 const name = row.getAttribute("data-name");
+8082:                 
+8083:                 const matchesGroup = (currentGroupFilterLogs === 'ALL' || 
+8084:                                      (currentGroupFilterLogs === 'Khối QTKD' && group === 'Khối QTKD') ||
+8085:                                      (currentGroupFilterLogs === 'HN-KS25' && group.includes('KS25')) ||
+8086:                                      (currentGroupFilterLogs === 'HN-KS24' && group.includes('KS24')) ||
+8087:                                      (currentGroupFilterLogs === 'HCM' && group.includes('HCM')) ||
+8088:                                      (currentGroupFilterLogs === 'Ngoại ngữ' && group.includes('Ngoại ngữ')) ||
+8089:                                      (currentGroupFilterLogs === 'QLĐT' && group.includes('QLĐT')));
+8090:                                      
+8091:                 const matchesSearch = name.includes(searchVal);
+8092:                 
+8093:                 row.style.display = (matchesGroup && matchesSearch) ? "" : "none";
+8094:             });
+8095:         }
+8096:     
+8097:     </script>
+8098: </body>
+8099: </html>
