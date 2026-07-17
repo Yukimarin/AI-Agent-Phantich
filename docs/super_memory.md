@@ -133,3 +133,24 @@ This file acts as the persistent memory for the AI agent working on the training
   - Tạo cổng kết nối trung tâm `docs/knowledge_map.md` phân nhóm 35+ tệp ghi chú trong Vault.
   - Sửa đổi tệp quy chế lỗi encoding thành `data/QUY_DINH_KHUNG_CHE_TAI_VA_KHEN_THUONG_NANG_SUAT_DAO_TAO.md` sạch sẽ.
   - Phát triển script `scratch/link_all_nodes.py` tự động chèn backlinks `[[docs/knowledge_map|Bản đồ Tri thức dự án]]` cho toàn bộ các ghi chú con rời rạc thành công và đồng bộ lên GitHub.
+- [2026-07-16] **Nâng cấp Giao diện & Đồng bộ Phòng ban Master Portal**:
+  - Trích xuất và bọc cô lập CSS của các tab con (đặc biệt là CSS thuần của Agent 1) bằng tiền tố `#tab-agent1-container`... giúp khôi phục chính xác 100% định dạng giao diện gốc.
+  - Chèn thêm KPI Summary Cards ở đầu Tab 1 để thống kê chi tiết KPI TB, số nhân sự và vinh danh tốt nhất khối cho 4 Khối phòng ban lớn của Trung tâm.
+  - Expose hàm `toggleRiskRows` ra global scope và escape ngoặc nhọn trong Python F-string để khôi phục hoàn chỉnh tính năng click xem danh sách học sinh nguy cơ trượt ở Tab 2.
+  - Thay đổi cấu trúc `target_groups` của Agent 4 (`analyze_daily_logs_mcp.py` và `generate_agent4_report.py`) để đồng bộ khối phòng ban của 39 nhân sự khớp hoàn toàn với Agent 5.
+- [2026-07-16] **Thiết lập Đánh giá & Xếp loại Năng lực GV/TG theo Tiêu chuẩn mới**:
+  - Triển khai thành công script `scratch/generate_kpi_ranking.py` để tự động hóa tính điểm và xếp loại năng lực cho toàn bộ nhân sự Đào tạo theo quy chuẩn của file Excel mới `[RE] Đào tạo - Tiêu chuẩn xếp loại năng lực GV_TG.xlsx`.
+  - **Đồng bộ Whitelist nhân sự & thăng chức Quản lý / Giám đốc**:
+    * Tích hợp whitelist cứng **44 nhân sự Đào tạo** chính thức chia theo 7 nhóm phòng ban từ A đến G và Ban Giám Đốc. Loại bỏ hoàn toàn các nhân sự đã nghỉ.
+    * Cập nhật cấp bậc **Quản lý (Rank 5)** cho 8 trưởng nhóm (Hồ Xuân Hùng, Trịnh Quốc Hai, Trần Minh Cường, Nguyễn Bá Minh Đạo, Lê Thành Ngọc, Lò Thị Ngọc Anh, Giáp Thị Minh Hằng, Ngô Quang Huấn) và chức vụ **Giám đốc Đào tạo (Rank 7)** cho thầy Nguyễn Duy Quang.
+    * Giữ lại đầy đủ khối Ngoại ngữ & KNM và QLCLĐT trong báo cáo, tạm thời xếp các giảng viên/nhân sự bình thường ở Rank mặc định hoặc Rank cũ do chưa có định nghĩa phân chia cụ thể.
+  - **Phương án tính điểm song song**:
+    * **Phương án A (Scale thực tế - Khuyên dùng)**: Chỉ tính điểm quá trình dựa trên các tiêu chí có sẵn dữ liệu thực tế (Tuân thủ báo cáo ngày, Chuyên cần lớp, Hoàn thành bài tập, Tỷ lệ đỗ môn) và chuẩn hóa lại tổng trọng số của chúng về 1.0. Điều này giúp phản ánh trung thực kết quả làm việc của từng thầy cô mà không bị kéo bão hòa bởi các tiêu chí mặc định.
+    * **Phương án B (Chèn điểm Đạt)**: Điền mặc định Mức 3 (Đạt chuẩn - 5/10 điểm) cho tất cả các tiêu chí chưa có dữ liệu thực tế trước khi nhân trọng số đầy đủ của Excel.
+  - **Tổ chức Đầu ra**:
+    * File Markdown chi tiết: `output/kpi_classification_report.md` chứa phân tích ưu/nhược điểm và đề xuất cải tiến cho từng cá nhân, được liên kết vào Obsidian MOC `docs/knowledge_map.md` với Wiki-links tương đối.
+    * Dashboard HTML Premium: `output/kpi_classification_report.html` (Tailwind CSS, SVG động, Accordion xem điểm chi tiết thành phần, bộ lọc động theo Phòng ban/Xếp loại, và tính năng xuất CSV chuẩn UTF-8 BOM).
+  - **Khắc phục lỗi f-string lồng**: Tránh sử dụng Python f-string cho khối HTML/JS khổng lồ để ngăn lỗi SyntaxError do dấu ngoặc nhọn CSS/Javascript, chuyển sang sử dụng string thường và thay thế placeholder `.replace()`.
+- [2026-07-17] **Khởi động MySQL 9.7 trên Windows & dependencies chạy đơn lẻ**:
+  * Khi MySQL Server 9.7 trên cổng 3307 chưa chạy, khởi chạy trực tiếp thông qua background task của Antigravity (giữ phiên) thay vì dùng `Start-Process` ngầm của PowerShell để tránh bị Windows quét giải phóng tiến trình con khi kết thúc phiên.
+  * Các script chạy đơn lẻ nằm ngoài pipeline (như `generate_kpi_ranking.py`) khi chạy trực tiếp bằng `uv run` cần nạp đủ cờ `--with` cho các thư viện liên quan (`openpyxl`, `pandas`, `markdown`, `numpy`, `mysql-connector-python`) để tránh lỗi `ModuleNotFoundError`.

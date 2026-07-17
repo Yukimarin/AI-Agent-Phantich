@@ -165,6 +165,17 @@
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
+        "Date": "2026-07-17",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 20",
+        "Ca": "07:00 - 09:00",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-08",
+        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
         "Date": "2026-06-26",
         "Class": "HN-K25-CNTT2",
         "Session": "Buổi 01",
@@ -383,6 +394,17 @@
         "Error": "GV-08",
         "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
+        "Date": "2026-07-17",
+        "Class": "HN-K25-CNTT2",
+        "Session": "Buổi 19",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-08",
+        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
         "Date": "2026-06-25",
@@ -605,6 +627,17 @@
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
+        "Date": "2026-07-17",
+        "Class": "HN-K25-CNTT3",
+        "Session": "Buổi 20",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-08",
+        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
         "Date": "2026-06-25",
         "Class": "HN-K25-CNTT4",
         "Session": "Buổi 01",
@@ -825,6 +858,17 @@
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
+        "Date": "2026-07-17",
+        "Class": "HN-K25-CNTT4",
+        "Session": "Buổi 20",
+        "Ca": "07:00 - 09:00",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-08",
+        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
         "Date": "2026-07-01",
         "Class": "HN-K25-CNTT5",
         "Session": "Buổi 06",
@@ -949,6 +993,28 @@
         "Date": "2026-07-16",
         "Class": "HN-K25-CNTT5",
         "Session": "Buổi 18",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-08",
+        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
+    },
+    {
+        "Date": "2026-07-17",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 19",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-08",
+        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
+        "Date": "2026-07-17",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 20",
         "Ca": "14:20 - 16:20",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
@@ -1142,5 +1208,16 @@
         "Error": "GV-08",
         "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-07-17",
+        "Class": "HN-K25-CNTT6",
+        "Session": "Buổi 19",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Phạm Ngọc Kiên",
+        "Role": "TG",
+        "Error": "TG-08",
+        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     }
 ]

@@ -22,6 +22,7 @@ Chào mừng bạn đến với Bản đồ Tri thức Trung tâm của dự án
 ---
 
 ## 3. Báo cáo Nghiệp vụ Hiện tại
+*   [[output/kpi_classification_report|Báo cáo Xếp loại Năng lực GV/TG mới]]: Đánh giá xếp loại năng lực theo khung tiêu chuẩn mới 2026.
 *   [[data/report_kpi_gv_tg|Báo cáo KPI GV/TG]]: Kết quả tổng hợp điểm hiệu suất học kỳ của toàn bộ GV/TG.
 *   [[data/student_risk_report|Báo cáo Nguy cơ Học viên]]: Danh sách sinh viên thuộc diện chăm sóc đặc biệt (Care List).
 *   [[data/evaluation_metrics|Đánh giá Hiệu năng]]: Đo lường sai số MAE của mô hình dự báo học tập.
