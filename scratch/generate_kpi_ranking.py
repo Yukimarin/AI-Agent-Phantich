@@ -630,7 +630,7 @@ print("4. Đang sinh file báo cáo Markdown...")
 with open(OUTPUT_MD_PATH, "w", encoding="utf-8") as md:
     md.write("# Báo cáo Đánh giá & Xếp loại Năng lực GV/TG Học kỳ\n\n")
     md.write("> [!NOTE]\n")
-    md.write("> Báo cáo này đánh giá hiệu suất năng lực của giảng viên và trợ giảng dựa theo khung tiêu chuẩn của tài liệu `[RE] Đào tạo - Tiêu chuẩn xếp loại năng lực GV_TG.xlsx`.\n")
+    md.write("> Báo cáo này đánh giá hiệu suất năng lực của giảng viên và trợ giảng dựa theo khung tiêu chuẩn của tài liệu [[data/[RE] Đào tạo - Tiêu chuẩn xếp loại năng lực GV_TG.xlsx]].\n")
     md.write("> Điểm số được tính toán dựa trên **Phương án A (Scale trọng số theo các tiêu chí thực tế có dữ liệu)** để phản ánh chân thực kết quả giảng dạy và làm việc.\n")
     md.write("> Danh sách nhân sự được cập nhật chính xác theo Whitelist của phòng Đào tạo (44 nhân sự hoạt động chính thức).\n")
     md.write("> *Lưu ý:* Các giảng viên thuộc khối Ngoại ngữ & KNM và QLCLĐT tạm thời sử dụng Rank mặc định hoặc Rank cũ do chưa có khung chia cụ thể, các Quản lý khối vẫn được tính theo Rank 5 (Quản lý).\n\n")

@@ -16,32 +16,32 @@
 | **Phạm Ngọc Kiên** | GV |  | 85.0 | 100.0 | 88.3 | **90.49** |
 | **Trần Minh Cường** | GV |  | 100.0 | 100.0 | 62.7 | **88.81** |
 | **Lại Trung Lâm** | GV |  | 85.0 | 100.0 | 77.0 | **87.10** |
-| **Bùi Thanh Hải** | GV | [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(32-25) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34-32) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(48-43-42) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(40-39) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (KS24-JavaAdvance)]] | 93.8 | 61.5 | 100.0 | **85.97** |
-| **Trần Quốc Tuấn** | GV | [[data/student_risk_report#Lớp: HCM-KS25-CNTT4|HCM-K25-CNTT4 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(42) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(41-40) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT1|HCM-K25-CNTT1 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(47-41) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(39) (KS25_Database)]] | 84.9 | 84.7 | 88.0 | **85.77** |
+| **Bùi Thanh Hải** | GV | [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34-32) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(48-43-42) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(40-39) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(32-25) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_JWS)]] | 93.8 | 61.5 | 100.0 | **85.97** |
+| **Trần Quốc Tuấn** | GV | [[data/student_risk_report#Lớp: HCM-KS25-CNTT4|HCM-K25-CNTT4 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(41-40) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT1|HCM-K25-CNTT1 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(47-41) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(39) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(42) (KS25_Python)]] | 84.9 | 84.7 | 88.0 | **85.77** |
 | **Nguyễn Duy Quang** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT8-HL|HN-K25-CNTT8-HL(18) (KS25_Database)]] | 87.3 | 89.5 | 75.0 | **84.26** |
-| **Lê Hà Thanh Sang** | GV | [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT2|HCM-K25-CNTT2 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(38) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(39) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(43-42) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(43-39) (KS25_Database)]] | 83.6 | 82.3 | 86.7 | **84.15** |
-| **Hồ Xuân Hùng** | GV | [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5(29-19) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38-36) (KS24_AI)]] | 91.7 | 67.9 | 90.0 | **84.07** |
+| **Lê Hà Thanh Sang** | GV | [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(43-42) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(43-39) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(39) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(38) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT2|HCM-K25-CNTT2 (KS25_Javascript)]] | 83.6 | 82.3 | 86.7 | **84.15** |
+| **Hồ Xuân Hùng** | GV | [[data/student_risk_report#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5(29-19) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38-36) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38) (KS24_JWS)]] | 91.7 | 67.9 | 90.0 | **84.07** |
 | **Tạ Quang Tùng** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(23-24) (KS25_Python)]] | 85.7 | 86.5 | 75.0 | **82.75** |
 | **Lâm Tùng Dương** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(38) (KS25_Python_Web)]] | 88.4 | 53.6 | 94.7 | **79.85** |
 | **Nguyễn Văn A** | GV | [[data/student_risk_report#Lớp: L01|L01 (Lập trình Python)]] | 90.0 | 64.0 | 80.0 | **79.20** |
-| **Phạm Tuấn Bình** | GV | [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(38-34) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(41-39) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5 (KS24-JavaAdvance)]] | 89.3 | 63.0 | 74.0 | **76.82** |
-| **Nguyễn Quảng An** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(44-43-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(35-33) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(47-43) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39-37) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (KS25_Javascript)]] | 73.6 | 53.1 | 89.0 | **72.07** |
-| **Lương Quốc Tuấn** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(47-44) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(43-40-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (KS25_Javascript)]] | 76.6 | 54.1 | 75.3 | **69.45** |
-| **Ngọ Văn Quý** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(38-35) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT7|HN-K25-CNTT7 (KS25_Javascript)]] | 75.2 | 56.4 | 70.0 | **68.00** |
-| **Trịnh Quốc Hai** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(44-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(42) (KS25_Database)]] | 70.1 | 57.0 | 75.7 | **67.83** |
-| **Nguyễn Bá Minh Đạo** | GV | [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT2|HCM-K24-CNTT2 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JWS)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT3|HCM-K25-CNTT3 (KS25_Javascript)]] | 69.1 | 60.1 | 66.7 | **65.68** |
+| **Phạm Tuấn Bình** | GV | [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(38-34) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(41-39) (KS24_JavaWeb)]] | 89.3 | 63.0 | 74.0 | **76.82** |
+| **Nguyễn Quảng An** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(35-33) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(47-43) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(44-43-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39-37) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Database)]] | 73.6 | 53.1 | 89.0 | **72.07** |
+| **Lương Quốc Tuấn** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(43-40-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(47-44) (KS25_Database)]] | 76.6 | 54.1 | 75.3 | **69.45** |
+| **Ngọ Văn Quý** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT7|HN-K25-CNTT7 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(38-35) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39) (KS25_Database)]] | 75.2 | 56.4 | 70.0 | **68.00** |
+| **Trịnh Quốc Hai** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(42) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(44-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (KS25_Javascript)]] | 70.1 | 57.0 | 75.7 | **67.83** |
+| **Nguyễn Bá Minh Đạo** | GV | [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JWS)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT2|HCM-K24-CNTT2 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT3|HCM-K25-CNTT3 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI)]] | 69.1 | 60.1 | 66.7 | **65.68** |
 | **Nguyễn Thanh Bình Phước** | GV | [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1 (KS24-JavaAdvance)]] | 87.1 | 44.8 | 0.0 | **48.30** |
 
 ### 1.2. Khối QTKD
 
 | Họ và tên | Vai trò | Lớp phụ trách | Điểm Kỷ luật SV & Tác nghiệp (40%) | Điểm Học tập (30%) | Điểm Báo cáo ngày (30%) | Điểm KPI tổng |
 | :--- | :---: | :--- | :---: | :---: | :---: | :---: |
-| **Nguyễn Thị Hồng Minh** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_M104)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)]] | 93.3 | 96.6 | 98.9 | **95.98** |
-| **Hoàng Thị Kim Oanh** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_M103)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_M104)]] | 88.4 | 86.8 | 98.5 | **90.97** |
+| **Nguyễn Thị Hồng Minh** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_M104)]] | 93.3 | 96.6 | 98.9 | **95.98** |
+| **Hoàng Thị Kim Oanh** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_M104)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_M103)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)]] | 88.4 | 86.8 | 98.5 | **90.97** |
 | **Hoàng Thị Hậu** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_M104)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1 (KS25_QTKD_M103)]] | 87.6 | 85.3 | 96.9 | **89.71** |
 | **Đặng Quỳnh Trang** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3 (KS25_QTKD_M103)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(26) (KS25_QTKD_PRJ302)]] | 87.9 | 85.8 | 92.3 | **88.57** |
-| **Nguyễn Ngọc Vân Khanh** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_DTB201)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB202)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB201)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB202)]] | 84.6 | 79.3 | 99.0 | **87.33** |
-| **Lê Thành Ngọc** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB201)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37-33) (KS25_QTKD_DTB202)]] | 83.0 | 76.0 | 73.3 | **78.01** |
+| **Nguyễn Ngọc Vân Khanh** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB201)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB202)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB202)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_DTB201)]] | 84.6 | 79.3 | 99.0 | **87.33** |
+| **Lê Thành Ngọc** | GV | [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37-33) (KS25_QTKD_DTB202)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB201)]] | 83.0 | 76.0 | 73.3 | **78.01** |
 
 ### 1.3. Khối Ngoại ngữ và kỹ năng mềm
 
@@ -151,7 +151,7 @@
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
 #### GV. Bùi Thanh Hải
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(32-25) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34-32) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(48-43-42) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(40-39) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (KS24-JavaAdvance)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34-32) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(48-43-42) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(40-39) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(32-25) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_JWS)]]
 - **Điểm KPI tổng**: **85.97** (Kỷ luật: 93.8, Học tập: 61.5, Báo cáo ngày: 100.0)
 - **Điểm mạnh**:
   - Duy trì tỷ lệ vi phạm của lớp ở mức rất thấp (trung bình chỉ 12.02%). Quản lý tốt 10 lớp học khối KS24.
@@ -161,7 +161,7 @@
   - Cần làm việc sát sao hơn và thường xuyên thông báo tỷ lệ chuyên cần cho sinh viên. Đồng thời, cần báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Trần Quốc Tuấn
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HCM-KS25-CNTT4|HCM-K25-CNTT4 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(42) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(41-40) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT1|HCM-K25-CNTT1 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(47-41) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(39) (KS25_Database)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HCM-KS25-CNTT4|HCM-K25-CNTT4 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(41-40) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT1|HCM-K25-CNTT1 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(47-41) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(39) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(42) (KS25_Python)]]
 - **Điểm KPI tổng**: **85.77** (Kỷ luật: 84.9, Học tập: 84.7, Báo cáo ngày: 88.0)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
@@ -181,7 +181,7 @@
   - Tiếp tục duy trì và nâng cao chất lượng quản lý lớp học.
 
 #### GV. Lê Hà Thanh Sang
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT2|HCM-K25-CNTT2 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(38) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(39) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(43-42) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(43-39) (KS25_Database)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(43-42) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(43-39) (KS25_Database)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(39) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(38) (KS25_Python)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT2|HCM-K25-CNTT2 (KS25_Javascript)]]
 - **Điểm KPI tổng**: **84.15** (Kỷ luật: 83.6, Học tập: 82.3, Báo cáo ngày: 86.7)
 - **Điểm mạnh**:
   - Quản lý giảng dạy hiệu quả 7 lớp học khối KS25, chỉ số vi phạm học tập ở mức thấp (trung bình 13.25%).
@@ -191,7 +191,7 @@
   - Tiếp tục phát huy phong cách quản lý lớp học tích cực. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Hồ Xuân Hùng
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38) (KS24_JWS)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5(29-19) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38-36) (KS24_AI)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5(29-19) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38-36) (KS24_AI)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38) (KS24_JWS)]]
 - **Điểm KPI tổng**: **84.07** (Kỷ luật: 91.7, Học tập: 67.9, Báo cáo ngày: 90.0)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
@@ -231,7 +231,7 @@
   - Cần đảm bảo chuẩn bị tài liệu giảng dạy đầy đủ trước giờ lên lớp và check-in đúng giờ quy định.
 
 #### GV. Phạm Tuấn Bình
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(38-34) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(41-39) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5 (KS24-JavaAdvance)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(38-34) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(41-39) (KS24_JavaWeb)]]
 - **Điểm KPI tổng**: **76.82** (Kỷ luật: 89.3, Học tập: 63.0, Báo cáo ngày: 74.0)
 - **Điểm mạnh**:
   - Đảm nhiệm giảng dạy các lớp CNTT3 và CNTT5 khối KS24.
@@ -241,7 +241,7 @@
   - Phối hợp với phòng CTSV kéo sinh viên quay lại và triển khai các buổi hỗ trợ kiến thức nền tảng. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Nguyễn Quảng An
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(44-43-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(35-33) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(47-43) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39-37) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (KS25_Javascript)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(35-33) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(47-43) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(44-43-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39-37) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Database)]]
 - **Điểm KPI tổng**: **72.07** (Kỷ luật: 73.6, Học tập: 53.1, Báo cáo ngày: 89.0)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
@@ -251,7 +251,7 @@
   - Phải rà soát kỹ điểm thi sau khi đẩy lên hệ thống QLDT; hướng dẫn kỹ sinh viên cách chia file và hạn chế lạm dụng AI khi làm Project. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Lương Quốc Tuấn
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(47-44) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(43-40-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (KS25_Javascript)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(43-40-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(47-44) (KS25_Database)]]
 - **Điểm KPI tổng**: **69.45** (Kỷ luật: 76.6, Học tập: 54.1, Báo cáo ngày: 75.3)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
@@ -261,7 +261,7 @@
   - Phải rà soát kỹ điểm thi sau khi đẩy lên hệ thống QLDT; hướng dẫn kỹ sinh viên cách chia file và hạn chế lạm dụng AI khi làm Project. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Ngọ Văn Quý
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(38-35) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT7|HN-K25-CNTT7 (KS25_Javascript)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT7|HN-K25-CNTT7 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(38-35) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39) (KS25_Database)]]
 - **Điểm KPI tổng**: **68.00** (Kỷ luật: 75.2, Học tập: 56.4, Báo cáo ngày: 70.0)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
@@ -271,7 +271,7 @@
   - Phải rà soát kỹ điểm thi sau khi đẩy lên hệ thống QLDT; hướng dẫn kỹ sinh viên cách chia file và hạn chế lạm dụng AI khi làm Project. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Trịnh Quốc Hai
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(44-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(42) (KS25_Database)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(42) (KS25_Database)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(44-42) (KS25_Python)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (KS25_Javascript)]]
 - **Điểm KPI tổng**: **67.83** (Kỷ luật: 70.1, Học tập: 57.0, Báo cáo ngày: 75.7)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
@@ -281,7 +281,7 @@
   - Phải rà soát kỹ điểm thi sau khi đẩy lên hệ thống QLDT; hướng dẫn kỹ sinh viên cách chia file và hạn chế lạm dụng AI khi làm Project. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Nguyễn Bá Minh Đạo
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT2|HCM-K24-CNTT2 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JWS)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT3|HCM-K25-CNTT3 (KS25_Javascript)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JWS)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT2|HCM-K24-CNTT2 (KS24-JavaAdvance)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT3|HCM-K25-CNTT3 (KS25_Javascript)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JavaWeb)]], [[data/student_risk_report#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI)]]
 - **Điểm KPI tổng**: **65.68** (Kỷ luật: 69.1, Học tập: 60.1, Báo cáo ngày: 66.7)
 - **Điểm mạnh**:
   - Có chuyên môn giảng dạy tốt, quản lý các lớp học lớn khối KS24 và KS25.
@@ -303,7 +303,7 @@
 ### 🔹 Chi tiết nhân sự Khối QTKD
 
 #### GV. Nguyễn Thị Hồng Minh
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_M104)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_M104)]]
 - **Điểm KPI tổng**: **95.98** (Kỷ luật: 93.3, Học tập: 96.6, Báo cáo ngày: 98.9)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
@@ -313,7 +313,7 @@
   - Cần đẩy nhanh tiến độ hoàn thành task, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
 #### GV. Hoàng Thị Kim Oanh
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_M103)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_M104)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_M104)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_M103)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)]]
 - **Điểm KPI tổng**: **90.97** (Kỷ luật: 88.4, Học tập: 86.8, Báo cáo ngày: 98.5)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
@@ -343,7 +343,7 @@
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
 #### GV. Nguyễn Ngọc Vân Khanh
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_DTB201)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB202)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB201)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB202)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB201)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB202)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB202)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_DTB201)]]
 - **Điểm KPI tổng**: **87.33** (Kỷ luật: 84.6, Học tập: 79.3, Báo cáo ngày: 99.0)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
@@ -353,7 +353,7 @@
   - Cần kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
 #### GV. Lê Thành Ngọc
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB201)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37-33) (KS25_QTKD_DTB202)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37-33) (KS25_QTKD_DTB202)]], [[data/student_risk_report#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB201)]]
 - **Điểm KPI tổng**: **78.01** (Kỷ luật: 83.0, Học tập: 76.0, Báo cáo ngày: 73.3)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.

@@ -1,6 +1,6 @@
 # Báo cáo Vi phạm Kỷ luật tác nghiệp GV/TG khóa KS25 - Môn Python Web (Bản Demo)
 
-*Thời gian đối chiếu: 17/07/2026 10:01:32*
+*Thời gian đối chiếu: 17/07/2026 10:19:40*
 
 > [!IMPORTANT]
 > Báo cáo này quét và đối chiếu tự động 6 tiêu chí vi phạm tác nghiệp theo quy định chế tài tháng 06/2026. Tên nhân sự vi phạm được quy đổi theo phân công quản lý lớp chính thức từ Agent 1.

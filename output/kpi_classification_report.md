@@ -1,7 +1,7 @@
 # Báo cáo Đánh giá & Xếp loại Năng lực GV/TG Học kỳ
 
 > [!NOTE]
-> Báo cáo này đánh giá hiệu suất năng lực của giảng viên và trợ giảng dựa theo khung tiêu chuẩn của tài liệu `[RE] Đào tạo - Tiêu chuẩn xếp loại năng lực GV_TG.xlsx`.
+> Báo cáo này đánh giá hiệu suất năng lực của giảng viên và trợ giảng dựa theo khung tiêu chuẩn của tài liệu [[data/[RE] Đào tạo - Tiêu chuẩn xếp loại năng lực GV_TG.xlsx]].
 > Điểm số được tính toán dựa trên **Phương án A (Scale trọng số theo các tiêu chí thực tế có dữ liệu)** để phản ánh chân thực kết quả giảng dạy và làm việc.
 > Danh sách nhân sự được cập nhật chính xác theo Whitelist của phòng Đào tạo (44 nhân sự hoạt động chính thức).
 > *Lưu ý:* Các giảng viên thuộc khối Ngoại ngữ & KNM và QLCLĐT tạm thời sử dụng Rank mặc định hoặc Rank cũ do chưa có khung chia cụ thể, các Quản lý khối vẫn được tính theo Rank 5 (Quản lý).
@@ -20,39 +20,39 @@
 
 | Họ và tên | Vai trò / Cấp bậc | Lớp phụ trách | Điểm quá trình A | Điểm quá trình B | Xếp loại năng lực |
 | :--- | :---: | :--- | :---: | :---: | :---: |
-| **Đinh Thành Nam** | Giảng viên (Rank 3) | HN-K24-CNTT4 (KS24_JavaWeb), HN-K24-CNTT4 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_JavaWeb) | **9.12** | 6.90 | **Vượt mức** |
-| **Bùi Thanh Hải** | Giảng viên (Rank 3) | HN-K24-CNTT2 (KS24_AI), HN-K24-CNTT3 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_JWS), HN-K24-CNTT2 (KS24_JavaWeb), HN-K24-CNTT2 (KS24_JWS), HN-K24-CNTT4 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_JWS), HN-K24-CNTT1 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_AI), HN-K24-CNTT4 (KS24_AI) | **9.00** | 6.85 | **Vượt mức** |
-| **Mai Xuân Chinh** | Giảng viên (Rank 3) | HN-K24-CNTT2 (KS24_AI), HN-K24-CNTT3 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_JWS), HN-K24-CNTT2 (KS24_JavaWeb), HN-K24-CNTT2 (KS24_JWS), HN-K24-CNTT3 (KS24_JWS), HN-K24-CNTT3 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_AI), HN-K24-CNTT4 (KS24_AI), HN-K24-CNTT5 (KS24-JavaAdvance) | **8.87** | 6.80 | **Vượt mức** |
-| **Nguyễn Công Hưởng** | Giảng viên (Rank 3) | HN-K24-CNTT1 (KS24_JWS), HN-K24-CNTT5 (KS24_JavaWeb), HN-K24-CNTT2 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_AI) | **8.87** | 6.80 | **Vượt mức** |
-| **Hồ Xuân Hùng** | Quản lý (Rank 5) | HN-K24-CNTT5 (KS24_JavaWeb), HN-K24-CNTT1 (KS24_JWS), HN-K24-CNTT2 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_AI) | **7.83** | 5.75 | **Đạt** |
+| **Đinh Thành Nam** | Giảng viên (Rank 3) | HN-K24-CNTT1 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_JavaWeb), HN-K24-CNTT4 (KS24-JavaAdvance) | **9.12** | 6.90 | **Vượt mức** |
+| **Bùi Thanh Hải** | Giảng viên (Rank 3) | HN-K24-CNTT2 (KS24_JavaWeb), HN-K24-CNTT1 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_AI), HN-K24-CNTT2 (KS24_AI), HN-K24-CNTT4 (KS24-JavaAdvance), HN-K24-CNTT4 (KS24_JWS), HN-K24-CNTT3 (KS24_AI), HN-K24-CNTT2 (KS24_JWS), HN-K24-CNTT3 (KS24_JWS) | **9.00** | 6.85 | **Vượt mức** |
+| **Mai Xuân Chinh** | Giảng viên (Rank 3) | HN-K24-CNTT2 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_AI), HN-K24-CNTT3 (KS24_JavaWeb), HN-K24-CNTT2 (KS24_AI), HN-K24-CNTT5 (KS24-JavaAdvance), HN-K24-CNTT4 (KS24_JWS), HN-K24-CNTT3 (KS24_AI), HN-K24-CNTT2 (KS24_JWS), HN-K24-CNTT3 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_JWS) | **8.87** | 6.80 | **Vượt mức** |
+| **Nguyễn Công Hưởng** | Giảng viên (Rank 3) | HN-K24-CNTT1 (KS24-JavaAdvance), HN-K24-CNTT5 (KS24_JavaWeb), HN-K24-CNTT1 (KS24_AI), HN-K24-CNTT2 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_JWS) | **8.87** | 6.80 | **Vượt mức** |
+| **Hồ Xuân Hùng** | Quản lý (Rank 5) | HN-K24-CNTT2 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_JWS), HN-K24-CNTT5 (KS24_JavaWeb), HN-K24-CNTT1 (KS24_AI) | **7.83** | 5.75 | **Đạt** |
 | **Phạm Tuấn Bình** | Giảng viên (Rank 3) | HN-K24-CNTT5 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_JavaWeb), HN-K24-CNTT3 (KS24-JavaAdvance) | **7.00** | 6.05 | **Cần cố gắng** |
 
 ### Khối CNTT-KS25-HN
 
 | Họ và tên | Vai trò / Cấp bậc | Lớp phụ trách | Điểm quá trình A | Điểm quá trình B | Xếp loại năng lực |
 | :--- | :---: | :--- | :---: | :---: | :---: |
-| **Lại Trung Lâm** | Giảng viên (Rank 3) | HN-K25-CNTT1 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python), HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT5 (KS25_Python) | **9.12** | 6.90 | **Vượt mức** |
-| **Phạm Ngọc Kiên** | Giảng viên (Rank 3) | HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web) | **9.12** | 6.90 | **Vượt mức** |
-| **Lâm Tùng Dương** | Giảng viên (Rank 3) | HN-K25-CNTT4 (KS25_Database), HN-K25-CNTT7 (KS25_Javascript), HN-K25-CNTT2 (KS25_Database), HN-K25-QTKD2 (KS25_QTKD_DTB201), HN-K25-QTKD2 (KS25_QTKD_DTB202), HN-K25-CNTT4 (KS25_Javascript), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-QTKD1 (KS25_QTKD_DTB201), HN-K25-QTKD3 (KS25_QTKD_DTB202) | **8.50** | 6.65 | **Vượt mức** |
+| **Lại Trung Lâm** | Giảng viên (Rank 3) | HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT5 (KS25_Python), HN-K25-CNTT2 (KS25_Python), HN-K25-CNTT1 (KS25_Python_Web) | **9.12** | 6.90 | **Vượt mức** |
+| **Phạm Ngọc Kiên** | Giảng viên (Rank 3) | HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web) | **9.12** | 6.90 | **Vượt mức** |
+| **Lâm Tùng Dương** | Giảng viên (Rank 3) | HN-K25-QTKD3 (KS25_QTKD_DTB202), HN-K25-CNTT4 (KS25_Database), HN-K25-CNTT2 (KS25_Database), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT7 (KS25_Javascript), HN-K25-QTKD2 (KS25_QTKD_DTB202), HN-K25-QTKD2 (KS25_QTKD_DTB201), HN-K25-QTKD1 (KS25_QTKD_DTB201), HN-K25-CNTT4 (KS25_Javascript) | **8.50** | 6.65 | **Vượt mức** |
 | **Trần Minh Cường** | Quản lý (Rank 5) | Không phụ trách lớp Excel | **7.78** | 5.74 | **Đạt** |
-| **Lương Quốc Tuấn** | Giảng viên (Rank 3) | HN-K25-CNTT1 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python), HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Database), HN-K25-CNTT3 (KS25_Javascript), HN-K25-CNTT5 (KS25_Python) | **7.62** | 6.30 | **Đạt** |
-| **Nguyễn Quảng An** | Giảng viên (Rank 3) | HN-K25-CNTT6 (KS25_Javascript), HN-K25-CNTT4 (KS25_Database), HN-K25-CNTT6 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Database), HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python), HN-K25-CNTT2 (KS25_Javascript), HN-K25-CNTT4 (KS25_Python), HN-K25-CNTT6 (KS25_Python) | **7.62** | 6.30 | **Đạt** |
-| **Trịnh Quốc Hai** | Quản lý (Rank 5) | HN-K25-CNTT1 (KS25_Python), HN-K25-CNTT5 (KS25_Database), HN-K25-CNTT1 (KS25_Javascript), HN-K25-CNTT5 (KS25_Javascript), HN-K25-CNTT8 (KS25_Python_Web) | **5.43** | 5.20 | **Cần cố gắng** |
-| **Ngọ Văn Quý** | Giảng viên (Rank 3) | HN-K25-CNTT6 (KS25_Database), HN-K25-CNTT3 (KS25_Database), HN-K25-CNTT4 (KS25_Javascript), HN-K25-CNTT7 (KS25_Javascript) | **5.38** | 5.40 | **Cần cố gắng** |
+| **Lương Quốc Tuấn** | Giảng viên (Rank 3) | HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Database), HN-K25-CNTT3 (KS25_Javascript), HN-K25-CNTT5 (KS25_Python), HN-K25-CNTT2 (KS25_Python), HN-K25-CNTT1 (KS25_Python_Web) | **7.62** | 6.30 | **Đạt** |
+| **Nguyễn Quảng An** | Giảng viên (Rank 3) | HN-K25-CNTT4 (KS25_Database), HN-K25-CNTT2 (KS25_Javascript), HN-K25-CNTT2 (KS25_Database), HN-K25-CNTT4 (KS25_Python), HN-K25-CNTT6 (KS25_Python), HN-K25-CNTT6 (KS25_Javascript), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python), HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web) | **7.62** | 6.30 | **Đạt** |
+| **Trịnh Quốc Hai** | Quản lý (Rank 5) | HN-K25-CNTT1 (KS25_Javascript), HN-K25-CNTT5 (KS25_Database), HN-K25-CNTT1 (KS25_Python), HN-K25-CNTT5 (KS25_Javascript), HN-K25-CNTT8 (KS25_Python_Web) | **5.43** | 5.20 | **Cần cố gắng** |
+| **Ngọ Văn Quý** | Giảng viên (Rank 3) | HN-K25-CNTT4 (KS25_Javascript), HN-K25-CNTT3 (KS25_Database), HN-K25-CNTT7 (KS25_Javascript), HN-K25-CNTT6 (KS25_Database) | **5.38** | 5.40 | **Cần cố gắng** |
 
 ### Khối CNTT-HCM
 
 | Họ và tên | Vai trò / Cấp bậc | Lớp phụ trách | Điểm quá trình A | Điểm quá trình B | Xếp loại năng lực |
 | :--- | :---: | :--- | :---: | :---: | :---: |
 | **Nguyễn Đức Minh** | Giảng viên (Rank 3) | Không phụ trách lớp Excel | **9.38** | 7.00 | **Vượt mức** |
-| **Lưu Xuân Hoàng Nguyên** | Giảng viên (Rank 3) | HCM-K25-CNTT5 (KS25_Python), HCM-K25-CNTT7 (KS25_Python_Web), HCM-K25-CNTT6 (KS25_Database), HCM-K25-CNTT1 (KS25_Javascript), HCM-K25-CNTT8 (KS25_Database), HCM-K25-CNTT8 (KS25_Python), HCM-K25-CNTT6 (KS25_Python_Web), HCM-K24-CNTT2 (KS24-JavaAdvance) | **8.87** | 6.80 | **Vượt mức** |
+| **Lưu Xuân Hoàng Nguyên** | Giảng viên (Rank 3) | HCM-K25-CNTT5 (KS25_Python), HCM-K25-CNTT6 (KS25_Python_Web), HCM-K25-CNTT8 (KS25_Database), HCM-K25-CNTT7 (KS25_Python_Web), HCM-K24-CNTT2 (KS24-JavaAdvance), HCM-K25-CNTT1 (KS25_Javascript), HCM-K25-CNTT6 (KS25_Database), HCM-K25-CNTT8 (KS25_Python) | **8.87** | 6.80 | **Vượt mức** |
 | **Nguyễn Ngọc Sơn** | Giảng viên (Rank 3) | Không phụ trách lớp Excel | **8.87** | 6.80 | **Vượt mức** |
-| **Phạm Viết Hùng** | Giảng viên (Rank 3) | HCM-K24-CNTT1 (KS24_JavaWeb), HCM-K24-CNTT1 (KS24_AI), HCM-K24-CNTT1 (KS24_JWS), HCM-K25-CNTT8 (KS25_Python_Web), HCM-K25-CNTT5 (KS25_Python_Web), HCM-K25-CNTT3 (KS25_Javascript), HCM-K25-CNTT7 (KS25_Database), HCM-K25-CNTT2 (KS25_Javascript), HCM-K24-CNTT1 (KS24-JavaAdvance) | **8.87** | 6.80 | **Vượt mức** |
+| **Phạm Viết Hùng** | Giảng viên (Rank 3) | HCM-K24-CNTT1 (KS24_JavaWeb), HCM-K25-CNTT3 (KS25_Javascript), HCM-K24-CNTT1 (KS24_JWS), HCM-K25-CNTT2 (KS25_Javascript), HCM-K25-CNTT5 (KS25_Python_Web), HCM-K25-CNTT8 (KS25_Python_Web), HCM-K24-CNTT1 (KS24-JavaAdvance), HCM-K24-CNTT1 (KS24_AI), HCM-K25-CNTT7 (KS25_Database) | **8.87** | 6.80 | **Vượt mức** |
 | **Phan Ngọc Tài** | Giảng viên (Rank 3) | Không phụ trách lớp Excel | **8.75** | 6.75 | **Vượt mức** |
 | **Đặng Minh Luân** | Giảng viên (Rank 3) | Không phụ trách lớp Excel | **8.75** | 6.75 | **Vượt mức** |
-| **Lê Hà Thanh Sang** | Giảng viên (Rank 3) | HCM-K25-CNTT5 (KS25_Python), HCM-K25-CNTT8 (KS25_Python_Web), HCM-K25-CNTT5 (KS25_Python_Web), HCM-K25-CNTT8 (KS25_Python), HCM-K25-CNTT7 (KS25_Database), HCM-K25-CNTT2 (KS25_Javascript), HCM-K25-CNTT5 (KS25_Database) | **8.12** | 6.50 | **Đạt** |
-| **Trần Quốc Tuấn** | Giảng viên (Rank 3) | HCM-K25-CNTT4 (KS25_Javascript), HCM-K25-CNTT7 (KS25_Python_Web), HCM-K25-CNTT7 (KS25_Python), HCM-K25-CNTT6 (KS25_Database), HCM-K25-CNTT1 (KS25_Javascript), HCM-K25-CNTT8 (KS25_Database), HCM-K25-CNTT6 (KS25_Python), HCM-K25-CNTT6 (KS25_Python_Web) | **8.12** | 6.50 | **Đạt** |
-| **Nguyễn Bá Minh Đạo** | Quản lý (Rank 5) | HCM-K24-CNTT1 (KS24_JavaWeb), HCM-K24-CNTT1 (KS24_AI), HCM-K24-CNTT1 (KS24_JWS), HCM-K25-CNTT3 (KS25_Javascript), HCM-K24-CNTT2 (KS24-JavaAdvance) | **6.52** | 5.45 | **Cần cố gắng** |
+| **Lê Hà Thanh Sang** | Giảng viên (Rank 3) | HCM-K25-CNTT5 (KS25_Database), HCM-K25-CNTT5 (KS25_Python), HCM-K25-CNTT2 (KS25_Javascript), HCM-K25-CNTT5 (KS25_Python_Web), HCM-K25-CNTT8 (KS25_Python_Web), HCM-K25-CNTT7 (KS25_Database), HCM-K25-CNTT8 (KS25_Python) | **8.12** | 6.50 | **Đạt** |
+| **Trần Quốc Tuấn** | Giảng viên (Rank 3) | HCM-K25-CNTT6 (KS25_Python_Web), HCM-K25-CNTT7 (KS25_Python), HCM-K25-CNTT6 (KS25_Python), HCM-K25-CNTT8 (KS25_Database), HCM-K25-CNTT7 (KS25_Python_Web), HCM-K25-CNTT1 (KS25_Javascript), HCM-K25-CNTT6 (KS25_Database), HCM-K25-CNTT4 (KS25_Javascript) | **8.12** | 6.50 | **Đạt** |
+| **Nguyễn Bá Minh Đạo** | Quản lý (Rank 5) | HCM-K24-CNTT1 (KS24_JavaWeb), HCM-K25-CNTT3 (KS25_Javascript), HCM-K24-CNTT1 (KS24_JWS), HCM-K24-CNTT1 (KS24_AI), HCM-K24-CNTT2 (KS24-JavaAdvance) | **6.52** | 5.45 | **Cần cố gắng** |
 
 ### Khối QTKD-HN
 
@@ -61,11 +61,11 @@
 | **Nguyễn Thị Hồng Minh** | Giảng viên (Rank 3) | HN-K25-QTKD2 (KS25_QTKD_M104), HN-K25-QTKD2 (KS25_QTKD_PRJ302) | **9.75** | 7.15 | **Vượt mức** |
 | **Nguyễn Thị Như Quỳnh** | Trợ giảng (Rank 1) | Không phụ trách lớp Excel | **9.56** | 7.30 | **Vượt mức** |
 | **Triệu Thị Thanh Tâm** | Trợ giảng (Rank 1) | Không phụ trách lớp Excel | **8.89** | 7.00 | **Vượt mức** |
-| **Nguyễn Ngọc Vân Khanh** | Giảng viên (Rank 3) | HN-K25-QTKD2 (KS25_QTKD_DTB202), HN-K25-QTKD1 (KS25_QTKD_DTB201), HN-K25-QTKD2 (KS25_QTKD_DTB201), HN-K25-QTKD3 (KS25_QTKD_DTB202) | **8.75** | 6.75 | **Vượt mức** |
-| **Hoàng Thị Kim Oanh** | Quản lý (Rank 5) | HN-K25-QTKD1 (KS25_QTKD_PRJ302), HN-K25-QTKD1 (KS25_QTKD_M104), HN-K25-QTKD2 (KS25_QTKD_M103) | **7.78** | 5.74 | **Đạt** |
+| **Nguyễn Ngọc Vân Khanh** | Giảng viên (Rank 3) | HN-K25-QTKD3 (KS25_QTKD_DTB202), HN-K25-QTKD2 (KS25_QTKD_DTB202), HN-K25-QTKD2 (KS25_QTKD_DTB201), HN-K25-QTKD1 (KS25_QTKD_DTB201) | **8.75** | 6.75 | **Vượt mức** |
+| **Hoàng Thị Kim Oanh** | Quản lý (Rank 5) | HN-K25-QTKD1 (KS25_QTKD_PRJ302), HN-K25-QTKD2 (KS25_QTKD_M103), HN-K25-QTKD1 (KS25_QTKD_M104) | **7.78** | 5.74 | **Đạt** |
 | **Hoàng Thị Hậu** | Giảng viên (Rank 3) | HN-K25-QTKD1 (KS25_QTKD_M103), HN-K25-QTKD3 (KS25_QTKD_M104) | **6.88** | 6.00 | **Cần cố gắng** |
 | **Đặng Quỳnh Trang** | Giảng viên (Rank 3) | HN-K25-QTKD3 (KS25_QTKD_M103), HN-K25-QTKD3 (KS25_QTKD_PRJ302) | **6.88** | 6.00 | **Cần cố gắng** |
-| **Lê Thành Ngọc** | Quản lý (Rank 5) | HN-K25-QTKD3 (KS25_QTKD_DTB201), HN-K25-QTKD1 (KS25_QTKD_DTB202) | **5.87** | 5.30 | **Cần cố gắng** |
+| **Lê Thành Ngọc** | Quản lý (Rank 5) | HN-K25-QTKD1 (KS25_QTKD_DTB202), HN-K25-QTKD3 (KS25_QTKD_DTB201) | **5.87** | 5.30 | **Cần cố gắng** |
 
 ### Khối QTKD-HCM
 
@@ -108,7 +108,7 @@
 
 #### Giảng viên. Đinh Thành Nam
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K24-CNTT4 (KS24_JavaWeb), HN-K24-CNTT4 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_JavaWeb)
+- **Lớp phụ trách**: HN-K24-CNTT1 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_JavaWeb), HN-K24-CNTT4 (KS24-JavaAdvance)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **9.12 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.90 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -125,7 +125,7 @@
 
 #### Giảng viên. Bùi Thanh Hải
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K24-CNTT2 (KS24_AI), HN-K24-CNTT3 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_JWS), HN-K24-CNTT2 (KS24_JavaWeb), HN-K24-CNTT2 (KS24_JWS), HN-K24-CNTT4 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_JWS), HN-K24-CNTT1 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_AI), HN-K24-CNTT4 (KS24_AI)
+- **Lớp phụ trách**: HN-K24-CNTT2 (KS24_JavaWeb), HN-K24-CNTT1 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_AI), HN-K24-CNTT2 (KS24_AI), HN-K24-CNTT4 (KS24-JavaAdvance), HN-K24-CNTT4 (KS24_JWS), HN-K24-CNTT3 (KS24_AI), HN-K24-CNTT2 (KS24_JWS), HN-K24-CNTT3 (KS24_JWS)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **9.00 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.85 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -142,7 +142,7 @@
 
 #### Giảng viên. Mai Xuân Chinh
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K24-CNTT2 (KS24_AI), HN-K24-CNTT3 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_JWS), HN-K24-CNTT2 (KS24_JavaWeb), HN-K24-CNTT2 (KS24_JWS), HN-K24-CNTT3 (KS24_JWS), HN-K24-CNTT3 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_AI), HN-K24-CNTT4 (KS24_AI), HN-K24-CNTT5 (KS24-JavaAdvance)
+- **Lớp phụ trách**: HN-K24-CNTT2 (KS24_JavaWeb), HN-K24-CNTT4 (KS24_AI), HN-K24-CNTT3 (KS24_JavaWeb), HN-K24-CNTT2 (KS24_AI), HN-K24-CNTT5 (KS24-JavaAdvance), HN-K24-CNTT4 (KS24_JWS), HN-K24-CNTT3 (KS24_AI), HN-K24-CNTT2 (KS24_JWS), HN-K24-CNTT3 (KS24-JavaAdvance), HN-K24-CNTT3 (KS24_JWS)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.87 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.80 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -159,7 +159,7 @@
 
 #### Giảng viên. Nguyễn Công Hưởng
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K24-CNTT1 (KS24_JWS), HN-K24-CNTT5 (KS24_JavaWeb), HN-K24-CNTT2 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_AI)
+- **Lớp phụ trách**: HN-K24-CNTT1 (KS24-JavaAdvance), HN-K24-CNTT5 (KS24_JavaWeb), HN-K24-CNTT1 (KS24_AI), HN-K24-CNTT2 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_JWS)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.87 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.80 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -176,7 +176,7 @@
 
 #### Quản lý. Hồ Xuân Hùng
 - **Cấp bậc**: Rank 5 (PM)
-- **Lớp phụ trách**: HN-K24-CNTT5 (KS24_JavaWeb), HN-K24-CNTT1 (KS24_JWS), HN-K24-CNTT2 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_AI)
+- **Lớp phụ trách**: HN-K24-CNTT2 (KS24-JavaAdvance), HN-K24-CNTT1 (KS24_JWS), HN-K24-CNTT5 (KS24_JavaWeb), HN-K24-CNTT1 (KS24_AI)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **7.83 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **5.75 / 10**
 - **Xếp loại năng lực**: **Đạt**
@@ -212,7 +212,7 @@
 
 #### Giảng viên. Lại Trung Lâm
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT1 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python), HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT5 (KS25_Python)
+- **Lớp phụ trách**: HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT5 (KS25_Python), HN-K25-CNTT2 (KS25_Python), HN-K25-CNTT1 (KS25_Python_Web)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **9.12 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.90 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -229,7 +229,7 @@
 
 #### Giảng viên. Phạm Ngọc Kiên
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web)
+- **Lớp phụ trách**: HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **9.12 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.90 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -246,7 +246,7 @@
 
 #### Giảng viên. Lâm Tùng Dương
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT4 (KS25_Database), HN-K25-CNTT7 (KS25_Javascript), HN-K25-CNTT2 (KS25_Database), HN-K25-QTKD2 (KS25_QTKD_DTB201), HN-K25-QTKD2 (KS25_QTKD_DTB202), HN-K25-CNTT4 (KS25_Javascript), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-QTKD1 (KS25_QTKD_DTB201), HN-K25-QTKD3 (KS25_QTKD_DTB202)
+- **Lớp phụ trách**: HN-K25-QTKD3 (KS25_QTKD_DTB202), HN-K25-CNTT4 (KS25_Database), HN-K25-CNTT2 (KS25_Database), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT7 (KS25_Javascript), HN-K25-QTKD2 (KS25_QTKD_DTB202), HN-K25-QTKD2 (KS25_QTKD_DTB201), HN-K25-QTKD1 (KS25_QTKD_DTB201), HN-K25-CNTT4 (KS25_Javascript)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.50 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.65 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -277,7 +277,7 @@
 
 #### Giảng viên. Lương Quốc Tuấn
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT1 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python), HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Database), HN-K25-CNTT3 (KS25_Javascript), HN-K25-CNTT5 (KS25_Python)
+- **Lớp phụ trách**: HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Database), HN-K25-CNTT3 (KS25_Javascript), HN-K25-CNTT5 (KS25_Python), HN-K25-CNTT2 (KS25_Python), HN-K25-CNTT1 (KS25_Python_Web)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **7.62 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.30 / 10**
 - **Xếp loại năng lực**: **Đạt**
@@ -294,7 +294,7 @@
 
 #### Giảng viên. Nguyễn Quảng An
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT6 (KS25_Javascript), HN-K25-CNTT4 (KS25_Database), HN-K25-CNTT6 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Database), HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python), HN-K25-CNTT2 (KS25_Javascript), HN-K25-CNTT4 (KS25_Python), HN-K25-CNTT6 (KS25_Python)
+- **Lớp phụ trách**: HN-K25-CNTT4 (KS25_Database), HN-K25-CNTT2 (KS25_Javascript), HN-K25-CNTT2 (KS25_Database), HN-K25-CNTT4 (KS25_Python), HN-K25-CNTT6 (KS25_Python), HN-K25-CNTT6 (KS25_Javascript), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python), HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **7.62 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.30 / 10**
 - **Xếp loại năng lực**: **Đạt**
@@ -311,7 +311,7 @@
 
 #### Quản lý. Trịnh Quốc Hai
 - **Cấp bậc**: Rank 5 (PM)
-- **Lớp phụ trách**: HN-K25-CNTT1 (KS25_Python), HN-K25-CNTT5 (KS25_Database), HN-K25-CNTT1 (KS25_Javascript), HN-K25-CNTT5 (KS25_Javascript), HN-K25-CNTT8 (KS25_Python_Web)
+- **Lớp phụ trách**: HN-K25-CNTT1 (KS25_Javascript), HN-K25-CNTT5 (KS25_Database), HN-K25-CNTT1 (KS25_Python), HN-K25-CNTT5 (KS25_Javascript), HN-K25-CNTT8 (KS25_Python_Web)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **5.43 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **5.20 / 10**
 - **Xếp loại năng lực**: **Cần cố gắng**
@@ -328,7 +328,7 @@
 
 #### Giảng viên. Ngọ Văn Quý
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT6 (KS25_Database), HN-K25-CNTT3 (KS25_Database), HN-K25-CNTT4 (KS25_Javascript), HN-K25-CNTT7 (KS25_Javascript)
+- **Lớp phụ trách**: HN-K25-CNTT4 (KS25_Javascript), HN-K25-CNTT3 (KS25_Database), HN-K25-CNTT7 (KS25_Javascript), HN-K25-CNTT6 (KS25_Database)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **5.38 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **5.40 / 10**
 - **Xếp loại năng lực**: **Cần cố gắng**
@@ -361,7 +361,7 @@
 
 #### Giảng viên. Lưu Xuân Hoàng Nguyên
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HCM-K25-CNTT5 (KS25_Python), HCM-K25-CNTT7 (KS25_Python_Web), HCM-K25-CNTT6 (KS25_Database), HCM-K25-CNTT1 (KS25_Javascript), HCM-K25-CNTT8 (KS25_Database), HCM-K25-CNTT8 (KS25_Python), HCM-K25-CNTT6 (KS25_Python_Web), HCM-K24-CNTT2 (KS24-JavaAdvance)
+- **Lớp phụ trách**: HCM-K25-CNTT5 (KS25_Python), HCM-K25-CNTT6 (KS25_Python_Web), HCM-K25-CNTT8 (KS25_Database), HCM-K25-CNTT7 (KS25_Python_Web), HCM-K24-CNTT2 (KS24-JavaAdvance), HCM-K25-CNTT1 (KS25_Javascript), HCM-K25-CNTT6 (KS25_Database), HCM-K25-CNTT8 (KS25_Python)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.87 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.80 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -392,7 +392,7 @@
 
 #### Giảng viên. Phạm Viết Hùng
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HCM-K24-CNTT1 (KS24_JavaWeb), HCM-K24-CNTT1 (KS24_AI), HCM-K24-CNTT1 (KS24_JWS), HCM-K25-CNTT8 (KS25_Python_Web), HCM-K25-CNTT5 (KS25_Python_Web), HCM-K25-CNTT3 (KS25_Javascript), HCM-K25-CNTT7 (KS25_Database), HCM-K25-CNTT2 (KS25_Javascript), HCM-K24-CNTT1 (KS24-JavaAdvance)
+- **Lớp phụ trách**: HCM-K24-CNTT1 (KS24_JavaWeb), HCM-K25-CNTT3 (KS25_Javascript), HCM-K24-CNTT1 (KS24_JWS), HCM-K25-CNTT2 (KS25_Javascript), HCM-K25-CNTT5 (KS25_Python_Web), HCM-K25-CNTT8 (KS25_Python_Web), HCM-K24-CNTT1 (KS24-JavaAdvance), HCM-K24-CNTT1 (KS24_AI), HCM-K25-CNTT7 (KS25_Database)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.87 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.80 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -437,7 +437,7 @@
 
 #### Giảng viên. Lê Hà Thanh Sang
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HCM-K25-CNTT5 (KS25_Python), HCM-K25-CNTT8 (KS25_Python_Web), HCM-K25-CNTT5 (KS25_Python_Web), HCM-K25-CNTT8 (KS25_Python), HCM-K25-CNTT7 (KS25_Database), HCM-K25-CNTT2 (KS25_Javascript), HCM-K25-CNTT5 (KS25_Database)
+- **Lớp phụ trách**: HCM-K25-CNTT5 (KS25_Database), HCM-K25-CNTT5 (KS25_Python), HCM-K25-CNTT2 (KS25_Javascript), HCM-K25-CNTT5 (KS25_Python_Web), HCM-K25-CNTT8 (KS25_Python_Web), HCM-K25-CNTT7 (KS25_Database), HCM-K25-CNTT8 (KS25_Python)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.12 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.50 / 10**
 - **Xếp loại năng lực**: **Đạt**
@@ -454,7 +454,7 @@
 
 #### Giảng viên. Trần Quốc Tuấn
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HCM-K25-CNTT4 (KS25_Javascript), HCM-K25-CNTT7 (KS25_Python_Web), HCM-K25-CNTT7 (KS25_Python), HCM-K25-CNTT6 (KS25_Database), HCM-K25-CNTT1 (KS25_Javascript), HCM-K25-CNTT8 (KS25_Database), HCM-K25-CNTT6 (KS25_Python), HCM-K25-CNTT6 (KS25_Python_Web)
+- **Lớp phụ trách**: HCM-K25-CNTT6 (KS25_Python_Web), HCM-K25-CNTT7 (KS25_Python), HCM-K25-CNTT6 (KS25_Python), HCM-K25-CNTT8 (KS25_Database), HCM-K25-CNTT7 (KS25_Python_Web), HCM-K25-CNTT1 (KS25_Javascript), HCM-K25-CNTT6 (KS25_Database), HCM-K25-CNTT4 (KS25_Javascript)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.12 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.50 / 10**
 - **Xếp loại năng lực**: **Đạt**
@@ -471,7 +471,7 @@
 
 #### Quản lý. Nguyễn Bá Minh Đạo
 - **Cấp bậc**: Rank 5 (PM)
-- **Lớp phụ trách**: HCM-K24-CNTT1 (KS24_JavaWeb), HCM-K24-CNTT1 (KS24_AI), HCM-K24-CNTT1 (KS24_JWS), HCM-K25-CNTT3 (KS25_Javascript), HCM-K24-CNTT2 (KS24-JavaAdvance)
+- **Lớp phụ trách**: HCM-K24-CNTT1 (KS24_JavaWeb), HCM-K25-CNTT3 (KS25_Javascript), HCM-K24-CNTT1 (KS24_JWS), HCM-K24-CNTT1 (KS24_AI), HCM-K24-CNTT2 (KS24-JavaAdvance)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **6.52 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **5.45 / 10**
 - **Xếp loại năng lực**: **Cần cố gắng**
@@ -535,7 +535,7 @@
 
 #### Giảng viên. Nguyễn Ngọc Vân Khanh
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-QTKD2 (KS25_QTKD_DTB202), HN-K25-QTKD1 (KS25_QTKD_DTB201), HN-K25-QTKD2 (KS25_QTKD_DTB201), HN-K25-QTKD3 (KS25_QTKD_DTB202)
+- **Lớp phụ trách**: HN-K25-QTKD3 (KS25_QTKD_DTB202), HN-K25-QTKD2 (KS25_QTKD_DTB202), HN-K25-QTKD2 (KS25_QTKD_DTB201), HN-K25-QTKD1 (KS25_QTKD_DTB201)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.75 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.75 / 10**
 - **Xếp loại năng lực**: **Vượt mức**
@@ -552,7 +552,7 @@
 
 #### Quản lý. Hoàng Thị Kim Oanh
 - **Cấp bậc**: Rank 5 (PM)
-- **Lớp phụ trách**: HN-K25-QTKD1 (KS25_QTKD_PRJ302), HN-K25-QTKD1 (KS25_QTKD_M104), HN-K25-QTKD2 (KS25_QTKD_M103)
+- **Lớp phụ trách**: HN-K25-QTKD1 (KS25_QTKD_PRJ302), HN-K25-QTKD2 (KS25_QTKD_M103), HN-K25-QTKD1 (KS25_QTKD_M104)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **7.78 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **5.74 / 10**
 - **Xếp loại năng lực**: **Đạt**
@@ -603,7 +603,7 @@
 
 #### Quản lý. Lê Thành Ngọc
 - **Cấp bậc**: Rank 5 (PM)
-- **Lớp phụ trách**: HN-K25-QTKD3 (KS25_QTKD_DTB201), HN-K25-QTKD1 (KS25_QTKD_DTB202)
+- **Lớp phụ trách**: HN-K25-QTKD1 (KS25_QTKD_DTB202), HN-K25-QTKD3 (KS25_QTKD_DTB201)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **5.87 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **5.30 / 10**
 - **Xếp loại năng lực**: **Cần cố gắng**

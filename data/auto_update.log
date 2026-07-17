@@ -251,3 +251,265 @@ Successfully generated Markdown report: output/kpi_classification_report.md
 Successfully generated HTML report: output/kpi_classification_report.html
 === THﬂ+¶C THI TH+«NH C+ˆNG ===
 [2026-07-17 10:01:45] Step 6/6: Staging and pushing changes to GitHub...
+[2026-07-17 10:01:49] Git commit and push completed successfully.
+[2026-07-17 10:01:49] ------------------------------------------------------------
+[2026-07-17 10:01:49] AUTO UPDATE KPI PROCESS COMPLETED SUCCESSFULLY
+[2026-07-17 10:01:49] ------------------------------------------------------------
+[2026-07-17 10:05:46] ------------------------------------------------------------
+[2026-07-17 10:05:46] AUTO UPDATE KPI PROCESS STARTED
+[2026-07-17 10:05:46] ------------------------------------------------------------
+[2026-07-17 10:05:46] No newer data found in backup. (Backup: 07/17/2026 09:00:10, Current: 07/17/2026 09:00:10). Stopping process.
+[2026-07-17 10:05:46] Process finished without updates.
+[2026-07-17 10:19:24] ------------------------------------------------------------
+[2026-07-17 10:19:24] AUTO UPDATE KPI PROCESS STARTED
+[2026-07-17 10:19:24] ------------------------------------------------------------
+[2026-07-17 10:19:24] No newer data found in backup. (Backup: 07/17/2026 09:00:10, Current: 07/17/2026 09:19:24). Stopping process.
+[2026-07-17 10:19:24] Process finished without updates.
+[2026-07-17 10:19:29] ------------------------------------------------------------
+[2026-07-17 10:19:29] AUTO UPDATE KPI PROCESS STARTED
+[2026-07-17 10:19:29] ------------------------------------------------------------
+[2026-07-17 10:19:29] Newer file detected in backup folder. (Backup: 07/17/2026 09:00:10, Current: 07/17/2026 05:19:28)
+[2026-07-17 10:19:29] Step 1/6: Backing up current file to c:\Users\DELL\Desktop\AI-Agent\AI_PhantichchisoDT\data\PTIT_Chiso_backup.xlsx...
+[2026-07-17 10:19:29] Backup successful.
+[2026-07-17 10:19:29] Step 2/6: Copying new Excel file from Backup...
+[2026-07-17 10:19:29] Copy successful. New file updated.
+[2026-07-17 10:19:29] Step 3/6: Checking MySQL Server on port 3307...
+[2026-07-17 10:19:30] MySQL Server is already running on port 3307.
+[2026-07-17 10:19:30] Step 4/6: Executing integration pipeline (run_pipeline.py)...
+[2026-07-17 10:19:52] Pipeline executed.
+Khﬂ+Éi chﬂ¶Ìy -Ê¶¶ﬂ+•ng ﬂ+Êng t+°ch hﬂ+˙p b+Ìo c+Ìo hﬂ+Ïc vﬂ+— PTITxRikkei...
+
+================================================================================
+Bﬂ¶´T -…ﬂ¶™U B¶ªﬂ+‹C: 1. Dﬂ+¶ b+Ìo nguy c¶Ì tr¶¶ﬂ+˙t hﬂ+Ïc tﬂ¶°p (analyze_student_risk_real)
+================================================================================
+Real risk analysis completed.
+
+HO+«N TH+«NH: 1. Dﬂ+¶ b+Ìo nguy c¶Ì tr¶¶ﬂ+˙t hﬂ+Ïc tﬂ¶°p (analyze_student_risk_real) TH+«NH C+ˆNG.
+
+================================================================================
+Bﬂ¶´T -…ﬂ¶™U B¶ªﬂ+‹C: 1.2. Xuﬂ¶—t bﬂ¶˙n dashboard hﬂ+Ïc lﬂ+¶c Agent 2 (export_prediction_dashboard_html)
+================================================================================
+Combined Academic Dashboard & Care List exported successfully in output/2_class_predictions_dashboard.html
+
+HO+«N TH+«NH: 1.2. Xuﬂ¶—t bﬂ¶˙n dashboard hﬂ+Ïc lﬂ+¶c Agent 2 (export_prediction_dashboard_html) TH+«NH C+ˆNG.
+
+================================================================================
+Bﬂ¶´T -…ﬂ¶™U B¶ªﬂ+‹C: 2. Ph+Ûn t+°ch vi phﬂ¶Ìm kﬂ++ luﬂ¶°t t+Ìc nghiﬂ+Áp GV/TG (analyze_gvtg_violations)
+================================================================================
+-…ang -Êﬂ+Ïc dﬂ+ª liﬂ+Áu thﬂ+•i kh+¶a biﬂ+‚u Excel bﬂ¶¶ng openpyxl...
+T+ºm thﬂ¶—y 187 ca hﬂ+Ïc m+¶n Python Web kh+¶a KS25 sau khi lﬂ+Ïc tr+¶ng.
+
+================================================================================
+B+¸O C+¸O VI PHﬂ¶·M T+¸C NGHIﬂ+ÂP GV/TG KH+ÙA KS25 M+ˆN PYTHON WEB - Bﬂ¶ÛN DEMO
+================================================================================
+-…+˙ l¶¶u kﬂ¶+t quﬂ¶˙ JSON tﬂ¶Ìi: data/vi_pham_gvtg.json
+Ph+Ìt hiﬂ+Án 111 vi phﬂ¶Ìm t+Ìc nghiﬂ+Áp thﬂ+¶c tﬂ¶+ (-Ê+˙ loﬂ¶Ìi tr+¶ng ﬂ¶˙o):
+Date         | Class           | Session    | Instructor           | Role   | Error 
+--------------------------------------------------------------------------------
+2026-06-30   | HN-K25-CNTT1    | Buﬂ+Úi 04    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-06-26   | HN-K25-CNTT1    | Buﬂ+Úi 02    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-06-29   | HN-K25-CNTT1    | Buﬂ+Úi 03    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-06-30   | HN-K25-CNTT1    | Buﬂ+Úi 05    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-02   | HN-K25-CNTT1    | Buﬂ+Úi 07    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-03   | HN-K25-CNTT1    | Buﬂ+Úi 08    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-06   | HN-K25-CNTT1    | Buﬂ+Úi 09    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-08   | HN-K25-CNTT1    | Buﬂ+Úi 12    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-09   | HN-K25-CNTT1    | Buﬂ+Úi 13    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-10   | HN-K25-CNTT1    | Buﬂ+Úi 14    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-13   | HN-K25-CNTT1    | Buﬂ+Úi 15    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-14   | HN-K25-CNTT1    | Buﬂ+Úi 16    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-14   | HN-K25-CNTT1    | Buﬂ+Úi 17    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-15   | HN-K25-CNTT1    | Buﬂ+Úi 18    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-16   | HN-K25-CNTT1    | Buﬂ+Úi 19    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-17   | HN-K25-CNTT1    | Buﬂ+Úi 20    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-06-26   | HN-K25-CNTT2    | Buﬂ+Úi 01    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-06-29   | HN-K25-CNTT2    | Buﬂ+Úi 02    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-06-30   | HN-K25-CNTT2    | Buﬂ+Úi 03    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-01   | HN-K25-CNTT2    | Buﬂ+Úi 04    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-01   | HN-K25-CNTT2    | Buﬂ+Úi 05    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-02   | HN-K25-CNTT2    | Buﬂ+Úi 06    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-03   | HN-K25-CNTT2    | Buﬂ+Úi 07    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-06   | HN-K25-CNTT2    | Buﬂ+Úi 08    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-07   | HN-K25-CNTT2    | Buﬂ+Úi 09    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-08   | HN-K25-CNTT2    | Buﬂ+Úi 10    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-08   | HN-K25-CNTT2    | Buﬂ+Úi 10    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-05 
+2026-07-08   | HN-K25-CNTT2    | Buﬂ+Úi 11    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-08   | HN-K25-CNTT2    | Buﬂ+Úi 11    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-04 
+2026-07-09   | HN-K25-CNTT2    | Buﬂ+Úi 12    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-10   | HN-K25-CNTT2    | Buﬂ+Úi 13    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-13   | HN-K25-CNTT2    | Buﬂ+Úi 14    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-14   | HN-K25-CNTT2    | Buﬂ+Úi 15    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-15   | HN-K25-CNTT2    | Buﬂ+Úi 16    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-15   | HN-K25-CNTT2    | Buﬂ+Úi 17    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-16   | HN-K25-CNTT2    | Buﬂ+Úi 18    | Trﬂ+Ônh Quﬂ+Êc Hai       | GV     | GV-08 
+2026-07-17   | HN-K25-CNTT2    | Buﬂ+Úi 19    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-06-25   | HN-K25-CNTT3    | Buﬂ+Úi 01    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-06-25   | HN-K25-CNTT3    | Buﬂ+Úi 01    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-05 
+2026-06-26   | HN-K25-CNTT3    | Buﬂ+Úi 02    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-06-26   | HN-K25-CNTT3    | Buﬂ+Úi 02    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-05 
+2026-06-29   | HN-K25-CNTT3    | Buﬂ+Úi 03    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-06-29   | HN-K25-CNTT3    | Buﬂ+Úi 04    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-01   | HN-K25-CNTT3    | Buﬂ+Úi 06    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-02   | HN-K25-CNTT3    | Buﬂ+Úi 07    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-06   | HN-K25-CNTT3    | Buﬂ+Úi 09    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-06   | HN-K25-CNTT3    | Buﬂ+Úi 10    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-07   | HN-K25-CNTT3    | Buﬂ+Úi 11    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-08   | HN-K25-CNTT3    | Buﬂ+Úi 12    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-08   | HN-K25-CNTT3    | Buﬂ+Úi 12    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-05 
+2026-07-09   | HN-K25-CNTT3    | Buﬂ+Úi 13    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-10   | HN-K25-CNTT3    | Buﬂ+Úi 14    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-13   | HN-K25-CNTT3    | Buﬂ+Úi 15    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-13   | HN-K25-CNTT3    | Buﬂ+Úi 16    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-14   | HN-K25-CNTT3    | Buﬂ+Úi 17    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-15   | HN-K25-CNTT3    | Buﬂ+Úi 18    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-16   | HN-K25-CNTT3    | Buﬂ+Úi 19    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-17   | HN-K25-CNTT3    | Buﬂ+Úi 20    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-06-25   | HN-K25-CNTT4    | Buﬂ+Úi 01    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-06-25   | HN-K25-CNTT4    | Buﬂ+Úi 01    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-05 
+2026-06-26   | HN-K25-CNTT4    | Buﬂ+Úi 02    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-06-26   | HN-K25-CNTT4    | Buﬂ+Úi 02    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-05 
+2026-06-29   | HN-K25-CNTT4    | Buﬂ+Úi 03    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-06-30   | HN-K25-CNTT4    | Buﬂ+Úi 04    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-06-30   | HN-K25-CNTT4    | Buﬂ+Úi 05    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-01   | HN-K25-CNTT4    | Buﬂ+Úi 06    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-02   | HN-K25-CNTT4    | Buﬂ+Úi 07    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-03   | HN-K25-CNTT4    | Buﬂ+Úi 08    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-07   | HN-K25-CNTT4    | Buﬂ+Úi 10    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-07   | HN-K25-CNTT4    | Buﬂ+Úi 11    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-08   | HN-K25-CNTT4    | Buﬂ+Úi 12    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-09   | HN-K25-CNTT4    | Buﬂ+Úi 13    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-10   | HN-K25-CNTT4    | Buﬂ+Úi 14    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-13   | HN-K25-CNTT4    | Buﬂ+Úi 15    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-14   | HN-K25-CNTT4    | Buﬂ+Úi 16    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-14   | HN-K25-CNTT4    | Buﬂ+Úi 17    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-15   | HN-K25-CNTT4    | Buﬂ+Úi 18    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-16   | HN-K25-CNTT4    | Buﬂ+Úi 19    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-17   | HN-K25-CNTT4    | Buﬂ+Úi 20    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-01   | HN-K25-CNTT5    | Buﬂ+Úi 06    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-03   | HN-K25-CNTT5    | Buﬂ+Úi 08    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-03   | HN-K25-CNTT5    | Buﬂ+Úi 09    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-07   | HN-K25-CNTT5    | Buﬂ+Úi 11    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-08   | HN-K25-CNTT5    | Buﬂ+Úi 12    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-09   | HN-K25-CNTT5    | Buﬂ+Úi 13    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-10   | HN-K25-CNTT5    | Buﬂ+Úi 14    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-13   | HN-K25-CNTT5    | Buﬂ+Úi 15    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-10   | HN-K25-CNTT5    | Nghﬂ+Î       | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-14   | HN-K25-CNTT5    | Buﬂ+Úi 16    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-15   | HN-K25-CNTT5    | Buﬂ+Úi 17    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-16   | HN-K25-CNTT5    | Buﬂ+Úi 18    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-07-17   | HN-K25-CNTT5    | Buﬂ+Úi 19    | Lﬂ¶Ìi Trung L+Ûm        | TG     | TG-08 
+2026-07-17   | HN-K25-CNTT5    | Buﬂ+Úi 20    | L¶¶¶Ìng Quﬂ+Êc Tuﬂ¶—n      | GV     | GV-08 
+2026-06-26   | HN-K25-CNTT6    | Buﬂ+Úi 01    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-06-26   | HN-K25-CNTT6    | Buﬂ+Úi 01    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-05 
+2026-07-01   | HN-K25-CNTT6    | Buﬂ+Úi 04    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-01   | HN-K25-CNTT6    | Buﬂ+Úi 05    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-02   | HN-K25-CNTT6    | Buﬂ+Úi 06    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-03   | HN-K25-CNTT6    | Buﬂ+Úi 07    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-06   | HN-K25-CNTT6    | Buﬂ+Úi 08    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-07   | HN-K25-CNTT6    | Buﬂ+Úi 09    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-08   | HN-K25-CNTT6    | Buﬂ+Úi 10    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-08   | HN-K25-CNTT6    | Buﬂ+Úi 11    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-09   | HN-K25-CNTT6    | Buﬂ+Úi 12    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-10   | HN-K25-CNTT6    | Buﬂ+Úi 13    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-13   | HN-K25-CNTT6    | Buﬂ+Úi 14    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-14   | HN-K25-CNTT6    | Buﬂ+Úi 15    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-15   | HN-K25-CNTT6    | Buﬂ+Úi 17    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+2026-07-15   | HN-K25-CNTT6    | Buﬂ+Úi 16    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-16   | HN-K25-CNTT6    | Buﬂ+Úi 18    | Nguyﬂ+‡n Quﬂ¶˙ng An      | GV     | GV-08 
+2026-07-17   | HN-K25-CNTT6    | Buﬂ+Úi 19    | Phﬂ¶Ìm Ngﬂ+Ïc Ki+¨n       | TG     | TG-08 
+-…+˙ xuﬂ¶—t b+Ìo c+Ìo Markdown tﬂ¶Ìi: data/vi_pham_gvtg_khoa_ks25.md
+
+HO+«N TH+«NH: 2. Ph+Ûn t+°ch vi phﬂ¶Ìm kﬂ++ luﬂ¶°t t+Ìc nghiﬂ+Áp GV/TG (analyze_gvtg_violations) TH+«NH C+ˆNG.
+
+================================================================================
+Bﬂ¶´T -…ﬂ¶™U B¶ªﬂ+‹C: 2.2. Xuﬂ¶—t bﬂ¶˙n b+Ìo c+Ìo t+Ìc nghiﬂ+Áp Agent 3 (generate_agent3_report)
+================================================================================
+Agent 3: Khﬂ+Éi chﬂ¶Ìy tr+ºnh sinh b+Ìo c+Ìo HTML trﬂ+¶c quan (generate_agent3_report)...
+Agent 3: Sinh b+Ìo c+Ìo HTML trﬂ+¶c quan th+·nh c+¶ng tﬂ¶Ìi output/3_gvtg_violations_report.html!
+
+HO+«N TH+«NH: 2.2. Xuﬂ¶—t bﬂ¶˙n b+Ìo c+Ìo t+Ìc nghiﬂ+Áp Agent 3 (generate_agent3_report) TH+«NH C+ˆNG.
+
+================================================================================
+Bﬂ¶´T -…ﬂ¶™U B¶ªﬂ+‹C: 2.5. Ph+Ûn t+°ch chﬂ¶—t l¶¶ﬂ+˙ng b+Ìo c+Ìo ng+·y GV/TG qua MCP (analyze_daily_logs_mcp)
+================================================================================
+Agent 4: Bﬂ¶ªt -Êﬂ¶∫u fetch dﬂ+ª liﬂ+Áu b+Ìo c+Ìo ng+·y tﬂ+Ω Worklane PM...
+  Thﬂ+•i gian kiﬂ+‚m to+Ìn b+Ìo c+Ìo: h+¶m qua (2026-07-16)
+  Danh s+Ìch ng+·y tuﬂ¶∫n: ['2026-07-13', '2026-07-14', '2026-07-15', '2026-07-16']
+  Danh s+Ìch ng+·y th+Ìng: ['2026-07-01', '2026-07-02', '2026-07-03', '2026-07-06', '2026-07-07', '2026-07-08', '2026-07-09', '2026-07-10', '2026-07-13', '2026-07-14', '2026-07-15', '2026-07-16']
+  -…ang nﬂ¶Ìp th+¶ng tin nh+Ûn sﬂ+¶ v+· -Êﬂ+Ônh mﬂ+¨c KPI Master tﬂ+Ω Excel...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-01...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-02...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-03...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-06...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-07...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-08...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-09...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-10...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-13...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-14...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-15...
+  Tﬂ¶˙i dﬂ+ª liﬂ+Áu ng+·y 2026-07-16...
+Agent 4: Tiﬂ¶+n h+·nh ph+Ûn t+°ch ri+¨ng biﬂ+Át theo Tuﬂ¶∫n v+· Th+Ìng...
+Agent 4: Ph+Ûn t+°ch tuﬂ¶∫n/th+Ìng th+·nh c+¶ng! Kﬂ¶+t quﬂ¶˙ l¶¶u tﬂ¶Ìi data\daily_log_analysis.json
+
+HO+«N TH+«NH: 2.5. Ph+Ûn t+°ch chﬂ¶—t l¶¶ﬂ+˙ng b+Ìo c+Ìo ng+·y GV/TG qua MCP (analyze_daily_logs_mcp) TH+«NH C+ˆNG.
+
+================================================================================
+Bﬂ¶´T -…ﬂ¶™U B¶ªﬂ+‹C: 2.7. Xuﬂ¶—t bﬂ¶˙n b+Ìo c+Ìo nhﬂ¶°t k++ c+¶ng viﬂ+Ác Agent 4 (generate_agent4_report)
+================================================================================
+Successfully generated HTML report at c:\Users\DELL\Desktop\AI-Agent\AI_PhantichchisoDT\output\4_daily_logs_report.html
+Successfully generated Markdown report at c:\Users\DELL\Desktop\AI-Agent\AI_PhantichchisoDT\output\4_daily_logs_report.md
+
+HO+«N TH+«NH: 2.7. Xuﬂ¶—t bﬂ¶˙n b+Ìo c+Ìo nhﬂ¶°t k++ c+¶ng viﬂ+Ác Agent 4 (generate_agent4_report) TH+«NH C+ˆNG.
+
+================================================================================
+Bﬂ¶´T -…ﬂ¶™U B¶ªﬂ+‹C: 3. T+°nh to+Ìn KPI GV/TG & B+Ìo c+Ìo Obsidian Wiki-link (generate_kpi_report)
+================================================================================
+-…ang -Êﬂ+Ïc dﬂ+ª liﬂ+Áu chﬂ+Î sﬂ+Ê -Ê+·o tﬂ¶Ìo bﬂ¶¶ng openpyxl...
+KPI Report generated successfully at: data/report_kpi_gv_tg.md
+
+HO+«N TH+«NH: 3. T+°nh to+Ìn KPI GV/TG & B+Ìo c+Ìo Obsidian Wiki-link (generate_kpi_report) TH+«NH C+ˆNG.
+
+================================================================================
+Bﬂ¶´T -…ﬂ¶™U B¶ªﬂ+‹C: 4. Kiﬂ+‚m thﬂ+° hiﬂ+Áu n-‚ng thuﬂ¶°t to+Ìn (evaluation_harness)
+================================================================================
+Harness Evaluation completed. Metrics report generated at: data/evaluation_metrics.md
+
+HO+«N TH+«NH: 4. Kiﬂ+‚m thﬂ+° hiﬂ+Áu n-‚ng thuﬂ¶°t to+Ìn (evaluation_harness) TH+«NH C+ˆNG.
+
+================================================================================
+Bﬂ¶´T -…ﬂ¶™U B¶ªﬂ+‹C: 5. Sinh Web Dashboard t+°ch hﬂ+˙p 2 Tab (generate_unified_dashboard)
+================================================================================
+Tr+°ch xuﬂ¶—t v+· bi+¨n dﬂ+Ôch SPA Dashboard Native kh+¶ng d+¶ng Iframe...
+SPA Dashboard Master Portal -Ê+˙ -Ê¶¶ﬂ+˙c sinh th+·nh c+¶ng tﬂ¶Ìi: output/5_master_evaluation_dashboard.html
+
+HO+«N TH+«NH: 5. Sinh Web Dashboard t+°ch hﬂ+˙p 2 Tab (generate_unified_dashboard) TH+«NH C+ˆNG.
+
+-…+˙ -Êﬂ+Ùng bﬂ+÷ b+Ìo c+Ìo tﬂ+Úng hﬂ+˙p Agent 5 ra gﬂ+Êc dﬂ+¶ +Ìn: unified_dashboard.html (SPA Native).
+
+Tiﬂ¶+n h+·nh vﬂ+Á sinh th¶¶ mﬂ+—c output...
+  - -…+˙ x+¶a file thﬂ+Ωa: 4_daily_logs_report.md
+  - -…+˙ x+¶a file thﬂ+Ωa: kpi_classification_report.html
+  - -…+˙ x+¶a file thﬂ+Ωa: kpi_classification_report.md
+================================================================================
+-…¶ªﬂ+£NG ﬂ+…NG -…+‚ HO+«N TH+«NH TO+«N Bﬂ+ˇ!
+C+Ìc b+Ìo c+Ìo -Ê+˙ -Ê¶¶ﬂ+˙c cﬂ¶°p nhﬂ¶°t sﬂ¶¶n s+·ng trong Obsidian Vault:
+  - [x] B+Ìo c+Ìo Nguy c¶Ì Hﬂ+Ïc vi+¨n: data/student_risk_report.md
+  - [x] B+Ìo c+Ìo KPI GV/TG: data/report_kpi_gv_tg.md
+  - [x] B+Ìo c+Ìo Hiﬂ+Áu n-‚ng M+¶ h+ºnh: data/evaluation_metrics.md
+  - [x] Web Dashboard t+°ch hﬂ+˙p: output/5_master_evaluation_dashboard.html
+================================================================================
+[2026-07-17 10:19:52] Step 5/6: Executing KPI ranking and energy classification (generate_kpi_ranking.py)...
+[2026-07-17 10:19:57] KPI Ranking executed successfully.
+1. -…ang nﬂ¶Ìp dﬂ+ª liﬂ+Áu tﬂ+Ω c+Ìc nguﬂ+Ùn...
+Loaded daily log stats for 43 instructors.
+Loaded academic pass rates for 19 classes.
+2. -…ang -Êﬂ+Ïc dﬂ+ª liﬂ+Áu chﬂ+Î sﬂ+Ê -Ê+·o tﬂ¶Ìo sinh vi+¨n tﬂ+Ω Excel...
+Finished reading Excel. Found data for 25 whitelisted instructors from class sheets.
+3. -…ang t+°nh to+Ìn -Êiﬂ+‚m KPI theo ti+¨u chuﬂ¶¨n mﬂ+¢i...
+4. -…ang sinh file b+Ìo c+Ìo Markdown...
+Successfully generated Markdown report: output/kpi_classification_report.md
+5. -…ang sinh file b+Ìo c+Ìo HTML Premium...
+Successfully generated HTML report: output/kpi_classification_report.html
+=== THﬂ+¶C THI TH+«NH C+ˆNG ===
+[2026-07-17 10:19:57] Step 6/6: Staging and pushing changes to GitHub...
