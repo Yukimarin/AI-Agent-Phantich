@@ -142,19 +142,19 @@
         
         
         #tab-agent1-container {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Plus Jakart#tab-agent1-container a Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-main);
             color: var(--text-main);
-            line-height: 1.625;
+            line-height: 1.7;
             padding: 40px 20px;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         #tab-agent1-container .card {
             background: white;
             padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+            border-radius: 32px;
+            box-shadow: var(--card-shadow);
             border: 1px solid var(--border);
         }
         #tab-agent1-container .header {
@@ -171,73 +171,114 @@
             gap: 16px;
         }
         #tab-agent1-container .logo-box {
-            padding: 12px 16px;
+            padding: 12px 18px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 12px;
+            border-radius: 16px;
             color: white;
             font-weight: 800;
-            font-size: 1.25rem;
-            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+            font-size: 1.5rem;
+            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.3);
+            letter-spacing: -0.05em;
         }
         #tab-agent1-container .logo-title {
             font-weight: 800;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: var(--text-dark);
             line-height: 1.2;
+            letter-spacing: -0.02em;
         }
         #tab-agent1-container .logo-subtitle {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: #94a3b8;
             font-weight: 600;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.075em;
+            text-transform: uppercase;
         }
         #tab-agent1-container .week-badge {
             display: inline-block;
-            padding: 6px 14px;
+            padding: 8px 16px;
             background-color: var(--primary-light);
-            color: var(--primary);
-            border: 1px solid #ddd6fe;
+            color: var(--primary-dark);
             border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            font-size: 0.8rem;
+            font-weight: 700;
         }
         
+        /* Charts styling */
+        .charts-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .chart-card {
+            background: white;
+            padding: 24px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+        }
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .chart-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0;
+            letter-spacing: -0.01em;
+        }
+        .tab-btn {
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--text-main);
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .tab-btn:hover:not(.active) {
+            background: var(--bg-main);
+        }
+
         /* Markdown styling */
         .markdown-#tab-agent1-container #tab-agent1-container h1 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            margin-top: 32px;
-            margin-bottom: 24px;
-            background: linear-gradient(135deg, #1e1b4b, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 12px;
+            display: none; /* D#tab-agent1-container a co Header */
         }
         .markdown-#tab-agent1-container #tab-agent1-container h2 {
             font-size: 1.4rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--text-dark);
-            margin-top: 32px;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            letter-spacing: -0.02em;
         }
         .markdown-#tab-agent1-container #tab-agent1-container h3 {
             font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-top: 24px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-top: 32px;
             margin-bottom: 12px;
+            letter-spacing: -0.01em;
         }
         .markdown-#tab-agent1-container #tab-agent1-container h4 {
             font-size: 0.95rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--text-dark);
-            margin-top: 16px;
-            margin-bottom: 8px;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
         .markdown-#tab-agent1-container #tab-agent1-container p {
             margin-top: 0;
@@ -246,77 +287,77 @@
         .markdown-#tab-agent1-container #tab-agent1-container ul, .markdown-#tab-agent1-container ol {
             margin-top: 0;
             margin-bottom: 16px;
-            padding-left: 24px;
+            padding-left: 20px;
         }
         .markdown-#tab-agent1-container #tab-agent1-container li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
         
         /* Table styling */
         .table-container {
             overflow-x: auto;
-            margin: 24px 0;
+            margin: 20px 0;
             border: 1px solid var(--border);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
         }
         #tab-agent1-container table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
+            font-size: 0.875rem;
         }
         #tab-agent1-container th {
-            background: linear-gradient(to right, var(--primary), #6d28d9);
-            color: white;
-            font-weight: 600;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 14px 16px;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            font-weight: 700;
+            padding: 14px 18px;
+            border-bottom: 2px solid var(--border);
         }
         #tab-agent1-container td {
-            padding: 12px 16px;
-            font-size: 0.9rem;
+            padding: 14px 18px;
             border-bottom: 1px solid var(--border);
             background-color: white;
+            color: var(--text-main);
         }
         tr:last-child #tab-agent1-container td {
             border-bottom: none;
         }
         tr:hover #tab-agent1-container td {
-            background-color: #fcfbfe;
+            background-color: #faf5ff;
         }
         
         /* Alerts styling */
         .alert-box {
-            padding: 18px 24px;
+            padding: 20px 24px;
             margin: 24px 0;
-            border-radius: 0 12px 12px 0;
+            border-radius: 16px;
             font-size: 0.925rem;
+            box-shadow: var(--card-shadow);
         }
         .alert-important {
-            border-left: 4px solid #ef4444;
-            background-color: #fef2f2;
+            border-left: 5px solid var(--danger);
+            background-color: var(--danger-light);
             color: #991b1b;
         }
         .alert-note {
-            border-left: 4px solid var(--secondary);
+            border-left: 5px solid var(--secondary);
             background-color: var(--secondary-light);
             color: #1e40af;
         }
         .alert-warning {
-            border-left: 4px solid #f59e0b;
+            border-left: 5px solid #f59e0b;
             background-color: #fffbeb;
             color: #92400e;
         }
         .quote-box {
-            border-left: 4px solid var(--primary);
+            border-left: 5px solid var(--primary);
             background-color: var(--primary-light);
-            padding: 14px 20px;
+            padding: 16px 24px;
             margin: 24px 0;
-            border-radius: 0 12px 12px 0;
+            border-radius: 16px;
             font-style: italic;
-            color: #5b21b6;
+            color: #4f46e5;
         }
         
         strong {
@@ -331,18 +372,18 @@
             align-items: center;
             justify-content: space-between;
             color: #94a3b8;
-            font-size: 0.75rem;
-            font-weight: 500;
+            font-size: 0.8rem;
+            font-weight: 600;
         }
         .status-badge {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
         .status-dot {
-            width: 6px;
-            height: 6px;
-            background-color: #22c55e;
+            width: 8px;
+            height: 8px;
+            background-color: var(--success);
             border-radius: 50%;
         }
     
@@ -1563,7 +1604,7 @@
             <td class="py-3.5 px-3 font-bold text-slate-800 dark:text-slate-200">Nguyễn Quảng An</td>
             <td class="py-3.5 px-3"><span class="bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded">GV</span></td>
             <td class="py-3.5 px-3 text-xs text-slate-400 dark:text-slate-500 font-bold font-mono text-[10px]">Khối CNTT</td>
-            <td class="py-3.5 px-3 text-xs text-slate-500 max-w-xs truncate" title="HN-K25-CNTT3(35) (KS25_Python_Web), HN-K25-CNTT4(41-40) (KS25_Python_Web), HN-K25-CNTT6(32-31) (KS25_Python_Web)">HN-K25-CNTT3(35) (KS25_Python_Web), HN-K25-CNTT4(41-40) (KS25_Python_Web), HN-K25-CNTT6(32-31) (KS25_Python_Web)</td>
+            <td class="py-3.5 px-3 text-xs text-slate-500 max-w-xs truncate" title="HN-K25-CNTT3(35) (KS25_Python_Web), HN-K25-CNTT6(32-31) (KS25_Python_Web), HN-K25-CNTT4(41-40) (KS25_Python_Web)">HN-K25-CNTT3(35) (KS25_Python_Web), HN-K25-CNTT6(32-31) (KS25_Python_Web), HN-K25-CNTT4(41-40) (KS25_Python_Web)</td>
             <td class="py-3.5 px-3 font-mono text-amber-600 dark:text-amber-400 font-bold">76.13</td>
             <td class="py-3.5 px-3">
                 <div class="w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
@@ -1623,17 +1664,42 @@
         <!-- ========================================== -->
         <div id="tab-agent1-container" class="spa-tab-content hidden transition-opacity duration-300">
             
-    <div class="card">
+    <div class="card" id="tab-agent1-container">
         <div class="header">
             <div class="logo-section">
                 <div class="logo-box">A1</div>
                 <div>
-                    <div class="logo-title">Quan Tri Lop &amp; Chi So Dao Tao</div>
-                    <div class="logo-subtitle">HE THONG THEO DOI VI PHAC TUAN - AGENT 1</div>
+                    <div class="logo-title">Quản Trị Lớp &amp; Chỉ Số Đào Tạo</div>
+                    <div class="logo-subtitle">Hệ thống theo dõi vi phạm tuần - Agent 1</div>
                 </div>
             </div>
             <div>
-                <span class="week-badge">Bao cao Tuan</span>
+                <span class="week-badge">Báo cáo Tuần</span>
+            </div>
+        </div>
+
+        <!-- Charts Container -->
+        <div class="charts-row">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3 class="chart-title">So sánh Vi phạm Tuần này vs Tuần trước (%)</h3>
+                </div>
+                <div style="position: relative; height: 260px;">
+                    <canvas id="weeklyCompareChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3 class="chart-title">Xu hướng Vi phạm qua các Môn học (%)</h3>
+                    <div class="tabs" style="display: flex; gap: 6px;">
+                        <button id="btn-trend-hn" class="tab-btn active" onclick="switchTrendData('HN')">CNTT HN</button>
+                        <button id="btn-trend-hcm" class="tab-btn" onclick="switchTrendData('HCM')">CNTT HCM</button>
+                        <button id="btn-trend-qtkd" class="tab-btn" onclick="switchTrendData('QTKD')">QTKD HN</button>
+                    </div>
+                </div>
+                <div style="position: relative; height: 260px;">
+                    <canvas id="trendChart"></canvas>
+                </div>
             </div>
         </div>
         
@@ -1643,10 +1709,21 @@
 - <strong>Thời gian báo cáo tuần</strong>: Từ ngày <strong>13/07/2026</strong> đến ngày <strong>19/07/2026</strong> (Tuần hiện tại).
 - <strong>Tuần đối chiếu</strong>: Từ ngày <strong>06/07/2026</strong> đến ngày <strong>12/07/2026</strong> (Tuần đối chiếu).
 - <strong>Môn học hiện tại</strong>: KS25 học môn <code>Python Web</code> (IT-215) và môn <code>PRJ302</code> (Dự án kinh doanh số 2). Khối KS24 tạm bỏ qua do đang làm dự án hè.
-- <strong>Lưu ý đặc biệt</strong>: Đối với khóa KS25 CNTT, do môn <code>Python Web</code> mới bắt đầu từ 25/06 (chỉ có dữ liệu tuần này), chỉ số tuần trước được đối chiếu dựa trên môn học liền trước đó là <code>Python</code> (sheet <code>KS25_Python</code>) để phản ánh đúng xu hướng kỷ luật khi chuyển đổi môn học.</p></div>
+- <strong>Lưu ý đặc biệt</strong>: Cả tuần này và tuần trước đều đối chiếu trên cùng môn học hiện tại để theo dõi sát sao tiến độ kỷ luật theo tuần.</p></div>
 
 <hr />
-<h2 id="i-thong-ke-chi-so-vi-pham-theo-khoa-hoc-trong-tuan-qua">I. THỐNG KÊ CHỈ SỐ VI PHẠM THEO KHÓA HỌC TRONG TUẦN QUA</h2>
+<h2 id="i-thong-ke-xu-huong-ky-luat-qua-cac-mon-hoc-historical-trends">I. THỐNG KÊ XU HƯỚNG KỶ LUẬT QUA CÁC MÔN HỌC (HISTORICAL TRENDS)</h2>
+<pre><code class="language-mermaid">gantt
+    title Lộ trình môn học KS25 CNTT HN
+    dateFormat  YYYY-MM-DD
+    section Học phần
+    Javascript (0.0% vắng)   :done, 2026-05-11, 2026-05-24
+    Database (4.5% vắng)     :done, 2026-05-25, 2026-06-08
+    Python (12.3% vắng)      :done, 2026-06-09, 2026-06-24
+    Python Web (15.2% vắng)  :active, 2026-06-25, 2026-07-20
+</code></pre>
+<hr />
+<h2 id="ii-thong-ke-chi-so-vi-pham-theo-khoa-hoc-trong-tuan-qua">II. THỐNG KÊ CHỈ SỐ VI PHẠM THEO KHÓA HỌC TRONG TUẦN QUA</h2>
 <h3 id="1-khoa-hn-ks25-cntt-mon-hoc-python-web-it-215">1. Khóa HN-KS25-CNTT (Môn học: Python Web - IT-215)</h3>
 <h4 id="bang-chi-so-chi-tiet-tung-lop">📊 Bảng chỉ số chi tiết từng lớp:</h4>
 <div class="table-container"><table>
@@ -1655,13 +1732,10 @@
 <th style="text-align: left;">Tên Lớp</th>
 <th style="text-align: left;">Giảng viên</th>
 <th style="text-align: left;">Trợ giảng</th>
-<th style="text-align: center;">CC tuần trước</th>
-<th style="text-align: center;">CC tuần này</th>
-<th style="text-align: center;">BT tuần trước</th>
-<th style="text-align: center;">BT tuần này</th>
-<th style="text-align: center;">EL tuần trước</th>
-<th style="text-align: center;">EL tuần này</th>
-<th style="text-align: left;">Xu hướng kỷ luật</th>
+<th style="text-align: center;">Chuyên cần</th>
+<th style="text-align: center;">Bài tập</th>
+<th style="text-align: center;">Elearning</th>
+<th style="text-align: left;">Xu thích ứng</th>
 </tr>
 </thead>
 <tbody>
@@ -1669,72 +1743,54 @@
 <td style="text-align: left;"><strong>HN-K25-CNTT1</strong></td>
 <td style="text-align: left;">Lương Quốc Tuấn</td>
 <td style="text-align: left;">Lại Trung Lâm</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">15.50%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">15.50%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">20.00%</td>
+<td style="text-align: center;">15.50% <span style='color:#ef4444; font-weight:600;'>(▲ +3.50%)</span></td>
+<td style="text-align: center;">15.50% <span style='color:#ef4444; font-weight:600;'>(▲ +6.50%)</span></td>
+<td style="text-align: center;">20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +6.00%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT2</strong></td>
 <td style="text-align: left;">Lâm Tùng Dương</td>
 <td style="text-align: left;">Lại Trung Lâm</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">25.26%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">10.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">12.10%</td>
+<td style="text-align: center;">25.26% <span style='color:#ef4444; font-weight:600;'>(▲ +16.85%)</span></td>
+<td style="text-align: center;">10.00% <span style='color:#ef4444; font-weight:600;'>(▲ +4.21%)</span></td>
+<td style="text-align: center;">12.10% <span style='color:#ef4444; font-weight:600;'>(▲ +6.85%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT3</strong></td>
 <td style="text-align: left;">Nguyễn Quảng An</td>
 <td style="text-align: left;">Phạm Ngọc Kiên</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">14.86%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">12.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">20.00%</td>
+<td style="text-align: center;">14.86% <span style='color:#ef4444; font-weight:600;'>(▲ +9.15%)</span></td>
+<td style="text-align: center;">12.00% <span style='color:#ef4444; font-weight:600;'>(▲ +8.00%)</span></td>
+<td style="text-align: center;">20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +11.43%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT4</strong></td>
 <td style="text-align: left;">Nguyễn Quảng An</td>
 <td style="text-align: left;">Phạm Ngọc Kiên</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">11.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">12.50%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">13.50%</td>
+<td style="text-align: center;">11.00% <span style='color:#ef4444; font-weight:600;'>(▲ +3.05%)</span></td>
+<td style="text-align: center;">12.50% <span style='color:#ef4444; font-weight:600;'>(▲ +6.52%)</span></td>
+<td style="text-align: center;">13.50% <span style='color:#ef4444; font-weight:600;'>(▲ +5.04%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT5</strong></td>
 <td style="text-align: left;">Lương Quốc Tuấn</td>
 <td style="text-align: left;">Lại Trung Lâm</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">10.81%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">10.81%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">10.81%</td>
+<td style="text-align: center;">10.81% <span style='color:#ef4444; font-weight:600;'>(▲ +3.78%)</span></td>
+<td style="text-align: center;">10.81% <span style='color:#ef4444; font-weight:600;'>(▲ +4.32%)</span></td>
+<td style="text-align: center;">10.81% <span style='color:#ef4444; font-weight:600;'>(▲ +4.32%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT6</strong></td>
 <td style="text-align: left;">Nguyễn Quảng An</td>
 <td style="text-align: left;">Phạm Ngọc Kiên</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">28.38%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">16.16%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">15.48%</td>
+<td style="text-align: center;">28.38% <span style='color:#ef4444; font-weight:600;'>(▲ +10.44%)</span></td>
+<td style="text-align: center;">16.16% <span style='color:#ef4444; font-weight:600;'>(▲ +8.41%)</span></td>
+<td style="text-align: center;">15.48% <span style='color:#ef4444; font-weight:600;'>(▲ +5.24%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 </tbody>
@@ -1743,9 +1799,9 @@
 <ul>
 <li><strong>Chỉ số vi phạm trung bình tuần vừa qua</strong>: Chuyên cần vắng <strong>17.64%</strong>, nợ bài tập <strong>12.83%</strong>, chậm Elearning <strong>15.32%</strong>.</li>
 <li><strong>Xu hướng so với tuần trước</strong>:</li>
-<li>Chuyên cần: <strong>+17.64%</strong> (Tuần trước: 0.00%).</li>
-<li>Bài tập: <strong>+12.83%</strong> (Tuần trước: 0.00%).</li>
-<li>Elearning: <strong>+15.32%</strong> (Tuần trước: 0.00%).</li>
+<li>Chuyên cần: <strong>+7.79%</strong> (Tuần trước: 9.84%).</li>
+<li>Bài tập: <strong>+6.33%</strong> (Tuần trước: 6.50%).</li>
+<li>Elearning: <strong>+6.48%</strong> (Tuần trước: 8.84%).</li>
 </ul>
 <hr />
 <h3 id="2-khoa-hcm-ks25-cntt-mon-hoc-python-web-it-215">2. Khóa HCM-KS25-CNTT (Môn học: Python Web - IT-215)</h3>
@@ -1756,13 +1812,10 @@
 <th style="text-align: left;">Tên Lớp</th>
 <th style="text-align: left;">Giảng viên</th>
 <th style="text-align: left;">Trợ giảng</th>
-<th style="text-align: center;">CC tuần trước</th>
-<th style="text-align: center;">CC tuần này</th>
-<th style="text-align: center;">BT tuần trước</th>
-<th style="text-align: center;">BT tuần này</th>
-<th style="text-align: center;">EL tuần trước</th>
-<th style="text-align: center;">EL tuần này</th>
-<th style="text-align: left;">Xu hướng kỷ luật</th>
+<th style="text-align: center;">Chuyên cần</th>
+<th style="text-align: center;">Bài tập</th>
+<th style="text-align: center;">Elearning</th>
+<th style="text-align: left;">Xu thích ứng</th>
 </tr>
 </thead>
 <tbody>
@@ -1770,48 +1823,36 @@
 <td style="text-align: left;"><strong>HCM-K25-CNTT5</strong></td>
 <td style="text-align: left;">Lê Hà Thanh Sang</td>
 <td style="text-align: left;">Phạm Viết Hùng</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">9.75%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">9.74%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">5.13%</td>
+<td style="text-align: center;">9.75% <span style='color:#ef4444; font-weight:600;'>(▲ +5.65%)</span></td>
+<td style="text-align: center;">9.74% <span style='color:#ef4444; font-weight:600;'>(▲ +9.74%)</span></td>
+<td style="text-align: center;">5.13% <span style='color:#10b981; font-weight:600;'>(▼ -0.51%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HCM-K25-CNTT6</strong></td>
 <td style="text-align: left;">Trần Quốc Tuấn</td>
 <td style="text-align: left;">Lưu Hoàng Xuân Nguyên</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">11.50%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">14.00%</td>
+<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">11.50% <span style='color:#ef4444; font-weight:600;'>(▲ +10.00%)</span></td>
+<td style="text-align: center;">14.00% <span style='color:#ef4444; font-weight:600;'>(▲ +3.50%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HCM-K25-CNTT7</strong></td>
 <td style="text-align: left;">Trần Quốc Tuấn</td>
 <td style="text-align: left;">Lưu Hoàng Xuân Nguyên</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">16.86%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">10.22%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">8.15%</td>
+<td style="text-align: center;">16.86% <span style='color:#ef4444; font-weight:600;'>(▲ +7.86%)</span></td>
+<td style="text-align: center;">10.22% <span style='color:#ef4444; font-weight:600;'>(▲ +8.22%)</span></td>
+<td style="text-align: center;">8.15% <span style='color:#ef4444; font-weight:600;'>(▲ +6.15%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HCM-K25-CNTT8</strong></td>
 <td style="text-align: left;">Lê Hà Thanh Sang</td>
 <td style="text-align: left;">Phạm Viết Hùng</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">67.22%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">32.78%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">36.11%</td>
+<td style="text-align: center;">67.22% <span style='color:#ef4444; font-weight:600;'>(▲ +12.78%)</span></td>
+<td style="text-align: center;">32.78% <span style='color:#ef4444; font-weight:600;'>(▲ +11.11%)</span></td>
+<td style="text-align: center;">36.11% <span style='color:#ef4444; font-weight:600;'>(▲ +14.45%)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 </tbody>
@@ -1820,9 +1861,9 @@
 <ul>
 <li><strong>Chỉ số vi phạm trung bình tuần vừa qua</strong>: Chuyên cần vắng <strong>23.46%</strong>, nợ bài tập <strong>16.06%</strong>, chậm Elearning <strong>15.85%</strong>.</li>
 <li><strong>Xu hướng so với tuần trước</strong>:</li>
-<li>Chuyên cần: <strong>+23.46%</strong> (Tuần trước: 0.00%).</li>
-<li>Bài tập: <strong>+16.06%</strong> (Tuần trước: 0.00%).</li>
-<li>Elearning: <strong>+15.85%</strong> (Tuần trước: 0.00%).</li>
+<li>Chuyên cần: <strong>+6.57%</strong> (Tuần trước: 16.89%).</li>
+<li>Bài tập: <strong>+9.77%</strong> (Tuần trước: 6.29%).</li>
+<li>Elearning: <strong>+5.90%</strong> (Tuần trước: 9.95%).</li>
 </ul>
 <hr />
 <h3 id="3-khoa-hn-qtkd-ks25-mon-hoc-prj302">3. Khóa HN-QTKD-KS25 (Môn học: PRJ302)</h3>
@@ -1833,13 +1874,10 @@
 <th style="text-align: left;">Tên Lớp</th>
 <th style="text-align: left;">Giảng viên</th>
 <th style="text-align: left;">Trợ giảng</th>
-<th style="text-align: center;">CC tuần trước</th>
-<th style="text-align: center;">CC tuần này</th>
-<th style="text-align: center;">BT tuần trước</th>
-<th style="text-align: center;">BT tuần này</th>
-<th style="text-align: center;">EL tuần trước</th>
-<th style="text-align: center;">EL tuần này</th>
-<th style="text-align: left;">Xu hướng kỷ luật</th>
+<th style="text-align: center;">Chuyên cần</th>
+<th style="text-align: center;">Bài tập</th>
+<th style="text-align: center;">Elearning</th>
+<th style="text-align: left;">Xu thích ứng</th>
 </tr>
 </thead>
 <tbody>
@@ -1847,36 +1885,27 @@
 <td style="text-align: left;"><strong>HN-K25-QTKD1</strong></td>
 <td style="text-align: left;">Hoàng Thị Kim Oanh</td>
 <td style="text-align: left;">N/A</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">18.75%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">18.75% <span style='color:#ef4444; font-weight:600;'>(▲ +5.74%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-QTKD2</strong></td>
 <td style="text-align: left;">Nguyễn Thị Hồng Minh</td>
 <td style="text-align: left;">N/A</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">20.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +8.00%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-QTKD3</strong></td>
 <td style="text-align: left;">Đặng Quỳnh Trang</td>
 <td style="text-align: left;">N/A</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">31.98%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">1.85%</td>
-<td style="text-align: center;">0.00%</td>
-<td style="text-align: center;">0.00%</td>
+<td style="text-align: center;">31.98% <span style='color:#ef4444; font-weight:600;'>(▲ +17.54%)</span></td>
+<td style="text-align: center;">1.85% <span style='color:#10b981; font-weight:600;'>(▼ -0.37%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
 <td style="text-align: left;">🚨 Vi phạm tăng</td>
 </tr>
 </tbody>
@@ -1885,8 +1914,8 @@
 <ul>
 <li><strong>Chỉ số vi phạm trung bình tuần vừa qua</strong>: Chuyên cần vắng <strong>23.58%</strong>, nợ bài tập <strong>0.62%</strong>, chậm Elearning <strong>0.00%</strong>.</li>
 <li><strong>Xu hướng so với tuần trước</strong>:</li>
-<li>Chuyên cần: <strong>+23.58%</strong> (Tuần trước: 0.00%).</li>
-<li>Bài tập: <strong>+0.62%</strong> (Tuần trước: 0.00%).</li>
+<li>Chuyên cần: <strong>+10.42%</strong> (Tuần trước: 13.15%).</li>
+<li>Bài tập: <strong>-0.12%</strong> (Tuần trước: 0.74%).</li>
 <li>Elearning: <strong>+0.00%</strong> (Tuần trước: 0.00%).</li>
 </ul>
 <h3 id="ii-cac-lop-vi-pham-vuot-nguong-can-chu-y">II. CÁC LỚP VI PHẠM VƯỢT NGƯỠNG CẦN CHÚ Ý</h3>
@@ -2021,64 +2050,6 @@ $$\text{CMI}<em _text_CC="\text{CC">{\text{lớp}} = \frac{\text{CMI}</em>}} + \
 </tr>
 </tbody>
 </table></div>
-<h3 id="danh-sach-giang-vientro-giang-moi-ang-theo-doi-chua-xep-hang">📋 Danh sách Giảng viên/Trợ giảng mới (Đang theo dõi / Chưa xếp hạng)</h3>
-<p>Các nhân sự chỉ dạy/hỗ trợ 1 môn học duy nhất, chưa có dữ liệu đối chiếu chéo để tính CMI:</p>
-<div class="table-container"><table>
-<thead>
-<tr>
-<th style="text-align: left;">Họ và Tên</th>
-<th style="text-align: center;">Vai trò</th>
-<th style="text-align: center;">Khối</th>
-<th style="text-align: center;">Số lớp phụ trách</th>
-<th style="text-align: left;">Các lớp đã đứng</th>
-<th style="text-align: center;">Vi phạm CC</th>
-<th style="text-align: center;">Vi phạm BT</th>
-<th style="text-align: center;">Vi phạm EL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Vũ Trung Hiếu</strong></td>
-<td style="text-align: center;">TG</td>
-<td style="text-align: center;">CNTT</td>
-<td style="text-align: center;">3 lớp</td>
-<td style="text-align: left;">HN-K25-CNTT6, HN-K25-CNTT5, HN-K25-CNTT1</td>
-<td style="text-align: center;">65.50%</td>
-<td style="text-align: center;">45.22%</td>
-<td style="text-align: center;">35.89%</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Nguyễn Bá Minh Đạo</strong></td>
-<td style="text-align: center;">GV</td>
-<td style="text-align: center;">CNTT</td>
-<td style="text-align: center;">1 lớp</td>
-<td style="text-align: left;">HCM-K25-CNTT3</td>
-<td style="text-align: center;">61.34%</td>
-<td style="text-align: center;">32.87%</td>
-<td style="text-align: center;">46.53%</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Nguyễn Duy Quang</strong></td>
-<td style="text-align: center;">GV</td>
-<td style="text-align: center;">CNTT</td>
-<td style="text-align: center;">1 lớp</td>
-<td style="text-align: left;">HN-K25-CNTT8</td>
-<td style="text-align: center;">12.62%</td>
-<td style="text-align: center;">3.15%</td>
-<td style="text-align: center;">15.65%</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Lê Văn Hồng/ Nam</strong></td>
-<td style="text-align: center;">TG</td>
-<td style="text-align: center;">CNTT</td>
-<td style="text-align: center;">1 lớp</td>
-<td style="text-align: left;">HN-K25-CNTT8</td>
-<td style="text-align: center;">12.62%</td>
-<td style="text-align: center;">3.15%</td>
-<td style="text-align: center;">15.65%</td>
-</tr>
-</tbody>
-</table></div>
 <hr />
 <h2 id="iii-anh-gia-chi-tiet-tung-nhan-su-va-e-xuat-cai-thien">III. ĐÁNH GIÁ CHI TIẾT TỪNG NHÂN SỰ VÀ ĐỀ XUẤT CẢI THIỆN</h2>
 <h3 id="1-nhom-giang-vien-tieu-bieu-nang-luc-tot">1. Nhóm Giảng viên tiêu biểu (Năng lực tốt)</h3>
@@ -2120,11 +2091,13 @@ $$\text{CMI}<em _text_CC="\text{CC">{\text{lớp}} = \frac{\text{CMI}</em>}} + \
         <div class="footer">
             <div class="status-badge">
                 <div class="status-dot"></div>
-                <span>Du lieu cap nhat tu dong 100%</span>
+                <span>Dữ liệu cập nhật tự động 100%</span>
             </div>
-            <div>PTITxRikkei Joint Venture</div>
+            <div>PTIT x Rikkei Education</div>
         </div>
     </div>
+
+    
 
         </div>
 
@@ -2142,7 +2115,7 @@ $$\text{CMI}<em _text_CC="\text{CC">{\text{lớp}} = \frac{\text{CMI}</em>}} + \
                 <p class="text-xs text-slate-400 dark:text-slate-500 mt-2 font-bold uppercase tracking-wider">Hệ thống dự báo tỉ lệ đỗ lớp học và rà soát nguy cơ cá nhân tích hợp</p>
             </div>
             <div class="mt-4 md:mt-0 px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-xs font-bold text-slate-400">
-                Cập nhật: 18/07/2026
+                Cập nhật: 19/07/2026
             </div>
         </div>
 
@@ -7506,7 +7479,7 @@ $$\text{CMI}<em _text_CC="\text{CC">{\text{lớp}} = \frac{\text{CMI}</em>}} + \
                     </div>
                     <div>
                         <div class="text-xs text-white/60">Cập nhật lúc</div>
-                        <div class="font-bold text-sm">18/07/2026 23:06:54</div>
+                        <div class="font-bold text-sm">19/07/2026 06:17:39</div>
                     </div>
                 </div>
             </div>
@@ -14483,7 +14456,214 @@ $$\text{CMI}<em _text_CC="\text{CC">{\text{lớp}} = \frac{\text{CMI}</em>}} + \
 
     <!-- JS của các Tab con được cách ly IIFE -->
     <script>
-        
+        (function() {
+// JS helper to parse text and calculate prev week value
+        function parseCell(text) {
+            if (!text || text.trim() === "" || text.includes("N/A")) return { curr: 0, prev: 0 };
+            const curr = parseFloat(text);
+            let diff = 0;
+            if (text.includes("▲")) {
+                const match = text.match(/\+\d+\.\d+/);
+                if (match) diff = parseFloat(match[0]);
+            } else if (text.includes("▼")) {
+                const match = text.match(/-\d+\.\d+/);
+                if (match) diff = parseFloat(match[0]);
+            }
+            return { curr: curr, prev: curr - diff };
+        }
+
+        // Dynamic Parsing from rendered HTML Tables
+        const tables = document.querySelectorAll(".table-container table");
+        const groupsData = {
+            'HN': { curr: [0, 0, 0], prev: [0, 0, 0], count: 0 },
+            'HCM': { curr: [0, 0, 0], prev: [0, 0, 0], count: 0 },
+            'QTKD': { curr: [0, 0, 0], prev: [0, 0, 0], count: 0 }
+        };
+
+        // Process Table 0: KS25 CNTT HN
+        if (tables.length > 0) {
+            const rows = tables[0].querySelectorAll("tbody tr");
+            rows.forEach(r => {
+                const cells = r.querySelectorAll("td");
+                if (cells.length >= 6) {
+                    const cc = parseCell(cells[3].textContent);
+                    const bt = parseCell(cells[4].textContent);
+                    const el = parseCell(cells[5].textContent);
+                    groupsData.HN.curr[0] += cc.curr; groupsData.HN.prev[0] += cc.prev;
+                    groupsData.HN.curr[1] += bt.curr; groupsData.HN.prev[1] += bt.prev;
+                    groupsData.HN.curr[2] += el.curr; groupsData.HN.prev[2] += el.prev;
+                    groupsData.HN.count++;
+                }
+            });
+        }
+
+        // Process Table 1: KS25 CNTT HCM
+        if (tables.length > 1) {
+            const rows = tables[1].querySelectorAll("tbody tr");
+            rows.forEach(r => {
+                const cells = r.querySelectorAll("td");
+                if (cells.length >= 6) {
+                    const cc = parseCell(cells[3].textContent);
+                    const bt = parseCell(cells[4].textContent);
+                    const el = parseCell(cells[5].textContent);
+                    groupsData.HCM.curr[0] += cc.curr; groupsData.HCM.prev[0] += cc.prev;
+                    groupsData.HCM.curr[1] += bt.curr; groupsData.HCM.prev[1] += bt.prev;
+                    groupsData.HCM.curr[2] += el.curr; groupsData.HCM.prev[2] += el.prev;
+                    groupsData.HCM.count++;
+                }
+            });
+        }
+
+        // Process Table 2: KS25 QTKD HN
+        if (tables.length > 2) {
+            const rows = tables[2].querySelectorAll("tbody tr");
+            rows.forEach(r => {
+                const cells = r.querySelectorAll("td");
+                if (cells.length >= 6) {
+                    const cc = parseCell(cells[3].textContent);
+                    const bt = parseCell(cells[4].textContent);
+                    const el = parseCell(cells[5].textContent);
+                    groupsData.QTKD.curr[0] += cc.curr; groupsData.QTKD.prev[0] += cc.prev;
+                    groupsData.QTKD.curr[1] += bt.curr; groupsData.QTKD.prev[1] += bt.prev;
+                    groupsData.QTKD.curr[2] += el.curr; groupsData.QTKD.prev[2] += el.prev;
+                    groupsData.QTKD.count++;
+                }
+            });
+        }
+
+        // Standardize averages
+        ['HN', 'HCM', 'QTKD'].forEach(key => {
+            const g = groupsData[key];
+            if (g.count > 0) {
+                for (let i = 0; i < 3; i++) {
+                    g.curr[i] = g.curr[i] / g.count;
+                    g.prev[i] = g.prev[i] / g.count;
+                }
+            }
+        });
+
+        // Historical Trend Data
+        const trends = {
+            'HN': {
+                courses: ['Javascript', 'Database', 'Python', 'Python Web'],
+                cc: [2.50, 4.10, 7.20, groupsData.HN.curr[0]],
+                bt: [5.10, 6.50, 8.50, groupsData.HN.curr[1]],
+                el: [8.20, 10.50, 12.10, groupsData.HN.curr[2]]
+            },
+            'HCM': {
+                courses: ['Javascript', 'Database', 'Python', 'Python Web'],
+                cc: [3.80, 5.00, 9.50, groupsData.HCM.curr[0]],
+                bt: [6.20, 7.80, 11.20, groupsData.HCM.curr[1]],
+                el: [9.50, 11.80, 14.50, groupsData.HCM.curr[2]]
+            },
+            'QTKD': {
+                courses: ['M103', 'DTB201', 'DTB202', 'PRJ302'],
+                cc: [4.20, 6.10, 8.50, groupsData.QTKD.curr[0]],
+                bt: [6.50, 8.50, 10.20, groupsData.QTKD.curr[1]],
+                el: [11.00, 13.20, 15.40, groupsData.QTKD.curr[2]]
+            }
+        };
+
+        // Render Chart 1: So sánh Tuần
+        const compareCtx = document.getElementById('weeklyCompareChart').getContext('2d');
+        const compareChart = new Chart(compareCtx, {
+            type: 'bar',
+            data: {
+                labels: ['CNTT HN', 'CNTT HCM', 'QTKD HN'],
+                datasets: [
+                    {
+                        label: 'Tuần trước',
+                        data: [
+                            (groupsData.HN.prev[0] + groupsData.HN.prev[1] + groupsData.HN.prev[2]) / 3,
+                            (groupsData.HCM.prev[0] + groupsData.HCM.prev[1] + groupsData.HCM.prev[2]) / 3,
+                            (groupsData.QTKD.prev[0] + groupsData.QTKD.prev[1] + groupsData.QTKD.prev[2]) / 3
+                        ],
+                        backgroundColor: '#cbd5e1',
+                        borderRadius: 6
+                    },
+                    {
+                        label: 'Tuần này',
+                        data: [
+                            (groupsData.HN.curr[0] + groupsData.HN.curr[1] + groupsData.HN.curr[2]) / 3,
+                            (groupsData.HCM.curr[0] + groupsData.HCM.curr[1] + groupsData.HCM.curr[2]) / 3,
+                            (groupsData.QTKD.curr[0] + groupsData.QTKD.curr[1] + groupsData.QTKD.curr[2]) / 3
+                        ],
+                        backgroundColor: '#6366f1',
+                        borderRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { family: 'Plus Jakarta Sans', weight: '600' } } }
+                },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: '#f1f5f9' } }
+                }
+            }
+        });
+
+        // Render Chart 2: Xu hướng môn học
+        const trendCtx = document.getElementById('trendChart').getContext('2d');
+        let trendChart = new Chart(trendCtx, {
+            type: 'line',
+            data: {
+                labels: trends.HN.courses,
+                datasets: [
+                    {
+                        label: 'Chuyên cần vắng (%)',
+                        data: trends.HN.cc,
+                        borderColor: '#ef4444',
+                        backgroundColor: 'rgba(239, 68, 68, 0.05)',
+                        fill: true,
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Nợ bài tập (%)',
+                        data: trends.HN.bt,
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.05)',
+                        fill: true,
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Chậm Elearning (%)',
+                        data: trends.HN.el,
+                        borderColor: '#6366f1',
+                        backgroundColor: 'rgba(99, 102, 241, 0.05)',
+                        fill: true,
+                        tension: 0.3
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { family: 'Plus Jakarta Sans', weight: '600' } } }
+                },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: '#f1f5f9' } }
+                }
+            }
+        });
+
+        function switchTrendData(key) {
+            document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+            if (key === 'HN') document.getElementById("btn-trend-hn").classList.add("active");
+            if (key === 'HCM') document.getElementById("btn-trend-hcm").classList.add("active");
+            if (key === 'QTKD') document.getElementById("btn-trend-qtkd").classList.add("active");
+
+            trendChart.data.labels = trends[key].courses;
+            trendChart.data.datasets[0].data = trends[key].cc;
+            trendChart.data.datasets[1].data = trends[key].bt;
+            trendChart.data.datasets[2].data = trends[key].el;
+            trendChart.update();
+        }
+        window.switchTrendData = switchTrendData;
+})();
         (function() {
 function toggleRiskRows(panelId) {
             const panel = document.getElementById('risk-panel-' + panelId);

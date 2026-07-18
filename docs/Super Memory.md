@@ -195,4 +195,11 @@ This file acts as the persistent memory for the AI agent working on the training
   * Phát hiện lỗi nghiêm trọng từ phiên làm việc trước: `generate_weekly_report.py` (Báo cáo tuần giao ban của Agent 1) bị trỏ nhầm đường dẫn Excel cũ `docs/PTIT_Chiso.xlsx` thay vì `data/PTIT_Chiso.xlsx` dẫn đến đóng băng dữ liệu Tuần 26 cũ. Đồng thời, bước copy đè báo cáo KPI Agent 5 lên `1_kpi_report.html` đã làm biến mất bảng xếp hạng Top 5 GV/TG của Agent 1 ở Tab 1.
   * Đã sửa `generate_weekly_report.py` tự động phát hiện tuần báo cáo **động** từ ngày lớn nhất có trong Excel (ra tuần 13/07 - 19/07/2026), loại bỏ hoàn toàn khối KS24 (dự án hè), và sử dụng `.format()` thay f-string có chứa tiếng Việt để loại bỏ triệt để lỗi SyntaxError do CP1252 Windows encoding.
   * Tạo script `export_weekly_report_html.py` để kết xuất báo cáo tuần của Agent 1 ra `output/1_kpi_report.html` và cập nhật pipeline `run_pipeline.py` chạy tuần tự, trả Tab 1 về đúng kết quả so sánh tuần và Top 5 GV/TG tốt nhất theo CMI tích lũy.
+- [2026-07-19 06:15] **Tái cấu trúc báo cáo Agent 1 & Tích hợp Chart.js**:
+  * Sửa đổi logic `sheet_prev` trong `generate_weekly_report.py` trỏ về chính `sheet_curr` của các môn hiện hành thay vì môn học cũ đã kết thúc, khắc phục hoàn toàn lỗi chỉ số kỷ luật tuần trước bị trả về 0%.
+  * Cập nhật bảng vi phạm tuần theo định dạng so sánh Delta: chỉ hiển thị dữ liệu tuần này, mở ngoặc tăng/giảm vi phạm (đỏ/xanh) so với tuần trước. Sử dụng thẻ HTML `<span>` màu sắc trực tiếp trong bảng Markdown để hiển thị đẹp mắt trên Obsidian.
+  * Lọc bỏ bảng watchlist giáo viên chỉ dạy 1 lớp ra khỏi file hiển thị báo cáo tĩnh để tối ưu hóa không gian, trong khi dữ liệu vẫn được ghi nhận chạy ngầm cho Agent 5 tính KPI.
+  * Nhúng biểu đồ Mermaid Gantt lộ trình môn học trực tiếp vào Markdown.
+  * Tích hợp Chart.js vào HTML và Master Portal: vẽ biểu đồ Bar Chart so sánh tuần và Line Chart xu hướng môn học. Expose hàm `switchTrendData` ra đối tượng global `window` để tránh lỗi IIFE isolation scope khi nhúng vào Master Portal.
+
 

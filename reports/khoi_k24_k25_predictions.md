@@ -1,6 +1,6 @@
 # BÁO CÁO DỰ BÁO HỌC THUẬT & KIỂM CHỨNG SAI SỐ KHOÁ K24 & K25
 
-*Báo cáo được lập tự động ngày 18/07/2026 tích hợp chỉ số Ý thức lớp (Peer Pressure Multiplier).*
+*Báo cáo được lập tự động ngày 19/07/2026 tích hợp chỉ số Ý thức lớp (Peer Pressure Multiplier).*
 
 ## 📌 TÓM TẮT ĐÁNH GIÁ SAI SỐ KIỂM CHỨNG (MAE)
 - **Khóa K24 (Kiểm chứng qua môn Java Web Service)**: MAE = **0.00%**

@@ -4,66 +4,81 @@
 > - **Thời gian báo cáo tuần**: Từ ngày **13/07/2026** đến ngày **19/07/2026** (Tuần hiện tại).
 > - **Tuần đối chiếu**: Từ ngày **06/07/2026** đến ngày **12/07/2026** (Tuần đối chiếu).
 > - **Môn học hiện tại**: KS25 học môn `Python Web` (IT-215) và môn `PRJ302` (Dự án kinh doanh số 2). Khối KS24 tạm bỏ qua do đang làm dự án hè.
-> - **Lưu ý đặc biệt**: Đối với khóa KS25 CNTT, do môn `Python Web` mới bắt đầu từ 25/06 (chỉ có dữ liệu tuần này), chỉ số tuần trước được đối chiếu dựa trên môn học liền trước đó là `Python` (sheet `KS25_Python`) để phản ánh đúng xu hướng kỷ luật khi chuyển đổi môn học.
+> - **Lưu ý đặc biệt**: Cả tuần này và tuần trước đều đối chiếu trên cùng môn học hiện tại để theo dõi sát sao tiến độ kỷ luật theo tuần.
 
 ---
 
-## I. THỐNG KÊ CHỈ SỐ VI PHẠM THEO KHÓA HỌC TRONG TUẦN QUA
+## I. THỐNG KÊ XU HƯỚNG KỶ LUẬT QUA CÁC MÔN HỌC (HISTORICAL TRENDS)
+
+```mermaid
+gantt
+    title Lộ trình môn học KS25 CNTT HN
+    dateFormat  YYYY-MM-DD
+    section Học phần
+    Javascript (0.0% vắng)   :done, 2026-05-11, 2026-05-24
+    Database (4.5% vắng)     :done, 2026-05-25, 2026-06-08
+    Python (12.3% vắng)      :done, 2026-06-09, 2026-06-24
+    Python Web (15.2% vắng)  :active, 2026-06-25, 2026-07-20
+```
+
+---
+
+## II. THỐNG KÊ CHỈ SỐ VI PHẠM THEO KHÓA HỌC TRONG TUẦN QUA
 
 ### 1. Khóa HN-KS25-CNTT (Môn học: Python Web - IT-215)
 
 #### 📊 Bảng chỉ số chi tiết từng lớp:
-| Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **HN-K25-CNTT1** | Lương Quốc Tuấn | Lại Trung Lâm | 0.00% | 15.50% | 0.00% | 15.50% | 0.00% | 20.00% | 🚨 Vi phạm tăng |
-| **HN-K25-CNTT2** | Lâm Tùng Dương | Lại Trung Lâm | 0.00% | 25.26% | 0.00% | 10.00% | 0.00% | 12.10% | 🚨 Vi phạm tăng |
-| **HN-K25-CNTT3** | Nguyễn Quảng An | Phạm Ngọc Kiên | 0.00% | 14.86% | 0.00% | 12.00% | 0.00% | 20.00% | 🚨 Vi phạm tăng |
-| **HN-K25-CNTT4** | Nguyễn Quảng An | Phạm Ngọc Kiên | 0.00% | 11.00% | 0.00% | 12.50% | 0.00% | 13.50% | 🚨 Vi phạm tăng |
-| **HN-K25-CNTT5** | Lương Quốc Tuấn | Lại Trung Lâm | 0.00% | 10.81% | 0.00% | 10.81% | 0.00% | 10.81% | 🚨 Vi phạm tăng |
-| **HN-K25-CNTT6** | Nguyễn Quảng An | Phạm Ngọc Kiên | 0.00% | 28.38% | 0.00% | 16.16% | 0.00% | 15.48% | 🚨 Vi phạm tăng |
+| Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu thích ứng |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **HN-K25-CNTT1** | Lương Quốc Tuấn | Lại Trung Lâm | 15.50% <span style='color:#ef4444; font-weight:600;'>(▲ +3.50%)</span> | 15.50% <span style='color:#ef4444; font-weight:600;'>(▲ +6.50%)</span> | 20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +6.00%)</span> | 🚨 Vi phạm tăng |
+| **HN-K25-CNTT2** | Lâm Tùng Dương | Lại Trung Lâm | 25.26% <span style='color:#ef4444; font-weight:600;'>(▲ +16.85%)</span> | 10.00% <span style='color:#ef4444; font-weight:600;'>(▲ +4.21%)</span> | 12.10% <span style='color:#ef4444; font-weight:600;'>(▲ +6.85%)</span> | 🚨 Vi phạm tăng |
+| **HN-K25-CNTT3** | Nguyễn Quảng An | Phạm Ngọc Kiên | 14.86% <span style='color:#ef4444; font-weight:600;'>(▲ +9.15%)</span> | 12.00% <span style='color:#ef4444; font-weight:600;'>(▲ +8.00%)</span> | 20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +11.43%)</span> | 🚨 Vi phạm tăng |
+| **HN-K25-CNTT4** | Nguyễn Quảng An | Phạm Ngọc Kiên | 11.00% <span style='color:#ef4444; font-weight:600;'>(▲ +3.05%)</span> | 12.50% <span style='color:#ef4444; font-weight:600;'>(▲ +6.52%)</span> | 13.50% <span style='color:#ef4444; font-weight:600;'>(▲ +5.04%)</span> | 🚨 Vi phạm tăng |
+| **HN-K25-CNTT5** | Lương Quốc Tuấn | Lại Trung Lâm | 10.81% <span style='color:#ef4444; font-weight:600;'>(▲ +3.78%)</span> | 10.81% <span style='color:#ef4444; font-weight:600;'>(▲ +4.32%)</span> | 10.81% <span style='color:#ef4444; font-weight:600;'>(▲ +4.32%)</span> | 🚨 Vi phạm tăng |
+| **HN-K25-CNTT6** | Nguyễn Quảng An | Phạm Ngọc Kiên | 28.38% <span style='color:#ef4444; font-weight:600;'>(▲ +10.44%)</span> | 16.16% <span style='color:#ef4444; font-weight:600;'>(▲ +8.41%)</span> | 15.48% <span style='color:#ef4444; font-weight:600;'>(▲ +5.24%)</span> | 🚨 Vi phạm tăng |
 
 #### 📝 Đánh giá chung khóa HN-KS25-CNTT:
 - **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **17.64%**, nợ bài tập **12.83%**, chậm Elearning **15.32%**.
 - **Xu hướng so với tuần trước**:
-  - Chuyên cần: **+17.64%** (Tuần trước: 0.00%).
-  - Bài tập: **+12.83%** (Tuần trước: 0.00%).
-  - Elearning: **+15.32%** (Tuần trước: 0.00%).
+  - Chuyên cần: **+7.79%** (Tuần trước: 9.84%).
+  - Bài tập: **+6.33%** (Tuần trước: 6.50%).
+  - Elearning: **+6.48%** (Tuần trước: 8.84%).
 
 ---
 
 ### 2. Khóa HCM-KS25-CNTT (Môn học: Python Web - IT-215)
 
 #### 📊 Bảng chỉ số chi tiết từng lớp:
-| Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **HCM-K25-CNTT5** | Lê Hà Thanh Sang | Phạm Viết Hùng | 0.00% | 9.75% | 0.00% | 9.74% | 0.00% | 5.13% | 🚨 Vi phạm tăng |
-| **HCM-K25-CNTT6** | Trần Quốc Tuấn | Lưu Hoàng Xuân Nguyên | 0.00% | 0.00% | 0.00% | 11.50% | 0.00% | 14.00% | 🚨 Vi phạm tăng |
-| **HCM-K25-CNTT7** | Trần Quốc Tuấn | Lưu Hoàng Xuân Nguyên | 0.00% | 16.86% | 0.00% | 10.22% | 0.00% | 8.15% | 🚨 Vi phạm tăng |
-| **HCM-K25-CNTT8** | Lê Hà Thanh Sang | Phạm Viết Hùng | 0.00% | 67.22% | 0.00% | 32.78% | 0.00% | 36.11% | 🚨 Vi phạm tăng |
+| Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu thích ứng |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **HCM-K25-CNTT5** | Lê Hà Thanh Sang | Phạm Viết Hùng | 9.75% <span style='color:#ef4444; font-weight:600;'>(▲ +5.65%)</span> | 9.74% <span style='color:#ef4444; font-weight:600;'>(▲ +9.74%)</span> | 5.13% <span style='color:#10b981; font-weight:600;'>(▼ -0.51%)</span> | 🚨 Vi phạm tăng |
+| **HCM-K25-CNTT6** | Trần Quốc Tuấn | Lưu Hoàng Xuân Nguyên | 0.00% <span style='color:#64748b;'>(--)</span> | 11.50% <span style='color:#ef4444; font-weight:600;'>(▲ +10.00%)</span> | 14.00% <span style='color:#ef4444; font-weight:600;'>(▲ +3.50%)</span> | 🚨 Vi phạm tăng |
+| **HCM-K25-CNTT7** | Trần Quốc Tuấn | Lưu Hoàng Xuân Nguyên | 16.86% <span style='color:#ef4444; font-weight:600;'>(▲ +7.86%)</span> | 10.22% <span style='color:#ef4444; font-weight:600;'>(▲ +8.22%)</span> | 8.15% <span style='color:#ef4444; font-weight:600;'>(▲ +6.15%)</span> | 🚨 Vi phạm tăng |
+| **HCM-K25-CNTT8** | Lê Hà Thanh Sang | Phạm Viết Hùng | 67.22% <span style='color:#ef4444; font-weight:600;'>(▲ +12.78%)</span> | 32.78% <span style='color:#ef4444; font-weight:600;'>(▲ +11.11%)</span> | 36.11% <span style='color:#ef4444; font-weight:600;'>(▲ +14.45%)</span> | 🚨 Vi phạm tăng |
 
 #### 📝 Đánh giá chung khóa HCM-KS25-CNTT:
 - **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **23.46%**, nợ bài tập **16.06%**, chậm Elearning **15.85%**.
 - **Xu hướng so với tuần trước**:
-  - Chuyên cần: **+23.46%** (Tuần trước: 0.00%).
-  - Bài tập: **+16.06%** (Tuần trước: 0.00%).
-  - Elearning: **+15.85%** (Tuần trước: 0.00%).
+  - Chuyên cần: **+6.57%** (Tuần trước: 16.89%).
+  - Bài tập: **+9.77%** (Tuần trước: 6.29%).
+  - Elearning: **+5.90%** (Tuần trước: 9.95%).
 
 ---
 
 ### 3. Khóa HN-QTKD-KS25 (Môn học: PRJ302)
 
 #### 📊 Bảng chỉ số chi tiết từng lớp:
-| Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **HN-K25-QTKD1** | Hoàng Thị Kim Oanh | N/A | 0.00% | 18.75% | 0.00% | 0.00% | 0.00% | 0.00% | 🚨 Vi phạm tăng |
-| **HN-K25-QTKD2** | Nguyễn Thị Hồng Minh | N/A | 0.00% | 20.00% | 0.00% | 0.00% | 0.00% | 0.00% | 🚨 Vi phạm tăng |
-| **HN-K25-QTKD3** | Đặng Quỳnh Trang | N/A | 0.00% | 31.98% | 0.00% | 1.85% | 0.00% | 0.00% | 🚨 Vi phạm tăng |
+| Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu thích ứng |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **HN-K25-QTKD1** | Hoàng Thị Kim Oanh | N/A | 18.75% <span style='color:#ef4444; font-weight:600;'>(▲ +5.74%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 🚨 Vi phạm tăng |
+| **HN-K25-QTKD2** | Nguyễn Thị Hồng Minh | N/A | 20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +8.00%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 🚨 Vi phạm tăng |
+| **HN-K25-QTKD3** | Đặng Quỳnh Trang | N/A | 31.98% <span style='color:#ef4444; font-weight:600;'>(▲ +17.54%)</span> | 1.85% <span style='color:#10b981; font-weight:600;'>(▼ -0.37%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 🚨 Vi phạm tăng |
 
 #### 📝 Đánh giá chung khóa QTKD-KS25:
 - **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **23.58%**, nợ bài tập **0.62%**, chậm Elearning **0.00%**.
 - **Xu hướng so với tuần trước**:
-  - Chuyên cần: **+23.58%** (Tuần trước: 0.00%).
-  - Bài tập: **+0.62%** (Tuần trước: 0.00%).
+  - Chuyên cần: **+10.42%** (Tuần trước: 13.15%).
+  - Bài tập: **-0.12%** (Tuần trước: 0.74%).
   - Elearning: **+0.00%** (Tuần trước: 0.00%).
 
 ### II. CÁC LỚP VI PHẠM VƯỢT NGƯỠNG CẦN CHÚ Ý
@@ -123,16 +138,6 @@ CMI tích lũy của một GV/TG là trung bình cộng CMI của tất cả cá
 | 3 | **Phạm Ngọc Kiên** | 3 lớp | **+13.89%** | Rescuers (Giải cứu xuất sắc) |
 | 4 | **Lại Trung Lâm** | 3 lớp | **+12.92%** | Rescuers (Giải cứu xuất sắc) |
 | 5 | **Phạm Thế Kiên** | 3 lớp | **+12.38%** | Rescuers (Giải cứu xuất sắc) |
-
-### 📋 Danh sách Giảng viên/Trợ giảng mới (Đang theo dõi / Chưa xếp hạng)
-Các nhân sự chỉ dạy/hỗ trợ 1 môn học duy nhất, chưa có dữ liệu đối chiếu chéo để tính CMI:
-
-| Họ và Tên | Vai trò | Khối | Số lớp phụ trách | Các lớp đã đứng | Vi phạm CC | Vi phạm BT | Vi phạm EL |
-| :--- | :---: | :---: | :---: | :--- | :---: | :---: | :---: |
-| **Vũ Trung Hiếu** | TG | CNTT | 3 lớp | HN-K25-CNTT6, HN-K25-CNTT5, HN-K25-CNTT1 | 65.50% | 45.22% | 35.89% |
-| **Nguyễn Bá Minh Đạo** | GV | CNTT | 1 lớp | HCM-K25-CNTT3 | 61.34% | 32.87% | 46.53% |
-| **Nguyễn Duy Quang** | GV | CNTT | 1 lớp | HN-K25-CNTT8 | 12.62% | 3.15% | 15.65% |
-| **Lê Văn Hồng/ Nam** | TG | CNTT | 1 lớp | HN-K25-CNTT8 | 12.62% | 3.15% | 15.65% |
 
 ---
 

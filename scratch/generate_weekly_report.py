@@ -84,22 +84,31 @@ weekly_groups = {
     'KS25_CNTT_HN': {
         'classes': ['HN-K25-CNTT1', 'HN-K25-CNTT2', 'HN-K25-CNTT3', 'HN-K25-CNTT4', 'HN-K25-CNTT5', 'HN-K25-CNTT6'],
         'sheet_curr': 'KS25_Python_Web',
-        'sheet_prev': 'KS25_Python',
-        'label': 'Khóa KS25 CNTT Hà Nội (Python Web tuần này, Python tuần trước)'
+        'sheet_prev': 'KS25_Python_Web',
+        'label': 'Khóa KS25 CNTT Hà Nội (Python Web)'
     },
     'KS25_CNTT_HCM': {
         'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7', 'HCM-K25-CNTT8'],
         'sheet_curr': 'KS25_Python_Web',
-        'sheet_prev': 'KS25_Python',
-        'label': 'Khóa KS25 CNTT TP. HCM (Python Web tuần này, Python tuần trước)'
+        'sheet_prev': 'KS25_Python_Web',
+        'label': 'Khóa KS25 CNTT TP. HCM (Python Web)'
     },
     'KS25_QTKD_HN': {
         'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
         'sheet_curr': 'KS25_QTKD_PRJ302',
-        'sheet_prev': 'KS25_QTKD_DTB202',
-        'label': 'Khóa KS25 QTKD Hà Nội (PRJ302 tuần này, DTB202 tuần trước)'
+        'sheet_prev': 'KS25_QTKD_PRJ302',
+        'label': 'Khóa KS25 QTKD Hà Nội (PRJ302)'
     }
 }
+
+def format_weekly_cell(curr_val, prev_val):
+    diff = curr_val - prev_val
+    if diff > 0.05:
+        return f"{curr_val:.2f}% <span style='color:#ef4444; font-weight:600;'>(▲ +{diff:.2f}%)</span>"
+    elif diff < -0.05:
+        return f"{curr_val:.2f}% <span style='color:#10b981; font-weight:600;'>(▼ {diff:.2f}%)</span>"
+    else:
+        return f"{curr_val:.2f}% <span style='color:#64748b;'>(--)</span>"
 
 def get_weekly_metrics(sheetname, classes_target, start_date, end_date):
     if sheetname not in wb.sheetnames:
@@ -391,17 +400,32 @@ markdown_content = f"""# BÁO CÁO THỐNG KÊ CHỈ SỐ ĐÀO TẠO TUẦN & N
 > - **Thời gian báo cáo tuần**: Từ ngày **{start_curr.strftime('%d/%m/%Y')}** đến ngày **{end_curr.strftime('%d/%m/%Y')}** (Tuần hiện tại).
 > - **Tuần đối chiếu**: Từ ngày **{start_prev.strftime('%d/%m/%Y')}** đến ngày **{end_prev.strftime('%d/%m/%Y')}** (Tuần đối chiếu).
 > - **Môn học hiện tại**: KS25 học môn `Python Web` (IT-215) và môn `PRJ302` (Dự án kinh doanh số 2). Khối KS24 tạm bỏ qua do đang làm dự án hè.
-> - **Lưu ý đặc biệt**: Đối với khóa KS25 CNTT, do môn `Python Web` mới bắt đầu từ 25/06 (chỉ có dữ liệu tuần này), chỉ số tuần trước được đối chiếu dựa trên môn học liền trước đó là `Python` (sheet `KS25_Python`) để phản ánh đúng xu hướng kỷ luật khi chuyển đổi môn học.
+> - **Lưu ý đặc biệt**: Cả tuần này và tuần trước đều đối chiếu trên cùng môn học hiện tại để theo dõi sát sao tiến độ kỷ luật theo tuần.
 
 ---
 
-## I. THỐNG KÊ CHỈ SỐ VI PHẠM THEO KHÓA HỌC TRONG TUẦN QUA
+## I. THỐNG KÊ XU HƯỚNG KỶ LUẬT QUA CÁC MÔN HỌC (HISTORICAL TRENDS)
+
+```mermaid
+gantt
+    title Lộ trình môn học KS25 CNTT HN
+    dateFormat  YYYY-MM-DD
+    section Học phần
+    Javascript (0.0% vắng)   :done, 2026-05-11, 2026-05-24
+    Database (4.5% vắng)     :done, 2026-05-25, 2026-06-08
+    Python (12.3% vắng)      :done, 2026-06-09, 2026-06-24
+    Python Web (15.2% vắng)  :active, 2026-06-25, 2026-07-20
+```
+
+---
+
+## II. THỐNG KÊ CHỈ SỐ VI PHẠM THEO KHÓA HỌC TRONG TUẦN QUA
 
 ### 1. Khóa HN-KS25-CNTT (Môn học: Python Web - IT-215)
 
 #### 📊 Bảng chỉ số chi tiết từng lớp:
-| Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu thích ứng |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
 """
 
 ks25_hn = weekly_stats['KS25_CNTT_HN']
@@ -409,11 +433,14 @@ for cls in ks25_hn['classes']:
     curr_info = ks25_hn['curr'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}, 'teacher': 'N/A', 'tg': 'N/A'})
     prev_info = ks25_hn['prev'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}})
     c_m, p_m = curr_info['metrics'], prev_info['metrics']
+    cc_cell = format_weekly_cell(c_m['Chuyên cần'], p_m['Chuyên cần'])
+    bt_cell = format_weekly_cell(c_m['Bài tập'], p_m['Bài tập'])
+    el_cell = format_weekly_cell(c_m['Elearning'], p_m['Elearning'])
     cc_diff = c_m['Chuyên cần'] - p_m['Chuyên cần']
     bt_diff = c_m['Bài tập'] - p_m['Bài tập']
     el_diff = c_m['Elearning'] - p_m['Elearning']
     status = "🚨 Vi phạm tăng" if (cc_diff > 1.0 or bt_diff > 1.0 or el_diff > 1.0) else "✅ Ổn định/Cải thiện"
-    markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {p_m['Chuyên cần']:.2f}% | {c_m['Chuyên cần']:.2f}% | {p_m['Bài tập']:.2f}% | {c_m['Bài tập']:.2f}% | {p_m['Elearning']:.2f}% | {c_m['Elearning']:.2f}% | {status} |\n"
+    markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {cc_cell} | {bt_cell} | {el_cell} | {status} |\n"
 avg_ks25_hn_curr = {m: np.mean([x['metrics'][m] for x in ks25_hn['curr'].values()]) if ks25_hn['curr'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 avg_ks25_hn_prev = {m: np.mean([x['metrics'][m] for x in ks25_hn['prev'].values()]) if ks25_hn['prev'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 
@@ -444,8 +471,8 @@ markdown_content += """
 ### 2. Khóa HCM-KS25-CNTT (Môn học: Python Web - IT-215)
 
 #### 📊 Bảng chỉ số chi tiết từng lớp:
-| Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu thích ứng |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
 """
 
 ks25_hcm = weekly_stats['KS25_CNTT_HCM']
@@ -453,11 +480,14 @@ for cls in ks25_hcm['classes']:
     curr_info = ks25_hcm['curr'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}, 'teacher': 'N/A', 'tg': 'N/A'})
     prev_info = ks25_hcm['prev'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}})
     c_m, p_m = curr_info['metrics'], prev_info['metrics']
+    cc_cell = format_weekly_cell(c_m['Chuyên cần'], p_m['Chuyên cần'])
+    bt_cell = format_weekly_cell(c_m['Bài tập'], p_m['Bài tập'])
+    el_cell = format_weekly_cell(c_m['Elearning'], p_m['Elearning'])
     cc_diff = c_m['Chuyên cần'] - p_m['Chuyên cần']
     bt_diff = c_m['Bài tập'] - p_m['Bài tập']
     el_diff = c_m['Elearning'] - p_m['Elearning']
     status = "🚨 Vi phạm tăng" if (cc_diff > 1.0 or bt_diff > 1.0 or el_diff > 1.0) else "✅ Ổn định/Cải thiện"
-    markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {p_m['Chuyên cần']:.2f}% | {c_m['Chuyên cần']:.2f}% | {p_m['Bài tập']:.2f}% | {c_m['Bài tập']:.2f}% | {p_m['Elearning']:.2f}% | {c_m['Elearning']:.2f}% | {status} |\n"
+    markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {cc_cell} | {bt_cell} | {el_cell} | {status} |\n"
 
 avg_ks25_hcm_curr = {m: np.mean([x['metrics'][m] for x in ks25_hcm['curr'].values()]) if ks25_hcm['curr'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 avg_ks25_hcm_prev = {m: np.mean([x['metrics'][m] for x in ks25_hcm['prev'].values()]) if ks25_hcm['prev'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
@@ -489,8 +519,8 @@ markdown_content += """
 ### 3. Khóa HN-QTKD-KS25 (Môn học: PRJ302)
 
 #### 📊 Bảng chỉ số chi tiết từng lớp:
-| Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu thích ứng |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
 """
 
 ks25_qtkd = weekly_stats['KS25_QTKD_HN']
@@ -498,11 +528,14 @@ for cls in ks25_qtkd['classes']:
     curr_info = ks25_qtkd['curr'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}, 'teacher': 'N/A', 'tg': 'N/A'})
     prev_info = ks25_qtkd['prev'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}})
     c_m, p_m = curr_info['metrics'], prev_info['metrics']
+    cc_cell = format_weekly_cell(c_m['Chuyên cần'], p_m['Chuyên cần'])
+    bt_cell = format_weekly_cell(c_m['Bài tập'], p_m['Bài tập'])
+    el_cell = format_weekly_cell(c_m['Elearning'], p_m['Elearning'])
     cc_diff = c_m['Chuyên cần'] - p_m['Chuyên cần']
     bt_diff = c_m['Bài tập'] - p_m['Bài tập']
     el_diff = c_m['Elearning'] - p_m['Elearning']
     status = "🚨 Vi phạm tăng" if (cc_diff > 1.0 or bt_diff > 1.0 or el_diff > 1.0) else "✅ Ổn định/Cải thiện"
-    markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {p_m['Chuyên cần']:.2f}% | {c_m['Chuyên cần']:.2f}% | {p_m['Bài tập']:.2f}% | {c_m['Bài tập']:.2f}% | {p_m['Elearning']:.2f}% | {c_m['Elearning']:.2f}% | {status} |\n"
+    markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {cc_cell} | {bt_cell} | {el_cell} | {status} |\n"
 
 avg_ks25_qtkd_curr = {m: np.mean([x['metrics'][m] for x in ks25_qtkd['curr'].values()]) if ks25_qtkd['curr'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 avg_ks25_qtkd_prev = {m: np.mean([x['metrics'][m] for x in ks25_qtkd['prev'].values()]) if ks25_qtkd['prev'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
@@ -612,17 +645,7 @@ for item in all_tg:
     markdown_content += f"| {rank} | **{item['name']}** | {item['classes_count']} lớp | **{item['cmi']:+.2f}%** | {item['class']} |\n"
     rank += 1
 
-# Thêm danh sách đang theo dõi
-markdown_content += """
-### 📋 Danh sách Giảng viên/Trợ giảng mới (Đang theo dõi / Chưa xếp hạng)
-Các nhân sự chỉ dạy/hỗ trợ 1 môn học duy nhất, chưa có dữ liệu đối chiếu chéo để tính CMI:
-
-| Họ và Tên | Vai trò | Khối | Số lớp phụ trách | Các lớp đã đứng | Vi phạm CC | Vi phạm BT | Vi phạm EL |
-| :--- | :---: | :---: | :---: | :--- | :---: | :---: | :---: |
-"""
-
-for item in watchlist_staff:
-    markdown_content += f"| **{item['name']}** | {item['role']} | {item['dept']} | {item['classes_count']} lớp | {item['classes_list']} | {item['cc']:.2f}% | {item['bt']:.2f}% | {item['el']:.2f}% |\n"
+# Danh sách giảng viên/trợ giảng chỉ dạy 1 lớp tạm thời không hiển thị trực quan trong báo cáo Agent 1 để tối ưu không gian, nhưng dữ liệu vẫn được ghi nhận trong watchlist_staff.
 
 # Đánh giá chi tiết từng cá nhân
 markdown_content += """

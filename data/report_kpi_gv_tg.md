@@ -24,7 +24,7 @@
 | **Lê Hà Thanh Sang** | GV | [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]] | 84.3 | 83.7 | 87.7 | **85.15** |
 | **Lâm Tùng Dương** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(38) (KS25_Python_Web)]] | 88.0 | 60.7 | 95.0 | **81.91** |
 | **Trịnh Quốc Hai** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]] | 80.1 | 90.3 | 74.4 | **81.47** |
-| **Nguyễn Quảng An** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]] | 80.3 | 56.8 | 89.8 | **76.13** |
+| **Nguyễn Quảng An** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]] | 80.3 | 56.8 | 89.8 | **76.13** |
 | **Lương Quốc Tuấn** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]] | 80.8 | 57.1 | 77.2 | **72.61** |
 
 ### 1.2. Khối QTKD
@@ -224,7 +224,7 @@
   - Phải rà soát kỹ điểm thi sau khi đẩy lên hệ thống QLDT; hướng dẫn kỹ sinh viên cách chia file và hạn chế lạm dụng AI khi làm Project. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Nguyễn Quảng An
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]]
 - **Điểm KPI tổng**: **76.13** (Kỷ luật: 80.3, Học tập: 56.8, Báo cáo ngày: 89.8)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
