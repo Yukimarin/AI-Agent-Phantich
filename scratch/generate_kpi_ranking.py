@@ -168,14 +168,23 @@ if os.path.exists(PRED_JSON_PATH):
 else:
     print(f"File not found: {PRED_JSON_PATH}")
 
+# Load operational violations
+violations_data = []
+violation_path = "data/vi_pham_gvtg.json"
+if os.path.exists(violation_path):
+    try:
+        with open(violation_path, "r", encoding="utf-8") as f:
+            violations_data = json.load(f)
+        print(f"Loaded {len(violations_data)} operational violations.")
+    except Exception as e:
+        print(f"Error loading violations json: {e}")
+
 # 3. READ EXCEL DATA (PTIT_Chiso.xlsx)
 print("2. Đang đọc dữ liệu chỉ số đào tạo sinh viên từ Excel...")
 wb = openpyxl.load_workbook(EXCEL_PATH, data_only=True)
 
 target_sheets = [
-    'KS24-JavaAdvance', 'KS24_JavaWeb', 'KS24_JWS', 'KS24_AI',
-    'KS25_Javascript', 'KS25_Database', 'KS25_Python', 'KS25_Python_Web',
-    'KS25_QTKD_M103', 'KS25_QTKD_M104', 'KS25_QTKD_DTB201', 'KS25_QTKD_DTB202',
+    'KS25_Python_Web',
     'KS25_QTKD_PRJ302'
 ]
 
@@ -260,12 +269,12 @@ for sheetname in target_sheets:
                 elif sub == 'Bài tập': bt_t.append(val_float)
                 elif sub == 'Elearning': el_t.append(val_float)
 
-            # For TA
-            if is_ta_valid and isinstance(val_ta, (int, float)):
-                val_float_ta = float(val_ta)
-                if sub == 'Chuyên cần': cc_ta.append(val_float_ta)
-                elif sub == 'Bài tập': bt_ta.append(val_float_ta)
-                elif sub == 'Elearning': el_ta.append(val_float_ta)
+            # For TA (take class metrics from teacher row r to prevent blank cell bias)
+            if is_ta_valid and isinstance(val_t, (int, float)):
+                val_float_t = float(val_t)
+                if sub == 'Chuyên cần': cc_ta.append(val_float_t)
+                elif sub == 'Bài tập': bt_ta.append(val_float_t)
+                elif sub == 'Elearning': el_ta.append(val_float_t)
 
         # Accumulate
         if is_teacher_valid:
@@ -288,39 +297,52 @@ print(f"Finished reading Excel. Found data for {len(excel_instructor_metrics)} w
 # 4. CALCULATE KPI & CLASSIFICATION
 print("3. Đang tính toán điểm KPI theo tiêu chuẩn mới...")
 
-# Define standard weights based on Rank category
+# Define standard weights based on Rank category (V2 Updated Standard)
 WEIGHTS = {
     'TA': { # Rank 1-2
-        'tuanchu': 0.10, 'kyluat': 0.05, 'hoclieu': 0.05,
-        'siso': 0.10, 'dondoc': 0.10, 'phoihop': 0.05,
-        'giaiquyet': 0.10, 'daura': 0.10, 'phattrien': 0.05,
-        'truyendat_dugio': 0.05, 'truyendat_uprank': 0.15,
-        'csat': 0.05, 'hoclieu_duyet': 0.05,
+        'tuanchu': 0.10, 'kyluat': 0.10, 'hoclieu': 0.10, 'phoihop': 0.05,
+        'siso': 0.15, 'el': 0.10, 'bt': 0.05,
+        'giaiquyet': 0.05, 'pass_rate': 0.05, 'kha_gioi': 0.05,
+        'cc_cn': 0.02, 'bang_cap': 0.03,
+        'truyendat_dugio': 0.0, 'truyendat_uprank': 0.0,
+        'csat': 0.05, 'hoclieu_duyet': 0.10,
         'toiuu_ct': 0.0, 'hieusuat_duoi': 0.0, 'thuonghieu': 0.0, 'sangkien': 0.0
     },
     'GV': { # Rank 3-4
-        'tuanchu': 0.05, 'kyluat': 0.05, 'hoclieu': 0.05,
-        'siso': 0.10, 'dondoc': 0.10, 'phoihop': 0.05,
-        'giaiquyet': 0.10, 'daura': 0.10, 'phattrien': 0.05,
-        'truyendat_dugio': 0.10, 'truyendat_uprank': 0.15,
+        'tuanchu': 0.10, 'kyluat': 0.05, 'hoclieu': 0.05, 'phoihop': 0.05,
+        'siso': 0.10, 'el': 0.05, 'bt': 0.05,
+        'giaiquyet': 0.10, 'pass_rate': 0.05, 'kha_gioi': 0.05,
+        'cc_cn': 0.02, 'bang_cap': 0.03,
+        'truyendat_dugio': 0.10, 'truyendat_uprank': 0.10,
         'csat': 0.05, 'hoclieu_duyet': 0.05,
         'toiuu_ct': 0.0, 'hieusuat_duoi': 0.0, 'thuonghieu': 0.0, 'sangkien': 0.0
     },
-    'PM': { # Rank 5-6 (Subject/Program Manager)
-        'tuanchu': 0.05, 'kyluat': 0.02, 'hoclieu': 0.03,
-        'siso': 0.05, 'dondoc': 0.05, 'phoihop': 0.05,
-        'giaiquyet': 0.10, 'daura': 0.05, 'phattrien': 0.05,
+    'QL': { # Rank 5-6 (Quản lý)
+        'tuanchu': 0.05, 'kyluat': 0.02, 'hoclieu': 0.03, 'phoihop': 0.05,
+        'siso': 0.05, 'el': 0.03, 'bt': 0.02,
+        'giaiquyet': 0.10, 'pass_rate': 0.03, 'kha_gioi': 0.02,
+        'cc_cn': 0.02, 'bang_cap': 0.03,
         'truyendat_dugio': 0.02, 'truyendat_uprank': 0.05,
         'csat': 0.05, 'hoclieu_duyet': 0.03,
-        'toiuu_ct': 0.10, 'hieusuat_duoi': 0.15, 'thuonghieu': 0.05, 'sangkien': 0.10
+        'toiuu_ct': 0.15, 'hieusuat_duoi': 0.10, 'thuonghieu': 0.10, 'sangkien': 0.05
     },
-    'Lead': { # Rank 7-8 (Lãnh đạo khối / GĐ Đào tạo)
-        'tuanchu': 0.02, 'kyluat': 0.01, 'hoclieu': 0.02,
-        'siso': 0.02, 'dondoc': 0.02, 'phoihop': 0.01,
-        'giaiquyet': 0.05, 'daura': 0.03, 'phattrien': 0.02,
+    'TH': { # Rank 5-6 (GV Thương hiệu)
+        'tuanchu': 0.05, 'kyluat': 0.05, 'hoclieu': 0.03, 'phoihop': 0.02,
+        'siso': 0.05, 'el': 0.03, 'bt': 0.02,
+        'giaiquyet': 0.10, 'pass_rate': 0.05, 'kha_gioi': 0.05,
+        'cc_cn': 0.02, 'bang_cap': 0.03,
+        'truyendat_dugio': 0.10, 'truyendat_uprank': 0.10,
+        'csat': 0.05, 'hoclieu_duyet': 0.05,
+        'toiuu_ct': 0.20, 'hieusuat_duoi': 0.0, 'thuonghieu': 0.10, 'sangkien': 0.0
+    },
+    'Lead': { # Rank 7-8
+        'tuanchu': 0.02, 'kyluat': 0.01, 'hoclieu': 0.02, 'phoihop': 0.01,
+        'siso': 0.02, 'el': 0.01, 'bt': 0.01,
+        'giaiquyet': 0.05, 'pass_rate': 0.02, 'kha_gioi': 0.01,
+        'cc_cn': 0.01, 'bang_cap': 0.01,
         'truyendat_dugio': 0.0, 'truyendat_uprank': 0.05,
         'csat': 0.03, 'hoclieu_duyet': 0.02,
-        'toiuu_ct': 0.15, 'hieusuat_duoi': 0.20, 'thuonghieu': 0.10, 'sangkien': 0.25
+        'toiuu_ct': 0.10, 'hieusuat_duoi': 0.25, 'thuonghieu': 0.15, 'sangkien': 0.20
     }
 }
 
@@ -351,38 +373,45 @@ for name_lower, info in sorted(unique_whitelist.items()):
     except ValueError:
         rank_val = 3
         
-    # Determine rank category for weights
+    # Determine rank category for weights (V2 Updated)
     if rank_val in (1, 2):
         w_cat = 'TA'
     elif rank_val in (3, 4):
         w_cat = 'GV'
     elif rank_val in (5, 6):
-        w_cat = 'PM'
+        if "thương hiệu" in role.lower():
+            w_cat = 'TH'
+        else:
+            w_cat = 'QL'
     else:
         w_cat = 'Lead'
         
     weights = WEIGHTS[w_cat]
     
-    # Extract raw metrics from Excel
+    # Extract raw metrics from Excel (V2 Updated)
     excel_info = excel_instructor_metrics.get(display_name, {})
     classes_list = list(excel_info.get('classes', []))
     classes_str = ", ".join(classes_list) if classes_list else "Không phụ trách lớp Excel"
     
     cc_vals = excel_info.get('cc_vals', [])
     bt_vals = excel_info.get('bt_vals', [])
+    el_vals = excel_info.get('el_vals', [])
     
     # Average student violations (from Excel)
     avg_cc_violation = sum(cc_vals) / len(cc_vals) if cc_vals else 0.0
     avg_bt_violation = sum(bt_vals) / len(bt_vals) if bt_vals else 0.0
+    avg_el_violation = sum(el_vals) / len(el_vals) if el_vals else 0.0
     
-    # Clean percentages
+    # Clean percentages (Invert BT violation percentage to completion percentage)
     student_cc_rate = 100.0 - avg_cc_violation
     student_bt_rate = 100.0 - avg_bt_violation
+    student_el_rate = 100.0 - avg_el_violation
     
     # If no classes, set to default high values
     if not classes_list:
         student_cc_rate = 95.0
         student_bt_rate = 92.0
+        student_el_rate = 90.0
         
     # Quality score (pass rate)
     pass_rates = []
@@ -396,6 +425,13 @@ for name_lower, info in sorted(unique_whitelist.items()):
     if not classes_list:
         student_pass_rate = 95.0
         
+    # Count operational violations from JSON
+    op_viols = 0
+    for v in violations_data:
+        v_name = clean_instructor_name(v.get('Họ và tên', ''))
+        if v_name.strip().lower() == name_lower:
+            op_viols += 1
+            
     # Compliance logs violations from daily log data
     missing_days = log_info.get("missing_days", [])
     time_violations = log_info.get("time_violations", [])
@@ -404,7 +440,8 @@ for name_lower, info in sorted(unique_whitelist.items()):
     compliance_violations_count = len(missing_days) + len(time_violations)
     material_violations_count = len(uncompleted_tasks)
     
-    # Apply Rubrics
+    # Apply Rubrics (Thang 10)
+    # 1. Tuân thủ (Báo cáo ngày)
     if compliance_violations_count == 0:
         score_tuanchu = 10.0
     elif compliance_violations_count <= 2:
@@ -416,10 +453,19 @@ for name_lower, info in sorted(unique_whitelist.items()):
     else:
         score_tuanchu = 1.0
         
-    # Tiêu chí 2: Kỷ luật
-    score_kyluat = 10.0
-    
-    # Tiêu chí 3: Tiến độ học liệu (uncompleted tasks)
+    # 2. Kỷ luật tác nghiệp (Op violations)
+    if op_viols == 0:
+        score_kyluat = 10.0
+    elif op_viols <= 2:
+        score_kyluat = 8.0
+    elif op_viols <= 4:
+        score_kyluat = 5.0
+    elif op_viols <= 6:
+        score_kyluat = 3.0
+    else:
+        score_kyluat = 1.0
+        
+    # 3. Tiến độ học liệu (uncompleted tasks)
     if material_violations_count == 0:
         score_hoclieu = 10.0
     elif material_violations_count <= 2:
@@ -431,7 +477,7 @@ for name_lower, info in sorted(unique_whitelist.items()):
     else:
         score_hoclieu = 1.0
         
-    # Tiêu chí 4: Quản lý sĩ số (chuyên cần trung bình)
+    # 4. Quản lý sĩ số (chuyên cần trung bình)
     if student_cc_rate >= 90.0:
         score_siso = 10.0
     elif student_cc_rate >= 80.0:
@@ -443,34 +489,48 @@ for name_lower, info in sorted(unique_whitelist.items()):
     else:
         score_siso = 1.0
         
-    # Tiêu chí 5: Đôn đốc học tập (bài tập hoàn thành)
+    # 5. Đôn đốc E-learning
+    if student_el_rate >= 90.0:
+        score_el = 10.0
+    elif student_el_rate >= 80.0:
+        score_el = 8.0
+    elif student_el_rate >= 70.0:
+        score_el = 5.0
+    elif student_el_rate >= 60.0:
+        score_el = 3.0
+    else:
+        score_el = 1.0
+        
+    # 6. Đôn đốc BTVN
     if student_bt_rate >= 90.0:
-        score_dondoc = 10.0
+        score_bt = 10.0
     elif student_bt_rate >= 80.0:
-        score_dondoc = 8.0
+        score_bt = 8.0
     elif student_bt_rate >= 70.0:
-        score_dondoc = 5.0
+        score_bt = 5.0
     elif student_bt_rate >= 60.0:
-        score_dondoc = 3.0
+        score_bt = 3.0
     else:
-        score_dondoc = 1.0
+        score_bt = 1.0
         
-    # Tiêu chí 8: Chất lượng đầu ra (tỷ lệ pass)
+    # 7. Tỷ lệ pass (Đầu ra)
     if student_pass_rate >= 80.0:
-        score_daura = 10.0
+        score_pass_rate = 10.0
     elif student_pass_rate >= 70.0:
-        score_daura = 8.0
+        score_pass_rate = 8.0
     elif student_pass_rate >= 60.0:
-        score_daura = 5.0
+        score_pass_rate = 5.0
     elif student_pass_rate >= 50.0:
-        score_daura = 3.0
+        score_pass_rate = 3.0
     else:
-        score_daura = 1.0
+        score_pass_rate = 1.0
         
-    # Mặc định 5 điểm cho các tiêu chí khác
+    # Mặc định 5 điểm cho các tiêu chí khác chưa đo lường định lượng
     score_phoihop = 5.0
     score_giaiquyet = 5.0
-    score_phattrien = 5.0
+    score_kha_gioi = 5.0
+    score_cc_cn = 5.0
+    score_bang_cap = 5.0
     score_truyendat_dugio = 5.0
     score_truyendat_uprank = 5.0
     score_csat = 5.0
@@ -480,38 +540,42 @@ for name_lower, info in sorted(unique_whitelist.items()):
     score_thuonghieu = 5.0
     score_sangkien = 5.0
     
-    # 4. CALCULATE OVERALL PROCESS SCORES
+    # 4. CALCULATE OVERALL PROCESS SCORES (V2 Weights matching)
     w_tuanchu = weights.get('tuanchu', 0.0)
+    w_kyluat = weights.get('kyluat', 0.0)
     w_hoclieu = weights.get('hoclieu', 0.0)
     w_siso = weights.get('siso', 0.0)
-    w_dondoc = weights.get('dondoc', 0.0)
-    w_daura = weights.get('daura', 0.0)
+    w_el = weights.get('el', 0.0)
+    w_bt = weights.get('bt', 0.0)
+    w_pass_rate = weights.get('pass_rate', 0.0)
     
-    sum_w_real = w_tuanchu + w_hoclieu + w_siso + w_dondoc + w_daura
+    sum_w_real = w_tuanchu + w_kyluat + w_hoclieu + w_siso + w_el + w_bt + w_pass_rate
     
     weighted_score_real = (
         score_tuanchu * w_tuanchu +
+        score_kyluat * w_kyluat +
         score_hoclieu * w_hoclieu +
         score_siso * w_siso +
-        score_dondoc * w_dondoc +
-        score_daura * w_daura
+        score_el * w_el +
+        score_bt * w_bt +
+        score_pass_rate * w_pass_rate
     )
+    overall_score_A = weighted_score_real / sum_w_real if sum_w_real > 0 else 5.0
     
-    if sum_w_real > 0:
-        overall_score_A = weighted_score_real / sum_w_real
-    else:
-        overall_score_A = 5.0
-        
+    # Option B: Complete weights with defaults (5.0) inserted
     weighted_score_all = (
         score_tuanchu * weights.get('tuanchu', 0.0) +
         score_kyluat * weights.get('kyluat', 0.0) +
         score_hoclieu * weights.get('hoclieu', 0.0) +
-        score_siso * weights.get('siso', 0.0) +
-        score_dondoc * weights.get('dondoc', 0.0) +
         score_phoihop * weights.get('phoihop', 0.0) +
+        score_siso * weights.get('siso', 0.0) +
+        score_el * weights.get('el', 0.0) +
+        score_bt * weights.get('bt', 0.0) +
         score_giaiquyet * weights.get('giaiquyet', 0.0) +
-        score_daura * weights.get('daura', 0.0) +
-        score_phattrien * weights.get('phattrien', 0.0) +
+        score_pass_rate * weights.get('pass_rate', 0.0) +
+        score_kha_gioi * weights.get('kha_gioi', 0.0) +
+        score_cc_cn * weights.get('cc_cn', 0.0) +
+        score_bang_cap * weights.get('bang_cap', 0.0) +
         score_truyendat_dugio * weights.get('truyendat_dugio', 0.0) +
         score_truyendat_uprank * weights.get('truyendat_uprank', 0.0) +
         score_csat * weights.get('csat', 0.0) +
@@ -521,21 +585,20 @@ for name_lower, info in sorted(unique_whitelist.items()):
         score_thuonghieu * weights.get('thuonghieu', 0.0) +
         score_sangkien * weights.get('sangkien', 0.0)
     )
-    
     overall_score_B = weighted_score_all
     
     # 5. PERFORMANCE CLASSIFICATION
-    if overall_score_A >= 8.5:
+    if overall_score_A >= 10.0:
         classification = "Vượt mức"
         badge_color = "green"
-    elif overall_score_A >= 7.0:
+    elif overall_score_A >= 7.5:
         classification = "Đạt"
         badge_color = "blue"
     elif overall_score_A >= 5.0:
         classification = "Cần cố gắng"
         badge_color = "yellow"
     else:
-        classification = "Không đạt"
+        classification = "Không đạt kỳ vọng"
         badge_color = "red"
         
     # Text Analysis
@@ -562,13 +625,13 @@ for name_lower, info in sorted(unique_whitelist.items()):
             weaknesses_list.append(f"Tỷ lệ chuyên cần của lớp phụ trách ở mức thấp ({student_cc_rate:.1f}%).")
             recs_list.append("Cần sát sao hơn trong việc điểm danh sinh viên và thông báo cảnh báo chuyên cần sớm.")
             
-        if score_dondoc >= 8.0:
-            strengths_list.append(f"Đôn đốc sinh viên hoàn thành E-learning và BTVN tốt ({student_bt_rate:.1f}% học viên hoàn thành).")
+        if score_bt >= 8.0:
+            strengths_list.append(f"Đôn đốc sinh viên hoàn thành BTVN tốt ({student_bt_rate:.1f}% học viên hoàn thành).")
         else:
             weaknesses_list.append(f"Tỷ lệ nợ bài tập của sinh viên lớp phụ trách khá cao ({100.0-student_bt_rate:.1f}% nợ bài).")
             recs_list.append("Cần tăng cường hỗ trợ và đôn đốc sinh viên nộp bài tập đúng hạn để tránh hổng kiến thức.")
             
-        if score_daura >= 8.0:
+        if score_pass_rate >= 8.0:
             strengths_list.append(f"Chất lượng đầu ra lớp phụ trách tốt, tỷ lệ sinh viên pass môn cao ({student_pass_rate:.1f}%).")
         else:
             weaknesses_list.append(f"Tỷ lệ pass môn dự kiến của sinh viên ở mức thấp ({student_pass_rate:.1f}%).")
@@ -595,18 +658,20 @@ for name_lower, info in sorted(unique_whitelist.items()):
             'bt_rate': student_bt_rate,
             'pass_rate': student_pass_rate,
             'compliance_violations': compliance_violations_count,
-            'material_violations': material_violations_count
+            'material_violations': material_violations_count,
+            'el_rate': student_el_rate,
+            'op_violations': op_viols
         },
         'rubric_scores': {
             'tuanchu': score_tuanchu,
             'kyluat': score_kyluat,
             'hoclieu': score_hoclieu,
             'siso': score_siso,
-            'dondoc': score_dondoc,
+            'dondoc': score_bt, # Map BTVN/dondoc for compatibility
             'phoihop': score_phoihop,
             'giaiquyet': score_giaiquyet,
-            'daura': score_daura,
-            'phattrien': score_phattrien,
+            'daura': score_pass_rate, # Map pass_rate/daura for compatibility
+            'phattrien': score_cc_cn, # Map cc_cn/phattrien for compatibility
             'truyendat_dugio': score_truyendat_dugio,
             'truyendat_uprank': score_truyendat_uprank,
             'csat': score_csat,
@@ -640,14 +705,14 @@ with open(OUTPUT_MD_PATH, "w", encoding="utf-8") as md:
     vuot_muc = sum(1 for r in evaluation_results if r['classification'] == "Vượt mức")
     dat = sum(1 for r in evaluation_results if r['classification'] == "Đạt")
     can_co_gang = sum(1 for r in evaluation_results if r['classification'] == "Cần cố gắng")
-    khong_dat = sum(1 for r in evaluation_results if r['classification'] == "Không đạt")
+    khong_dat = sum(1 for r in evaluation_results if r['classification'] == "Không đạt kỳ vọng")
     
     md.write("## 1. Thống kê Xếp loại Năng lực Chung\n\n")
     md.write(f"- **Tổng số nhân sự đánh giá**: {total_staff} thầy cô\n")
-    md.write(f"- **Vượt mức (Điểm >= 8.5)**: {vuot_muc} ({vuot_muc/total_staff*100:.1f}%)\n")
-    md.write(f"- **Đạt (7.0 <= Điểm < 8.5)**: {dat} ({dat/total_staff*100:.1f}%)\n")
-    md.write(f"- **Cần cố gắng (5.0 <= Điểm < 7.0)**: {can_co_gang} ({can_co_gang/total_staff*100:.1f}%)\n")
-    md.write(f"- **Không đạt (Điểm < 5.0)**: {khong_dat} ({khong_dat/total_staff*100:.1f}%)\n\n")
+    md.write(f"- **Vượt mức (Điểm >= 10.0)**: {vuot_muc} ({vuot_muc/total_staff*100:.1f}%)\n")
+    md.write(f"- **Đạt (7.5 <= Điểm < 10.0)**: {dat} ({dat/total_staff*100:.1f}%)\n")
+    md.write(f"- **Cần cố gắng (5.0 <= Điểm < 7.5)**: {can_co_gang} ({can_co_gang/total_staff*100:.1f}%)\n")
+    md.write(f"- **Không đạt kỳ vọng (Điểm < 5.0)**: {khong_dat} ({khong_dat/total_staff*100:.1f}%)\n\n")
     
     # Bảng tổng hợp
     md.write("## 2. Bảng tổng hợp xếp loại năng lực theo Khối phòng ban\n\n")
@@ -770,7 +835,7 @@ html_template = """<!DOCTYPE html>
                 <div>
                     <span class="text-sm font-semibold text-emerald-600 dark:text-emerald-450 tracking-wider uppercase block">Vượt Mức</span>
                     <span id="stat-vuot-muc" class="text-3xl font-bold mt-1 block">0</span>
-                    <span class="text-xs text-slate-500 mt-2 block">Điểm quá trình A &ge; 8.5</span>
+                    <span class="text-xs text-slate-500 mt-2 block">Điểm quá trình A &ge; 10.0</span>
                 </div>
                 <div class="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-emerald-950 flex items-center justify-center text-emerald-600 dark:text-emerald-450 text-2xl shadow-inner">
                     <i class="fa-solid fa-award"></i>
@@ -781,7 +846,7 @@ html_template = """<!DOCTYPE html>
                 <div>
                     <span class="text-sm font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase block">Đạt chuẩn</span>
                     <span id="stat-dat" class="text-3xl font-bold mt-1 block">0</span>
-                    <span class="text-xs text-slate-500 mt-2 block">7.0 &le; Điểm quá trình A &lt; 8.5</span>
+                    <span class="text-xs text-slate-500 mt-2 block">7.5 &le; Điểm quá trình A &lt; 10.0</span>
                 </div>
                 <div class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-950 flex items-center justify-center text-blue-600 dark:text-blue-400 text-2xl shadow-inner">
                     <i class="fa-solid fa-circle-check"></i>
@@ -792,7 +857,7 @@ html_template = """<!DOCTYPE html>
                 <div>
                     <span class="text-sm font-semibold text-yellow-600 dark:text-yellow-400 tracking-wider uppercase block">Cần cố gắng</span>
                     <span id="stat-can-co-gang" class="text-3xl font-bold mt-1 block">0</span>
-                    <span class="text-xs text-slate-500 mt-2 block">5.0 &le; Điểm quá trình A &lt; 7.0</span>
+                    <span class="text-xs text-slate-500 mt-2 block">5.0 &le; Điểm quá trình A &lt; 7.5</span>
                 </div>
                 <div class="w-14 h-14 rounded-2xl bg-yellow-100 dark:bg-yellow-950 flex items-center justify-center text-yellow-600 dark:text-yellow-400 text-2xl shadow-inner">
                     <i class="fa-solid fa-triangle-exclamation"></i>
@@ -801,7 +866,7 @@ html_template = """<!DOCTYPE html>
 
             <div class="glass-panel p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between">
                 <div>
-                    <span class="text-sm font-semibold text-red-600 dark:text-red-400 tracking-wider uppercase block">Không đạt</span>
+                    <span class="text-sm font-semibold text-red-600 dark:text-red-400 tracking-wider uppercase block">Không đạt kỳ vọng</span>
                     <span id="stat-khong-dat" class="text-3xl font-bold mt-1 block">0</span>
                     <span class="text-xs text-slate-500 mt-2 block">Điểm quá trình A &lt; 5.0</span>
                 </div>
@@ -836,7 +901,7 @@ html_template = """<!DOCTYPE html>
                         <option value="Vượt mức">Vượt mức</option>
                         <option value="Đạt">Đạt</option>
                         <option value="Cần cố gắng">Cần cố gắng</option>
-                        <option value="Không đạt">Không đạt</option>
+                        <option value="Không đạt kỳ vọng">Không đạt kỳ vọng</option>
                     </select>
                 </div>
             </div>
@@ -913,7 +978,7 @@ html_template = """<!DOCTYPE html>
                 if (ins.classification === "Vượt mức") vuotMuc++;
                 else if (ins.classification === "Đạt") dat++;
                 else if (ins.classification === "Cần cố gắng") canCoGang++;
-                else if (ins.classification === "Không đạt") khongDat++;
+                else if (ins.classification.includes("Không đạt")) khongDat++;
             });
             document.getElementById('stat-vuot-muc').textContent = vuotMuc;
             document.getElementById('stat-dat').textContent = dat;

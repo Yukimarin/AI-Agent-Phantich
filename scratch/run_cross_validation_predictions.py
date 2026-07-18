@@ -626,6 +626,7 @@ def main():
         
         # KS24 Block
         if is_ks24:
+            continue
             # 1. Java Web Service CV
             co_id = ks24_cv_course
             coname = courses_map.get(co_id, "Java Web Service")
@@ -745,7 +746,7 @@ def main():
                 })
                 
             # 2. PRJ302 CURR
-            co_id_curr = 213
+            co_id_curr = 218
             coname_curr = courses_map.get(co_id_curr, "PRJ302")
             res_curr = predict_class_pass_rate(cursor, cid, co_id_curr, class_course_seq, excel_data, cname, coname_curr, "QTKD")
             if res_curr['size'] > 0:

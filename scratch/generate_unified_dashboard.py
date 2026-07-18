@@ -243,8 +243,13 @@ def main():
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
-        body, html {{
+        *, *::before, *::after {{
             font-family: 'Fira Sans', sans-serif !important;
+        }}
+        .font-mono, .font-mono *, code, pre {{
+            font-family: 'Fira Code', monospace !important;
+        }}
+        body, html {{
             background-color: #f8fafc;
             color: #0f172a;
             transition: background-color 0.3s ease, color 0.3s ease;
@@ -253,13 +258,71 @@ def main():
             background-color: #020617;
             color: #f8fafc;
         }}
-        .font-mono {{
-            font-family: 'Fira Code', monospace !important;
-        }}
         .font-title {{
             font-family: 'Fira Sans', sans-serif;
             font-weight: 800;
         }}
+        
+        /* Thống nhất style Bảng toàn cục trong SPA */
+        table {{
+            border-collapse: collapse !important;
+            width: 100% !important;
+            border-radius: 1.25rem !important;
+            overflow: hidden !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
+            border: 1px solid #e2e8f0 !important;
+        }}
+        .dark table {{
+            border: 1px solid #1e293b !important;
+        }}
+        th {{
+            background-color: #f1f5f9 !important;
+            color: #475569 !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            font-size: 0.75rem !important;
+            letter-spacing: 0.05em !important;
+            padding: 0.875rem 1rem !important;
+            border-bottom: 2px solid #e2e8f0 !important;
+        }}
+        .dark th {{
+            background-color: #0b0f19 !important;
+            color: #94a3b8 !important;
+            border-bottom: 2px solid #1e293b !important;
+        }}
+        td {{
+            padding: 0.875rem 1rem !important;
+            border-bottom: 1px solid #e2e8f0 !important;
+            font-size: 0.875rem !important;
+            color: #334155 !important;
+            background-color: #ffffff !important;
+        }}
+        .dark td {{
+            border-bottom: 1px solid #1e293b/60 !important;
+            color: #cbd5e1 !important;
+            background-color: #0e1223 !important;
+        }}
+        tr:hover td {{
+            background-color: rgba(99, 102, 241, 0.04) !important;
+        }}
+        .dark tr:hover td {{
+            background-color: rgba(99, 102, 241, 0.08) !important;
+        }}
+        
+        /* Thống nhất style Card và Container */
+        .card, .dashboard-card, .chart-container, .bg-white.rounded-3xl.p-6, .bg-slate-900.border {{
+            background-color: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 1.25rem !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
+            padding: 1.5rem !important;
+        }}
+        .dark .card, .dark .dashboard-card, .dark .chart-container, .dark .bg-white.rounded-3xl.p-6, .dark .bg-slate-900.border {{
+            background-color: #0e1223 !important;
+            border: 1px solid #1e293b !important;
+            box-shadow: none !important;
+        }}
+        
         .glass {{
             background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(12px);
@@ -272,6 +335,7 @@ def main():
             -webkit-backdrop-filter: blur(12px);
             border-color: rgba(30, 41, 59, 0.6);
         }}
+        
         .active-tab-btn {{
             background-color: #1e40af !important;
             color: #ffffff !important;
@@ -280,21 +344,6 @@ def main():
         .dark .active-tab-btn {{
             background-color: #6366f1 !important;
             box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
-        }}
-        
-        /* Đồng bộ CSS bảng, bo góc và hiệu ứng bảng con */
-        table, .card, .dashboard-card, .chart-container, canvas {{
-            border-radius: 1.25rem !important;
-            overflow: hidden;
-        }}
-        tr {{
-            transition: background-color 0.2s ease;
-        }}
-        tr:hover {{
-            background-color: rgba(99, 102, 241, 0.04) !important;
-        }}
-        .dark tr:hover {{
-            background-color: rgba(99, 102, 241, 0.1) !important;
         }}
         
         /* Ẩn các tiêu đề lặp của các tab con để giao diện SPA gọn gàng */

@@ -59,7 +59,7 @@ html_template = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bao cao Chi so Dao tao &amp; KPI GV/TG - Tuan 27</title>
+    <title>Bao cao Chi so Dao tao &amp; KPI GV/TG</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -309,7 +309,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
             </div>
             <div>
-                <span class="week-badge">Tuan 27 (29/06 - 05/07/2026)</span>
+                <span class="week-badge">Hoc ky hien tai</span>
             </div>
         </div>
         

@@ -35,12 +35,17 @@ def main():
         "--with", "openpyxl",
         "--with", "numpy",
         "--with", "pandas",
-        "--with", "markdown"
+        "--with", "markdown",
+        "--with", "requests"
     ]
 
     # Bước 1: Chạy mô hình dự báo nguy cơ trượt học tập của học viên
     run_step("1. Dự báo nguy cơ trượt học tập (analyze_student_risk_real)", 
              ["uv", "run"] + deps + ["scratch/analyze_student_risk_real.py"])
+
+    # Bước 1.1: Chạy dự báo và Cross-Validation học tập (run_cross_validation_predictions)
+    run_step("1.1. Chạy dự báo và Cross-Validation học tập (run_cross_validation_predictions)", 
+             ["uv", "run"] + deps + ["scratch/run_cross_validation_predictions.py"])
 
     # Bước 1.2: Xuất bản dashboard học lực Agent 2 (export_prediction_dashboard_html)
     run_step("1.2. Xuất bản dashboard học lực Agent 2 (export_prediction_dashboard_html)", 
@@ -62,13 +67,25 @@ def main():
     run_step("2.7. Xuất bản báo cáo nhật ký công việc Agent 4 (generate_agent4_report)", 
              ["uv", "run"] + deps + ["scratch/generate_agent4_report.py"])
 
-    # Bước 3: Chạy tính toán điểm KPI GV/TG và sinh báo cáo tổng hợp
+    # Bước 3: Chạy tính toán điểm KPI GV/TG và sinh báo cáo tổng hợp cho Agent 5
     run_step("3. Tính toán KPI GV/TG & Báo cáo Obsidian Wiki-link (generate_kpi_report)", 
              ["uv", "run"] + deps + ["scratch/generate_kpi_report.py"])
+
+    # Bước 3.2: Chạy tính toán báo cáo tuần cho Agent 1
+    run_step("3.2. Tính toán báo cáo tuần Agent 1 (generate_weekly_report)", 
+             ["uv", "run"] + deps + ["scratch/generate_weekly_report.py"])
+
+    # Bước 3.5: Xuất bản báo cáo HTML Agent 1 (export_weekly_report_html)
+    run_step("3.5. Xuất bản báo cáo HTML Agent 1 (export_weekly_report_html)", 
+             ["uv", "run"] + deps + ["scratch/export_weekly_report_html.py"])
 
     # Bước 4: Chạy bộ kiểm thử Harness đánh giá sai số thuật toán
     run_step("4. Kiểm thử hiệu năng thuật toán (evaluation_harness)", 
              ["uv", "run"] + deps + ["scratch/evaluation_harness.py"])
+
+    # Bước 4.5: Thực thi tính toán xếp hạng năng lực V2 (generate_kpi_ranking)
+    run_step("4.5. Thực thi tính xếp hạng năng lực V2 (generate_kpi_ranking)", 
+             ["uv", "run"] + deps + ["scratch/generate_kpi_ranking.py"])
 
     # Bước 5: Sinh Web Dashboard tích hợp 2 Tab (Đánh giá GV/TG & Dự báo Học lực)
     run_step("5. Sinh Web Dashboard tích hợp 2 Tab (generate_unified_dashboard)", 
@@ -94,7 +111,10 @@ def main():
         "2_class_predictions_dashboard.html", 
         "3_gvtg_violations_report.html", 
         "4_daily_logs_report.html", 
-        "5_master_evaluation_dashboard.html"
+        "4_daily_logs_report.md",
+        "5_master_evaluation_dashboard.html",
+        "kpi_classification_report.html",
+        "kpi_classification_report.md"
     ]
     if os.path.exists(output_dir):
         for file in os.listdir(output_dir):

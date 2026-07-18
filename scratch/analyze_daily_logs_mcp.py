@@ -37,7 +37,6 @@ target_groups = {
         "Lê Hà Thanh Sang",
         "Phạm Viết Hùng",
         "Trần Quốc Tuấn",
-        "Nguyễn Văn A",
         "Nguyễn Thanh Bình Phước"
     ],
     "Khối Ngoại ngữ và kỹ năng mềm": [
@@ -59,8 +58,7 @@ target_groups = {
         "Lưu Xuân Hoàng Nguyên",
         "Nguyễn Đức Minh",
         "Nguyễn Thị Như Quỳnh",
-        "Phan Ngọc Tài",
-        "Trần Thị B"
+        "Phan Ngọc Tài"
     ]
 }
 

@@ -160,4 +160,4 @@
 
 
 ---
-Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]
+Trở về: [[Bản đồ Tri thức MOC|Bản đồ Tri thức dự án]]

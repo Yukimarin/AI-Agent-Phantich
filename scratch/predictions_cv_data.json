@@ -1,110 +1,8 @@
 {
   "dashboard_data": {
     "KS24": {
-      "cv": [
-        {
-          "class_name": "HN-KS24-CNTT1",
-          "course_name": "[ IT211 - K24 ] Java Web Service",
-          "size": 42,
-          "v_class": 9.533216374269005,
-          "mult_env": 1.0,
-          "pred_old": 62.05156262563163,
-          "actual_pass": 78.57142857142857,
-          "err": 16.519865945796937
-        },
-        {
-          "class_name": "HN-KS24-CNTT2",
-          "course_name": "[ IT211 - K24 ] Java Web Service",
-          "size": 40,
-          "v_class": 4.793814814814815,
-          "mult_env": 1.0,
-          "pred_old": 78.2237486965288,
-          "actual_pass": 92.5,
-          "err": 14.276251303471199
-        },
-        {
-          "class_name": "HN-KS24-CNTT4",
-          "course_name": "[ IT211 - K24 ] Java Web Service",
-          "size": 37,
-          "v_class": 9.079961988304094,
-          "mult_env": 1.0,
-          "pred_old": 59.42249877660348,
-          "actual_pass": 70.27027027027027,
-          "err": 10.84777149366679
-        },
-        {
-          "class_name": "HCM-KS24-CNTT1",
-          "course_name": "[ IT211 - K24 ] Java Web Service",
-          "size": 44,
-          "v_class": 1.9688791423001948,
-          "mult_env": 1.0,
-          "pred_old": 70.95221985156279,
-          "actual_pass": 68.18181818181817,
-          "err": 2.770401669744615
-        },
-        {
-          "class_name": "HN-KS24-CNTT3",
-          "course_name": "[ IT211 - K24 ] Java Web Service",
-          "size": 48,
-          "v_class": 23.833867446393764,
-          "mult_env": 0.9308306627680312,
-          "pred_old": 78.01473972882606,
-          "actual_pass": 62.5,
-          "err": 15.514739728826058
-        }
-      ],
-      "curr": [
-        {
-          "class_name": "HN-KS24-CNTT1",
-          "course_name": "[IT-212] AI Application in Action",
-          "size": 38,
-          "v_class": 7.6146703296703295,
-          "mult_env": 1.0,
-          "pred_old": 62.43099306717229,
-          "pred_new": 58.788739518912124,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HN-KS24-CNTT2",
-          "course_name": "[IT-212] AI Application in Action",
-          "size": 39,
-          "v_class": 5.263956043956044,
-          "mult_env": 1.0,
-          "pred_old": 70.56620512820511,
-          "pred_new": 70.56620512820511,
-          "actual_pass": 5.128205128205128
-        },
-        {
-          "class_name": "HN-KS24-CNTT4",
-          "course_name": "[IT-212] AI Application in Action",
-          "size": 33,
-          "v_class": 4.3700183150183145,
-          "mult_env": 1.0,
-          "pred_old": 68.34223149398346,
-          "pred_new": 65.663894638065,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HCM-KS24-CNTT1",
-          "course_name": "[IT-212] AI Application in Action",
-          "size": 44,
-          "v_class": 4.901324786324786,
-          "mult_env": 1.0,
-          "pred_old": 53.461760614730686,
-          "pred_new": 44.79906304529491,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HN-KS24-CNTT3",
-          "course_name": "[IT-212] AI Application in Action",
-          "size": 43,
-          "v_class": 8.807399267399267,
-          "mult_env": 1.0,
-          "pred_old": 61.73543643391371,
-          "pred_new": 49.119894591902074,
-          "actual_pass": 0.0
-        }
-      ]
+      "cv": [],
+      "curr": []
     },
     "KS25": {
       "cv": [
@@ -114,9 +12,9 @@
           "size": 34,
           "v_class": 14.938418972332016,
           "mult_env": 0.9753079051383399,
-          "pred_old": 47.4220534587324,
-          "actual_pass": 58.82352941176471,
-          "err": 11.40147595303231
+          "pred_old": 47.50271715959267,
+          "actual_pass": 70.58823529411765,
+          "err": 23.085518134524982
         },
         {
           "class_name": "HN-KS25-CNTT5",
@@ -124,9 +22,9 @@
           "size": 44,
           "v_class": 19.02689723320158,
           "mult_env": 0.9548655138339921,
-          "pred_old": 59.95764726294688,
-          "actual_pass": 68.18181818181817,
-          "err": 8.224170918871295
+          "pred_old": 59.98857188470172,
+          "actual_pass": 72.72727272727273,
+          "err": 12.738700842571014
         },
         {
           "class_name": "HN-KS25-CNTT4",
@@ -134,9 +32,9 @@
           "size": 44,
           "v_class": 17.87443346508564,
           "mult_env": 0.9606278326745717,
-          "pred_old": 59.65163436550872,
-          "actual_pass": 70.45454545454545,
-          "err": 10.802911089036733
+          "pred_old": 59.66822702807308,
+          "actual_pass": 72.72727272727273,
+          "err": 13.05904569919965
         },
         {
           "class_name": "HN-KS25-CNTT3",
@@ -144,9 +42,9 @@
           "size": 40,
           "v_class": 15.295461133069828,
           "mult_env": 0.9735226943346509,
-          "pred_old": 58.8369894567882,
+          "pred_old": 58.91560141435574,
           "actual_pass": 70.0,
-          "err": 11.163010543211797
+          "err": 11.084398585644259
         },
         {
           "class_name": "HN-KS25-CNTT2",
@@ -154,9 +52,9 @@
           "size": 43,
           "v_class": 17.200553359683795,
           "mult_env": 0.963997233201581,
-          "pred_old": 62.57933304461897,
-          "actual_pass": 65.11627906976744,
-          "err": 2.536946025148474
+          "pred_old": 62.666418985368594,
+          "actual_pass": 76.74418604651163,
+          "err": 14.077767061143035
         },
         {
           "class_name": "HN-KS25-CNTT1",
@@ -164,9 +62,9 @@
           "size": 44,
           "v_class": 20.00102108036891,
           "mult_env": 0.9499948945981554,
-          "pred_old": 50.96426167237141,
-          "actual_pass": 63.63636363636363,
-          "err": 12.672101963992226
+          "pred_old": 51.09143144348922,
+          "actual_pass": 65.9090909090909,
+          "err": 14.817659465601686
         },
         {
           "class_name": "HCM-KS25-CNTT5_HK2",
@@ -174,9 +72,9 @@
           "size": 39,
           "v_class": 8.80419631093544,
           "mult_env": 1.0,
-          "pred_old": 73.66819050564817,
+          "pred_old": 74.35024178769946,
           "actual_pass": 69.23076923076923,
-          "err": 4.437421274878943
+          "err": 5.1194725569302335
         },
         {
           "class_name": "HCM-KS25-CNTT6_HK2",
@@ -184,9 +82,9 @@
           "size": 41,
           "v_class": 7.118498023715415,
           "mult_env": 1.0,
-          "pred_old": 64.7949206566918,
+          "pred_old": 64.8458962664479,
           "actual_pass": 60.97560975609756,
-          "err": 3.819310900594239
+          "err": 3.8702865103503328
         },
         {
           "class_name": "HCM-KS25-CNTT7_HK2",
@@ -194,9 +92,9 @@
           "size": 42,
           "v_class": 13.889453227931488,
           "mult_env": 0.9805527338603426,
-          "pred_old": 59.709315460427284,
+          "pred_old": 59.903161397314,
           "actual_pass": 52.38095238095239,
-          "err": 7.328363079474897
+          "err": 7.522209016361614
         },
         {
           "class_name": "HCM-KS25-CNTT8_HK2",
@@ -214,9 +112,9 @@
           "size": 24,
           "v_class": 13.504,
           "mult_env": 0.98248,
-          "pred_old": 53.90632823273515,
-          "actual_pass": 0.0,
-          "err": 53.90632823273515
+          "pred_old": 54.02299773273515,
+          "actual_pass": 50.0,
+          "err": 4.022997732735149
         }
       ],
       "curr": [
@@ -224,110 +122,110 @@
           "class_name": "HN-KS25-CNTT6",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 33,
-          "v_class": 7.937060606060605,
+          "v_class": 8.744679487179488,
           "mult_env": 1.0,
-          "pred_old": 56.86885171873297,
-          "pred_new": 48.29559930614557,
+          "pred_old": 58.39457940503801,
+          "pred_new": 52.8016149806433,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-KS25-CNTT5",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 42,
-          "v_class": 4.2570303030303025,
+          "v_class": 5.153504273504274,
           "mult_env": 1.0,
-          "pred_old": 56.81938271870287,
-          "pred_new": 55.54330349870718,
+          "pred_old": 60.13351001885369,
+          "pred_new": 56.96435046703296,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-KS25-CNTT4",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 42,
-          "v_class": 4.735757575757575,
+          "v_class": 5.298162393162393,
           "mult_env": 1.0,
-          "pred_old": 57.038407736479215,
-          "pred_new": 55.37492543525102,
+          "pred_old": 61.19677549430855,
+          "pred_new": 59.38166076696599,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-KS25-CNTT3",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 37,
-          "v_class": 4.250787878787879,
+          "v_class": 4.566538461538461,
           "mult_env": 1.0,
-          "pred_old": 57.28846479833678,
-          "pred_new": 56.52581393762992,
+          "pred_old": 59.212276156444915,
+          "pred_new": 58.30805250779627,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-KS25-CNTT2",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 43,
-          "v_class": 5.531333333333333,
+          "v_class": 5.84707264957265,
           "mult_env": 1.0,
-          "pred_old": 55.45908882379248,
-          "pred_new": 53.58851735241502,
+          "pred_old": 61.34513971535675,
+          "pred_new": 60.70366487716018,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-KS25-CNTT1",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 42,
-          "v_class": 4.583939393939393,
+          "v_class": 6.2849572649572645,
           "mult_env": 1.0,
-          "pred_old": 54.824909094176846,
-          "pred_new": 51.75604753089589,
+          "pred_old": 61.79648295482296,
+          "pred_new": 57.16610001831501,
           "actual_pass": 0.0
         },
         {
           "class_name": "HCM-KS25-CNTT5_HK2",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 39,
-          "v_class": 3.151454545454545,
+          "v_class": 3.3524786324786326,
           "mult_env": 1.0,
-          "pred_old": 62.41128394477319,
-          "pred_new": 62.41128394477319,
+          "pred_old": 75.10963826429976,
+          "pred_new": 75.10963826429976,
           "actual_pass": 0.0
         },
         {
           "class_name": "HCM-KS25-CNTT6_HK2",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 40,
-          "v_class": 2.212121212121212,
+          "v_class": 2.510683760683761,
           "mult_env": 1.0,
-          "pred_old": 61.7292425,
-          "pred_new": 61.7292425,
+          "pred_old": 69.89196525641026,
+          "pred_new": 69.89196525641026,
           "actual_pass": 0.0
         },
         {
           "class_name": "HCM-KS25-CNTT7_HK2",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 42,
-          "v_class": 1.8448484848484847,
+          "v_class": 2.693504273504274,
           "mult_env": 1.0,
-          "pred_old": 58.383194007822375,
-          "pred_new": 57.80159048517679,
+          "pred_old": 65.92406771978023,
+          "pred_new": 62.86031771978022,
           "actual_pass": 0.0
         },
         {
           "class_name": "HCM-KS25-CNTT8_HK2",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 38,
-          "v_class": 16.358545454545453,
-          "mult_env": 0.9682072727272727,
-          "pred_old": 46.8128944759727,
-          "pred_new": 20.99079311585696,
+          "v_class": 19.616282051282052,
+          "mult_env": 0.9519185897435898,
+          "pred_old": 46.61170558365015,
+          "pred_new": 21.08574730617639,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-KS25-CNTT8_HL",
           "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 22,
-          "v_class": 10.571969696969695,
-          "mult_env": 0.9971401515151516,
-          "pred_old": 57.71656519075837,
-          "pred_new": 39.00034732522213,
+          "v_class": 10.537272727272727,
+          "mult_env": 0.9973136363636363,
+          "pred_old": 58.25665332705022,
+          "pred_new": 38.31264393969186,
           "actual_pass": 0.0
         }
       ]
@@ -340,9 +238,9 @@
           "size": 28,
           "v_class": 0.0,
           "mult_env": 1.0,
-          "pred_old": 77.34269642857141,
+          "pred_old": 77.45491071428569,
           "actual_pass": 67.85714285714286,
-          "err": 9.485553571428554
+          "err": 9.597767857142827
         },
         {
           "class_name": "HN-K25-QTKD2",
@@ -350,9 +248,9 @@
           "size": 40,
           "v_class": 0.0,
           "mult_env": 1.0,
-          "pred_old": 82.45414373569488,
+          "pred_old": 82.44734373569489,
           "actual_pass": 85.0,
-          "err": 2.5458562643051152
+          "err": 2.5526562643051136
         },
         {
           "class_name": "HN-K25-QTKD1",
@@ -360,614 +258,46 @@
           "size": 37,
           "v_class": 0.0,
           "mult_env": 1.0,
-          "pred_old": 70.87677014655036,
+          "pred_old": 70.01317552102577,
           "actual_pass": 56.75675675675676,
-          "err": 14.120013389793598
+          "err": 13.256418764269014
         }
       ],
-      "curr": []
+      "curr": [
+        {
+          "class_name": "HN-K25-QTKD3",
+          "course_name": "[PRJ302] Dự án kinh doanh số 2",
+          "size": 27,
+          "v_class": 0.0,
+          "mult_env": 1.0,
+          "pred_old": 62.43057407407408,
+          "pred_new": 56.406222222222226,
+          "actual_pass": 0.0
+        },
+        {
+          "class_name": "HN-K25-QTKD2",
+          "course_name": "[PRJ302] Dự án kinh doanh số 2",
+          "size": 40,
+          "v_class": 0.0,
+          "mult_env": 1.0,
+          "pred_old": 65.1797,
+          "pred_new": 62.223775,
+          "actual_pass": 0.0
+        },
+        {
+          "class_name": "HN-K25-QTKD1",
+          "course_name": "[PRJ302] Dự án kinh doanh số 2",
+          "size": 33,
+          "v_class": 0.0,
+          "mult_env": 1.0,
+          "pred_old": 61.96606818181817,
+          "pred_new": 55.18297727272727,
+          "actual_pass": 0.0
+        }
+      ]
     }
   },
   "care_list": [
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 120,
-      "full_name": "Mai Duy Anh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (21.1%)"
-      ],
-      "p_final": 33.17125579591088,
-      "att": 21.12077537422457,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 205,
-      "full_name": "Nguyễn Sỹ Trung",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (36.5%)"
-      ],
-      "p_final": 31.135204641609292,
-      "att": 36.48128691724036,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 103,
-      "full_name": "Đinh Trọng An",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (13.4%)"
-      ],
-      "p_final": 69.07857426653578,
-      "att": 13.440462000654387,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 288,
-      "full_name": "Nguyễn Văn Tùng",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
-      ],
-      "p_final": 60.29455283765106,
-      "att": 15.360569145078076,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 411,
-      "full_name": "Đinh Đình Thành",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.5%)"
-      ],
-      "p_final": 68.86258417500808,
-      "att": 11.520412458292986,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 203,
-      "full_name": "Trần Quang Hiệp",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (19.2%)",
-        "Vắng 3 buổi liên tiếp",
-        "Học lực yếu (Xác suất đỗ 33.9%)"
-      ],
-      "p_final": 33.913266510353246,
-      "att": 19.20066822980088,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 249,
-      "full_name": "Lê Xuân Ánh",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (13.4%)"
-      ],
-      "p_final": 61.003574266535786,
-      "att": 13.440462000654387,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 152,
-      "full_name": "Nguyễn Nhật Minh",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (15.4%)",
-        "Vắng 3 buổi liên tiếp",
-        "Học lực yếu (Xác suất đỗ 33.0%)"
-      ],
-      "p_final": 32.99727641882553,
-      "att": 15.360569145078076,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 83,
-      "full_name": "Tôn Phạm Quang Huy",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (38.4%)",
-        "Nợ bài tập > 20% (63.8%)"
-      ],
-      "p_final": 25.352548171425216,
-      "att": 38.40139406166405,
-      "hw": 36.20672881605441,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 198,
-      "full_name": "Quàng Duy Mạnh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (49.9%)",
-        "Nợ bài tập > 20% (63.8%)"
-      ],
-      "p_final": 24.373313112470317,
-      "att": 49.921806519957045,
-      "hw": 36.20672881605441,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 394,
-      "full_name": "Nguyễn Hoàng Long",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (49.9%)",
-        "Nợ bài tập > 20% (63.8%)"
-      ],
-      "p_final": 24.373313112470317,
-      "att": 49.921806519957045,
-      "hw": 36.20672881605441,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 98,
-      "full_name": "Nguyễn Dương Phương Trang",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (13.3%)"
-      ],
-      "p_final": 66.03026805863415,
-      "att": 13.30699304016254,
-      "hw": 88.0273158868121,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 139,
-      "full_name": "Nguyễn Văn Kiên",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận nợ bài tập (19.3%)"
-      ],
-      "p_final": 72.06666666666666,
-      "att": 0.0,
-      "hw": 80.69166343852856,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 230,
-      "full_name": "Nguyễn Công Gia Huy",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (16.6%)"
-      ],
-      "p_final": 65.73990343622144,
-      "att": 16.633816152226153,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 149,
-      "full_name": "Phạm Ngọc Linh",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.1%)"
-      ],
-      "p_final": 69.13798875495544,
-      "att": 11.14338955855608,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 266,
-      "full_name": "Nguyễn Tiến Minh",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.1%)"
-      ],
-      "p_final": 65.80048837348573,
-      "att": 11.14338955855608,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 888,
-      "full_name": "Nguyễn Quang Vinh",
-      "risk_level": "RED",
-      "reasons": [
-        "Nợ bài tập > 20% (28.3%)"
-      ],
-      "p_final": 64.03080674068305,
-      "att": 13.92929962991807,
-      "hw": 71.71297401887949,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 175,
-      "full_name": "Đinh Quốc Khánh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (50.1%)"
-      ],
-      "p_final": 24.35430950462606,
-      "att": 50.14537837694831,
-      "hw": 86.05554874303068,
-      "el": 1.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 591,
-      "full_name": "Hồ Quốc Khải",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (12.6%)"
-      ],
-      "p_final": 55.05514086389773,
-      "att": 12.565962347177987,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 639,
-      "full_name": "Đoàn Nhật Cường",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (25.1%)"
-      ],
-      "p_final": 50.52396347360941,
-      "att": 25.131849298619585,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 684,
-      "full_name": "Nguyễn Trọng Đăng Dương",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (25.1%)"
-      ],
-      "p_final": 50.62996347360942,
-      "att": 25.131849298619585,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 680,
-      "full_name": "Mai Sơn Việt",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (12.6%)"
-      ],
-      "p_final": 52.75514086389774,
-      "att": 12.565962347177987,
-      "hw": 91.47452055651898,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 620,
-      "full_name": "Phạm Công Thành",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (12.6%)"
-      ],
-      "p_final": 56.54314086389773,
-      "att": 12.565962347177987,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 588,
-      "full_name": "Huỳnh La Tiến Lộc",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (12.6%)"
-      ],
-      "p_final": 55.54314086389775,
-      "att": 12.565962347177987,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 676,
-      "full_name": "Hoàng Đình Tùng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (25.1%)"
-      ],
-      "p_final": 51.729963473609416,
-      "att": 25.131849298619585,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 592,
-      "full_name": "Lu Nhựt Đình",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (12.6%)"
-      ],
-      "p_final": 54.84314086389773,
-      "att": 12.565962347177987,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 614,
-      "full_name": "Nguyễn Đại Phát",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (12.6%)"
-      ],
-      "p_final": 54.54314086389774,
-      "att": 12.565962347177987,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 625,
-      "full_name": "Trần Hoàng Duy",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (12.6%)"
-      ],
-      "p_final": 54.343140863897744,
-      "att": 12.565962347177987,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 613,
-      "full_name": "Nguyễn Văn Toàn",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (37.7%)"
-      ],
-      "p_final": 25.214379847406683,
-      "att": 37.69786819259986,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 628,
-      "full_name": "Trần Minh Đức",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.4%)"
-      ],
-      "p_final": 23.960671367638646,
-      "att": 31.414952990280202,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 616,
-      "full_name": "Phan Trung Kiên",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (25.1%)"
-      ],
-      "p_final": 51.12996347360942,
-      "att": 25.131849298619585,
-      "hw": 91.47452055651898,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 615,
-      "full_name": "Phan Lê Duy Thịnh",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (12.6%)"
-      ],
-      "p_final": 52.75514086389774,
-      "att": 12.565962347177987,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 690,
-      "full_name": "Trương Công Quý",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (12.6%)"
-      ],
-      "p_final": 55.255140863897736,
-      "att": 12.565962347177987,
-      "hw": 98.51106760443626,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 610,
-      "full_name": "Nguyễn Tá Thọ",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (25.1%)"
-      ],
-      "p_final": 51.32996347360942,
-      "att": 25.131849298619585,
-      "hw": 91.47452055651898,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 635,
-      "full_name": "Võ Thanh Khang",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.4%)"
-      ],
-      "p_final": 50.47334273527729,
-      "att": 31.414952990280202,
-      "hw": 91.47452055651898,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 626,
-      "full_name": "Trần Hoàng Thanh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (25.1%)"
-      ],
-      "p_final": 26.16648173680471,
-      "att": 25.131849298619585,
-      "hw": 91.47452055651898,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K25",
-      "class_name": "HN-KS25-CNTT6",
-      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
-      "student_id": 1329,
-      "full_name": "Nguyễn Minh Đức 8",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (10.5%)"
-      ],
-      "p_final": 60.44304572969087,
-      "att": 10.467168224299066,
-      "hw": 100.0,
-      "el": 0.0,
-      "rp": 100.0
-    },
     {
       "batch": "K25",
       "class_name": "HN-KS25-CNTT6",
@@ -976,11 +306,30 @@
       "full_name": "Trần Nguyễn Duy Đức",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (27.9%)"
+        "Vắng chuyên cần > 20% (35.7%)"
       ],
-      "p_final": 53.15839245866283,
-      "att": 27.91244859813084,
-      "hw": 100.0,
+      "p_final": 31.34395747487437,
+      "att": 35.6686055276382,
+      "hw": 87.60935897435897,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1553,
+      "full_name": "Nguyễn Đức Anh 12",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (16.8%)",
+        "Cận nợ bài tập (16.6%)",
+        "Vắng 3 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 35.8%)"
+      ],
+      "p_final": 35.787903517587935,
+      "att": 16.785226130653268,
+      "hw": 83.43748473748474,
       "el": 0.0,
       "rp": 100.0
     },
@@ -990,13 +339,13 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1551,
       "full_name": "Trịnh Xuân Hùng",
-      "risk_level": "YELLOW",
+      "risk_level": "RED",
       "reasons": [
-        "Cận vắng chuyên cần (14.0%)"
+        "Xác suất đỗ quá thấp (27.0%)"
       ],
-      "p_final": 58.16512507548526,
-      "att": 13.95622429906542,
-      "hw": 100.0,
+      "p_final": 26.99107895728643,
+      "att": 18.883379396984925,
+      "hw": 91.7812332112332,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1008,11 +357,12 @@
       "full_name": "Nguyễn Văn Cường 3",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (34.9%)"
+        "Vắng chuyên cần > 20% (48.3%)",
+        "Nợ bài tập > 20% (29.1%)"
       ],
-      "p_final": 53.99760115025162,
-      "att": 34.89056074766355,
-      "hw": 96.3185894206549,
+      "p_final": 31.230535113065322,
+      "att": 48.25752512562815,
+      "hw": 70.92186202686202,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1024,10 +374,11 @@
       "full_name": "Hoàng Văn Thắng",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (10.5%)"
+        "Cận vắng chuyên cần (12.6%)",
+        "Học lực yếu (Xác suất đỗ 44.9%)"
       ],
-      "p_final": 58.258045729690856,
-      "att": 10.467168224299066,
+      "p_final": 44.91810527638191,
+      "att": 12.588919597989952,
       "hw": 100.0,
       "el": 0.0,
       "rp": 100.0
@@ -1040,11 +391,11 @@
       "full_name": "Trần Nhật Anh 2",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (55.8%)"
+        "Vắng chuyên cần > 20% (33.6%)"
       ],
-      "p_final": 24.345038612508986,
-      "att": 55.82489719626168,
-      "hw": 84.27876574307304,
+      "p_final": 32.29330703517588,
+      "att": 33.570452261306535,
+      "hw": 87.60935897435897,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1054,13 +405,14 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1552,
       "full_name": "Đoàn Huy Hoàng 2",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Vắng chuyên cần > 20% (27.9%)"
+        "Cận vắng chuyên cần (18.9%)",
+        "Học lực yếu (Xác suất đỗ 38.6%)"
       ],
-      "p_final": 49.163788612508974,
-      "att": 27.91244859813084,
-      "hw": 92.30531486146096,
+      "p_final": 38.61115791457287,
+      "att": 18.883379396984925,
+      "hw": 95.95310744810745,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1072,11 +424,11 @@
       "full_name": "Trịnh Quốc Trung",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (14.0%)"
+        "Cận vắng chuyên cần (10.5%)"
       ],
-      "p_final": 59.40012507548526,
-      "att": 13.95622429906542,
-      "hw": 96.3185894206549,
+      "p_final": 52.25175439698493,
+      "att": 10.490766331658293,
+      "hw": 100.0,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1088,11 +440,12 @@
       "full_name": "Nguyễn Tấn Phong",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (31.4%)"
+        "Vắng chuyên cần > 20% (48.3%)",
+        "Nợ bài tập > 20% (29.1%)"
       ],
-      "p_final": 54.280521804457216,
-      "att": 31.401504672897193,
-      "hw": 80.26549118387909,
+      "p_final": 31.04053511306532,
+      "att": 48.25752512562815,
+      "hw": 70.92186202686202,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1104,10 +457,10 @@
       "full_name": "Hoàng Đức Duy Anh",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (14.0%)"
+        "Cận vắng chuyên cần (18.9%)"
       ],
-      "p_final": 57.785125075485254,
-      "att": 13.95622429906542,
+      "p_final": 67.85215791457287,
+      "att": 18.883379396984925,
       "hw": 100.0,
       "el": 0.0,
       "rp": 100.0
@@ -1120,11 +473,27 @@
       "full_name": "Nguyễn Ngọc Hiển Vinh",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (10.5%)"
+        "Cận vắng chuyên cần (12.6%)"
       ],
-      "p_final": 59.30304572969087,
-      "att": 10.467168224299066,
+      "p_final": 72.18310527638191,
+      "att": 12.588919597989952,
       "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1649,
+      "full_name": "Trần Đại Vũ",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (14.7%)"
+      ],
+      "p_final": 68.5544561557789,
+      "att": 14.68707286432161,
+      "hw": 87.60935897435897,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1136,12 +505,12 @@
       "full_name": "Nguyễn Trần Trọng Đức",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (38.4%)",
-        "Nợ bài tập > 20% (27.8%)"
+        "Vắng chuyên cần > 20% (56.7%)",
+        "Nợ bài tập > 20% (58.3%)"
       ],
-      "p_final": 23.587513324946077,
-      "att": 38.3796168224299,
-      "hw": 72.23894206549119,
+      "p_final": 27.40273687185929,
+      "att": 56.650138190954785,
+      "hw": 41.71874236874237,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1153,11 +522,11 @@
       "full_name": "Phùng Minh Công",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (34.9%)"
+        "Vắng chuyên cần > 20% (21.0%)"
       ],
-      "p_final": 24.384473652048882,
-      "att": 34.89056074766355,
-      "hw": 92.30531486146096,
+      "p_final": 31.25675439698492,
+      "att": 20.981532663316585,
+      "hw": 95.95310744810745,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1169,13 +538,78 @@
       "full_name": "Trần Khắc Huy Hoàng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (28.1%)",
-        "Nợ bài tập > 20% (24.5%)"
+        "Vắng chuyên cần > 20% (40.0%)",
+        "Nợ bài tập > 20% (47.4%)"
       ],
-      "p_final": 28.028318552036197,
-      "att": 28.053529411764707,
-      "hw": 75.4515068977715,
-      "el": 1.0,
+      "p_final": 32.39245176470588,
+      "att": 40.026823529411764,
+      "hw": 52.616152304609216,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT5",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1279,
+      "full_name": "Cao Phạm Thùy Linh",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực yếu (Xác suất đỗ 40.1%)"
+      ],
+      "p_final": 40.06326588235293,
+      "att": 4.1407058823529415,
+      "hw": 97.13751194697086,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT5",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1462,
+      "full_name": "Nguyễn Trần Anh Dũng",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (20.7%)",
+        "Nợ bài tập > 20% (31.2%)"
+      ],
+      "p_final": 34.75066470588235,
+      "att": 20.70352941176471,
+      "hw": 68.80573762910436,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT5",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1299,
+      "full_name": "Nguyễn Minh 2",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực yếu (Xác suất đỗ 48.7%)"
+      ],
+      "p_final": 48.68551058823529,
+      "att": 2.7604705882352945,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT5",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1686,
+      "full_name": "Nguyễn Hữu Bảo Lâm",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (20.7%)"
+      ],
+      "p_final": 32.47066470588235,
+      "att": 20.70352941176471,
+      "hw": 80.94792662247572,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -1184,14 +618,33 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1283,
       "full_name": "Vũ Văn Hiếu",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (13.8%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 32.7%)"
+      ],
+      "p_final": 32.70875147058823,
+      "att": 13.802352941176471,
+      "hw": 89.04271928472329,
+      "el": 1.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT5",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1397,
+      "full_name": "Phạm Đức Huân",
       "risk_level": "RED",
       "reasons": [
-        "Xác suất đỗ quá thấp (26.7%)"
+        "Vắng chuyên cần > 20% (23.5%)",
+        "Nợ bài tập > 20% (23.1%)"
       ],
-      "p_final": 26.69232839366515,
-      "att": 18.70235294117647,
-      "hw": 87.36490272373541,
-      "el": 1.0,
+      "p_final": 33.490919999999996,
+      "att": 23.464000000000002,
+      "hw": 76.90053029135194,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -1200,13 +653,15 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1588,
       "full_name": "Nguyễn Thạch Anh",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Xác suất đỗ quá thấp (25.9%)"
+        "Cận vắng chuyên cần (13.8%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 31.9%)"
       ],
-      "p_final": 25.92235339366516,
-      "att": 18.70235294117647,
-      "hw": 87.36490272373541,
+      "p_final": 31.93877647058823,
+      "att": 13.802352941176471,
+      "hw": 89.04271928472329,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1216,13 +671,15 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1377,
       "full_name": "Phạm Anh Quân",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Xác suất đỗ quá thấp (25.4%)"
+        "Cận vắng chuyên cần (13.8%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 31.5%)"
       ],
-      "p_final": 25.447353393665157,
-      "att": 18.70235294117647,
-      "hw": 87.36490272373541,
+      "p_final": 31.46377647058823,
+      "att": 13.802352941176471,
+      "hw": 89.04271928472329,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1232,13 +689,15 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1641,
       "full_name": "Đặng Việt Anh",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Xác suất đỗ quá thấp (25.4%)"
+        "Cận vắng chuyên cần (13.8%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 31.5%)"
       ],
-      "p_final": 25.447353393665157,
-      "att": 18.70235294117647,
-      "hw": 87.36490272373541,
+      "p_final": 31.46377647058823,
+      "att": 13.802352941176471,
+      "hw": 89.04271928472329,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1248,13 +707,63 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1278,
       "full_name": "Ngô Đình Phát",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (16.6%)",
+        "Vắng 6 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 31.7%)"
+      ],
+      "p_final": 31.676531764705878,
+      "att": 16.562823529411766,
+      "hw": 89.04271928472329,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT4",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1309,
+      "full_name": "Nguyễn Việt Đức",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (22.4%)"
+        "Xác suất đỗ quá thấp (16.5%)"
       ],
-      "p_final": 25.5670086877828,
-      "att": 22.442823529411765,
-      "hw": 87.36490272373541,
+      "p_final": 16.463270161290325,
+      "att": 11.702419354838709,
+      "hw": 86.29920338054622,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT4",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1308,
+      "full_name": "Nguyễn Thành Đạt 2",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực yếu (Xác suất đỗ 49.6%)"
+      ],
+      "p_final": 49.551795698924735,
+      "att": 5.2010752688172035,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT4",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 174,
+      "full_name": "Nguyễn Vũ Thành",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực yếu (Xác suất đỗ 44.0%)"
+      ],
+      "p_final": 43.984744623655914,
+      "att": 6.501344086021504,
+      "hw": 94.51817513107443,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1266,12 +775,11 @@
       "full_name": "Trần Tuấn Anh",
       "risk_level": "YELLOW",
       "reasons": [
-        "Vắng 2 buổi liên tiếp",
-        "Học lực yếu (Xác suất đỗ 30.0%)"
+        "Học lực yếu (Xác suất đỗ 41.5%)"
       ],
-      "p_final": 30.016702081447953,
-      "att": 2.6731764705882353,
-      "hw": 99.50435865504359,
+      "p_final": 41.52424462365592,
+      "att": 6.501344086021504,
+      "hw": 100.0,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1283,11 +791,27 @@
       "full_name": "Phạm Danh Quốc Anh",
       "risk_level": "RED",
       "reasons": [
-        "Xác suất đỗ quá thấp (25.7%)"
+        "Vắng chuyên cần > 20% (20.8%)"
       ],
-      "p_final": 25.747866334841625,
-      "att": 16.039058823529412,
-      "hw": 95.52418430884184,
+      "p_final": 24.642182795698922,
+      "att": 20.804301075268814,
+      "hw": 82.1897175052821,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT4",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1672,
+      "full_name": "Hà Minh Đăng",
+      "risk_level": "RED",
+      "reasons": [
+        "Xác suất đỗ quá thấp (16.6%)"
+      ],
+      "p_final": 16.596219086021506,
+      "att": 14.30295698924731,
+      "hw": 86.29920338054622,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1297,13 +821,30 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1687,
       "full_name": "Nguyễn Đức Phong 2",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (29.9%)",
+        "Nợ bài tập > 20% (34.2%)"
+      ],
+      "p_final": 11.883912634408604,
+      "att": 29.90618279569892,
+      "hw": 65.75177400422568,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT4",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1651,
+      "full_name": "Nguyễn Đức Tuấn",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (18.7%)"
+        "Học lực yếu (Xác suất đỗ 46.1%)"
       ],
-      "p_final": 51.84282914027148,
-      "att": 18.712235294117647,
-      "hw": 91.54400996264009,
+      "p_final": 46.05589784946236,
+      "att": 2.6005376344086018,
+      "hw": 98.62766100633853,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1315,13 +856,13 @@
       "full_name": "Ngô Trung Kiên",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (37.4%)",
-        "Nợ bài tập > 20% (28.4%)"
+        "Vắng chuyên cần > 20% (41.6%)",
+        "Nợ bài tập > 20% (54.8%)"
       ],
-      "p_final": 23.47875221719456,
-      "att": 37.424470588235295,
-      "hw": 71.64313823163138,
-      "el": 1.0,
+      "p_final": 10.107182795698927,
+      "att": 41.60860215053763,
+      "hw": 45.20434462790516,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -1332,12 +873,12 @@
       "full_name": "Trần Đức Anh 2",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (48.1%)",
-        "Nợ bài tập > 20% (32.3%)"
+        "Vắng chuyên cần > 20% (23.4%)",
+        "Nợ bài tập > 20% (30.1%)"
       ],
-      "p_final": 21.70294515837103,
-      "att": 48.11717647058824,
-      "hw": 67.66296388542963,
+      "p_final": 29.601540322580643,
+      "att": 23.404838709677417,
+      "hw": 69.8612598794898,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1347,13 +888,15 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1622,
       "full_name": "Nguyễn Như Huy",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Vắng chuyên cần > 20% (26.7%)"
+        "Cận vắng chuyên cần (13.0%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 31.5%)"
       ],
-      "p_final": 24.684559276018092,
-      "att": 26.731764705882355,
-      "hw": 87.56383561643835,
+      "p_final": 31.539744623655913,
+      "att": 13.002688172043008,
+      "hw": 90.40868925581032,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1365,11 +908,96 @@
       "full_name": "Trần Tuấn Anh 2",
       "risk_level": "RED",
       "reasons": [
-        "Xác suất đỗ quá thấp (26.1%)"
+        "Xác suất đỗ quá thấp (18.6%)"
       ],
-      "p_final": 26.079040923076914,
-      "att": 9.553010526315788,
-      "hw": 87.49681415929204,
+      "p_final": 18.64255625,
+      "att": 12.762565789473683,
+      "hw": 89.06897435897436,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT3",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1398,
+      "full_name": "Trần Ngọc Sơn 2",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (11.9%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 31.4%)"
+      ],
+      "p_final": 31.411659374999996,
+      "att": 11.85095394736842,
+      "hw": 89.06897435897436,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT3",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1675,
+      "full_name": "Ngô Xuân Tài",
+      "risk_level": "RED",
+      "reasons": [
+        "Xác suất đỗ quá thấp (26.5%)"
+      ],
+      "p_final": 26.5385875,
+      "att": 3.6464473684210525,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT3",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1615,
+      "full_name": "Vũ Quốc Khánh",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Vắng 3 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 32.8%)"
+      ],
+      "p_final": 32.770925,
+      "att": 7.292894736842105,
+      "hw": 97.16615384615385,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT3",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1324,
+      "full_name": "Vũ Mạnh Hùng 3",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực yếu (Xác suất đỗ 46.7%)"
+      ],
+      "p_final": 46.71217500000001,
+      "att": 3.6464473684210525,
+      "hw": 93.1175641025641,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT3",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 207,
+      "full_name": "Nguyễn Gia Bảo",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (10.0%)",
+        "Vắng 4 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 33.4%)"
+      ],
+      "p_final": 33.389865625,
+      "att": 10.027730263157894,
+      "hw": 93.1175641025641,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1379,13 +1007,15 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 67,
       "full_name": "Nguyễn Thị Huyền Diệp",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Xác suất đỗ quá thấp (27.9%)"
+        "Cận vắng chuyên cần (10.9%)",
+        "Vắng 6 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 33.7%)"
       ],
-      "p_final": 27.85777292307692,
-      "att": 14.329515789473684,
-      "hw": 87.49681415929204,
+      "p_final": 33.7307625,
+      "att": 10.939342105263156,
+      "hw": 89.06897435897436,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1397,12 +1027,13 @@
       "full_name": "Nguyễn Công Thắng",
       "risk_level": "RED",
       "reasons": [
-        "Nợ bài tập > 20% (20.5%)"
+        "Vắng chuyên cần > 20% (21.9%)",
+        "Nợ bài tập > 20% (31.2%)"
       ],
-      "p_final": 28.218081846153844,
-      "att": 19.106021052631576,
-      "hw": 79.54255832662913,
-      "el": 1.0,
+      "p_final": 33.456275000000005,
+      "att": 21.878684210526313,
+      "hw": 68.82602564102565,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -1411,13 +1042,49 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1509,
       "full_name": "Phạm Trung Hiếu 3",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Xác suất đỗ quá thấp (25.6%)"
+        "Cận vắng chuyên cần (10.9%)",
+        "Vắng 6 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 31.5%)"
       ],
-      "p_final": 25.625272923076913,
-      "att": 14.329515789473684,
-      "hw": 87.49681415929204,
+      "p_final": 31.498262499999996,
+      "att": 10.939342105263156,
+      "hw": 89.06897435897436,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1317,
+      "full_name": "Nguyễn Minh Hiếu 6",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực yếu (Xác suất đỗ 48.5%)"
+      ],
+      "p_final": 48.47028907232705,
+      "att": 2.6432154088050317,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1544,
+      "full_name": "Lê Nguyễn Hữu Quốc",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (13.2%)",
+        "Vắng 2 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 33.3%)"
+      ],
+      "p_final": 33.276972680817615,
+      "att": 13.216077044025155,
+      "hw": 96.46852439389404,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1429,12 +1096,46 @@
       "full_name": "Phạm Hồng Phong",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (11.3%)"
+        "Cận vắng chuyên cần (10.6%)"
       ],
-      "p_final": 58.571915192307685,
-      "att": 11.315223684210526,
-      "hw": 99.2576481835564,
-      "el": 1.0,
+      "p_final": 73.13615628930818,
+      "att": 10.572861635220127,
+      "hw": 96.46852439389404,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 206,
+      "full_name": "Hoàng Văn Quân",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (11.9%)"
+      ],
+      "p_final": 69.8450508254717,
+      "att": 11.89446933962264,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 317,
+      "full_name": "Nguyễn Minh Thắng",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (10.6%)",
+        "Vắng 2 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 33.2%)"
+      ],
+      "p_final": 33.19557814465408,
+      "att": 10.572861635220127,
+      "hw": 92.44900254414846,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -1443,14 +1144,52 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1515,
       "full_name": "Nguyễn Văn Thi",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (11.9%)",
+        "Cận nợ bài tập (19.6%)",
+        "Vắng 2 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 30.0%)"
+      ],
+      "p_final": 30.03002541273585,
+      "att": 11.89446933962264,
+      "hw": 80.3904369949117,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1574,
+      "full_name": "Nguyễn Phú Tài",
       "risk_level": "RED",
       "reasons": [
-        "Nợ bài tập > 20% (20.6%)"
+        "Xác suất đỗ quá thấp (23.2%)"
       ],
-      "p_final": 57.399643846153836,
-      "att": 6.4658421052631585,
-      "hw": 79.40611854684512,
-      "el": 1.0,
+      "p_final": 23.173078144654088,
+      "att": 10.572861635220127,
+      "hw": 96.46852439389404,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 204,
+      "full_name": "Hoàng Ngọc Anh",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (13.2%)",
+        "Cận nợ bài tập (15.6%)",
+        "Vắng 2 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 34.6%)"
+      ],
+      "p_final": 34.55947268081761,
+      "att": 13.216077044025155,
+      "hw": 84.40995884465728,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -1461,13 +1200,13 @@
       "full_name": "Hoàng Minh Chiến",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (29.1%)",
-        "Nợ bài tập > 20% (36.5%)"
+        "Vắng chuyên cần > 20% (39.6%)",
+        "Nợ bài tập > 20% (51.8%)"
       ],
-      "p_final": 23.034929423076917,
-      "att": 29.096289473684212,
-      "hw": 63.52489483747609,
-      "el": 1.0,
+      "p_final": 27.583418042452827,
+      "att": 39.64823113207547,
+      "hw": 48.23426219694702,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -1476,13 +1215,15 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1344,
       "full_name": "Mai Quân Minh",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Xác suất đỗ quá thấp (24.7%)"
+        "Cận vắng chuyên cần (13.2%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 30.6%)"
       ],
-      "p_final": 24.73843942307692,
-      "att": 16.164605263157895,
-      "hw": 87.34673040152963,
+      "p_final": 30.569472680817604,
+      "att": 13.216077044025155,
+      "hw": 88.42948069440287,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1492,13 +1233,15 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1594,
       "full_name": "Nguyễn Hồng Minh",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Xác suất đỗ quá thấp (24.4%)"
+        "Cận vắng chuyên cần (13.2%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 30.2%)"
       ],
-      "p_final": 24.382189423076916,
-      "att": 16.164605263157895,
-      "hw": 87.34673040152963,
+      "p_final": 30.21322268081761,
+      "att": 13.216077044025155,
+      "hw": 88.42948069440287,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1508,13 +1251,15 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 70,
       "full_name": "Nguyễn Nam Hưng",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Xác suất đỗ quá thấp (26.9%)"
+        "Cận vắng chuyên cần (13.2%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 32.8%)"
       ],
-      "p_final": 26.93341442307692,
-      "att": 16.164605263157895,
-      "hw": 87.34673040152963,
+      "p_final": 32.76444768081761,
+      "att": 13.216077044025155,
+      "hw": 88.42948069440287,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1524,14 +1269,65 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1304,
       "full_name": "Phạm Việt Thành",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (13.2%)",
+        "Vắng 5 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 30.7%)"
+      ],
+      "p_final": 30.664472680817607,
+      "att": 13.216077044025155,
+      "hw": 88.42948069440287,
+      "el": 1.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT1",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1302,
+      "full_name": "Phạm Hồ Nam Khánh",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực yếu (Xác suất đỗ 41.5%)"
+      ],
+      "p_final": 41.491102222222224,
+      "att": 2.625777777777778,
+      "hw": 96.37183530162784,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT1",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1507,
+      "full_name": "Nguyễn Tấn Dũng 2",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực yếu (Xác suất đỗ 46.7%)"
+      ],
+      "p_final": 46.71610222222222,
+      "att": 2.625777777777778,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT1",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1387,
+      "full_name": "Nguyễn Minh Đức 9",
       "risk_level": "RED",
       "reasons": [
-        "Xác suất đỗ quá thấp (24.8%)"
+        "Vắng chuyên cần > 20% (22.3%)",
+        "Nợ bài tập > 20% (28.8%)"
       ],
-      "p_final": 24.833439423076918,
-      "att": 16.164605263157895,
-      "hw": 87.34673040152963,
-      "el": 1.0,
+      "p_final": 32.649684444444446,
+      "att": 22.319111111111113,
+      "hw": 71.23135652729015,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -1542,11 +1338,12 @@
       "full_name": "Vi Anh Dũng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (38.0%)"
+        "Vắng chuyên cần > 20% (38.1%)",
+        "Nợ bài tập > 20% (58.1%)"
       ],
-      "p_final": 25.708869266714597,
-      "att": 37.96878504672897,
-      "hw": 92.28084895649098,
+      "p_final": 31.200491111111106,
+      "att": 38.073777777777785,
+      "hw": 41.90079795722949,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1558,11 +1355,12 @@
       "full_name": "Đồng Nguyễn Tiến Đạt",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (22.3%)"
+        "Vắng chuyên cần > 20% (34.1%)",
+        "Nợ bài tập > 20% (37.1%)"
       ],
-      "p_final": 28.619118799424875,
-      "att": 22.334579439252337,
-      "hw": 92.28084895649098,
+      "p_final": 32.999664444444434,
+      "att": 34.135111111111115,
+      "hw": 62.85119693584424,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1574,11 +1372,12 @@
       "full_name": "Nguyễn Xuân Sơn 2",
       "risk_level": "RED",
       "reasons": [
-        "Xác suất đỗ quá thấp (28.6%)"
+        "Vắng chuyên cần > 20% (31.5%)",
+        "Nợ bài tập > 20% (37.1%)"
       ],
-      "p_final": 28.568475808770664,
-      "att": 17.86766355140187,
-      "hw": 96.29305978068625,
+      "p_final": 32.77411333333333,
+      "att": 31.50933333333334,
+      "hw": 62.85119693584424,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1588,13 +1387,16 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1682,
       "full_name": "Trần Trung Dũng 2",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Vắng chuyên cần > 20% (26.8%)"
+        "Cận vắng chuyên cần (15.8%)",
+        "Cận nợ bài tập (16.2%)",
+        "Vắng 6 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 30.3%)"
       ],
-      "p_final": 23.727934867002155,
-      "att": 26.801495327102803,
-      "hw": 80.2442164839052,
+      "p_final": 30.328306666666666,
+      "att": 15.75466666666667,
+      "hw": 83.80159591445899,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1606,11 +1408,12 @@
       "full_name": "Nguyễn Vũ Hoàng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (31.3%)"
+        "Vắng chuyên cần > 20% (39.4%)",
+        "Nợ bài tập > 20% (45.5%)"
       ],
-      "p_final": 27.108327857656356,
-      "att": 31.268411214953268,
-      "hw": 84.25642730810047,
+      "p_final": 31.888016666666662,
+      "att": 39.38666666666668,
+      "hw": 54.47103734439834,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1622,11 +1425,12 @@
       "full_name": "Hà Duy Thành",
       "risk_level": "RED",
       "reasons": [
-        "Xác suất đỗ quá thấp (28.8%)"
+        "Vắng chuyên cần > 20% (31.5%)",
+        "Nợ bài tập > 20% (37.1%)"
       ],
-      "p_final": 28.75847580877067,
-      "att": 17.86766355140187,
-      "hw": 96.29305978068625,
+      "p_final": 32.96411333333333,
+      "att": 31.50933333333334,
+      "hw": 62.85119693584424,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1636,14 +1440,451 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 94,
       "full_name": "Trần Kim Tiến",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.8%)",
+        "Cận nợ bài tập (16.2%)",
+        "Vắng 6 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 30.3%)"
+      ],
+      "p_final": 30.328306666666666,
+      "att": 15.75466666666667,
+      "hw": 83.80159591445899,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD3",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1777,
+      "full_name": "Đặng Ngọc Đạt",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 61.5845,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD3",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1696,
+      "full_name": "Nguyễn Minh Hiếu 7",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (20.0%)"
+      ],
+      "p_final": 56.45249999999999,
+      "att": 20.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD3",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1779,
+      "full_name": "Vũ Ruy Hoàng",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 55.45249999999999,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD3",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1813,
+      "full_name": "Nguyễn Thị Hồng Hạnh",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 61.9845,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD3",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1714,
+      "full_name": "Vũ Thanh Thảo",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (26.8%)"
+        "Vắng chuyên cần > 20% (25.0%)"
       ],
-      "p_final": 23.727934867002155,
-      "att": 26.801495327102803,
-      "hw": 80.2442164839052,
+      "p_final": 55.45249999999999,
+      "att": 25.0,
+      "hw": 100.0,
       "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD3",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1718,
+      "full_name": "Lê Nam Phong",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (20.0%)"
+      ],
+      "p_final": 56.55250000000001,
+      "att": 20.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD3",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1736,
+      "full_name": "Trần Đức Minh",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (50.0%)",
+        "Nợ bài tập > 20% (40.0%)"
+      ],
+      "p_final": 51.65249999999999,
+      "att": 50.0,
+      "hw": 60.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD3",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1708,
+      "full_name": "Lê Yến Như",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 62.384499999999996,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD3",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1734,
+      "full_name": "Bùi Hà Uyên",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (25.0%)"
+      ],
+      "p_final": 55.5525,
+      "att": 25.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD2",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1754,
+      "full_name": "Hồ Mạnh Duy",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (25.0%)"
+      ],
+      "p_final": 60.28450000000001,
+      "att": 25.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD2",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1802,
+      "full_name": "Đặng Gia Hưng",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 60.9525,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD2",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1706,
+      "full_name": "Trần Gia Bảo",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 63.5845,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD2",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1728,
+      "full_name": "Nguyễn Phương Thảo 3",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 57.1525,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD2",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1762,
+      "full_name": "Nguyễn Văn Việt",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 62.084500000000006,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD2",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1783,
+      "full_name": "Hoàng Kim Huệ",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 61.784499999999994,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD2",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1730,
+      "full_name": "Hoàng Quốc Trung",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 62.7845,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD2",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1725,
+      "full_name": "Hoàng Thanh Nam",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (30.0%)"
+      ],
+      "p_final": 57.95250000000001,
+      "att": 30.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD1",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1717,
+      "full_name": "Lê Gia Dương",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Vắng 2 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 31.3%)"
+      ],
+      "p_final": 31.29225,
+      "att": 10.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD1",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1738,
+      "full_name": "Hồ Xuân Dũng",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 65.0845,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD1",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1752,
+      "full_name": "Nguyễn Hoàng Bách 3",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (25.0%)"
+      ],
+      "p_final": 56.352500000000006,
+      "att": 25.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD1",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1742,
+      "full_name": "Đỗ Thùy Linh",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (25.0%)"
+      ],
+      "p_final": 55.45249999999999,
+      "att": 25.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD1",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1749,
+      "full_name": "Đào Quỳnh Trang",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (30.0%)"
+      ],
+      "p_final": 59.084500000000006,
+      "att": 30.0,
+      "hw": 90.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD1",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1789,
+      "full_name": "Phạm Cao Thảo Nguyên",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (15.0%)"
+      ],
+      "p_final": 59.9525,
+      "att": 15.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD1",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1809,
+      "full_name": "Lưu Anh Tuấn",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (25.0%)"
+      ],
+      "p_final": 52.9525,
+      "att": 25.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD1",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1792,
+      "full_name": "Đinh Hà Vy",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (20.0%)"
+      ],
+      "p_final": 60.584500000000006,
+      "att": 20.0,
+      "hw": 90.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "QTKD K25",
+      "class_name": "HN-K25-QTKD1",
+      "course_name": "[PRJ302] Dự án kinh doanh số 2",
+      "student_id": 1800,
+      "full_name": "Lê Thị Thanh Vân",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (20.0%)"
+      ],
+      "p_final": 56.45249999999999,
+      "att": 20.0,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-KS25-CNTT7_HK2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1448,
+      "full_name": "Đỗ Minh Tiến",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (20.0%)"
+      ],
+      "p_final": 32.82249999999999,
+      "att": 20.000000000000004,
+      "hw": 90.78141660319878,
+      "el": 1.0,
       "rp": 100.0
     },
     {
@@ -1654,11 +1895,43 @@
       "full_name": "Đặng Đức Tín",
       "risk_level": "RED",
       "reasons": [
-        "Xác suất đỗ quá thấp (28.3%)"
+        "Vắng chuyên cần > 20% (22.5%)"
       ],
-      "p_final": 28.348539539899352,
-      "att": 17.66355140186916,
+      "p_final": 66.88,
+      "att": 22.500000000000004,
+      "hw": 99.03427265803504,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-KS25-CNTT7_HK2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1517,
+      "full_name": "Hồ Hữu Hoài Nam",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (10.0%)"
+      ],
+      "p_final": 74.38499999999999,
+      "att": 10.000000000000002,
       "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-KS25-CNTT7_HK2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1533,
+      "full_name": "Nguyễn Khắc Duy 2",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (11.3%)"
+      ],
+      "p_final": 56.00249999999999,
+      "att": 11.250000000000002,
+      "hw": 86.65498857578065,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1668,14 +1941,33 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1463,
       "full_name": "Nguyễn Nhật Quốc Hưng",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Xác suất đỗ quá thấp (28.6%)"
+        "Cận vắng chuyên cần (10.0%)",
+        "Vắng 4 buổi liên tiếp",
+        "Học lực yếu (Xác suất đỗ 34.3%)"
       ],
-      "p_final": 28.58536033429187,
-      "att": 11.77570093457944,
-      "hw": 96.48251748251748,
+      "p_final": 34.304975,
+      "att": 10.000000000000002,
+      "hw": 99.03427265803504,
       "el": 1.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-KS25-CNTT7_HK2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1405,
+      "full_name": "Đinh Quang Hào",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (12.5%)",
+        "Học lực yếu (Xác suất đỗ 49.1%)"
+      ],
+      "p_final": 49.114999999999995,
+      "att": 12.500000000000002,
+      "hw": 100.0,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -1686,11 +1978,28 @@
       "full_name": "Trương Định Hải",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (29.4%)"
+        "Vắng chuyên cần > 20% (40.0%)",
+        "Nợ bài tập > 20% (21.6%)"
       ],
-      "p_final": 24.4273479511143,
-      "att": 29.4392523364486,
-      "hw": 88.4423076923077,
+      "p_final": 28.975,
+      "att": 40.00000000000001,
+      "hw": 78.4021325209444,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-KS25-CNTT7_HK2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1647,
+      "full_name": "Huỳnh Quốc Huy",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (11.3%)"
+      ],
+      "p_final": 66.5475,
+      "att": 11.250000000000002,
+      "hw": 99.03427265803504,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1700,13 +2009,13 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1590,
       "full_name": "Nguyễn Hoàng Đức Huy",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Vắng chuyên cần > 20% (21.4%)"
+        "Cận vắng chuyên cần (18.4%)"
       ],
-      "p_final": 55.50215004247812,
-      "att": 21.360508474576275,
-      "hw": 95.21015151515152,
+      "p_final": 55.36353564710661,
+      "att": 18.395010706638118,
+      "hw": 100.0,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1718,11 +2027,11 @@
       "full_name": "Bạch Chí Lân",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (21.4%)"
+        "Vắng chuyên cần > 20% (39.4%)"
       ],
-      "p_final": 54.39839375156903,
-      "att": 21.360508474576275,
-      "hw": 95.21015151515152,
+      "p_final": 43.96493386834199,
+      "att": 39.41788008565311,
+      "hw": 100.0,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1734,12 +2043,13 @@
       "full_name": "Nguyễn Văn Hoàng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (51.3%)"
+        "Vắng chuyên cần > 20% (78.8%)",
+        "Nợ bài tập > 20% (26.4%)"
       ],
-      "p_final": 24.062256019952773,
-      "att": 51.265220338983056,
-      "hw": 91.40174545454545,
-      "el": 0.0,
+      "p_final": 26.44820393917531,
+      "att": 78.83576017130622,
+      "hw": 73.64674440473951,
+      "el": 1.0,
       "rp": 100.0
     },
     {
@@ -1750,12 +2060,12 @@
       "full_name": "Lê Phúc Duy",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (29.9%)"
+        "Vắng chuyên cần > 20% (44.7%)"
       ],
-      "p_final": 48.31960252330154,
-      "att": 29.90471186440678,
-      "hw": 95.21015151515152,
-      "el": 0.0,
+      "p_final": 20.648073977851052,
+      "att": 44.67359743040686,
+      "hw": 94.10417340605603,
+      "el": 1.0,
       "rp": 100.0
     },
     {
@@ -1766,11 +2076,11 @@
       "full_name": "Trần Phạm Minh Cường",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (42.7%)"
+        "Vắng chuyên cần > 20% (26.3%)"
       ],
-      "p_final": 50.376948126354854,
-      "att": 42.72101694915255,
-      "hw": 95.21015151515152,
+      "p_final": 42.45277857462115,
+      "att": 26.27858672376874,
+      "hw": 98.19565920631936,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1782,11 +2092,28 @@
       "full_name": "Phạm Minh Tài",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (59.8%)"
+        "Vắng chuyên cần > 20% (84.1%)",
+        "Nợ bài tập > 20% (38.6%)"
       ],
-      "p_final": 21.901726352455395,
-      "att": 59.80942372881356,
-      "hw": 83.78493333333334,
+      "p_final": 24.621407294345765,
+      "att": 84.09147751605997,
+      "hw": 61.37228700394959,
+      "el": 1.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-KS25-CNTT8_HK2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 1483,
+      "full_name": "Trần Văn Gia Khang",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực yếu (Xác suất đỗ 46.0%)"
+      ],
+      "p_final": 45.960648110206854,
+      "att": 7.883576017130622,
+      "hw": 94.10417340605603,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1798,11 +2125,11 @@
       "full_name": "Trần Minh Ân",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (21.4%)"
+        "Vắng chuyên cần > 20% (26.3%)"
       ],
-      "p_final": 51.501033487932666,
-      "att": 21.360508474576275,
-      "hw": 91.40174545454545,
+      "p_final": 42.40756244160833,
+      "att": 26.27858672376874,
+      "hw": 98.19565920631936,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1814,11 +2141,27 @@
       "full_name": "Nguyễn Anh Dũng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (25.6%)"
+        "Vắng chuyên cần > 20% (21.0%)"
       ],
-      "p_final": 53.6160382451276,
-      "att": 25.632610169491528,
-      "hw": 91.40174545454545,
+      "p_final": 61.30894010585076,
+      "att": 21.022869379014992,
+      "hw": 98.19565920631936,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-KS25-CNTT8_HK2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 644,
+      "full_name": "Đỗ Hoàng Sơn",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (21.0%)"
+      ],
+      "p_final": 68.96945736088283,
+      "att": 21.022869379014992,
+      "hw": 94.10417340605603,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1830,12 +2173,12 @@
       "full_name": "Đỗ Đình Long",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (21.4%)"
+        "Vắng chuyên cần > 20% (42.0%)"
       ],
-      "p_final": 47.86783569702358,
-      "att": 21.360508474576275,
-      "hw": 91.40174545454545,
-      "el": 0.0,
+      "p_final": 26.944679016107173,
+      "att": 42.045738758029984,
+      "hw": 85.92120180552944,
+      "el": 1.0,
       "rp": 100.0
     },
     {
@@ -1846,11 +2189,11 @@
       "full_name": "Đỗ Tiến Phúc",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (21.4%)"
+        "Vắng chuyên cần > 20% (26.3%)"
       ],
-      "p_final": 50.76519596065994,
-      "att": 21.360508474576275,
-      "hw": 95.21015151515152,
+      "p_final": 47.6526338710955,
+      "att": 26.27858672376874,
+      "hw": 100.0,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1860,13 +2203,13 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 586,
       "full_name": "Dương Trung Dũng",
-      "risk_level": "YELLOW",
+      "risk_level": "RED",
       "reasons": [
-        "Cận vắng chuyên cần (12.8%)"
+        "Vắng chuyên cần > 20% (26.3%)"
       ],
-      "p_final": 56.80153502389248,
-      "att": 12.816305084745764,
-      "hw": 95.21015151515152,
+      "p_final": 48.15001133423653,
+      "att": 26.27858672376874,
+      "hw": 94.10417340605603,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1878,11 +2221,12 @@
       "full_name": "Phan Đình Nghị",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (17.1%)"
+        "Cận vắng chuyên cần (13.1%)",
+        "Học lực yếu (Xác suất đỗ 47.5%)"
       ],
-      "p_final": 51.78103837479369,
-      "att": 17.088406779661018,
-      "hw": 95.21015151515152,
+      "p_final": 47.54217870077212,
+      "att": 13.13929336188437,
+      "hw": 98.19565920631936,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1894,11 +2238,11 @@
       "full_name": "Hoàng Công Dũng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (42.7%)"
+        "Vắng chuyên cần > 20% (49.9%)"
       ],
-      "p_final": 49.27319183544576,
-      "att": 42.72101694915255,
-      "hw": 95.21015151515152,
+      "p_final": 57.70857017447249,
+      "att": 49.929314775160606,
+      "hw": 94.10417340605603,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1910,11 +2254,11 @@
       "full_name": "Võ Chí Đức",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (29.9%)"
+        "Vắng chuyên cần > 20% (23.7%)"
       ],
-      "p_final": 49.150957421902945,
-      "att": 29.90471186440678,
-      "hw": 95.21015151515152,
+      "p_final": 59.929331016518,
+      "att": 23.650728051391866,
+      "hw": 90.01268760579273,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1926,12 +2270,12 @@
       "full_name": "Nguyễn Thiện Tân",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (51.3%)",
-        "Nợ bài tập > 20% (23.8%)"
+        "Vắng chuyên cần > 20% (63.1%)",
+        "Nợ bài tập > 20% (50.9%)"
       ],
-      "p_final": 22.516997212680046,
-      "att": 51.265220338983056,
-      "hw": 76.1681212121212,
+      "p_final": 52.70960231434717,
+      "att": 63.068608137044976,
+      "hw": 49.09782960315968,
       "el": 0.0,
       "rp": 100.0
     },
@@ -1943,12 +2287,11 @@
       "full_name": "Nguyễn Khắc Tiến",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (59.8%)",
-        "Nợ bài tập > 20% (20.0%)"
+        "Vắng chuyên cần > 20% (36.8%)"
       ],
-      "p_final": 21.17922588036448,
-      "att": 59.80942372881356,
-      "hw": 79.97652727272727,
+      "p_final": 28.188639706401474,
+      "att": 36.790021413276236,
+      "hw": 85.92120180552944,
       "el": 1.0,
       "rp": 100.0
     },
@@ -1960,13 +2303,13 @@
       "full_name": "Nguyễn Gia Huy 2",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (51.3%)",
-        "Nợ bài tập > 20% (27.6%)"
+        "Vắng chuyên cần > 20% (76.2%)",
+        "Nợ bài tập > 20% (55.0%)"
       ],
-      "p_final": 41.44678647990555,
-      "att": 51.265220338983056,
-      "hw": 72.35971515151515,
-      "el": 0.0,
+      "p_final": 23.403155896982717,
+      "att": 76.20790149892935,
+      "hw": 45.00634380289637,
+      "el": 1.0,
       "rp": 100.0
     },
     {
@@ -1977,12 +2320,12 @@
       "full_name": "Đặng Trần Anh Khoa",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (21.4%)"
+        "Vắng chuyên cần > 20% (39.4%)"
       ],
-      "p_final": 48.971591987932655,
-      "att": 21.360508474576275,
-      "hw": 95.21015151515152,
-      "el": 0.0,
+      "p_final": 20.671199076799198,
+      "att": 39.41788008565311,
+      "hw": 100.0,
+      "el": 1.0,
       "rp": 100.0
     },
     {
@@ -1993,11 +2336,11 @@
       "full_name": "Trần Bảo Trân",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (17.1%)"
+        "Học lực yếu (Xác suất đỗ 47.0%)"
       ],
-      "p_final": 55.73616508388459,
-      "att": 17.088406779661018,
-      "hw": 91.40174545454545,
+      "p_final": 46.95540303648891,
+      "att": 7.883576017130622,
+      "hw": 94.10417340605603,
       "el": 0.0,
       "rp": 100.0
     },
@@ -2009,12 +2352,13 @@
       "full_name": "Nguyễn Hoàng Thiên Phúc",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (59.8%)"
+        "Vắng chuyên cần > 20% (84.1%)",
+        "Nợ bài tập > 20% (34.5%)"
       ],
-      "p_final": 19.960494975819028,
-      "att": 59.80942372881356,
-      "hw": 91.40174545454545,
-      "el": 0.0,
+      "p_final": 22.712834319874606,
+      "att": 84.09147751605997,
+      "hw": 65.4637728042129,
+      "el": 1.0,
       "rp": 100.0
     },
     {
@@ -2025,11 +2369,11 @@
       "full_name": "Lê Chí Vỹ",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (51.3%)"
+        "Vắng chuyên cần > 20% (63.1%)"
       ],
-      "p_final": 43.286380298087366,
-      "att": 51.265220338983056,
-      "hw": 83.78493333333334,
+      "p_final": 25.495694629929996,
+      "att": 63.068608137044976,
+      "hw": 81.82971600526612,
       "el": 0.0,
       "rp": 100.0
     },
@@ -2039,14 +2383,14 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 1690,
       "full_name": "Nguyễn Khánh Tùng",
-      "risk_level": "YELLOW",
+      "risk_level": "RED",
       "reasons": [
-        "Cận vắng chuyên cần (17.1%)"
+        "Vắng chuyên cần > 20% (39.4%)"
       ],
-      "p_final": 50.63129223843005,
-      "att": 17.088406779661018,
-      "hw": 91.40174545454545,
-      "el": 0.0,
+      "p_final": 28.154469090420985,
+      "att": 39.41788008565311,
+      "hw": 94.10417340605603,
+      "el": 1.0,
       "rp": 100.0
     },
     {
@@ -2057,11 +2401,11 @@
       "full_name": "Trần Anh Tuấn",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (34.2%)"
+        "Vắng chuyên cần > 20% (21.0%)"
       ],
-      "p_final": 22.364164381856625,
-      "att": 34.176813559322035,
-      "hw": 95.21015151515152,
+      "p_final": 28.461487601803587,
+      "att": 21.022869379014992,
+      "hw": 100.0,
       "el": 1.0,
       "rp": 100.0
     },
@@ -2073,13 +2417,13 @@
       "full_name": "Bùi Gia Anh",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (51.3%)",
-        "Nợ bài tập > 20% (31.4%)"
+        "Vắng chuyên cần > 20% (73.6%)",
+        "Nợ bài tập > 20% (59.1%)"
       ],
-      "p_final": 20.723393239952774,
-      "att": 51.265220338983056,
-      "hw": 68.55130909090909,
-      "el": 0.0,
+      "p_final": 23.640799111520888,
+      "att": 73.58004282655247,
+      "hw": 40.91485800263306,
+      "el": 1.0,
       "rp": 100.0
     },
     {
@@ -2090,12 +2434,28 @@
       "full_name": "Vũ Trần Anh Hoàng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (59.8%)",
-        "Nợ bài tập > 20% (35.3%)"
+        "Vắng chuyên cần > 20% (76.2%)",
+        "Nợ bài tập > 20% (63.2%)"
       ],
-      "p_final": 20.443388353091756,
-      "att": 59.80942372881356,
-      "hw": 64.74290303030303,
+      "p_final": 47.801066720247476,
+      "att": 76.20790149892935,
+      "hw": 36.823372202369754,
+      "el": 1.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-KS25-CNTT8_HK2",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 589,
+      "full_name": "Huỳnh Nguyễn Thành Đạt",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (23.7%)"
+      ],
+      "p_final": 38.335010212255185,
+      "att": 23.650728051391866,
+      "hw": 98.19565920631936,
       "el": 0.0,
       "rp": 100.0
     },
@@ -2107,11 +2467,11 @@
       "full_name": "Nguyễn Gia Huy",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (21.4%)"
+        "Vắng chuyên cần > 20% (23.7%)"
       ],
-      "p_final": 54.30641406065994,
-      "att": 21.360508474576275,
-      "hw": 91.40174545454545,
+      "p_final": 59.20587288831289,
+      "att": 23.650728051391866,
+      "hw": 98.19565920631936,
       "el": 0.0,
       "rp": 100.0
     },
@@ -2121,13 +2481,13 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 611,
       "full_name": "Nguyễn Việt Hoàng Anh",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Vắng chuyên cần > 20% (21.4%)"
+        "Cận vắng chuyên cần (13.1%)"
       ],
-      "p_final": 55.689647104715874,
-      "att": 21.360508474576275,
-      "hw": 95.21015151515152,
+      "p_final": 68.88419348282339,
+      "att": 13.13929336188437,
+      "hw": 98.19565920631936,
       "el": 0.0,
       "rp": 100.0
     },
@@ -2137,13 +2497,29 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 692,
       "full_name": "Võ Thanh Nguyên",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Vắng chuyên cần > 20% (25.6%)"
+        "Cận vắng chuyên cần (15.8%)"
       ],
-      "p_final": 53.6160382451276,
-      "att": 25.632610169491528,
-      "hw": 95.21015151515152,
+      "p_final": 60.63173217554193,
+      "att": 15.767152034261244,
+      "hw": 98.19565920631936,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8_HL",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 183,
+      "full_name": "Trần Việt Anh",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (18.8%)"
+      ],
+      "p_final": 58.88671985757919,
+      "att": 18.823529411764707,
+      "hw": 96.67463235294117,
       "el": 0.0,
       "rp": 100.0
     },
@@ -2153,14 +2529,14 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 142,
       "full_name": "Nguyễn Phạm Vĩnh Thành",
-      "risk_level": "YELLOW",
+      "risk_level": "RED",
       "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
+        "Vắng chuyên cần > 20% (23.5%)"
       ],
-      "p_final": 57.922892615316975,
-      "att": 15.356785714285712,
-      "hw": 95.91941391941391,
-      "el": 1.0,
+      "p_final": 56.38434261292679,
+      "att": 23.529411764705884,
+      "hw": 96.67463235294117,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -2171,11 +2547,11 @@
       "full_name": "Nguyễn Khắc Phong",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (46.1%)"
+        "Vắng chuyên cần > 20% (47.1%)"
       ],
-      "p_final": 51.65025428847714,
-      "att": 46.07035714285714,
-      "hw": 92.08263736263737,
+      "p_final": 51.45204002602837,
+      "att": 47.05882352941177,
+      "hw": 92.80764705882353,
       "el": 1.0,
       "rp": 100.0
     },
@@ -2187,11 +2563,11 @@
       "full_name": "Nguyễn Hải Đăng 2",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (30.7%)"
+        "Vắng chuyên cần > 20% (51.8%)"
       ],
-      "p_final": 49.98652893161577,
-      "att": 30.713571428571424,
-      "hw": 95.91941391941391,
+      "p_final": 51.551500625781564,
+      "att": 51.76470588235295,
+      "hw": 96.67463235294117,
       "el": 1.0,
       "rp": 100.0
     },
@@ -2203,12 +2579,12 @@
       "full_name": "Đỗ Ngọc Dân",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (30.7%)"
+        "Vắng chuyên cần > 20% (28.2%)"
       ],
-      "p_final": 55.96073090880994,
-      "att": 30.713571428571424,
-      "hw": 95.91941391941391,
-      "el": 1.0,
+      "p_final": 56.44007484554709,
+      "att": 28.23529411764706,
+      "hw": 96.67463235294117,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -2219,44 +2595,12 @@
       "full_name": "Thái Hồng Đức",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (30.7%)"
+        "Vắng chuyên cần > 20% (23.5%)"
       ],
-      "p_final": 56.28470174403722,
-      "att": 30.713571428571424,
-      "hw": 95.91941391941391,
-      "el": 1.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K25",
-      "class_name": "HN-KS25-CNTT8_HL",
-      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
-      "student_id": 116,
-      "full_name": "Hà Bích Ngọc",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
-      ],
-      "p_final": 59.98418073652909,
-      "att": 15.356785714285712,
-      "hw": 95.91941391941391,
-      "el": 1.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K25",
-      "class_name": "HN-KS25-CNTT8_HL",
-      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
-      "student_id": 299,
-      "full_name": "Chu Văn Ninh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (30.7%)"
-      ],
-      "p_final": 54.43181591449176,
-      "att": 30.713571428571424,
-      "hw": 95.91941391941391,
-      "el": 1.0,
+      "p_final": 57.61602495383586,
+      "att": 23.529411764705884,
+      "hw": 96.67463235294117,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -2265,14 +2609,14 @@
       "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
       "student_id": 101,
       "full_name": "Trần Văn Thắng",
-      "risk_level": "RED",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Vắng chuyên cần > 20% (92.1%)"
+        "Cận vắng chuyên cần (18.8%)"
       ],
-      "p_final": 44.79659307899392,
-      "att": 92.14071428571428,
-      "hw": 95.91941391941391,
-      "el": 1.0,
+      "p_final": 58.6972302666701,
+      "att": 18.823529411764707,
+      "hw": 96.67463235294117,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -2283,12 +2627,12 @@
       "full_name": "Trần Mạnh Dương",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (61.4%)"
+        "Vắng chuyên cần > 20% (23.5%)"
       ],
-      "p_final": 46.3527086321595,
-      "att": 61.42714285714285,
-      "hw": 88.2458608058608,
-      "el": 1.0,
+      "p_final": 53.54199874929041,
+      "att": 23.529411764705884,
+      "hw": 88.9406617647059,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -2299,12 +2643,60 @@
       "full_name": "Nguyễn Tùng Dương",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
+        "Cận vắng chuyên cần (14.1%)"
       ],
-      "p_final": 60.95419867592303,
-      "att": 15.356785714285712,
-      "hw": 95.91941391941391,
-      "el": 1.0,
+      "p_final": 62.14705546586796,
+      "att": 14.11764705882353,
+      "hw": 96.67463235294117,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8_HL",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 184,
+      "full_name": "Nguyễn Hoàng Việt",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (14.1%)"
+      ],
+      "p_final": 60.725883534049764,
+      "att": 14.11764705882353,
+      "hw": 96.67463235294117,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8_HL",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 147,
+      "full_name": "Bùi Phương Nam",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (28.2%)"
+      ],
+      "p_final": 55.208392504638,
+      "att": 28.23529411764706,
+      "hw": 96.67463235294117,
+      "el": 0.0,
+      "rp": 100.0
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8_HL",
+      "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+      "student_id": 132,
+      "full_name": "Trần Minh Quang",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Cận vắng chuyên cần (18.8%)"
+      ],
+      "p_final": 57.65503751667009,
+      "att": 18.823529411764707,
+      "hw": 96.67463235294117,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -2315,12 +2707,12 @@
       "full_name": "Nguyễn Khắc Hưng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (46.1%)"
+        "Vắng chuyên cần > 20% (23.5%)"
       ],
-      "p_final": 52.293459543211995,
-      "att": 46.07035714285714,
-      "hw": 95.91941391941391,
-      "el": 1.0,
+      "p_final": 56.57383220383588,
+      "att": 23.529411764705884,
+      "hw": 92.80764705882353,
+      "el": 0.0,
       "rp": 100.0
     },
     {
@@ -2331,447 +2723,11 @@
       "full_name": "Nguyễn Hữu Đại",
       "risk_level": "YELLOW",
       "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
+        "Cận vắng chuyên cần (18.8%)"
       ],
-      "p_final": 58.615356593536674,
-      "att": 15.356785714285712,
-      "hw": 95.91941391941391,
-      "el": 1.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 185,
-      "full_name": "Trần Khánh An",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (57.7%)",
-        "Nợ bài tập > 20% (29.8%)"
-      ],
-      "p_final": 19.01598136542751,
-      "att": 57.67351967905823,
-      "hw": 70.19983582465298,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 137,
-      "full_name": "Đặng Khánh An",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
-      ],
-      "p_final": 67.99075330691953,
-      "att": 15.379566798735743,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 99,
-      "full_name": "Đỗ Thảo Minh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (26.9%)"
-      ],
-      "p_final": 44.983812519757194,
-      "att": 26.91427073454739,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 92,
-      "full_name": "Nguyễn Duy Mạnh",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.5%)"
-      ],
-      "p_final": 66.85972587950434,
-      "att": 11.534703935811647,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 122,
-      "full_name": "Trương Hà Cẩm Linh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (23.1%)"
-      ],
-      "p_final": 65.452785092342,
-      "att": 23.069407871623294,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 162,
-      "full_name": "Bùi Văn Phương",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (26.9%)"
-      ],
-      "p_final": 62.6588125197572,
-      "att": 26.91427073454739,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 173,
-      "full_name": "Đỗ Gia Hưng",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.5%)"
-      ],
-      "p_final": 68.95972587950435,
-      "att": 11.534703935811647,
-      "hw": 91.2597079482642,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 223,
-      "full_name": "Trần Anh Dũng",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Học lực yếu (Xác suất đỗ 48.8%)"
-      ],
-      "p_final": 48.82870537291152,
-      "att": 7.6898064687757435,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 221,
-      "full_name": "Vi Trung Quý",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.5%)"
-      ],
-      "p_final": 68.08472587950433,
-      "att": 11.534703935811647,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 208,
-      "full_name": "Hoàng Nguyên Đức",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
-      ],
-      "p_final": 52.20741997358619,
-      "att": 15.379566798735743,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 222,
-      "full_name": "Hà Quang Huy",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
-      ],
-      "p_final": 68.59075330691952,
-      "att": 15.379566798735743,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 218,
-      "full_name": "Hoàng Trung Dũng",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (15.4%)",
-        "Cận nợ bài tập (15.8%)"
-      ],
-      "p_final": 68.08175330691952,
-      "att": 15.379566798735743,
-      "hw": 84.23978333363739,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 227,
-      "full_name": "Đỗ Hồng Kỳ",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.5%)"
-      ],
-      "p_final": 64.10972587950434,
-      "att": 11.534703935811647,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 226,
-      "full_name": "Hoàng Thiên Sơn",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (30.8%)",
-        "Nợ bài tập > 20% (22.8%)"
-      ],
-      "p_final": 52.004261012766484,
-      "att": 30.759248944510844,
-      "hw": 77.21976043927975,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 238,
-      "full_name": "Lê Thanh Tùng",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.5%)"
-      ],
-      "p_final": 65.88472587950433,
-      "att": 11.534703935811647,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 252,
-      "full_name": "Lê Thành Long",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.5%)"
-      ],
-      "p_final": 66.94172587950433,
-      "att": 11.534703935811647,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 887,
-      "full_name": "Nguyễn Minh Hoàng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (23.1%)"
-      ],
-      "p_final": 53.31153399515737,
-      "att": 23.069407871623294,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 285,
-      "full_name": "Nguyễn Văn Hiếu",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.5%)"
-      ],
-      "p_final": 67.33472587950433,
-      "att": 11.534703935811647,
-      "hw": 91.2597079482642,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 901,
-      "full_name": "Trần Thị Khánh Huyền",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
-      ],
-      "p_final": 66.79075330691953,
-      "att": 15.379566798735743,
-      "hw": 91.2597079482642,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 239,
-      "full_name": "Nguyễn Ngọc Thanh",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (15.4%)"
-      ],
-      "p_final": 56.2977533069195,
-      "att": 15.379566798735743,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 308,
-      "full_name": "Đỗ Chung Hiếu",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (26.9%)"
-      ],
-      "p_final": 58.30881251975719,
-      "att": 26.91427073454739,
-      "hw": 91.2597079482642,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 910,
-      "full_name": "Đặng Tô Ngọc Dũng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (23.1%)"
-      ],
-      "p_final": 62.42778509234201,
-      "att": 23.069407871623294,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 416,
-      "full_name": "Nguyễn Hoàng Nhật",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (30.8%)"
-      ],
-      "p_final": 50.4148168777645,
-      "att": 30.759248944510844,
-      "hw": 91.2597079482642,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 723,
-      "full_name": "Phan Phước Anh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (88.4%)",
-        "Nợ bài tập > 20% (71.9%)"
-      ],
-      "p_final": 21.099881333663294,
-      "att": 88.43276862356909,
-      "hw": 28.079895017968852,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 303,
-      "full_name": "Nguyễn Thế Kiên",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (19.2%)"
-      ],
-      "p_final": 65.62175766492683,
-      "att": 19.224545008699195,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 933,
-      "full_name": "Ngô Quang Anh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (30.8%)"
-      ],
-      "p_final": 52.789816877764494,
-      "att": 30.759248944510844,
-      "hw": 98.27973084262183,
-      "el": 0.0,
-      "rp": 100.0
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "[IT-212] AI Application in Action",
-      "student_id": 902,
-      "full_name": "Trịnh Khắc Hưng",
-      "risk_level": "YELLOW",
-      "reasons": [
-        "Cận vắng chuyên cần (11.5%)"
-      ],
-      "p_final": 55.27243366424535,
-      "att": 11.534703935811647,
-      "hw": 91.2597079482642,
+      "p_final": 57.939271903033735,
+      "att": 18.823529411764707,
+      "hw": 96.67463235294117,
       "el": 0.0,
       "rp": 100.0
     }

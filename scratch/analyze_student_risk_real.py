@@ -126,28 +126,21 @@ def main():
         excel_path = "data/PTIT_Chiso.xlsx"
     excel_data = load_excel_data(excel_path) if os.path.exists(excel_path) else {}
     # Target batches & classes configuration
-    ks24_classes = [
-        {'id': 48, 'name': 'HN-KS24-CNTT1', 'course_id': 194, 'curr_course_name': 'AI (KS24)', 'prev_course_id': 194},
-        {'id': 49, 'name': 'HN-KS24-CNTT2', 'course_id': 194, 'curr_course_name': 'AI (KS24)', 'prev_course_id': 194},
-        {'id': 156, 'name': 'HN-KS24-CNTT3', 'course_id': 194, 'curr_course_name': 'AI (KS24)', 'prev_course_id': 194},
-        {'id': 51, 'name': 'HN-KS24-CNTT4', 'course_id': 194, 'curr_course_name': 'AI (KS24)', 'prev_course_id': 194},
-        {'id': 63, 'name': 'HCM-KS24-CNTT1', 'course_id': 194, 'curr_course_name': 'AI (KS24)', 'prev_course_id': 194},
-        {'id': 64, 'name': 'HCM-KS24-CNTT2', 'course_id': 162, 'curr_course_name': 'AI (KS24)', 'prev_course_id': 162},
-    ]
+    ks24_classes = []
     
     ks25_classes = [
-        {'id': 77, 'name': 'HN-KS25-CNTT1', 'course_id': 193, 'curr_course_name': '[IT205-K25] Lập trình ứng dụng với Python', 'prev_course_id': 124},
-        {'id': 76, 'name': 'HN-KS25-CNTT2', 'course_id': 193, 'curr_course_name': '[IT205-K25] Lập trình ứng dụng với Python', 'prev_course_id': 124},
-        {'id': 75, 'name': 'HN-KS25-CNTT3', 'course_id': 193, 'curr_course_name': '[IT205-K25] Lập trình ứng dụng với Python', 'prev_course_id': 124},
-        {'id': 74, 'name': 'HN-KS25-CNTT4', 'course_id': 193, 'curr_course_name': '[IT205-K25] Lập trình ứng dụng với Python', 'prev_course_id': 124},
-        {'id': 73, 'name': 'HN-KS25-CNTT5', 'course_id': 193, 'curr_course_name': '[IT205-K25] Lập trình ứng dụng với Python', 'prev_course_id': 124},
-        {'id': 72, 'name': 'HN-KS25-CNTT6', 'course_id': 193, 'curr_course_name': '[IT205-K25] Lập trình ứng dụng với Python', 'prev_course_id': 124},
+        {'id': 77, 'name': 'HN-KS25-CNTT1', 'course_id': 217, 'curr_course_name': '[IT-215] Phát triển dịch vụ Web với FastAPI', 'prev_course_id': 193},
+        {'id': 76, 'name': 'HN-KS25-CNTT2', 'course_id': 217, 'curr_course_name': '[IT-215] Phát triển dịch vụ Web với FastAPI', 'prev_course_id': 193},
+        {'id': 75, 'name': 'HN-KS25-CNTT3', 'course_id': 217, 'curr_course_name': '[IT-215] Phát triển dịch vụ Web với FastAPI', 'prev_course_id': 193},
+        {'id': 74, 'name': 'HN-KS25-CNTT4', 'course_id': 217, 'curr_course_name': '[IT-215] Phát triển dịch vụ Web với FastAPI', 'prev_course_id': 193},
+        {'id': 73, 'name': 'HN-KS25-CNTT5', 'course_id': 217, 'curr_course_name': '[IT-215] Phát triển dịch vụ Web với FastAPI', 'prev_course_id': 193},
+        {'id': 72, 'name': 'HN-KS25-CNTT6', 'course_id': 217, 'curr_course_name': '[IT-215] Phát triển dịch vụ Web với FastAPI', 'prev_course_id': 193},
     ]
     
     qtkd_classes = [
-        {'id': 84, 'name': 'HN-K25-QTKD1', 'course_id': 178, 'curr_course_name': '[DTB202] Chuyển đổi số trong doanh nghiệp', 'prev_course_id': 188},
-        {'id': 83, 'name': 'HN-K25-QTKD2', 'course_id': 178, 'curr_course_name': '[DTB202] Chuyển đổi số trong doanh nghiệp', 'prev_course_id': 188},
-        {'id': 82, 'name': 'HN-K25-QTKD3', 'course_id': 178, 'curr_course_name': '[DTB202] Chuyển đổi số trong doanh nghiệp', 'prev_course_id': 188},
+        {'id': 84, 'name': 'HN-K25-QTKD1', 'course_id': 218, 'curr_course_name': '[PRJ302] Dự án kinh doanh số 2', 'prev_course_id': 178},
+        {'id': 83, 'name': 'HN-K25-QTKD2', 'course_id': 218, 'curr_course_name': '[PRJ302] Dự án kinh doanh số 2', 'prev_course_id': 178},
+        {'id': 82, 'name': 'HN-K25-QTKD3', 'course_id': 218, 'curr_course_name': '[PRJ302] Dự án kinh doanh số 2', 'prev_course_id': 178},
     ]
     
     all_target_classes = ks24_classes + ks25_classes + qtkd_classes

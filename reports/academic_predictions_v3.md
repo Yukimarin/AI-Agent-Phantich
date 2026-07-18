@@ -231,4 +231,4 @@ Bảng dưới đây dự báo tỷ lệ qua môn của các lớp học nếu �
 
 
 ---
-Trở về: [[docs/knowledge_map|Bản đồ Tri thức dự án]]
+Trở về: [[Bản đồ Tri thức MOC|Bản đồ Tri thức dự án]]

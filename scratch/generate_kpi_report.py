@@ -126,41 +126,14 @@ for row in class_stats:
     elif class_id == 'L02':
         l02_gpa = avg_score
 
-sample_instructors = [
-    {
-        'Name': 'Nguyễn Văn A',
-        'Role': 'GV',
-        'Classes': 'L01 (Lập trình Python)',
-        'Compliance': 90.0,
-        'Academic': l01_gpa * 10,
-        'Work': 80.0,
-        'KPI': 90.0 * 0.4 + (l01_gpa * 10) * 0.3 + 80.0 * 0.3,
-        'Strengths': 'Soạn slide bài giảng và lên lớp đầy đủ, giảng dạy nhiệt tình, tương tác tốt.',
-        'Weaknesses': 'Đi muộn 15 phút (15/06), thiếu slide trong 1 buổi học (17/06), chấm bài tập Lab 1 bị chậm tiến độ.',
-        'Recommendations': 'Cần đảm bảo chuẩn bị tài liệu giảng dạy đầy đủ trước giờ lên lớp và check-in đúng giờ quy định.'
-    },
-    {
-        'Name': 'Trần Thị B',
-        'Role': 'TG',
-        'Classes': 'L02 (Cấu trúc dữ liệu)',
-        'Compliance': 83.0,
-        'Academic': l02_gpa * 10,
-        'Work': 75.0,
-        'KPI': 83.0 * 0.4 + (l02_gpa * 10) * 0.3 + 75.0 * 0.3,
-        'Strengths': 'Hỗ trợ giải bài tập buổi 1 và điểm danh sinh viên đầy đủ, nhiệt tình hỗ trợ.',
-        'Weaknesses': 'Chấm bài trắc nghiệm chương 1 đúng hạn nhưng nộp điểm trễ 5 ngày (16/06), không phản hồi thắc mắc sinh viên trên LMS kịp thời (trễ 36 giờ vào 18/06).',
-        'Recommendations': 'Cần phân bổ thời gian hợp lý để chấm bài và phản hồi thắc mắc của sinh viên trên LMS trong vòng 24 giờ.'
-    }
-]
+sample_instructors = []
 
 # 2. PROCESS ACTUAL EXCEL DATA (PTIT_Chiso.xlsx)
 print("Đang đọc dữ liệu chỉ số đào tạo bằng openpyxl...")
 wb = openpyxl.load_workbook(excel_path, data_only=True)
 
 target_sheets = [
-    'KS24-JavaAdvance', 'KS24_JavaWeb', 'KS24_JWS', 'KS24_AI',
-    'KS25_Javascript', 'KS25_Database', 'KS25_Python', 'KS25_Python_Web',
-    'KS25_QTKD_M103', 'KS25_QTKD_M104', 'KS25_QTKD_DTB201', 'KS25_QTKD_DTB202',
+    'KS25_Python_Web',
     'KS25_QTKD_PRJ302'
 ]
 
@@ -438,7 +411,7 @@ def make_obsidian_links(classes_str):
         linked_parts.append(f"[[data/student_risk_report#Lớp: {anchor}|{part}]]")
     return ", ".join(linked_parts)
 
-all_evaluations = sample_instructors + actual_instructors
+all_evaluations = actual_instructors
 
 # Phân loại theo khối phòng ban chuẩn hóa
 grouped_evaluations = {
@@ -481,7 +454,7 @@ with open(output_report_path, 'w', encoding='utf-8') as f:
     f.write("## 2. Đánh giá chi tiết từng cá nhân\n\n")
     
     key_instructors_names = [
-        'Nguyễn Văn A', 'Trần Thị B', 'Bùi Thanh Hải', 'Lê Hà Thanh Sang', 
+        'Bùi Thanh Hải', 'Lê Hà Thanh Sang', 
         'Nguyễn Bá Minh Đạo', 'Lưu Hoàng Xuân Nguyên', 'Phạm Tuấn Bình',
         'Trịnh Quốc Hai', 'Lương Quốc Tuấn', 'Hoàng Thị Kim Oanh', 'Lại Trung Lâm'
     ]

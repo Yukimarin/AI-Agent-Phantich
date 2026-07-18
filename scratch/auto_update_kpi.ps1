@@ -86,8 +86,8 @@ if ($PortCheck) {
             -ArgumentList "--port=3307 --datadir=c:\Users\DELL\Desktop\AI-Agent\AI_PhantichchisoDT\data\mysql_data_97 --mysqlx=OFF --shared-memory" `
             -WindowStyle Hidden
         
-        # Wait for MySQL to initialize and start listening
-        Start-Sleep -Seconds 5
+        # Wait for MySQL to initialize and start listening (increased to 15 seconds)
+        Start-Sleep -Seconds 15
         
         $PortCheck2 = Get-NetTCPConnection -LocalPort 3307 -ErrorAction SilentlyContinue
         if ($PortCheck2) {

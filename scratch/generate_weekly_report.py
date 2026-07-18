@@ -1,13 +1,14 @@
+# -*- coding: utf-8 -*-
 import sys
 import openpyxl
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 from collections import defaultdict
 import numpy as np
 
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
-excel_path = 'docs/PTIT_Chiso.xlsx'
+excel_path = 'data/PTIT_Chiso.xlsx'
 output_path = 'data/kpi_report.md'
 
 wb = openpyxl.load_workbook(excel_path, data_only=True)
@@ -48,28 +49,38 @@ def normalize_class_name(name):
     name_str = name_str.replace("KS25", "K25").replace("KS24", "K24").replace("KS23", "K23")
     return name_str
 
-# =====================================================================
-# PHẦN 1: THỐNG KÊ CHỈ SỐ VI PHẠM TUẦN VỪA QUA (22/06 - 28/06/2026)
-# =====================================================================
+# Tự động quét ngày học lớn nhất trong Excel để thiết lập tuần động
+def get_max_excel_date(wb, sheets):
+    all_dates = []
+    for sheetname in sheets:
+        if sheetname not in wb.sheetnames:
+            continue
+        sheet = wb[sheetname]
+        row3 = list(sheet.iter_rows(min_row=3, max_row=3, values_only=True))[0]
+        for val in row3:
+            parsed = parse_date(val)
+            if parsed:
+                all_dates.append(parsed)
+    return max(all_dates) if all_dates else date(2026, 7, 17)
 
-start_prev = date(2026, 6, 15)
-end_prev = date(2026, 6, 21)
-start_curr = date(2026, 6, 22)
-end_curr = date(2026, 6, 28)
+# Xác định tuần hiện tại và tuần đối chiếu
+active_sheets = ['KS25_Python_Web', 'KS25_QTKD_PRJ302']
+max_date = get_max_excel_date(wb, active_sheets)
+monday_curr = max_date - timedelta(days=max_date.weekday())
+sunday_curr = monday_curr + timedelta(days=6)
+
+monday_prev = monday_curr - timedelta(days=7)
+sunday_prev = monday_prev + timedelta(days=6)
+
+start_prev = monday_prev
+end_prev = sunday_prev
+start_curr = monday_curr
+end_curr = sunday_curr
+
+print(f"Tự động phát hiện tuần báo cáo: {start_curr.strftime('%d/%m')} - {end_curr.strftime('%d/%m/%Y')}")
+print(f"Tuần đối chiếu: {start_prev.strftime('%d/%m')} - {end_prev.strftime('%d/%m/%Y')}")
 
 weekly_groups = {
-    'KS24_HN': {
-        'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4'],
-        'sheet_curr': 'KS24_AI',
-        'sheet_prev': 'KS24_AI',
-        'label': 'Khóa KS24 Hà Nội (Môn AI)'
-    },
-    'KS24_HCM': {
-        'classes': ['HCM-K24-CNTT1'],
-        'sheet_curr': 'KS24_AI',
-        'sheet_prev': 'KS24_AI',
-        'label': 'Khóa KS24 TP. HCM (Môn AI)'
-    },
     'KS25_CNTT_HN': {
         'classes': ['HN-K25-CNTT1', 'HN-K25-CNTT2', 'HN-K25-CNTT3', 'HN-K25-CNTT4', 'HN-K25-CNTT5', 'HN-K25-CNTT6'],
         'sheet_curr': 'KS25_Python_Web',
@@ -84,9 +95,9 @@ weekly_groups = {
     },
     'KS25_QTKD_HN': {
         'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
-        'sheet_curr': 'KS25_QTKD_DTB202',
+        'sheet_curr': 'KS25_QTKD_PRJ302',
         'sheet_prev': 'KS25_QTKD_DTB202',
-        'label': 'Khóa KS25 QTKD Hà Nội (Môn DTB202)'
+        'label': 'Khóa KS25 QTKD Hà Nội (PRJ302 tuần này, DTB202 tuần trước)'
     }
 }
 
@@ -175,9 +186,9 @@ for gkey, ginfo in weekly_groups.items():
 # =====================================================================
 
 all_sheets = [
-    'KS24-JavaAdvance', 'KS24_JavaWeb', 'KS24_JWS', 'KS24_AI',
     'KS25_Javascript', 'KS25_Database', 'KS25_Python', 'KS25_Python_Web',
-    'KS25_QTKD_M103', 'KS25_QTKD_M104', 'KS25_QTKD_DTB201', 'KS25_QTKD_DTB202'
+    'KS25_QTKD_M103', 'KS25_QTKD_M104', 'KS25_QTKD_DTB201', 'KS25_QTKD_DTB202',
+    'KS25_QTKD_PRJ302'
 ]
 
 class_course_data = defaultdict(dict)
@@ -377,74 +388,16 @@ for name, stats in teacher_stats.items():
 markdown_content = f"""# BÁO CÁO THỐNG KÊ CHỈ SỐ ĐÀO TẠO TUẦN & NĂNG LỰC QUẢN TRỊ LỚP CỦA GV/TG
 
 > [!IMPORTANT]
-> - **Thời gian báo cáo tuần**: Từ ngày **22/06/2026** đến ngày **28/06/2026** (Tuần 26).
-> - **Tuần đối chiếu**: Từ ngày **15/06/2026** đến ngày **21/06/2026** (Tuần 25).
-> - **Môn học hiện tại**: KS24 học môn `Ứng dụng AI` (AI), KS25 học môn `Python Web`, QTKD học môn `DTB202`.
+> - **Thời gian báo cáo tuần**: Từ ngày **{start_curr.strftime('%d/%m/%Y')}** đến ngày **{end_curr.strftime('%d/%m/%Y')}** (Tuần hiện tại).
+> - **Tuần đối chiếu**: Từ ngày **{start_prev.strftime('%d/%m/%Y')}** đến ngày **{end_prev.strftime('%d/%m/%Y')}** (Tuần đối chiếu).
+> - **Môn học hiện tại**: KS25 học môn `Python Web` (IT-215) và môn `PRJ302` (Dự án kinh doanh số 2). Khối KS24 tạm bỏ qua do đang làm dự án hè.
 > - **Lưu ý đặc biệt**: Đối với khóa KS25 CNTT, do môn `Python Web` mới bắt đầu từ 25/06 (chỉ có dữ liệu tuần này), chỉ số tuần trước được đối chiếu dựa trên môn học liền trước đó là `Python` (sheet `KS25_Python`) để phản ánh đúng xu hướng kỷ luật khi chuyển đổi môn học.
 
 ---
 
-## I. THỐNG KÊ CHỈ SỐ VI PHẠM 1 TUẦN VỪA QUA THEO KHÓA HỌC
+## I. THỐNG KÊ CHỈ SỐ VI PHẠM THEO KHÓA HỌC TRONG TUẦN QUA
 
-### 1. Khóa KS24 (Môn học: Ứng dụng AI)
-
-#### 📊 Bảng chỉ số chi tiết từng lớp:
-| Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-"""
-
-# KS24 HN
-ks24_hn = weekly_stats['KS24_HN']
-for cls in ks24_hn['classes']:
-    curr_info = ks24_hn['curr'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}, 'teacher': 'N/A', 'tg': 'N/A'})
-    prev_info = ks24_hn['prev'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}})
-    c_m, p_m = curr_info['metrics'], prev_info['metrics']
-    
-    # Xu hướng
-    cc_diff = c_m['Chuyên cần'] - p_m['Chuyên cần']
-    bt_diff = c_m['Bài tập'] - p_m['Bài tập']
-    el_diff = c_m['Elearning'] - p_m['Elearning']
-    
-    status = "🚨 Vi phạm tăng" if (cc_diff > 1.0 or bt_diff > 1.0 or el_diff > 1.0) else "✅ Ổn định/Cải thiện"
-    markdown_content += f"| **{cls} (HN)** | {curr_info['teacher']} | {curr_info['tg']} | {p_m['Chuyên cần']:.2f}% | {c_m['Chuyên cần']:.2f}% | {p_m['Bài tập']:.2f}% | {c_m['Bài tập']:.2f}% | {p_m['Elearning']:.2f}% | {c_m['Elearning']:.2f}% | {status} |\n"
-
-# KS24 HCM
-ks24_hcm = weekly_stats['KS24_HCM']
-for cls in ks24_hcm['classes']:
-    curr_info = ks24_hcm['curr'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}, 'teacher': 'N/A', 'tg': 'N/A'})
-    prev_info = ks24_hcm['prev'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}})
-    c_m, p_m = curr_info['metrics'], prev_info['metrics']
-    cc_diff = c_m['Chuyên cần'] - p_m['Chuyên cần']
-    status = "🚨 Vi phạm tăng" if cc_diff > 1.0 else "✅ Ổn định"
-    markdown_content += f"| **{cls} (HCM)** | {curr_info['teacher']} | {curr_info['tg']} | {p_m['Chuyên cần']:.2f}% | {c_m['Chuyên cần']:.2f}% | {p_m['Bài tập']:.2f}% | {c_m['Bài tập']:.2f}% | {p_m['Elearning']:.2f}% | {c_m['Elearning']:.2f}% | {status} |\n"
-
-# Tính trung bình cả nhóm KS24 (bao gồm HN + HCM)
-ks24_curr_gv = list(ks24_hn['curr'].values()) + list(ks24_hcm['curr'].values())
-ks24_prev_gv = list(ks24_hn['prev'].values()) + list(ks24_hcm['prev'].values())
-
-avg_ks24_curr = {m: np.mean([x['metrics'][m] for x in ks24_curr_gv]) if ks24_curr_gv else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
-avg_ks24_prev = {m: np.mean([x['metrics'][m] for x in ks24_prev_gv]) if ks24_prev_gv else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
-
-markdown_content += f"""
-#### 📝 Đánh giá chung khóa KS24:
-- **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **{avg_ks24_curr['Chuyên cần']:.2f}%**, nợ bài tập **{avg_ks24_curr['Bài tập']:.2f}%**, chậm Elearning **{avg_ks24_curr['Elearning']:.2f}%**.
-- **Xu hướng so với tuần trước**: 
-  - Chuyên cần: **Tăng vi phạm {avg_ks24_curr['Chuyên cần'] - avg_ks24_prev['Chuyên cần']:+.2f}%** (Tuần trước: {avg_ks24_prev['Chuyên cần']:.2f}%).
-  - Bài tập: **Tăng vi phạm {avg_ks24_curr['Bài tập'] - avg_ks24_prev['Bài tập']:+.2f}%** (Tuần trước: {avg_ks24_prev['Bài tập']:.2f}%).
-  - Elearning: **Tăng vi phạm {avg_ks24_curr['Elearning'] - avg_ks24_prev['Elearning']:+.2f}%** (Tuần trước: {avg_ks24_prev['Elearning']:.2f}%).
-- **Lớp làm tăng chỉ số**: 
-  - Lớp **HN-K24-CNTT3** (GV Bùi Thanh Hải, TG Mai Xuân Chinh) có vi phạm chuyên cần tăng mạnh từ 0.79% lên 9.52% (+8.73%) và nợ bài tập tăng từ 0.00% lên 5.35%.
-  - Lớp **HN-K24-CNTT1** (GV Hồ Xuân Hùng, TG Nguyễn Công Hưởng) tăng mạnh vi phạm chuyên cần lên 9.21% và nợ bài tập lên 7.89%.
-  - Lớp **HCM-K24-CNTT1** (GV Nguyễn Bá Minh Đạo, TG Phạm Viết Hùng) tăng vi phạm chuyên cần từ 9.09% lên 15.34% (+6.25%).
-- **Đánh giá tuần**: Môn học `Ứng dụng AI` mới học được hơn 1 tuần nhưng kỷ luật lớp học đang có dấu hiệu đi xuống nghiêm trọng ở cả 3 chỉ số. Sinh viên có xu hướng vắng học nhiều hơn và nợ bài tập phát sinh nhanh.
-
-#### 🛠️ Giải pháp đề xuất:
-1. **Chấn chỉnh chuyên cần khẩn cấp**: Giảng viên và Trợ giảng các lớp `HN-CNTT1`, `HN-CNTT3` và `HCM-CNTT1` phải liên hệ trực tiếp ngay trong ngày với học viên vắng học không lý do.
-2. **Khóa nộp muộn bài tập**: Thiết lập thời hạn nộp bài tập chặt chẽ trên LMS/GitHub và trừ điểm chuyên cần nếu nộp trễ quá 24 giờ.
-
----
-
-### 2. Khóa HN-KS25-CNTT (Môn học: Python Web)
+### 1. Khóa HN-KS25-CNTT (Môn học: Python Web - IT-215)
 
 #### 📊 Bảng chỉ số chi tiết từng lớp:
 | Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
@@ -456,30 +409,39 @@ for cls in ks25_hn['classes']:
     curr_info = ks25_hn['curr'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}, 'teacher': 'N/A', 'tg': 'N/A'})
     prev_info = ks25_hn['prev'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}})
     c_m, p_m = curr_info['metrics'], prev_info['metrics']
-    markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {p_m['Chuyên cần']:.2f}% | {c_m['Chuyên cần']:.2f}% | {p_m['Bài tập']:.2f}% | {c_m['Bài tập']:.2f}% | {p_m['Elearning']:.2f}% | {c_m['Elearning']:.2f}% | ✅ Bắt đầu môn mới |\n"
-
+    cc_diff = c_m['Chuyên cần'] - p_m['Chuyên cần']
+    bt_diff = c_m['Bài tập'] - p_m['Bài tập']
+    el_diff = c_m['Elearning'] - p_m['Elearning']
+    status = "🚨 Vi phạm tăng" if (cc_diff > 1.0 or bt_diff > 1.0 or el_diff > 1.0) else "✅ Ổn định/Cải thiện"
+    markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {p_m['Chuyên cần']:.2f}% | {c_m['Chuyên cần']:.2f}% | {p_m['Bài tập']:.2f}% | {c_m['Bài tập']:.2f}% | {p_m['Elearning']:.2f}% | {c_m['Elearning']:.2f}% | {status} |\n"
 avg_ks25_hn_curr = {m: np.mean([x['metrics'][m] for x in ks25_hn['curr'].values()]) if ks25_hn['curr'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 avg_ks25_hn_prev = {m: np.mean([x['metrics'][m] for x in ks25_hn['prev'].values()]) if ks25_hn['prev'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 
-markdown_content += f"""
+avg_hn_cc_curr = avg_ks25_hn_curr['Chuyên cần']
+avg_hn_bt_curr = avg_ks25_hn_curr['Bài tập']
+avg_hn_el_curr = avg_ks25_hn_curr['Elearning']
+avg_hn_cc_prev = avg_ks25_hn_prev['Chuyên cần']
+avg_hn_bt_prev = avg_ks25_hn_prev['Bài tập']
+avg_hn_el_prev = avg_ks25_hn_prev['Elearning']
+
+markdown_content += """
 #### 📝 Đánh giá chung khóa HN-KS25-CNTT:
-- **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **{avg_ks25_hn_curr['Chuyên cần']:.2f}%**, nợ bài tập **{avg_ks25_hn_curr['Bài tập']:.2f}%**, chậm Elearning **{avg_ks25_hn_curr['Elearning']:.2f}%**.
-- **Xu hướng so với tuần trước (chuyển giao từ môn Python)**:
-  - Chuyên cần: **Giảm mạnh vi phạm {avg_ks25_hn_curr['Chuyên cần'] - avg_ks25_hn_prev['Chuyên cần']:+.2f}%** (Tuần trước môn Python: {avg_ks25_hn_prev['Chuyên cần']:.2f}%).
-  - Bài tập: **Giảm mạnh vi phạm {avg_ks25_hn_curr['Bài tập'] - avg_ks25_hn_prev['Bài tập']:+.2f}%** (Tuần trước môn Python: {avg_ks25_hn_prev['Bài tập']:.2f}%).
-  - Elearning: **Giảm vi phạm {avg_ks25_hn_curr['Elearning'] - avg_ks25_hn_prev['Elearning']:+.2f}%** (Tuần trước môn Python: {avg_ks25_hn_prev['Elearning']:.2f}%).
-- **Lớp làm tăng chỉ số**: 
-  - Lớp **HN-K25-CNTT6** (GV Nguyễn Quảng An, TG Phạm Ngọc Kiên) có tỷ lệ chậm Elearning cao nhất tuần ở mức 6.06%.
-  - Lớp **HN-K25-CNTT5** (GV Lương Quốc Tuấn, TG Lại Trung Lâm) có tỷ lệ chậm Elearning 5.95%.
-- **Đánh giá tuần**: Môn Python Web mới bắt đầu học được 2 ngày (25/6 và 26/6) nên chỉ số vi phạm chuyên cần và bài tập tạm thời bằng 0%. Tuy nhiên, vi phạm Elearning chậm trễ đã bắt đầu xuất hiện ở mức trung bình 4.84%, cần đôn đốc ngay.
+- **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **{:.2f}%**, nợ bài tập **{:.2f}%**, chậm Elearning **{:.2f}%**.
+- **Xu hướng so với tuần trước**:
+  - Chuyên cần: **{:+.2f}%** (Tuần trước: {:.2f}%).
+  - Bài tập: **{:+.2f}%** (Tuần trước: {:.2f}%).
+  - Elearning: **{:+.2f}%** (Tuần trước: {:.2f}%).
+""".format(
+    avg_hn_cc_curr, avg_hn_bt_curr, avg_hn_el_curr,
+    avg_hn_cc_curr - avg_hn_cc_prev, avg_hn_cc_prev,
+    avg_hn_bt_curr - avg_hn_bt_prev, avg_hn_bt_prev,
+    avg_hn_el_curr - avg_hn_el_prev, avg_hn_el_prev
+)
 
-#### 🛠️ Giải pháp đề xuất:
-1. **Thiết lập nề nếp ngay từ đầu**: Trợ giảng yêu cầu sinh viên hoàn thành bài tập Elearning hàng ngày sau mỗi buổi học để tránh tích lũy vi phạm vào cuối môn.
-2. **Giám sát hoạt động GitHub**: Kiểm tra tài khoản GitHub của học viên để đảm bảo học viên đã clone project môn học mới thành công.
-
+markdown_content += """
 ---
 
-### 3. Khóa HCM-KS25-CNTT (Môn học: Python Web)
+### 2. Khóa HCM-KS25-CNTT (Môn học: Python Web - IT-215)
 
 #### 📊 Bảng chỉ số chi tiết từng lớp:
 | Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
@@ -491,32 +453,40 @@ for cls in ks25_hcm['classes']:
     curr_info = ks25_hcm['curr'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}, 'teacher': 'N/A', 'tg': 'N/A'})
     prev_info = ks25_hcm['prev'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}})
     c_m, p_m = curr_info['metrics'], prev_info['metrics']
-    
-    status = "🚨 EL rất cao" if c_m['Elearning'] > 20.0 else "✅ Bắt đầu môn mới"
+    cc_diff = c_m['Chuyên cần'] - p_m['Chuyên cần']
+    bt_diff = c_m['Bài tập'] - p_m['Bài tập']
+    el_diff = c_m['Elearning'] - p_m['Elearning']
+    status = "🚨 Vi phạm tăng" if (cc_diff > 1.0 or bt_diff > 1.0 or el_diff > 1.0) else "✅ Ổn định/Cải thiện"
     markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {p_m['Chuyên cần']:.2f}% | {c_m['Chuyên cần']:.2f}% | {p_m['Bài tập']:.2f}% | {c_m['Bài tập']:.2f}% | {p_m['Elearning']:.2f}% | {c_m['Elearning']:.2f}% | {status} |\n"
 
 avg_ks25_hcm_curr = {m: np.mean([x['metrics'][m] for x in ks25_hcm['curr'].values()]) if ks25_hcm['curr'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 avg_ks25_hcm_prev = {m: np.mean([x['metrics'][m] for x in ks25_hcm['prev'].values()]) if ks25_hcm['prev'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 
-markdown_content += f"""
+avg_hcm_cc_curr = avg_ks25_hcm_curr['Chuyên cần']
+avg_hcm_bt_curr = avg_ks25_hcm_curr['Bài tập']
+avg_hcm_el_curr = avg_ks25_hcm_curr['Elearning']
+avg_hcm_cc_prev = avg_ks25_hcm_prev['Chuyên cần']
+avg_hcm_bt_prev = avg_ks25_hcm_prev['Bài tập']
+avg_hcm_el_prev = avg_ks25_hcm_prev['Elearning']
+
+markdown_content += """
 #### 📝 Đánh giá chung khóa HCM-KS25-CNTT:
-- **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **{avg_ks25_hcm_curr['Chuyên cần']:.2f}%**, nợ bài tập **{avg_ks25_hcm_curr['Bài tập']:.2f}%**, chậm Elearning **{avg_ks25_hcm_curr['Elearning']:.2f}%**.
-- **Xu hướng so với tuần trước (chuyển giao từ môn Python)**:
-  - Chuyên cần: **Giảm mạnh vi phạm {avg_ks25_hcm_curr['Chuyên cần'] - avg_ks25_hcm_prev['Chuyên cần']:+.2f}%** (Tuần trước môn Python: {avg_ks25_hcm_prev['Chuyên cần']:.2f}%).
-  - Bài tập: **Giảm mạnh vi phạm {avg_ks25_hcm_curr['Bài tập'] - avg_ks25_hcm_prev['Bài tập']:+.2f}%** (Tuần trước môn Python: {avg_ks25_hcm_prev['Bài tập']:.2f}%).
-  - Elearning: **Giảm vi phạm {avg_ks25_hcm_curr['Elearning'] - avg_ks25_hcm_prev['Elearning']:+.2f}%** (Tuần trước môn Python: {avg_ks25_hcm_prev['Elearning']:.2f}%).
-- **Lớp làm tăng chỉ số**:
-  - Lớp **HCM-K25-CNTT5** (GV Lê Hà Thanh Sang, TG Phạm Viết Hùng) vi phạm Elearning vọt lên mức rất cao **32.05%** ngay tuần đầu tiên.
-  - Lớp **HCM-K25-CNTT8** (GV Lê Hà Thanh Sang, TG Phạm Viết Hùng) vi phạm Elearning ở mức **18.92%**.
-- **Đánh giá tuần**: Chuyên cần và bài tập kiểm soát rất tốt (0% do môn mới học 2 ngày). Tuy nhiên, chỉ số vi phạm Elearning chậm trễ ở cơ sở HCM ở mức đáng lo ngại (trung bình 15.51%), đặc biệt là các lớp do thầy Lê Hà Thanh Sang dạy.
+- **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **{:.2f}%**, nợ bài tập **{:.2f}%**, chậm Elearning **{:.2f}%**.
+- **Xu hướng so với tuần trước**:
+  - Chuyên cần: **{:+.2f}%** (Tuần trước: {:.2f}%).
+  - Bài tập: **{:+.2f}%** (Tuần trước: {:.2f}%).
+  - Elearning: **{:+.2f}%** (Tuần trước: {:.2f}%).
+""".format(
+    avg_hcm_cc_curr, avg_hcm_bt_curr, avg_hcm_el_curr,
+    avg_hcm_cc_curr - avg_hcm_cc_prev, avg_hcm_cc_prev,
+    avg_hcm_bt_curr - avg_hcm_bt_prev, avg_hcm_bt_prev,
+    avg_hcm_el_curr - avg_hcm_el_prev, avg_hcm_el_prev
+)
 
-#### 🛠️ Giải pháp đề xuất:
-1. **Làm việc riêng với Giảng viên Lê Hà Thanh Sang**: Trao đổi để thầy đôn đốc và nhắc nhở sinh viên làm Elearning trực tiếp trong buổi học.
-2. **Trợ giảng gọi điện nhắc nhở**: TG Phạm Viết Hùng cần tập trung rà soát các học viên chưa làm Elearning của hai lớp CNTT5 và CNTT8 và gọi điện chấn chỉnh.
-
+markdown_content += """
 ---
 
-### 4. Khóa HN-QTKD-KS25 (Môn học: DTB202)
+### 3. Khóa HN-QTKD-KS25 (Môn học: PRJ302)
 
 #### 📊 Bảng chỉ số chi tiết từng lớp:
 | Tên Lớp | Giảng viên | Trợ giảng | CC tuần trước | CC tuần này | BT tuần trước | BT tuần này | EL tuần trước | EL tuần này | Xu hướng kỷ luật |
@@ -528,34 +498,69 @@ for cls in ks25_qtkd['classes']:
     curr_info = ks25_qtkd['curr'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}, 'teacher': 'N/A', 'tg': 'N/A'})
     prev_info = ks25_qtkd['prev'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}})
     c_m, p_m = curr_info['metrics'], prev_info['metrics']
-    
     cc_diff = c_m['Chuyên cần'] - p_m['Chuyên cần']
     bt_diff = c_m['Bài tập'] - p_m['Bài tập']
     el_diff = c_m['Elearning'] - p_m['Elearning']
-    
-    status = "🚨 Vi phạm tăng mạnh" if (cc_diff > 2.0 or bt_diff > 2.0 or el_diff > 2.0) else "✅ Ổn định"
+    status = "🚨 Vi phạm tăng" if (cc_diff > 1.0 or bt_diff > 1.0 or el_diff > 1.0) else "✅ Ổn định/Cải thiện"
     markdown_content += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {p_m['Chuyên cần']:.2f}% | {c_m['Chuyên cần']:.2f}% | {p_m['Bài tập']:.2f}% | {c_m['Bài tập']:.2f}% | {p_m['Elearning']:.2f}% | {c_m['Elearning']:.2f}% | {status} |\n"
 
 avg_ks25_qtkd_curr = {m: np.mean([x['metrics'][m] for x in ks25_qtkd['curr'].values()]) if ks25_qtkd['curr'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 avg_ks25_qtkd_prev = {m: np.mean([x['metrics'][m] for x in ks25_qtkd['prev'].values()]) if ks25_qtkd['prev'] else 0.0 for m in ['Chuyên cần', 'Bài tập', 'Elearning']}
 
-markdown_content += f"""
-#### 📝 Đánh giá chung khóa QTKD-KS25:
-- **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **{avg_ks25_qtkd_curr['Chuyên cần']:.2f}%**, nợ bài tập **{avg_ks25_qtkd_curr['Bài tập']:.2f}%**, chậm Elearning **{avg_ks25_qtkd_curr['Elearning']:.2f}%**.
-- **Xu hướng so với tuần trước**:
-  - Chuyên cần: **Tăng vi phạm {avg_ks25_qtkd_curr['Chuyên cần'] - avg_ks25_qtkd_prev['Chuyên cần']:+.2f}%** (Tuần trước: {avg_ks25_qtkd_prev['Chuyên cần']:.2f}%).
-  - Bài tập: **Tăng mạnh vi phạm {avg_ks25_qtkd_curr['Bài tập'] - avg_ks25_qtkd_prev['Bài tập']:+.2f}%** (Tuần trước: {avg_ks25_qtkd_prev['Bài tập']:.2f}%).
-  - Elearning: **Tăng mạnh vi phạm {avg_ks25_qtkd_curr['Elearning'] - avg_ks25_qtkd_prev['Elearning']:+.2f}%** (Tuần trước: {avg_ks25_qtkd_prev['Elearning']:.2f}%).
-- **Lớp làm tăng chỉ số**:
-  - Lớp **HN-K25-QTKD1** (GV/TG Lê Thành Ngọc) có tỷ lệ vắng học vọt lên **33.94%** (tăng 17.69%).
-  - Lớp **HN-K25-QTKD2** (GV Nguyễn Ngọc Vân Khanh, TG Lâm Tùng Dương) tăng tỷ lệ nợ bài tập lên **13.00%** (tăng 11.50%).
-  - Lớp **HN-K25-QTKD3** (GV Nguyễn Ngọc Vân Khanh, TG Lâm Tùng Dương) tăng mạnh vi phạm chậm trễ Elearning từ 17.78% lên **33.33%** (+15.56%).
-- **Đánh giá tuần**: Tình hình kỷ luật khóa QTKD đi xuống rất nghiêm trọng ở cả 3 khía cạnh. Sinh viên nghỉ học nhiều, lười làm bài tập tự học và không hoàn thành Elearning. Năng lực quản lý của thầy Lê Thành Ngọc và TG Lâm Tùng Dương cần được chấn chỉnh.
 
-#### 🛠️ Giải pháp đề xuất:
-1. **Thiết lập cơ chế báo cáo chuyên cần hàng ngày**: Yêu cầu thầy Lê Thành Ngọc báo cáo sĩ số lớp ngay sau 15 phút bắt đầu buổi học. Trợ giảng gọi điện chấn chỉnh học viên vắng học ngay lập tức.
-2. **Giới hạn thời gian làm Elearning**: Đặt thông báo thời hạn làm Elearning chặt chẽ trên nhóm Zalo lớp hàng ngày.
-"""
+# Tự động phân tích lớp có vi phạm cao
+def get_high_violation_classes(weekly_stats_dict):
+    alerts = []
+    for gkey, ginfo in weekly_stats_dict.items():
+        for cls, cls_data in ginfo['curr'].items():
+            m = cls_data['metrics']
+            cc = m.get('Chuyên cần', 0.0)
+            bt = m.get('Bài tập', 0.0)
+            el = m.get('Elearning', 0.0)
+            issues = []
+            if cc > 15.0:
+                issues.append(f"Vắng học {cc:.1f}%")
+            if bt > 10.0:
+                issues.append(f"Nợ bài {bt:.1f}%")
+            if el > 15.0:
+                issues.append(f"Chậm Elearning {el:.1f}%")
+            if issues:
+                alerts.append(f"  - Lớp **{cls}** ({cls_data['teacher']}/{cls_data['tg']}): " + ", ".join(issues))
+    if not alerts:
+        return "  - Không có lớp nào có chỉ số vi phạm vượt ngưỡng báo động."
+    return "\n".join(alerts)
+
+high_violations_text = get_high_violation_classes(weekly_stats)
+
+cc_curr_val = avg_ks25_qtkd_curr['Chuyên cần']
+bt_curr_val = avg_ks25_qtkd_curr['Bài tập']
+el_curr_val = avg_ks25_qtkd_curr['Elearning']
+
+cc_prev_val = avg_ks25_qtkd_prev['Chuyên cần']
+bt_prev_val = avg_ks25_qtkd_prev['Bài tập']
+el_prev_val = avg_ks25_qtkd_prev['Elearning']
+
+markdown_content += """
+#### 📝 Đánh giá chung khóa QTKD-KS25:
+- **Chỉ số vi phạm trung bình tuần vừa qua**: Chuyên cần vắng **{:.2f}%**, nợ bài tập **{:.2f}%**, chậm Elearning **{:.2f}%**.
+- **Xu hướng so với tuần trước**:
+  - Chuyên cần: **{:+.2f}%** (Tuần trước: {:.2f}%).
+  - Bài tập: **{:+.2f}%** (Tuần trước: {:.2f}%).
+  - Elearning: **{:+.2f}%** (Tuần trước: {:.2f}%).
+
+### II. CÁC LỚP VI PHẠM VƯỢT NGƯỠNG CẦN CHÚ Ý
+{}
+
+### III. GIẢI PHÁP ĐỀ XUẤT
+1. **Đối với các lớp có tỷ lệ vắng > 15%**: Trợ giảng cần phối hợp với Giảng viên liên hệ ngay học viên vắng học để xác minh lý do và đôn đốc đi học lại.
+2. **Đối với các lớp có nợ bài > 10% hoặc chậm Elearning > 15%**: GV/TG cần nhắc nhở trực tiếp sinh viên làm bài tập trên LMS/GitHub và thiết lập thời hạn chót nghiêm khắc.
+""".format(
+    cc_curr_val, bt_curr_val, el_curr_val,
+    cc_curr_val - cc_prev_val, cc_prev_val,
+    bt_curr_val - bt_prev_val, bt_prev_val,
+    el_curr_val - el_prev_val, el_prev_val,
+    high_violations_text
+)
 
 markdown_content += r"""
 ## II. ĐÁNH GIÁ NĂNG LỰC QUẢN TRỊ LỚP TÍCH LŨY CỦA GIẢNG VIÊN VÀ TRỢ GIẢNG (CMI HISTORICAL RANKING)
