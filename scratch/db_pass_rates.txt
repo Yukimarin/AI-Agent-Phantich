@@ -1,0 +1,419 @@
+ClassID: 151 | ClassName: BA-PTON260513 | CourseID: 200 | CourseName: Kỹ năng khơi gợi yêu cầu | Total: 26 | Passed: 0 | PassRate: 0.00%
+ClassID: 151 | ClassName: BA-PTON260513 | CourseID: 201 | CourseName: Kỹ năng phân tích yêu cầu | Total: 26 | Passed: 0 | PassRate: 0.00%
+ClassID: 174 | ClassName: BA-PTON260623 | CourseID: 200 | CourseName: Kỹ năng khơi gợi yêu cầu | Total: 21 | Passed: 0 | PassRate: 0.00%
+ClassID: 174 | ClassName: BA-PTON260623 | CourseID: 197 | CourseName: Tổng quan về BA | Total: 22 | Passed: 0 | PassRate: 0.00%
+ClassID: 111 | ClassName: BDA-PTON260113 | CourseID: 125 | CourseName: Module 1: Tổng quan và chuẩn bị dữ liệu | Total: 16 | Passed: 0 | PassRate: 0.00%
+ClassID: 111 | ClassName: BDA-PTON260113 | CourseID: 126 | CourseName: Module 2: Mô hình hóa và tính toán | Total: 16 | Passed: 0 | PassRate: 0.00%
+ClassID: 111 | ClassName: BDA-PTON260113 | CourseID: 127 | CourseName: Module 3: Báo cáo và trực quan hóa | Total: 16 | Passed: 0 | PassRate: 0.00%
+ClassID: 131 | ClassName: BDA-PTON260330 | CourseID: 179 | CourseName: Module 1: Power BI 2.0 | Total: 16 | Passed: 0 | PassRate: 0.00%
+ClassID: 131 | ClassName: BDA-PTON260330 | CourseID: 180 | CourseName: Module 2: Power BI 2.0 | Total: 15 | Passed: 0 | PassRate: 0.00%
+ClassID: 131 | ClassName: BDA-PTON260330 | CourseID: 181 | CourseName: Module 3: Power BI 2.0 | Total: 15 | Passed: 0 | PassRate: 0.00%
+ClassID: 166 | ClassName: BRSE-PTON-NI260527 | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 11 | Passed: 0 | PassRate: 0.00%
+ClassID: 175 | ClassName: BRSE-PTON-NI260625 | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 13 | Passed: 0 | PassRate: 0.00%
+ClassID: 139 | ClassName: BRSE-PTON260413 | CourseID: 209 | CourseName: AI for BrSE | Total: 11 | Passed: 0 | PassRate: 0.00%
+ClassID: 139 | ClassName: BRSE-PTON260413 | CourseID: 208 | CourseName: Basic Design & Giao tiếp Dev | Total: 11 | Passed: 0 | PassRate: 0.00%
+ClassID: 139 | ClassName: BRSE-PTON260413 | CourseID: 186 | CourseName: Document Core | Total: 11 | Passed: 0 | PassRate: 0.00%
+ClassID: 139 | ClassName: BRSE-PTON260413 | CourseID: 185 | CourseName: Nền tảng BrSE& Môi trường dự án Nhật  | Total: 11 | Passed: 0 | PassRate: 0.00%
+ClassID: 139 | ClassName: BRSE-PTON260413 | CourseID: 210 | CourseName: Tiếng Nhật BrSE | Total: 11 | Passed: 0 | PassRate: 0.00%
+ClassID: 113 | ClassName: EMB-PTOFF260127 | CourseID: 145 | CourseName: Embedded - Lập trình C | Total: 36 | Passed: 0 | PassRate: 0.00%
+ClassID: 153 | ClassName: EMB-PTOFF260514 | CourseID: 145 | CourseName: Embedded - Lập trình C | Total: 36 | Passed: 0 | PassRate: 0.00%
+ClassID: 93 | ClassName: HCM-ENG-LV1.1 | CourseID: 94 | CourseName: [ENG105-K25] - Tiếng Anh Toeic 1 | Total: 39 | Passed: 0 | PassRate: 0.00%
+ClassID: 92 | ClassName: HCM-ENG-LV1.2 | CourseID: 94 | CourseName: [ENG105-K25] - Tiếng Anh Toeic 1 | Total: 42 | Passed: 0 | PassRate: 0.00%
+ClassID: 65 | ClassName: HCM-ENG-LV2.1 | CourseID: 58 | CourseName: ENG205_K24 - Tiếng Anh Toeic 2 | Total: 28 | Passed: 28 | PassRate: 100.00%
+ClassID: 91 | ClassName: HCM-ENG-LV2.2 | CourseID: 95 | CourseName: [ENG205-K25] - Tiếng Anh Toeic 2 | Total: 38 | Passed: 0 | PassRate: 0.00%
+ClassID: 167 | ClassName: HCM-ENG-LV2.3 - Jax | CourseID: 95 | CourseName: [ENG205-K25] - Tiếng Anh Toeic 2 | Total: 38 | Passed: 0 | PassRate: 0.00%
+ClassID: 168 | ClassName: HCM-ENG-LV2.4 - Jax | CourseID: 95 | CourseName: [ENG205-K25] - Tiếng Anh Toeic 2 | Total: 38 | Passed: 0 | PassRate: 0.00%
+ClassID: 121 | ClassName: HCM-ENG-LV3.1 | CourseID: 59 | CourseName: ENG305-K24 - Tiếng Anh Toeic 3 | Total: 21 | Passed: 0 | PassRate: 0.00%
+ClassID: 169 | ClassName: HCM-ENG-LV3.2 - Jax | CourseID: 203 | CourseName: [ENG305-K25] - Tiếng Anh Toeic 3 | Total: 33 | Passed: 0 | PassRate: 0.00%
+ClassID: 66 | ClassName: HCM-ENG-LV4.1	 | CourseID: 62 | CourseName: [ENG405-K24] - Tiếng Anh Toeic 4 | Total: 41 | Passed: 41 | PassRate: 100.00%
+ClassID: 90 | ClassName: HCM-JPN-N5.1 | CourseID: 92 | CourseName: [JPN105-K25] - Tiếng Nhật 1 | Total: 41 | Passed: 0 | PassRate: 0.00%
+ClassID: 29 | ClassName: HCM-KS23A | CourseID: 30 | CourseName: [IT201-K23] Cấu trúc dữ liệu và giải thuật | Total: 5 | Passed: 5 | PassRate: 100.00%
+ClassID: 29 | ClassName: HCM-KS23A | CourseID: 34 | CourseName: [IT202-K23] Cơ sở dữ liệu | Total: 5 | Passed: 4 | PassRate: 80.00%
+ClassID: 29 | ClassName: HCM-KS23A | CourseID: 39 | CourseName: [IT203-K23] - Java Fundamental | Total: 3 | Passed: 3 | PassRate: 100.00%
+ClassID: 29 | ClassName: HCM-KS23A | CourseID: 48 | CourseName: [IT204-K23] - Lập trình ứng dụng Web | Total: 4 | Passed: 3 | PassRate: 75.00%
+ClassID: 29 | ClassName: HCM-KS23A | CourseID: 64 | CourseName: [IT205-K23] - Java Web Services | Total: 5 | Passed: 5 | PassRate: 100.00%
+ClassID: 29 | ClassName: HCM-KS23A | CourseID: 84 | CourseName: [IT206-K23] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 5 | Passed: 3 | PassRate: 60.00%
+ClassID: 29 | ClassName: HCM-KS23A | CourseID: 83 | CourseName: [IT207-K23] - Lập trình Mobile App với React native | Total: 5 | Passed: 1 | PassRate: 20.00%
+ClassID: 29 | ClassName: HCM-KS23A | CourseID: 80 | CourseName: [ITTTRK303-K23] - Thực tập học kỳ III | Total: 3 | Passed: 3 | PassRate: 100.00%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 194 | CourseName: [ IT211 - K24 ] Java Web Service | Total: 44 | Passed: 30 | PassRate: 68.18%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 214 | CourseName: [IT-212] AI Application in Action | Total: 44 | Passed: 0 | PassRate: 0.00%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 54 | CourseName: [IT104-K24] - Lập trình Frontend với React.js | Total: 33 | Passed: 22 | PassRate: 66.67%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 118 | CourseName: [IT106-K24] Phát triển phần mềm với Agile / Scrum | Total: 32 | Passed: 23 | PassRate: 71.88%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 56 | CourseName: [IT201-K24] Cấu trúc dữ liệu và giải thuật | Total: 34 | Passed: 28 | PassRate: 82.35%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 162 | CourseName: [IT203B- K24] - Java Advanced | Total: 25 | Passed: 18 | PassRate: 72.00%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 177 | CourseName: [IT210 - K24] - Java Web Application | Total: 51 | Passed: 41 | PassRate: 80.39%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 102 | CourseName: IT105-K24 Phân tích thiết kế hệ thống | Total: 32 | Passed: 19 | PassRate: 59.38%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 123 | CourseName: IT202 - K24 - Cơ sở dữ liệu | Total: 28 | Passed: 22 | PassRate: 78.57%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 140 | CourseName: IT203A-K24 - Java Fundamental | Total: 28 | Passed: 21 | PassRate: 75.00%
+ClassID: 63 | ClassName: HCM-KS24-CNTT1 | CourseID: 122 | CourseName: ITTTRK302-K24 Thực tập kì II | Total: 28 | Passed: 24 | PassRate: 85.71%
+ClassID: 64 | ClassName: HCM-KS24-CNTT2 | CourseID: 54 | CourseName: [IT104-K24] - Lập trình Frontend với React.js | Total: 33 | Passed: 26 | PassRate: 78.79%
+ClassID: 64 | ClassName: HCM-KS24-CNTT2 | CourseID: 118 | CourseName: [IT106-K24] Phát triển phần mềm với Agile / Scrum | Total: 28 | Passed: 23 | PassRate: 82.14%
+ClassID: 64 | ClassName: HCM-KS24-CNTT2 | CourseID: 56 | CourseName: [IT201-K24] Cấu trúc dữ liệu và giải thuật | Total: 34 | Passed: 27 | PassRate: 79.41%
+ClassID: 64 | ClassName: HCM-KS24-CNTT2 | CourseID: 162 | CourseName: [IT203B- K24] - Java Advanced | Total: 27 | Passed: 18 | PassRate: 66.67%
+ClassID: 64 | ClassName: HCM-KS24-CNTT2 | CourseID: 17 | CourseName: IT103-K24 | Total: 33 | Passed: 0 | PassRate: 0.00%
+ClassID: 64 | ClassName: HCM-KS24-CNTT2 | CourseID: 102 | CourseName: IT105-K24 Phân tích thiết kế hệ thống | Total: 29 | Passed: 23 | PassRate: 79.31%
+ClassID: 64 | ClassName: HCM-KS24-CNTT2 | CourseID: 123 | CourseName: IT202 - K24 - Cơ sở dữ liệu | Total: 28 | Passed: 25 | PassRate: 89.29%
+ClassID: 64 | ClassName: HCM-KS24-CNTT2 | CourseID: 140 | CourseName: IT203A-K24 - Java Fundamental | Total: 27 | Passed: 20 | PassRate: 74.07%
+ClassID: 64 | ClassName: HCM-KS24-CNTT2 | CourseID: 122 | CourseName: ITTTRK302-K24 Thực tập kì II | Total: 27 | Passed: 26 | PassRate: 96.30%
+ClassID: 69 | ClassName: HCM-KS24-CNTT3 | CourseID: 70 | CourseName: [IT102-K24- Học lại ] - Lập trình cơ bản C | Total: 12 | Passed: 7 | PassRate: 58.33%
+ClassID: 69 | ClassName: HCM-KS24-CNTT3 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 12 | Passed: 8 | PassRate: 66.67%
+ClassID: 18 | ClassName: HCM-KS24A-PTIT | CourseID: 47 | CourseName: [ITTTRK301-K24] - Thực tập kỳ I | Total: 42 | Passed: 30 | PassRate: 71.43%
+ClassID: 18 | ClassName: HCM-KS24A-PTIT | CourseID: 18 | CourseName: IT101-K24 | Total: 42 | Passed: 37 | PassRate: 88.10%
+ClassID: 18 | ClassName: HCM-KS24A-PTIT | CourseID: 16 | CourseName: IT102-K24 | Total: 43 | Passed: 34 | PassRate: 79.07%
+ClassID: 18 | ClassName: HCM-KS24A-PTIT | CourseID: 17 | CourseName: IT103-K24 | Total: 35 | Passed: 29 | PassRate: 82.86%
+ClassID: 19 | ClassName: HCM-KS24B-PTIT | CourseID: 47 | CourseName: [ITTTRK301-K24] - Thực tập kỳ I | Total: 39 | Passed: 23 | PassRate: 58.97%
+ClassID: 19 | ClassName: HCM-KS24B-PTIT | CourseID: 18 | CourseName: IT101-K24 | Total: 41 | Passed: 36 | PassRate: 87.80%
+ClassID: 19 | ClassName: HCM-KS24B-PTIT | CourseID: 16 | CourseName: IT102-K24 | Total: 42 | Passed: 31 | PassRate: 73.81%
+ClassID: 19 | ClassName: HCM-KS24B-PTIT | CourseID: 17 | CourseName: IT103-K24 | Total: 29 | Passed: 24 | PassRate: 82.76%
+ClassID: 81 | ClassName: HCM-KS25-CNTT1 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 39 | Passed: 34 | PassRate: 87.18%
+ClassID: 81 | ClassName: HCM-KS25-CNTT1 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 39 | Passed: 20 | PassRate: 51.28%
+ClassID: 81 | ClassName: HCM-KS25-CNTT1 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 41 | Passed: 38 | PassRate: 92.68%
+ClassID: 81 | ClassName: HCM-KS25-CNTT1 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 39 | Passed: 38 | PassRate: 97.44%
+ClassID: 81 | ClassName: HCM-KS25-CNTT1 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 39 | Passed: 33 | PassRate: 84.62%
+ClassID: 80 | ClassName: HCM-KS25-CNTT2 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 40 | Passed: 31 | PassRate: 77.50%
+ClassID: 80 | ClassName: HCM-KS25-CNTT2 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 40 | Passed: 18 | PassRate: 45.00%
+ClassID: 80 | ClassName: HCM-KS25-CNTT2 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 40 | Passed: 39 | PassRate: 97.50%
+ClassID: 80 | ClassName: HCM-KS25-CNTT2 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 40 | Passed: 36 | PassRate: 90.00%
+ClassID: 80 | ClassName: HCM-KS25-CNTT2 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 40 | Passed: 34 | PassRate: 85.00%
+ClassID: 79 | ClassName: HCM-KS25-CNTT3 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 36 | Passed: 24 | PassRate: 66.67%
+ClassID: 79 | ClassName: HCM-KS25-CNTT3 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 36 | Passed: 8 | PassRate: 22.22%
+ClassID: 79 | ClassName: HCM-KS25-CNTT3 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 42 | Passed: 37 | PassRate: 88.10%
+ClassID: 79 | ClassName: HCM-KS25-CNTT3 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 36 | Passed: 36 | PassRate: 100.00%
+ClassID: 79 | ClassName: HCM-KS25-CNTT3 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 36 | Passed: 24 | PassRate: 66.67%
+ClassID: 78 | ClassName: HCM-KS25-CNTT4 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 44 | Passed: 33 | PassRate: 75.00%
+ClassID: 78 | ClassName: HCM-KS25-CNTT4 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 44 | Passed: 15 | PassRate: 34.09%
+ClassID: 78 | ClassName: HCM-KS25-CNTT4 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 34 | Passed: 31 | PassRate: 91.18%
+ClassID: 78 | ClassName: HCM-KS25-CNTT4 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 44 | Passed: 41 | PassRate: 93.18%
+ClassID: 78 | ClassName: HCM-KS25-CNTT4 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 42 | Passed: 24 | PassRate: 57.14%
+ClassID: 141 | ClassName: HCM-KS25-CNTT5_HK2 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 39 | Passed: 0 | PassRate: 0.00%
+ClassID: 141 | ClassName: HCM-KS25-CNTT5_HK2 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 40 | Passed: 40 | PassRate: 100.00%
+ClassID: 141 | ClassName: HCM-KS25-CNTT5_HK2 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 39 | Passed: 27 | PassRate: 69.23%
+ClassID: 142 | ClassName: HCM-KS25-CNTT6_HK2 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 40 | Passed: 0 | PassRate: 0.00%
+ClassID: 142 | ClassName: HCM-KS25-CNTT6_HK2 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 41 | Passed: 35 | PassRate: 85.37%
+ClassID: 142 | ClassName: HCM-KS25-CNTT6_HK2 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 41 | Passed: 25 | PassRate: 60.98%
+ClassID: 143 | ClassName: HCM-KS25-CNTT7_HK2 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 42 | Passed: 0 | PassRate: 0.00%
+ClassID: 143 | ClassName: HCM-KS25-CNTT7_HK2 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 42 | Passed: 34 | PassRate: 80.95%
+ClassID: 143 | ClassName: HCM-KS25-CNTT7_HK2 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 42 | Passed: 22 | PassRate: 52.38%
+ClassID: 144 | ClassName: HCM-KS25-CNTT8_HK2 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 38 | Passed: 0 | PassRate: 0.00%
+ClassID: 144 | ClassName: HCM-KS25-CNTT8_HK2 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 40 | Passed: 14 | PassRate: 35.00%
+ClassID: 144 | ClassName: HCM-KS25-CNTT8_HK2 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 38 | Passed: 7 | PassRate: 18.42%
+ClassID: 8 | ClassName: HN-ENG-KS24A-PTIT | CourseID: 47 | CourseName: [ITTTRK301-K24] - Thực tập kỳ I | Total: 35 | Passed: 30 | PassRate: 85.71%
+ClassID: 8 | ClassName: HN-ENG-KS24A-PTIT | CourseID: 18 | CourseName: IT101-K24 | Total: 44 | Passed: 36 | PassRate: 81.82%
+ClassID: 8 | ClassName: HN-ENG-KS24A-PTIT | CourseID: 16 | CourseName: IT102-K24 | Total: 44 | Passed: 31 | PassRate: 70.45%
+ClassID: 8 | ClassName: HN-ENG-KS24A-PTIT | CourseID: 17 | CourseName: IT103-K24 | Total: 44 | Passed: 33 | PassRate: 75.00%
+ClassID: 9 | ClassName: HN-ENG-KS24B-PTIT | CourseID: 47 | CourseName: [ITTTRK301-K24] - Thực tập kỳ I | Total: 39 | Passed: 37 | PassRate: 94.87%
+ClassID: 9 | ClassName: HN-ENG-KS24B-PTIT | CourseID: 18 | CourseName: IT101-K24 | Total: 45 | Passed: 41 | PassRate: 91.11%
+ClassID: 9 | ClassName: HN-ENG-KS24B-PTIT | CourseID: 16 | CourseName: IT102-K24 | Total: 44 | Passed: 32 | PassRate: 72.73%
+ClassID: 9 | ClassName: HN-ENG-KS24B-PTIT | CourseID: 17 | CourseName: IT103-K24 | Total: 44 | Passed: 28 | PassRate: 63.64%
+ClassID: 12 | ClassName: HN-ENG-KS24C-PTIT | CourseID: 47 | CourseName: [ITTTRK301-K24] - Thực tập kỳ I | Total: 34 | Passed: 34 | PassRate: 100.00%
+ClassID: 12 | ClassName: HN-ENG-KS24C-PTIT | CourseID: 18 | CourseName: IT101-K24 | Total: 43 | Passed: 42 | PassRate: 97.67%
+ClassID: 12 | ClassName: HN-ENG-KS24C-PTIT | CourseID: 16 | CourseName: IT102-K24 | Total: 45 | Passed: 32 | PassRate: 71.11%
+ClassID: 12 | ClassName: HN-ENG-KS24C-PTIT | CourseID: 17 | CourseName: IT103-K24 | Total: 42 | Passed: 31 | PassRate: 73.81%
+ClassID: 59 | ClassName: HN-ENG-LV1.1 | CourseID: 29 | CourseName: ENG105-K24 - Tiếng Anh Toeic 1 | Total: 39 | Passed: 39 | PassRate: 100.00%
+ClassID: 99 | ClassName: HN-ENG-LV1.2 | CourseID: 94 | CourseName: [ENG105-K25] - Tiếng Anh Toeic 1 | Total: 46 | Passed: 0 | PassRate: 0.00%
+ClassID: 98 | ClassName: HN-ENG-LV1.3 | CourseID: 94 | CourseName: [ENG105-K25] - Tiếng Anh Toeic 1 | Total: 46 | Passed: 0 | PassRate: 0.00%
+ClassID: 97 | ClassName: HN-ENG-LV1.4 | CourseID: 94 | CourseName: [ENG105-K25] - Tiếng Anh Toeic 1 | Total: 45 | Passed: 0 | PassRate: 0.00%
+ClassID: 96 | ClassName: HN-ENG-LV1.5 | CourseID: 94 | CourseName: [ENG105-K25] - Tiếng Anh Toeic 1 | Total: 45 | Passed: 0 | PassRate: 0.00%
+ClassID: 95 | ClassName: HN-ENG-LV1.6 | CourseID: 94 | CourseName: [ENG105-K25] - Tiếng Anh Toeic 1 | Total: 45 | Passed: 0 | PassRate: 0.00%
+ClassID: 60 | ClassName: HN-ENG-LV2.1 | CourseID: 58 | CourseName: ENG205_K24 - Tiếng Anh Toeic 2 | Total: 53 | Passed: 28 | PassRate: 52.83%
+ClassID: 94 | ClassName: HN-ENG-LV2.2 | CourseID: 95 | CourseName: [ENG205-K25] - Tiếng Anh Toeic 2 | Total: 46 | Passed: 0 | PassRate: 0.00%
+ClassID: 157 | ClassName: HN-ENG-LV2.3 - Jax | CourseID: 95 | CourseName: [ENG205-K25] - Tiếng Anh Toeic 2 | Total: 47 | Passed: 0 | PassRate: 0.00%
+ClassID: 158 | ClassName: HN-ENG-LV2.4 - Jax | CourseID: 95 | CourseName: [ENG205-K25] - Tiếng Anh Toeic 2 | Total: 48 | Passed: 0 | PassRate: 0.00%
+ClassID: 159 | ClassName: HN-ENG-LV2.5 - Jax | CourseID: 95 | CourseName: [ENG205-K25] - Tiếng Anh Toeic 2 | Total: 46 | Passed: 0 | PassRate: 0.00%
+ClassID: 160 | ClassName: HN-ENG-LV2.6 - Jax | CourseID: 95 | CourseName: [ENG205-K25] - Tiếng Anh Toeic 2 | Total: 50 | Passed: 0 | PassRate: 0.00%
+ClassID: 61 | ClassName: HN-ENG-LV3.1 | CourseID: 29 | CourseName: ENG105-K24 - Tiếng Anh Toeic 1 | Total: 38 | Passed: 38 | PassRate: 100.00%
+ClassID: 61 | ClassName: HN-ENG-LV3.1 | CourseID: 59 | CourseName: ENG305-K24 - Tiếng Anh Toeic 3 | Total: 39 | Passed: 39 | PassRate: 100.00%
+ClassID: 122 | ClassName: HN-ENG-LV3.2 | CourseID: 59 | CourseName: ENG305-K24 - Tiếng Anh Toeic 3 | Total: 31 | Passed: 0 | PassRate: 0.00%
+ClassID: 161 | ClassName: HN-ENG-LV3.3 - Jax | CourseID: 203 | CourseName: [ENG305-K25] - Tiếng Anh Toeic 3 | Total: 38 | Passed: 0 | PassRate: 0.00%
+ClassID: 62 | ClassName: HN-ENG-LV4.1 | CourseID: 62 | CourseName: [ENG405-K24] - Tiếng Anh Toeic 4 | Total: 58 | Passed: 58 | PassRate: 100.00%
+ClassID: 123 | ClassName: HN-ENG-LV4.2 | CourseID: 62 | CourseName: [ENG405-K24] - Tiếng Anh Toeic 4 | Total: 30 | Passed: 0 | PassRate: 0.00%
+ClassID: 123 | ClassName: HN-ENG-LV4.2 | CourseID: 59 | CourseName: ENG305-K24 - Tiếng Anh Toeic 3 | Total: 27 | Passed: 0 | PassRate: 0.00%
+ClassID: 13 | ClassName: HN-JPN-KS24A-PTIT | CourseID: 47 | CourseName: [ITTTRK301-K24] - Thực tập kỳ I | Total: 18 | Passed: 18 | PassRate: 100.00%
+ClassID: 13 | ClassName: HN-JPN-KS24A-PTIT | CourseID: 18 | CourseName: IT101-K24 | Total: 37 | Passed: 36 | PassRate: 97.30%
+ClassID: 13 | ClassName: HN-JPN-KS24A-PTIT | CourseID: 16 | CourseName: IT102-K24 | Total: 43 | Passed: 14 | PassRate: 32.56%
+ClassID: 13 | ClassName: HN-JPN-KS24A-PTIT | CourseID: 17 | CourseName: IT103-K24 | Total: 36 | Passed: 14 | PassRate: 38.89%
+ClassID: 14 | ClassName: HN-JPN-KS24B-PTIT | CourseID: 47 | CourseName: [ITTTRK301-K24] - Thực tập kỳ I | Total: 25 | Passed: 23 | PassRate: 92.00%
+ClassID: 14 | ClassName: HN-JPN-KS24B-PTIT | CourseID: 18 | CourseName: IT101-K24 | Total: 42 | Passed: 36 | PassRate: 85.71%
+ClassID: 14 | ClassName: HN-JPN-KS24B-PTIT | CourseID: 16 | CourseName: IT102-K24 | Total: 43 | Passed: 19 | PassRate: 44.19%
+ClassID: 14 | ClassName: HN-JPN-KS24B-PTIT | CourseID: 17 | CourseName: IT103-K24 | Total: 39 | Passed: 19 | PassRate: 48.72%
+ClassID: 15 | ClassName: HN-JPN-KS24C-PTIT | CourseID: 47 | CourseName: [ITTTRK301-K24] - Thực tập kỳ I | Total: 21 | Passed: 19 | PassRate: 90.48%
+ClassID: 15 | ClassName: HN-JPN-KS24C-PTIT | CourseID: 18 | CourseName: IT101-K24 | Total: 41 | Passed: 33 | PassRate: 80.49%
+ClassID: 15 | ClassName: HN-JPN-KS24C-PTIT | CourseID: 16 | CourseName: IT102-K24 | Total: 40 | Passed: 21 | PassRate: 52.50%
+ClassID: 15 | ClassName: HN-JPN-KS24C-PTIT | CourseID: 17 | CourseName: IT103-K24 | Total: 37 | Passed: 28 | PassRate: 75.68%
+ClassID: 56 | ClassName: HN-JPN-N4.1 | CourseID: 60 | CourseName: JPN205-K24 - Tiếng Nhật 2 | Total: 23 | Passed: 23 | PassRate: 100.00%
+ClassID: 125 | ClassName: HN-JPN-N4.2 | CourseID: 61 | CourseName: [JPN305-K24] - Tiếng Nhật 3 | Total: 45 | Passed: 0 | PassRate: 0.00%
+ClassID: 132 | ClassName: HN-JPN-N4.3 | CourseID: 61 | CourseName: [JPN305-K24] - Tiếng Nhật 3 | Total: 23 | Passed: 0 | PassRate: 0.00%
+ClassID: 162 | ClassName: HN-JPN-N4.4 - Riki | CourseID: 93 | CourseName: [JPN205-K25] - Tiếng Nhật 2 | Total: 35 | Passed: 0 | PassRate: 0.00%
+ClassID: 163 | ClassName: HN-JPN-N4.5 - Riki | CourseID: 93 | CourseName: [JPN205-K25] - Tiếng Nhật 2 | Total: 35 | Passed: 0 | PassRate: 0.00%
+ClassID: 57 | ClassName: HN-JPN-N5.1 | CourseID: 25 | CourseName: JPN105-K24 - Tiếng Nhật 1 | Total: 36 | Passed: 36 | PassRate: 100.00%
+ClassID: 58 | ClassName: HN-JPN-N5.2 | CourseID: 25 | CourseName: JPN105-K24 - Tiếng Nhật 1 | Total: 41 | Passed: 33 | PassRate: 80.49%
+ClassID: 86 | ClassName: HN-JPN-N5.3 | CourseID: 92 | CourseName: [JPN105-K25] - Tiếng Nhật 1 | Total: 33 | Passed: 0 | PassRate: 0.00%
+ClassID: 87 | ClassName: HN-JPN-N5.4 | CourseID: 92 | CourseName: [JPN105-K25] - Tiếng Nhật 1 | Total: 33 | Passed: 0 | PassRate: 0.00%
+ClassID: 88 | ClassName: HN-JPN-N5.5 | CourseID: 92 | CourseName: [JPN105-K25] - Tiếng Nhật 1 | Total: 34 | Passed: 0 | PassRate: 0.00%
+ClassID: 89 | ClassName: HN-JPN-N5.6 | CourseID: 92 | CourseName: [JPN105-K25] - Tiếng Nhật 1 | Total: 32 | Passed: 0 | PassRate: 0.00%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 107 | CourseName: [DA201] CSDL và truy vấn dữ liệu với SQL | Total: 41 | Passed: 28 | PassRate: 68.29%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 130 | CourseName: [DA202] Phân tích dữ liệu trong kinh doanh | Total: 40 | Passed: 32 | PassRate: 80.00%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 188 | CourseName: [DTB201] Chuyển đổi số trong kinh doanh | Total: 37 | Passed: 21 | PassRate: 56.76%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 178 | CourseName: [DTB202] Chuyển đổi số trong doanh nghiệp | Total: 37 | Passed: 23 | PassRate: 62.16%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 69 | CourseName: [MAN101] - Quản trị học căn bản | Total: 41 | Passed: 40 | PassRate: 97.56%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 157 | CourseName: [MAN103] - Quản trị doanh nghiệp tổng hợp | Total: 40 | Passed: 28 | PassRate: 70.00%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 169 | CourseName: [MAN104] Quản trị vận hành doanh nghiệp | Total: 38 | Passed: 27 | PassRate: 71.05%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 158 | CourseName: [PRJ301] Dự án kinh doanh số 1 | Total: 40 | Passed: 36 | PassRate: 90.00%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 218 | CourseName: [PRJ302] Dự án kinh doanh số 2 | Total: 33 | Passed: 0 | PassRate: 0.00%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 82 | CourseName: [SEL101] Kỹ năng bán hàng | Total: 40 | Passed: 36 | PassRate: 90.00%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 86 | CourseName: [SKL101] - Kỹ năng tư duy phân tích và học tập chủ động | Total: 41 | Passed: 41 | PassRate: 100.00%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 108 | CourseName: [SKL102] Tin học văn phòng | Total: 41 | Passed: 27 | PassRate: 65.85%
+ClassID: 84 | ClassName: HN-K25-QTKD1 | CourseID: 187 | CourseName: [SKL103] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 37 | Passed: 32 | PassRate: 86.49%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 107 | CourseName: [DA201] CSDL và truy vấn dữ liệu với SQL | Total: 41 | Passed: 38 | PassRate: 92.68%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 130 | CourseName: [DA202] Phân tích dữ liệu trong kinh doanh | Total: 41 | Passed: 39 | PassRate: 95.12%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 188 | CourseName: [DTB201] Chuyển đổi số trong kinh doanh | Total: 40 | Passed: 34 | PassRate: 85.00%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 178 | CourseName: [DTB202] Chuyển đổi số trong doanh nghiệp | Total: 40 | Passed: 35 | PassRate: 87.50%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 69 | CourseName: [MAN101] - Quản trị học căn bản | Total: 40 | Passed: 40 | PassRate: 100.00%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 157 | CourseName: [MAN103] - Quản trị doanh nghiệp tổng hợp | Total: 41 | Passed: 36 | PassRate: 87.80%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 169 | CourseName: [MAN104] Quản trị vận hành doanh nghiệp | Total: 40 | Passed: 36 | PassRate: 90.00%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 158 | CourseName: [PRJ301] Dự án kinh doanh số 1 | Total: 41 | Passed: 39 | PassRate: 95.12%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 218 | CourseName: [PRJ302] Dự án kinh doanh số 2 | Total: 40 | Passed: 0 | PassRate: 0.00%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 82 | CourseName: [SEL101] Kỹ năng bán hàng | Total: 41 | Passed: 36 | PassRate: 87.80%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 86 | CourseName: [SKL101] - Kỹ năng tư duy phân tích và học tập chủ động | Total: 40 | Passed: 39 | PassRate: 97.50%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 108 | CourseName: [SKL102] Tin học văn phòng | Total: 41 | Passed: 35 | PassRate: 85.37%
+ClassID: 83 | ClassName: HN-K25-QTKD2 | CourseID: 187 | CourseName: [SKL103] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 40 | Passed: 36 | PassRate: 90.00%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 107 | CourseName: [DA201] CSDL và truy vấn dữ liệu với SQL | Total: 33 | Passed: 25 | PassRate: 75.76%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 130 | CourseName: [DA202] Phân tích dữ liệu trong kinh doanh | Total: 33 | Passed: 28 | PassRate: 84.85%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 188 | CourseName: [DTB201] Chuyển đổi số trong kinh doanh | Total: 28 | Passed: 19 | PassRate: 67.86%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 178 | CourseName: [DTB202] Chuyển đổi số trong doanh nghiệp | Total: 27 | Passed: 24 | PassRate: 88.89%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 69 | CourseName: [MAN101] - Quản trị học căn bản | Total: 33 | Passed: 29 | PassRate: 87.88%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 157 | CourseName: [MAN103] - Quản trị doanh nghiệp tổng hợp | Total: 32 | Passed: 21 | PassRate: 65.62%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 169 | CourseName: [MAN104] Quản trị vận hành doanh nghiệp | Total: 28 | Passed: 22 | PassRate: 78.57%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 158 | CourseName: [PRJ301] Dự án kinh doanh số 1 | Total: 32 | Passed: 29 | PassRate: 90.62%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 218 | CourseName: [PRJ302] Dự án kinh doanh số 2 | Total: 27 | Passed: 0 | PassRate: 0.00%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 82 | CourseName: [SEL101] Kỹ năng bán hàng | Total: 33 | Passed: 29 | PassRate: 87.88%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 86 | CourseName: [SKL101] - Kỹ năng tư duy phân tích và học tập chủ động | Total: 34 | Passed: 33 | PassRate: 97.06%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 108 | CourseName: [SKL102] Tin học văn phòng | Total: 33 | Passed: 27 | PassRate: 81.82%
+ClassID: 82 | ClassName: HN-K25-QTKD3 | CourseID: 187 | CourseName: [SKL103] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 27 | Passed: 25 | PassRate: 92.59%
+ClassID: 25 | ClassName: HN-KS23A-PTIT | CourseID: 47 | CourseName: [ITTTRK301-K24] - Thực tập kỳ I | Total: 62 | Passed: 40 | PassRate: 64.52%
+ClassID: 25 | ClassName: HN-KS23A-PTIT | CourseID: 36 | CourseName: [ITTTRK303-K23] - Thực tập học kỳ II | Total: 62 | Passed: 26 | PassRate: 41.94%
+ClassID: 25 | ClassName: HN-KS23A-PTIT | CourseID: 18 | CourseName: IT101-K24 | Total: 62 | Passed: 62 | PassRate: 100.00%
+ClassID: 25 | ClassName: HN-KS23A-PTIT | CourseID: 16 | CourseName: IT102-K24 | Total: 62 | Passed: 56 | PassRate: 90.32%
+ClassID: 25 | ClassName: HN-KS23A-PTIT | CourseID: 17 | CourseName: IT103-K24 | Total: 62 | Passed: 29 | PassRate: 46.77%
+ClassID: 25 | ClassName: HN-KS23A-PTIT | CourseID: 38 | CourseName: Lập trình Frontend với NextJs | Total: 7 | Passed: 4 | PassRate: 57.14%
+ClassID: 25 | ClassName: HN-KS23A-PTIT | CourseID: 37 | CourseName: Lập trình Frontend với ReactJs | Total: 62 | Passed: 36 | PassRate: 58.06%
+ClassID: 25 | ClassName: HN-KS23A-PTIT | CourseID: 26 | CourseName: Lập trình Frontend với VueJS | Total: 62 | Passed: 27 | PassRate: 43.55%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 30 | CourseName: [IT201-K23] Cấu trúc dữ liệu và giải thuật | Total: 38 | Passed: 33 | PassRate: 86.84%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 34 | CourseName: [IT202-K23] Cơ sở dữ liệu | Total: 37 | Passed: 35 | PassRate: 94.59%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 39 | CourseName: [IT203-K23] - Java Fundamental | Total: 31 | Passed: 28 | PassRate: 90.32%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 48 | CourseName: [IT204-K23] - Lập trình ứng dụng Web | Total: 27 | Passed: 25 | PassRate: 92.59%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 64 | CourseName: [IT205-K23] - Java Web Services | Total: 36 | Passed: 34 | PassRate: 94.44%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 84 | CourseName: [IT206-K23] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 35 | Passed: 28 | PassRate: 80.00%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 83 | CourseName: [IT207-K23] - Lập trình Mobile App với React native | Total: 35 | Passed: 27 | PassRate: 77.14%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 111 | CourseName: [IT208-K23] - Ứng dụng học máy với Python | Total: 35 | Passed: 28 | PassRate: 80.00%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 142 | CourseName: [IT209-K23] - Devops cơ bản | Total: 35 | Passed: 25 | PassRate: 71.43%
+ClassID: 26 | ClassName: HN-KS23B-PTIT | CourseID: 80 | CourseName: [ITTTRK303-K23] - Thực tập học kỳ III | Total: 29 | Passed: 29 | PassRate: 100.00%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 194 | CourseName: [ IT211 - K24 ] Java Web Service | Total: 42 | Passed: 33 | PassRate: 78.57%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 22 | Passed: 0 | PassRate: 0.00%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 214 | CourseName: [IT-212] AI Application in Action | Total: 38 | Passed: 35 | PassRate: 92.11%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 54 | CourseName: [IT104-K24] - Lập trình Frontend với React.js | Total: 44 | Passed: 40 | PassRate: 90.91%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 118 | CourseName: [IT106-K24] Phát triển phần mềm với Agile / Scrum | Total: 43 | Passed: 37 | PassRate: 86.05%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 56 | CourseName: [IT201-K24] Cấu trúc dữ liệu và giải thuật | Total: 43 | Passed: 38 | PassRate: 88.37%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 162 | CourseName: [IT203B- K24] - Java Advanced | Total: 43 | Passed: 27 | PassRate: 62.79%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 177 | CourseName: [IT210 - K24] - Java Web Application | Total: 41 | Passed: 30 | PassRate: 73.17%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 38 | Passed: 35 | PassRate: 92.11%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 102 | CourseName: IT105-K24 Phân tích thiết kế hệ thống | Total: 43 | Passed: 39 | PassRate: 90.70%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 123 | CourseName: IT202 - K24 - Cơ sở dữ liệu | Total: 43 | Passed: 35 | PassRate: 81.40%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 140 | CourseName: IT203A-K24 - Java Fundamental | Total: 44 | Passed: 32 | PassRate: 72.73%
+ClassID: 48 | ClassName: HN-KS24-CNTT1 | CourseID: 122 | CourseName: ITTTRK302-K24 Thực tập kì II | Total: 43 | Passed: 37 | PassRate: 86.05%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 194 | CourseName: [ IT211 - K24 ] Java Web Service | Total: 40 | Passed: 37 | PassRate: 92.50%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 214 | CourseName: [IT-212] AI Application in Action | Total: 39 | Passed: 39 | PassRate: 100.00%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 54 | CourseName: [IT104-K24] - Lập trình Frontend với React.js | Total: 43 | Passed: 38 | PassRate: 88.37%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 118 | CourseName: [IT106-K24] Phát triển phần mềm với Agile / Scrum | Total: 42 | Passed: 40 | PassRate: 95.24%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 56 | CourseName: [IT201-K24] Cấu trúc dữ liệu và giải thuật | Total: 42 | Passed: 41 | PassRate: 97.62%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 162 | CourseName: [IT203B- K24] - Java Advanced | Total: 42 | Passed: 35 | PassRate: 83.33%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 177 | CourseName: [IT210 - K24] - Java Web Application | Total: 40 | Passed: 36 | PassRate: 90.00%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 39 | Passed: 39 | PassRate: 100.00%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 102 | CourseName: IT105-K24 Phân tích thiết kế hệ thống | Total: 42 | Passed: 40 | PassRate: 95.24%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 123 | CourseName: IT202 - K24 - Cơ sở dữ liệu | Total: 42 | Passed: 37 | PassRate: 88.10%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 140 | CourseName: IT203A-K24 - Java Fundamental | Total: 42 | Passed: 38 | PassRate: 90.48%
+ClassID: 49 | ClassName: HN-KS24-CNTT2 | CourseID: 122 | CourseName: ITTTRK302-K24 Thực tập kì II | Total: 42 | Passed: 40 | PassRate: 95.24%
+ClassID: 156 | ClassName: HN-KS24-CNTT3 | CourseID: 194 | CourseName: [ IT211 - K24 ] Java Web Service | Total: 48 | Passed: 30 | PassRate: 62.50%
+ClassID: 156 | ClassName: HN-KS24-CNTT3 | CourseID: 214 | CourseName: [IT-212] AI Application in Action | Total: 43 | Passed: 38 | PassRate: 88.37%
+ClassID: 156 | ClassName: HN-KS24-CNTT3 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 43 | Passed: 37 | PassRate: 86.05%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 22 | Passed: 0 | PassRate: 0.00%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 70 | CourseName: [IT102-K24- Học lại ] - Lập trình cơ bản C | Total: 38 | Passed: 38 | PassRate: 100.00%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 54 | CourseName: [IT104-K24] - Lập trình Frontend với React.js | Total: 43 | Passed: 40 | PassRate: 93.02%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 118 | CourseName: [IT106-K24] Phát triển phần mềm với Agile / Scrum | Total: 35 | Passed: 26 | PassRate: 74.29%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 56 | CourseName: [IT201-K24] Cấu trúc dữ liệu và giải thuật | Total: 44 | Passed: 27 | PassRate: 61.36%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 162 | CourseName: [IT203B- K24] - Java Advanced | Total: 33 | Passed: 19 | PassRate: 57.58%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 177 | CourseName: [IT210 - K24] - Java Web Application | Total: 34 | Passed: 14 | PassRate: 41.18%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 102 | CourseName: IT105-K24 Phân tích thiết kế hệ thống | Total: 42 | Passed: 28 | PassRate: 66.67%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 123 | CourseName: IT202 - K24 - Cơ sở dữ liệu | Total: 38 | Passed: 23 | PassRate: 60.53%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 140 | CourseName: IT203A-K24 - Java Fundamental | Total: 38 | Passed: 24 | PassRate: 63.16%
+ClassID: 50 | ClassName: HN-KS24-CNTT3 - cũ | CourseID: 122 | CourseName: ITTTRK302-K24 Thực tập kì II | Total: 36 | Passed: 29 | PassRate: 80.56%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 194 | CourseName: [ IT211 - K24 ] Java Web Service | Total: 37 | Passed: 26 | PassRate: 70.27%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 214 | CourseName: [IT-212] AI Application in Action | Total: 33 | Passed: 29 | PassRate: 87.88%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 54 | CourseName: [IT104-K24] - Lập trình Frontend với React.js | Total: 42 | Passed: 37 | PassRate: 88.10%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 118 | CourseName: [IT106-K24] Phát triển phần mềm với Agile / Scrum | Total: 42 | Passed: 39 | PassRate: 92.86%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 56 | CourseName: [IT201-K24] Cấu trúc dữ liệu và giải thuật | Total: 84 | Passed: 79 | PassRate: 94.05%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 162 | CourseName: [IT203B- K24] - Java Advanced | Total: 42 | Passed: 28 | PassRate: 66.67%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 177 | CourseName: [IT210 - K24] - Java Web Application | Total: 38 | Passed: 28 | PassRate: 73.68%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 35 | Passed: 32 | PassRate: 91.43%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 102 | CourseName: IT105-K24 Phân tích thiết kế hệ thống | Total: 42 | Passed: 38 | PassRate: 90.48%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 123 | CourseName: IT202 - K24 - Cơ sở dữ liệu | Total: 42 | Passed: 28 | PassRate: 66.67%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 140 | CourseName: IT203A-K24 - Java Fundamental | Total: 42 | Passed: 34 | PassRate: 80.95%
+ClassID: 51 | ClassName: HN-KS24-CNTT4 | CourseID: 122 | CourseName: ITTTRK302-K24 Thực tập kì II | Total: 42 | Passed: 37 | PassRate: 88.10%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 22 | Passed: 0 | PassRate: 0.00%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 54 | CourseName: [IT104-K24] - Lập trình Frontend với React.js | Total: 38 | Passed: 27 | PassRate: 71.05%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 118 | CourseName: [IT106-K24] Phát triển phần mềm với Agile / Scrum | Total: 32 | Passed: 25 | PassRate: 78.12%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 56 | CourseName: [IT201-K24] Cấu trúc dữ liệu và giải thuật | Total: 39 | Passed: 20 | PassRate: 51.28%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 162 | CourseName: [IT203B- K24] - Java Advanced | Total: 29 | Passed: 20 | PassRate: 68.97%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 177 | CourseName: [IT210 - K24] - Java Web Application | Total: 29 | Passed: 11 | PassRate: 37.93%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 102 | CourseName: IT105-K24 Phân tích thiết kế hệ thống | Total: 38 | Passed: 24 | PassRate: 63.16%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 123 | CourseName: IT202 - K24 - Cơ sở dữ liệu | Total: 32 | Passed: 23 | PassRate: 71.88%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 140 | CourseName: IT203A-K24 - Java Fundamental | Total: 31 | Passed: 17 | PassRate: 54.84%
+ClassID: 52 | ClassName: HN-KS24-CNTT5 | CourseID: 122 | CourseName: ITTTRK302-K24 Thực tập kì II | Total: 32 | Passed: 21 | PassRate: 65.62%
+ClassID: 55 | ClassName: HN-KS24-CNTT6	 | CourseID: 70 | CourseName: [IT102-K24- Học lại ] - Lập trình cơ bản C | Total: 38 | Passed: 37 | PassRate: 97.37%
+ClassID: 55 | ClassName: HN-KS24-CNTT6	 | CourseID: 131 | CourseName: [IT103A-K25-Retake] Xây dựng giao diện web với HTML và CSS | Total: 33 | Passed: 9 | PassRate: 27.27%
+ClassID: 55 | ClassName: HN-KS24-CNTT6	 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 33 | Passed: 0 | PassRate: 0.00%
+ClassID: 55 | ClassName: HN-KS24-CNTT6	 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 33 | Passed: 0 | PassRate: 0.00%
+ClassID: 55 | ClassName: HN-KS24-CNTT6	 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 38 | Passed: 16 | PassRate: 42.11%
+ClassID: 55 | ClassName: HN-KS24-CNTT6	 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 37 | Passed: 10 | PassRate: 27.03%
+ClassID: 55 | ClassName: HN-KS24-CNTT6	 | CourseID: 122 | CourseName: ITTTRK302-K24 Thực tập kì II | Total: 43 | Passed: 0 | PassRate: 0.00%
+ClassID: 77 | ClassName: HN-KS25-CNTT1 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 42 | Passed: 0 | PassRate: 0.00%
+ClassID: 77 | ClassName: HN-KS25-CNTT1 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 35 | Passed: 24 | PassRate: 68.57%
+ClassID: 77 | ClassName: HN-KS25-CNTT1 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 47 | Passed: 18 | PassRate: 38.30%
+ClassID: 77 | ClassName: HN-KS25-CNTT1 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 37 | Passed: 32 | PassRate: 86.49%
+ClassID: 77 | ClassName: HN-KS25-CNTT1 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 47 | Passed: 34 | PassRate: 72.34%
+ClassID: 77 | ClassName: HN-KS25-CNTT1 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 44 | Passed: 29 | PassRate: 65.91%
+ClassID: 77 | ClassName: HN-KS25-CNTT1 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 35 | Passed: 27 | PassRate: 77.14%
+ClassID: 77 | ClassName: HN-KS25-CNTT1 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 42 | Passed: 28 | PassRate: 66.67%
+ClassID: 77 | ClassName: HN-KS25-CNTT1 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 35 | Passed: 17 | PassRate: 48.57%
+ClassID: 76 | ClassName: HN-KS25-CNTT2 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 43 | Passed: 0 | PassRate: 0.00%
+ClassID: 76 | ClassName: HN-KS25-CNTT2 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 38 | Passed: 25 | PassRate: 65.79%
+ClassID: 76 | ClassName: HN-KS25-CNTT2 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 55 | Passed: 15 | PassRate: 27.27%
+ClassID: 76 | ClassName: HN-KS25-CNTT2 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 38 | Passed: 31 | PassRate: 81.58%
+ClassID: 76 | ClassName: HN-KS25-CNTT2 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 45 | Passed: 26 | PassRate: 57.78%
+ClassID: 76 | ClassName: HN-KS25-CNTT2 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 43 | Passed: 33 | PassRate: 76.74%
+ClassID: 76 | ClassName: HN-KS25-CNTT2 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 38 | Passed: 29 | PassRate: 76.32%
+ClassID: 76 | ClassName: HN-KS25-CNTT2 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 43 | Passed: 25 | PassRate: 58.14%
+ClassID: 76 | ClassName: HN-KS25-CNTT2 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 38 | Passed: 27 | PassRate: 71.05%
+ClassID: 75 | ClassName: HN-KS25-CNTT3 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 37 | Passed: 0 | PassRate: 0.00%
+ClassID: 75 | ClassName: HN-KS25-CNTT3 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 43 | Passed: 34 | PassRate: 79.07%
+ClassID: 75 | ClassName: HN-KS25-CNTT3 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 47 | Passed: 21 | PassRate: 44.68%
+ClassID: 75 | ClassName: HN-KS25-CNTT3 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 42 | Passed: 33 | PassRate: 78.57%
+ClassID: 75 | ClassName: HN-KS25-CNTT3 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 42 | Passed: 22 | PassRate: 52.38%
+ClassID: 75 | ClassName: HN-KS25-CNTT3 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 40 | Passed: 28 | PassRate: 70.00%
+ClassID: 75 | ClassName: HN-KS25-CNTT3 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 44 | Passed: 38 | PassRate: 86.36%
+ClassID: 75 | ClassName: HN-KS25-CNTT3 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 37 | Passed: 27 | PassRate: 72.97%
+ClassID: 75 | ClassName: HN-KS25-CNTT3 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 42 | Passed: 19 | PassRate: 45.24%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 42 | Passed: 0 | PassRate: 0.00%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 41 | Passed: 34 | PassRate: 82.93%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 45 | Passed: 18 | PassRate: 40.00%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 41 | Passed: 38 | PassRate: 92.68%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 47 | Passed: 30 | PassRate: 63.83%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 44 | Passed: 32 | PassRate: 72.73%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 84 | CourseName: [IT206-K23] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 40 | Passed: 0 | PassRate: 0.00%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 41 | Passed: 36 | PassRate: 87.80%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 42 | Passed: 36 | PassRate: 85.71%
+ClassID: 74 | ClassName: HN-KS25-CNTT4 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 41 | Passed: 23 | PassRate: 56.10%
+ClassID: 73 | ClassName: HN-KS25-CNTT5 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 42 | Passed: 0 | PassRate: 0.00%
+ClassID: 73 | ClassName: HN-KS25-CNTT5 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 44 | Passed: 33 | PassRate: 75.00%
+ClassID: 73 | ClassName: HN-KS25-CNTT5 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 46 | Passed: 12 | PassRate: 26.09%
+ClassID: 73 | ClassName: HN-KS25-CNTT5 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 45 | Passed: 41 | PassRate: 91.11%
+ClassID: 73 | ClassName: HN-KS25-CNTT5 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 47 | Passed: 25 | PassRate: 53.19%
+ClassID: 73 | ClassName: HN-KS25-CNTT5 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 44 | Passed: 32 | PassRate: 72.73%
+ClassID: 73 | ClassName: HN-KS25-CNTT5 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 44 | Passed: 42 | PassRate: 95.45%
+ClassID: 73 | ClassName: HN-KS25-CNTT5 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 42 | Passed: 36 | PassRate: 85.71%
+ClassID: 73 | ClassName: HN-KS25-CNTT5 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 46 | Passed: 22 | PassRate: 47.83%
+ClassID: 72 | ClassName: HN-KS25-CNTT6 | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 33 | Passed: 0 | PassRate: 0.00%
+ClassID: 72 | ClassName: HN-KS25-CNTT6 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 45 | Passed: 31 | PassRate: 68.89%
+ClassID: 72 | ClassName: HN-KS25-CNTT6 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 44 | Passed: 10 | PassRate: 22.73%
+ClassID: 72 | ClassName: HN-KS25-CNTT6 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 47 | Passed: 38 | PassRate: 80.85%
+ClassID: 72 | ClassName: HN-KS25-CNTT6 | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 40 | Passed: 22 | PassRate: 55.00%
+ClassID: 72 | ClassName: HN-KS25-CNTT6 | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 34 | Passed: 24 | PassRate: 70.59%
+ClassID: 72 | ClassName: HN-KS25-CNTT6 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 45 | Passed: 40 | PassRate: 88.89%
+ClassID: 72 | ClassName: HN-KS25-CNTT6 | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 33 | Passed: 30 | PassRate: 90.91%
+ClassID: 72 | ClassName: HN-KS25-CNTT6 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 45 | Passed: 13 | PassRate: 28.89%
+ClassID: 71 | ClassName: HN-KS25-CNTT7 | CourseID: 112 | CourseName: [IT103A-K25] Xây dựng giao diện web với HTML và CSS | Total: 36 | Passed: 21 | PassRate: 58.33%
+ClassID: 71 | ClassName: HN-KS25-CNTT7 | CourseID: 124 | CourseName: [IT103B-K25] Xây dựng ứng dụng web với Javascript | Total: 36 | Passed: 10 | PassRate: 27.78%
+ClassID: 71 | ClassName: HN-KS25-CNTT7 | CourseID: 57 | CourseName: [IT108-K25] - Nhập môn công nghệ thông tin | Total: 37 | Passed: 32 | PassRate: 86.49%
+ClassID: 71 | ClassName: HN-KS25-CNTT7 | CourseID: 104 | CourseName: [IT206-K25] - Kỹ năng ứng dụng AI vào học tập và phát triển phần mềm | Total: 36 | Passed: 29 | PassRate: 80.56%
+ClassID: 71 | ClassName: HN-KS25-CNTT7 | CourseID: 106 | CourseName: IT102-K25 Lập trình cơ bản C | Total: 36 | Passed: 18 | PassRate: 50.00%
+ClassID: 145 | ClassName: HN-KS25-CNTT8_HL | CourseID: 217 | CourseName: [IT-215] Phát triển dịch vụ Web với FastAPI | Total: 22 | Passed: 0 | PassRate: 0.00%
+ClassID: 145 | ClassName: HN-KS25-CNTT8_HL | CourseID: 183 | CourseName: [IT202-K25] Cơ sở dữ liệu | Total: 19 | Passed: 12 | PassRate: 63.16%
+ClassID: 145 | ClassName: HN-KS25-CNTT8_HL | CourseID: 193 | CourseName: [IT205-K25] Lập trình ứng dụng với Python | Total: 24 | Passed: 12 | PassRate: 50.00%
+ClassID: 145 | ClassName: HN-KS25-CNTT8_HL | CourseID: 207 | CourseName: [SKL01 - CNTT] Kỹ năng làm việc nhóm và giải quyết xung đột | Total: 24 | Passed: 22 | PassRate: 91.67%
+ClassID: 104 | ClassName: JB-IOC-PTHB251027 | CourseID: 109 | CourseName: [BE-101] Nhập môn Cơ sở dữ liệu - PostgreSQL | Total: 25 | Passed: 0 | PassRate: 0.00%
+ClassID: 104 | ClassName: JB-IOC-PTHB251027 | CourseID: 212 | CourseName: [BE-105] Devops | Total: 21 | Passed: 0 | PassRate: 0.00%
+ClassID: 104 | ClassName: JB-IOC-PTHB251027 | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 23 | Passed: 0 | PassRate: 0.00%
+ClassID: 104 | ClassName: JB-IOC-PTHB251027 | CourseID: 141 | CourseName: [IOC] - Phát triển dịch vụ web với Spring | Total: 23 | Passed: 1 | PassRate: 4.35%
+ClassID: 104 | ClassName: JB-IOC-PTHB251027 | CourseID: 159 | CourseName: Phát triển Hệ thống Microservices với Spring Boot | Total: 22 | Passed: 0 | PassRate: 0.00%
+ClassID: 138 | ClassName: JB-IOC-PTHB251027 - MD4+5 | CourseID: 212 | CourseName: [BE-105] Devops | Total: 21 | Passed: 0 | PassRate: 0.00%
+ClassID: 138 | ClassName: JB-IOC-PTHB251027 - MD4+5 | CourseID: 159 | CourseName: Phát triển Hệ thống Microservices với Spring Boot | Total: 24 | Passed: 0 | PassRate: 0.00%
+ClassID: 108 | ClassName: JB-IOC-PTHB251125 | CourseID: 109 | CourseName: [BE-101] Nhập môn Cơ sở dữ liệu - PostgreSQL | Total: 30 | Passed: 0 | PassRate: 0.00%
+ClassID: 108 | ClassName: JB-IOC-PTHB251125 | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 27 | Passed: 2 | PassRate: 7.41%
+ClassID: 108 | ClassName: JB-IOC-PTHB251125 | CourseID: 141 | CourseName: [IOC] - Phát triển dịch vụ web với Spring | Total: 27 | Passed: 0 | PassRate: 0.00%
+ClassID: 108 | ClassName: JB-IOC-PTHB251125 | CourseID: 159 | CourseName: Phát triển Hệ thống Microservices với Spring Boot | Total: 31 | Passed: 0 | PassRate: 0.00%
+ClassID: 171 | ClassName: JB-IOC-PTHB251125 - MD4+5 | CourseID: 159 | CourseName: Phát triển Hệ thống Microservices với Spring Boot | Total: 28 | Passed: 0 | PassRate: 0.00%
+ClassID: 110 | ClassName: JB-IOC-PTHB251229 | CourseID: 109 | CourseName: [BE-101] Nhập môn Cơ sở dữ liệu - PostgreSQL | Total: 24 | Passed: 0 | PassRate: 0.00%
+ClassID: 110 | ClassName: JB-IOC-PTHB251229 | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 22 | Passed: 19 | PassRate: 86.36%
+ClassID: 110 | ClassName: JB-IOC-PTHB251229 | CourseID: 141 | CourseName: [IOC] - Phát triển dịch vụ web với Spring | Total: 23 | Passed: 15 | PassRate: 65.22%
+ClassID: 110 | ClassName: JB-IOC-PTHB251229 | CourseID: 140 | CourseName: IT203A-K24 - Java Fundamental | Total: 23 | Passed: 0 | PassRate: 0.00%
+ClassID: 110 | ClassName: JB-IOC-PTHB251229 | CourseID: 159 | CourseName: Phát triển Hệ thống Microservices với Spring Boot | Total: 23 | Passed: 0 | PassRate: 0.00%
+ClassID: 115 | ClassName: JB-IOC-PTHB260310 | CourseID: 109 | CourseName: [BE-101] Nhập môn Cơ sở dữ liệu - PostgreSQL | Total: 29 | Passed: 0 | PassRate: 0.00%
+ClassID: 115 | ClassName: JB-IOC-PTHB260310 | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 25 | Passed: 18 | PassRate: 72.00%
+ClassID: 115 | ClassName: JB-IOC-PTHB260310 | CourseID: 141 | CourseName: [IOC] - Phát triển dịch vụ web với Spring | Total: 24 | Passed: 0 | PassRate: 0.00%
+ClassID: 119 | ClassName: JB-IOC-PTHB260316 | CourseID: 109 | CourseName: [BE-101] Nhập môn Cơ sở dữ liệu - PostgreSQL | Total: 30 | Passed: 0 | PassRate: 0.00%
+ClassID: 119 | ClassName: JB-IOC-PTHB260316 | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 29 | Passed: 18 | PassRate: 62.07%
+ClassID: 119 | ClassName: JB-IOC-PTHB260316 | CourseID: 141 | CourseName: [IOC] - Phát triển dịch vụ web với Spring | Total: 27 | Passed: 0 | PassRate: 0.00%
+ClassID: 134 | ClassName: JB-IOC-PTHB260407 | CourseID: 109 | CourseName: [BE-101] Nhập môn Cơ sở dữ liệu - PostgreSQL | Total: 25 | Passed: 0 | PassRate: 0.00%
+ClassID: 134 | ClassName: JB-IOC-PTHB260407 | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 19 | Passed: 0 | PassRate: 0.00%
+ClassID: 134 | ClassName: JB-IOC-PTHB260407 | CourseID: 141 | CourseName: [IOC] - Phát triển dịch vụ web với Spring | Total: 19 | Passed: 0 | PassRate: 0.00%
+ClassID: 152 | ClassName: JB-IOC-PTHB260515 | CourseID: 109 | CourseName: [BE-101] Nhập môn Cơ sở dữ liệu - PostgreSQL | Total: 27 | Passed: 0 | PassRate: 0.00%
+ClassID: 152 | ClassName: JB-IOC-PTHB260515 | CourseID: 120 | CourseName: [IOC-BE] Java Fudamental - JDBC | Total: 27 | Passed: 0 | PassRate: 0.00%
+ClassID: 177 | ClassName: JB-IOC-PTHB260706 | CourseID: 109 | CourseName: [BE-101] Nhập môn Cơ sở dữ liệu - PostgreSQL | Total: 16 | Passed: 0 | PassRate: 0.00%
+ClassID: 130 | ClassName: JS-PTHB260326 | CourseID: 170 | CourseName: [FJS-MD1] Modern Web UI Design | Total: 19 | Passed: 0 | PassRate: 0.00%
+ClassID: 130 | ClassName: JS-PTHB260326 | CourseID: 171 | CourseName: [FJS-MD2] Programming Foundations with JavaScript | Total: 18 | Passed: 0 | PassRate: 0.00%
+ClassID: 130 | ClassName: JS-PTHB260326 | CourseID: 172 | CourseName: [FJS-MD3] Professional Frontend Development with ReactJS | Total: 16 | Passed: 0 | PassRate: 0.00%
+ClassID: 103 | ClassName: RIKKEI GLOBAL SUMMIT | CourseID: 18 | CourseName: IT101-K24 | Total: 1 | Passed: 0 | PassRate: 0.00%
+ClassID: 154 | ClassName: TES-PTHB260514 | CourseID: 198 | CourseName: Manual test & AI Testing  | Total: 19 | Passed: 0 | PassRate: 0.00%
+ClassID: 154 | ClassName: TES-PTHB260514 | CourseID: 199 | CourseName: Software Automation Test | Total: 19 | Passed: 0 | PassRate: 0.00%
+ClassID: 40 | ClassName: TPLUS - JV250321 | CourseID: 63 | CourseName: [T-PLUS]  Lập trình Java cơ bản | Total: 11 | Passed: 11 | PassRate: 100.00%
+ClassID: 40 | ClassName: TPLUS - JV250321 | CourseID: 71 | CourseName: [TPLUS] Lập trình Web với Spring MVC | Total: 11 | Passed: 10 | PassRate: 90.91%
+ClassID: 40 | ClassName: TPLUS - JV250321 | CourseID: 81 | CourseName: [TPLUS] Phát triển dịch vụ web với Spring | Total: 10 | Passed: 1 | PassRate: 10.00%
+ClassID: 33 | ClassName: TSU-PTON-JV241226-Tsubasa | CourseID: 75 | CourseName: [TSU] - Phát triển và bảo mật dịch vụ web với Spring Boot | Total: 10 | Passed: 0 | PassRate: 0.00%
+ClassID: 33 | ClassName: TSU-PTON-JV241226-Tsubasa | CourseID: 67 | CourseName: [TSU] - Web Application with Spring MVC - Hibernate | Total: 10 | Passed: 10 | PassRate: 100.00%
+ClassID: 35 | ClassName: TSU-PTON-JV250211-Tsubasa | CourseID: 75 | CourseName: [TSU] - Phát triển và bảo mật dịch vụ web với Spring Boot | Total: 16 | Passed: 0 | PassRate: 0.00%
+ClassID: 35 | ClassName: TSU-PTON-JV250211-Tsubasa | CourseID: 67 | CourseName: [TSU] - Web Application with Spring MVC - Hibernate | Total: 16 | Passed: 16 | PassRate: 100.00%
+ClassID: 37 | ClassName: TSU-PTON-JV250226-Tsubasa | CourseID: 75 | CourseName: [TSU] - Phát triển và bảo mật dịch vụ web với Spring Boot | Total: 13 | Passed: 0 | PassRate: 0.00%
+ClassID: 37 | ClassName: TSU-PTON-JV250226-Tsubasa | CourseID: 67 | CourseName: [TSU] - Web Application with Spring MVC - Hibernate | Total: 13 | Passed: 13 | PassRate: 100.00%
+ClassID: 44 | ClassName: TSU-PTON-JV250428-Tsubasa		 | CourseID: 67 | CourseName: [TSU] - Web Application with Spring MVC - Hibernate | Total: 6 | Passed: 0 | PassRate: 0.00%
+ClassID: 44 | ClassName: TSU-PTON-JV250428-Tsubasa		 | CourseID: 52 | CourseName: [TSU] Java Fundamental - Database - JDBC | Total: 9 | Passed: 9 | PassRate: 100.00%
+ClassID: 53 | ClassName: TSU-PTON-JV250619-Tsubasa | CourseID: 75 | CourseName: [TSU] - Phát triển và bảo mật dịch vụ web với Spring Boot | Total: 17 | Passed: 0 | PassRate: 0.00%
+ClassID: 53 | ClassName: TSU-PTON-JV250619-Tsubasa | CourseID: 67 | CourseName: [TSU] - Web Application with Spring MVC - Hibernate | Total: 17 | Passed: 0 | PassRate: 0.00%
+ClassID: 53 | ClassName: TSU-PTON-JV250619-Tsubasa | CourseID: 52 | CourseName: [TSU] Java Fundamental - Database - JDBC | Total: 17 | Passed: 0 | PassRate: 0.00%
+ClassID: 53 | ClassName: TSU-PTON-JV250619-Tsubasa | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 16 | Passed: 16 | PassRate: 100.00%
+ClassID: 68 | ClassName: TSU-PTON-JV250723-Tsubasa	 | CourseID: 75 | CourseName: [TSU] - Phát triển và bảo mật dịch vụ web với Spring Boot | Total: 11 | Passed: 0 | PassRate: 0.00%
+ClassID: 68 | ClassName: TSU-PTON-JV250723-Tsubasa	 | CourseID: 115 | CourseName: [TSU] Java Fudamental - JDBC | Total: 12 | Passed: 0 | PassRate: 0.00%
+ClassID: 68 | ClassName: TSU-PTON-JV250723-Tsubasa	 | CourseID: 96 | CourseName: [TSubasa] Cơ sở dữ liệu | Total: 13 | Passed: 0 | PassRate: 0.00%
+ClassID: 68 | ClassName: TSU-PTON-JV250723-Tsubasa	 | CourseID: 97 | CourseName: [TSubasa] Java Fundamental  | Total: 12 | Passed: 0 | PassRate: 0.00%
+ClassID: 68 | ClassName: TSU-PTON-JV250723-Tsubasa	 | CourseID: 101 | CourseName: [TSubasa] Java Web Services And Security | Total: 11 | Passed: 0 | PassRate: 0.00%
+ClassID: 68 | ClassName: TSU-PTON-JV250723-Tsubasa	 | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 17 | Passed: 17 | PassRate: 100.00%
+ClassID: 70 | ClassName: TSU-PTON-JV250825-Tsubasa	 | CourseID: 115 | CourseName: [TSU] Java Fudamental - JDBC | Total: 12 | Passed: 0 | PassRate: 0.00%
+ClassID: 70 | ClassName: TSU-PTON-JV250825-Tsubasa	 | CourseID: 96 | CourseName: [TSubasa] Cơ sở dữ liệu | Total: 12 | Passed: 0 | PassRate: 0.00%
+ClassID: 70 | ClassName: TSU-PTON-JV250825-Tsubasa	 | CourseID: 101 | CourseName: [TSubasa] Java Web Services And Security | Total: 9 | Passed: 0 | PassRate: 0.00%
+ClassID: 70 | ClassName: TSU-PTON-JV250825-Tsubasa	 | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 13 | Passed: 0 | PassRate: 0.00%
+ClassID: 100 | ClassName: TSU-PTON-JV250926 -Tsubasa | CourseID: 115 | CourseName: [TSU] Java Fudamental - JDBC | Total: 12 | Passed: 0 | PassRate: 0.00%
+ClassID: 100 | ClassName: TSU-PTON-JV250926 -Tsubasa | CourseID: 96 | CourseName: [TSubasa] Cơ sở dữ liệu | Total: 13 | Passed: 0 | PassRate: 0.00%
+ClassID: 100 | ClassName: TSU-PTON-JV250926 -Tsubasa | CourseID: 101 | CourseName: [TSubasa] Java Web Services And Security | Total: 9 | Passed: 0 | PassRate: 0.00%
+ClassID: 100 | ClassName: TSU-PTON-JV250926 -Tsubasa | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 14 | Passed: 0 | PassRate: 0.00%
+ClassID: 105 | ClassName: TSU-PTON-JV251028-Tsubasa	 | CourseID: 115 | CourseName: [TSU] Java Fudamental - JDBC | Total: 10 | Passed: 0 | PassRate: 0.00%
+ClassID: 105 | ClassName: TSU-PTON-JV251028-Tsubasa	 | CourseID: 96 | CourseName: [TSubasa] Cơ sở dữ liệu | Total: 11 | Passed: 0 | PassRate: 0.00%
+ClassID: 105 | ClassName: TSU-PTON-JV251028-Tsubasa	 | CourseID: 101 | CourseName: [TSubasa] Java Web Services And Security | Total: 8 | Passed: 0 | PassRate: 0.00%
+ClassID: 105 | ClassName: TSU-PTON-JV251028-Tsubasa	 | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 14 | Passed: 10 | PassRate: 71.43%
+ClassID: 109 | ClassName: TSU-PTON-JV251218-Tsubasa	 | CourseID: 96 | CourseName: [TSubasa] Cơ sở dữ liệu | Total: 6 | Passed: 0 | PassRate: 0.00%
+ClassID: 109 | ClassName: TSU-PTON-JV251218-Tsubasa	 | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 12 | Passed: 0 | PassRate: 0.00%
+ClassID: 114 | ClassName: TSU-PTON-JV260202 | CourseID: 115 | CourseName: [TSU] Java Fudamental - JDBC | Total: 14 | Passed: 0 | PassRate: 0.00%
+ClassID: 114 | ClassName: TSU-PTON-JV260202 | CourseID: 96 | CourseName: [TSubasa] Cơ sở dữ liệu | Total: 15 | Passed: 0 | PassRate: 0.00%
+ClassID: 114 | ClassName: TSU-PTON-JV260202 | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 15 | Passed: 1 | PassRate: 6.67%
+ClassID: 126 | ClassName: TSU-PTON-JV260327 | CourseID: 96 | CourseName: [TSubasa] Cơ sở dữ liệu | Total: 21 | Passed: 0 | PassRate: 0.00%
+ClassID: 126 | ClassName: TSU-PTON-JV260327 | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 23 | Passed: 0 | PassRate: 0.00%
+ClassID: 146 | ClassName: TSU-PTON-JV260428 | CourseID: 96 | CourseName: [TSubasa] Cơ sở dữ liệu | Total: 15 | Passed: 0 | PassRate: 0.00%
+ClassID: 146 | ClassName: TSU-PTON-JV260428 | CourseID: 32 | CourseName: [Tsubasa] Lập trình front-end cơ bản | Total: 16 | Passed: 0 | PassRate: 0.00%

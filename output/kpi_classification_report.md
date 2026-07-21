@@ -32,12 +32,12 @@
 | Họ và tên | Vai trò / Cấp bậc | Lớp phụ trách | Điểm quá trình A | Điểm quá trình B | Xếp loại năng lực |
 | :--- | :---: | :--- | :---: | :---: | :---: |
 | **Lâm Tùng Dương** | Giảng viên (Rank 3) | HN-K25-CNTT2 (KS25_Python_Web) | **8.22** | 6.45 | **Đạt** |
-| **Nguyễn Quảng An** | Giảng viên (Rank 3) | HN-K25-CNTT6 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python_Web) | **8.22** | 6.45 | **Đạt** |
-| **Lại Trung Lâm** | Giảng viên (Rank 3) | HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Python_Web) | **8.00** | 6.35 | **Đạt** |
+| **Nguyễn Quảng An** | Giảng viên (Rank 3) | HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web) | **8.22** | 6.45 | **Đạt** |
+| **Lại Trung Lâm** | Giảng viên (Rank 3) | HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Python_Web), HN-K25-CNTT5 (KS25_Python_Web) | **8.00** | 6.35 | **Đạt** |
 | **Ngọ Văn Quý** | Giảng viên (Rank 3) | Không phụ trách lớp Excel | **8.00** | 6.35 | **Đạt** |
 | **Trần Minh Cường** | Quản lý (Rank 5) | Không phụ trách lớp Excel | **7.78** | 5.64 | **Đạt** |
-| **Lương Quốc Tuấn** | Giảng viên (Rank 3) | HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Python_Web) | **7.78** | 6.25 | **Đạt** |
-| **Phạm Ngọc Kiên** | Giảng viên (Rank 3) | HN-K25-CNTT6 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python_Web) | **7.78** | 6.25 | **Đạt** |
+| **Lương Quốc Tuấn** | Giảng viên (Rank 3) | HN-K25-CNTT1 (KS25_Python_Web), HN-K25-CNTT5 (KS25_Python_Web) | **7.78** | 6.25 | **Đạt** |
+| **Phạm Ngọc Kiên** | Giảng viên (Rank 3) | HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web) | **7.78** | 6.25 | **Đạt** |
 | **Trịnh Quốc Hai** | Quản lý (Rank 5) | HN-K25-CNTT8 (KS25_Python_Web) | **7.35** | 5.54 | **Cần cố gắng** |
 
 ### Khối CNTT-HCM
@@ -211,7 +211,7 @@
 
 #### Giảng viên. Nguyễn Quảng An
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT6 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python_Web)
+- **Lớp phụ trách**: HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.22 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.45 / 10**
 - **Xếp loại năng lực**: **Đạt**
@@ -228,7 +228,7 @@
 
 #### Giảng viên. Lại Trung Lâm
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Python_Web)
+- **Lớp phụ trách**: HN-K25-CNTT2 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Python_Web), HN-K25-CNTT5 (KS25_Python_Web)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **8.00 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.35 / 10**
 - **Xếp loại năng lực**: **Đạt**
@@ -273,7 +273,7 @@
 
 #### Giảng viên. Lương Quốc Tuấn
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT5 (KS25_Python_Web), HN-K25-CNTT1 (KS25_Python_Web)
+- **Lớp phụ trách**: HN-K25-CNTT1 (KS25_Python_Web), HN-K25-CNTT5 (KS25_Python_Web)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **7.78 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.25 / 10**
 - **Xếp loại năng lực**: **Đạt**
@@ -290,7 +290,7 @@
 
 #### Giảng viên. Phạm Ngọc Kiên
 - **Cấp bậc**: Rank 3 (GV)
-- **Lớp phụ trách**: HN-K25-CNTT6 (KS25_Python_Web), HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python_Web)
+- **Lớp phụ trách**: HN-K25-CNTT4 (KS25_Python_Web), HN-K25-CNTT3 (KS25_Python_Web), HN-K25-CNTT6 (KS25_Python_Web)
 - **Điểm Quá Trình (Phương án A - Thực tế)**: **7.78 / 10**
 - **Điểm Quá Trình (Phương án B - Đạt)**: **6.25 / 10**
 - **Xếp loại năng lực**: **Đạt**

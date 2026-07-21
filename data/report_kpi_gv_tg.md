@@ -16,7 +16,7 @@
 | **Nguyễn Công Hưởng** | GV |  | 100.0 | 100.0 | 74.6 | **92.38** |
 | **Ngọ Văn Quý** | GV |  | 100.0 | 100.0 | 71.4 | **91.42** |
 | **Phạm Viết Hùng** | GV |  | 95.0 | 100.0 | 77.9 | **91.37** |
-| **Trần Quốc Tuấn** | GV | [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]] | 90.0 | 95.1 | 86.6 | **90.53** |
+| **Trần Quốc Tuấn** | GV | [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]] | 90.0 | 95.1 | 86.6 | **90.53** |
 | **Phạm Ngọc Kiên** | GV |  | 85.0 | 100.0 | 88.3 | **90.49** |
 | **Trần Minh Cường** | GV |  | 100.0 | 100.0 | 61.7 | **88.51** |
 | **Lại Trung Lâm** | GV |  | 85.0 | 100.0 | 75.6 | **86.68** |
@@ -24,7 +24,7 @@
 | **Lê Hà Thanh Sang** | GV | [[data/student_risk_report#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]] | 84.3 | 83.7 | 85.7 | **84.55** |
 | **Trịnh Quốc Hai** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]] | 80.1 | 90.3 | 76.1 | **81.98** |
 | **Lâm Tùng Dương** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(38) (KS25_Python_Web)]] | 88.0 | 60.7 | 92.4 | **81.13** |
-| **Nguyễn Quảng An** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]] | 80.3 | 56.8 | 90.4 | **76.31** |
+| **Nguyễn Quảng An** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]] | 80.3 | 56.8 | 90.4 | **76.31** |
 | **Lương Quốc Tuấn** | GV | [[data/student_risk_report#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]] | 80.8 | 57.1 | 75.9 | **72.22** |
 
 ### 1.2. Khối QTKD
@@ -144,7 +144,7 @@
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
 #### GV. Trần Quốc Tuấn
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]]
 - **Điểm KPI tổng**: **90.53** (Kỷ luật: 90.0, Học tập: 95.1, Báo cáo ngày: 86.6)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
@@ -224,7 +224,7 @@
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
 #### GV. Nguyễn Quảng An
-- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]]
+- **Lớp phụ trách**: [[data/student_risk_report#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[data/student_risk_report#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]]
 - **Điểm KPI tổng**: **76.31** (Kỷ luật: 80.3, Học tập: 56.8, Báo cáo ngày: 90.4)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
