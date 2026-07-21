@@ -1,23 +1,23 @@
 {
-  "yesterday": "2026-07-17",
+  "yesterday": "2026-07-20",
   "missing_yesterday": [
     {
-      "name": "Đặng Quỳnh Trang",
+      "name": "Nguyễn Ngọc Vân Khanh",
       "group": "Khối QTKD",
       "role": "Giảng viên"
     },
     {
-      "name": "Lê Thành Ngọc",
-      "group": "Khối QTKD",
-      "role": "Giảng viên"
-    },
-    {
-      "name": "Trịnh Quốc Hai",
+      "name": "Lương Quốc Tuấn",
       "group": "Khối CNTT",
       "role": "Giảng viên"
     },
     {
-      "name": "Ngọ Văn Quý",
+      "name": "Lại Trung Lâm",
+      "group": "Khối CNTT",
+      "role": "Giảng viên"
+    },
+    {
+      "name": "Lâm Tùng Dương",
       "group": "Khối CNTT",
       "role": "Giảng viên"
     },
@@ -27,12 +27,22 @@
       "role": "Giảng viên"
     },
     {
+      "name": "Bùi Thanh Hải",
+      "group": "Khối CNTT",
+      "role": "Giảng viên"
+    },
+    {
       "name": "Nguyễn Bá Minh Đạo",
       "group": "Khối CNTT",
       "role": "Giảng viên"
     },
     {
-      "name": "Phạm Viết Hùng",
+      "name": "Lê Hà Thanh Sang",
+      "group": "Khối CNTT",
+      "role": "Giảng viên"
+    },
+    {
+      "name": "Trần Quốc Tuấn",
       "group": "Khối CNTT",
       "role": "Giảng viên"
     },
@@ -42,18 +52,8 @@
       "role": "Giảng viên"
     },
     {
-      "name": "Nguyễn Thị Tươi",
-      "group": "Khối QLCLĐT",
-      "role": "Giảng viên"
-    },
-    {
-      "name": "Nguyễn Huyền Trang",
-      "group": "Khối QLCLĐT",
-      "role": "Giảng viên"
-    },
-    {
-      "name": "Nguyễn Ngọc Sơn",
-      "group": "Khối QLCLĐT",
+      "name": "Ngô Quang Huấn",
+      "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên"
     },
     {
@@ -63,11 +63,7 @@
     }
   ],
   "dates_weekly": [
-    "2026-07-13",
-    "2026-07-14",
-    "2026-07-15",
-    "2026-07-16",
-    "2026-07-17"
+    "2026-07-20"
   ],
   "dates_monthly": [
     "2026-07-01",
@@ -82,7 +78,8 @@
     "2026-07-14",
     "2026-07-15",
     "2026-07-16",
-    "2026-07-17"
+    "2026-07-17",
+    "2026-07-20"
   ],
   "weekly_stats": {
     "hoàng thị kim oanh": {
@@ -90,21 +87,19 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "5",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 26,
-      "completed_tasks": 26,
+      "total_tasks": 3,
+      "completed_tasks": 3,
       "completion_rate": 100.0,
-      "time_score": 95.0,
-      "work_score": 99.0,
-      "declared_hours": 42.75,
-      "time_violations": [
-        "13/07: Task 'Giảng dạy, chuẩn bị giảng dạy SS8 - PRB302' khai báo 2.5h so với định mức tiêu chuẩn 0.5h"
-      ],
+      "time_score": 100.0,
+      "work_score": 100.0,
+      "declared_hours": 6.0,
+      "time_violations": [],
       "warning_flags": [
-        "Task 'Họp Giao ban đào tạo' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Họp coreteam Khởi nguyên' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Họp GV, TG PRB302' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Nghỉ phép cả ngày' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Chấm thi vòng 2 Khởi Nguyên' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Rà soát, điều chỉnh chuẩn đầu ra K26' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -113,19 +108,18 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "5",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 15,
-      "completed_tasks": 15,
+      "total_tasks": 2,
+      "completed_tasks": 2,
       "completion_rate": 100.0,
       "time_score": 100.0,
       "work_score": 100.0,
-      "declared_hours": 40.0,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Góp ý cải thiện hiệu suất' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Nghiên cứu AI agent' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Tham gia workshop trong rikkeisoft' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Review góp ý chương trình đào tạo' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Nghiên cứu Giáo trình, tài liệu học tập mở rộng phục vụ cho giảng dạy kỳ mới' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -134,19 +128,19 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 26,
-      "completed_tasks": 26,
+      "total_tasks": 5,
+      "completed_tasks": 5,
       "completion_rate": 100.0,
       "time_score": 100.0,
       "work_score": 100.0,
-      "declared_hours": 40.5,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Giảng dạy HN-K25-QTKD2 Session 9 PRJ302' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Họp kế hoạch triển khai kết thúc môn học PRJ302' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Chăm sóc sinh viên, phản hồi tin nhắn sinh viên' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Xây dựng PM môn Kinh tế vi mô - Giữ nhịp hè sinh viên và góp ý chéo môn Kinh tế vĩ mô' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Xây dựng 6 session bài đọc kinh tế vi mô và cài đặt Antigravity' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Họp chương trình giữ nhịp hè sinh viên K25' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -155,23 +149,19 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-07-17"
-      ],
-      "total_tasks": 24,
-      "completed_tasks": 24,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 5,
+      "completed_tasks": 5,
       "completion_rate": 100.0,
-      "time_score": 95.0,
-      "work_score": 91.0,
-      "declared_hours": 32.0,
-      "time_violations": [
-        "13/07: Task 'Góp ý bài sinh viên về báo cáo cuối môn và slide' khai báo 1.5h so với định mức tiêu chuẩn 0.5h"
-      ],
+      "time_score": 100.0,
+      "work_score": 100.0,
+      "declared_hours": 8.0,
+      "time_violations": [],
       "warning_flags": [
-        "Task 'Giảng dạy QTKD3' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Nghiên cứu Antigravity' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Chăm sóc và hỗ trợ sinh viên ngoài giờ' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Làm góp ý CDR và CLO' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Nghiên cứu giáo trình MAN101' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Lên điểm, thống kê, tổng hợp điểm các lớp QTKD2, tính điểm tiến độ quá trình QTKD3' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -180,20 +170,18 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
-      "missing_days": [],
-      "total_tasks": 17,
-      "completed_tasks": 17,
+      "reported_days": 0,
+      "missing_days": [
+        "2026-07-20"
+      ],
+      "total_tasks": 0,
+      "completed_tasks": 0,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 100.0,
-      "declared_hours": 37.75,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
       "time_violations": [],
-      "warning_flags": [
-        "Task 'Review phản biện PM' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Review học liệu môn BA201' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Nghiên cứu đề xuất cải thiện kết quả công việc' chưa định dạng (gán tạm 30 phút)"
-      ],
+      "warning_flags": [],
       "uncompleted_tasks": []
     },
     "lê thành ngọc": {
@@ -201,22 +189,19 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 3,
-      "missing_days": [
-        "2026-07-13",
-        "2026-07-17"
-      ],
-      "total_tasks": 14,
-      "completed_tasks": 14,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 5,
+      "completed_tasks": 5,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 84.0,
-      "declared_hours": 25.0,
+      "work_score": 100.0,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Tham dự workshop + ký kết MOU RE x Odoo' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Mentor CLB Chuyên môn' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Xử lý công việc phát sinh' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Họp giao ban' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Training AI Agent cho đội ngũ' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Phối hợp với các phòng ban Giải quyết vấn đề phát sinh với sinh viên' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -225,22 +210,17 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 3,
-      "missing_days": [
-        "2026-07-14",
-        "2026-07-17"
-      ],
-      "total_tasks": 14,
-      "completed_tasks": 14,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 1,
+      "completed_tasks": 1,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 84.0,
-      "declared_hours": 24.0,
+      "work_score": 100.0,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'họp giao ban' chưa định dạng (gán tạm 30 phút)",
-        "Task 'dạy session 8 lớp CNTT 8' chưa định dạng (gán tạm 30 phút)",
-        "Task 'làm tài nguyên bài tập về nhà session 16' chưa định dạng (gán tạm 30 phút)"
+        "Task 'nghỉ phép' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -249,19 +229,19 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 18,
-      "completed_tasks": 18,
+      "total_tasks": 3,
+      "completed_tasks": 3,
       "completion_rate": 100.0,
       "time_score": 100.0,
       "work_score": 100.0,
-      "declared_hours": 32.5,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Trông thi CNTT1' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Review đề hackathon' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Chấm hackathon' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Chấm hackathon' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Review học liệu' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Nghiên cứu fastapi' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -270,48 +250,37 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
+      "reported_days": 0,
       "missing_days": [
-        "2026-07-16"
+        "2026-07-20"
       ],
-      "total_tasks": 21,
-      "completed_tasks": 20,
-      "completion_rate": 95.23809523809523,
+      "total_tasks": 0,
+      "completed_tasks": 0,
+      "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 90.1,
-      "declared_hours": 33.5,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
       "time_violations": [],
-      "warning_flags": [
-        "Task 'Coi Thi Lớp CNTT3 hackthon' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Coi Thi Lớp CNTT4 hackthon' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Chấm miniproject CNTT1' chưa định dạng (gán tạm 30 phút)"
-      ],
-      "uncompleted_tasks": [
-        "Chấm Bài Thi CNTT3 (30%)"
-      ]
+      "warning_flags": [],
+      "uncompleted_tasks": []
     },
     "phạm ngọc kiên": {
       "name": "Phạm Ngọc Kiên",
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 19,
-      "completed_tasks": 19,
+      "total_tasks": 1,
+      "completed_tasks": 1,
       "completion_rate": 100.0,
-      "time_score": 90.0,
-      "work_score": 98.0,
-      "declared_hours": 40.0,
+      "time_score": 95.0,
+      "work_score": 99.0,
+      "declared_hours": 8.0,
       "time_violations": [
-        "13/07: Task 'Chuẩn bị tiết thực hành ss17, gồm nắm vững lý thuyết ss16, BTTH ss16, tất cả BTTH ss17' khai báo 3.0h so với định mức tiêu chuẩn 0.8h",
-        "15/07: Task 'Chuẩn bị cho tiết thực hành SS19(Nắm được kiến thức ss19, btth ss18, btth 1 + 2 ss 19)' khai báo 3.0h so với định mức tiêu chuẩn 0.8h"
+        "20/07: Task 'Làm công việc được giao trong việc chuẩn bị tài liệu https://prnt.sc/_BgtRD6jnUiY' khai báo 8.0h so với định mức tiêu chuẩn 0.8h"
       ],
-      "warning_flags": [
-        "Task 'Trông thi HN-KS25-CNTT1, HN-KS25-CNTT5' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Chấm BTVN + xem record HN-KS25-CNTT3, HN-KS25-CNTT4, HN-KS25-CNTT6' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Trông thi lớp CNTT2' chưa định dạng (gán tạm 30 phút)"
-      ],
+      "warning_flags": [],
       "uncompleted_tasks": []
     },
     "lại trung lâm": {
@@ -319,24 +288,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
-      "missing_days": [],
-      "total_tasks": 18,
-      "completed_tasks": 18,
+      "reported_days": 0,
+      "missing_days": [
+        "2026-07-20"
+      ],
+      "total_tasks": 0,
+      "completed_tasks": 0,
       "completion_rate": 100.0,
-      "time_score": 70.0,
-      "work_score": 94.0,
-      "declared_hours": 42.0,
-      "time_violations": [
-        "13/07: Task 'chấm bài tập về nhà lớp CNTT1,2,5' khai báo 1.5h so với định mức tiêu chuẩn 0.5h",
-        "13/07: Task 'Chuẩn bị thực hành session 16' khai báo 4.0h so với định mức tiêu chuẩn 0.8h",
-        "14/07: Task 'chuẩn bị bài cho tiết thực hành SS17' khai báo 2.0h so với định mức tiêu chuẩn 0.8h"
-      ],
-      "warning_flags": [
-        "Task 'trông thi lớp CNTT4 hackathon giữa kỳ' chưa định dạng (gán tạm 30 phút)",
-        "Task 'dạy thực hành lớp CNTT1 SS17' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Trông thi hackathon lớp CNTT6' chưa định dạng (gán tạm 30 phút)"
-      ],
+      "time_score": 100.0,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
+      "time_violations": [],
+      "warning_flags": [],
       "uncompleted_tasks": []
     },
     "lâm tùng dương": {
@@ -344,22 +307,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
-      "missing_days": [],
-      "total_tasks": 16,
-      "completed_tasks": 16,
+      "reported_days": 0,
+      "missing_days": [
+        "2026-07-20"
+      ],
+      "total_tasks": 0,
+      "completed_tasks": 0,
       "completion_rate": 100.0,
-      "time_score": 95.0,
-      "work_score": 99.0,
-      "declared_hours": 41.0,
-      "time_violations": [
-        "16/07: Task 'Chấm thi môn IT205-KS25' khai báo 4.0h so với định mức tiêu chuẩn 0.5h"
-      ],
-      "warning_flags": [
-        "Task 'Sản xuất tài nguyên bài đọc ss16, câu hỏi tự luận' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Giám sát ca thi Lớp CNTT1 và CNTT3' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Sản xuất tài nguyên session 18 - Bài đọc, câu hỏi tự luận' chưa định dạng (gán tạm 30 phút)"
-      ],
+      "time_score": 100.0,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
+      "time_violations": [],
+      "warning_flags": [],
       "uncompleted_tasks": []
     },
     "ngọ văn quý": {
@@ -367,22 +326,17 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 3,
-      "missing_days": [
-        "2026-07-14",
-        "2026-07-17"
-      ],
-      "total_tasks": 30,
-      "completed_tasks": 30,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 1,
+      "completed_tasks": 1,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 84.0,
-      "declared_hours": 33.5,
+      "work_score": 100.0,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Trông thi hackathon lớp CNTT 3' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Trông thi hackathon lớp CNTT 5' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Quay video + popup Session 16 - Lesson 01' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Xây dựng AI Agent tài nguyên học tập' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -391,47 +345,37 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 2,
+      "reported_days": 0,
       "missing_days": [
-        "2026-07-15",
-        "2026-07-16",
-        "2026-07-17"
+        "2026-07-20"
       ],
-      "total_tasks": 10,
-      "completed_tasks": 9,
-      "completion_rate": 90.0,
+      "total_tasks": 0,
+      "completed_tasks": 0,
+      "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 72.0,
-      "declared_hours": 21.5,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
       "time_violations": [],
-      "warning_flags": [
-        "Task '[Họp] Họp giao ban' chưa định dạng (gán tạm 30 phút)",
-        "Task '[PTIT-KS26] Lên PM môn học Database' chưa định dạng (gán tạm 30 phút)",
-        "Task '[Ngán hạn - 2026] Lên PM môn học lập trình FE cơ bản' chưa định dạng (gán tạm 30 phút)"
-      ],
-      "uncompleted_tasks": [
-        "[Plan] Họp, bàn giao và lên kế hoạch sản xuất tài nguyên học tập cho CNTT (0%)"
-      ]
+      "warning_flags": [],
+      "uncompleted_tasks": []
     },
     "bùi thanh hải": {
       "name": "Bùi Thanh Hải",
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
-      "missing_days": [],
-      "total_tasks": 15,
-      "completed_tasks": 15,
+      "reported_days": 0,
+      "missing_days": [
+        "2026-07-20"
+      ],
+      "total_tasks": 0,
+      "completed_tasks": 0,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 100.0,
-      "declared_hours": 29.5,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
       "time_violations": [],
-      "warning_flags": [
-        "Task 'Triển khai Project Example Holiday - HN-K24-CNTT4 - Buổi 6' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Triển khai Project Example Holiday - HN-K24-CNTT2 - Buổi 3' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Tham gia đánh giá giảng thử giảng viên Vũ Duy Khương' chưa định dạng (gán tạm 30 phút)"
-      ],
+      "warning_flags": [],
       "uncompleted_tasks": []
     },
     "mai xuân chinh": {
@@ -439,25 +383,20 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-07-15"
-      ],
-      "total_tasks": 15,
-      "completed_tasks": 15,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 3,
+      "completed_tasks": 3,
       "completion_rate": 100.0,
-      "time_score": 85.0,
-      "work_score": 89.0,
-      "declared_hours": 33.0,
+      "time_score": 95.0,
+      "work_score": 99.0,
+      "declared_hours": 8.0,
       "time_violations": [
-        "13/07: Task 'PTITSAN-3 [S01] Mindmap + Quizz đầu/cuối giờ — Session 01' khai báo 2.0h so với định mức tiêu chuẩn 1.0h",
-        "16/07: Task 'PTITSAN-3 [S01] Mindmap + Quizz đầu/cuối giờ — Session 02' khai báo 2.0h so với định mức tiêu chuẩn 1.0h",
-        "17/07: Task 'Làm học liệu Session 02 (Slide + Mindmap  + quizz đầu giờ + quizz cuối giờ)' khai báo 4.0h so với định mức tiêu chuẩn 1.0h"
+        "20/07: Task 'Chấm bài sinh viên' khai báo 2.0h so với định mức tiêu chuẩn 0.5h"
       ],
       "warning_flags": [
-        "Task 'PTITSAN-4 [S01] Bài tập thực hành + Bài đọc + BTTHHOP — Session 01' chưa định dạng (gán tạm 30 phút)",
-        "Task 'PTITTRIE-38 [Buổi 12] Chăm sóc SV — IT212 K24 (HN-KS24-CNTT2)' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Slide— Session 01' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Hoàn thành học liệu session 02' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Hoàn thành học liệu session 03' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -466,19 +405,17 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 10,
-      "completed_tasks": 10,
+      "total_tasks": 1,
+      "completed_tasks": 1,
       "completion_rate": 100.0,
       "time_score": 100.0,
       "work_score": 100.0,
-      "declared_hours": 40.0,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task '[Session 11] Java Backend Fullskill - Devops' chưa định dạng (gán tạm 30 phút)",
-        "Task '[AI Agent] Nghiên cứu AI agent học liệu' chưa định dạng (gán tạm 30 phút)",
-        "Task '[Sự kiện] Ký kết Odoo x Rikkei edu' chưa định dạng (gán tạm 30 phút)"
+        "Task '[Nghỉ phép năm]' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -487,25 +424,20 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-07-16"
-      ],
-      "total_tasks": 14,
-      "completed_tasks": 14,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 3,
+      "completed_tasks": 3,
       "completion_rate": 100.0,
-      "time_score": 70.0,
-      "work_score": 86.0,
-      "declared_hours": 36.0,
+      "time_score": 95.0,
+      "work_score": 99.0,
+      "declared_hours": 8.0,
       "time_violations": [
-        "13/07: Task 'Chấm bài tập lớp JB-IOC-PTHB251027,JB-IOC-PTHB251229  ,JB-IOC-PTHB260316,JB-IOC-PTHB260515' khai báo 2.0h so với định mức tiêu chuẩn 0.5h",
-        "14/07: Task 'Xây dựng tài nguyên : bài đọc , quizz lesson , quizz đầu giờ , quizz cuối giờ , bài tập về nhà , bài tập thực hành , sơ đồ mindmap session 03 + 05 môn PTIT  Microservice' khai báo 4.0h so với định mức tiêu chuẩn 1.0h",
-        "14/07: Task 'Chấm bài tập JB-IOC-PTHB251125 , ,JB-IOC-PTHB260310,JB-IOC-PTHB260407 ,JB-IOC-PTHB260706' khai báo 2.0h so với định mức tiêu chuẩn 0.5h"
+        "20/07: Task 'Chấm bài tập lớp JB-IOC-PTHB251027,JB-IOC-PTHB251229  ,JB-IOC-PTHB260316,JB-IOC-PTHB260515' khai báo 2.0h so với định mức tiêu chuẩn 0.5h"
       ],
       "warning_flags": [
-        "Task 'TRIEKHAI-3 [Buổi 5] Triển khai hướng dẫn DA K24 — CNTT1' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Xây dựng tài nguyên học liệu cho session 02 + 03 môn PTIT Microservice' chưa định dạng (gán tạm 30 phút)",
-        "Task 'TRIEKHAI-3 [Buổi 6] Triển khai hướng dẫn DA K24 — CNTT1' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Viết tài nguyên học tập cho session 08 thực hành mini project cho môn PTIT Microservices' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Tạo sơ đồ mind map cho session 05,07,08,10,11,13,14,16,17 môn BE Devops' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -514,22 +446,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 14,
-      "completed_tasks": 14,
+      "total_tasks": 2,
+      "completed_tasks": 2,
       "completion_rate": 100.0,
-      "time_score": 90.0,
-      "work_score": 98.0,
-      "declared_hours": 40.0,
-      "time_violations": [
-        "13/07: Task '[Nguyên cứu] Sửa lại slide và hiểu chỉnh lại mindmap của Java Web Service' khai báo 2.0h so với định mức tiêu chuẩn 1.0h",
-        "15/07: Task '[Học liệu] - Làm Mindmap session 08 - BE IOC' khai báo 2.0h so với định mức tiêu chuẩn 1.0h"
-      ],
+      "time_score": 100.0,
+      "work_score": 100.0,
+      "declared_hours": 8.0,
+      "time_violations": [],
       "warning_flags": [
-        "Task '[Học liệu] - Chuyển đổi slide --> HTML Slide 2 session' chưa định dạng (gán tạm 30 phút)",
-        "Task '[Nguyên cứu] - Xây dựng AI Agent Slide môn Microservice' chưa định dạng (gán tạm 30 phút)",
-        "Task '[Workshop] Tham gia workshop odoo của khối đào tạo' chưa định dạng (gán tạm 30 phút)"
+        "Task '[Học liệu] - Xây dựng slide html session 10 + 12 + 14' chưa định dạng (gán tạm 30 phút)",
+        "Task '[Học liệu] - Xây dựng nội dung kịch bản nói quay video session 10 + 12 + 14' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -538,25 +466,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 1,
+      "reported_days": 0,
       "missing_days": [
-        "2026-07-13",
-        "2026-07-14",
-        "2026-07-16",
-        "2026-07-17"
+        "2026-07-20"
       ],
-      "total_tasks": 7,
-      "completed_tasks": 7,
+      "total_tasks": 0,
+      "completed_tasks": 0,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 68.0,
-      "declared_hours": 7.0,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
       "time_violations": [],
-      "warning_flags": [
-        "Task 'Phân chia công việc sản xuất học liệu môn Microservice' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Họp ĐT - Checkpoint' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Họp chốt nhiệm vụ SX TNHT - Kỳ nghỉ hè 2026' chưa định dạng (gán tạm 30 phút)"
-      ],
+      "warning_flags": [],
       "uncompleted_tasks": []
     },
     "lê hà thanh sang": {
@@ -564,22 +485,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
+      "reported_days": 0,
       "missing_days": [
-        "2026-07-16"
+        "2026-07-20"
       ],
-      "total_tasks": 16,
-      "completed_tasks": 16,
+      "total_tasks": 0,
+      "completed_tasks": 0,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 92.0,
-      "declared_hours": 29.75,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
       "time_violations": [],
-      "warning_flags": [
-        "Task 'Gác thi Hackathon môn FastAPI lớp HCM-KS25-CNTT7' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Gác thi Hackathon môn FastAPI lớp HCM-KS25-CNTT6' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ cam kết với phụ huynh và sinh viên' chưa định dạng (gán tạm 30 phút)"
-      ],
+      "warning_flags": [],
       "uncompleted_tasks": []
     },
     "phạm viết hùng": {
@@ -587,25 +504,19 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-07-17"
-      ],
-      "total_tasks": 13,
-      "completed_tasks": 13,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 3,
+      "completed_tasks": 3,
       "completion_rate": 100.0,
-      "time_score": 85.0,
-      "work_score": 89.0,
-      "declared_hours": 32.0,
-      "time_violations": [
-        "15/07: Task 'Chuẩn bị thực hành + Triển khai thực hành CNTT8 SS17' khai báo 3.0h so với định mức tiêu chuẩn 0.8h",
-        "16/07: Task 'Chuẩn bị thực hành + triển khai thực hành SS19 K25 CNTT8' khai báo 3.0h so với định mức tiêu chuẩn 0.8h",
-        "16/07: Task 'Chuẩn bị thực hành + triển khai thực hành SS19 K25 CNTT5' khai báo 3.0h so với định mức tiêu chuẩn 0.8h"
-      ],
+      "time_score": 100.0,
+      "work_score": 100.0,
+      "declared_hours": 7.5,
+      "time_violations": [],
       "warning_flags": [
-        "Task 'Gác thi Hackathon môn FastAPI lớp HCM-KS25-CNTT6' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Gác thi Hackathon môn FastAPI lớp HCM-KS25-CNTT7' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Quản lý chỉ số và chăm sóc sinh viên + hỗ trợ kiểm tra bài tập về nhà K25 và K24' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Quản lý chỉ số sinh viên và chốt điểm Rpoint cho K24 + Hỗ trợ tạo ca thi' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Tham gia demo giảng lý thuyết và bài tập của các thầy HCM' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Kiểm tra bài tập về nhà sinh viên K24 và JS' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -614,20 +525,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
-      "missing_days": [],
-      "total_tasks": 19,
-      "completed_tasks": 19,
+      "reported_days": 0,
+      "missing_days": [
+        "2026-07-20"
+      ],
+      "total_tasks": 0,
+      "completed_tasks": 0,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 100.0,
-      "declared_hours": 37.0,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
       "time_violations": [],
-      "warning_flags": [
-        "Task 'Cán bộ coi thi HKT Fastapi CNTT8 - Phát sinh lỗi hệ thống' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Cán bộ coi thi HKT Fastapi CNTT5' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Quản lý chỉ số, chăm sóc sinh viên' chưa định dạng (gán tạm 30 phút)"
-      ],
+      "warning_flags": [],
       "uncompleted_tasks": []
     },
     "nguyễn thanh bình phước": {
@@ -637,11 +546,7 @@
       "rank": "3",
       "reported_days": 0,
       "missing_days": [
-        "2026-07-13",
-        "2026-07-14",
-        "2026-07-15",
-        "2026-07-16",
-        "2026-07-17"
+        "2026-07-20"
       ],
       "total_tasks": 0,
       "completed_tasks": 0,
@@ -658,21 +563,18 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-07-13"
-      ],
-      "total_tasks": 16,
-      "completed_tasks": 16,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 3,
+      "completed_tasks": 3,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 92.0,
-      "declared_hours": 33.0,
+      "work_score": 100.0,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Tham gia sự kiện kí kết với Odoo' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Danh sách 10 sinh viên nòng cốt theo yêu cầu của phòng TH & Trải nghiệm' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Liên lạc RIKI thông báo và hỗ trợ điểm danh cho các bạn SV tham gia company tour' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Họp giao ban tuần' chưa định dạng (gán tạm 30 phút)",
+        "Task 'ĐIều chỉnh mô hình đào tạo 3 lớp: Rikai, Katsudou, Renshu' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -681,100 +583,81 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 20,
-      "completed_tasks": 19,
-      "completion_rate": 95.0,
-      "time_score": 95.0,
-      "work_score": 97.0,
-      "declared_hours": 52.5,
-      "time_violations": [
-        "16/07: Task 'REKHAO-15 2026.07.16 - [RE] CHUẨN BỊ TOEIC TEST 2 CHO 11 SINH VIÊN THI LẠI' khai báo 12.0h so với định mức tiêu chuẩn 0.8h"
-      ],
+      "total_tasks": 5,
+      "completed_tasks": 5,
+      "completion_rate": 100.0,
+      "time_score": 100.0,
+      "work_score": 100.0,
+      "declared_hours": 8.25,
+      "time_violations": [],
       "warning_flags": [
-        "Task 'REXPCHUO-1 🔵 [RE x PREP/JAXTINA] GIAO TIẾP & XỬ LÝ CÔNG VIỆC HÀNG NGÀY VỚI ĐỐI TÁC' chưa định dạng (gán tạm 30 phút)",
-        "Task 'REXPENGL-8 BÁO CÁO ĐÀO TẠO HÀNG TUẦN' chưa định dạng (gán tạm 30 phút)",
-        "Task 'REXPENGL-11 2026.07.14 - [RExODOO] BÀI THU HOẠCH CHƯƠNG TRÌNH RE x ODOO' chưa định dạng (gán tạm 30 phút)"
+        "Task 'REXPENGL-19 2026.07.20 - [RE] CHƯƠNG TRÌNH TIẾNG ANH K26 - ENGLISH PROGRAM FOR K26 (VERSION 3)' chưa định dạng (gán tạm 30 phút)",
+        "Task 'REKHAO-19 2026.07.20 - [RE] HƯỚNG DẪN CHẤM ĐIỂM BÀI THI SÁT HẠCH TIẾNG ANH TOEIC ĐỢT 1 NĂM 2026' chưa định dạng (gán tạm 30 phút)",
+        "Task 'REXPENGL-18 2026.07.20 - [RE] BÁO CÁO TUẦN CỦA KHỐI ĐÀO TẠO' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "REKHAO-15 2026.07.16 - [RE] CHUẨN BỊ TOEIC TEST 2 CHO 11 SINH VIÊN THI LẠI (80%)"
-      ]
+      "uncompleted_tasks": []
     },
     "lê thị đỏ": {
       "name": "Lê Thị Đỏ",
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 8,
-      "completed_tasks": 6,
-      "completion_rate": 75.0,
-      "time_score": 90.0,
-      "work_score": 88.0,
-      "declared_hours": 35.5,
+      "total_tasks": 3,
+      "completed_tasks": 3,
+      "completion_rate": 100.0,
+      "time_score": 95.0,
+      "work_score": 99.0,
+      "declared_hours": 8.0,
       "time_violations": [
-        "13/07: Task 'PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng của tuần 1' khai báo 6.0h so với định mức tiêu chuẩn 0.8h",
-        "14/07: Task 'PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng tuần 1' khai báo 3.0h so với định mức tiêu chuẩn 0.8h"
+        "20/07: Task 'Làm list danh sách các video cần chuẩn bị trước lớp' khai báo 3.0h so với định mức tiêu chuẩn 0.8h"
       ],
       "warning_flags": [
-        "Task 'Tham dự SỰ KIỆN RIKKEI EDUCATION X ODOO' chưa định dạng (gán tạm 30 phút)",
-        "Task 'PTITXAY-5 Chuẩn hóa lại quy trình đào tạo theo từng loại hình buổi học ( tuần 3 -> tuần 7 )' chưa định dạng (gán tạm 30 phút)",
-        "Task 'họp với trường nhóm Minh Hằng về nội dung chương trình PM' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Làm list các bài quiz cần làm cho JPN101' chưa định dạng (gán tạm 30 phút)",
+        "Task 'phân lại thời gian cho từng phần tự học và ôn tập của sinh viên JPN101' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng của tuần 1 (60%)",
-        "PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng tuần 1 (90%)"
-      ]
+      "uncompleted_tasks": []
     },
     "ngô quang huấn": {
       "name": "Ngô Quang Huấn",
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
+      "reported_days": 0,
       "missing_days": [
-        "2026-07-15"
+        "2026-07-20"
       ],
-      "total_tasks": 11,
-      "completed_tasks": 6,
-      "completion_rate": 54.54545454545454,
+      "total_tasks": 0,
+      "completed_tasks": 0,
+      "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 73.8,
-      "declared_hours": 32.0,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
       "time_violations": [],
-      "warning_flags": [
-        "Task 'Họp giao ban tuần' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Làm bộ đề thi đánh giá năng lực KNM' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Làm việc cùng Cao bên Rika để đẩy đề lên hệ thống khảo thí' chưa định dạng (gán tạm 30 phút)"
-      ],
-      "uncompleted_tasks": [
-        "sản xuất học liệu môn Quản trị mục tiêu (10%)",
-        "REXPCHUO3-3 Sản xuất học liệu môn Giao tiếp, thuyết trình, phản biện (50%)",
-        "REXPCHUO2-3 Sản xuất học liệu môn Giao tiếp, thuyết trình, phản biện (50%)"
-      ]
+      "warning_flags": [],
+      "uncompleted_tasks": []
     },
     "lê nhựt mi": {
       "name": "Lê Nhựt Mi",
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 34,
-      "completed_tasks": 34,
+      "total_tasks": 7,
+      "completed_tasks": 7,
       "completion_rate": 100.0,
-      "time_score": 95.0,
-      "work_score": 99.0,
-      "declared_hours": 37.5,
-      "time_violations": [
-        "14/07: Task 'Rà soát khả năng ứng dụng AI Agent vào công việc: Xác định một số hướng ứng dụng AI Agent vào công việc cá nhân, gồm hỗ trợ chuẩn bị bài giảng, tổng hợp case study, gợi ý câu hỏi thảo luận, rà soát tài liệu và hỗ trợ lập kế hoạch công việc' khai báo 1.5h so với định mức tiêu chuẩn 0.8h"
-      ],
+      "time_score": 100.0,
+      "work_score": 100.0,
+      "declared_hours": 7.75,
+      "time_violations": [],
       "warning_flags": [
-        "Task 'Trải nghiệm và góp ý bài đọc trên giao diện file HTML' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Tham gia canh thi lớp CNTT: Tham gia hỗ trợ công tác coi thi, theo dõi tình hình phòng thi, nhắc nhở sinh viên thực hiện đúng quy định và đảm bảo buổi thi diễn ra nghiêm túc.' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Rà soát nội dung phân công công việc tuần mới: Kiểm tra các đầu việc được phân công, xác định nhiệm vụ cần ưu tiên và ghi nhận các mốc thời gian cần hoàn thành trong tuần.' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Góp ý CLO các môn học trong bản cập nhật CTĐT' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Tham gia họp, ghi nhận kế hoạch triển khai, nội dung module và cách tổ chức chương trình hè. Training dùng AI Agent sản xuất học liệu' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Phản biện PM Kinh tế vi mô: Rà soát PM, góp ý về cấu trúc, nội dung, hoạt động học tập và mức độ phù hợp với sinh viên.' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -783,23 +666,19 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 32,
-      "completed_tasks": 32,
+      "total_tasks": 7,
+      "completed_tasks": 7,
       "completion_rate": 100.0,
-      "time_score": 85.0,
-      "work_score": 97.0,
-      "declared_hours": 39.0,
-      "time_violations": [
-        "15/07: Task '- Tham gia dự giờ chấm thi môn Dự án Kinh doanh số 2 để hiểu được mindset và cách thức vận hành của một buổi chấm thi trực tiếp và takenote các thông tin quan trọng' khai báo 3.0h so với định mức tiêu chuẩn 0.5h",
-        "15/07: Task '- Nghiên cứu các tài liệu, học liệu các môn học để bổ sung thêm kiến thức chuẩn bị cho K26' khai báo 2.0h so với định mức tiêu chuẩn 0.8h",
-        "16/07: Task '- Tiếp tục nghiên cứu các phần tài liệu học liệu để chuẩn bị cho học kỳ tiếp theo' khai báo 2.0h so với định mức tiêu chuẩn 0.8h"
-      ],
+      "time_score": 100.0,
+      "work_score": 100.0,
+      "declared_hours": 8.0,
+      "time_violations": [],
       "warning_flags": [
-        "Task '- Xem qua các tính năng và hỗ trợ góp ỷ về bài đọc qua nền tảng HMTL của Thầy Ngọc' chưa định dạng (gán tạm 30 phút)",
-        "Task '- Cập nhật thông tin về kinh tế và thị trường để bổ sung kiến thức kinh tế cho bản thân' chưa định dạng (gán tạm 30 phút)",
-        "Task '- Xem lại nội dung tài liệu, giáo trình của các môn học để bổ sung nên năng lực nền tảng' chưa định dạng (gán tạm 30 phút)"
+        "Task '- Nghiên cứu góp ý cho CĐR của môn học đã được phân công' chưa định dạng (gán tạm 30 phút)",
+        "Task '- Phối hợp với Ms Minh chỉnh sửa PM của môn học Kinh tế vi mô cho hoạt động giữ nhịp hè của sinh viên' chưa định dạng (gán tạm 30 phút)",
+        "Task '- Nghiên cứu các khóa học trực tuyến Free và có cấp CN cho hoạt động của sinh viên hè' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -808,19 +687,19 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Trợ giảng",
       "rank": "1",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 25,
-      "completed_tasks": 25,
+      "total_tasks": 4,
+      "completed_tasks": 4,
       "completion_rate": 100.0,
       "time_score": 100.0,
       "work_score": 100.0,
-      "declared_hours": 29.5,
+      "declared_hours": 3.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Trợ giảng môn PRJ302 lớp QTKD2' chưa định dạng (gán tạm 30 phút)",
-        "Task 'rà soát lại các sinh viên nghỉ học để tính lại điểm' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Góp ý cải tiến hiệu suất' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Hỗ trợ nhập điểm quá trình môn PRJ302 cho lớp QTKD2' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Đọc chuẩn đầu ra CTDT' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Đọc học hiệu môn BA' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -829,27 +708,24 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 3,
-      "missing_days": [
-        "2026-07-16",
-        "2026-07-17"
-      ],
-      "total_tasks": 15,
-      "completed_tasks": 8,
-      "completion_rate": 53.333333333333336,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 5,
+      "completed_tasks": 0,
+      "completion_rate": 0.0,
       "time_score": 100.0,
-      "work_score": 65.3,
-      "declared_hours": 23.25,
+      "work_score": 60.0,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Hoàn thiện báo cáo giao ban nội bộ khối ĐT' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Họp báo cáo giao ban nội bộ khối ĐT' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Review quyết định về tổ chức kỳ thi đánh giá năng lực dành cho SV K24, K25' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Họp nội bộ đào tạo' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Hoàn thiện báo cáo nội bộ đào tạo' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Review quy định đào tạo' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": [
-        "Hoàn thiện báo cáo giao ban nội bộ khối ĐT (0%)",
-        "Họp báo cáo giao ban nội bộ khối ĐT (0%)",
-        "Review quyết định về tổ chức kỳ thi đánh giá năng lực dành cho SV K24, K25 (0%)"
+        "Họp nội bộ đào tạo (0%)",
+        "Hoàn thiện báo cáo nội bộ đào tạo (0%)",
+        "Review quy định đào tạo (0%)"
       ]
     },
     "trần thị mỹ phước": {
@@ -857,19 +733,19 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 19,
-      "completed_tasks": 19,
+      "total_tasks": 4,
+      "completed_tasks": 4,
       "completion_rate": 100.0,
       "time_score": 100.0,
       "work_score": 100.0,
-      "declared_hours": 40.0,
+      "declared_hours": 8.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Trao đổi trực tiếp với phụ huynh về tình hình học tập, bảng điểm, tư vấn & định hướng' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Viết văn bản ban hành quy định Đánh giá năng lực sinh viên K24 & K25 (Quyết định ban hành kèm Phụ lục, Quyết định ban hành kèm Thông báo))' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Soạn mẫu đơn xin hoãn thi' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Điều chỉnh Chương V - Cánh báo và xử lý kết quả học tập theo quy đinh đào tạo mới' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Xử lý SV phát sinh: hoàn tất thủ tục nghỉ học dài hạn cho SV; Hỗ trợ tư vấn SV có ý định bảo lưu kết quả học tập' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Tạo mẫu báo cáo trên Lark Base' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -878,21 +754,19 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-07-17"
-      ],
-      "total_tasks": 35,
-      "completed_tasks": 35,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 9,
+      "completed_tasks": 9,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 92.0,
-      "declared_hours": 32.25,
+      "work_score": 100.0,
+      "declared_hours": 6.25,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Chốt danh sách và xếp thi lại OJT ngắn hạn' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Chỉnh sửa và viết lại các quy trình theo Review' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Tổ chức và thông báo đợt thi lại tháng 7 ngắn hạn' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Chốt Rpoint và xếp danh sách thi, phân công tổ chức thi KTHP môn IT212 HCM K24' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Lên kế hoạch Khảo thí tuần 30/2026' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Chốt Rpoint và xếp danh sách thi, phân công tổ chức thi lớp JS-PTHB260326 - bảo vệ' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -901,19 +775,19 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "4",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 23,
-      "completed_tasks": 23,
+      "total_tasks": 3,
+      "completed_tasks": 3,
       "completion_rate": 100.0,
       "time_score": 100.0,
       "work_score": 100.0,
-      "declared_hours": 37.75,
+      "declared_hours": 6.0,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Báo cáo chỉ số đào tạo' chưa định dạng (gán tạm 30 phút)",
         "Task 'Họp giao ban nội bộ đào tạo' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Training AI Agent về báo cáo công việc ngày' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Xử lý vấn đề điểm kết thúc học phần sinh viên' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Nghiên cứu AI-Agent' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -922,51 +796,40 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 22,
-      "completed_tasks": 19,
-      "completion_rate": 86.36363636363636,
-      "time_score": 95.0,
-      "work_score": 93.5,
-      "declared_hours": 40.0,
-      "time_violations": [
-        "15/07: Task 'Tìm đọc tài liệu về Agile Scrum  chuẩn bị làm học liệu cho môn Phát triển phần mềm với Agile Scrum' khai báo 3.0h so với định mức tiêu chuẩn 0.8h"
-      ],
+      "total_tasks": 3,
+      "completed_tasks": 3,
+      "completion_rate": 100.0,
+      "time_score": 100.0,
+      "work_score": 100.0,
+      "declared_hours": 8.0,
+      "time_violations": [],
       "warning_flags": [
-        "Task 'Coi thi giữa kỳ lớp CNTT8 môn FastApi Lập trình Web' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Chấm BTVN CNTT6 môn FastApi - S14' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Coi thi giữa kỳ lớp CNTT5 môn FastApi Lập trình Web' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Tham gia demo workshop thầy Tuấn' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Tham gia demo workshop thầy Hùng' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Xem tài liệu môn Agile Scrum session 7' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "Tìm đọc tài liệu về Agile Scrum  chuẩn bị làm học liệu cho môn Phát triển phần mềm với Agile Scrum (30%)",
-        "Tham khảo tài liệu các session cho học liệu môn Agile Scrum (50%)",
-        "Tham khảo tài liệu làm session 7 cho học liệu môn Agile Scrum (60%)"
-      ]
+      "uncompleted_tasks": []
     },
     "nguyễn ngọc sơn": {
       "name": "Nguyễn Ngọc Sơn",
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-07-17"
-      ],
-      "total_tasks": 21,
-      "completed_tasks": 21,
+      "reported_days": 1,
+      "missing_days": [],
+      "total_tasks": 4,
+      "completed_tasks": 4,
       "completion_rate": 100.0,
-      "time_score": 90.0,
-      "work_score": 90.0,
-      "declared_hours": 29.5,
+      "time_score": 95.0,
+      "work_score": 99.0,
+      "declared_hours": 7.0,
       "time_violations": [
-        "13/07: Task '- Thực hiện chấm bài lớp HCM-KS24-CNTT1:' khai báo 1.0h so với định mức tiêu chuẩn 0.5h",
-        "15/07: Task 'Thực hiện chấm bài lớp HCM-KS24-CNTT1' khai báo 1.0h so với định mức tiêu chuẩn 0.5h"
+        "20/07: Task 'Chấm bài session 12 lớp  HCM-KS24-CNTT1' khai báo 1.0h so với định mức tiêu chuẩn 0.5h"
       ],
       "warning_flags": [
-        "Task '- Được training và hỗ trợ gác thi lơp HCM-KS25-CNTT7: https://tgu698gf9yo.sg.larksuite.com/docx/UCcgdvGHVoj0IOx8tLeloXTqgsf' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Được training và hỗ trợ gác thi lơp HCM-KS25-CNTT5: https://tgu698gf9yo.sg.larksuite.com/docx/TUAzd2mJPol3qWxd69wll2CrgGe' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Được training tạo phòng thi thêm sinh viên' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Tham gia hỗ trợ lớp HCM-KS24-CNTT1 thầy Minh' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -975,27 +838,18 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 3,
+      "reported_days": 0,
       "missing_days": [
-        "2026-07-13",
-        "2026-07-17"
+        "2026-07-20"
       ],
-      "total_tasks": 17,
-      "completed_tasks": 17,
+      "total_tasks": 0,
+      "completed_tasks": 0,
       "completion_rate": 100.0,
-      "time_score": 80.0,
-      "work_score": 80.0,
-      "declared_hours": 23.0,
-      "time_violations": [
-        "15/07: Task 'Chấm bài tập Về nhà' khai báo 2.0h so với định mức tiêu chuẩn 0.5h",
-        "15/07: Task 'Chấm bài tập Về nhà' khai báo 1.0h so với định mức tiêu chuẩn 0.5h",
-        "16/07: Task 'Chấm bài tập về nhà Session18 CNTT6' khai báo 1.0h so với định mức tiêu chuẩn 0.5h"
-      ],
-      "warning_flags": [
-        "Task 'Triển khai thực hành Session 17 CNTT6' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Coi thi Hackathon môn ứng dụng AI' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Quản lý chỉ số 2 lớp CNTT' chưa định dạng (gán tạm 30 phút)"
-      ],
+      "time_score": 100.0,
+      "work_score": 0.0,
+      "declared_hours": 0.0,
+      "time_violations": [],
+      "warning_flags": [],
       "uncompleted_tasks": []
     },
     "nguyễn đức minh": {
@@ -1003,21 +857,18 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 18,
-      "completed_tasks": 18,
+      "total_tasks": 2,
+      "completed_tasks": 2,
       "completion_rate": 100.0,
-      "time_score": 95.0,
-      "work_score": 99.0,
-      "declared_hours": 31.0,
-      "time_violations": [
-        "14/07: Task 'Chuẩn bị demo giảng thử Java Web Service Session 4' khai báo 1.5h so với định mức tiêu chuẩn 0.8h"
-      ],
+      "time_score": 100.0,
+      "work_score": 100.0,
+      "declared_hours": 6.0,
+      "time_violations": [],
       "warning_flags": [
-        "Task 'Giải bài thực hành môn AI Application in Action session 8 lớp HCM KS24 CNTT1' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Giám sát thi lớp K25 CNTT6' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Thống kê số lượng khảo sát đăng ký KTX tại cơ sở quận 1' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Ôn tập cuối môn AI Application in Action lớp KS24 CNTT1' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Tham gia demo workshop' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -1026,19 +877,19 @@
       "group": "Khối QLCLĐT",
       "role": "Trợ giảng",
       "rank": "1",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 24,
-      "completed_tasks": 24,
+      "total_tasks": 6,
+      "completed_tasks": 6,
       "completion_rate": 100.0,
       "time_score": 100.0,
       "work_score": 100.0,
-      "declared_hours": 37.5,
+      "declared_hours": 7.5,
       "time_violations": [],
       "warning_flags": [
-        "Task 'Trợ giảng 2 lớp QTKDS1 với QTKDS3' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Họp kế hoạch triển khai kết thúc môn PRJ302' chưa định dạng (gán tạm 30 phút)",
-        "Task 'CSSV và phản hồi sinh viên' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Họp chương trình giữ nhịp hè và tranning Antigravity' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Xây PM - Ôn tập Kinh tế vĩ mô' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Góp ý CDR và CLO' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -1047,28 +898,22 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 1,
       "missing_days": [],
-      "total_tasks": 23,
-      "completed_tasks": 21,
-      "completion_rate": 91.30434782608695,
-      "time_score": 60.0,
-      "work_score": 88.5,
-      "declared_hours": 38.5,
+      "total_tasks": 3,
+      "completed_tasks": 3,
+      "completion_rate": 100.0,
+      "time_score": 95.0,
+      "work_score": 99.0,
+      "declared_hours": 7.0,
       "time_violations": [
-        "13/07: Task 'HCM-KS25-CNTT8 - IT215 - Session14: Chấm bài tập về nhà' khai báo 1.0h so với định mức tiêu chuẩn 0.5h",
-        "13/07: Task 'HCM-KS25-CNTT5 - IT215 - Session14: Chấm bài tập về nhà' khai báo 1.0h so với định mức tiêu chuẩn 0.5h",
-        "15/07: Task 'HCM-KS25-CNTT8 - IT215 - Session 16: Chấm bài tập về nhà.' khai báo 1.5h so với định mức tiêu chuẩn 0.5h"
+        "20/07: Task 'HCM-CNTT: Chuẩn bị workshop' khai báo 2.0h so với định mức tiêu chuẩn 0.8h"
       ],
       "warning_flags": [
-        "Task 'HCM-CNTT: Giám sát thi Hackathon các lớp (CNTT5, 6, 7, 8)' chưa định dạng (gán tạm 30 phút)",
-        "Task 'HCM-CNTT: Triển khai giám sát thi Hackathon lớp KS24-CNTT1.' chưa định dạng (gán tạm 30 phút)",
-        "Task 'HCM-CNTT: Hỗ trợ triển khai giám sát: Thi Lại Cuối Kỳ Python HCM-KS25' chưa định dạng (gán tạm 30 phút)"
+        "Task 'HCM-KS25-CNTT7: Hỗ trợ chấm thi Hackathon' chưa định dạng (gán tạm 30 phút)",
+        "Task 'HCM-CNTT: Triển khai học liệu môn Phân tích thiết kế hệ thống' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "HCM - CNTT: Tham gia Lễ sơ kết K25 (0%)",
-        "HCM-CNTT: Triển khai học liệu môn Phân tích thiết kế hệ thống (0%)"
-      ]
+      "uncompleted_tasks": []
     }
   },
   "monthly_stats": {
@@ -1077,14 +922,14 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "5",
-      "reported_days": 13,
+      "reported_days": 14,
       "missing_days": [],
-      "total_tasks": 90,
-      "completed_tasks": 89,
-      "completion_rate": 98.88888888888889,
+      "total_tasks": 93,
+      "completed_tasks": 92,
+      "completion_rate": 98.9247311827957,
       "time_score": 95.0,
       "work_score": 98.6,
-      "declared_hours": 112.5,
+      "declared_hours": 118.5,
       "time_violations": [
         "13/07: Task 'Giảng dạy, chuẩn bị giảng dạy SS8 - PRB302' khai báo 2.5h so với định mức tiêu chuẩn 0.5h"
       ],
@@ -1102,14 +947,14 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "5",
-      "reported_days": 13,
+      "reported_days": 14,
       "missing_days": [],
-      "total_tasks": 41,
-      "completed_tasks": 38,
-      "completion_rate": 92.6829268292683,
+      "total_tasks": 43,
+      "completed_tasks": 40,
+      "completion_rate": 93.02325581395348,
       "time_score": 100.0,
-      "work_score": 97.1,
-      "declared_hours": 104.0,
+      "work_score": 97.2,
+      "declared_hours": 112.0,
       "time_violations": [],
       "warning_flags": [
         "Task 'Nghiên cứu AI agent' chưa định dạng (gán tạm 30 phút)",
@@ -1127,14 +972,14 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 13,
+      "reported_days": 14,
       "missing_days": [],
-      "total_tasks": 81,
-      "completed_tasks": 79,
-      "completion_rate": 97.53086419753086,
+      "total_tasks": 86,
+      "completed_tasks": 84,
+      "completion_rate": 97.67441860465115,
       "time_score": 100.0,
-      "work_score": 99.0,
-      "declared_hours": 105.0,
+      "work_score": 99.1,
+      "declared_hours": 113.0,
       "time_violations": [],
       "warning_flags": [
         "Task 'Tham gia giảng dạy lớp QTKD2 môn PRJ302' chưa định dạng (gán tạm 30 phút)",
@@ -1151,18 +996,18 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 10,
+      "reported_days": 11,
       "missing_days": [
         "2026-07-07",
         "2026-07-10",
         "2026-07-17"
       ],
-      "total_tasks": 64,
-      "completed_tasks": 64,
+      "total_tasks": 69,
+      "completed_tasks": 69,
       "completion_rate": 100.0,
       "time_score": 95.0,
-      "work_score": 89.8,
-      "declared_hours": 90.0,
+      "work_score": 90.4,
+      "declared_hours": 98.0,
       "time_violations": [
         "13/07: Task 'Góp ý bài sinh viên về báo cáo cuối môn và slide' khai báo 1.5h so với định mức tiêu chuẩn 0.5h"
       ],
@@ -1179,12 +1024,14 @@
       "role": "Giảng viên",
       "rank": "3",
       "reported_days": 13,
-      "missing_days": [],
+      "missing_days": [
+        "2026-07-20"
+      ],
       "total_tasks": 49,
       "completed_tasks": 49,
       "completion_rate": 100.0,
       "time_score": 95.0,
-      "work_score": 99.0,
+      "work_score": 96.1,
       "declared_hours": 98.0,
       "time_violations": [
         "03/07: Task 'Chấm thi' khai báo 3.5h so với định mức tiêu chuẩn 0.5h"
@@ -1201,7 +1048,7 @@
       "group": "Khối QTKD",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
+      "reported_days": 5,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -1213,12 +1060,12 @@
         "2026-07-13",
         "2026-07-17"
       ],
-      "total_tasks": 19,
-      "completed_tasks": 19,
+      "total_tasks": 24,
+      "completed_tasks": 24,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 72.3,
-      "declared_hours": 34.0,
+      "work_score": 74.3,
+      "declared_hours": 42.0,
       "time_violations": [],
       "warning_flags": [
         "Task 'RnD AI Agent for Learning Material' chưa định dạng (gán tạm 30 phút)",
@@ -1232,7 +1079,7 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 5,
+      "reported_days": 6,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -1243,12 +1090,12 @@
         "2026-07-14",
         "2026-07-17"
       ],
-      "total_tasks": 22,
-      "completed_tasks": 22,
+      "total_tasks": 23,
+      "completed_tasks": 23,
       "completion_rate": 100.0,
       "time_score": 95.0,
-      "work_score": 74.4,
-      "declared_hours": 40.0,
+      "work_score": 76.1,
+      "declared_hours": 48.0,
       "time_violations": [
         "09/07: Task 'review chấm bài, nhận xét bài tập các lớp, kiểm tra nhóm yếu, tài nguyên học tập' khai báo 1.0h so với định mức tiêu chuẩn 0.5h"
       ],
@@ -1264,18 +1111,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 10,
+      "reported_days": 11,
       "missing_days": [
         "2026-07-01",
         "2026-07-03",
         "2026-07-07"
       ],
-      "total_tasks": 37,
-      "completed_tasks": 37,
+      "total_tasks": 40,
+      "completed_tasks": 40,
       "completion_rate": 100.0,
       "time_score": 95.0,
-      "work_score": 89.8,
-      "declared_hours": 73.5,
+      "work_score": 90.4,
+      "declared_hours": 81.5,
       "time_violations": [
         "06/07: Task 'Giảng dạy CNTT3' khai báo 5.0h so với định mức tiêu chuẩn 3.0h"
       ],
@@ -1299,13 +1146,14 @@
         "2026-07-08",
         "2026-07-09",
         "2026-07-10",
-        "2026-07-16"
+        "2026-07-16",
+        "2026-07-20"
       ],
       "total_tasks": 33,
       "completed_tasks": 32,
       "completion_rate": 96.96969696969697,
       "time_score": 100.0,
-      "work_score": 77.2,
+      "work_score": 75.9,
       "declared_hours": 50.25,
       "time_violations": [],
       "warning_flags": [
@@ -1322,17 +1170,17 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 11,
+      "reported_days": 12,
       "missing_days": [
         "2026-07-06",
         "2026-07-10"
       ],
-      "total_tasks": 41,
-      "completed_tasks": 41,
+      "total_tasks": 42,
+      "completed_tasks": 42,
       "completion_rate": 100.0,
-      "time_score": 75.0,
-      "work_score": 88.8,
-      "declared_hours": 95.0,
+      "time_score": 70.0,
+      "work_score": 88.3,
+      "declared_hours": 103.0,
       "time_violations": [
         "02/07: Task 'Chuẩn bị cho buổi thực hành SS8 gồm BTTH ss7 và full BTTH ss8' khai báo 2.0h so với định mức tiêu chuẩn 0.8h",
         "07/07: Task 'Chuẩn bị cho tiết thực hành' khai báo 2.0h so với định mức tiêu chuẩn 0.8h",
@@ -1354,13 +1202,14 @@
       "missing_days": [
         "2026-07-02",
         "2026-07-09",
-        "2026-07-10"
+        "2026-07-10",
+        "2026-07-20"
       ],
       "total_tasks": 48,
       "completed_tasks": 48,
       "completion_rate": 100.0,
       "time_score": 35.0,
-      "work_score": 77.8,
+      "work_score": 75.6,
       "declared_hours": 83.75,
       "time_violations": [
         "01/07: Task 'CHẤM BÀI TẬP SS4 SS5 LỚP CNTT1' khai báo 1.25h so với định mức tiêu chuẩn 0.5h",
@@ -1381,13 +1230,14 @@
       "rank": "3",
       "reported_days": 12,
       "missing_days": [
-        "2026-07-02"
+        "2026-07-02",
+        "2026-07-20"
       ],
       "total_tasks": 44,
       "completed_tasks": 43,
       "completion_rate": 97.72727272727273,
       "time_score": 95.0,
-      "work_score": 95.0,
+      "work_score": 92.4,
       "declared_hours": 94.5,
       "time_violations": [
         "16/07: Task 'Chấm thi môn IT205-KS25' khai báo 4.0h so với định mức tiêu chuẩn 0.5h"
@@ -1406,7 +1256,7 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 3,
+      "reported_days": 4,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -1419,12 +1269,12 @@
         "2026-07-14",
         "2026-07-17"
       ],
-      "total_tasks": 30,
-      "completed_tasks": 30,
+      "total_tasks": 31,
+      "completed_tasks": 31,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 69.2,
-      "declared_hours": 33.5,
+      "work_score": 71.4,
+      "declared_hours": 41.5,
       "time_violations": [],
       "warning_flags": [
         "Task 'Trông thi hackathon lớp CNTT 3' chưa định dạng (gán tạm 30 phút)",
@@ -1450,13 +1300,14 @@
         "2026-07-10",
         "2026-07-15",
         "2026-07-16",
-        "2026-07-17"
+        "2026-07-17",
+        "2026-07-20"
       ],
       "total_tasks": 10,
       "completed_tasks": 9,
       "completion_rate": 90.0,
       "time_score": 100.0,
-      "work_score": 62.2,
+      "work_score": 61.7,
       "declared_hours": 21.5,
       "time_violations": [],
       "warning_flags": [
@@ -1474,12 +1325,14 @@
       "role": "Giảng viên",
       "rank": "3",
       "reported_days": 13,
-      "missing_days": [],
+      "missing_days": [
+        "2026-07-20"
+      ],
       "total_tasks": 35,
       "completed_tasks": 35,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 100.0,
+      "work_score": 97.1,
       "declared_hours": 69.5,
       "time_violations": [],
       "warning_flags": [
@@ -1494,7 +1347,7 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 8,
+      "reported_days": 9,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -1502,12 +1355,12 @@
         "2026-07-09",
         "2026-07-15"
       ],
-      "total_tasks": 40,
-      "completed_tasks": 40,
+      "total_tasks": 43,
+      "completed_tasks": 43,
       "completion_rate": 100.0,
-      "time_score": 85.0,
-      "work_score": 81.6,
-      "declared_hours": 66.25,
+      "time_score": 80.0,
+      "work_score": 81.7,
+      "declared_hours": 74.25,
       "time_violations": [
         "13/07: Task 'PTITSAN-3 [S01] Mindmap + Quizz đầu/cuối giờ — Session 01' khai báo 2.0h so với định mức tiêu chuẩn 1.0h",
         "16/07: Task 'PTITSAN-3 [S01] Mindmap + Quizz đầu/cuối giờ — Session 02' khai báo 2.0h so với định mức tiêu chuẩn 1.0h",
@@ -1525,18 +1378,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 10,
+      "reported_days": 11,
       "missing_days": [
         "2026-07-02",
         "2026-07-07",
         "2026-07-08"
       ],
-      "total_tasks": 29,
-      "completed_tasks": 29,
+      "total_tasks": 30,
+      "completed_tasks": 30,
       "completion_rate": 100.0,
       "time_score": 85.0,
-      "work_score": 87.8,
-      "declared_hours": 93.5,
+      "work_score": 88.4,
+      "declared_hours": 101.5,
       "time_violations": [
         "03/07: Task '[Chấm thi môn AI Application] - CNTT2' khai báo 5.0h so với định mức tiêu chuẩn 0.5h",
         "03/07: Task '[RAIA] Nghiên cứu RAIA và chuẩn bị ca thi' khai báo 1.5h so với định mức tiêu chuẩn 0.8h",
@@ -1554,18 +1407,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 10,
+      "reported_days": 11,
       "missing_days": [
         "2026-07-01",
         "2026-07-03",
         "2026-07-16"
       ],
-      "total_tasks": 44,
-      "completed_tasks": 43,
-      "completion_rate": 97.72727272727273,
-      "time_score": 25.0,
-      "work_score": 74.9,
-      "declared_hours": 84.0,
+      "total_tasks": 47,
+      "completed_tasks": 46,
+      "completion_rate": 97.87234042553192,
+      "time_score": 20.0,
+      "work_score": 74.6,
+      "declared_hours": 92.0,
       "time_violations": [
         "02/07: Task 'chấm bài tập JB-IOC-PTHB251125 ,JB-IOC-PTHB260310,JB-IOC-PTHB260407' khai báo 1.0h so với định mức tiêu chuẩn 0.5h",
         "02/07: Task 'Chấm bài tập K24-CNTT1 session 11 môn AI Application' khai báo 1.0h so với định mức tiêu chuẩn 0.5h",
@@ -1585,16 +1438,16 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 12,
+      "reported_days": 13,
       "missing_days": [
         "2026-07-03"
       ],
-      "total_tasks": 32,
-      "completed_tasks": 24,
-      "completion_rate": 75.0,
+      "total_tasks": 34,
+      "completed_tasks": 26,
+      "completion_rate": 76.47058823529412,
       "time_score": 40.0,
-      "work_score": 74.9,
-      "declared_hours": 98.0,
+      "work_score": 75.7,
+      "declared_hours": 106.0,
       "time_violations": [
         "01/07: Task '[Chấm thi] - AI Application In Action - HN-KS24-CNTT1' khai báo 3.0h so với định mức tiêu chuẩn 0.5h",
         "02/07: Task '[Chấm thi sản phẩm] - Project - Java Web Service' khai báo 4.0h so với định mức tiêu chuẩn 0.5h",
@@ -1628,13 +1481,14 @@
         "2026-07-13",
         "2026-07-14",
         "2026-07-16",
-        "2026-07-17"
+        "2026-07-17",
+        "2026-07-20"
       ],
       "total_tasks": 7,
       "completed_tasks": 7,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 66.2,
+      "work_score": 65.7,
       "declared_hours": 7.0,
       "time_violations": [],
       "warning_flags": [
@@ -1654,13 +1508,14 @@
         "2026-07-01",
         "2026-07-03",
         "2026-07-06",
-        "2026-07-16"
+        "2026-07-16",
+        "2026-07-20"
       ],
       "total_tasks": 42,
       "completed_tasks": 42,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 87.7,
+      "work_score": 85.7,
       "declared_hours": 69.75,
       "time_violations": [],
       "warning_flags": [
@@ -1675,7 +1530,7 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 7,
+      "reported_days": 8,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -1684,12 +1539,12 @@
         "2026-07-08",
         "2026-07-17"
       ],
-      "total_tasks": 26,
-      "completed_tasks": 26,
+      "total_tasks": 29,
+      "completed_tasks": 29,
       "completion_rate": 100.0,
       "time_score": 75.0,
-      "work_score": 76.5,
-      "declared_hours": 53.25,
+      "work_score": 77.9,
+      "declared_hours": 60.75,
       "time_violations": [
         "03/07: Task 'Chuẩn bị thực hành bài tập + Triển khai thực hành bài tập KS25' khai báo 3.0h so với định mức tiêu chuẩn 0.8h",
         "09/07: Task 'Tham gia hỗ trợ chuẩn bị thực hành và triển khai thực hành ss13 cho thầy Tài demo KS25-CNTT8' khai báo 3.0h so với định mức tiêu chuẩn 0.8h",
@@ -1711,13 +1566,14 @@
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
-        "2026-07-07"
+        "2026-07-07",
+        "2026-07-20"
       ],
       "total_tasks": 41,
       "completed_tasks": 41,
       "completion_rate": 100.0,
       "time_score": 90.0,
-      "work_score": 88.8,
+      "work_score": 86.6,
       "declared_hours": 74.0,
       "time_violations": [
         "03/07: Task 'Chấm thi môn python cuối môn lớp CNTT8' khai báo 2.0h so với định mức tiêu chuẩn 0.5h",
@@ -1749,7 +1605,8 @@
         "2026-07-14",
         "2026-07-15",
         "2026-07-16",
-        "2026-07-17"
+        "2026-07-17",
+        "2026-07-20"
       ],
       "total_tasks": 0,
       "completed_tasks": 0,
@@ -1766,16 +1623,16 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 12,
+      "reported_days": 13,
       "missing_days": [
         "2026-07-13"
       ],
-      "total_tasks": 58,
-      "completed_tasks": 56,
-      "completion_rate": 96.55172413793103,
+      "total_tasks": 61,
+      "completed_tasks": 59,
+      "completion_rate": 96.72131147540983,
       "time_score": 95.0,
-      "work_score": 94.5,
-      "declared_hours": 98.75,
+      "work_score": 94.8,
+      "declared_hours": 106.75,
       "time_violations": [
         "09/07: Task 'Chuẩn bị tài liệu họp với RIKI' khai báo 3.0h so với định mức tiêu chuẩn 0.8h"
       ],
@@ -1794,7 +1651,7 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 8,
+      "reported_days": 9,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -1802,12 +1659,12 @@
         "2026-07-08",
         "2026-07-10"
       ],
-      "total_tasks": 29,
-      "completed_tasks": 22,
-      "completion_rate": 75.86206896551724,
+      "total_tasks": 34,
+      "completed_tasks": 27,
+      "completion_rate": 79.41176470588235,
       "time_score": 95.0,
-      "work_score": 74.0,
-      "declared_hours": 66.5,
+      "work_score": 76.5,
+      "declared_hours": 74.75,
       "time_violations": [
         "16/07: Task 'REKHAO-15 2026.07.16 - [RE] CHUẨN BỊ TOEIC TEST 2 CHO 11 SINH VIÊN THI LẠI' khai báo 12.0h so với định mức tiêu chuẩn 0.8h"
       ],
@@ -1827,21 +1684,22 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 10,
+      "reported_days": 11,
       "missing_days": [
         "2026-07-06",
         "2026-07-08",
         "2026-07-09"
       ],
-      "total_tasks": 23,
-      "completed_tasks": 21,
-      "completion_rate": 91.30434782608695,
-      "time_score": 90.0,
-      "work_score": 85.3,
-      "declared_hours": 57.5,
+      "total_tasks": 26,
+      "completed_tasks": 24,
+      "completion_rate": 92.3076923076923,
+      "time_score": 85.0,
+      "work_score": 85.4,
+      "declared_hours": 65.5,
       "time_violations": [
         "13/07: Task 'PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng của tuần 1' khai báo 6.0h so với định mức tiêu chuẩn 0.8h",
-        "14/07: Task 'PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng tuần 1' khai báo 3.0h so với định mức tiêu chuẩn 0.8h"
+        "14/07: Task 'PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng tuần 1' khai báo 3.0h so với định mức tiêu chuẩn 0.8h",
+        "20/07: Task 'Làm list danh sách các video cần chuẩn bị trước lớp' khai báo 3.0h so với định mức tiêu chuẩn 0.8h"
       ],
       "warning_flags": [
         "Task 'Onboard - Được bạn Hạnh Hr giới thiệu quy mô hoạt động, ban lãnh đạo công ty, chế độ phúc lợi đối với nhân viên mới.····' chưa định dạng (gán tạm 30 phút)",
@@ -1861,13 +1719,14 @@
       "reported_days": 11,
       "missing_days": [
         "2026-07-09",
-        "2026-07-15"
+        "2026-07-15",
+        "2026-07-20"
       ],
       "total_tasks": 44,
       "completed_tasks": 29,
       "completion_rate": 65.9090909090909,
       "time_score": 100.0,
-      "work_score": 80.2,
+      "work_score": 77.8,
       "declared_hours": 91.25,
       "time_violations": [],
       "warning_flags": [
@@ -1886,14 +1745,14 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 13,
+      "reported_days": 14,
       "missing_days": [],
-      "total_tasks": 94,
-      "completed_tasks": 94,
+      "total_tasks": 101,
+      "completed_tasks": 101,
       "completion_rate": 100.0,
       "time_score": 95.0,
       "work_score": 99.0,
-      "declared_hours": 99.25,
+      "declared_hours": 107.0,
       "time_violations": [
         "14/07: Task 'Rà soát khả năng ứng dụng AI Agent vào công việc: Xác định một số hướng ứng dụng AI Agent vào công việc cá nhân, gồm hỗ trợ chuẩn bị bài giảng, tổng hợp case study, gợi ý câu hỏi thảo luận, rà soát tài liệu và hỗ trợ lập kế hoạch công việc' khai báo 1.5h so với định mức tiêu chuẩn 0.8h"
       ],
@@ -1909,14 +1768,14 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 13,
+      "reported_days": 14,
       "missing_days": [],
-      "total_tasks": 84,
-      "completed_tasks": 84,
+      "total_tasks": 91,
+      "completed_tasks": 91,
       "completion_rate": 100.0,
       "time_score": 85.0,
       "work_score": 97.0,
-      "declared_hours": 103.0,
+      "declared_hours": 111.0,
       "time_violations": [
         "15/07: Task '- Tham gia dự giờ chấm thi môn Dự án Kinh doanh số 2 để hiểu được mindset và cách thức vận hành của một buổi chấm thi trực tiếp và takenote các thông tin quan trọng' khai báo 3.0h so với định mức tiêu chuẩn 0.5h",
         "15/07: Task '- Nghiên cứu các tài liệu, học liệu các môn học để bổ sung thêm kiến thức chuẩn bị cho K26' khai báo 2.0h so với định mức tiêu chuẩn 0.8h",
@@ -1934,14 +1793,14 @@
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Trợ giảng",
       "rank": "1",
-      "reported_days": 13,
+      "reported_days": 14,
       "missing_days": [],
-      "total_tasks": 60,
-      "completed_tasks": 60,
+      "total_tasks": 64,
+      "completed_tasks": 64,
       "completion_rate": 100.0,
       "time_score": 85.0,
       "work_score": 97.0,
-      "declared_hours": 77.25,
+      "declared_hours": 80.25,
       "time_violations": [
         "02/07: Task 'chấm bài tập về nhà' khai báo 2.5h so với định mức tiêu chuẩn 0.5h",
         "07/07: Task 'Chấm bài tập về nhà' khai báo 2.0h so với định mức tiêu chuẩn 0.5h",
@@ -1959,7 +1818,7 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 8,
+      "reported_days": 9,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -1967,12 +1826,12 @@
         "2026-07-16",
         "2026-07-17"
       ],
-      "total_tasks": 38,
+      "total_tasks": 43,
       "completed_tasks": 31,
-      "completion_rate": 81.57894736842105,
+      "completion_rate": 72.09302325581395,
       "time_score": 100.0,
-      "work_score": 77.2,
-      "declared_hours": 63.25,
+      "work_score": 74.6,
+      "declared_hours": 71.25,
       "time_violations": [],
       "warning_flags": [
         "Task 'Làm báo cáo giao ban nội bộ đào tạo Tuần 27/2026' chưa định dạng (gán tạm 30 phút)",
@@ -1990,14 +1849,14 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 13,
+      "reported_days": 14,
       "missing_days": [],
-      "total_tasks": 57,
-      "completed_tasks": 57,
+      "total_tasks": 61,
+      "completed_tasks": 61,
       "completion_rate": 100.0,
       "time_score": 95.0,
       "work_score": 99.0,
-      "declared_hours": 105.0,
+      "declared_hours": 113.0,
       "time_violations": [
         "07/07: Task 'Soạn slide trình bày mô hình CVHT và mô hình ban cán sự lơp' khai báo 3.0h so với định mức tiêu chuẩn 0.8h"
       ],
@@ -2013,16 +1872,16 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 12,
+      "reported_days": 13,
       "missing_days": [
         "2026-07-17"
       ],
-      "total_tasks": 101,
-      "completed_tasks": 101,
+      "total_tasks": 110,
+      "completed_tasks": 110,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 96.9,
-      "declared_hours": 98.75,
+      "work_score": 97.1,
+      "declared_hours": 105.0,
       "time_violations": [],
       "warning_flags": [
         "Task 'Chốt Rpoint và tổ chức thi môn IT205-K25 HN-KS25-CNTT8' chưa định dạng (gán tạm 30 phút)",
@@ -2036,19 +1895,19 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "4",
-      "reported_days": 9,
+      "reported_days": 10,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
         "2026-07-03",
         "2026-07-07"
       ],
-      "total_tasks": 50,
-      "completed_tasks": 50,
+      "total_tasks": 53,
+      "completed_tasks": 53,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 87.7,
-      "declared_hours": 72.0,
+      "work_score": 88.6,
+      "declared_hours": 78.0,
       "time_violations": [],
       "warning_flags": [
         "Task 'Họp giao ban �'ào tạo' chưa định dạng (gán tạm 30 phút)",
@@ -2062,16 +1921,16 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 12,
+      "reported_days": 13,
       "missing_days": [
         "2026-07-03"
       ],
-      "total_tasks": 51,
-      "completed_tasks": 46,
-      "completion_rate": 90.19607843137256,
+      "total_tasks": 54,
+      "completed_tasks": 49,
+      "completion_rate": 90.74074074074075,
       "time_score": 80.0,
-      "work_score": 89.0,
-      "declared_hours": 95.5,
+      "work_score": 89.4,
+      "declared_hours": 103.5,
       "time_violations": [
         "01/07: Task 'Chuẩn bị nội dung cho demo lớp thực hành' khai báo 5.0h so với định mức tiêu chuẩn 0.8h",
         "06/07: Task 'Chấm bài tập nhóm CNTT7' khai báo 2.5h so với định mức tiêu chuẩn 0.5h",
@@ -2093,19 +1952,19 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 9,
+      "reported_days": 10,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
         "2026-07-03",
         "2026-07-17"
       ],
-      "total_tasks": 44,
-      "completed_tasks": 43,
-      "completion_rate": 97.72727272727273,
-      "time_score": 60.0,
-      "work_score": 78.8,
-      "declared_hours": 69.0,
+      "total_tasks": 48,
+      "completed_tasks": 47,
+      "completion_rate": 97.91666666666666,
+      "time_score": 55.0,
+      "work_score": 78.7,
+      "declared_hours": 76.0,
       "time_violations": [
         "06/07: Task '4. Chuẩn bị bài thực hành, và xem lại bài cũ ngày 07/07/2026 demo đứng lớp thực hành (1h00- 4h00)' khai báo 3.5h so với định mức tiêu chuẩn 0.8h",
         "07/07: Task 'Chuẩn bị tài liệu và bài để dạy thử thực hành' khai báo 2.0h so với định mức tiêu chuẩn 0.8h",
@@ -2133,13 +1992,14 @@
         "2026-07-07",
         "2026-07-08",
         "2026-07-13",
-        "2026-07-17"
+        "2026-07-17",
+        "2026-07-20"
       ],
       "total_tasks": 35,
       "completed_tasks": 35,
       "completion_rate": 100.0,
       "time_score": 60.0,
-      "work_score": 70.5,
+      "work_score": 69.1,
       "declared_hours": 46.5,
       "time_violations": [
         "09/07: Task 'Chấm bài tập Về nhà' khai báo 2.0h so với định mức tiêu chuẩn 0.5h",
@@ -2158,16 +2018,16 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 12,
+      "reported_days": 13,
       "missing_days": [
         "2026-07-07"
       ],
-      "total_tasks": 47,
-      "completed_tasks": 47,
+      "total_tasks": 49,
+      "completed_tasks": 49,
       "completion_rate": 100.0,
       "time_score": 85.0,
-      "work_score": 93.9,
-      "declared_hours": 83.5,
+      "work_score": 94.1,
+      "declared_hours": 89.5,
       "time_violations": [
         "02/07: Task 'Tham gia quy trình coi thi lý thuyết và vấn đáp lớp HCM KS24 CNTT1' khai báo 3.0h so với định mức tiêu chuẩn 0.3h",
         "08/07: Task 'Chuẩn bị session 6: thực hành kỹ thuật đặt prompt nâng cao' khai báo 5.0h so với định mức tiêu chuẩn 0.8h",
@@ -2185,17 +2045,17 @@
       "group": "Khối QLCLĐT",
       "role": "Trợ giảng",
       "rank": "1",
-      "reported_days": 11,
+      "reported_days": 12,
       "missing_days": [
         "2026-07-06",
         "2026-07-10"
       ],
-      "total_tasks": 61,
-      "completed_tasks": 61,
+      "total_tasks": 67,
+      "completed_tasks": 67,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 93.8,
-      "declared_hours": 83.0,
+      "work_score": 94.3,
+      "declared_hours": 90.5,
       "time_violations": [],
       "warning_flags": [
         "Task 'Trợ giảng lớp QTKDS2 môn Dự án kinh doanh số 2' chưa định dạng (gán tạm 30 phút)",
@@ -2209,14 +2069,14 @@
       "group": "Khối QLCLĐT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 13,
+      "reported_days": 14,
       "missing_days": [],
-      "total_tasks": 68,
-      "completed_tasks": 62,
-      "completion_rate": 91.17647058823529,
+      "total_tasks": 71,
+      "completed_tasks": 65,
+      "completion_rate": 91.54929577464789,
       "time_score": 0.0,
-      "work_score": 76.5,
-      "declared_hours": 103.0,
+      "work_score": 76.6,
+      "declared_hours": 110.0,
       "time_violations": [
         "01/07: Task 'HCM-KS25-CNTT8 - IT-215 - Session4: Chấm bài tập về nhà.' khai báo 1.0h so với định mức tiêu chuẩn 0.5h",
         "01/07: Task 'HCM-KS25-CNTT5 - IT-215 - Session4: Chấm bài tập về nhà.' khai báo 1.0h so với định mức tiêu chuẩn 0.5h",
@@ -2986,6 +2846,40 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Hoàng Thị Kim Oanh",
+            "email": "oanhhtk@rikkeieducation.top",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Nghỉ phép cả ngày",
+                "done": true,
+                "percent": 100,
+                "hours": 0
+              },
+              {
+                "title": "Chấm thi vòng 2 Khởi Nguyên",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "Rà soát, điều chỉnh chuẩn đầu ra K26",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              }
+            ],
+            "summary": "✓ Nghỉ phép cả ngày (100%)\n✓ Chấm thi vòng 2 Khởi Nguyên (100%, 3h)\n✓ Rà soát, điều chỉnh chuẩn đầu ra K26 (100%, 3h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
+              "hours": 6
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -3438,6 +3332,34 @@
               }
             ],
             "summary": "✓ Nghiên cứu, góp ý chương trình đào tạo k25 k26 (100%, 4h)\n✓ Nghiên cứu giáo trình tài liệu học tập giảng dạy kỳ mới (100%, 4h)",
+            "stats": {
+              "total": 2,
+              "done": 2,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Hoàng Thị Hậu",
+            "email": "hauht@rikkeieducation.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Review góp ý chương trình đào tạo",
+                "done": true,
+                "percent": 100,
+                "hours": 5
+              },
+              {
+                "title": "Nghiên cứu Giáo trình, tài liệu học tập mở rộng phục vụ cho giảng dạy kỳ mới",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              }
+            ],
+            "summary": "✓ Review góp ý chương trình đào tạo (100%, 5h)\n✓ Nghiên cứu Giáo trình, tài liệu học tập mở rộng phục vụ cho giảng dạy kỳ mới (100%, 3h)",
             "stats": {
               "total": 2,
               "done": 2,
@@ -4144,6 +4066,52 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Nguyễn Thị Hồng Minh",
+            "email": "minhnth@rikkeiacademy.net",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Xây dựng PM môn Kinh tế vi mô - Giữ nhịp hè sinh viên và góp ý chéo môn Kinh tế vĩ mô",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Xây dựng 6 session bài đọc kinh tế vi mô và cài đặt Antigravity",
+                "done": true,
+                "percent": 100,
+                "hours": 3.5
+              },
+              {
+                "title": "Họp chương trình giữ nhịp hè sinh viên K25",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Lên điểm quá trình môn PRJ302 - HN-k25-QTKD2",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Góp ý khung chương trình K26",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              }
+            ],
+            "summary": "✓ Xây dựng PM môn Kinh tế vi mô - Giữ nhịp hè sinh viên và góp ý chéo môn Kinh tế vĩ mô (100%, 2h)\n✓ Xây dựng 6 session bài đọc kinh tế vi mô và cài đặt Antigravity (100%, 3.5h)\n✓ Họp chương trình giữ nhịp hè sinh viên K25 (100%, 1h)\n✓ Lên điểm quá trình môn PRJ302 - HN-k25-QTKD2 (100%, 0.5h)\n✓ Góp ý khung chương trình K26 (100%, 1h)",
+            "stats": {
+              "total": 5,
+              "done": 5,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -4696,7 +4664,53 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": {
+            "user": "Đặng Quỳnh Trang",
+            "email": "trangdq@rikkeieducation.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Làm góp ý CDR và CLO",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Nghiên cứu giáo trình MAN101",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Lên điểm, thống kê, tổng hợp điểm các lớp QTKD2, tính điểm tiến độ quá trình QTKD3",
+                "done": true,
+                "percent": 100,
+                "hours": 1.5
+              },
+              {
+                "title": "Nghiên cứu, review, training Antigravity",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Triển khai các bước và xây dựng học liệu MAN101",
+                "done": true,
+                "percent": 100,
+                "hours": 1.5
+              }
+            ],
+            "summary": "✓ Làm góp ý CDR và CLO (100%, 1h)\n✓ Nghiên cứu giáo trình MAN101 (100%, 2h)\n✓ Lên điểm, thống kê, tổng hợp điểm các lớp QTKD2, tính điểm tiến độ quá trình QTKD3 (100%, 1.5h)\n✓ Nghiên cứu, review, training Antigravity (100%, 2h)\n✓ Triển khai các bước và xây dựng học liệu MAN101 (100%, 1.5h)",
+            "stats": {
+              "total": 5,
+              "done": 5,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Nguyễn Ngọc Vân Khanh": {
@@ -5203,7 +5217,8 @@
             },
             "difficulties": "",
             "plan": ""
-          }
+          },
+          "2026-07-20": null
         }
       },
       "Lê Thành Ngọc": {
@@ -5395,7 +5410,53 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": {
+            "user": "Lê Thành Ngọc",
+            "email": "ngoclt@rikkei.edu.vn",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Họp giao ban",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Training AI Agent cho đội ngũ",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Phối hợp với các phòng ban Giải quyết vấn đề phát sinh với sinh viên",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Thảo luận team AI Agent Sản xuất tài nguyên học tập",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Hoàn thiện CTĐT QTKD K26",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "✓ Họp giao ban (100%, 2h)\n✓ Training AI Agent cho đội ngũ (100%, 1h)\n✓ Phối hợp với các phòng ban Giải quyết vấn đề phát sinh với sinh viên (100%, 2h)\n✓ Thảo luận team AI Agent Sản xuất tài nguyên học tập (100%, 1h)\n✓ Hoàn thiện CTĐT QTKD K26 (100%, 2h)",
+            "stats": {
+              "total": 5,
+              "done": 5,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       }
     },
@@ -5622,7 +5683,29 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": {
+            "user": "Trịnh Quốc Hai",
+            "email": "haitq@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "nghỉ phép",
+                "done": true,
+                "percent": 100,
+                "hours": 8
+              }
+            ],
+            "summary": "✓ nghỉ phép (100%, 8h)",
+            "stats": {
+              "total": 1,
+              "done": 1,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Nguyễn Quảng An": {
@@ -6012,6 +6095,40 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Nguyễn Quảng An",
+            "email": "annq@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Chấm hackathon",
+                "done": true,
+                "percent": 100,
+                "hours": 4
+              },
+              {
+                "title": "Review học liệu",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Nghiên cứu fastapi",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "✓ Chấm hackathon (100%, 4h)\n✓ Review học liệu (100%, 2h)\n✓ Nghiên cứu fastapi (100%, 2h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -6318,7 +6435,8 @@
             },
             "difficulties": "Không gặp khó khăn gì ",
             "plan": ""
-          }
+          },
+          "2026-07-20": null
         }
       },
       "Phạm Ngọc Kiên": {
@@ -6744,6 +6862,28 @@
               "total": 3,
               "done": 3,
               "hours": 5
+            },
+            "difficulties": "",
+            "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Phạm Ngọc Kiên",
+            "email": "kienpn@rikkeiedu.io.vn",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Làm công việc được giao trong việc chuẩn bị tài liệu https://prnt.sc/_BgtRD6jnUiY",
+                "done": true,
+                "percent": 100,
+                "hours": 8
+              }
+            ],
+            "summary": "✓ Làm công việc được giao trong việc chuẩn bị tài liệu https://prnt.sc/_BgtRD6jnUiY (100%, 8h)",
+            "stats": {
+              "total": 1,
+              "done": 1,
+              "hours": 8
             },
             "difficulties": "",
             "plan": ""
@@ -7203,7 +7343,8 @@
             },
             "difficulties": "",
             "plan": ""
-          }
+          },
+          "2026-07-20": null
         }
       },
       "Lâm Tùng Dương": {
@@ -7665,7 +7806,8 @@
             },
             "difficulties": "",
             "plan": ""
-          }
+          },
+          "2026-07-20": null
         }
       },
       "Ngọ Văn Quý": {
@@ -7908,7 +8050,29 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": {
+            "user": "Ngọ Văn Quý",
+            "email": "quynv@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": "QTKDNGHI [QTKDS] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
+            "tasks": [
+              {
+                "title": "Xây dựng AI Agent tài nguyên học tập",
+                "done": true,
+                "percent": 100,
+                "hours": 8
+              }
+            ],
+            "summary": "✓ Xây dựng AI Agent tài nguyên học tập (100%, 8h)",
+            "stats": {
+              "total": 1,
+              "done": 1,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Trần Minh Cường": {
@@ -8016,7 +8180,8 @@
           },
           "2026-07-15": null,
           "2026-07-16": null,
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": null
         }
       },
       "Bùi Thanh Hải": {
@@ -8439,7 +8604,8 @@
             },
             "difficulties": "",
             "plan": ""
-          }
+          },
+          "2026-07-20": null
         }
       },
       "Mai Xuân Chinh": {
@@ -8817,6 +8983,40 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Mai Xuân Chinh",
+            "email": "chinhmai124@gmail.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Hoàn thành học liệu session 02",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "Hoàn thành học liệu session 03",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "Chấm bài sinh viên",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "✓ Hoàn thành học liệu session 02 (100%, 3h)\n✓ Hoàn thành học liệu session 03 (100%, 3h)\n✓ Chấm bài sinh viên (100%, 2h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -9155,6 +9355,28 @@
             "stats": {
               "total": 2,
               "done": 2,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Đinh Thành Nam",
+            "email": "thanhnamak@gmail.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "[Nghỉ phép năm]",
+                "done": true,
+                "percent": 100,
+                "hours": 8
+              }
+            ],
+            "summary": "✓ [Nghỉ phép năm] (100%, 8h)",
+            "stats": {
+              "total": 1,
+              "done": 1,
               "hours": 8
             },
             "difficulties": "",
@@ -9591,6 +9813,40 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Nguyễn Công Hưởng",
+            "email": "huongnc@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Viết tài nguyên học tập cho session 08 thực hành mini project cho môn PTIT Microservices",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Tạo sơ đồ mind map cho session 05,07,08,10,11,13,14,16,17 môn BE Devops",
+                "done": true,
+                "percent": 100,
+                "hours": 4
+              },
+              {
+                "title": "Chấm bài tập lớp JB-IOC-PTHB251027,JB-IOC-PTHB251229  ,JB-IOC-PTHB260316,JB-IOC-PTHB260515",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "✓ Viết tài nguyên học tập cho session 08 thực hành mini project cho môn PTIT Microservices (100%, 2h)\n✓ Tạo sơ đồ mind map cho session 05,07,08,10,11,13,14,16,17 môn BE Devops (100%, 4h)\n✓ Chấm bài tập lớp JB-IOC-PTHB251027,JB-IOC-PTHB251229  ,JB-IOC-PTHB260316,JB-IOC-PTHB260515 (100%, 2h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -9981,6 +10237,34 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Phạm Tuấn Bình",
+            "email": "binhpt@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "[Học liệu] - Xây dựng slide html session 10 + 12 + 14",
+                "done": true,
+                "percent": 100,
+                "hours": 6
+              },
+              {
+                "title": "[Học liệu] - Xây dựng nội dung kịch bản nói quay video session 10 + 12 + 14",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "✓ [Học liệu] - Xây dựng slide html session 10 + 12 + 14 (100%, 6h)\n✓ [Học liệu] - Xây dựng nội dung kịch bản nói quay video session 10 + 12 + 14 (100%, 2h)",
+            "stats": {
+              "total": 2,
+              "done": 2,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -10070,7 +10354,8 @@
             "plan": ""
           },
           "2026-07-16": null,
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": null
         }
       },
       "Lê Hà Thanh Sang": {
@@ -10475,7 +10760,8 @@
             },
             "difficulties": "",
             "plan": ""
-          }
+          },
+          "2026-07-20": null
         }
       },
       "Phạm Viết Hùng": {
@@ -10754,7 +11040,41 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": {
+            "user": "Phạm Viết Hùng",
+            "email": "22.phamviethung.12a12@gmail.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Quản lý chỉ số sinh viên và chốt điểm Rpoint cho K24 + Hỗ trợ tạo ca thi",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Tham gia demo giảng lý thuyết và bài tập của các thầy HCM",
+                "done": true,
+                "percent": 100,
+                "hours": 4.5
+              },
+              {
+                "title": "Kiểm tra bài tập về nhà sinh viên K24 và JS",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "✓ Quản lý chỉ số sinh viên và chốt điểm Rpoint cho K24 + Hỗ trợ tạo ca thi (100%, 1h)\n✓ Tham gia demo giảng lý thuyết và bài tập của các thầy HCM (100%, 4.5h)\n✓ Kiểm tra bài tập về nhà sinh viên K24 và JS (100%, 2h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
+              "hours": 7.5
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Trần Quốc Tuấn": {
@@ -11168,7 +11488,8 @@
             },
             "difficulties": "",
             "plan": ""
-          }
+          },
+          "2026-07-20": null
         }
       },
       "Nguyễn Thanh Bình Phước": {
@@ -11186,7 +11507,8 @@
           "2026-07-14": null,
           "2026-07-15": null,
           "2026-07-16": null,
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": null
         }
       }
     },
@@ -11734,6 +12056,40 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Giáp Thị Minh Hằng",
+            "email": "hanggtm@rikkeieducation.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Họp giao ban tuần",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Chuẩn bị tài liệu họp giao ban tuần",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "ĐIều chỉnh mô hình đào tạo 3 lớp: Rikai, Katsudou, Renshu",
+                "done": true,
+                "percent": 100,
+                "hours": 5
+              }
+            ],
+            "summary": "✓ Họp giao ban tuần (100%, 2h)\n✓ Chuẩn bị tài liệu họp giao ban tuần (100%, 1h)\n✓ ĐIều chỉnh mô hình đào tạo 3 lớp: Rikai, Katsudou, Renshu (100%, 5h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -12046,6 +12402,52 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Lò Thị Ngọc Anh",
+            "email": "anhltn1@rikkeiacademy.net",
+            "department": "Đào tạo",
+            "project": "REXPENGL 🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26",
+            "tasks": [
+              {
+                "title": "REXPENGL-19 2026.07.20 - [RE] CHƯƠNG TRÌNH TIẾNG ANH K26 - ENGLISH PROGRAM FOR K26 (VERSION 3)",
+                "done": true,
+                "percent": 100,
+                "hours": 4
+              },
+              {
+                "title": "REKHAO-19 2026.07.20 - [RE] HƯỚNG DẪN CHẤM ĐIỂM BÀI THI SÁT HẠCH TIẾNG ANH TOEIC ĐỢT 1 NĂM 2026",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "REXPENGL-18 2026.07.20 - [RE] BÁO CÁO TUẦN CỦA KHỐI ĐÀO TẠO",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "REKHAO-18 2026.07.20 - [RE] BÁO CÁO GIÁM SÁT CA THI",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "REXPCHUO-34 2026.07.20 - [RExPREP] DUYỆT SINH VIÊN THI LẠI FINAL TEST",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              }
+            ],
+            "summary": "✓ REXPENGL-19 2026.07.20 - [RE] CHƯƠNG TRÌNH TIẾNG ANH K26 - ENGLISH PROGRAM FOR K26 (VERSION 3) (100%, 4h)\n✓ REKHAO-19 2026.07.20 - [RE] HƯỚNG DẪN CHẤM ĐIỂM BÀI THI SÁT HẠCH TIẾNG ANH TOEIC ĐỢT 1 NĂM 2026 (100%, 0.25h)\n✓ REXPENGL-18 2026.07.20 - [RE] BÁO CÁO TUẦN CỦA KHỐI ĐÀO TẠO (100%, 3h)\n✓ REKHAO-18 2026.07.20 - [RE] BÁO CÁO GIÁM SÁT CA THI (100%, 0.5h)\n✓ REXPCHUO-34 2026.07.20 - [RExPREP] DUYỆT SINH VIÊN THI LẠI FINAL TEST (100%, 0.5h)",
+            "stats": {
+              "total": 5,
+              "done": 5,
+              "hours": 8.25
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -12348,6 +12750,40 @@
             "stats": {
               "total": 2,
               "done": 2,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Lê Thị Đỏ",
+            "email": "dolt@rikkeiacademy.cloud",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Làm list danh sách các video cần chuẩn bị trước lớp",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "Làm list các bài quiz cần làm cho JPN101",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "phân lại thời gian cho từng phần tự học và ôn tập của sinh viên JPN101",
+                "done": true,
+                "percent": 100,
+                "hours": 4
+              }
+            ],
+            "summary": "✓ Làm list danh sách các video cần chuẩn bị trước lớp (100%, 3h)\n✓ Làm list các bài quiz cần làm cho JPN101 (100%, 1h)\n✓ phân lại thời gian cho từng phần tự học và ôn tập của sinh viên JPN101 (100%, 4h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
               "hours": 8
             },
             "difficulties": "",
@@ -12799,7 +13235,8 @@
             },
             "difficulties": "",
             "plan": ""
-          }
+          },
+          "2026-07-20": null
         }
       },
       "Lê Nhựt Mi": {
@@ -13576,6 +14013,64 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Lê Nhựt Mi",
+            "email": "miln@rikkeiedu.org",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Góp ý CLO các môn học trong bản cập nhật CTĐT",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Tham gia họp, ghi nhận kế hoạch triển khai, nội dung module và cách tổ chức chương trình hè. Training dùng AI Agent sản xuất học liệu",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Phản biện PM Kinh tế vi mô: Rà soát PM, góp ý về cấu trúc, nội dung, hoạt động học tập và mức độ phù hợp với sinh viên.",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Hoàn thiện PM Kinh tế vĩ mô theo góp ý: Điều chỉnh mục tiêu, nội dung, thời lượng và hoạt động học tập trong PM theo góp ý đã nhận.",
+                "done": true,
+                "percent": 100,
+                "hours": 0.75
+              },
+              {
+                "title": "Sử dụng Antigravity hỗ trợ xây dựng cấu trúc PM",
+                "done": true,
+                "percent": 100,
+                "hours": 1.5
+              },
+              {
+                "title": "Vận dụng Antigravity tạo bài đọc Kinh tế vĩ mô: Tạo bài đọc theo từng session, bổ sung ví dụ, câu hỏi gợi mở và liên hệ thực tế.",
+                "done": true,
+                "percent": 100,
+                "hours": 1.5
+              },
+              {
+                "title": "Rà soát và chỉnh sửa PM, bài đọc Kinh tế vĩ mô: Kiểm tra nội dung, điều chỉnh cách diễn đạt và đảm bảo bám sát mục tiêu chương trình hè.",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              }
+            ],
+            "summary": "✓ Góp ý CLO các môn học trong bản cập nhật CTĐT (100%, 1h)\n✓ Tham gia họp, ghi nhận kế hoạch triển khai, nội dung module và cách tổ chức chương trình hè. Training dùng AI Agent sản xuất học liệu (100%, 1h)\n✓ Phản biện PM Kinh tế vi mô: Rà soát PM, góp ý về cấu trúc, nội dung, hoạt động học tập và mức độ phù hợp với sinh viên. (100%, 1h)\n✓ Hoàn thiện PM Kinh tế vĩ mô theo góp ý: Điều chỉnh mục tiêu, nội dung, thời lượng và hoạt động học tập trong PM theo góp ý đã nhận. (100%, 0.75h)\n✓ Sử dụng Antigravity hỗ trợ xây dựng cấu trúc PM (100%, 1.5h)\n✓ Vận dụng Antigravity tạo bài đọc Kinh tế vĩ mô: Tạo bài đọc theo từng session, bổ sung ví dụ, câu hỏi gợi mở và liên hệ thực tế. (100%, 1.5h)\n✓ Rà soát và chỉnh sửa PM, bài đọc Kinh tế vĩ mô: Kiểm tra nội dung, điều chỉnh cách diễn đạt và đảm bảo bám sát mục tiêu chương trình hè. (100%, 1h)",
+            "stats": {
+              "total": 7,
+              "done": 7,
+              "hours": 7.75
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -14293,6 +14788,64 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Lê Thị Bảo Yến",
+            "email": "yenltb@rikkeiedu.org",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "- Nghiên cứu góp ý cho CĐR của môn học đã được phân công",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "- Phối hợp với Ms Minh chỉnh sửa PM của môn học Kinh tế vi mô cho hoạt động giữ nhịp hè của sinh viên",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "- Nghiên cứu các khóa học trực tuyến Free và có cấp CN cho hoạt động của sinh viên hè",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "- Họp trao đổi các nội dung các nội dung về hoạt động học hè cho sinh viên và training về AI Agent Mr Ngọc",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "- Nghiên cứu lại các tài liệu, giáo trình kinh tế hỗ trợ công việc và thực hành AI Agent trên Antigravity theo hướng dẫn của Thầy Ngọc",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "- Chủ động cập nhật các thông tin và tin tức kinh tế để update năng lực bản thân",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "- Nghiên cứu và góp ý cho phần SXHL hè cho các môn học",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              }
+            ],
+            "summary": "✓ - Nghiên cứu góp ý cho CĐR của môn học đã được phân công (100%, 1h)\n✓ - Phối hợp với Ms Minh chỉnh sửa PM của môn học Kinh tế vi mô cho hoạt động giữ nhịp hè của sinh viên (100%, 2h)\n✓ - Nghiên cứu các khóa học trực tuyến Free và có cấp CN cho hoạt động của sinh viên hè (100%, 1h)\n✓ - Họp trao đổi các nội dung các nội dung về hoạt động học hè cho sinh viên và training về AI Agent Mr Ngọc (100%, 1h)\n✓ - Nghiên cứu lại các tài liệu, giáo trình kinh tế hỗ trợ công việc và thực hành AI Agent trên Antigravity theo hướng dẫn của Thầy Ngọc (100%, 1h)\n✓ - Chủ động cập nhật các thông tin và tin tức kinh tế để update năng lực bản thân (100%, 1h)\n✓ - Nghiên cứu và góp ý cho phần SXHL hè cho các môn học (100%, 1h)",
+            "stats": {
+              "total": 7,
+              "done": 7,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": "• - Làm việc theo sự phân công của Leader\n• - Nghiên cứu AI Agent và các giáo trình, tài liệu các môn học\n• - Thực hành thao tác lại trên các nền tảng quản lý sinh viên"
           }
         }
       },
@@ -14866,6 +15419,46 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Triệu Thị Thanh Tâm",
+            "email": "tamttt@rikkeiedu.io.vn",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Hỗ trợ nhập điểm quá trình môn PRJ302 cho lớp QTKD2",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Đọc chuẩn đầu ra CTDT",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Đọc học hiệu môn BA",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Nghiên cứu giao diện Anti Gravitivy",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              }
+            ],
+            "summary": "✓ Hỗ trợ nhập điểm quá trình môn PRJ302 cho lớp QTKD2 (100%, 0.5h)\n✓ Đọc chuẩn đầu ra CTDT (100%, 1h)\n✓ Đọc học hiệu môn BA (100%, 1h)\n✓ Nghiên cứu giao diện Anti Gravitivy (100%, 0.5h)",
+            "stats": {
+              "total": 4,
+              "done": 4,
+              "hours": 3
+            },
+            "difficulties": "không gặp khó khăn gì ",
+            "plan": ""
           }
         }
       }
@@ -15234,7 +15827,53 @@
             "plan": ""
           },
           "2026-07-16": null,
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": {
+            "user": "Nguyễn Thị Tươi",
+            "email": "tuoint@rikkei.edu.vn",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Họp nội bộ đào tạo",
+                "done": false,
+                "percent": 0,
+                "hours": 2
+              },
+              {
+                "title": "Hoàn thiện báo cáo nội bộ đào tạo",
+                "done": false,
+                "percent": 0,
+                "hours": 2
+              },
+              {
+                "title": "Review quy định đào tạo",
+                "done": false,
+                "percent": 0,
+                "hours": 1
+              },
+              {
+                "title": "Phản hồi và xử lý vấn đề phát sinh",
+                "done": false,
+                "percent": 0,
+                "hours": 2
+              },
+              {
+                "title": "Xếp TKB 01 lớp ngắn hạn + hoàn thiện các thông tin liên quan",
+                "done": false,
+                "percent": 0,
+                "hours": 1
+              }
+            ],
+            "summary": "• Họp nội bộ đào tạo (2h)\n• Hoàn thiện báo cáo nội bộ đào tạo (2h)\n• Review quy định đào tạo (1h)\n• Phản hồi và xử lý vấn đề phát sinh (2h)\n• Xếp TKB 01 lớp ngắn hạn + hoàn thiện các thông tin liên quan (1h)",
+            "stats": {
+              "total": 5,
+              "done": 0,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Trần Thị Mỹ Phước": {
@@ -15782,6 +16421,46 @@
               }
             ],
             "summary": "✓ Hỗ trợ và tham dự sơ kết HK1 K25 (100%, 3h)\n✓ Họp giao ban tuần phòng QLĐT (100%, 1.5h)\n✓ Xử lý SV phát sinh: vắng học, thủ tục học vụ (bảo lưu kết quả học tập) (100%, 0.5h)\n✓ Hỗ trợ canh thi Final Test và canh thi lại Sát hạch tiếng anh (ghi chú thông tin, up kết quả SV lên Lark)) (100%, 3h)",
+            "stats": {
+              "total": 4,
+              "done": 4,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Trần Thị Mỹ Phước",
+            "email": "phuocttm@rikkeieducation.id.vn",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Điều chỉnh Chương V - Cánh báo và xử lý kết quả học tập theo quy đinh đào tạo mới",
+                "done": true,
+                "percent": 100,
+                "hours": 4
+              },
+              {
+                "title": "Xử lý SV phát sinh: hoàn tất thủ tục nghỉ học dài hạn cho SV; Hỗ trợ tư vấn SV có ý định bảo lưu kết quả học tập",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Soạn Phiếu đánh giá chất lượng giảng dạy theo thang Likert 5 mức, Chỉnh sửa up các mẫu đơn từ lên WIKI",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Tạo mẫu báo cáo trên Lark Base",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              }
+            ],
+            "summary": "✓ Điều chỉnh Chương V - Cánh báo và xử lý kết quả học tập theo quy đinh đào tạo mới (100%, 4h)\n✓ Xử lý SV phát sinh: hoàn tất thủ tục nghỉ học dài hạn cho SV; Hỗ trợ tư vấn SV có ý định bảo lưu kết quả học tập (100%, 0.5h)\n✓ Soạn Phiếu đánh giá chất lượng giảng dạy theo thang Likert 5 mức, Chỉnh sửa up các mẫu đơn từ lên WIKI (100%, 0.5h)\n✓ Tạo mẫu báo cáo trên Lark Base (100%, 3h)",
             "stats": {
               "total": 4,
               "done": 4,
@@ -16593,7 +17272,77 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": {
+            "user": "Nguyễn Huyền Trang",
+            "email": "trangnh.uliser54@gmail.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Chốt Rpoint và xếp danh sách thi, phân công tổ chức thi KTHP môn IT212 HCM K24",
+                "done": true,
+                "percent": 100,
+                "hours": 0.75
+              },
+              {
+                "title": "Lên kế hoạch Khảo thí tuần 30/2026",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Chốt Rpoint và xếp danh sách thi, phân công tổ chức thi lớp JS-PTHB260326 - bảo vệ",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Chốt Rpoint và xếp danh sách thi, phân công tổ chức thi lớp TSU-PTON-JV260202 - thực hành",
+                "done": true,
+                "percent": 100,
+                "hours": 0.75
+              },
+              {
+                "title": "Check và xếp thi bảo vệ lại môn IT211 K24 HCM",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Check và chỉnh sửa quy định khảo thí dài hạn PTIT",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Check và chỉnh sửa quy định khảo thí ngắn hạn",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Check và chỉnh sửa quy định khảo thí dành cho SV dài hạn",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Check và chỉnh sửa quy định khảo thí dành cho HV ngắn hạn",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              }
+            ],
+            "summary": "✓ Chốt Rpoint và xếp danh sách thi, phân công tổ chức thi KTHP môn IT212 HCM K24 (100%, 0.75h)\n✓ Lên kế hoạch Khảo thí tuần 30/2026 (100%, 1h)\n✓ Chốt Rpoint và xếp danh sách thi, phân công tổ chức thi lớp JS-PTHB260326 - bảo vệ (100%, 1h)\n✓ Chốt Rpoint và xếp danh sách thi, phân công tổ chức thi lớp TSU-PTON-JV260202 - thực hành (100%, 0.75h)\n✓ Check và xếp thi bảo vệ lại môn IT211 K24 HCM (100%, 1h)\n✓ Check và chỉnh sửa quy định khảo thí dài hạn PTIT (100%, 0.5h)\n✓ Check và chỉnh sửa quy định khảo thí ngắn hạn (100%, 0.5h)\n✓ Check và chỉnh sửa quy định khảo thí dành cho SV dài hạn (100%, 0.25h)\n✓ Check và chỉnh sửa quy định khảo thí dành cho HV ngắn hạn (100%, 0.5h)",
+            "stats": {
+              "total": 9,
+              "done": 9,
+              "hours": 6.25
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Nguyễn Xuân Bách": {
@@ -17043,6 +17792,40 @@
               "total": 4,
               "done": 4,
               "hours": 9
+            },
+            "difficulties": "",
+            "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Nguyễn Xuân Bách",
+            "email": "bachnx@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Họp giao ban nội bộ đào tạo",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "Xử lý vấn đề điểm kết thúc học phần sinh viên",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Nghiên cứu AI-Agent",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              }
+            ],
+            "summary": "✓ Họp giao ban nội bộ đào tạo (100%, 3h)\n✓ Xử lý vấn đề điểm kết thúc học phần sinh viên (100%, 2h)\n✓ Nghiên cứu AI-Agent (100%, 1h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
+              "hours": 6
             },
             "difficulties": "",
             "plan": ""
@@ -17550,6 +18333,40 @@
             },
             "difficulties": "",
             "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Đặng Minh Luân",
+            "email": "luandm@rikkeiedu.io.vn",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Tham gia demo workshop thầy Tuấn",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "Tham gia demo workshop thầy Hùng",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "Xem tài liệu môn Agile Scrum session 7",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "✓ Tham gia demo workshop thầy Tuấn (100%, 3h)\n✓ Tham gia demo workshop thầy Hùng (100%, 3h)\n✓ Xem tài liệu môn Agile Scrum session 7 (100%, 2h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
           }
         }
       },
@@ -17967,7 +18784,47 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": {
+            "user": "Nguyễn Ngọc Sơn",
+            "email": "sonnn@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Chấm bài session 12 lớp  HCM-KS24-CNTT1",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Tham gia demo giảng dạy Thầy Tuấn tiết lý thuyết",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "- Tham gia demo giảng dạy thầy Hùng thực hành",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Tham gia hỗ trợ lớp HCM-KS24-CNTT1 thầy Minh",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "✓ Chấm bài session 12 lớp  HCM-KS24-CNTT1 (100%, 1h)\n✓ Tham gia demo giảng dạy Thầy Tuấn tiết lý thuyết (100%, 2h)\n✓ - Tham gia demo giảng dạy thầy Hùng thực hành (100%, 2h)\n✓ Tham gia hỗ trợ lớp HCM-KS24-CNTT1 thầy Minh (100%, 2h)",
+            "stats": {
+              "total": 4,
+              "done": 4,
+              "hours": 7
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Lưu Xuân Hoàng Nguyên": {
@@ -18285,7 +19142,8 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-07-17": null
+          "2026-07-17": null,
+          "2026-07-20": null
         }
       },
       "Nguyễn Đức Minh": {
@@ -18762,6 +19620,34 @@
               "total": 3,
               "done": 3,
               "hours": 7
+            },
+            "difficulties": "",
+            "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Nguyễn Đức Minh",
+            "email": "minhnd@rikkeiacademy.vn",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Ôn tập cuối môn AI Application in Action lớp KS24 CNTT1",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Tham gia demo workshop",
+                "done": true,
+                "percent": 100,
+                "hours": 4
+              }
+            ],
+            "summary": "✓ Ôn tập cuối môn AI Application in Action lớp KS24 CNTT1 (100%, 2h)\n✓ Tham gia demo workshop (100%, 4h)",
+            "stats": {
+              "total": 2,
+              "done": 2,
+              "hours": 6
             },
             "difficulties": "",
             "plan": ""
@@ -19307,6 +20193,58 @@
               }
             ],
             "summary": "✓ Nhận xét và đưa ra góp ý cho các SV lớp QTKD1 (100%, 1.5h)\n✓ Nhận xét và đưa ra góp ý cho các SV lớp QTKD3 (100%, 1h)\n✓ Họp định hướng công việc (100%, 0.5h)\n✓ Đọc học liệu môn BA (100%, 2h)\n✓ Họp kế hoạch chương trình giữ nhịp hè K25 (100%, 1h)\n✓ Tìm hiểu các môn CTDT K25 SQL, Power BI (100%, 1.5h)",
+            "stats": {
+              "total": 6,
+              "done": 6,
+              "hours": 7.5
+            },
+            "difficulties": "",
+            "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Nguyễn Thị Như Quỳnh",
+            "email": "quynhntn@rikkeiacademy.net",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Họp chương trình giữ nhịp hè và tranning Antigravity",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Xây PM - Ôn tập Kinh tế vĩ mô",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Góp ý CDR và CLO",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Nghiên cứu, tranning Antigravity",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Hỗ trợ lên điểm QTKD1 và QTKD",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "Góp ý chéo môn Kinh tế vi mô",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              }
+            ],
+            "summary": "✓ Họp chương trình giữ nhịp hè và tranning Antigravity (100%, 1h)\n✓ Xây PM - Ôn tập Kinh tế vĩ mô (100%, 2h)\n✓ Góp ý CDR và CLO (100%, 1h)\n✓ Nghiên cứu, tranning Antigravity (100%, 2h)\n✓ Hỗ trợ lên điểm QTKD1 và QTKD (100%, 1h)\n✓ Góp ý chéo môn Kinh tế vi mô (100%, 0.5h)",
             "stats": {
               "total": 6,
               "done": 6,
@@ -19932,6 +20870,40 @@
               "total": 4,
               "done": 0,
               "hours": 7.5
+            },
+            "difficulties": "",
+            "plan": ""
+          },
+          "2026-07-20": {
+            "user": "Phan Ngọc Tài",
+            "email": "taipn@rikkeiedu.io.vn",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "HCM-KS25-CNTT7: Hỗ trợ chấm thi Hackathon",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "HCM-CNTT: Chuẩn bị workshop",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "HCM-CNTT: Triển khai học liệu môn Phân tích thiết kế hệ thống",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              }
+            ],
+            "summary": "✓ HCM-KS25-CNTT7: Hỗ trợ chấm thi Hackathon (100%, 2h)\n✓ HCM-CNTT: Chuẩn bị workshop (100%, 2h)\n✓ HCM-CNTT: Triển khai học liệu môn Phân tích thiết kế hệ thống (100%, 3h)",
+            "stats": {
+              "total": 3,
+              "done": 3,
+              "hours": 7
             },
             "difficulties": "",
             "plan": ""

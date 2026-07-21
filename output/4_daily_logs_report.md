@@ -1,51 +1,51 @@
 # Báo cáo thống kê công việc phòng Đào Tạo (Tháng 7/2026)
 
 - **Tổng số nhân sự phòng Đào tạo:** 41
-- **Thời gian đánh giá Tháng:** 01/07 - 17/07/2026
-- **Tổng số giờ làm việc khai báo (Tháng):** 3063.8h
+- **Thời gian đánh giá Tháng:** 01/07 - 20/07/2026
+- **Tổng số giờ làm việc khai báo (Tháng):** 3280.0h
 
 ---
 ## I. THỐNG KÊ HIỆU SUẤT BÁO CÁO & CÔNG VIỆC THÁNG 7
 | Họ và tên | Số ngày nộp (Tháng) | Tổng giờ (Tháng) | Điểm thời gian (Tháng) | Work Score (Tháng) |
 | :--- | :---: | :---: | :---: | :---: |
-| Trịnh Quốc Hai | 5/13 | 40.0h | 95 | 74.4 |
-| Nguyễn Quảng An | 10/13 | 73.5h | 95 | 89.8 |
-| Lương Quốc Tuấn | 6/13 | 50.2h | 100 | 77.2 |
-| Phạm Ngọc Kiên | 11/13 | 95.0h | 75 | 88.8 |
-| Lại Trung Lâm | 10/13 | 83.8h | 35 | 77.8 |
-| Lâm Tùng Dương | 12/13 | 94.5h | 95 | 95.0 |
-| Ngọ Văn Quý | 3/13 | 33.5h | 100 | 69.2 |
-| Trần Minh Cường | 2/13 | 21.5h | 100 | 62.2 |
-| Bùi Thanh Hải | 13/13 | 69.5h | 100 | 100.0 |
-| Mai Xuân Chinh | 8/13 | 66.2h | 85 | 81.6 |
-| Đinh Thành Nam | 10/13 | 93.5h | 85 | 87.8 |
-| Nguyễn Công Hưởng | 10/13 | 84.0h | 25 | 74.9 |
-| Phạm Tuấn Bình | 12/13 | 98.0h | 40 | 74.9 |
-| Nguyễn Bá Minh Đạo | 2/13 | 7.0h | 100 | 66.2 |
-| Lê Hà Thanh Sang | 9/13 | 69.8h | 100 | 87.7 |
-| Phạm Viết Hùng | 7/13 | 53.2h | 75 | 76.5 |
-| Trần Quốc Tuấn | 10/13 | 74.0h | 90 | 88.8 |
-| Nguyễn Thanh Bình Phước | 0/13 | 0.0h | 100 | 0.0 |
-| Hoàng Thị Kim Oanh | 13/13 | 112.5h | 95 | 98.6 |
-| Hoàng Thị Hậu | 13/13 | 104.0h | 100 | 97.1 |
-| Nguyễn Thị Hồng Minh | 13/13 | 105.0h | 100 | 99.0 |
-| Đặng Quỳnh Trang | 10/13 | 90.0h | 95 | 89.8 |
-| Nguyễn Ngọc Vân Khanh | 13/13 | 98.0h | 95 | 99.0 |
-| Lê Thành Ngọc | 4/13 | 34.0h | 100 | 72.3 |
-| Giáp Thị Minh Hằng | 12/13 | 98.8h | 95 | 94.5 |
-| Lò Thị Ngọc Anh | 8/13 | 66.5h | 95 | 74.0 |
-| Lê Thị Đỏ | 10/13 | 57.5h | 90 | 85.3 |
-| Ngô Quang Huấn | 11/13 | 91.2h | 100 | 80.2 |
-| Lê Nhựt Mi | 13/13 | 99.2h | 95 | 99.0 |
-| Lê Thị Bảo Yến | 13/13 | 103.0h | 85 | 97.0 |
-| Triệu Thị Thanh Tâm | 13/13 | 77.2h | 85 | 97.0 |
-| Nguyễn Thị Tươi | 8/13 | 63.2h | 100 | 77.2 |
-| Trần Thị Mỹ Phước | 13/13 | 105.0h | 95 | 99.0 |
-| Nguyễn Huyền Trang | 12/13 | 98.8h | 100 | 96.9 |
-| Nguyễn Xuân Bách | 9/13 | 72.0h | 100 | 87.7 |
-| Đặng Minh Luân | 12/13 | 95.5h | 80 | 89.0 |
-| Nguyễn Ngọc Sơn | 9/13 | 69.0h | 60 | 78.8 |
-| Lưu Xuân Hoàng Nguyên | 6/13 | 46.5h | 60 | 70.5 |
-| Nguyễn Đức Minh | 12/13 | 83.5h | 85 | 93.9 |
-| Nguyễn Thị Như Quỳnh | 11/13 | 83.0h | 100 | 93.8 |
-| Phan Ngọc Tài | 13/13 | 103.0h | 0 | 76.5 |
+| Trịnh Quốc Hai | 6/14 | 48.0h | 95 | 76.1 |
+| Nguyễn Quảng An | 11/14 | 81.5h | 95 | 90.4 |
+| Lương Quốc Tuấn | 6/14 | 50.2h | 100 | 75.9 |
+| Phạm Ngọc Kiên | 12/14 | 103.0h | 70 | 88.3 |
+| Lại Trung Lâm | 10/14 | 83.8h | 35 | 75.6 |
+| Lâm Tùng Dương | 12/14 | 94.5h | 95 | 92.4 |
+| Ngọ Văn Quý | 4/14 | 41.5h | 100 | 71.4 |
+| Trần Minh Cường | 2/14 | 21.5h | 100 | 61.7 |
+| Bùi Thanh Hải | 13/14 | 69.5h | 100 | 97.1 |
+| Mai Xuân Chinh | 9/14 | 74.2h | 80 | 81.7 |
+| Đinh Thành Nam | 11/14 | 101.5h | 85 | 88.4 |
+| Nguyễn Công Hưởng | 11/14 | 92.0h | 20 | 74.6 |
+| Phạm Tuấn Bình | 13/14 | 106.0h | 40 | 75.7 |
+| Nguyễn Bá Minh Đạo | 2/14 | 7.0h | 100 | 65.7 |
+| Lê Hà Thanh Sang | 9/14 | 69.8h | 100 | 85.7 |
+| Phạm Viết Hùng | 8/14 | 60.8h | 75 | 77.9 |
+| Trần Quốc Tuấn | 10/14 | 74.0h | 90 | 86.6 |
+| Nguyễn Thanh Bình Phước | 0/14 | 0.0h | 100 | 0.0 |
+| Hoàng Thị Kim Oanh | 14/14 | 118.5h | 95 | 98.6 |
+| Hoàng Thị Hậu | 14/14 | 112.0h | 100 | 97.2 |
+| Nguyễn Thị Hồng Minh | 14/14 | 113.0h | 100 | 99.1 |
+| Đặng Quỳnh Trang | 11/14 | 98.0h | 95 | 90.4 |
+| Nguyễn Ngọc Vân Khanh | 13/14 | 98.0h | 95 | 96.1 |
+| Lê Thành Ngọc | 5/14 | 42.0h | 100 | 74.3 |
+| Giáp Thị Minh Hằng | 13/14 | 106.8h | 95 | 94.8 |
+| Lò Thị Ngọc Anh | 9/14 | 74.8h | 95 | 76.5 |
+| Lê Thị Đỏ | 11/14 | 65.5h | 85 | 85.4 |
+| Ngô Quang Huấn | 11/14 | 91.2h | 100 | 77.8 |
+| Lê Nhựt Mi | 14/14 | 107.0h | 95 | 99.0 |
+| Lê Thị Bảo Yến | 14/14 | 111.0h | 85 | 97.0 |
+| Triệu Thị Thanh Tâm | 14/14 | 80.2h | 85 | 97.0 |
+| Nguyễn Thị Tươi | 9/14 | 71.2h | 100 | 74.6 |
+| Trần Thị Mỹ Phước | 14/14 | 113.0h | 95 | 99.0 |
+| Nguyễn Huyền Trang | 13/14 | 105.0h | 100 | 97.1 |
+| Nguyễn Xuân Bách | 10/14 | 78.0h | 100 | 88.6 |
+| Đặng Minh Luân | 13/14 | 103.5h | 80 | 89.4 |
+| Nguyễn Ngọc Sơn | 10/14 | 76.0h | 55 | 78.7 |
+| Lưu Xuân Hoàng Nguyên | 6/14 | 46.5h | 60 | 69.1 |
+| Nguyễn Đức Minh | 13/14 | 89.5h | 85 | 94.1 |
+| Nguyễn Thị Như Quỳnh | 12/14 | 90.5h | 100 | 94.3 |
+| Phan Ngọc Tài | 14/14 | 110.0h | 0 | 76.6 |
