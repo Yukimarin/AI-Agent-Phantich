@@ -5,7 +5,7 @@ Chào mừng bạn đến với Bản đồ Tri thức Trung tâm của dự án
 ---
 
 ## 1. Tri thức cốt lõi & Quy trình
-*   [[Super Memory|Bộ nhớ siêu cấp (Super Memory)]]: Nhật ký quyết định thiết kế, bài học kinh nghiệm và lịch sử sửa lỗi liên phiên.
+*   [[super_memory|Bộ nhớ siêu cấp (Super Memory)]]: Nhật ký quyết định thiết kế, bài học kinh nghiệm và lịch sử sửa lỗi liên phiên.
 *   [[Hướng dẫn sử dụng Obsidian|Hướng dẫn sử dụng Obsidian]]: Cấu hình Vault và cộng đồng plugin cho dự án.
 *   [[Quy trình Multi-Agent Workflow|Quy trình Multi-Agent]]: Mô hình hoạt động và điều phối giữa các Agent.
 *   [[Model Calibration Notes|Ghi nhận Hiệu chuẩn]]: Tài liệu phân tích và hiệu chuẩn tham số cho thuật toán dự báo học tập.
@@ -13,29 +13,32 @@ Chào mừng bạn đến với Bản đồ Tri thức Trung tâm của dự án
 ---
 
 ## 2. Hệ thống Agent hỗ trợ & Lead
-*   [[agents/Agent Lead - Master Evaluator|Agent Lead: MasterEvaluator]]: Tổng hợp điểm KPI và xuất bản báo cáo.
-*   [[agents/Agent 1 - Violation Analyst|Sub Agent 1: ViolationAnalyst]]: Chuyên phân tích lỗi kỷ luật học viên.
-*   [[agents/Agent 2 - Academic Predictor|Sub Agent 2: AcademicPredictor]]: Phân tích học lực, GPA và cảnh báo nguy cơ trượt.
-*   [[agents/Agent 3 - Task Aggregator|Sub Agent 3: TaskAggregator]]: Kiểm soát vi phạm tác nghiệp GV/TG.
-*   [[agents/Agent 4 - Daily Log Auditor|Sub Agent 4: DailyLogAuditor]]: Kiểm toán chất lượng và tiến độ báo cáo ngày.
+*   [[agents/Agent Lead - Master Evaluator|Agent Lead: MasterEvaluator]]
+*   [[agents/Agent 1 - Violation Analyst|Sub Agent 1: ViolationAnalyst]]
+*   [[agents/Agent 2 - Academic Predictor|Sub Agent 2: AcademicPredictor]]
+*   [[agents/Agent 3 - Task Aggregator|Sub Agent 3: TaskAggregator]]
+*   [[agents/Agent 4 - Daily Log Auditor|Sub Agent 4: DailyLogAuditor]]
 
 ---
 
-## 3. Báo cáo Nghiệp vụ Hiện tại
-*   [[Báo cáo Xếp loại Năng lực GV-TG|Báo cáo Xếp loại Năng lực GV/TG mới]]: Đánh giá xếp loại năng lực theo khung tiêu chuẩn mới 2026.
-*   [[Báo cáo Nhật ký Công việc|Báo cáo Nhật ký Công việc]]: Báo cáo nhật ký công việc ngày và giờ khai báo định mức.
-*   [[Báo cáo KPI Giảng viên Trợ giảng|Báo cáo KPI GV/TG]]: Kết quả tổng hợp điểm hiệu suất học kỳ của toàn bộ GV/TG.
-*   [[Báo cáo Nguy cơ Học viên|Báo cáo Nguy cơ Học viên]]: Danh sách sinh viên thuộc diện chăm sóc đặc biệt (Care List).
-*   [[Đánh giá Hiệu năng Mô hình|Đánh giá Hiệu năng]]: Đo lường sai số MAE của mô hình dự báo học tập.
-*   [[data/Khung_Phat_Khenthuong_ĐT_T62026|Khung Chế tài & Khen thưởng]]: Quy chế thưởng phạt năng suất đào tạo.
-*   [[data/QUY_DINH_KHUNG_CHE_TAI_VA_KHEN_THUONG_NANG_SUAT_DAO_TAO|Quy chế Chế tài & Khen thưởng Đào tạo]]: Văn bản quy chế khung chế tài chính thức.
-*   [[data/quy_dinh|Quy định chung]]: Các lỗi và quy chế kỷ luật lớp học.
-*   [[data/kpi_giao_ban_tuan|Báo cáo Giao ban Tuần]]: Đánh giá chỉ số đào tạo tuần.
-*   [[Chi tiết Vi phạm Tác nghiệp|Chi tiết vi phạm tác nghiệp KS25]]: Lịch sử các ca vi phạm của giảng viên.
+## 3. Báo cáo Nghiệp vụ & Dữ liệu Hiện tại (Cấu trúc mới)
+*   [[output/reports/report_kpi_gv_tg|Báo cáo KPI Tổng hợp GV/TG]]: Đánh giá xếp loại năng lực GV/TG học kỳ theo khung tiêu chuẩn mới 2026.
+*   [[output/reports/report_agent4|Báo cáo Nhật ký Công việc GV/TG]]: Thống kê nhật ký và khai báo định mức công việc.
+*   [[output/reports/student_risk_report|Báo cáo Nguy cơ Học viên]]: Phân tầng học viên có nguy cơ trượt để đưa vào Care List.
+*   [[output/reports/evaluation_metrics|Đánh giá Hiệu năng Mô hình (MAE)]]: Đo lường sai số dự đoán.
+*   [[output/reports/kpi_giao_ban_tuan|Báo cáo Giao ban Tuần]]: Đánh giá chỉ số đào tạo tuần của giảng viên.
+*   [[output/reports/vi_pham_gvtg_khoa_ks25|Chi tiết Vi phạm Tác nghiệp (Khoa KS25)]]: Lịch sử vi phạm của GV/TG.
+*   **Tài liệu Quy chế & Quy định gốc:**
+    *   [[data/inputs/Khung_Phat_Khenthuong_ĐT_T62026.md|Khung Chế tài & Khen thưởng]]: Quy chế thưởng phạt năng suất đào tạo.
+    *   [[data/inputs/quy_dinh|Quy định chung]]: Các lỗi và quy chế kỷ luật lớp học.
 
 ---
 
 ## 4. Kế hoạch Thiết kế & Phát triển (Plans)
+*   [[plans/2026-07-28-llmwiki-design|Thiết kế RAG LLMWiki tiết kiệm Token]]
+*   [[plans/2026-07-28-refactor-pipeline-design|Thiết kế Tinh gọn & Phân lớp Dữ liệu]]
+*   [[plans/2026-07-26-daily-logs-cross-verification-design|Kiểm toán Báo cáo ngày (Cross-verification)]]
+*   [[plans/2026-07-23-agent4-project-management-design|Tích hợp quản lý dự án Agent 4]]
 *   [[plans/Plan - 2026-07-15 Automate Agent 4 Daily Logs|Tự động hóa Agent 4 qua Cronjob]]
 *   [[plans/Plan - 2026-07-15 Agent 4 Dashboard Integration Plan|Tích hợp Tab 3 Tailwind CSS]]
 *   [[plans/Plan - 2026-07-13 Daily Logs Integrated Report Plan|Kiểm toán Báo cáo ngày qua Worklane]]
@@ -49,15 +52,10 @@ Chào mừng bạn đến với Bản đồ Tri thức Trung tâm của dự án
 
 ---
 
-## 5. Báo cáo Lịch sử & Lưu trữ
-*   [[reports/student_care_list_multi_level|Care List phân cấp đa tầng (reports/)]]
-*   [[reports/student_care_list|Care List gốc (reports/)]]
-*   [[reports/academic_predictions_v3|Dự báo học tập v3 (reports/)]]
-*   [[reports/khoi_k24_k25_predictions|Dự báo học lực CNTT (reports/)]]
-
----
-
----
-
-## 6. Ghi chú & Kế hoạch chưa phân loại (Tự động liên kết)
-*   [[plans/Plan - 2026-07-17 Input and Session Token Optimization|Plan - 2026-07-17 Input and Session Token Optimization]]
+## 5. Báo cáo Lịch sử & Báo cáo con các Agent (output/reports/)
+*   [[output/reports/report_agent1|Báo cáo Chi tiết Kỷ luật Học viên (Agent 1)]]
+*   [[output/reports/report_agent2|Báo cáo Chi tiết Học lực Học viên (Agent 2)]]
+*   [[output/reports/report_agent3|Báo cáo Chi tiết Kỷ luật GV/TG (Agent 3)]]
+*   [[output/reports/student_care_list_multi_level|Care List phân cấp đa tầng]]
+*   [[output/reports/three_recent_courses_report|Báo cáo kết quả 3 môn gần nhất]]
+*   [[output/reports/vi_pham_gvtg_cntt1_ks25|Báo cáo vi phạm lớp CNTT1 KS25]]

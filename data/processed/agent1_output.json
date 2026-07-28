@@ -1,0 +1,88 @@
+{
+    "Hoàng Thị Kim Oanh": {
+        "name": "Hoàng Thị Kim Oanh",
+        "role": "GV",
+        "classes": [
+            "HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)"
+        ],
+        "avg_violation_rate": 3.72,
+        "student_discipline_score": 96.3
+    },
+    "Lâm Tùng Dương": {
+        "name": "Lâm Tùng Dương",
+        "role": "GV",
+        "classes": [
+            "HN-K25-CNTT2(38) (KS25_Python_Web)"
+        ],
+        "avg_violation_rate": 8.99,
+        "student_discipline_score": 91.0
+    },
+    "Lê Hà Thanh Sang": {
+        "name": "Lê Hà Thanh Sang",
+        "role": "GV",
+        "classes": [
+            "HCM-K25-CNTT8(36) (KS25_Python_Web)",
+            "HCM-K25-CNTT5(37) (KS25_Python_Web)"
+        ],
+        "avg_violation_rate": 16.32,
+        "student_discipline_score": 83.7
+    },
+    "Lương Quốc Tuấn": {
+        "name": "Lương Quốc Tuấn",
+        "role": "GV",
+        "classes": [
+            "HN-K25-CNTT1(40) (KS25_Python_Web)",
+            "HN-K25-CNTT5(37) (KS25_Python_Web)"
+        ],
+        "avg_violation_rate": 8.34,
+        "student_discipline_score": 91.7
+    },
+    "Nguyễn Quảng An": {
+        "name": "Nguyễn Quảng An",
+        "role": "GV",
+        "classes": [
+            "HN-K25-CNTT4(41-40) (KS25_Python_Web)",
+            "HN-K25-CNTT3(35) (KS25_Python_Web)",
+            "HN-K25-CNTT6(32-31) (KS25_Python_Web)"
+        ],
+        "avg_violation_rate": 9.3,
+        "student_discipline_score": 90.7
+    },
+    "Nguyễn Thị Hồng Minh": {
+        "name": "Nguyễn Thị Hồng Minh",
+        "role": "GV",
+        "classes": [
+            "HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)"
+        ],
+        "avg_violation_rate": 3.5,
+        "student_discipline_score": 96.5
+    },
+    "Trần Quốc Tuấn": {
+        "name": "Trần Quốc Tuấn",
+        "role": "GV",
+        "classes": [
+            "HCM-K25-CNTT6(40) (KS25_Python_Web)",
+            "HCM-K25-CNTT7(40-39) (KS25_Python_Web)"
+        ],
+        "avg_violation_rate": 4.91,
+        "student_discipline_score": 95.1
+    },
+    "Trịnh Quốc Hai": {
+        "name": "Trịnh Quốc Hai",
+        "role": "GV",
+        "classes": [
+            "HN-K25-CNTT8(22) (KS25_Python_Web)"
+        ],
+        "avg_violation_rate": 9.7,
+        "student_discipline_score": 90.3
+    },
+    "Đặng Quỳnh Trang": {
+        "name": "Đặng Quỳnh Trang",
+        "role": "GV",
+        "classes": [
+            "HN-K25-QTKD3(26) (KS25_QTKD_PRJ302)"
+        ],
+        "avg_violation_rate": 5.4,
+        "student_discipline_score": 94.6
+    }
+}

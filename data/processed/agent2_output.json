@@ -1,0 +1,81 @@
+{
+  "dashboard_data": {
+    "KS24": {
+      "cv": [
+        {
+          "class_name": "HN-KS24-CNTT1",
+          "course_name": "Java Web Service",
+          "size": 10,
+          "v_class": 9.743567251461988,
+          "mult_env": 1.0,
+          "pred_old": 74.85394871794871,
+          "actual_pass": 60.0,
+          "err": 14.853948717948711
+        }
+      ],
+      "curr": [
+        {
+          "class_name": "HN-KS24-CNTT1",
+          "course_name": "AI Application",
+          "size": 10,
+          "v_class": 7.6146703296703295,
+          "mult_env": 1.0,
+          "pred_old": 56.989902564102564,
+          "pred_new": 56.989902564102564,
+          "actual_pass": 60.0
+        }
+      ]
+    },
+    "KS25": {
+      "cv": [
+        {
+          "class_name": "HN-KS25-CNTT6",
+          "course_name": "Python",
+          "size": 10,
+          "v_class": 14.938418972332016,
+          "mult_env": 0.9753079051383399,
+          "pred_old": 68.50710181334419,
+          "actual_pass": 60.0,
+          "err": 8.507101813344192
+        },
+        {
+          "class_name": "HN-KS25-CNTT8",
+          "course_name": "Python",
+          "size": 10,
+          "v_class": 13.504,
+          "mult_env": 0.98248,
+          "pred_old": 69.66477284332305,
+          "actual_pass": 60.0,
+          "err": 9.66477284332305
+        }
+      ],
+      "curr": [
+        {
+          "class_name": "HN-KS25-CNTT6",
+          "course_name": "Python Web",
+          "size": 10,
+          "v_class": 14.938418972332016,
+          "mult_env": 0.9753079051383399,
+          "pred_old": 58.955873986481926,
+          "pred_new": 58.955873986481926,
+          "actual_pass": 60.0
+        },
+        {
+          "class_name": "HN-KS25-CNTT8",
+          "course_name": "Python Web",
+          "size": 10,
+          "v_class": 13.504,
+          "mult_env": 0.98248,
+          "pred_old": 60.04330841563076,
+          "pred_new": 60.04330841563076,
+          "actual_pass": 60.0
+        }
+      ]
+    },
+    "QTKD": {
+      "cv": [],
+      "curr": []
+    }
+  },
+  "care_list": []
+}

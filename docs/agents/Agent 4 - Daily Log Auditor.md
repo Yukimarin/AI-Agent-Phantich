@@ -24,8 +24,8 @@ Daily Log Auditor đóng vai trò là kiểm toán viên nhật ký công việc
 - **Dữ liệu dự án**: Đọc từ `scratch/project_issues.json` (chứa thông tin tiến độ dự án phòng Đào tạo).
 
 ### Dữ liệu Đầu ra (Outputs)
-- **Tệp JSON phân tích**: [daily_log_analysis.json](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/daily_log_analysis.json) chứa phân tách `weekly_stats` và `monthly_stats`.
-- **HTML Dashboard**: [4_daily_logs_report.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/4_daily_logs_report.html).
+- **Tệp JSON phân tích**: [daily_log_analysis.json](../data/daily_log_analysis.json) chứa phân tách `weekly_stats` và `monthly_stats`.
+- **HTML Dashboard**: [4_daily_logs_report.html](../output/4_daily_logs_report.html).
 
 ---
 
@@ -50,6 +50,11 @@ Trong đó:
 ---
 
 ## 4. Lịch sử Thay đổi & Quyết định quan trọng
+- **[2026-07-23] Tối ưu hóa UI/UX & Sửa đổi Dữ liệu Nhân sự:** Sửa lỗi hiển thị mất chữ của dự án, nâng độ tương phản nhãn trục của biểu đồ JPS. Bổ sung các thẻ Metric Cards và highlight đỏ nhạt cho các hàng task quá hạn/hoàn thành thấp trong Panel I và Panel V. Đồng thời loại bỏ Nguyễn Thanh Bình Phước khỏi báo cáo, chuyển Nguyễn Đức Minh sang Khối CNTT (CNTT-HCM).
+- **[2026-07-23] Tích hợp Báo cáo Hiệu suất & Phân bổ Nhân sự Jira (JPS):** Xây dựng chỉ số hiệu suất tổng hợp Jira (JPS = 60% TCR + 40% TFR) cô lập hoàn toàn với điểm báo cáo ngày. Tích hợp biểu đồ xếp hạng hiệu suất nhân sự và bảng phân bổ nguồn lực động theo Khối phòng ban vào Dashboard HTML của Agent 4.
+- **[2026-07-23] Tích hợp Fetch Dự án thời gian thực & Chi tiết Task:** Phát triển script `sync_worklane_projects.py` tự động đồng bộ 34 dự án Đào tạo và toàn bộ issues trực tiếp từ Worklane PM API. Bổ sung Panel "Chi Tiết Công Việc Dự Án" tương tác động trên Dashboard cho phép xem chi tiết, tìm kiếm và lọc trạng thái các task của dự án được click.
+- **[2026-07-23] Tích hợp Project Hub theo Khối phòng ban:** Triển khai tính năng Project Hub động cho phép theo dõi dự án (lọc card dự án, cập nhật biểu đồ Doughnut trạng thái task) và hiển thị danh sách nhân sự trống việc (tasks = 0) theo 4 Khối: CNTT, QTKD, QLCLĐT, Ngoại ngữ & KNM.
+- **[2026-07-23] Cập nhật Báo cáo & Khắc phục lỗi encoding:** Chuyển đổi các đường dẫn tuyệt đối cứng trong script sinh báo cáo sang tương đối để chạy đúng trên worktree. Lấy dữ liệu mới nhất đến ngày 22/07 và xử lý thành công lỗi KeyError Nguyễn Thanh Bình Phước trên môi trường Windows.
 - **[2026-07-13] Tích hợp MCP Worklane & Rebuild Thống kê**: Tải trực tiếp dữ liệu báo cáo ngày qua API thay thế cho việc đọc thủ công từ log txt, đồng thời tích hợp token bảo mật mới.
 - **[2026-07-13] Cải tiến quy chế phạt định mức**: Bỏ qua hoàn toàn các task tự do khỏi diện phạt trừ điểm. Chỉ phạt 5 điểm đối với các task khớp định mức nhưng khai báo lạm phát thời gian vượt quá 1.5 lần.
 - **[2026-07-13] Chuyển đổi chu kỳ đánh giá**: Chuyển chu kỳ đánh giá bắt đầu từ ngày 13/07/2026 (Tuần III tháng 7). Dynamic hóa toàn bộ công thức day-counts (thay vì cố định 5 hay 9 ngày) và chuyển dịch bộ lọc ngày quá hạn/ngày đến hạn dự án sang tuần mới (13/07 - 17/07/2026).
@@ -57,8 +62,9 @@ Trong đó:
 ---
 
 ## 5. Mã nguồn liên quan
-- **Script phân tích & fetch Worklane**: [analyze_daily_logs_mcp.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/analyze_daily_logs_mcp.py)
-- **Script sinh dashboard HTML**: [generate_agent4_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_agent4_report.py)
+- **Script phân tích & fetch Worklane logs**: [analyze_daily_logs_mcp.py](../../scratch/analyze_daily_logs_mcp.py)
+- **Script đồng bộ dự án & issues**: [sync_worklane_projects.py](../../scratch/sync_worklane_projects.py)
+- **Script sinh dashboard HTML**: [generate_agent4_report.py](../../scratch/generate_agent4_report.py)
 
 
 

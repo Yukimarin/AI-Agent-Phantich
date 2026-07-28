@@ -9,48 +9,51 @@ description: Use when starting any new task, subagent invocation, or conversatio
 
 Super Memory is a mechanism to persist critical project context, lessons learned, and guidelines across sessions, ensuring the agent doesn't repeat mistakes or lose context.
 
+## State-Based Paradigm (CRITICAL)
+
+**Super Memory is a State Document (like a Wikipedia page), NOT a chronological log.**
+Do **NOT** append daily logs or meeting minutes.
+When you learn something new, update the relevant section **in-place**.
+When a task is done, **remove** it from the Active Task section. Do not leave a trace of completed tasks.
+
+**CRITICAL RULE: USER APPROVAL REQUIRED**
+You must NEVER autonomously overwrite or add new decisions to the Core Logic, User Preferences, or Current State without the user's explicit consent.
+When you discover a new rule or want to update the State, you must first ask the user: "Tôi có nên cập nhật điều này vào Super Memory không?". Only proceed to edit `Super Memory.md` if they say yes.
+
 ## When to Use
 
 - At the start of every session or new task to read past memories and preferences.
 - When you run into a bug or error and find a specific fix that is not obvious.
 - When the user guides you to a styling, design, or behavioral preference that you must remember.
-- At the end of every session or task to write down a summary of changes, unresolved questions, and the next steps.
-
-## Core Pattern
-
-### 1. Reading from Memory (At Start)
-Locate and view `docs/super_memory.md` to load user preferences, lessons learned, and system parameters.
-
-### 2. Updating Memory (At End or Key Learning)
-Append or update the relevant section of `docs/super_memory.md` using clean Markdown tables or bullet points.
+- To update the Active Task section with your current unresolved task.
 
 ## Quick Reference
 
 | Action | Target File | Purpose |
 | :--- | :--- | :--- |
-| Read Memory | `docs/super_memory.md` | Retrieve historical decisions, preferences, and lessons. |
-| Write Memory | `docs/super_memory.md` | Record newly discovered rules, bugs, styles, or session summaries. |
+| Read Memory | `docs/super_memory.md` or `docs/Super Memory.md` | Retrieve historical decisions, preferences, and lessons. |
+| Write Memory | `docs/super_memory.md` or `docs/Super Memory.md` | OVERWRITE/UPDATE newly discovered rules, bugs, styles, or active tasks. |
 
-## Implementation
+## Implementation Structure
 
 ```markdown
 # Super Memory
 
 ## 1. User Preferences
-- Preferred styling: sleek glassmorphism, HSL custom colors.
-- Communication style: Vietnamese, concise, direct.
+- (Overwrite/update with new preferences)
 
-## 2. Lessons Learned & Bug Fixes
-- [2026-07-04] SQLite DB query format for training KPI should use `auto_rpoints` table for KS25.
-- [2026-07-04] Do not run nested subagent code directly in python; coordinate via Antigravity instead.
+## 2. Core Logic
+- (Overwrite/update with new rules)
 
-## 3. Current Session State
-- Session ID: 80ef82ea-69fb-4e9f-8432-ad3a1e4e8b34
-- Last completed task: Installed Super Memory skill.
+## 3. Current State
+- (Overwrite/update with current org chart, system states)
+
+## 4. Active Task
+- (Replace with the current unresolved task. Delete when finished.)
 ```
 
 ## Common Mistakes
 
+- **Appending chronological logs:** DO NOT write "[Date] Did this...". This bloats the context. Update rules in-place instead.
 - **Forgetting to check memory at the start:** Leads to repeating past errors or asking questions the user already answered.
-- **Overwriting the whole file without preserving history:** Use selective replacement or appending to keep past learnings intact.
-- **Recording trivial logs:** Keep memory focused on rules, patterns, preferences, and key architectural notes.
+- **Leaving completed tasks in Active Task:** Always wipe the Active Task section when a task is completed.

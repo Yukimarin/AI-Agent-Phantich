@@ -1,6 +1,0 @@
-@echo off
-echo [1/2] Recreating qldt_el database...
-"C:\Program Files\MySQL\MySQL Server 9.7\bin\mysql.exe" -h 127.0.0.1 -P 3307 -u root -e "DROP DATABASE IF EXISTS qldt_el; CREATE DATABASE qldt_el;"
-echo [2/2] Importing SQL dump (1.08 GB), please wait...
-"C:\Program Files\MySQL\MySQL Server 9.7\bin\mysql.exe" -h 127.0.0.1 -P 3307 -u root qldt_el < "C:\Users\DELL\Downloads\qldt_el-07-17-26.sql"
-echo Import completed!

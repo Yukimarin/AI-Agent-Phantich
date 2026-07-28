@@ -47,6 +47,7 @@ Trong đó:
 - **[2026-07-10] Tái cấu trúc logic tính KPI**: Chuyển đổi công thức tính điểm cũ sang công thức mới phân định rõ ranh giới trách nhiệm: Gộp Kỷ luật SV và Kỷ luật tác nghiệp làm Điểm Tuân thủ (40%), Điểm Học tập (30%), và tách riêng Điểm Báo cáo ngày làm một cột độc lập (30%).
 - **[2026-07-10] Tích hợp nhận xét định tính động**: Đọc các lỗi vi phạm tác nghiệp thực tế và lỗi báo cáo ngày (chậm trễ, thiếu logs, vượt định mức) để tự động sinh ra Điểm yếu và Đề xuất cải thiện chi tiết cho từng cá nhân, thay vì dùng các mẫu nhận xét tĩnh.
 - **[2026-07-13] Đồng bộ hóa chu kỳ đánh giá**: Đồng bộ chu kỳ đánh giá Work Score mới (bắt đầu từ 13/07/2026) vào tính toán KPI tổng hợp.
+- **[2026-07-23] Loại trừ nhân sự khỏi tính toán KPI**: Loại bỏ hoàn toàn thầy Nguyễn Thanh Bình Phước khỏi các tính toán điểm Tuân thủ, điểm Báo cáo ngày, điểm xếp hạng năng lực V2 và điểm KPI tổng hợp của Agent Lead.
 
 ---
 
