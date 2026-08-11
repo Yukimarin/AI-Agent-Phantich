@@ -19,14 +19,14 @@
 | **Mai Xuân Chinh** | GV |  | 100.0 | 100.0 | 73.1 | **91.93** |
 | **Phan Ngọc Tài** | GV |  | 100.0 | 100.0 | 73.0 | **91.90** |
 | **Nguyễn Công Hưởng** | GV |  | 100.0 | 100.0 | 72.2 | **91.66** |
-| **Trần Quốc Tuấn** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]] | 90.0 | 95.1 | 85.7 | **90.26** |
+| **Trần Quốc Tuấn** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]] | 90.0 | 95.1 | 85.7 | **90.26** |
 | **Hồ Xuân Hùng** | GV |  | 100.0 | 100.0 | 66.9 | **90.07** |
 | **Phạm Ngọc Kiên** | GV |  | 85.0 | 100.0 | 84.9 | **89.47** |
 | **Lâm Tùng Dương** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(38) (KS25_Python_Web)]] | 88.0 | 91.0 | 89.0 | **89.21** |
 | **Trần Minh Cường** | GV |  | 100.0 | 100.0 | 64.0 | **89.20** |
 | **Phạm Viết Hùng** | GV |  | 95.0 | 100.0 | 70.5 | **89.15** |
 | **Lưu Hoàng Xuân Nguyên** | GV |  | 92.5 | 100.0 | 72.0 | **88.60** |
-| **Nguyễn Quảng An** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]] | 80.3 | 90.7 | 92.1 | **86.98** |
+| **Nguyễn Quảng An** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]] | 80.3 | 90.7 | 92.1 | **86.98** |
 | **Lại Trung Lâm** | GV |  | 85.0 | 100.0 | 75.5 | **86.65** |
 | **Lê Hà Thanh Sang** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]] | 84.3 | 83.7 | 91.5 | **86.29** |
 | **Nguyễn Bá Minh Đạo** | GV |  | 90.0 | 100.0 | 66.9 | **86.07** |
@@ -176,7 +176,7 @@
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
 #### GV. Trần Quốc Tuấn
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]]
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]]
 - **Điểm KPI tổng**: **90.26** (Kỷ luật: 90.0, Học tập: 95.1, Báo cáo ngày: 85.7)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
@@ -246,7 +246,7 @@
   - Cần chủ động và sát sao hơn trong việc kiểm tra bài tập, nhắc nhở sinh viên nộp bài bổ sung kịp thời. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Nguyễn Quảng An
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]]
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]]
 - **Điểm KPI tổng**: **86.98** (Kỷ luật: 80.3, Học tập: 90.7, Báo cáo ngày: 92.1)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.

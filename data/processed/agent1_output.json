@@ -31,8 +31,8 @@
         "name": "Lương Quốc Tuấn",
         "role": "GV",
         "classes": [
-            "HN-K25-CNTT1(40) (KS25_Python_Web)",
-            "HN-K25-CNTT5(37) (KS25_Python_Web)"
+            "HN-K25-CNTT5(37) (KS25_Python_Web)",
+            "HN-K25-CNTT1(40) (KS25_Python_Web)"
         ],
         "avg_violation_rate": 8.34,
         "student_discipline_score": 91.7
@@ -41,8 +41,8 @@
         "name": "Nguyễn Quảng An",
         "role": "GV",
         "classes": [
-            "HN-K25-CNTT3(35) (KS25_Python_Web)",
             "HN-K25-CNTT4(41-40) (KS25_Python_Web)",
+            "HN-K25-CNTT3(35) (KS25_Python_Web)",
             "HN-K25-CNTT6(32-31) (KS25_Python_Web)"
         ],
         "avg_violation_rate": 9.3,
@@ -61,8 +61,8 @@
         "name": "Trần Quốc Tuấn",
         "role": "GV",
         "classes": [
-            "HCM-K25-CNTT6(40) (KS25_Python_Web)",
-            "HCM-K25-CNTT7(40-39) (KS25_Python_Web)"
+            "HCM-K25-CNTT7(40-39) (KS25_Python_Web)",
+            "HCM-K25-CNTT6(40) (KS25_Python_Web)"
         ],
         "avg_violation_rate": 4.91,
         "student_discipline_score": 95.1

@@ -874,15 +874,6 @@
         }
       }
     },
-    "Nguyễn Ngọc Sơn": {
-      "execution_faults": {
-        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
-          "count": 4,
-          "type": "Thi công chậm (Cần làm/Đang làm)"
-        }
-      },
-      "review_faults": {}
-    },
     "Lê Hà Thanh Sang": {
       "execution_faults": {
         "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
@@ -892,10 +883,19 @@
       },
       "review_faults": {
         "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
-          "count": 26,
+          "count": 28,
           "type": "Chậm duyệt bài (Chờ duyệt)"
         }
       }
+    },
+    "Nguyễn Ngọc Sơn": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
     },
     "Phan Ngọc Tài": {
       "execution_faults": {

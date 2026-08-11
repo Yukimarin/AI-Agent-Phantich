@@ -10350,7 +10350,7 @@
         {
           "code": "KS25TICH-29",
           "title": "S02 - L04: Bài đọc",
-          "state": "Đang làm",
+          "state": "Chờ duyệt",
           "priority": "HIGH",
           "assignee": "Nguyễn Ngọc Sơn",
           "dueDate": "2026-08-10T00:00:00.000Z"
@@ -10390,7 +10390,7 @@
         {
           "code": "KS25TICH-283",
           "title": "S07 - L05: Bài đọc",
-          "state": "Đang làm",
+          "state": "Chờ duyệt",
           "priority": "HIGH",
           "assignee": "Nguyễn Ngọc Sơn",
           "dueDate": "2026-08-10T00:00:00.000Z"
@@ -11164,6 +11164,14 @@
           "dueDate": "2026-08-03T00:00:00.000Z"
         },
         {
+          "code": "KS25TICH-150",
+          "title": "S09 - L04: Bài tập thực hành Lesson",
+          "state": "Hoàn thành",
+          "priority": "HIGH",
+          "assignee": "Nguyễn Ngọc Sơn",
+          "dueDate": "2026-08-10T00:00:00.000Z"
+        },
+        {
           "code": "KS25TICH-280",
           "title": "S05 - L05: Bài đọc",
           "state": "Hoàn thành",
@@ -11178,14 +11186,6 @@
           "priority": "LOW",
           "assignee": "Lưu Hoàng Xuân Nguyên",
           "dueDate": "2026-08-11T00:00:00.000Z"
-        },
-        {
-          "code": "KS25TICH-150",
-          "title": "S09 - L04: Bài tập thực hành Lesson",
-          "state": "Hoàn thành",
-          "priority": "HIGH",
-          "assignee": "Nguyễn Ngọc Sơn",
-          "dueDate": "2026-08-10T00:00:00.000Z"
         },
         {
           "code": "KS25TICH-188",
@@ -11380,12 +11380,12 @@
           "dueDate": "2026-08-14T00:00:00.000Z"
         },
         {
-          "code": "KS25TICH-197",
-          "title": "S20: 4 đề thi thực hành (1, 2, 3, 4)",
-          "state": "Cần làm",
-          "priority": "LOW",
-          "assignee": "Lương Quốc Tuấn",
-          "dueDate": "2026-08-14T00:00:00.000Z"
+          "code": "KS25TICH-97",
+          "title": "S07 - L01: Kế hoạch quay video",
+          "state": "Hoàn thành",
+          "priority": "HIGH",
+          "assignee": "Lê Hà Thanh Sang",
+          "dueDate": "2026-08-03T00:00:00.000Z"
         },
         {
           "code": "KS25TICH-122",
@@ -11396,12 +11396,12 @@
           "dueDate": "2026-08-10T00:00:00.000Z"
         },
         {
-          "code": "KS25TICH-97",
-          "title": "S07 - L01: Kế hoạch quay video",
-          "state": "Hoàn thành",
-          "priority": "HIGH",
-          "assignee": "Lê Hà Thanh Sang",
-          "dueDate": "2026-08-03T00:00:00.000Z"
+          "code": "KS25TICH-197",
+          "title": "S20: 4 đề thi thực hành (1, 2, 3, 4)",
+          "state": "Cần làm",
+          "priority": "LOW",
+          "assignee": "Lương Quốc Tuấn",
+          "dueDate": "2026-08-14T00:00:00.000Z"
         },
         {
           "code": "KS25TICH-123",
@@ -11436,6 +11436,14 @@
           "dueDate": "2026-08-09T00:00:00.000Z"
         },
         {
+          "code": "KS25TICH-126",
+          "title": "S07 - L03: Bài đọc",
+          "state": "Chờ duyệt",
+          "priority": "HIGH",
+          "assignee": "Nguyễn Ngọc Sơn",
+          "dueDate": "2026-08-10T00:00:00.000Z"
+        },
+        {
           "code": "KS25TICH-199",
           "title": "S20: 2 đề thi thực hành dự phòng (9, 10)",
           "state": "Cần làm",
@@ -11444,9 +11452,17 @@
           "dueDate": "2026-08-14T00:00:00.000Z"
         },
         {
-          "code": "KS25TICH-126",
-          "title": "S07 - L03: Bài đọc",
-          "state": "Chờ duyệt",
+          "code": "KS25TICH-217",
+          "title": "S15 - L01: Câu hỏi pop-up video",
+          "state": "Cần làm",
+          "priority": "MEDIUM",
+          "assignee": "Lưu Hoàng Xuân Nguyên",
+          "dueDate": "2026-08-16T00:00:00.000Z"
+        },
+        {
+          "code": "KS25TICH-127",
+          "title": "S07 - L03: Bài tập thực hành Lesson",
+          "state": "Hoàn thành",
           "priority": "HIGH",
           "assignee": "Nguyễn Ngọc Sơn",
           "dueDate": "2026-08-10T00:00:00.000Z"
@@ -11460,22 +11476,6 @@
           "dueDate": "2026-08-09T00:00:00.000Z"
         },
         {
-          "code": "KS25TICH-127",
-          "title": "S07 - L03: Bài tập thực hành Lesson",
-          "state": "Hoàn thành",
-          "priority": "HIGH",
-          "assignee": "Nguyễn Ngọc Sơn",
-          "dueDate": "2026-08-10T00:00:00.000Z"
-        },
-        {
-          "code": "KS25TICH-217",
-          "title": "S15 - L01: Câu hỏi pop-up video",
-          "state": "Cần làm",
-          "priority": "MEDIUM",
-          "assignee": "Lưu Hoàng Xuân Nguyên",
-          "dueDate": "2026-08-16T00:00:00.000Z"
-        },
-        {
           "code": "KS25TICH-218",
           "title": "S15 - L01: Bài tập thực hành Lesson",
           "state": "Cần làm",
@@ -11484,20 +11484,20 @@
           "dueDate": "2026-08-16T00:00:00.000Z"
         },
         {
-          "code": "KS25TICH-101",
-          "title": "S07 - L02: Quay video bài giảng",
-          "state": "Hoàn thành",
-          "priority": "HIGH",
-          "assignee": "Lê Hà Thanh Sang",
-          "dueDate": "2026-08-03T00:00:00.000Z"
-        },
-        {
           "code": "KS25TICH-130",
           "title": "S07 - L04: Bài đọc",
           "state": "Chờ duyệt",
           "priority": "HIGH",
           "assignee": "Nguyễn Ngọc Sơn",
           "dueDate": "2026-08-10T00:00:00.000Z"
+        },
+        {
+          "code": "KS25TICH-101",
+          "title": "S07 - L02: Quay video bài giảng",
+          "state": "Hoàn thành",
+          "priority": "HIGH",
+          "assignee": "Lê Hà Thanh Sang",
+          "dueDate": "2026-08-03T00:00:00.000Z"
         },
         {
           "code": "KS25TICH-220",
@@ -17125,7 +17125,7 @@
           "state": "Đang làm",
           "priority": "HIGH",
           "assignee": "Giáp Thị Minh Hằng",
-          "dueDate": "2026-08-11T00:00:00.000Z"
+          "dueDate": "2026-08-14T00:00:00.000Z"
         },
         {
           "code": "PTITSAN3-25",
