@@ -23,7 +23,7 @@ graph TD
 Khi ban đào tạo gửi dữ liệu thô mới, bạn thực hiện các thao tác sau:
 
 1.  **Chỉ số vi phạm của các lớp (Excel)**: 
-    *   Lưu đè file Excel mới vào đường dẫn: `docs/PTIT_Chiso.xlsx`.
+    *   Lưu đè file Excel mới vào đường dẫn: `data/inputs/PTIT_Chiso.xlsx`.
 2.  **Cơ sở dữ liệu học tập (MySQL Dump)**:
     *   Tải file SQL dump mới về máy.
     *   Chạy tệp batch [import_db.bat](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/import_db.bat) để import sạch dữ liệu mới vào MySQL (cổng 3307). 
@@ -57,16 +57,16 @@ Nếu bộ khung kiểm thử **Evaluation Harness** báo cáo sai số MAE vư�
 
 ## Bước 3: Xử lý Kết quả đầu ra (Output) của Agent
 
-Sau khi AI Agent chạy xong pipeline, hệ thống sẽ tự động cập nhật các file Markdown tại thư mục `data/`. Bạn sẽ tiến hành xử lý tiếp như sau:
+Sau khi AI Agent chạy xong pipeline, hệ thống sẽ tự động cập nhật các file Markdown tại thư mục `output/reports/core/`. Bạn sẽ tiến hành xử lý tiếp như sau:
 
 ### 3.1. Phân tích & Tương tác trên Obsidian (Human-in-the-loop)
 Bạn mở **Obsidian** lên để duyệt báo cáo:
-*   **Kiểm tra Care List**: Xem danh sách học viên Đỏ/Vàng trong [student_risk_report.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/student_risk_report.md) để biết lớp nào đang có nguy cơ trượt cao.
-*   **Tra cứu KPI**: Click vào Wiki-link lớp học trong [report_kpi_gv_tg.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/report_kpi_gv_tg.md) để kiểm tra xem vì sao điểm KPI Học tập của GV đó bị kéo thấp (do lớp họ dạy có nhiều học sinh đỏ).
-*   **Ghi chú bổ sung**: Bạn có thể tạo thêm các ghi chú cá nhân (ví dụ: `Nhật ký can thiệp lớp CNTT1.md`) để ghi nhận các hành động thực tế đã làm để kéo học sinh đi học lại. Đặt link `[[student_risk_report#Lớp: HN-KS24-CNTT1]]` để Obsidian tự động liên kết chéo.
+*   **Kiểm tra Care List**: Xem danh sách học viên Đỏ/Vàng trong [agent_2_academic_prediction.md](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/reports/core/agent_2_academic_prediction.md) để biết lớp nào đang có nguy cơ trượt cao.
+*   **Tra cứu KPI**: Click vào Wiki-link lớp học trong [agent_5_master_portal.md](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/reports/core/agent_5_master_portal.md) để kiểm tra xem vì sao điểm KPI Học tập của GV đó bị kéo thấp (do lớp họ dạy có nhiều học sinh đỏ).
+*   **Ghi chú bổ sung**: Bạn có thể tạo thêm các ghi chú cá nhân (ví dụ: `Nhật ký can thiệp lớp CNTT1.md`) để ghi nhận các hành động thực tế đã làm để kéo học sinh đi học lại. Đặt link `[[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1]]` để Obsidian tự động liên kết chéo.
 
 ### 3.2. Giám sát Hiệu năng bằng Harness
-*   Duyệt tệp [evaluation_metrics.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/evaluation_metrics.md) để theo dõi các chỉ số Precision/Recall.
+*   Duyệt tệp [agent_2_academic_prediction.md](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/reports/core/agent_2_academic_prediction.md) để theo dõi các chỉ số và sai số MAE.
 *   Nếu **Precision thấp (cảnh báo ảo nhiều)**: Nhắc nhở GV/TG kiểm tra xem có tình trạng "điểm danh ảo" không (giảng viên quên tắt điểm danh tự động).
 *   Nếu **Recall thấp (bỏ sót học sinh nguy cơ)**: Ra lệnh cho AI Agent điều chỉnh lại thuật toán dự báo (ví dụ tăng ngưỡng nhạy của chuyên cần).
 

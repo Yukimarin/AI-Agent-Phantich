@@ -35,7 +35,7 @@ def validate_output(file_path, file_type):
         print(f"✗ Lỗi: File {file_path} không được tạo ra.")
         return False
         
-    cmd = ["uv", "run", "agents/validator.py", file_path, file_type]
+    cmd = ["uv", "run", "agents/common/validator.py", file_path, file_type]
     try:
         result = subprocess.run(cmd, check=True, capture_output=True, text=True, encoding='utf-8')
         print(result.stdout)
@@ -54,68 +54,74 @@ def main():
     # Bước 0: DataSanitizer (Harness Layer)
     run_script(
         "DataSanitizer: Làm sạch dữ liệu Excel", 
-        "agents/data_sanitizer.py",
+        "agents/common/data_sanitizer.py",
         with_deps=["openpyxl", "pandas"]
     )
+
+    # Khởi tạo các thư mục đầu ra nếu chưa có
+    os.makedirs("output/dashboards/core", exist_ok=True)
+    os.makedirs("output/dashboards/advanced", exist_ok=True)
+    os.makedirs("output/reports/core", exist_ok=True)
+    os.makedirs("output/reports/advanced", exist_ok=True)
 
     # Bước 1: Chạy Agent 1
     run_script(
         "Agent 1: Kỷ luật học viên (Class KPI)", 
-        "agents/agent_1_class_kpi/run.py",
+        "agents/core/agent_1_class_kpi/run.py",
         with_deps=["openpyxl", "numpy", "markdown"]
     )
     validate_output("data/processed/agent1_output.json", "json")
-    validate_output("output/dashboards/1_kpi_report.html", "html")
+    validate_output("output/dashboards/core/agent_1_student_discipline.html", "html")
     
     # Bước 2: Chạy Agent 2
     run_script(
         "Agent 2: Dự báo học vụ (Academic Predictor)", 
-        "agents/agent_2_academic_pred/run.py",
+        "agents/core/agent_2_academic_pred/run.py",
         with_deps=["mysql-connector-python", "openpyxl", "numpy"]
     )
     validate_output("data/processed/agent2_output.json", "json")
-    validate_output("output/dashboards/2_class_predictions_dashboard.html", "html")
+    validate_output("output/dashboards/core/agent_2_academic_prediction.html", "html")
     
     # Bước 3: Chạy Agent 3
     run_script(
         "Agent 3: Kỷ luật tác nghiệp GV/TG (Ops Discipline)", 
-        "agents/agent_3_ops_discipline/run.py",
+        "agents/core/agent_3_ops_discipline/run.py",
         with_deps=["mysql-connector-python", "openpyxl"]
     )
     validate_output("data/processed/agent3_output.json", "json")
-    validate_output("output/dashboards/3_gvtg_violations_report.html", "html")
+    validate_output("output/dashboards/core/agent_3_ops_discipline.html", "html")
     
     # Bước 4: Chạy Agent 4
     run_script(
         "Agent 4: Nhật ký công việc (Daily Logs Auditor)", 
-        "agents/agent_4_daily_logs/run.py",
+        "agents/core/agent_4_daily_logs/run.py",
         with_deps=["openpyxl"]
     )
-    validate_output("data/processed/agent4_output.json", "json")
-    validate_output("output/dashboards/4_daily_logs_report.html", "html")
+    validate_output("data/processed/daily_log_analysis.json", "json")
+    validate_output("output/dashboards/core/agent_4_daily_logs.html", "html")
+    
+    # Bước 4.5: Chạy báo cáo Giám đốc Đào tạo (Director Cockpit)
+    run_script(
+        "Custom Director Report: Báo cáo Giám đốc Đào tạo (Director Cockpit)",
+        "agents/advanced/management_audit/generate_report_director.py",
+        with_deps=["openpyxl"]
+    )
+    validate_output("output/dashboards/advanced/director_cockpit.html", "html")
     
     # Bước 5: Master Lead
     run_script(
         "Agent 5: Master Lead Portal", 
-        "agents/agent_5_master_portal/run.py"
+        "agents/master/agent_5_master_portal/run.py"
     )
-    validate_output("output/dashboards/5_master_evaluation_dashboard.html", "html")
+    validate_output("output/dashboards/core/agent_5_master_portal.html", "html")
     
-    # Vệ sinh thư mục output (Dọn dẹp các file thừa)
+    # Vệ sinh thư mục output (Dọn dẹp các file thừa ở thư mục gốc output)
     print("Tiến hành vệ sinh thư mục output...")
     output_dir = "output"
-    whitelist = [
-        "1_kpi_report.html", 
-        "2_class_predictions_dashboard.html", 
-        "3_gvtg_violations_report.html", 
-        "4_daily_logs_report.html", 
-        "5_master_evaluation_dashboard.html",
-        "kpi_classification_report.html"
-    ]
     if os.path.exists(output_dir):
         for file in os.listdir(output_dir):
             file_path = os.path.join(output_dir, file)
-            if os.path.isfile(file_path) and file not in whitelist:
+            if os.path.isfile(file_path):
                 try:
                     os.remove(file_path)
                     print(f"  - Đã xóa file thừa: {file}")

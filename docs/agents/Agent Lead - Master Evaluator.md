@@ -16,14 +16,14 @@ MasterEvaluator đóng vai trò là Agent điều phối trung tâm. Nhiệm v�
 ## 2. Dữ liệu Đầu vào & Đầu ra
 
 ### Dữ liệu Đầu vào (Inputs)
-1. **Điểm Kỷ luật SV**: Điểm số kỷ luật của sinh viên do **Agent 1** (ViolationAnalyst) phân tích từ tệp Excel học vụ `data/PTIT_Chiso.xlsx`.
+1. **Điểm Kỷ luật SV**: Điểm số kỷ luật của sinh viên do **Agent 1** (ViolationAnalyst) phân tích từ tệp Excel học vụ [PTIT_Chiso.xlsx](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/inputs/PTIT_Chiso.xlsx).
 2. **Điểm Kỷ luật Tác nghiệp GV/TG**: Điểm trừ do vi phạm tác nghiệp thực tế của GV/TG do **Agent 3** (TaskAggregator) quét đối chiếu từ Excel thời khóa biểu.
 3. **Điểm Học tập**: Tỷ lệ sinh viên đỗ thực tế hoặc dự đoán do **Agent 2** (AcademicPredictor) phân tích từ database MySQL/SQLite.
 4. **Điểm Báo cáo ngày**: Điểm hiệu suất báo cáo ngày (Work Score) do **Agent 4** (Daily Log Auditor) phân tích từ Worklane qua MCP.
 
 ### Dữ liệu Đầu ra (Outputs)
-1. **Báo cáo KPI Markdown**: Lưu tại [report_kpi_gv_tg.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/report_kpi_gv_tg.md) để đồng bộ vào Obsidian Vault.
-2. **Web Dashboard tích hợp**: Tích hợp các điểm số và nhận xét định tính vào Tab 1 của [5_unified_dashboard.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/5_unified_dashboard.html).
+1. **Báo cáo KPI Markdown**: Lưu tại [agent_5_master_portal.md](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/reports/core/agent_5_master_portal.md) để đồng bộ vào Obsidian Vault.
+2. **Web Dashboard tích hợp**: Tích hợp các điểm số và nhận xét định tính vào Tab 1 của [agent_5_master_portal.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_5_master_portal.html).
 
 ---
 
@@ -52,18 +52,15 @@ Trong đó:
 ---
 
 ## 5. Mã nguồn liên quan
-- **Script tính toán chính**: [generate_kpi_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_kpi_report.py)
-- **Script ghép dashboard**: [generate_unified_dashboard.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_unified_dashboard.py)
-- **Đường ống tự động**: [run_pipeline.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/run_pipeline.py)
+- **Script tính toán chính**: [generate_kpi_report.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/master/agent_5_master_portal/generate_kpi_report.py)
+- **Script ghép dashboard**: [generate_unified_dashboard.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/master/agent_5_master_portal/generate_unified_dashboard.py)
+- **Đường ống tự động**: [run_pipeline.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/run_pipeline.py)
 
 
 
 ---
 
-## 6. Kết quả Phân tích Thực tế Mới nhất (Latest Actionable Insights)
-> [!tip] Báo cáo đánh giá KPI GV/TG tổng hợp học kỳ
-> Dưới đây là kết quả xếp loại và điểm KPI tổng của từng phòng ban.
-
-![[Báo cáo KPI Giảng viên Trợ giảng]]
+*   Xem chi tiết: [[output/reports/core/agent_5_master_portal|Báo cáo KPI Tổng hợp GV/TG (Master Portal)]]
+*   Dashboard trực quan: [agent_5_master_portal.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_5_master_portal.html)
 ---
 Trở về: [[Bản đồ Tri thức MOC|Bản đồ Tri thức dự án]]

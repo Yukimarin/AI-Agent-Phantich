@@ -19,13 +19,13 @@ Daily Log Auditor đóng vai trò là kiểm toán viên nhật ký công việc
 - **Dữ liệu Worklane**: Gọi MCP tool `list_daily_reports` với tham số `department="DT"` và ngày làm việc của chu kỳ.
 - **Token xác thực Worklane**: `wl_jtpd1dOgxnUm5n2d7V6dxBT_AZHNrnCK`.
 - **Thông tin nhân sự & định mức KPI Master**:
-  - Khối QTKD: [\_Task Management\_ QL Khối QTKD.xlsx](file:///C:/Users/DELL/Downloads/_Task%20Management_%20QL%20Kh%E1%BB%91i%20QTKD.xlsx) (sheet `STAFF` và `KPI_MASTER`).
-  - Khối CNTT: [Quản lý hiệu suất đào tạo.xlsx](file:///C:/Users/DELL/Downloads/Qu%E1%BA%A3n%20l%C3%BD%20hi%E1%BB%87u%20su%E1%BA%A5t%20%C4%91%C3%A0o%20t%E1%BA%A1o.xlsx) (sheet `BC hàng ngày` và `Cấu trúc KPI công việc GV. TG`).
-- **Dữ liệu dự án**: Đọc từ `scratch/project_issues.json` (chứa thông tin tiến độ dự án phòng Đào tạo).
+  - Khối QTKD: [kpi_master_qtkd.md](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/inputs/kpi_master_qtkd.md).
+  - Khối CNTT: [kpi_master_cntt.md](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/inputs/kpi_master_cntt.md).
+- **Dữ liệu dự án**: Đọc từ [project_issues_worklane.json](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/processed/project_issues_worklane.json) (chứa thông tin tiến độ dự án phòng Đào tạo).
 
 ### Dữ liệu Đầu ra (Outputs)
-- **Tệp JSON phân tích**: [daily_log_analysis.json](../data/daily_log_analysis.json) chứa phân tách `weekly_stats` và `monthly_stats`.
-- **HTML Dashboard**: [4_daily_logs_report.html](../output/4_daily_logs_report.html).
+- **Tệp JSON phân tích**: [daily_log_analysis.json](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/processed/daily_log_analysis.json) chứa phân tách `weekly_stats` và `monthly_stats`.
+- **HTML Dashboard**: [agent_4_daily_logs.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_4_daily_logs.html).
 
 ---
 
@@ -62,18 +62,15 @@ Trong đó:
 ---
 
 ## 5. Mã nguồn liên quan
-- **Script phân tích & fetch Worklane logs**: [analyze_daily_logs_mcp.py](../../scratch/analyze_daily_logs_mcp.py)
-- **Script đồng bộ dự án & issues**: [sync_worklane_projects.py](../../scratch/sync_worklane_projects.py)
-- **Script sinh dashboard HTML**: [generate_agent4_report.py](../../scratch/generate_agent4_report.py)
+- **Script phân tích & fetch Worklane logs**: [analyze_daily_logs.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/core/agent_4_daily_logs/analyze_daily_logs.py)
+- **Script đồng bộ dự án & issues**: [sync_worklane_projects.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/core/agent_4_daily_logs/sync_worklane_projects.py)
+- **Script sinh dashboard HTML**: [generate_report_v4.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/core/agent_4_daily_logs/generate_report_v4.py)
 
 
 
 ---
 
-## 6. Kết quả Phân tích Thực tế Mới nhất (Latest Actionable Insights)
-> [!tip] Phân tích báo cáo ngày & Định mức công việc
-> Dưới đây là báo cáo tiến độ nộp logs và các trường hợp khai báo vượt định mức.
-
-![[Báo cáo Nhật ký Công việc]]
+*   Xem chi tiết: [[output/reports/core/agent_4_daily_logs|Báo cáo Nhật ký Công việc & Đồng bộ Worklane]]
+*   Dashboard trực quan: [agent_4_daily_logs.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_4_daily_logs.html)
 ---
 Trở về: [[Bản đồ Tri thức MOC|Bản đồ Tri thức dự án]]

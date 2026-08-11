@@ -17,13 +17,13 @@ AcademicPredictor là Agent cốt lõi về dự báo học vụ và phân tích
 
 ### Dữ liệu Đầu vào (Inputs)
 - **Database**: Hệ quản trị MySQL `qldt_el` (cổng 3307) hoặc SQLite `data/qldt.db`.
-- **Tệp cấu hình**: [course_metadata.json](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/course_metadata.json) chứa cấu trúc buổi học, định mức và trọng số môn học.
+- **Tệp cấu hình**: [course_metadata.json](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/inputs/course_metadata.json) chứa cấu trúc buổi học, định mức và trọng số môn học.
 - **Tỷ lệ vi phạm từ Excel**: Chuyển giao từ Agent 1.
 
 ### Dữ liệu Đầu ra (Outputs)
-- **Tệp JSON dự báo**: [predictions_cv_data.json](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/predictions_cv_data.json) và [student_risk_data.json](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/student_risk_data.json).
-- **Báo cáo Care List Markdown**: [student_risk_report.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/student_risk_report.md).
-- **HTML Dashboards**: [2_class_predictions_dashboard.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/2_class_predictions_dashboard.html) và Tab 2 của [5_unified_dashboard.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/5_unified_dashboard.html).
+- **Tệp JSON dự báo**: [agent2_output.json](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/processed/agent2_output.json).
+- **Báo cáo Care List Markdown**: [agent_2_academic_prediction.md](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/reports/core/agent_2_academic_prediction.md).
+- **HTML Dashboards**: [agent_2_academic_prediction.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_2_academic_prediction.html) và Tab 2 của [agent_5_master_portal.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_5_master_portal.html).
 
 ---
 
@@ -65,20 +65,15 @@ $$P_{final} = P_{eligible} \times Multiplier_{env}$$
 ---
 
 ## 5. Mã nguồn liên quan
-- **Script dự báo chính**: [analyze_student_risk_real.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/analyze_student_risk_real.py)
-- **Script xuất bản dashboard**: [export_prediction_dashboard_html.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/export_prediction_dashboard_html.py)
-- **Bộ khung đo đạc sai số**: [evaluation_harness.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/evaluation_harness.py)
+- **Script dự báo chính**: [analyze_student_risk_real.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/core/agent_2_academic_pred/analyze_student_risk_real.py)
+- **Script xuất bản dashboard**: [generate_report.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/core/agent_2_academic_pred/generate_report.py)
+- **Bộ khung đo đạc sai số**: [evaluation_harness.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/core/agent_2_academic_pred/evaluation_harness.py)
 
 
 
 ---
 
-## 6. Kết quả Phân tích Thực tế Mới nhất (Latest Actionable Insights)
-> [!tip] Kết quả dự báo học lực & Hiệu năng mô hình
-> Dưới đây là cảnh báo nguy cơ trượt của học viên và đánh giá hiệu năng mô hình.
-
-![[Báo cáo Nguy cơ Học viên]]
-
-![[Đánh giá Hiệu năng Mô hình]]
+*   Xem chi tiết: [[output/reports/core/agent_2_academic_prediction|Báo cáo Dự báo Học thuật & Danh sách Can thiệp (Care List)]]
+*   Dashboard trực quan: [agent_2_academic_prediction.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_2_academic_prediction.html)
 ---
 Trở về: [[Bản đồ Tri thức MOC|Bản đồ Tri thức dự án]]

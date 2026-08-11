@@ -21,8 +21,8 @@
         "name": "Lê Hà Thanh Sang",
         "role": "GV",
         "classes": [
-            "HCM-K25-CNTT8(36) (KS25_Python_Web)",
-            "HCM-K25-CNTT5(37) (KS25_Python_Web)"
+            "HCM-K25-CNTT5(37) (KS25_Python_Web)",
+            "HCM-K25-CNTT8(36) (KS25_Python_Web)"
         ],
         "avg_violation_rate": 16.32,
         "student_discipline_score": 83.7
@@ -41,8 +41,8 @@
         "name": "Nguyễn Quảng An",
         "role": "GV",
         "classes": [
-            "HN-K25-CNTT4(41-40) (KS25_Python_Web)",
             "HN-K25-CNTT3(35) (KS25_Python_Web)",
+            "HN-K25-CNTT4(41-40) (KS25_Python_Web)",
             "HN-K25-CNTT6(32-31) (KS25_Python_Web)"
         ],
         "avg_violation_rate": 9.3,

@@ -1,0 +1,982 @@
+{
+  "2026-07-30": {
+    "Nguyễn Bá Minh Đạo": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 28,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 26,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lê Thành Ngọc": {
+      "execution_faults": {},
+      "review_faults": {
+        "QTKDPM - [QTKDS] CTĐT, PM Môn học K25, 26": {
+          "count": 1,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lương Quốc Tuấn": {
+      "execution_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 29,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Đặng Minh Luân": {
+      "execution_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lưu Hoàng Xuân Nguyên": {
+      "execution_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 24,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Trần Quốc Tuấn": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 4,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lâm Tùng Dương": {
+      "execution_faults": {
+        "KS26NANG - [KS26]_IT102_Kỹ năng prompting với AI": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lê Hà Thanh Sang": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 5,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 80,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Mai Xuân Chinh": {
+      "execution_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 55,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Bùi Thanh Hải": {
+      "execution_faults": {
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Đinh Thành Nam": {
+      "execution_faults": {
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 53,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Phạm Tuấn Bình": {
+      "execution_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 3,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Nguyễn Công Hưởng": {
+      "execution_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 45,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    }
+  },
+  "2026-07-31": {
+    "Lê Thị Đỏ": {
+      "execution_faults": {
+        "PTITQUAN - 🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Nguyễn Bá Minh Đạo": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 18,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 26,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lương Quốc Tuấn": {
+      "execution_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 29,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Trần Quốc Tuấn": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 8,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lưu Hoàng Xuân Nguyên": {
+      "execution_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 41,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Đặng Minh Luân": {
+      "execution_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 5,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lâm Tùng Dương": {
+      "execution_faults": {
+        "KS26NANG - [KS26]_IT102_Kỹ năng prompting với AI": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lê Hà Thanh Sang": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 8,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 80,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Mai Xuân Chinh": {
+      "execution_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 70,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Bùi Thanh Hải": {
+      "execution_faults": {
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Nguyễn Công Hưởng": {
+      "execution_faults": {
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 9,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 48,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    }
+  },
+  "2026-08-04": {
+    "Nguyễn Bá Minh Đạo": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 22,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 36,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Hồ Xuân Hùng": {
+      "execution_faults": {},
+      "review_faults": {
+        "PTITSAN2 - [PTIT-K24] Sản xuất tài nguyên môn Microservice in Action": {
+          "count": 1,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Nguyễn Công Hưởng": {
+      "execution_faults": {
+        "PTITSAN2 - [PTIT-K24] Sản xuất tài nguyên môn Microservice in Action": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 9,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 50,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Ngô Quang Huấn": {
+      "execution_faults": {
+        "REXPCHUO3 - [RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lương Quốc Tuấn": {
+      "execution_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 14,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 30,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Trần Quốc Tuấn": {
+      "execution_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 10,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 70,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Đặng Minh Luân": {
+      "execution_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 6,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lê Hà Thanh Sang": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 63,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Mai Xuân Chinh": {
+      "execution_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 90,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Đinh Thành Nam": {
+      "execution_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Bùi Thanh Hải": {
+      "execution_faults": {
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 21,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Phạm Tuấn Bình": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 15,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    }
+  },
+  "2026-08-05": {
+    "Nguyễn Bá Minh Đạo": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 12,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 44,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Hồ Xuân Hùng": {
+      "execution_faults": {},
+      "review_faults": {
+        "PTITSAN2 - [PTIT-K24] Sản xuất tài nguyên môn Microservice in Action": {
+          "count": 1,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Nguyễn Công Hưởng": {
+      "execution_faults": {
+        "PTITSAN2 - [PTIT-K24] Sản xuất tài nguyên môn Microservice in Action": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 9,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 50,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lê Thành Ngọc": {
+      "execution_faults": {
+        "QTKDPM - [QTKDS] CTĐT, PM Môn học K25, 26": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Hoàng Thị Kim Oanh": {
+      "execution_faults": {
+        "QTKDPM - [QTKDS] CTĐT, PM Môn học K25, 26": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "QTKDCAC - [QTKDS] CÔNG VIỆC CHUNG (Ngắn hạn)": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Ngô Quang Huấn": {
+      "execution_faults": {
+        "REXPCHUO3 - [RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lương Quốc Tuấn": {
+      "execution_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 14,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 30,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Trần Quốc Tuấn": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 71,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Đặng Minh Luân": {
+      "execution_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 6,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lê Hà Thanh Sang": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 63,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lưu Hoàng Xuân Nguyên": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Mai Xuân Chinh": {
+      "execution_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 105,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Đinh Thành Nam": {
+      "execution_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Bùi Thanh Hải": {
+      "execution_faults": {
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 40,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Phạm Tuấn Bình": {
+      "execution_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 39,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lê Nhựt Mi": {
+      "execution_faults": {},
+      "review_faults": {
+        "QTKDHANH - [QTKDS] Hành trình trải nghiệm sinh viên": {
+          "count": 1,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Đặng Quỳnh Trang": {
+      "execution_faults": {
+        "QTKDHANH - [QTKDS] Hành trình trải nghiệm sinh viên": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    }
+  },
+  "2026-08-07": {
+    "Hoàng Phương Thảo": {
+      "execution_faults": {
+        "REXPENGL - 🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Nguyễn Bá Minh Đạo": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 3,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 44,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 56,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Hồ Xuân Hùng": {
+      "execution_faults": {},
+      "review_faults": {
+        "PTITSAN2 - [PTIT-K24] Sản xuất tài nguyên môn Microservice in Action": {
+          "count": 1,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Nguyễn Công Hưởng": {
+      "execution_faults": {
+        "PTITSAN2 - [PTIT-K24] Sản xuất tài nguyên môn Microservice in Action": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 18,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 50,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Ngô Quang Huấn": {
+      "execution_faults": {
+        "REXPCHUO3 - [RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lương Quốc Tuấn": {
+      "execution_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 22,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 80,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Phạm Ngọc Kiên": {
+      "execution_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Trần Quốc Tuấn": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 76,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Trịnh Quốc Hai": {
+      "execution_faults": {
+        "KS26NANG - [KS26]_IT102_Kỹ năng prompting với AI": {
+          "count": 6,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS26NANG - [KS26]_IT102_Kỹ năng prompting với AI": {
+          "count": 11,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lê Hà Thanh Sang": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 46,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lưu Hoàng Xuân Nguyên": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 6,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Đinh Thành Nam": {
+      "execution_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Bùi Thanh Hải": {
+      "execution_faults": {
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 43,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Phạm Tuấn Bình": {
+      "execution_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 6,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 52,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    }
+  },
+  "2026-08-10": {
+    "Hoàng Phương Thảo": {
+      "execution_faults": {
+        "REXPENGL - 🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26": {
+          "count": 3,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Nguyễn Bá Minh Đạo": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 5,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 44,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 59,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 42,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Mai Xuân Chinh": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lê Thành Ngọc": {
+      "execution_faults": {
+        "QTKDPM - [QTKDS] CTĐT, PM Môn học K25, 26": {
+          "count": 3,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Ngô Quang Huấn": {
+      "execution_faults": {
+        "REXPCHUO3 - [RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lương Quốc Tuấn": {
+      "execution_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 17,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 6,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Trần Quốc Tuấn": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 2,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lưu Hoàng Xuân Nguyên": {
+      "execution_faults": {
+        "KS25 - [KS25]_IT304_Agile/Scrum": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 6,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Trịnh Quốc Hai": {
+      "execution_faults": {
+        "KS26NANG - [KS26]_IT102_Kỹ năng prompting với AI": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS26NANG - [KS26]_IT102_Kỹ năng prompting với AI": {
+          "count": 11,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Nguyễn Ngọc Sơn": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 4,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lê Hà Thanh Sang": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 2,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 26,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Phan Ngọc Tài": {
+      "execution_faults": {
+        "KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống": {
+          "count": 6,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Đinh Thành Nam": {
+      "execution_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 8,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Nguyễn Công Hưởng": {
+      "execution_faults": {
+        "KS24INTE - [KS24]_IT213_AI Intergration_v2": {
+          "count": 8,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 18,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Bùi Thanh Hải": {
+      "execution_faults": {
+        "KS24 - [KS24]_IT209_Devops_v2": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Phạm Tuấn Bình": {
+      "execution_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 6,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 54,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Nguyễn Đức Minh": {
+      "execution_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lê Thị Đỏ": {
+      "execution_faults": {
+        "PTITSAN3 - 🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101": {
+          "count": 5,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Đặng Quỳnh Trang": {
+      "execution_faults": {
+        "QTKDHANH - [QTKDS] Hành trình trải nghiệm sinh viên": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    }
+  }
+}

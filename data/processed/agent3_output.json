@@ -1,13 +1,24 @@
 [
     {
+        "Date": "2026-06-25",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 01",
+        "Ca": "07:00 - 09:00",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
         "Date": "2026-06-30",
         "Class": "HN-K25-CNTT1",
         "Session": "Buổi 04",
         "Ca": "07:00 - 09:00",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Vũ Hoàng, Đồng Nguyễn Tiến Đạt, Hà Đức Minh, Trần Đức Mạnh, Vi Anh Dũng (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -17,8 +28,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phạm Thị Na Na, Nguyễn Vũ Hoàng, Đồng Nguyễn Tiến Đạt, Nguyễn Xuân Sơn 2, Hà Duy Thành (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -28,8 +39,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Minh Đức 9, Nguyễn Tấn Dũng 2 (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -39,9 +50,20 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Vũ Hoàng, Đồng Nguyễn Tiến Đạt, Hà Đức Minh, Trần Đức Mạnh, Vi Anh Dũng (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
+        "Date": "2026-07-01",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 06",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
         "Date": "2026-07-02",
@@ -50,8 +72,19 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Xuân Sơn 2, Hà Duy Thành (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
+        "Date": "2026-07-07",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 10",
+        "Ca": "07:00 - 09:00",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -61,8 +94,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Tấn Dũng 2, Đồng Nguyễn Tiến Đạt, Nguyễn Đình Đức (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -72,8 +105,30 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phạm Thị Na Na, Nguyễn Vũ Hoàng (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
+        "Date": "2026-07-07",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 11",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
+        "Date": "2026-07-08",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 12",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -83,8 +138,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hoàng Triệu Gia Bách, Trần Anh Quốc (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -94,8 +149,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Quý Dũng, Trần Đức Thành 2 (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -105,9 +160,42 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: "
+    },
+    {
+        "Date": "2026-07-14",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 16",
+        "Ca": "07:00 - 09:00",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
+        "Date": "2026-07-14",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 17",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
+        "Date": "2026-07-15",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 18",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
         "Date": "2026-07-16",
@@ -116,8 +204,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phạm Thị Na Na, Nguyễn Quý Dũng, Nguyễn Đức Đạt 3, Trần Anh Quốc (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -132,14 +220,47 @@
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
+        "Date": "2026-08-10",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 21",
+        "Ca": "07:00 - 09:00",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
+        "Date": "2026-08-11",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 22",
+        "Ca": "07:00 - 09:00",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
+        "Date": "2026-08-11",
+        "Class": "HN-K25-CNTT1",
+        "Session": "Buổi 23",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
         "Date": "2026-06-26",
         "Class": "HN-K25-CNTT2",
         "Session": "Buổi 01",
         "Ca": "09:10 - 11:10",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Minh Thắng, Nguyễn Võ Trung Kiên (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -149,8 +270,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hoàng Văn Quân, Phùng Duy Đạt, Lê Minh Hoàng 2, Phạm Tấn Dũng (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -160,8 +281,8 @@
         "Ca": "12:10 - 14:10",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Minh Hiếu 6, Nguyễn Minh Tân, Phạm Ngọc Vinh (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -171,8 +292,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Khắc Hiếu, Bùi Trung Kiên, Nguyễn Hữu Nam, Hoàng Văn Quân, Hoàng Ngọc Anh (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -182,8 +303,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Khắc Hiếu, Bùi Trung Kiên, Nguyễn Hữu Nam, Hoàng Văn Quân, Hoàng Ngọc Anh (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -193,8 +314,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phạm Tấn Dũng, Đồng Lê Tuyết Nhung, Nguyễn Minh Thắng, Chu Gia Huy (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -204,8 +325,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Chu Gia Huy (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -215,8 +336,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Minh Hiếu 6, Lê Minh Hoàng 2, Hoàng Văn Quân (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -226,8 +347,8 @@
         "Ca": "12:10 - 14:10",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Chu Gia Huy (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -237,8 +358,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Minh Đức 3, Phùng Duy Đạt, Nguyễn Khắc Hiếu, Bùi Trung Kiên, Nguyễn Quang Minh 7, Lê Nguyễn Hữu Quốc, Nguyễn Phú Tài, Hoàng Ngọc Anh (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -248,9 +369,20 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Minh Đức 3, Phùng Duy Đạt, Nguyễn Khắc Hiếu, Bùi Trung Kiên, Nguyễn Quang Minh 7, Lê Nguyễn Hữu Quốc, Nguyễn Phú Tài, Hoàng Ngọc Anh (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
+        "Date": "2026-07-09",
+        "Class": "HN-K25-CNTT2",
+        "Session": "Buổi 12",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Trịnh Quốc Hai",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
         "Date": "2026-07-10",
@@ -259,8 +391,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Vũ Hoàng Lan Anh, Phùng Duy Đạt, Chu Gia Huy, Nguyễn Quang Minh 7, Hoàng Ngọc Anh (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -270,8 +402,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phùng Duy Đạt, Lê Minh Hoàng 2, Nguyễn Văn Thi, Nguyễn Đức Toàn, Hoàng Văn Quân (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -281,8 +413,8 @@
         "Ca": "12:10 - 14:10",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: "
     },
     {
@@ -292,8 +424,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hồ Phương Đông, Nguyễn Khắc Hiếu, Đồng Lê Tuyết Nhung, Hoàng Văn Quân (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -303,8 +435,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hồ Phương Đông, Nguyễn Khắc Hiếu, Đồng Lê Tuyết Nhung, Hoàng Văn Quân (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -314,8 +446,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phùng Duy Đạt, Vũ Hoàng Lan Anh, Cao Nguyễn Anh Dương, Hoàng Văn Quân, Phan Đức Anh (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
@@ -325,20 +457,31 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
-        "Date": "2026-06-25",
-        "Class": "HN-K25-CNTT3",
-        "Session": "Buổi 01",
+        "Date": "2026-08-10",
+        "Class": "HN-K25-CNTT2",
+        "Session": "Buổi 20",
         "Ca": "09:10 - 11:10",
-        "Instructor": "Nguyễn Quảng An",
+        "Instructor": "Trịnh Quốc Hai",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Vũ Quốc Khánh (Hệ thống vẫn tích vắng)",
-        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
+    },
+    {
+        "Date": "2026-08-11",
+        "Class": "HN-K25-CNTT2",
+        "Session": "Buổi 21",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Trịnh Quốc Hai",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Trịnh Quốc Hai, TH: "
     },
     {
         "Date": "2026-06-25",
@@ -349,17 +492,6 @@
         "Role": "GV",
         "Error": "GV-05",
         "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
-        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
-    },
-    {
-        "Date": "2026-06-26",
-        "Class": "HN-K25-CNTT3",
-        "Session": "Buổi 02",
-        "Ca": "09:10 - 11:10",
-        "Instructor": "Nguyễn Quảng An",
-        "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Công Thắng, Vũ Anh Đức, Vũ Quốc Khánh (Hệ thống vẫn tích vắng)",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -380,8 +512,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Tuấn Anh 2, Nguyễn Công Thắng (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
@@ -391,8 +523,19 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Tuấn Anh 2, Nguyễn Công Thắng (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-06-30",
+        "Class": "HN-K25-CNTT3",
+        "Session": "Buổi 05",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -402,8 +545,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Công Thắng, Nguyễn Hải Dương (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
@@ -413,9 +556,20 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Tiến Hùng (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-07-03",
+        "Class": "HN-K25-CNTT3",
+        "Session": "Buổi 08",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Phạm Ngọc Kiên",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
         "Date": "2026-07-06",
@@ -424,8 +578,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Lê Quốc Khánh, Trần Ngọc Sơn 2 (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -435,8 +589,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Lê Quốc Khánh, Trần Ngọc Sơn 2 (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -446,8 +600,8 @@
         "Ca": "12:10 - 14:10",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Tùng Dương 2, Bùi Hữu Nhân, Trần Ngọc Sơn 2 (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
@@ -457,9 +611,20 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Tiến Hùng (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-07-09",
+        "Class": "HN-K25-CNTT3",
+        "Session": "Buổi 13",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Phạm Ngọc Kiên",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
         "Date": "2026-07-10",
@@ -479,8 +644,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Vũ Anh Đức (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: "
     },
     {
@@ -490,9 +655,20 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Vũ Anh Đức (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-07-14",
+        "Class": "HN-K25-CNTT3",
+        "Session": "Buổi 17",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Phạm Ngọc Kiên",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
         "Date": "2026-07-15",
@@ -501,20 +677,9 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Chu Đình Minh, Cao Xuân Cường, Nguyễn Thị Khánh Huyền 3, Bùi Hữu Nhân (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
-    },
-    {
-        "Date": "2026-07-16",
-        "Class": "HN-K25-CNTT3",
-        "Session": "Buổi 19",
-        "Ca": "09:10 - 11:10",
-        "Instructor": "Phạm Ngọc Kiên",
-        "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Tuấn Việt (Hệ thống vẫn tích vắng)",
-        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
         "Date": "2026-07-16",
@@ -534,19 +699,41 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
-        "Date": "2026-06-25",
-        "Class": "HN-K25-CNTT4",
-        "Session": "Buổi 01",
+        "Date": "2026-08-10",
+        "Class": "HN-K25-CNTT3",
+        "Session": "Buổi 21",
         "Ca": "07:00 - 09:00",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Gia Huy, Lê Đức Duy 2, Trần Tuấn Anh, Lưu Mạnh Cường (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-08-10",
+        "Class": "HN-K25-CNTT3",
+        "Session": "Buổi 22",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Phạm Ngọc Kiên",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
+    },
+    {
+        "Date": "2026-08-11",
+        "Class": "HN-K25-CNTT3",
+        "Session": "Buổi 23",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -558,17 +745,6 @@
         "Role": "GV",
         "Error": "GV-05",
         "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
-        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
-    },
-    {
-        "Date": "2026-06-26",
-        "Class": "HN-K25-CNTT4",
-        "Session": "Buổi 02",
-        "Ca": "07:00 - 09:00",
-        "Instructor": "Nguyễn Quảng An",
-        "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Duy Hưng, Nguyễn Việt Đức, Nguyễn Khánh Hoàng, Nguyễn Đức Phong 2, Lưu Mạnh Cường (Hệ thống vẫn tích vắng)",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -589,8 +765,8 @@
         "Ca": "12:10 - 14:10",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Thành Đạt 2, Hà Minh Diệu, Phạm Danh Quốc Anh (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
@@ -600,8 +776,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Vũ Nhất Thống (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -611,8 +787,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Vũ Nhất Thống (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -622,8 +798,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phạm Danh Quốc Anh, Trần Thành Đạt, Lê Thị Ngọc Lê (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
@@ -633,8 +809,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Thành Đạt (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -644,9 +820,20 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Thành Đạt, Nguyễn Việt Đức, Đinh Nguyễn Khánh Toàn (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
+    },
+    {
+        "Date": "2026-07-06",
+        "Class": "HN-K25-CNTT4",
+        "Session": "Buổi 09",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
         "Date": "2026-07-07",
@@ -655,8 +842,8 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Đỗ Việt Anh, Hoàng Văn Sơn, Nguyễn Vũ Thành, Trần Tuấn Anh (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -666,9 +853,20 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Đỗ Việt Anh, Hoàng Văn Sơn, Nguyễn Vũ Thành, Trần Tuấn Anh (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
+    },
+    {
+        "Date": "2026-07-08",
+        "Class": "HN-K25-CNTT4",
+        "Session": "Buổi 12",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
         "Date": "2026-07-09",
@@ -677,20 +875,9 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Văn Thịnh An, Hoàng Văn Sơn, Lê Thị Ngọc Lê, Nguyễn Duy Minh 3 (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
-    },
-    {
-        "Date": "2026-07-10",
-        "Class": "HN-K25-CNTT4",
-        "Session": "Buổi 14",
-        "Ca": "07:00 - 09:00",
-        "Instructor": "Nguyễn Quảng An",
-        "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Đức Tuyên, Hà Minh Diệu, Nguyễn Việt Đức, Hoàng Minh Tuấn (Hệ thống vẫn tích vắng)",
-        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
         "Date": "2026-07-10",
@@ -704,14 +891,25 @@
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
+        "Date": "2026-07-13",
+        "Class": "HN-K25-CNTT4",
+        "Session": "Buổi 15",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: "
+    },
+    {
         "Date": "2026-07-14",
         "Class": "HN-K25-CNTT4",
         "Session": "Buổi 16",
         "Ca": "07:00 - 09:00",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Huy Đạt, Nguyễn Việt Đức, Lưu Mạnh Cường, Trương Công Duy, Đinh Nguyễn Khánh Toàn, Nguyễn Duy Minh 3 (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -721,8 +919,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Huy Đạt, Nguyễn Việt Đức, Lưu Mạnh Cường, Trương Công Duy, Đinh Nguyễn Khánh Toàn, Nguyễn Duy Minh 3 (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
@@ -732,8 +930,8 @@
         "Ca": "09:10 - 11:10",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Thành Đạt 2 (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -743,20 +941,9 @@
         "Ca": "07:00 - 09:00",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Thị Kim Ngân, Hoàng Minh Tuấn, Lê Thị Ngọc Lê, Trần Tuấn Anh, Nguyễn Công Trường (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
-    },
-    {
-        "Date": "2026-07-17",
-        "Class": "HN-K25-CNTT4",
-        "Session": "Buổi 20",
-        "Ca": "07:00 - 09:00",
-        "Instructor": "Nguyễn Quảng An",
-        "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Lê Thị Ngọc Lê (Hệ thống vẫn tích vắng)",
-        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
         "Date": "2026-07-17",
@@ -770,15 +957,114 @@
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
+        "Date": "2026-08-10",
+        "Class": "HN-K25-CNTT4",
+        "Session": "Buổi 21",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-08-11",
+        "Class": "HN-K25-CNTT4",
+        "Session": "Buổi 22",
+        "Ca": "07:00 - 09:00",
+        "Instructor": "Phạm Ngọc Kiên",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
+    },
+    {
+        "Date": "2026-08-11",
+        "Class": "HN-K25-CNTT4",
+        "Session": "Buổi 23",
+        "Ca": "09:10 - 11:10",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-06-25",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 01",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
+    },
+    {
+        "Date": "2026-06-26",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 02",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
+    },
+    {
+        "Date": "2026-06-29",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 04",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
+    },
+    {
+        "Date": "2026-06-30",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 05",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
+    },
+    {
+        "Date": "2026-06-26",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 03",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
         "Date": "2026-07-01",
         "Class": "HN-K25-CNTT5",
         "Session": "Buổi 06",
         "Ca": "14:20 - 16:20",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Như Hải Đăng, Nguyễn Hoàng Văn (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
+        "Date": "2026-07-02",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 07",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
     },
     {
         "Date": "2026-07-03",
@@ -787,9 +1073,20 @@
         "Ca": "12:10 - 14:10",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phùng Đỗ Việt Hùng (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
+        "Date": "2026-07-06",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 10",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
     },
     {
         "Date": "2026-07-03",
@@ -798,8 +1095,8 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phùng Đỗ Việt Hùng (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
     },
     {
@@ -809,8 +1106,8 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Đặng Kiên Quyết, Nguyễn Hoàng Văn (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -820,8 +1117,30 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Đặng Kiên Quyết (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
+    },
+    {
+        "Date": "2026-07-09",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 13",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
+        "Date": "2026-07-10",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 14",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
     },
     {
@@ -831,8 +1150,19 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: "
+    },
+    {
+        "Date": "2026-07-10",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Nghỉ",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: "
     },
     {
@@ -842,9 +1172,20 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Phạm Hoàng Nhật Thiên (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
+    },
+    {
+        "Date": "2026-07-15",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 17",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
         "Date": "2026-07-16",
@@ -853,8 +1194,8 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hoàng Phúc Hiếu, Nguyễn Minh 2 (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
     },
     {
@@ -864,8 +1205,30 @@
         "Ca": "12:10 - 14:10",
         "Instructor": "Lại Trung Lâm",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
+    },
+    {
+        "Date": "2026-08-10",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 21",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lương Quốc Tuấn",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
+    },
+    {
+        "Date": "2026-08-11",
+        "Class": "HN-K25-CNTT5",
+        "Session": "Buổi 22",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Lại Trung Lâm",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Lại Trung Lâm"
     },
     {
@@ -875,20 +1238,9 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Lương Quốc Tuấn",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Lương Quốc Tuấn, TH: "
-    },
-    {
-        "Date": "2026-06-26",
-        "Class": "HN-K25-CNTT6",
-        "Session": "Buổi 01",
-        "Ca": "14:20 - 16:20",
-        "Instructor": "Nguyễn Quảng An",
-        "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Tấn Phong, Nguyễn Ngọc Hiển Vinh, Hoàng Đức Duy Anh, Trần Nhật Long (Hệ thống vẫn tích vắng)",
-        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
         "Date": "2026-06-26",
@@ -902,14 +1254,36 @@
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
+        "Date": "2026-06-29",
+        "Class": "HN-K25-CNTT6",
+        "Session": "Buổi 02",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-06-30",
+        "Class": "HN-K25-CNTT6",
+        "Session": "Buổi 03",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Phạm Ngọc Kiên",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
+    },
+    {
         "Date": "2026-07-01",
         "Class": "HN-K25-CNTT6",
         "Session": "Buổi 04",
         "Ca": "12:10 - 14:10",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Tấn Phong (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -919,8 +1293,8 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Tấn Phong (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -930,8 +1304,8 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Nguyễn Duy Đức (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
@@ -941,8 +1315,8 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Trần Nguyễn Duy Đức, Nguyễn Văn Cường 3, Nguyễn Ngọc Hiển Vinh (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -952,8 +1326,8 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hoàng Đức Duy Anh, Nguyễn Văn Cường 3, Trần Nguyễn Duy Đức (Hệ thống vẫn tích vắng)",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
@@ -963,9 +1337,31 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Ngọc Hiển Vinh, Trịnh Xuân Hùng (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-07-08",
+        "Class": "HN-K25-CNTT6",
+        "Session": "Buổi 10",
+        "Ca": "12:10 - 14:10",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-07-08",
+        "Class": "HN-K25-CNTT6",
+        "Session": "Buổi 11",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Phạm Ngọc Kiên",
+        "Role": "TG",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
         "Date": "2026-07-09",
@@ -974,20 +1370,9 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Đức Anh 12, Trịnh Quốc Trung (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
-    },
-    {
-        "Date": "2026-07-10",
-        "Class": "HN-K25-CNTT6",
-        "Session": "Buổi 13",
-        "Ca": "14:20 - 16:20",
-        "Instructor": "Phạm Ngọc Kiên",
-        "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hoàng Đức Duy Anh, Đặng Thị Thu Cúc, Trịnh Xuân Hùng, Hoàng Văn Thắng, Nguyễn Ngọc Hiển Vinh (Hệ thống vẫn tích vắng)",
-        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
         "Date": "2026-07-10",
@@ -1007,20 +1392,9 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Nguyễn Đức Anh 12, Lê Minh Duy, Hoàng Đức Duy Anh (Hệ thống vẫn tích vắng)",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
-    },
-    {
-        "Date": "2026-07-14",
-        "Class": "HN-K25-CNTT6",
-        "Session": "Buổi 15",
-        "Ca": "14:20 - 16:20",
-        "Instructor": "Nguyễn Quảng An",
-        "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hoàng Đức Duy Anh, Vũ Dũng (Hệ thống vẫn tích vắng)",
-        "TKB_Teachers": "LT: , TH: "
     },
     {
         "Date": "2026-07-14",
@@ -1032,17 +1406,6 @@
         "Error": "GV-05",
         "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: "
-    },
-    {
-        "Date": "2026-07-15",
-        "Class": "HN-K25-CNTT6",
-        "Session": "Buổi 17",
-        "Ca": "12:10 - 14:10",
-        "Instructor": "Phạm Ngọc Kiên",
-        "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hoàng Đức Duy Anh (Hệ thống vẫn tích vắng)",
-        "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
     },
     {
         "Date": "2026-07-15",
@@ -1062,30 +1425,8 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Nguyễn Quảng An",
         "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hoàng Đức Duy Anh (Hệ thống vẫn tích vắng)",
-        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
-    },
-    {
-        "Date": "2026-07-15",
-        "Class": "HN-K25-CNTT6",
-        "Session": "Buổi 16",
-        "Ca": "14:20 - 16:20",
-        "Instructor": "Nguyễn Quảng An",
-        "Role": "GV",
         "Error": "GV-05",
         "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
-        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
-    },
-    {
-        "Date": "2026-07-16",
-        "Class": "HN-K25-CNTT6",
-        "Session": "Buổi 18",
-        "Ca": "14:20 - 16:20",
-        "Instructor": "Nguyễn Quảng An",
-        "Role": "GV",
-        "Error": "GV-08",
-        "Details": "Bỏ sót đơn nghỉ phép hợp lệ của các SV: Hoàng Đức Duy Anh (Hệ thống vẫn tích vắng)",
         "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     },
     {
@@ -1106,8 +1447,30 @@
         "Ca": "14:20 - 16:20",
         "Instructor": "Phạm Ngọc Kiên",
         "Role": "TG",
-        "Error": "TG-08",
-        "Details": "Quên điểm danh buổi học trên hệ thống QLĐT",
+        "Error": "TG-04",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
         "TKB_Teachers": "LT: , TH: Phạm Ngọc Kiên"
+    },
+    {
+        "Date": "2026-08-10",
+        "Class": "HN-K25-CNTT6",
+        "Session": "Buổi 20",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
+    },
+    {
+        "Date": "2026-08-11",
+        "Class": "HN-K25-CNTT6",
+        "Session": "Buổi 21",
+        "Ca": "14:20 - 16:20",
+        "Instructor": "Nguyễn Quảng An",
+        "Role": "GV",
+        "Error": "GV-05",
+        "Details": "Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h",
+        "TKB_Teachers": "LT: Nguyễn Quảng An, TH: "
     }
 ]

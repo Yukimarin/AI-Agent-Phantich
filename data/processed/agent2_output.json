@@ -20,8 +20,8 @@
           "size": 10,
           "v_class": 7.6146703296703295,
           "mult_env": 1.0,
-          "pred_old": 56.989902564102564,
-          "pred_new": 56.989902564102564,
+          "pred_old": 70.57642637362638,
+          "pred_new": 70.57642637362638,
           "actual_pass": 60.0
         }
       ]
@@ -34,9 +34,9 @@
           "size": 10,
           "v_class": 14.938418972332016,
           "mult_env": 0.9753079051383399,
-          "pred_old": 68.50710181334419,
+          "pred_old": 71.41680165687568,
           "actual_pass": 60.0,
-          "err": 8.507101813344192
+          "err": 11.416801656875677
         },
         {
           "class_name": "HN-KS25-CNTT8",
@@ -44,9 +44,9 @@
           "size": 10,
           "v_class": 13.504,
           "mult_env": 0.98248,
-          "pred_old": 69.66477284332305,
+          "pred_old": 72.59586966639996,
           "actual_pass": 60.0,
-          "err": 9.66477284332305
+          "err": 12.595869666399963
         }
       ],
       "curr": [
@@ -77,5 +77,394 @@
       "curr": []
     }
   },
-  "care_list": []
+  "care_list": [
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 1,
+      "full_name": "Lê Văn Nam",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (59.0%)"
+      ],
+      "p_final": 58.99436113689239,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 2,
+      "full_name": "Trần Thị Mai",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (58.9%)"
+      ],
+      "p_final": 58.89814326086623,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 3,
+      "full_name": "Phạm Minh Đức",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (59.0%)"
+      ],
+      "p_final": 58.99436113689239,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 4,
+      "full_name": "Hoàng Thanh Tùng",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (58.9%)"
+      ],
+      "p_final": 58.89814326086623,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 5,
+      "full_name": "Đỗ Thùy Linh",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (59.0%)"
+      ],
+      "p_final": 58.99436113689239,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 6,
+      "full_name": "Vũ Hoàng Long",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (59.0%)"
+      ],
+      "p_final": 58.99436113689239,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 7,
+      "full_name": "Nguyễn Phương Thảo",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (58.9%)"
+      ],
+      "p_final": 58.89814326086623,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 8,
+      "full_name": "Phan Văn Hải",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (58.9%)"
+      ],
+      "p_final": 58.89814326086623,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 9,
+      "full_name": "Lê Thu Trang",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (59.0%)"
+      ],
+      "p_final": 58.99436113689239,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT6",
+      "course_name": "Python Web",
+      "student_id": 10,
+      "full_name": "Bùi Anh Tuấn",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (59.0%)"
+      ],
+      "p_final": 58.99436113689239,
+      "att": 18.73090909090909,
+      "hw": 92.35913043478261,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 1,
+      "full_name": "Lê Văn Nam",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 60.082078587938454,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 2,
+      "full_name": "Trần Thị Mai",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (60.0%)"
+      ],
+      "p_final": 59.98515315716922,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 3,
+      "full_name": "Phạm Minh Đức",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 60.082078587938454,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 4,
+      "full_name": "Hoàng Thanh Tùng",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (60.0%)"
+      ],
+      "p_final": 59.98515315716922,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 5,
+      "full_name": "Đỗ Thùy Linh",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 60.082078587938454,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 6,
+      "full_name": "Vũ Hoàng Long",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 60.082078587938454,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 7,
+      "full_name": "Nguyễn Phương Thảo",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (60.0%)"
+      ],
+      "p_final": 59.98515315716922,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 8,
+      "full_name": "Phan Văn Hải",
+      "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (60.0%)"
+      ],
+      "p_final": 59.98515315716922,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 9,
+      "full_name": "Lê Thu Trang",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 60.082078587938454,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K25",
+      "class_name": "HN-KS25-CNTT8",
+      "course_name": "Python Web",
+      "student_id": 10,
+      "full_name": "Bùi Anh Tuấn",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 60.082078587938454,
+      "att": 15.228,
+      "hw": 88.7675,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    }
+  ],
+  "anomalies_summary": {
+    "K24": {
+      "copy_suspect": 0,
+      "discipline_paradox": 0,
+      "passive_learner": 0,
+      "sudden_drop": 0
+    },
+    "K25": {
+      "copy_suspect": 0,
+      "discipline_paradox": 0,
+      "passive_learner": 0,
+      "sudden_drop": 20
+    },
+    "QTKD": {
+      "copy_suspect": 0,
+      "discipline_paradox": 0,
+      "passive_learner": 0,
+      "sudden_drop": 0
+    }
+  }
 }

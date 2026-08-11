@@ -15,13 +15,13 @@ TaskAggregator đóng vai trò là kiểm toán viên kỷ luật tác nghiệp 
 ## 2. Dữ liệu Đầu vào & Đầu ra
 
 ### Dữ liệu Đầu vào (Inputs)
-- **Thời khóa biểu tổng**: [1. Thời khóa biểu tổng .xlsx](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/1.%20Th%E1%BB%9Di%20kh%C3%B3a%20bi%E1%BB%83u%20t%E1%BB%95ng%20.xlsx).
-- **Quy chế thưởng phạt**: [Khung_Phat_Khenthuong_ĐT_T62026.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/Khung_Phat_Khenthuong_%C4%90T_T62026.md) và [QUY ĐỊNH KHUNG CHẾ TÀI VÀ KHEN THƯỞNG NĂNG SUẤT ĐÀO TẠO.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/QUY%20%C4%90%E1%BB%8ANH%20KHUNG%20CH%E1%BA%BE%20T%C3%80I%20V%C3%80%20KHEN%20TH%C6%AF%E1%BB%9ENG%20N%C4%82NG%20SU%E1%BA%A4T%20%C4%90%C3%80O%20T%E1%BA%A0O.md).
+- **Thời khóa biểu tổng**: [1. Thời khóa biểu tổng .xlsx](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/inputs/1.%20Thời%20khóa%20biểu%20tổng%20.xlsx).
+- **Quy chế thưởng phạt**: [Khung_Phat_Khenthuong_ĐT_T62026.md](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/inputs/Khung_Phat_Khenthuong_ĐT_T62026.md).
 
 ### Dữ liệu Đầu ra (Outputs)
-- **Tệp JSON lỗi vi phạm**: [vi_pham_gvtg.json](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/vi_pham_gvtg.json) chứa danh sách chi tiết các ca học có lỗi vi phạm tác nghiệp thực tế của GV/TG.
-- **Báo cáo Markdown chi tiết theo khóa**: [vi_pham_gvtg_khoa_ks25.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/vi_pham_gvtg_khoa_ks25.md).
-- **Báo cáo HTML trực quan**: [3_gvtg_violations_report.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/3_gvtg_violations_report.html).
+- **Tệp JSON lỗi vi phạm**: [agent3_output.json](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/processed/agent3_output.json) chứa danh sách chi tiết các ca học có lỗi vi phạm tác nghiệp thực tế của GV/TG.
+- **Báo cáo Markdown chi tiết theo khóa**: [agent_3_ops_discipline.md](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/reports/core/agent_3_ops_discipline.md).
+- **Báo cáo HTML trực quan**: [agent_3_ops_discipline.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_3_ops_discipline.html).
 
 ---
 
@@ -53,17 +53,14 @@ TaskAggregator đóng vai trò là kiểm toán viên kỷ luật tác nghiệp 
 ---
 
 ## 5. Mã nguồn liên quan
-- **Script phân tích lỗi**: [analyze_gvtg_violations.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/analyze_gvtg_violations.py)
-- **Script xuất bản báo cáo**: [generate_agent3_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_agent3_report.py)
+- **Script phân tích lỗi**: [analyze_gvtg_violations.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/core/agent_3_ops_discipline/analyze_gvtg_violations.py)
+- **Script xuất bản báo cáo**: [generate_report.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/core/agent_3_ops_discipline/generate_report.py)
 
 
 
 ---
 
-## 6. Kết quả Phân tích Thực tế Mới nhất (Latest Actionable Insights)
-> [!tip] Lịch sử vi phạm tác nghiệp GV/TG
-> Dưới đây là danh sách chi tiết các ca vi phạm tác nghiệp thực tế của GV/TG.
-
-![[Chi tiết Vi phạm Tác nghiệp]]
+*   Xem chi tiết: [[output/reports/core/agent_3_ops_discipline|Báo cáo Phân tích Kỷ luật Tác nghiệp GV/TG]]
+*   Dashboard trực quan: [agent_3_ops_discipline.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_3_ops_discipline.html)
 ---
 Trở về: [[Bản đồ Tri thức MOC|Bản đồ Tri thức dự án]]

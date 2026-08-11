@@ -15,7 +15,7 @@ ViolationAnalyst đóng vai trò là kiểm toán viên tuân thủ học đư�
 ## 2. Dữ liệu Đầu vào & Đầu ra
 
 ### Dữ liệu Đầu vào (Inputs)
-- **Tệp Excel chỉ số**: [PTIT_Chiso.xlsx](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/PTIT_Chiso.xlsx). Tệp này chứa nhiều sheets ứng với các lớp và môn học khác nhau (ví dụ: `KS24-JavaAdvance`, `KS25_Javascript`, `KS25_QTKD_PRJ302`).
+- **Tệp Excel chỉ số**: [PTIT_Chiso.xlsx](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/inputs/PTIT_Chiso.xlsx). Tệp này chứa nhiều sheets ứng với các lớp và môn học khác nhau (ví dụ: `KS24-JavaAdvance`, `KS25_Javascript`, `KS25_QTKD_PRJ302`).
 
 ### Dữ liệu Đầu ra (Outputs)
 - **Chỉ số vi phạm trung bình của lớp**: Được tính toán và chuyển giao trực tiếp cho Agent Lead (MasterEvaluator) và Agent 2 (AcademicPredictor) để phục vụ cho các thuật toán tương ứng.
@@ -44,16 +44,13 @@ ViolationAnalyst đóng vai trò là kiểm toán viên tuân thủ học đư�
 ---
 
 ## 5. Mã nguồn liên quan
-- **Script đọc và xử lý chính**: Tích hợp trong [generate_kpi_report.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/generate_kpi_report.py) và [excel_loader.py](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/scratch/excel_loader.py).
+- **Script đọc và xử lý chính**: Tích hợp trong [generate_kpi_report.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/master/agent_5_master_portal/generate_kpi_report.py) và [excel_loader.py](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/agents/core/agent_1_class_kpi/excel_loader.py).
 
 
 
 ---
 
-## 6. Kết quả Phân tích Thực tế Mới nhất (Latest Actionable Insights)
-> [!tip] Kết quả kiểm toán kỷ luật
-> Dưới đây là báo cáo nguy cơ học viên và tỷ lệ vi phạm của từng lớp học.
-
-![[Báo cáo Nguy cơ Học viên]]
+*   Xem chi tiết: [[output/reports/core/agent_1_student_discipline|Báo cáo Kỷ luật Học viên & So sánh Vi phạm]]
+*   Dashboard trực quan: [agent_1_student_discipline.html](file:///C:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_1_student_discipline.html)
 ---
 Trở về: [[Bản đồ Tri thức MOC|Bản đồ Tri thức dự án]]
