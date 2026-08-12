@@ -108,6 +108,14 @@ def main():
     )
     validate_output("output/dashboards/advanced/director_cockpit.html", "html")
     
+    # Bước 4.6: Chạy báo cáo tháng QLĐT (QLĐT Monthly Report)
+    run_script(
+        "Advanced QLDT Report: Báo cáo tháng QLĐT",
+        "agents/advanced/management_audit/generate_qldt_report.py",
+        with_deps=["openpyxl"]
+    )
+    validate_output("output/dashboards/advanced/qldt_monthly_report.html", "html")
+    
     # Bước 5: Master Lead
     run_script(
         "Agent 5: Master Lead Portal", 
