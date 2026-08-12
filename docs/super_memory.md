@@ -15,6 +15,9 @@ Tài liệu này lưu trữ các quyết định thiết kế, lỗi thường g
     - Tích hợp **Workload Toggles** để sếp khoanh vùng nhanh giảng viên quá tải/trống việc.
     - Giới hạn biểu đồ trễ hạn ở **Top 5** thay vì vẽ toàn bộ 36 dự án.
     - Thiết kế **Slide-over Drawer** (Bảng trượt cạnh phải) để chứa toàn bộ thông tin drill-down chi tiết của giảng viên khi click, giữ trang Cockpit chính luôn sạch sẽ.
+  - **Đa chu kỳ & Dynamic Refresh (Aug 2026):**
+    - Nâng cấp Báo cáo QLĐT thành Dashboard SPA 3 Tab: Ngày, Tuần, Tháng. Client-side JS quản lý state, chuyển đổi tabs, tự động vẽ lại Chart.js và cập nhật bảng dữ liệu động.
+    - Tích hợp nút **"🔄 Cập nhật dữ liệu"** cho Dashboard Agent 4 (`agent_4_daily_logs.html`) sử dụng cơ chế dynamic fetching từ file JSON payload cục bộ (`agent4_payload.json`) giúp cập nhật dữ liệu realtime mà không cần load lại trang.
 
 ## 2. Kỹ thuật Xử lý Data & API
 - **Match Dự án Worklane:** 
@@ -43,6 +46,7 @@ Tài liệu này lưu trữ các quyết định thiết kế, lỗi thường g
 - **Lỗi lặp qua dict keys thay vì values:** Khi load dữ liệu JSON lưu dưới dạng dictionary của các dự án Worklane (`project_issues_worklane.json`), việc lặp qua `for proj in worklane_projects:` sẽ lặp qua các chuỗi keys (project key) thay vì đối tượng dự án. Cần kiểm tra kiểu dữ liệu và dùng `worklane_projects.values()` để lấy các đối tượng dự án thực tế khi thực hiện đối chiếu chéo (cross-verification).
 - **So khớp họ tên có dấu tiếng Việt lệch pha:** Họ tên nhân sự từ Worklane và daily logs có thể không khớp do dấu tiếng Việt viết lệch pha hoặc viết không dấu. Bắt buộc chuẩn hóa cả hai chuỗi tên về dạng không dấu, viết thường, không khoảng trắng bằng hàm `normalize_vietnamese_name` trước khi so sánh.
 - **Graceful DB Mock Fallbacks:** Khi thiết kế các Agent truy vấn DB (MySQL/SQLite), luôn chuẩn bị chế độ mock/fallback tự động khi cơ sở dữ liệu ngoại tuyến (như MySQL port 3307 không kết nối được). Thiết kế các class wrapper `MockConnection` và `MockCursor` để chặn các lệnh gọi `execute()`, `fetchone()`, `fetchall()` và trả về dữ liệu mẫu/mock an toàn để tránh làm gãy pipeline tự động (`run_pipeline.py`).
+- **Tách biệt giao diện (HTML) và logic (Python):** Đối với các Agent sinh dashboard HTML lớn (như Báo cáo QLĐT), việc viết chuỗi template HTML dài hàng nghìn dòng trong file Python rất dễ dẫn đến lỗi encoding UTF-8 trên Windows, hoặc lỗi cú pháp f-string khi agent chỉnh sửa. **Quy chuẩn mới:** Tách template HTML ra một tệp `.html` riêng biệt (ví dụ: `qldt_report_template.html`), dùng Python đọc tệp này, thay thế các placeholder JSON và xuất ra tệp HTML cuối cùng.
 
 
 ## 4. Kiến trúc Pipeline & Thư mục Báo cáo Nâng cao (Advanced Reports)
@@ -52,6 +56,7 @@ Tài liệu này lưu trữ các quyết định thiết kế, lỗi thường g
 
 - Output JSON/HTML của các Agent đều phải đi qua cổng `Validator` (Loop) tại `agents/common/validator.py` để check format và syntax lỗi (như lỗi `{}` của Chart.js). Nếu lỗi sẽ tự động đưa vào LLM (`google-genai`) sửa tối đa 2 lần.
 - Pipeline `run_pipeline.py` không bao giờ được dùng `sys.exit(1)` khi một Agent con lỗi. Luôn phải bắt Exception, trả về cờ rẽ nhánh (Graph Fallback) để các Agent khác vẫn có thể tiếp tục chạy. Mọi file output cần được validate tại chỗ ngay sau mỗi bước.
+- Tích hợp báo cáo nâng cao: **Bước 4.6** (Advanced QLDT Report: Báo cáo tháng QLĐT) đã được đăng ký và xác thực đầu ra tự động trong `run_pipeline.py`.
 
 ## 5. Phân lớp Thư mục Dự án (Project Layering Structure)
 Để giữ thư mục gốc sạch sẽ, toàn bộ hệ thống được phân lớp nghiêm ngặt như sau:
