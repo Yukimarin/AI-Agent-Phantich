@@ -160,6 +160,12 @@ def main():
                 })
 
     payload_json = json.dumps(payload, ensure_ascii=False)
+    
+    # Export payload to JSON file for refresh feature
+    payload_json_path = "data/processed/agent4_payload.json"
+    os.makedirs(os.path.dirname(payload_json_path), exist_ok=True)
+    with open(payload_json_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False)
 
     html = f"""<!DOCTYPE html>
 <html lang="vi">
@@ -248,7 +254,10 @@ def main():
                 <h1><i class="fas fa-rocket" style="color: var(--primary)"></i> PMO Executive Dashboard V4.1</h1>
                 <div class="meta" id="date-meta">Cập nhật dữ liệu tuần nhất...</div>
             </div>
-            <div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button id="btn-refresh-data" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid var(--primary); padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 13px;" onclick="fetchLiveDailyLogsData(true)" title="Cập nhật dữ liệu từ file JSON mới nhất">
+                    <i class="fa-solid fa-rotate" id="refresh-icon"></i> Cập nhật dữ liệu
+                </button>
                 <select id="dept-filter" onchange="renderApp()">
                     <option value="ALL">Tất Cả Các Khối</option>
                 </select>
@@ -607,6 +616,45 @@ def main():
                 </div>
                 `;
             }}).join('') : '<div style="padding:10px; color:var(--success)">Tất cả báo cáo tiến độ dự án đều khớp với hệ thống Worklane.</div>';
+        }}
+
+        async function fetchLiveDailyLogsData(showNotification) {{
+            const icon = document.getElementById("refresh-icon");
+            if (icon) icon.classList.add("fa-spin");
+            
+            try {{
+                const pathsToTry = [
+                    "../../../data/processed/agent4_payload.json",
+                    "../../data/processed/agent4_payload.json",
+                    "/data/processed/agent4_payload.json"
+                ];
+                let fetchedData = null;
+                for (const p of pathsToTry) {{
+                    try {{
+                        const res = await fetch(p);
+                        if (res.ok) {{
+                            fetchedData = await res.json();
+                            break;
+                        }}
+                    }} catch(e) {{}}
+                }}
+                if (fetchedData) {{
+                    RAW_DATA.departments = fetchedData.departments;
+                    RAW_DATA.today_date = fetchedData.today_date;
+                    RAW_DATA.personnel = fetchedData.personnel;
+                    RAW_DATA.projects = fetchedData.projects;
+                    RAW_DATA.heatmap = fetchedData.heatmap;
+                    
+                    initApp();
+                    if (showNotification) alert("Đã cập nhật dữ liệu mới nhất từ Worklane PM thành công!");
+                }} else {{
+                    if (showNotification) alert("Đang chạy ở chế độ Offline. Dashboard tiếp tục sử dụng dữ liệu đã nhúng sẵn.");
+                }}
+            }} catch (err) {{
+                console.warn("Fetch live data error:", err);
+            }} finally {{
+                if (icon) icon.classList.remove("fa-spin");
+            }}
         }}
 
         window.onload = initApp;
