@@ -1,10 +1,10 @@
 # BÁO CÁO DỰ BÁO HỌC THUẬT & KIỂM CHỨNG SAI SỐ KHOÁ K24 & K25
 
-*Báo cáo được lập tự động ngày 11/08/2026 tích hợp chỉ số Ý thức lớp (Peer Pressure Multiplier).*
+*Báo cáo được lập tự động ngày 13/08/2026 tích hợp chỉ số Ý thức lớp (Peer Pressure Multiplier).*
 
 ## 📌 TÓM TẮT ĐÁNH GIÁ SAI SỐ KIỂM CHỨNG (MAE)
-- **Khóa K24 (Kiểm chứng qua môn Java Web Service)**: MAE = **14.85%**
-- **Khóa K25 (Kiểm chứng qua môn Python)**: MAE = **12.01%**
+- **Khóa K24 (Kiểm chứng qua môn Java Web Service)**: MAE = **12.84%**
+- **Khóa K25 (Kiểm chứng qua môn Python)**: MAE = **9.95%**
 
 ## 📊 1. CHI TIẾT MÔN KIỂM CHỨNG (ĐỐI CHIẾU DB LỊCH SỬ)
 
@@ -12,14 +12,14 @@
 
 | Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Thực tế DB% | Sai số% |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| HN-KS24-CNTT1 | 10 | 9.7% | 1.00 | **74.9%** | **60.0%** | 14.9% |
+| HN-KS24-CNTT1 | 10 | 12.2% | 0.99 | **72.8%** | **60.0%** | 12.8% |
 
 ### 🔹 Khóa K25 - Môn Python
 
 | Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Thực tế DB% | Sai số% |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| HN-KS25-CNTT6 | 10 | 14.9% | 0.98 | **71.4%** | **60.0%** | 11.4% |
-| HN-KS25-CNTT8 | 10 | 13.5% | 0.98 | **72.6%** | **60.0%** | 12.6% |
+| HN-KS25-CNTT6 | 10 | 17.2% | 0.96 | **69.6%** | **60.0%** | 9.6% |
+| HN-KS25-CNTT8 | 10 | 13.6% | 0.98 | **70.3%** | **60.0%** | 10.3% |
 
 ---
 
@@ -29,14 +29,14 @@
 
 | Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Dự báo (Quy chế mới)% |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| HN-KS24-CNTT1 | 10 | 7.6% | 1.00 | **70.6%** | **70.6%** |
+| HN-KS24-CNTT1 | 10 | 8.6% | 1.00 | **68.7%** | **68.7%** |
 
 ### 🔹 Khóa K25 - Môn Python Web (Hiện tại)
 
 | Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Dự báo (Quy chế mới)% |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| HN-KS25-CNTT6 | 10 | 14.9% | 0.98 | **59.0%** | **59.0%** |
-| HN-KS25-CNTT8 | 10 | 13.5% | 0.98 | **60.0%** | **60.0%** |
+| HN-KS25-CNTT6 | 10 | 17.2% | 0.96 | **57.3%** | **57.3%** |
+| HN-KS25-CNTT8 | 10 | 13.6% | 0.98 | **57.8%** | **57.8%** |
 
 
 ---

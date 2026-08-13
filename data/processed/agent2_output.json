@@ -6,11 +6,11 @@
           "class_name": "HN-KS24-CNTT1",
           "course_name": "Java Web Service",
           "size": 10,
-          "v_class": 9.743567251461988,
-          "mult_env": 1.0,
-          "pred_old": 74.85394871794871,
+          "v_class": 12.206111111111113,
+          "mult_env": 0.9889694444444445,
+          "pred_old": 72.83952680584046,
           "actual_pass": 60.0,
-          "err": 14.853948717948711
+          "err": 12.839526805840464
         }
       ],
       "curr": [
@@ -18,10 +18,10 @@
           "class_name": "HN-KS24-CNTT1",
           "course_name": "AI Application",
           "size": 10,
-          "v_class": 7.6146703296703295,
+          "v_class": 8.567222222222222,
           "mult_env": 1.0,
-          "pred_old": 70.57642637362638,
-          "pred_new": 70.57642637362638,
+          "pred_old": 68.71832380952381,
+          "pred_new": 68.71832380952381,
           "actual_pass": 60.0
         }
       ]
@@ -32,21 +32,21 @@
           "class_name": "HN-KS25-CNTT6",
           "course_name": "Python",
           "size": 10,
-          "v_class": 14.938418972332016,
-          "mult_env": 0.9753079051383399,
-          "pred_old": 71.41680165687568,
+          "v_class": 17.169999999999998,
+          "mult_env": 0.9641500000000001,
+          "pred_old": 69.59056332249999,
           "actual_pass": 60.0,
-          "err": 11.416801656875677
+          "err": 9.590563322499989
         },
         {
           "class_name": "HN-KS25-CNTT8",
           "course_name": "Python",
           "size": 10,
-          "v_class": 13.504,
-          "mult_env": 0.98248,
-          "pred_old": 72.59586966639996,
+          "v_class": 13.636666666666665,
+          "mult_env": 0.9818166666666667,
+          "pred_old": 70.30047878416667,
           "actual_pass": 60.0,
-          "err": 12.595869666399963
+          "err": 10.300478784166671
         }
       ],
       "curr": [
@@ -54,20 +54,20 @@
           "class_name": "HN-KS25-CNTT6",
           "course_name": "Python Web",
           "size": 10,
-          "v_class": 14.938418972332016,
-          "mult_env": 0.9753079051383399,
-          "pred_old": 58.955873986481926,
-          "pred_new": 58.955873986481926,
+          "v_class": 17.169999999999998,
+          "mult_env": 0.9641500000000001,
+          "pred_old": 57.27219355423076,
+          "pred_new": 57.27219355423076,
           "actual_pass": 60.0
         },
         {
           "class_name": "HN-KS25-CNTT8",
           "course_name": "Python Web",
           "size": 10,
-          "v_class": 13.504,
-          "mult_env": 0.98248,
-          "pred_old": 60.04330841563076,
-          "pred_new": 60.04330841563076,
+          "v_class": 13.636666666666665,
+          "mult_env": 0.9818166666666667,
+          "pred_old": 57.756392547948735,
+          "pred_new": 57.756392547948735,
           "actual_pass": 60.0
         }
       ]
@@ -86,11 +86,11 @@
       "full_name": "Lê Văn Nam",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (59.0%)"
+        "Học lực cần theo dõi (57.3%)"
       ],
-      "p_final": 58.99436113689239,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.31024039653846,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -105,11 +105,11 @@
       "full_name": "Trần Thị Mai",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (58.9%)"
+        "Học lực cần theo dõi (57.2%)"
       ],
-      "p_final": 58.89814326086623,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.21512329076922,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -124,11 +124,11 @@
       "full_name": "Phạm Minh Đức",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (59.0%)"
+        "Học lực cần theo dõi (57.3%)"
       ],
-      "p_final": 58.99436113689239,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.31024039653846,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -143,11 +143,11 @@
       "full_name": "Hoàng Thanh Tùng",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (58.9%)"
+        "Học lực cần theo dõi (57.2%)"
       ],
-      "p_final": 58.89814326086623,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.21512329076922,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -162,11 +162,11 @@
       "full_name": "Đỗ Thùy Linh",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (59.0%)"
+        "Học lực cần theo dõi (57.3%)"
       ],
-      "p_final": 58.99436113689239,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.31024039653846,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -181,11 +181,11 @@
       "full_name": "Vũ Hoàng Long",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (59.0%)"
+        "Học lực cần theo dõi (57.3%)"
       ],
-      "p_final": 58.99436113689239,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.31024039653846,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -200,11 +200,11 @@
       "full_name": "Nguyễn Phương Thảo",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (58.9%)"
+        "Học lực cần theo dõi (57.2%)"
       ],
-      "p_final": 58.89814326086623,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.21512329076922,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -219,11 +219,11 @@
       "full_name": "Phan Văn Hải",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (58.9%)"
+        "Học lực cần theo dõi (57.2%)"
       ],
-      "p_final": 58.89814326086623,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.21512329076922,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -238,11 +238,11 @@
       "full_name": "Lê Thu Trang",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (59.0%)"
+        "Học lực cần theo dõi (57.3%)"
       ],
-      "p_final": 58.99436113689239,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.31024039653846,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -257,11 +257,11 @@
       "full_name": "Bùi Anh Tuấn",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (59.0%)"
+        "Học lực cần theo dõi (57.3%)"
       ],
-      "p_final": 58.99436113689239,
-      "att": 18.73090909090909,
-      "hw": 92.35913043478261,
+      "p_final": 57.31024039653846,
+      "att": 24.24,
+      "hw": 89.9,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -275,10 +275,12 @@
       "student_id": 1,
       "full_name": "Lê Văn Nam",
       "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.082078587938454,
-      "att": 15.228,
-      "hw": 88.7675,
+      "reasons": [
+        "Học lực cần theo dõi (57.8%)"
+      ],
+      "p_final": 57.79513654410258,
+      "att": 27.27,
+      "hw": 95.45,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -293,11 +295,11 @@
       "full_name": "Trần Thị Mai",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (60.0%)"
+        "Học lực cần theo dõi (57.7%)"
       ],
-      "p_final": 59.98515315716922,
-      "att": 15.228,
-      "hw": 88.7675,
+      "p_final": 57.698276553717946,
+      "att": 27.27,
+      "hw": 95.45,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -311,10 +313,12 @@
       "student_id": 3,
       "full_name": "Phạm Minh Đức",
       "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.082078587938454,
-      "att": 15.228,
-      "hw": 88.7675,
+      "reasons": [
+        "Học lực cần theo dõi (57.8%)"
+      ],
+      "p_final": 57.79513654410258,
+      "att": 27.27,
+      "hw": 95.45,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -329,11 +333,11 @@
       "full_name": "Hoàng Thanh Tùng",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (60.0%)"
+        "Học lực cần theo dõi (57.7%)"
       ],
-      "p_final": 59.98515315716922,
-      "att": 15.228,
-      "hw": 88.7675,
+      "p_final": 57.698276553717946,
+      "att": 27.27,
+      "hw": 95.45,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -347,10 +351,12 @@
       "student_id": 5,
       "full_name": "Đỗ Thùy Linh",
       "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.082078587938454,
-      "att": 15.228,
-      "hw": 88.7675,
+      "reasons": [
+        "Học lực cần theo dõi (57.8%)"
+      ],
+      "p_final": 57.79513654410258,
+      "att": 27.27,
+      "hw": 95.45,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -364,10 +370,12 @@
       "student_id": 6,
       "full_name": "Vũ Hoàng Long",
       "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.082078587938454,
-      "att": 15.228,
-      "hw": 88.7675,
+      "reasons": [
+        "Học lực cần theo dõi (57.8%)"
+      ],
+      "p_final": 57.79513654410258,
+      "att": 27.27,
+      "hw": 95.45,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -382,11 +390,11 @@
       "full_name": "Nguyễn Phương Thảo",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (60.0%)"
+        "Học lực cần theo dõi (57.7%)"
       ],
-      "p_final": 59.98515315716922,
-      "att": 15.228,
-      "hw": 88.7675,
+      "p_final": 57.698276553717946,
+      "att": 27.27,
+      "hw": 95.45,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -401,11 +409,11 @@
       "full_name": "Phan Văn Hải",
       "risk_level": "GREEN",
       "reasons": [
-        "Học lực cần theo dõi (60.0%)"
+        "Học lực cần theo dõi (57.7%)"
       ],
-      "p_final": 59.98515315716922,
-      "att": 15.228,
-      "hw": 88.7675,
+      "p_final": 57.698276553717946,
+      "att": 27.27,
+      "hw": 95.45,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -419,10 +427,12 @@
       "student_id": 9,
       "full_name": "Lê Thu Trang",
       "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.082078587938454,
-      "att": 15.228,
-      "hw": 88.7675,
+      "reasons": [
+        "Học lực cần theo dõi (57.8%)"
+      ],
+      "p_final": 57.79513654410258,
+      "att": 27.27,
+      "hw": 95.45,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -436,10 +446,182 @@
       "student_id": 10,
       "full_name": "Bùi Anh Tuấn",
       "risk_level": "GREEN",
+      "reasons": [
+        "Học lực cần theo dõi (57.8%)"
+      ],
+      "p_final": 57.79513654410258,
+      "att": 27.27,
+      "hw": 95.45,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 1,
+      "full_name": "Lê Văn Nam",
+      "risk_level": "GREEN",
       "reasons": [],
-      "p_final": 60.082078587938454,
-      "att": 15.228,
-      "hw": 88.7675,
+      "p_final": 68.77866666666667,
+      "att": 19.44666666666667,
+      "hw": 97.915,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 2,
+      "full_name": "Trần Thị Mai",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 68.62780952380952,
+      "att": 19.44666666666667,
+      "hw": 97.915,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 3,
+      "full_name": "Phạm Minh Đức",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 68.77866666666667,
+      "att": 19.44666666666667,
+      "hw": 97.915,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 4,
+      "full_name": "Hoàng Thanh Tùng",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 68.62780952380952,
+      "att": 19.44666666666667,
+      "hw": 97.915,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 5,
+      "full_name": "Đỗ Thùy Linh",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 68.77866666666667,
+      "att": 19.44666666666667,
+      "hw": 97.915,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 6,
+      "full_name": "Vũ Hoàng Long",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 68.77866666666667,
+      "att": 19.44666666666667,
+      "hw": 97.915,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 7,
+      "full_name": "Nguyễn Phương Thảo",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 68.62780952380952,
+      "att": 19.44666666666667,
+      "hw": 97.915,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 8,
+      "full_name": "Phan Văn Hải",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 68.62780952380952,
+      "att": 19.44666666666667,
+      "hw": 97.915,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 9,
+      "full_name": "Lê Thu Trang",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 68.77866666666667,
+      "att": 19.44666666666667,
+      "hw": 97.915,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-KS24-CNTT1",
+      "course_name": "AI Application",
+      "student_id": 10,
+      "full_name": "Bùi Anh Tuấn",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 68.77866666666667,
+      "att": 19.44666666666667,
+      "hw": 97.915,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": [
@@ -452,7 +634,7 @@
       "copy_suspect": 0,
       "discipline_paradox": 0,
       "passive_learner": 0,
-      "sudden_drop": 0
+      "sudden_drop": 10
     },
     "K25": {
       "copy_suspect": 0,

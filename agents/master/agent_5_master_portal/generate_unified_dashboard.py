@@ -190,9 +190,16 @@ def main():
         elif idx == 1: rank_icon = "🥈"
         elif idx == 2: rank_icon = "🥉"
         
-        role_badge = f'<span class="bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded">GV</span>'
-        if item["role"] == "TG":
-            role_badge = f'<span class="bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-400 text-[10px] font-bold px-2 py-0.5 rounded">TG</span>'
+        role_clean = item["role"].strip()
+        if "Trợ giảng" in role_clean or "Thực tập sinh" in role_clean or role_clean == "TG":
+            role_badge = f'<span class="bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-400 text-[10px] font-bold px-2 py-0.5 rounded">{role_clean}</span>'
+        elif "Leader" in role_clean:
+            role_badge = f'<span class="bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400 text-[10px] font-bold px-2 py-0.5 rounded">Leader</span>'
+        elif "Giáo vụ" in role_clean:
+            role_badge = f'<span class="bg-teal-50 dark:bg-teal-950/40 text-teal-700 dark:text-teal-400 text-[10px] font-bold px-2 py-0.5 rounded">Giáo vụ</span>'
+        else:
+            role_badge = f'<span class="bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded">{role_clean}</span>'
+
             
         color_class = "text-emerald-600 dark:text-emerald-400 font-bold"
         if item["score_total"] < 65:

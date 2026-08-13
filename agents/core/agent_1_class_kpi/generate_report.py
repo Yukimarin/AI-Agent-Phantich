@@ -329,9 +329,11 @@ html_template = """<!DOCTYPE html>
                     <div class="chart-header">
                         <h3 class="chart-title"><i class="fas fa-balance-scale"></i> So sánh Vi phạm Tuần này vs Tuần trước (%)</h3>
                         <div class="tabs" style="display: flex; gap: 6px;">
-                            <button id="btn-compare-hn" class="tab-btn active" onclick="switchCompareData('HN')">CNTT HN (Python Web)</button>
-                            <button id="btn-compare-hcm" class="tab-btn" onclick="switchCompareData('HCM')">CNTT HCM (Python Web)</button>
-                            <button id="btn-compare-qtkd" class="tab-btn" onclick="switchCompareData('QTKD')">QTKD HN (PRJ302)</button>
+                            <button id="btn-compare-ks24_hn" class="tab-btn" onclick="switchCompareData('KS24_HN')">CNTT HN (KS24)</button>
+                            <button id="btn-compare-ks24_hcm" class="tab-btn" onclick="switchCompareData('KS24_HCM')">CNTT HCM (KS24)</button>
+                            <button id="btn-compare-hn" class="tab-btn active" onclick="switchCompareData('HN')">CNTT HN (KS25)</button>
+                            <button id="btn-compare-hcm" class="tab-btn" onclick="switchCompareData('HCM')">CNTT HCM (KS25)</button>
+                            <button id="btn-compare-qtkd" class="tab-btn" onclick="switchCompareData('QTKD')">QTKD HN (KS25)</button>
                         </div>
                     </div>
                     <div style="position: relative; height: 260px;">
@@ -343,6 +345,7 @@ html_template = """<!DOCTYPE html>
                         <h3 class="chart-title"><i class="fas fa-chart-area"></i> Xu hướng Vi phạm qua các Môn học (%)</h3>
                         <div class="tabs" style="display: flex; gap: 6px;">
                             <button id="btn-trend-ks24_hn" class="tab-btn" onclick="switchTrendData('KS24_HN')">CNTT HN (KS24)</button>
+                            <button id="btn-trend-ks24_hcm" class="tab-btn" onclick="switchTrendData('KS24_HCM')">CNTT HCM (KS24)</button>
                             <button id="btn-trend-hn" class="tab-btn active" onclick="switchTrendData('HN')">CNTT HN (KS25)</button>
                             <button id="btn-trend-hcm" class="tab-btn" onclick="switchTrendData('HCM')">CNTT HCM (KS25)</button>
                             <button id="btn-trend-qtkd" class="tab-btn" onclick="switchTrendData('QTKD')">QTKD HN (KS25)</button>

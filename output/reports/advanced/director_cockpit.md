@@ -2,16 +2,16 @@
 
 > [!NOTE]
 > - **Người yêu cầu**: Thầy Nguyễn Duy Quang (Giám đốc đào tạo)
-> - **Ngày kiểm toán**: 2026-08-10
+> - **Ngày kiểm toán**: 2026-08-12
 > - **Mục tiêu**: Báo cáo tổng thể nguồn lực và dự án.
 
 ---
 
 ## I. Tổng quan Dự án & Nguồn lực Bộ phận QLĐT
 
-- **Ngày kiểm toán gần nhất**: 2026-08-10
-- **Tổng số dự án vận hành**: 36 dự án
-- **Dự án đang chạy**: 29 dự án
+- **Ngày kiểm toán gần nhất**: 2026-08-12
+- **Tổng số dự án vận hành**: 46 dự án
+- **Dự án đang chạy**: 39 dự án
 - **Dự án đã hoàn thành**: 7 dự án
 
 ---
@@ -35,18 +35,28 @@
 | **PTITSAN2 - [PTIT-K24] Sản xuất tài nguyên môn Microservice in Action** | Hồ Xuân Hùng | Nguyễn Công Hưởng, Phạm Tuấn Bình, Đinh Thành Nam | ACTIVE | ON_TRACK |
 | **PTITSAN3 - 🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101** | Giáp Thị Minh Hằng | Lê Thị Đỏ | ACTIVE | ON_TRACK |
 | **PTITXAY - 🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật** | Giáp Thị Minh Hằng | Lê Thị Đỏ | ACTIVE | ON_TRACK |
+| **QKTDTRUY - [QKTDS] Truy vấn dữ liệu nâng cao** | Lê Thành Ngọc | - | ACTIVE | ON_TRACK |
 | **QLDTRA - [QLĐT] - Rà soát + tổng hợp kết quả học tập các khóa** | Nguyễn Thị Tươi | - | ACTIVE | ON_TRACK |
 | **QLDTSOAN - [QLĐT] - Soạn thảo bộ Quy định đào tạo (hê PTIT)** | Trần Thị Mỹ Phước | - | ACTIVE | ON_TRACK |
 | **QLDTXAY - [QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT** | Nguyễn Thị Tươi | Giáp Thị Minh Hằng, Lê Thị Đỏ, Lò Thị Ngọc Anh, Trần Minh Cường | ACTIVE | ON_TRACK |
 | **QLDTXAY2 - [QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI** | Trần Thị Mỹ Phước | - | ACTIVE | ON_TRACK |
 | **QLDTXAY3 - [QLĐT] - Xây dựng Quy trình khảo thí - New** | Nguyễn Huyền Trang | - | ACTIVE | ON_TRACK |
-| **QTKDCAC - [QTKDS] CÔNG VIỆC CHUNG (Ngắn hạn)** | Hoàng Thị Kim Oanh | Hoàng Thị Hậu, Lê Nhựt Mi, Lê Thị Bảo Yến, Nguyễn Ngọc Vân Khanh, Nguyễn Thị Hồng Minh, Nguyễn Thị Như Quỳnh, Triệu Thị Thanh Tâm, Đặng Quỳnh Trang | ACTIVE | ON_TRACK |
+| **QTKDCAC - [QTKDS] CÔNG VIỆC CHUNG** | Hoàng Thị Kim Oanh | Hoàng Thị Hậu, Lê Nhựt Mi, Lê Thị Bảo Yến, Nguyễn Ngọc Vân Khanh, Nguyễn Thị Hồng Minh, Nguyễn Thị Như Quỳnh, Triệu Thị Thanh Tâm, Đặng Quỳnh Trang | ACTIVE | ON_TRACK |
 | **QTKDCO - [QTKDS] CỐ VẤN HỌC TẬP** | Hoàng Thị Kim Oanh | Nguyễn Ngọc Vân Khanh, Nguyễn Thị Như Quỳnh, Triệu Thị Thanh Tâm | ACTIVE | ON_TRACK |
-| **QTKDDAO - [QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ** | Hoàng Thị Kim Oanh | - | ACTIVE | ON_TRACK |
+| **QTKDDAO - [QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ** | Lê Nhựt Mi | Hoàng Thị Kim Oanh, Lê Thị Bảo Yến, Nguyễn Thị Như Quỳnh, Triệu Thị Thanh Tâm | ACTIVE | ON_TRACK |
 | **QTKDHANH - [QTKDS] Hành trình trải nghiệm sinh viên** | Lê Nhựt Mi | Lê Thị Bảo Yến, Nguyễn Ngọc Vân Khanh, Nguyễn Thị Hồng Minh, Đặng Quỳnh Trang | ACTIVE | ON_TRACK |
 | **QTKDNGHI - [QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG** | Hoàng Thị Kim Oanh | Hoàng Thị Hậu, Lê Nhựt Mi, Lê Thị Bảo Yến, Nguyễn Ngọc Vân Khanh, Nguyễn Thị Hồng Minh, Nguyễn Thị Như Quỳnh, Triệu Thị Thanh Tâm, Đặng Quỳnh Trang | COMPLETED | OFF_TRACK |
 | **QTKDPM - [QTKDS] CTĐT, PM Môn học K25, 26** | Lê Thành Ngọc | Hoàng Thị Hậu, Hoàng Thị Kim Oanh, Lê Nhựt Mi, Nguyễn Ngọc Vân Khanh, Nguyễn Thị Hồng Minh, Đặng Quỳnh Trang | ACTIVE | ON_TRACK |
+| **QTKDQUY - [QTKDS] Quy trình sản xuất học liệu video** | Hoàng Thị Hậu | Nguyễn Thị Hồng Minh, Triệu Thị Thanh Tâm | ACTIVE | ON_TRACK |
+| **QTKDRA - [QTKDS] Rà soát tiêu chuẩn học liệu K25, 26** | Lê Nhựt Mi | Hoàng Thị Hậu, Hoàng Thị Kim Oanh, Lê Thị Bảo Yến, Nguyễn Thị Hồng Minh, Nguyễn Thị Như Quỳnh, Triệu Thị Thanh Tâm, Đặng Quỳnh Trang | ACTIVE | ON_TRACK |
 | **QTKDSO - QTKD - Các công việc khác** | Hoàng Thị Kim Oanh | Lê Nhựt Mi, Lê Thị Bảo Yến, Nguyễn Thị Như Quỳnh | COMPLETED | ON_TRACK |
+| **QTKDSXHL - [QTKDS] SXHL Thống kê trong kinh doanh (K25)** | Lê Thành Ngọc | - | ACTIVE | ON_TRACK |
+| **QTKDSXHL2 - [QTKDS] SXHL Quản trị chiến lược DN số K25 (điều chỉnh)** | Đặng Quỳnh Trang | - | ACTIVE | ON_TRACK |
+| **QTKDSXHL3 - [QTKDS] SXHL Trực quan hóa dữ liệu với Power BI (K25)** | Lê Thành Ngọc | - | ACTIVE | ON_TRACK |
+| **QTKDSXHL4 - [QTKDS] SXHL Tổ chức vận hành doanh nghiệp số (K26)** | Hoàng Thị Kim Oanh | - | ACTIVE | ON_TRACK |
+| **QTKDSXHL5 - [QTKDS] SXHL Kỹ năng bán hàng (K26)** | Hoàng Thị Hậu | - | ACTIVE | ON_TRACK |
+| **QTKDSXHL6 - [QTKDS] SXHL Digital Marketing và Hành vi KH số (K26)** | Lê Nhựt Mi | - | ACTIVE | ON_TRACK |
+| **QTKDSXHL7 - [QTKDS] SXHL Thực hành hệ thống CRM (K26)** | Lê Nhựt Mi | - | ACTIVE | ON_TRACK |
 | **RASOAT - [QTKD số] Rà soát, điều chỉnh CTĐT K25, 26** | Hoàng Thị Kim Oanh | Lê Thành Ngọc, Đặng Quỳnh Trang | COMPLETED | ON_TRACK |
 | **REKHAO - 🔵 [RE] ENGLISH EXAMINATION** | Lò Thị Ngọc Anh | Bùi Thị Xuân Mai, Hoàng Phương Thảo, Nguyễn Huyền Trang | ACTIVE | ON_TRACK |
 | **REXPCHUO - 🔵 [RE x PREP/JAXTINA] CHƯƠNG TRÌNH TIẾNG ANH K24 & K25** | Lò Thị Ngọc Anh | Bùi Thị Xuân Mai, Hoàng Phương Thảo | ACTIVE | ON_TRACK |

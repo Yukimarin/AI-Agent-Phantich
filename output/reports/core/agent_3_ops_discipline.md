@@ -1,6 +1,6 @@
 # Báo cáo Vi phạm Kỷ luật tác nghiệp GV/TG (Agent 3)
 
-*Thời gian đối chiếu: 11/08/2026 14:58:09*
+*Thời gian đối chiếu: 13/08/2026 21:12:16*
 
 > [!IMPORTANT]
 > Báo cáo này quét và đối chiếu tự động 6 tiêu chí vi phạm tác nghiệp theo quy định chế tài tháng 06/2026.
@@ -9,11 +9,11 @@
 
 | Giảng viên/Trợ giảng | Tổng số lỗi vi phạm phát hiện | Đánh giá xếp loại tác nghiệp |
 | :--- | :---: | :--- |
-| **Lương Quốc Tuấn** | 30 | 🔥 Vi phạm nặng - Cần kỷ luật |
-| **Lại Trung Lâm** | 23 | 🔥 Vi phạm nặng - Cần kỷ luật |
-| **Trịnh Quốc Hai** | 14 | 🔥 Vi phạm nặng - Cần kỷ luật |
-| **Nguyễn Quảng An** | 44 | 🔥 Vi phạm nặng - Cần kỷ luật |
-| **Phạm Ngọc Kiên** | 23 | 🔥 Vi phạm nặng - Cần kỷ luật |
+| **Lương Quốc Tuấn** | 32 | 🔥 Vi phạm nặng - Cần kỷ luật |
+| **Lại Trung Lâm** | 27 | 🔥 Vi phạm nặng - Cần kỷ luật |
+| **Trịnh Quốc Hai** | 15 | 🔥 Vi phạm nặng - Cần kỷ luật |
+| **Nguyễn Quảng An** | 47 | 🔥 Vi phạm nặng - Cần kỷ luật |
+| **Phạm Ngọc Kiên** | 27 | 🔥 Vi phạm nặng - Cần kỷ luật |
 
 ## 📋 Danh sách chi tiết các vi phạm phát hiện:
 
@@ -42,6 +42,8 @@
 | 2026-08-10 | HN-K25-CNTT1 | Buổi 21 | 07:00 - 09:00 | **Lương Quốc Tuấn** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Trịnh Quốc Hai, TH:  |
 | 2026-08-11 | HN-K25-CNTT1 | Buổi 22 | 07:00 - 09:00 | **Lại Trung Lâm** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Lại Trung Lâm |
 | 2026-08-11 | HN-K25-CNTT1 | Buổi 23 | 09:10 - 11:10 | **Lương Quốc Tuấn** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Trịnh Quốc Hai, TH:  |
+| 2026-08-12 | HN-K25-CNTT1 | Buổi 24 | 12:10 - 14:10 | **Lại Trung Lâm** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Lại Trung Lâm |
+| 2026-08-13 | HN-K25-CNTT1 | Buổi 25 | 07:00 - 09:00 | **Lương Quốc Tuấn** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Trịnh Quốc Hai, TH:  |
 | 2026-06-26 | HN-K25-CNTT2 | Buổi 01 | 09:10 - 11:10 | **Trịnh Quốc Hai** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Trịnh Quốc Hai, TH:  |
 | 2026-06-29 | HN-K25-CNTT2 | Buổi 02 | 09:10 - 11:10 | **Trịnh Quốc Hai** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Trịnh Quốc Hai, TH:  |
 | 2026-06-30 | HN-K25-CNTT2 | Buổi 03 | 12:10 - 14:10 | **Lại Trung Lâm** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Lại Trung Lâm |
@@ -63,6 +65,9 @@
 | 2026-07-17 | HN-K25-CNTT2 | Buổi 19 | 09:10 - 11:10 | **Lại Trung Lâm** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Lại Trung Lâm |
 | 2026-08-10 | HN-K25-CNTT2 | Buổi 20 | 09:10 - 11:10 | **Trịnh Quốc Hai** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Trịnh Quốc Hai, TH:  |
 | 2026-08-11 | HN-K25-CNTT2 | Buổi 21 | 12:10 - 14:10 | **Trịnh Quốc Hai** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Trịnh Quốc Hai, TH:  |
+| 2026-08-12 | HN-K25-CNTT2 | Buổi 22 | 07:00 - 09:00 | **Lại Trung Lâm** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Lại Trung Lâm |
+| 2026-08-12 | HN-K25-CNTT2 | Buổi 23 | 09:10 - 11:10 | **Trịnh Quốc Hai** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Trịnh Quốc Hai, TH:  |
+| 2026-08-13 | HN-K25-CNTT2 | Buổi 24 | 09:10 - 11:10 | **Lại Trung Lâm** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Lại Trung Lâm |
 | 2026-06-25 | HN-K25-CNTT3 | Buổi 01 | 09:10 - 11:10 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-06-26 | HN-K25-CNTT3 | Buổi 02 | 09:10 - 11:10 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-06-29 | HN-K25-CNTT3 | Buổi 03 | 07:00 - 09:00 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |
@@ -86,6 +91,8 @@
 | 2026-08-10 | HN-K25-CNTT3 | Buổi 21 | 07:00 - 09:00 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-08-10 | HN-K25-CNTT3 | Buổi 22 | 09:10 - 11:10 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |
 | 2026-08-11 | HN-K25-CNTT3 | Buổi 23 | 12:10 - 14:10 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
+| 2026-08-12 | HN-K25-CNTT3 | Buổi 24 | 07:00 - 09:00 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |
+| 2026-08-13 | HN-K25-CNTT3 | Buổi 25 | 09:10 - 11:10 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-06-25 | HN-K25-CNTT4 | Buổi 01 | 07:00 - 09:00 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-06-26 | HN-K25-CNTT4 | Buổi 02 | 07:00 - 09:00 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-06-29 | HN-K25-CNTT4 | Buổi 03 | 12:10 - 14:10 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |
@@ -109,6 +116,8 @@
 | 2026-08-10 | HN-K25-CNTT4 | Buổi 21 | 12:10 - 14:10 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-08-11 | HN-K25-CNTT4 | Buổi 22 | 07:00 - 09:00 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |
 | 2026-08-11 | HN-K25-CNTT4 | Buổi 23 | 09:10 - 11:10 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
+| 2026-08-12 | HN-K25-CNTT4 | Buổi 24 | 09:10 - 11:10 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |
+| 2026-08-13 | HN-K25-CNTT4 | Buổi 25 | 07:00 - 09:00 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-06-25 | HN-K25-CNTT5 | Buổi 01 | 14:20 - 16:20 | **Lương Quốc Tuấn** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Lương Quốc Tuấn, TH:  |
 | 2026-06-26 | HN-K25-CNTT5 | Buổi 02 | 12:10 - 14:10 | **Lương Quốc Tuấn** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Lương Quốc Tuấn, TH:  |
 | 2026-06-29 | HN-K25-CNTT5 | Buổi 04 | 14:20 - 16:20 | **Lương Quốc Tuấn** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Lương Quốc Tuấn, TH:  |
@@ -132,6 +141,8 @@
 | 2026-08-10 | HN-K25-CNTT5 | Buổi 21 | 14:20 - 16:20 | **Lương Quốc Tuấn** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Lương Quốc Tuấn, TH:  |
 | 2026-08-11 | HN-K25-CNTT5 | Buổi 22 | 14:20 - 16:20 | **Lại Trung Lâm** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Lại Trung Lâm |
 | 2026-07-17 | HN-K25-CNTT5 | Buổi 20 | 14:20 - 16:20 | **Lương Quốc Tuấn** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Lương Quốc Tuấn, TH:  |
+| 2026-08-12 | HN-K25-CNTT5 | Buổi 23 | 14:20 - 16:20 | **Lương Quốc Tuấn** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Lương Quốc Tuấn, TH:  |
+| 2026-08-13 | HN-K25-CNTT5 | Buổi 24 | 14:20 - 16:20 | **Lại Trung Lâm** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Lại Trung Lâm |
 | 2026-06-26 | HN-K25-CNTT6 | Buổi 01 | 14:20 - 16:20 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-06-29 | HN-K25-CNTT6 | Buổi 02 | 14:20 - 16:20 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-06-30 | HN-K25-CNTT6 | Buổi 03 | 14:20 - 16:20 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |
@@ -153,3 +164,6 @@
 | 2026-07-17 | HN-K25-CNTT6 | Buổi 19 | 14:20 - 16:20 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |
 | 2026-08-10 | HN-K25-CNTT6 | Buổi 20 | 14:20 - 16:20 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
 | 2026-08-11 | HN-K25-CNTT6 | Buổi 21 | 14:20 - 16:20 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
+| 2026-08-12 | HN-K25-CNTT6 | Buổi 22 | 12:10 - 14:10 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |
+| 2026-08-12 | HN-K25-CNTT6 | Buổi 23 | 14:20 - 16:20 | **Nguyễn Quảng An** | GV | `GV-05` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: Nguyễn Quảng An, TH:  |
+| 2026-08-13 | HN-K25-CNTT6 | Buổi 24 | 14:20 - 16:20 | **Phạm Ngọc Kiên** | TG | `TG-04` | Không upload tài nguyên (Link Lark + Source code) lên QLĐT sau buổi học quá 24h | LT: , TH: Phạm Ngọc Kiên |

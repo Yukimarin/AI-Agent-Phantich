@@ -16,7 +16,13 @@ def main():
         sys.exit(1)
         
     wb = openpyxl.load_workbook(excel_path, data_only=True)
-    target_sheets = ['KS25_Python_Web', 'KS25_QTKD_PRJ302']
+    target_sheets = []
+    for s_name in wb.sheetnames:
+        if s_name.lower() == 'sheet1':
+            continue
+        if any(k in s_name for k in ['KS24', 'KS25', 'SKL']):
+            target_sheets.append(s_name)
+
     
     instructors_data = {}
     
@@ -60,6 +66,10 @@ def main():
                 
                 numeric_vals = []
                 for c in range(4, sheet_obj.max_column + 1):
+                    col_letter = openpyxl.utils.get_column_letter(c)
+                    dim = sheet_obj.column_dimensions.get(col_letter)
+                    if dim and dim.hidden:
+                        continue
                     val = sheet_obj.cell(row=r, column=c).value
                     if isinstance(val, (int, float)) and val is not None:
                         numeric_vals.append(float(val))

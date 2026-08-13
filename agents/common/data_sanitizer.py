@@ -48,10 +48,63 @@ def sanitize_excel(file_path):
         print(f"DataSanitizer Lỗi: {str(e)}")
         return False
 
+def sync_from_backup():
+    import json
+    backup_path = r"C:\Users\DELL\Desktop\Backup\PTIT\PTIT_Chiso.xlsx"
+    target_path = "data/inputs/PTIT_Chiso.xlsx"
+    sync_meta_path = "data/processed/last_sync.json"
+    
+    if os.path.exists(backup_path):
+        print(f"DataSanitizer: Tìm thấy file backup tại {backup_path}")
+        backup_mtime = os.path.getmtime(backup_path)
+        
+        should_copy = False
+        if not os.path.exists(target_path):
+            should_copy = True
+        else:
+            last_sync_time = 0.0
+            if os.path.exists(sync_meta_path):
+                try:
+                    with open(sync_meta_path, "r", encoding="utf-8") as f:
+                        meta = json.load(f)
+                        last_sync_time = meta.get("backup_mtime", 0.0)
+                except Exception:
+                    pass
+            
+            # Nếu mtime khác với lần đồng bộ trước, chứng tỏ file backup đã được người dùng chỉnh sửa
+            if abs(backup_mtime - last_sync_time) > 0.01:
+                should_copy = True
+                
+        if should_copy:
+            try:
+                os.makedirs(os.path.dirname(target_path), exist_ok=True)
+                shutil.copy2(backup_path, target_path)
+                print(f"✓ DataSanitizer: Đã tự động đồng bộ file Excel mới từ Backup vào dự án.")
+                
+                # Lưu mtime đã đồng bộ
+                os.makedirs(os.path.dirname(sync_meta_path), exist_ok=True)
+                with open(sync_meta_path, "w", encoding="utf-8") as f:
+                    json.dump({"backup_mtime": backup_mtime}, f)
+            except Exception as e:
+                print(f"Warning: Không thể copy file từ Backup: {e}")
+        else:
+            print("DataSanitizer: File Excel trong dự án đã đồng bộ và là mới nhất.")
+    else:
+        print(f"DataSanitizer: Không tìm thấy file backup tại {backup_path}. Sử dụng file hiện tại trong dự án.")
+
 def main():
     print("=========================================")
     print("KHỞI CHẠY DATA SANITIZER (HARNESS LAYER)")
     print("=========================================")
+    
+    # 0. Làm sạch trực tiếp file nguồn ngoài Desktop Backup trước (nếu có)
+    backup_path = r"C:\Users\DELL\Desktop\Backup\PTIT\PTIT_Chiso.xlsx"
+    if os.path.exists(backup_path):
+        print(f"DataSanitizer: Tiến hành làm sạch file nguồn ngoài Desktop: {backup_path}")
+        sanitize_excel(backup_path)
+        
+    # 1. Đồng bộ hóa dữ liệu từ thư mục Backup ngoài dự án
+    sync_from_backup()
     
     target_file = "data/inputs/PTIT_Chiso.xlsx"
     success = sanitize_excel(target_file)

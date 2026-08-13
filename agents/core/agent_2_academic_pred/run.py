@@ -54,6 +54,10 @@ def get_excel_chot_data(excel_path):
         last_cols = []
         last_date = None
         for c_idx, val in enumerate(row4):
+            col_letter = openpyxl.utils.get_column_letter(c_idx + 1)
+            dim = sheet.column_dimensions.get(col_letter)
+            if dim and dim.hidden:
+                continue
             if val and ('/' in str(val) or isinstance(val, (datetime, date))):
                 last_cols.append(c_idx)
                 if isinstance(val, (datetime, date)):

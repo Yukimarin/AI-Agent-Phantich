@@ -135,64 +135,66 @@ def main():
         
     course_id = 217 # [IT-215] Phát triển dịch vụ Web với FastAPI
     
-    # 3. Đọc dữ liệu Thời khóa biểu Excel (Sheet Hà Nội) bằng openpyxl (tránh numpy/pandas)
+    # 3. Đọc dữ liệu Thời khóa biểu Excel (Cả Hà Nội & Hồ Chí Minh) bằng openpyxl
     print("Đang đọc dữ liệu thời khóa biểu Excel bằng openpyxl...")
     try:
         wb = openpyxl.load_workbook(tkb_path, data_only=True)
-        sheet = wb['1.1. TKB Hà Nội tổng']
     except Exception as e:
-        print("Error opening Excel sheet:", str(e))
-        conn.close()
-        sys.exit(1)
-        
-    headers = [str(sheet.cell(row=1, column=c).value).strip() for c in range(1, sheet.max_column + 1)]
-    
-    class_col = 'Lớp đào tạo'
-    subject_col = 'Môn học'
-    gv_lt_col = 'Giảng viên LT'
-    gv_th_col = 'Giảng viên TH'
-    date_col = 'Ngày đào tạo'
-    session_col = 'Tiến độ đào tạo'
-    ca_col = 'Ca đào tạo'
-    
-    # Tìm index của các cột
-    try:
-        class_idx = headers.index(class_col) + 1
-        subject_idx = headers.index(subject_col) + 1
-        gv_lt_idx = headers.index(gv_lt_col) + 1
-        gv_th_idx = headers.index(gv_th_col) + 1
-        date_idx = headers.index(date_col) + 1
-        session_idx = headers.index(session_col) + 1
-        ca_idx = headers.index(ca_col) + 1
-    except ValueError as e:
-        print("Error: Excel header missing column:", str(e))
-        wb.close()
+        print("Error opening Excel workbook:", str(e))
         conn.close()
         sys.exit(1)
         
     rows = []
-    for r in range(2, sheet.max_row + 1):
-        # Đọc giá trị
-        class_val = sheet.cell(row=r, column=class_idx).value
-        subject_val = sheet.cell(row=r, column=subject_idx).value
-        gv_lt_val = sheet.cell(row=r, column=gv_lt_idx).value
-        gv_th_val = sheet.cell(row=r, column=gv_th_idx).value
-        date_val = sheet.cell(row=r, column=date_idx).value
-        session_val = sheet.cell(row=r, column=session_idx).value
-        ca_val = sheet.cell(row=r, column=ca_idx).value
+    target_tkb_sheets = ['1.1. TKB Hà Nội tổng', '1.2. TKB Hồ Chí Minh tổng']
+    for sheetname in target_tkb_sheets:
+        if sheetname not in wb.sheetnames:
+            print(f"Warning: Không tìm thấy sheet {sheetname}")
+            continue
+        sheet = wb[sheetname]
+        headers = [str(sheet.cell(row=1, column=c).value).strip() for c in range(1, sheet.max_column + 1)]
         
-        if class_val is None and subject_val is None:
+        class_col = 'Lớp đào tạo'
+        subject_col = 'Môn học'
+        gv_lt_col = 'Giảng viên LT'
+        gv_th_col = 'Giảng viên TH'
+        date_col = 'Ngày đào tạo'
+        session_col = 'Tiến độ đào tạo'
+        ca_col = 'Ca đào tạo'
+        
+        # Tìm index của các cột
+        try:
+            class_idx = headers.index(class_col) + 1
+            subject_idx = headers.index(subject_col) + 1
+            gv_lt_idx = headers.index(gv_lt_col) + 1
+            gv_th_idx = headers.index(gv_th_col) + 1
+            date_idx = headers.index(date_col) + 1
+            session_idx = headers.index(session_col) + 1
+            ca_idx = headers.index(ca_col) + 1
+        except ValueError as e:
+            print(f"Error: Sheet {sheetname} missing column:", str(e))
             continue
             
-        rows.append({
-            class_col: class_val,
-            subject_col: subject_val,
-            gv_lt_col: gv_lt_val,
-            gv_th_col: gv_th_val,
-            date_col: date_val,
-            session_col: session_val,
-            ca_col: ca_val
-        })
+        for r in range(2, sheet.max_row + 1):
+            class_val = sheet.cell(row=r, column=class_idx).value
+            subject_val = sheet.cell(row=r, column=subject_idx).value
+            gv_lt_val = sheet.cell(row=r, column=gv_lt_idx).value
+            gv_th_val = sheet.cell(row=r, column=gv_th_idx).value
+            date_val = sheet.cell(row=r, column=date_idx).value
+            session_val = sheet.cell(row=r, column=session_idx).value
+            ca_val = sheet.cell(row=r, column=ca_idx).value
+            
+            if class_val is None and subject_val is None:
+                continue
+                
+            rows.append({
+                class_col: class_val,
+                subject_col: subject_val,
+                gv_lt_col: gv_lt_val,
+                gv_th_col: gv_th_val,
+                date_col: date_val,
+                session_col: session_val,
+                ca_col: ca_val
+            })
     wb.close()
     
     # Lọc môn IT215-K25

@@ -290,9 +290,11 @@
                     <div class="chart-header">
                         <h3 class="chart-title"><i class="fas fa-balance-scale"></i> So sánh Vi phạm Tuần này vs Tuần trước (%)</h3>
                         <div class="tabs" style="display: flex; gap: 6px;">
-                            <button id="btn-compare-hn" class="tab-btn active" onclick="switchCompareData('HN')">CNTT HN (Python Web)</button>
-                            <button id="btn-compare-hcm" class="tab-btn" onclick="switchCompareData('HCM')">CNTT HCM (Python Web)</button>
-                            <button id="btn-compare-qtkd" class="tab-btn" onclick="switchCompareData('QTKD')">QTKD HN (PRJ302)</button>
+                            <button id="btn-compare-ks24_hn" class="tab-btn" onclick="switchCompareData('KS24_HN')">CNTT HN (KS24)</button>
+                            <button id="btn-compare-ks24_hcm" class="tab-btn" onclick="switchCompareData('KS24_HCM')">CNTT HCM (KS24)</button>
+                            <button id="btn-compare-hn" class="tab-btn active" onclick="switchCompareData('HN')">CNTT HN (KS25)</button>
+                            <button id="btn-compare-hcm" class="tab-btn" onclick="switchCompareData('HCM')">CNTT HCM (KS25)</button>
+                            <button id="btn-compare-qtkd" class="tab-btn" onclick="switchCompareData('QTKD')">QTKD HN (KS25)</button>
                         </div>
                     </div>
                     <div style="position: relative; height: 260px;">
@@ -304,6 +306,7 @@
                         <h3 class="chart-title"><i class="fas fa-chart-area"></i> Xu hướng Vi phạm qua các Môn học (%)</h3>
                         <div class="tabs" style="display: flex; gap: 6px;">
                             <button id="btn-trend-ks24_hn" class="tab-btn" onclick="switchTrendData('KS24_HN')">CNTT HN (KS24)</button>
+                            <button id="btn-trend-ks24_hcm" class="tab-btn" onclick="switchTrendData('KS24_HCM')">CNTT HCM (KS24)</button>
                             <button id="btn-trend-hn" class="tab-btn active" onclick="switchTrendData('HN')">CNTT HN (KS25)</button>
                             <button id="btn-trend-hcm" class="tab-btn" onclick="switchTrendData('HCM')">CNTT HCM (KS25)</button>
                             <button id="btn-trend-qtkd" class="tab-btn" onclick="switchTrendData('QTKD')">QTKD HN (KS25)</button>
@@ -318,20 +321,149 @@
             <div class="markdown-body">
                 <h1 id="bao-cao-thong-ke-chi-so-ao-tao-tuan-nang-luc-quan-tri-lop-cua-gvtg">BÁO CÁO THỐNG KÊ CHỈ SỐ ĐÀO TẠO TUẦN &amp; NĂNG LỰC QUẢN TRỊ LỚP CỦA GV/TG</h1>
 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 12px 20px; border-radius: 8px; display: inline-block; font-weight: 600; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);">
-  <i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Báo cáo Tuần: 13/07/2026 - 19/07/2026
+  <i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Báo cáo Tuần: 10/08/2026 - 16/08/2026
 </div>
 
 <hr />
-<h3 id="khoa-hn-ks25-cntt">Khóa HN-KS25-CNTT</h3>
+<h3 id="khoa-hn-ks24-cntt">Khóa HN-KS24-CNTT</h3>
+<div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 12px; padding: 16px; margin: 20px 0; display: flex; align-items: center; gap: 12px;">
+    <span style="font-size: 1.5rem;">✅</span>
+    <div>
+        <strong style="color: #6ee7b7;">Đánh giá chung:</strong> Kỷ luật học tập của khóa HN-KS24-CNTT duy trì ổn định so với tuần trước. Không cần can thiệp khẩn cấp.
+    </div>
+</div>
+
+<div class="data-grid-container">
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Tên Lớp</th>
+<th style="text-align: left;">Giảng viên</th>
+<th style="text-align: left;">Trợ giảng</th>
+<th style="text-align: center;">Chuyên cần</th>
+<th style="text-align: center;">Bài tập</th>
+<th style="text-align: center;">Elearning</th>
+<th style="text-align: left;">Xu hướng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>HN-K24-CNTT1</strong></td>
+<td style="text-align: left;">Nguyễn Công Hưởng</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -16.67%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -2.78%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -5.56%)</span></td>
+<td style="text-align: left;"><span class='badge badge-success'>✅ Ổn định</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K24-CNTT2</strong></td>
+<td style="text-align: left;">Bùi Thanh Hải</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -5.13%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -10.26%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -12.82%)</span></td>
+<td style="text-align: left;"><span class='badge badge-success'>✅ Ổn định</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K24-CNTT3</strong></td>
+<td style="text-align: left;">Bùi Thanh Hải</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -35.71%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -9.52%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -9.52%)</span></td>
+<td style="text-align: left;"><span class='badge badge-success'>✅ Ổn định</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K24-CNTT4</strong></td>
+<td style="text-align: left;">Bùi Thanh Hải</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -3.13%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -3.13%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -6.25%)</span></td>
+<td style="text-align: left;"><span class='badge badge-success'>✅ Ổn định</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HN-K24-CNTT5</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -52.63%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -63.15%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -26.32%)</span></td>
+<td style="text-align: left;"><span class='badge badge-success'>✅ Ổn định</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr />
+<h3 id="khoa-hcm-ks24-cntt">Khóa HCM-KS24-CNTT</h3>
 <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px; margin: 20px 0; backdrop-filter: blur(10px);">
     <h4 style="margin-top:0; color:#e2e8f0; display:flex; align-items:center; gap:8px;">
-        <span style="font-size:1.2rem;">📌</span> AI Action Plan (Đề xuất hệ thống)
+        <span style="font-size:1.2rem;">📌</span> Kế hoạch Hành động Khắc phục (Hệ thống đề xuất)
     </h4>
     <div style="display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
         <div style="flex:1; min-width: 250px; background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 12px; border-radius: 4px;">
             <div style="color: #fca5a5; font-weight: 600; margin-bottom: 8px;">🚨 Vấn đề phát hiện</div>
             <ul style="margin:0; padding-left:20px; color:#e2e8f0; font-size:0.9rem;">
-                <li>Tỷ lệ vắng mặt chuyên cần tăng mạnh (+7.79%) so với tuần trước.</li><li>Tỷ lệ nợ bài tập có dấu hiệu đáng báo động (+6.33%).</li><li>Học viên đang lơ là Elearning (+6.48%).</li>
+                <li>Học viên đang lơ là Elearning (+2.76%).</li>
+            </ul>
+        </div>
+        <div style="flex:1; min-width: 250px; background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 12px; border-radius: 4px;">
+            <div style="color: #6ee7b7; font-weight: 600; margin-bottom: 8px;">💡 Hành động yêu cầu</div>
+            <ul style="margin:0; padding-left:20px; color:#e2e8f0; font-size:0.9rem;">
+                <li>Chỉ đạo Trợ giảng liên hệ ngay sinh viên vi phạm để đôn đốc.</li>
+                <li>Giảng viên cần chấn chỉnh kỷ luật lớp đầu giờ học tiếp theo.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="data-grid-container">
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Tên Lớp</th>
+<th style="text-align: left;">Giảng viên</th>
+<th style="text-align: left;">Trợ giảng</th>
+<th style="text-align: center;">Chuyên cần</th>
+<th style="text-align: center;">Bài tập</th>
+<th style="text-align: center;">Elearning</th>
+<th style="text-align: left;">Xu hướng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>HCM-K24-CNTT1</strong></td>
+<td style="text-align: left;">Nguyễn Bá Minh Đạo</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -6.82%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">6.82% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: left;"><span class='badge badge-success'>✅ Ổn định</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HCM-K24-CNTT2</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -51.00%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -20.00%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: left;"><span class='badge badge-success'>✅ Ổn định</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr />
+<h3 id="khoa-hn-ks25-cntt">Khóa HN-KS25-CNTT</h3>
+<div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px; margin: 20px 0; backdrop-filter: blur(10px);">
+    <h4 style="margin-top:0; color:#e2e8f0; display:flex; align-items:center; gap:8px;">
+        <span style="font-size:1.2rem;">📌</span> Kế hoạch Hành động Khắc phục (Hệ thống đề xuất)
+    </h4>
+    <div style="display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
+        <div style="flex:1; min-width: 250px; background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 12px; border-radius: 4px;">
+            <div style="color: #fca5a5; font-weight: 600; margin-bottom: 8px;">🚨 Vấn đề phát hiện</div>
+            <ul style="margin:0; padding-left:20px; color:#e2e8f0; font-size:0.9rem;">
+                <li>Tỷ lệ vắng mặt chuyên cần tăng mạnh (+2.10%) so với tuần trước.</li><li>Tỷ lệ nợ bài tập có dấu hiệu đáng báo động (+2.38%).</li>
             </ul>
         </div>
         <div style="flex:1; min-width: 250px; background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 12px; border-radius: 4px;">
@@ -362,54 +494,54 @@
 <td style="text-align: left;"><strong>HN-K25-CNTT1</strong></td>
 <td style="text-align: left;">Lương Quốc Tuấn</td>
 <td style="text-align: left;">Lại Trung Lâm</td>
-<td style="text-align: center;">15.50% <span style='color:#ef4444; font-weight:600;'>(▲ +3.50%)</span></td>
-<td style="text-align: center;">15.50% <span style='color:#ef4444; font-weight:600;'>(▲ +6.50%)</span></td>
-<td style="text-align: center;">20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +6.00%)</span></td>
+<td style="text-align: center;">17.50% <span style='color:#ef4444; font-weight:600;'>(▲ +1.25%)</span></td>
+<td style="text-align: center;">17.50% <span style='color:#ef4444; font-weight:600;'>(▲ +1.25%)</span></td>
+<td style="text-align: center;">20.00% <span style='color:#64748b;'>(--)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT2</strong></td>
 <td style="text-align: left;">Lâm Tùng Dương</td>
 <td style="text-align: left;">Lại Trung Lâm</td>
-<td style="text-align: center;">25.26% <span style='color:#ef4444; font-weight:600;'>(▲ +16.85%)</span></td>
-<td style="text-align: center;">10.00% <span style='color:#ef4444; font-weight:600;'>(▲ +4.21%)</span></td>
-<td style="text-align: center;">12.10% <span style='color:#ef4444; font-weight:600;'>(▲ +6.85%)</span></td>
+<td style="text-align: center;">34.21% <span style='color:#ef4444; font-weight:600;'>(▲ +2.63%)</span></td>
+<td style="text-align: center;">15.79% <span style='color:#ef4444; font-weight:600;'>(▲ +2.63%)</span></td>
+<td style="text-align: center;">18.42% <span style='color:#ef4444; font-weight:600;'>(▲ +1.32%)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT3</strong></td>
 <td style="text-align: left;">Nguyễn Quảng An</td>
 <td style="text-align: left;">Phạm Ngọc Kiên</td>
-<td style="text-align: center;">14.86% <span style='color:#ef4444; font-weight:600;'>(▲ +9.15%)</span></td>
-<td style="text-align: center;">12.00% <span style='color:#ef4444; font-weight:600;'>(▲ +8.00%)</span></td>
-<td style="text-align: center;">20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +11.43%)</span></td>
+<td style="text-align: center;">22.86% <span style='color:#ef4444; font-weight:600;'>(▲ +5.72%)</span></td>
+<td style="text-align: center;">22.86% <span style='color:#ef4444; font-weight:600;'>(▲ +7.14%)</span></td>
+<td style="text-align: center;">22.86% <span style='color:#64748b;'>(--)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT4</strong></td>
 <td style="text-align: left;">Nguyễn Quảng An</td>
 <td style="text-align: left;">Phạm Ngọc Kiên</td>
-<td style="text-align: center;">11.00% <span style='color:#ef4444; font-weight:600;'>(▲ +3.05%)</span></td>
-<td style="text-align: center;">12.50% <span style='color:#ef4444; font-weight:600;'>(▲ +6.52%)</span></td>
-<td style="text-align: center;">13.50% <span style='color:#ef4444; font-weight:600;'>(▲ +5.04%)</span></td>
-<td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
+<td style="text-align: center;">12.50% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">15.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">15.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: left;"><span class='badge badge-success'>✅ Ổn định</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT5</strong></td>
 <td style="text-align: left;">Lương Quốc Tuấn</td>
 <td style="text-align: left;">Lại Trung Lâm</td>
-<td style="text-align: center;">10.81% <span style='color:#ef4444; font-weight:600;'>(▲ +3.78%)</span></td>
-<td style="text-align: center;">10.81% <span style='color:#ef4444; font-weight:600;'>(▲ +4.32%)</span></td>
-<td style="text-align: center;">10.81% <span style='color:#ef4444; font-weight:600;'>(▲ +4.32%)</span></td>
-<td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
+<td style="text-align: center;">10.81% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">10.81% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">10.81% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: left;"><span class='badge badge-success'>✅ Ổn định</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-CNTT6</strong></td>
 <td style="text-align: left;">Nguyễn Quảng An</td>
 <td style="text-align: left;">Phạm Ngọc Kiên</td>
-<td style="text-align: center;">28.38% <span style='color:#ef4444; font-weight:600;'>(▲ +10.44%)</span></td>
-<td style="text-align: center;">16.16% <span style='color:#ef4444; font-weight:600;'>(▲ +8.41%)</span></td>
-<td style="text-align: center;">15.48% <span style='color:#ef4444; font-weight:600;'>(▲ +5.24%)</span></td>
+<td style="text-align: center;">38.51% <span style='color:#ef4444; font-weight:600;'>(▲ +3.03%)</span></td>
+<td style="text-align: center;">25.81% <span style='color:#ef4444; font-weight:600;'>(▲ +3.23%)</span></td>
+<td style="text-align: center;">25.81% <span style='color:#ef4444; font-weight:600;'>(▲ +6.45%)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 </tbody>
@@ -419,13 +551,13 @@
 <h3 id="khoa-hcm-ks25-cntt">Khóa HCM-KS25-CNTT</h3>
 <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px; margin: 20px 0; backdrop-filter: blur(10px);">
     <h4 style="margin-top:0; color:#e2e8f0; display:flex; align-items:center; gap:8px;">
-        <span style="font-size:1.2rem;">📌</span> AI Action Plan (Đề xuất hệ thống)
+        <span style="font-size:1.2rem;">📌</span> Kế hoạch Hành động Khắc phục (Hệ thống đề xuất)
     </h4>
     <div style="display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
         <div style="flex:1; min-width: 250px; background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 12px; border-radius: 4px;">
             <div style="color: #fca5a5; font-weight: 600; margin-bottom: 8px;">🚨 Vấn đề phát hiện</div>
             <ul style="margin:0; padding-left:20px; color:#e2e8f0; font-size:0.9rem;">
-                <li>Tỷ lệ vắng mặt chuyên cần tăng mạnh (+6.57%) so với tuần trước.</li><li>Tỷ lệ nợ bài tập có dấu hiệu đáng báo động (+9.77%).</li><li>Học viên đang lơ là Elearning (+5.90%).</li>
+                <li>Tỷ lệ vắng mặt chuyên cần tăng mạnh (+2.40%) so với tuần trước.</li><li>Tỷ lệ nợ bài tập có dấu hiệu đáng báo động (+6.53%).</li>
             </ul>
         </div>
         <div style="flex:1; min-width: 250px; background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 12px; border-radius: 4px;">
@@ -456,9 +588,9 @@
 <td style="text-align: left;"><strong>HCM-K25-CNTT5</strong></td>
 <td style="text-align: left;">Lê Hà Thanh Sang</td>
 <td style="text-align: left;">Phạm Viết Hùng</td>
-<td style="text-align: center;">9.75% <span style='color:#ef4444; font-weight:600;'>(▲ +5.65%)</span></td>
-<td style="text-align: center;">9.74% <span style='color:#ef4444; font-weight:600;'>(▲ +9.74%)</span></td>
-<td style="text-align: center;">5.13% <span style='color:#10b981; font-weight:600;'>(▼ -0.51%)</span></td>
+<td style="text-align: center;">15.38% <span style='color:#ef4444; font-weight:600;'>(▲ +5.12%)</span></td>
+<td style="text-align: center;">28.21% <span style='color:#ef4444; font-weight:600;'>(▲ +10.26%)</span></td>
+<td style="text-align: center;">5.13% <span style='color:#64748b;'>(--)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 <tr>
@@ -466,26 +598,26 @@
 <td style="text-align: left;">Trần Quốc Tuấn</td>
 <td style="text-align: left;">Lưu Hoàng Xuân Nguyên</td>
 <td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
-<td style="text-align: center;">11.50% <span style='color:#ef4444; font-weight:600;'>(▲ +10.00%)</span></td>
-<td style="text-align: center;">14.00% <span style='color:#ef4444; font-weight:600;'>(▲ +3.50%)</span></td>
+<td style="text-align: center;">20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +3.75%)</span></td>
+<td style="text-align: center;">15.00% <span style='color:#64748b;'>(--)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HCM-K25-CNTT7</strong></td>
 <td style="text-align: left;">Trần Quốc Tuấn</td>
 <td style="text-align: left;">Lưu Hoàng Xuân Nguyên</td>
-<td style="text-align: center;">16.86% <span style='color:#ef4444; font-weight:600;'>(▲ +7.86%)</span></td>
-<td style="text-align: center;">10.22% <span style='color:#ef4444; font-weight:600;'>(▲ +8.22%)</span></td>
-<td style="text-align: center;">8.15% <span style='color:#ef4444; font-weight:600;'>(▲ +6.15%)</span></td>
+<td style="text-align: center;">23.08% <span style='color:#ef4444; font-weight:600;'>(▲ +5.13%)</span></td>
+<td style="text-align: center;">20.51% <span style='color:#ef4444; font-weight:600;'>(▲ +5.12%)</span></td>
+<td style="text-align: center;">7.69% <span style='color:#64748b;'>(--)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HCM-K25-CNTT8</strong></td>
 <td style="text-align: left;">Lê Hà Thanh Sang</td>
 <td style="text-align: left;">Phạm Viết Hùng</td>
-<td style="text-align: center;">67.22% <span style='color:#ef4444; font-weight:600;'>(▲ +12.78%)</span></td>
-<td style="text-align: center;">32.78% <span style='color:#ef4444; font-weight:600;'>(▲ +11.11%)</span></td>
-<td style="text-align: center;">36.11% <span style='color:#ef4444; font-weight:600;'>(▲ +14.45%)</span></td>
+<td style="text-align: center;">69.44% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">50.00% <span style='color:#ef4444; font-weight:600;'>(▲ +6.95%)</span></td>
+<td style="text-align: center;">41.67% <span style='color:#64748b;'>(--)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 </tbody>
@@ -495,13 +627,13 @@
 <h3 id="khoa-hn-ks25-qtkd">Khóa HN-KS25-QTKD</h3>
 <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px; margin: 20px 0; backdrop-filter: blur(10px);">
     <h4 style="margin-top:0; color:#e2e8f0; display:flex; align-items:center; gap:8px;">
-        <span style="font-size:1.2rem;">📌</span> AI Action Plan (Đề xuất hệ thống)
+        <span style="font-size:1.2rem;">📌</span> Kế hoạch Hành động Khắc phục (Hệ thống đề xuất)
     </h4>
     <div style="display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
         <div style="flex:1; min-width: 250px; background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 12px; border-radius: 4px;">
             <div style="color: #fca5a5; font-weight: 600; margin-bottom: 8px;">🚨 Vấn đề phát hiện</div>
             <ul style="margin:0; padding-left:20px; color:#e2e8f0; font-size:0.9rem;">
-                <li>Tỷ lệ vắng mặt chuyên cần tăng mạnh (+10.42%) so với tuần trước.</li>
+                <li>Học viên đang lơ là Elearning (+4.04%).</li>
             </ul>
         </div>
         <div style="flex:1; min-width: 250px; background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 12px; border-radius: 4px;">
@@ -530,29 +662,29 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-QTKD1</strong></td>
-<td style="text-align: left;">Hoàng Thị Kim Oanh</td>
+<td style="text-align: left;">Nguyễn Ngọc Vân Khanh</td>
 <td style="text-align: left;">N/A</td>
-<td style="text-align: center;">18.75% <span style='color:#ef4444; font-weight:600;'>(▲ +5.74%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -18.75%)</span></td>
 <td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
-<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">6.06% <span style='color:#ef4444; font-weight:600;'>(▲ +6.06%)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-QTKD2</strong></td>
-<td style="text-align: left;">Nguyễn Thị Hồng Minh</td>
+<td style="text-align: left;">Nguyễn Ngọc Vân Khanh</td>
 <td style="text-align: left;">N/A</td>
-<td style="text-align: center;">20.00% <span style='color:#ef4444; font-weight:600;'>(▲ +8.00%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -20.00%)</span></td>
 <td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
-<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">2.50% <span style='color:#ef4444; font-weight:600;'>(▲ +2.50%)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HN-K25-QTKD3</strong></td>
-<td style="text-align: left;">Đặng Quỳnh Trang</td>
+<td style="text-align: left;">Nguyễn Thị Hồng Minh</td>
 <td style="text-align: left;">N/A</td>
-<td style="text-align: center;">31.98% <span style='color:#ef4444; font-weight:600;'>(▲ +17.54%)</span></td>
-<td style="text-align: center;">1.85% <span style='color:#10b981; font-weight:600;'>(▼ -0.37%)</span></td>
-<td style="text-align: center;">0.00% <span style='color:#64748b;'>(--)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -31.98%)</span></td>
+<td style="text-align: center;">0.00% <span style='color:#10b981; font-weight:600;'>(▼ -1.85%)</span></td>
+<td style="text-align: center;">3.57% <span style='color:#ef4444; font-weight:600;'>(▲ +3.57%)</span></td>
 <td style="text-align: left;"><span class='badge badge-danger'>🚨 Tăng</span></td>
 </tr>
 </tbody>
@@ -581,38 +713,38 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;"><strong>Đặng Quỳnh Trang</strong></td>
-<td style="text-align: center;">1 lớp</td>
-<td style="text-align: center;"><strong>+18.96%</strong></td>
+<td style="text-align: left;"><strong>Hoàng Thị Hậu</strong></td>
+<td style="text-align: center;">5 lớp</td>
+<td style="text-align: center;"><strong>+16.26%</strong></td>
 <td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;"><strong>Nguyễn Thị Hồng Minh</strong></td>
-<td style="text-align: center;">1 lớp</td>
-<td style="text-align: center;"><strong>+17.49%</strong></td>
+<td style="text-align: left;"><strong>Nguyễn Bá Minh Đạo</strong></td>
+<td style="text-align: center;">3 lớp</td>
+<td style="text-align: center;"><strong>+14.55%</strong></td>
 <td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;"><strong>Hoàng Thị Hậu</strong></td>
-<td style="text-align: center;">2 lớp</td>
-<td style="text-align: center;"><strong>+16.22%</strong></td>
+<td style="text-align: left;"><strong>Đặng Quỳnh Trang</strong></td>
+<td style="text-align: center;">1 lớp</td>
+<td style="text-align: center;"><strong>+14.28%</strong></td>
 <td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;"><strong>Lương Quốc Tuấn</strong></td>
-<td style="text-align: center;">4 lớp</td>
-<td style="text-align: center;"><strong>+14.59%</strong></td>
+<td style="text-align: left;"><strong>Ngô Quang Huấn</strong></td>
+<td style="text-align: center;">7 lớp</td>
+<td style="text-align: center;"><strong>+13.84%</strong></td>
 <td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;"><strong>Nguyễn Bá Minh Đạo</strong></td>
-<td style="text-align: center;">3 lớp</td>
-<td style="text-align: center;"><strong>+14.50%</strong></td>
-<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+<td style="text-align: left;"><strong>Lương Quốc Tuấn</strong></td>
+<td style="text-align: center;">4 lớp</td>
+<td style="text-align: center;"><strong>+11.06%</strong></td>
+<td style="text-align: left;">Cần Hỗ Trợ (Needs Support)</td>
 </tr>
 </tbody>
 </table></div>
@@ -632,110 +764,48 @@
 <td style="text-align: center;">1</td>
 <td style="text-align: left;"><strong>Lâm Tùng Dương</strong></td>
 <td style="text-align: center;">6 lớp</td>
-<td style="text-align: center;"><strong>+14.73%</strong></td>
+<td style="text-align: center;"><strong>+13.84%</strong></td>
 <td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;"><strong>Trương Tuấn Anh</strong></td>
 <td style="text-align: center;">1 lớp</td>
-<td style="text-align: center;"><strong>+14.20%</strong></td>
-<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+<td style="text-align: center;"><strong>+9.91%</strong></td>
+<td style="text-align: left;">Cần Hỗ Trợ (Needs Support)</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;"><strong>Phạm Ngọc Kiên</strong></td>
+<td style="text-align: left;"><strong>Phạm Thế Kiên</strong></td>
 <td style="text-align: center;">3 lớp</td>
-<td style="text-align: center;"><strong>+13.89%</strong></td>
-<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+<td style="text-align: center;"><strong>+9.07%</strong></td>
+<td style="text-align: left;">Cần Hỗ Trợ (Needs Support)</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;"><strong>Phạm Viết Hùng</strong></td>
-<td style="text-align: center;">6 lớp</td>
-<td style="text-align: center;"><strong>+13.12%</strong></td>
-<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+<td style="text-align: left;"><strong>Lại Trung Lâm</strong></td>
+<td style="text-align: center;">3 lớp</td>
+<td style="text-align: center;"><strong>+8.76%</strong></td>
+<td style="text-align: left;">Cần Hỗ Trợ (Needs Support)</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;"><strong>Lại Trung Lâm</strong></td>
-<td style="text-align: center;">3 lớp</td>
-<td style="text-align: center;"><strong>+12.92%</strong></td>
-<td style="text-align: left;">Rescuers (Giải cứu xuất sắc)</td>
+<td style="text-align: left;"><strong>Phạm Viết Hùng</strong></td>
+<td style="text-align: center;">6 lớp</td>
+<td style="text-align: center;"><strong>+8.59%</strong></td>
+<td style="text-align: left;">Cần Hỗ Trợ (Needs Support)</td>
 </tr>
 </tbody>
 </table></div>
 <hr />
 <h2 id="iii-anh-gia-chi-tiet-tung-nhan-su-va-e-xuat-cai-thien">III. ĐÁNH GIÁ CHI TIẾT TỪNG NHÂN SỰ VÀ ĐỀ XUẤT CẢI THIỆN</h2>
-<div class="staff-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-top: 20px;">
+<h3 id="khoi-cong-nghe-thong-tin-cntt">💻 Khối Công nghệ Thông tin (CNTT)</h3>
+<div class="staff-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px;">
 <div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
-<h4 id="ang-quynh-trang" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Đặng Quỳnh Trang</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 1 Lớp</div>
-</div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="nguyen-thi-hong-minh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Thị Hồng Minh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 1 Lớp</div>
-</div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="hoang-thi-hau" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hoàng Thị Hậu</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 2 Lớp</div>
-</div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="lam-tung-duong" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lâm Tùng Dương</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp</div>
+<h4 id="nguyen-ba-minh-ao" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Bá Minh Đạo</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HCM-K24-CNTT1, HCM-K24-CNTT2, HCM-K25-CNTT3)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -756,41 +826,20 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 id="luong-quoc-tuan" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lương Quốc Tuấn</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT1, HN-K25-CNTT3, HN-K25-CNTT2, HN-K25-CNTT5)</div>
 </div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="nguyen-ba-minh-ao" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Bá Minh Đạo</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp</div>
-</div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
 </div>
 </div>
 <div style="display: flex; gap: 12px; font-size: 0.85rem;">
 <div style="flex: 1;">
 <div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
+<div style="color: #cbd5e1;">Kỷ luật ở mức trung bình ổn</div>
 </div>
 <div style="flex: 1;">
 <div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
+<div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
 </div>
 </div>
 </div>
@@ -798,125 +847,20 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 id="truong-tuan-anh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Trương Tuấn Anh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 1 Lớp</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 1 Lớp (HN-K25-CNTT5)</div>
 </div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="pham-ngoc-kien" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Ngọc Kiên</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp</div>
-</div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
 </div>
 </div>
 <div style="display: flex; gap: 12px; font-size: 0.85rem;">
 <div style="flex: 1;">
 <div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
+<div style="color: #cbd5e1;">Kỷ luật ở mức trung bình ổn</div>
 </div>
 <div style="flex: 1;">
 <div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="nguyen-quang-an" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Quảng An</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp</div>
-</div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="pham-viet-hung" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Viết Hùng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp</div>
-</div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="lai-trung-lam" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lại Trung Lâm</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp</div>
-</div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="tran-quoc-tuan" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Trần Quốc Tuấn</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp</div>
-</div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
+<div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
 </div>
 </div>
 </div>
@@ -924,20 +868,20 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 id="pham-the-kien" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Thế Kiên</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT6, HN-K25-CNTT3, HN-K25-CNTT4)</div>
 </div>
-<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
 </div>
 </div>
 <div style="display: flex; gap: 12px; font-size: 0.85rem;">
 <div style="flex: 1;">
 <div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
+<div style="color: #cbd5e1;">Kỷ luật ở mức trung bình ổn</div>
 </div>
 <div style="flex: 1;">
 <div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
+<div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
 </div>
 </div>
 </div>
@@ -945,10 +889,52 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 id="bui-thanh-hai" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Bùi Thanh Hải</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT4, HN-K24-CNTT2, HN-K24-CNTT1, HN-K24-CNTT3)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Kỷ luật ở mức trung bình ổn</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="lai-trung-lam" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lại Trung Lâm</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT1, HN-K25-CNTT2, HN-K25-CNTT5)</div>
+</div>
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Kỷ luật ở mức trung bình ổn</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="pham-viet-hung" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Viết Hùng</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HCM-K25-CNTT2, HCM-K25-CNTT7, HCM-K25-CNTT5, HCM-K25-CNTT8, HCM-K24-CNTT1, HCM-K25-CNTT3)</div>
+</div>
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
 </div>
 </div>
 <div style="display: flex; gap: 12px; font-size: 0.85rem;">
@@ -966,49 +952,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 id="mai-xuan-chinh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Mai Xuân Chinh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 4 Lớp</div>
-</div>
-<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Kỷ luật ở mức trung bình ổn</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="pham-minh-triet" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Minh Triết</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 2 Lớp</div>
-</div>
-<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Tỷ lệ vắng mặt tăng</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Gắt gao điểm danh và liên hệ học viên</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="trinh-quoc-hai" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Trịnh Quốc Hai</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 4 Lớp (HN-K24-CNTT2, HN-K24-CNTT5, HN-K24-CNTT4, HN-K24-CNTT3)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -1022,90 +966,6 @@
 <div style="flex: 1;">
 <div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
 <div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="hoang-thi-kim-oanh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hoàng Thị Kim Oanh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 2 Lớp</div>
-</div>
-<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Chậm tiến độ Elearning</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Nhắc nhở học viên làm Elearning ngay trên lớp</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="luu-hoang-xuan-nguyen" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lưu Hoàng Xuân Nguyên</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 5 Lớp</div>
-</div>
-<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Tỷ lệ vắng mặt tăng</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Gắt gao điểm danh và liên hệ học viên</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="pham-tuan-binh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Tuấn Bình</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp</div>
-</div>
-<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Chậm tiến độ Elearning</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Nhắc nhở học viên làm Elearning ngay trên lớp</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="inh-thanh-nam" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Đinh Thành Nam</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 2 Lớp</div>
-</div>
-<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Chậm tiến độ Elearning</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Nhắc nhở học viên làm Elearning ngay trên lớp</div>
 </div>
 </div>
 </div>
@@ -1113,10 +973,10 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 id="ta-quang-tung" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Tạ Quang Tùng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 1 Lớp</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 1 Lớp (HN-K25-CNTT8)</div>
 </div>
-<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
 </div>
 </div>
 <div style="display: flex; gap: 12px; font-size: 0.85rem;">
@@ -1134,10 +994,10 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 id="le-van-hong" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lê Văn Hồng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 1 Lớp</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 1 Lớp (HN-K25-CNTT8)</div>
 </div>
-<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
 </div>
 </div>
 <div style="display: flex; gap: 12px; font-size: 0.85rem;">
@@ -1154,8 +1014,50 @@
 <div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
-<h4 id="le-ha-thanh-sang" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lê Hà Thanh Sang</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp</div>
+<h4 id="tran-quoc-tuan" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Trần Quốc Tuấn</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HCM-K25-CNTT6, HCM-K25-CNTT7, HCM-K25-CNTT8, HCM-K25-CNTT4, HCM-K25-CNTT1)</div>
+</div>
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Học viên lười làm bài tập</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Chữa bài tập kỹ hơn, giao task nhỏ gọn hơn</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="pham-ngoc-kien" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Ngọc Kiên</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT6, HN-K25-CNTT3, HN-K25-CNTT4)</div>
+</div>
+<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Học viên lười làm bài tập</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Chữa bài tập kỹ hơn, giao task nhỏ gọn hơn</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="trinh-quoc-hai" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Trịnh Quốc Hai</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-CNTT1, HN-K25-CNTT8, HN-K25-CNTT5)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -1175,8 +1077,134 @@
 <div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
-<h4 id="nguyen-ngoc-van-khanh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Ngọc Vân Khanh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp</div>
+<h4 id="nguyen-quang-an" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Quảng An</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT6, HN-K25-CNTT3, HN-K25-CNTT2, HN-K25-CNTT4)</div>
+</div>
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Kỷ luật ở mức trung bình ổn</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="pham-tuan-binh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Tuấn Bình</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT4, HN-K24-CNTT5, HN-K24-CNTT1, HN-K24-CNTT3)</div>
+</div>
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Chậm tiến độ Elearning</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Nhắc nhở học viên làm Elearning ngay trên lớp</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="inh-thanh-nam" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Đinh Thành Nam</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 2 Lớp (HN-K24-CNTT4, HN-K24-CNTT1)</div>
+</div>
+<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Chậm tiến độ Elearning</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Nhắc nhở học viên làm Elearning ngay trên lớp</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="luu-hoang-xuan-nguyen" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lưu Hoàng Xuân Nguyên</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 5 Lớp (HCM-K25-CNTT6, HCM-K25-CNTT7, HCM-K25-CNTT5, HCM-K25-CNTT8, HCM-K25-CNTT1)</div>
+</div>
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Tỷ lệ vắng mặt tăng</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Gắt gao điểm danh và liên hệ học viên</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="nguyen-cong-huong" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Công Hưởng</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K24-CNTT5, HN-K24-CNTT2, HN-K24-CNTT1)</div>
+</div>
+<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Học viên lười làm bài tập</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Chữa bài tập kỹ hơn, giao task nhỏ gọn hơn</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="ho-xuan-hung" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hồ Xuân Hùng</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K24-CNTT5, HN-K24-CNTT2, HN-K24-CNTT1)</div>
+</div>
+<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Tỷ lệ vắng mặt tăng</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Gắt gao điểm danh và liên hệ học viên</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="pham-minh-triet" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Minh Triết</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 2 Lớp (HCM-K25-CNTT6, HCM-K25-CNTT7)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -1197,7 +1225,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 id="nguyen-xuan-thuc" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Xuân Thức</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT6, HN-K25-CNTT3, HN-K25-CNTT2)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -1218,7 +1246,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 id="ngo-van-quy" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Ngọ Văn Quý</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT6, HN-K25-CNTT7, HN-K25-CNTT3, HN-K25-CNTT4)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -1238,50 +1266,8 @@
 <div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
-<h4 id="nguyen-cong-huong" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Công Hưởng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp</div>
-</div>
-<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Học viên lười làm bài tập</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Chữa bài tập kỹ hơn, giao task nhỏ gọn hơn</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="ho-xuan-hung" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hồ Xuân Hùng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp</div>
-</div>
-<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
-</div>
-</div>
-<div style="display: flex; gap: 12px; font-size: 0.85rem;">
-<div style="flex: 1;">
-<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
-<div style="color: #cbd5e1;">Học viên lười làm bài tập</div>
-</div>
-<div style="flex: 1;">
-<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
-<div style="color: #cbd5e1;">Chữa bài tập kỹ hơn, giao task nhỏ gọn hơn</div>
-</div>
-</div>
-</div>
-<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
-<div>
-<h4 id="le-thanh-ngoc" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lê Thành Ngọc</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 2 Lớp</div>
+<h4 id="le-ha-thanh-sang" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lê Hà Thanh Sang</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT2, HCM-K25-CNTT5, HCM-K25-CNTT8)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -1295,6 +1281,177 @@
 <div style="flex: 1;">
 <div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
 <div style="color: #cbd5e1;">Gắt gao điểm danh và liên hệ học viên</div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="khoi-quan-tri-kinh-doanh-qtkd">📊 Khối Quản trị Kinh doanh (QTKD)</h3>
+<div class="staff-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px;">
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="hoang-thi-hau" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hoàng Thị Hậu</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-QTKD3, HN-K25-CNTT4, HN-K25-CNTT6, HN-K25-QTKD1, HN-K25-CNTT5)</div>
+</div>
+<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="ang-quynh-trang" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Đặng Quỳnh Trang</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 1 Lớp (HN-K25-QTKD3)</div>
+</div>
+<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Tỷ lệ vắng mặt tăng</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Gắt gao điểm danh và liên hệ học viên</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="ngo-quang-huan" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Ngô Quang Huấn</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 7 Lớp (HN-K24-CNTT3, HN-K25-QTKD2, HN-K25-QTKD3, HN-K24-CNTT1, HN-K24-CNTT4, HN-K25-QTKD1, HN-K24-CNTT2)</div>
+</div>
+<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="lam-tung-duong" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lâm Tùng Dương</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HN-K25-CNTT7, HN-K25-QTKD2, HN-K25-QTKD3, HN-K25-CNTT4, HN-K25-CNTT2, HN-K25-QTKD1)</div>
+</div>
+<div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Không có (Kỷ luật cực tốt)</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Duy trì phong độ và chia sẻ kinh nghiệm cho nhóm</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="nguyen-thi-hong-minh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Thị Hồng Minh</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-CNTT1, HN-K25-CNTT3, HN-K25-QTKD2, HN-K25-QTKD3, HN-K25-CNTT2)</div>
+</div>
+<div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-check-circle"></i> Duy trì (Maintainers)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Kỷ luật ở mức trung bình ổn</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="hoang-thi-kim-oanh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hoàng Thị Kim Oanh</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 2 Lớp (HN-K25-QTKD1, HN-K25-QTKD2)</div>
+</div>
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Chậm tiến độ Elearning</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Nhắc nhở học viên làm Elearning ngay trên lớp</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="nguyen-ngoc-van-khanh" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Ngọc Vân Khanh</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-QTKD1, HN-K25-QTKD2, HN-K25-QTKD3)</div>
+</div>
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Kỷ luật ở mức trung bình ổn</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Cải thiện động lực học của sinh viên yếu kém</div>
+</div>
+</div>
+</div>
+<div class="staff-card" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
+<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
+<div>
+<h4 id="le-thanh-ngoc" style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lê Thành Ngọc</h4>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 2 Lớp (HN-K25-QTKD1, HN-K25-QTKD3)</div>
+</div>
+<div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+<i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
+</div>
+</div>
+<div style="display: flex; gap: 12px; font-size: 0.85rem;">
+<div style="flex: 1;">
+<div style="color: #ef4444; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-arrow-down"></i> Điểm Yếu</div>
+<div style="color: #cbd5e1;">Chậm tiến độ Elearning</div>
+</div>
+<div style="flex: 1;">
+<div style="color: #10b981; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-lightbulb"></i> Đề Xuất</div>
+<div style="color: #cbd5e1;">Nhắc nhở học viên làm Elearning ngay trên lớp</div>
 </div>
 </div>
 </div>
@@ -1317,25 +1474,59 @@
             "JavaAdvance",
             "JavaWeb",
             "JWS",
-            "AI"
+            "AI",
+            "Intergration"
         ],
         "cc": [
             31.53,
-            21.6,
-            6.99,
-            8.37
+            28.37,
+            12.22,
+            14.86,
+            0.0
         ],
         "bt": [
             14.71,
-            22.07,
-            4.76,
-            4.23
+            25.01,
+            9.78,
+            6.79,
+            0.0
         ],
         "el": [
             7.22,
-            21.55,
-            26.29,
-            7.74
+            27.96,
+            28.98,
+            8.54,
+            0.0
+        ]
+    },
+    "KS24_HCM": {
+        "courses": [
+            "JavaAdvance",
+            "JavaWeb",
+            "JWS",
+            "AI",
+            "Intergration"
+        ],
+        "cc": [
+            36.4,
+            7.95,
+            9.09,
+            2.27,
+            0.0
+        ],
+        "bt": [
+            16.99,
+            2.27,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "el": [
+            3.13,
+            15.91,
+            4.54,
+            2.27,
+            6.82
         ]
     },
     "HN": {
@@ -1347,21 +1538,21 @@
         ],
         "cc": [
             57.5,
-            19.72,
-            15.92,
-            10.8
+            25.63,
+            26.76,
+            21.15
         ],
         "bt": [
             44.22,
-            19.29,
-            11.9,
-            6.01
+            24.7,
+            14.51,
+            15.09
         ],
         "el": [
             32.21,
-            28.43,
-            23.72,
-            10.3
+            32.16,
+            26.48,
+            18.8
         ]
     },
     "HCM": {
@@ -1373,21 +1564,21 @@
         ],
         "cc": [
             50.67,
-            12.7,
-            20.88,
-            14.01
+            16.43,
+            34.7,
+            24.7
         ],
         "bt": [
             15.54,
-            14.2,
-            8.72,
-            7.37
+            17.56,
+            20.47,
+            25.43
         ],
         "el": [
             19.18,
-            24.74,
-            23.77,
-            10.47
+            22.93,
+            23.86,
+            17.63
         ]
     },
     "QTKD": {
@@ -1396,64 +1587,92 @@
             "M104",
             "DTB201",
             "DTB202",
-            "PRJ302"
+            "PRJ302",
+            "BA201"
         ],
         "cc": [
             31.7,
             12.42,
-            17.84,
+            28.97,
             23.13,
-            12.01
+            22.03,
+            0.0
         ],
         "bt": [
             9.07,
             3.5,
-            8.49,
+            18.68,
             5.35,
-            0.62
+            0.41,
+            0.0
         ],
         "el": [
             12.15,
             22.69,
-            58.67,
+            63.3,
             17.77,
-            0.0
+            0.0,
+            4.04
         ]
     },
     "compare": {
-        "HN": {
+        "KS24_HN": {
             "curr": [
-                17.64,
-                12.83,
-                15.32
+                0.0,
+                0.0,
+                0.0
             ],
             "prev": [
-                9.84,
-                6.5,
-                8.84
+                22.65,
+                17.77,
+                12.09
+            ]
+        },
+        "KS24_HCM": {
+            "curr": [
+                0.0,
+                0.0,
+                6.82
+            ],
+            "prev": [
+                24.73,
+                8.11,
+                4.06
+            ]
+        },
+        "HN": {
+            "curr": [
+                22.73,
+                17.96,
+                18.82
+            ],
+            "prev": [
+                20.63,
+                15.59,
+                17.52
             ]
         },
         "HCM": {
             "curr": [
-                23.46,
-                16.06,
-                15.85
+                26.3,
+                29.78,
+                17.63
             ],
             "prev": [
-                16.89,
-                6.29,
-                9.95
+                23.9,
+                23.26,
+                17.63
             ]
         },
         "QTKD": {
             "curr": [
-                23.58,
-                0.62,
-                0.0
+                0.0,
+                0.0,
+                4.04
             ],
             "prev": [
-                13.15,
-                0.74,
+                23.58,
+                0.62,
                 0.0
             ]
         }

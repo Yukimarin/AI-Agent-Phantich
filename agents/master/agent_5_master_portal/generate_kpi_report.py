@@ -7,6 +7,36 @@ import openpyxl
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
+def strip_accents(text):
+    import unicodedata
+    if not text:
+        return ""
+    text = unicodedata.normalize('NFD', text)
+    text = text.encode('ascii', 'ignore').decode("utf-8")
+    return text.strip().lower()
+
+# Load staff roles and ranks configuration
+staff_roles = {}
+rank_file_path = "data/inputs/staff_roles_ranks.md"
+if os.path.exists(rank_file_path):
+    with open(rank_file_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if "|" in line:
+                parts = [p.strip() for p in line.split("|")]
+                if len(parts) >= 2:
+                    raw_n = parts[0]
+                    if raw_n.startswith("-"):
+                        raw_n = raw_n[1:].strip()
+                    name_key = strip_accents(raw_n)
+                    role = parts[1]
+                    staff_roles[name_key] = role
+
+def get_resolved_role(name, fallback_role):
+    name_key = strip_accents(name)
+    if name_key in staff_roles:
+        return staff_roles[name_key]
+    return fallback_role
+
 excel_path = "data/inputs/PTIT_Chiso.xlsx"
 sql_script_path = "data/inputs/qldt.sql"
 db_path = "data/inputs/qldt.db"
@@ -132,10 +162,12 @@ sample_instructors = []
 print("Đang đọc dữ liệu chỉ số đào tạo bằng openpyxl...")
 wb = openpyxl.load_workbook(excel_path, data_only=True)
 
-target_sheets = [
-    'KS25_Python_Web',
-    'KS25_QTKD_PRJ302'
-]
+target_sheets = []
+for s_name in wb.sheetnames:
+    if s_name.lower() == 'sheet1':
+        continue
+    if any(k in s_name for k in ['KS24', 'KS25', 'SKL']):
+        target_sheets.append(s_name)
 
 instructors_data = {}
 
@@ -179,6 +211,10 @@ for sheet in target_sheets:
             
             numeric_vals = []
             for c in range(4, sheet_obj.max_column + 1):
+                col_letter = openpyxl.utils.get_column_letter(c)
+                dim = sheet_obj.column_dimensions.get(col_letter)
+                if dim and dim.hidden:
+                    continue
                 val = sheet_obj.cell(row=r, column=c).value
                 if isinstance(val, (int, float)) and val is not None:
                     numeric_vals.append(float(val))
@@ -189,13 +225,16 @@ for sheet in target_sheets:
             avg_violation = sum(numeric_vals) / len(numeric_vals)
             is_tg = (c_val is None or str(c_val).strip() == "")
             role = 'TG' if is_tg else 'GV'
+            resolved_role = get_resolved_role(name, role)
             
             if name not in instructors_data:
                 instructors_data[name] = {
-                    'Role': role,
+                    'Role': resolved_role,
                     'Classes': set(),
                     'ViolationRates': []
                 }
+            else:
+                instructors_data[name]['Role'] = resolved_role
             
             instructors_data[name]['Classes'].add(f"{current_class} ({sheet})")
             instructors_data[name]['ViolationRates'].append(avg_violation)
@@ -229,8 +268,9 @@ for log_name, log_info in daily_log_data.items():
             "trần minh cường": "Trần Minh Cường"
         }
         name_display = canon_names.get(log_name, log_name.title())
+        resolved_role = get_resolved_role(name_display, 'GV')
         instructors_data[name_display] = {
-            'Role': 'GV',
+            'Role': resolved_role,
             'Classes': set(),
             'ViolationRates': [0.0]
         }
@@ -479,4 +519,14 @@ with open(output_report_path, 'w', encoding='utf-8') as f:
             f.write(f"- **Đề xuất cải thiện cụ thể**:\n  - {p['Recommendations']}\n\n")
 
 print(f"KPI Report generated successfully at: {output_report_path}")
+
+# Copy to data/report_kpi_gv_tg.md to satisfy project requirements
+data_report_path = "data/report_kpi_gv_tg.md"
+try:
+    import shutil
+    shutil.copy2(output_report_path, data_report_path)
+    print(f"Successfully copied KPI report to: {data_report_path}")
+except Exception as e:
+    print(f"Warning: Could not copy report to {data_report_path}: {e}")
+
 conn.close()
