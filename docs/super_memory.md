@@ -20,6 +20,12 @@ Tài liệu này lưu trữ các quyết định thiết kế, lỗi thường g
     - Tích hợp nút **"🔄 Cập nhật dữ liệu"** cho Dashboard Agent 4 (`agent_4_daily_logs.html`) sử dụng cơ chế dynamic fetching từ file JSON payload cục bộ (`agent4_payload.json`) giúp cập nhật dữ liệu realtime mà không cần load lại trang.
 - **Quyết định chốt cấu trúc Báo cáo Agent 1 (Class KPI):** Toàn bộ cấu trúc báo cáo, logic trung bình có trọng số theo sỉ số lớp, cơ chế đối chiếu tuần linh hoạt (tự động lùi tuần học thực tế gần nhất, tự động so sánh chéo môn học liền kề dựa trên dòng thời gian dạy học) và cách phân khối CNTT/QTKD đã được chốt và đóng băng thiết kế. Từ các phiên làm việc sau, hệ thống sẽ duy trì giao diện này và chỉ nạp dữ liệu Excel mới nhất để cập nhật chỉ số hiển thị tự động.
 - **Quyết định chốt cấu trúc Báo cáo Agent 2 (Academic Predictor) (Aug 2026):** Tái cấu trúc Dashboard Agent 2 thành dạng 3 Tab SPA (Đánh giá & Giải pháp hệ thống, Phân tích Lớp học, Danh sách can thiệp). Tích hợp Slide-over Drawer tương tác trượt từ cạnh phải màn hình để xem thông tin drill-down lớp học chi tiết. Rút gọn lỗi tác nghiệp GV/TG thành tooltip tam giác cam tại chỗ thay vì accordion cũ. Loại bỏ hoàn toàn các thuật ngữ mang tính chất kỹ thuật AI.
+- **Quyết định chốt tái cấu trúc Action-Oriented v2.0 Agent 2 (13/08/2026):** Chuyển đổi toàn bộ triết lý trình bày báo cáo sang mô hình “Mỗi Tab phải trả lời một câu hỏi trung tâm và kết thúc bằng một Hành động rõ ràng”:
+  - **Tab 1:** Thay 2 cột Hạn chế/Giải pháp bằng 3 thẻ phân vai trò thực thi: GV/TG (24–48h) | GVCN/Cố vấn (tuần này) | PMO (điều phối). Mỗi mục đều gắn tên lớp/người cụ thể.
+  - **Tab 2:** Thêm cột Ưu tiên can thiệp (🔴 Khẩn / 🟡 Theo dõi / 🟢 Ổn định) tự động tính theo công thức `pred_new < 50% OR v_class > 20%`. Bảng tự sắp xếp Khẩn lên đầu. Drawer thêm phần Hành động cần thực hiện trước danh sách SV.
+  - **Tab 3:** Thay bảng phẳng bằng 4 Accordion Nhóm vấn đề: Ngưỡng Cấm thi | Học lực yếu | Bất thường Kỷ luật | Học giỏi - Kỷ luật kém (Paradox). Mỗi nhóm có ngữ cảnh và giải pháp đề xuất cụ thể. CSV xuất kèm cột “Nhóm can thiệp” và “Giải pháp đề xuất”.
+  - **Tiêu chí phân nhóm SV (classify_student):** (ưu tiên giảm dần) Khẩn (điều kiện: att > 20% hoặc el >= 2) → Paradox (flag) → Bất thường (flag copy/passive) → Học lực (mặc định).
+  - **Quy định ngôn từ:** Không sử dụng bất kỳ thuật ngữ mang tính AI (AI-based, Prediction Model, AI-predicted, ...) trên bất kỳ tab nào.
 
 ## 2. Kỹ thuật Xử lý Data & API
 - **Match Dự án Worklane:** 
