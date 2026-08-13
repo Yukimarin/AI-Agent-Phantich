@@ -33,13 +33,33 @@ def build_unified_prediction_dashboard(data, output_path):
             class_risks[cname] = []
         class_risks[cname].append(s)
 
+    def get_priority(c):
+        """Tính mức ưu tiên can thiệp cho từng lớp."""
+        if c.get('pred_new', 100.0) < 50.0 or c.get('v_class', 0.0) > 20.0:
+            return 'urgent'
+        elif c.get('pred_new', 100.0) < 70.0 or c.get('v_class', 0.0) > 10.0:
+            return 'watch'
+        return 'stable'
+
+    def render_priority_badge(priority):
+        if priority == 'urgent':
+            return '<span class="priority-badge urgent">🔴 Khẩn</span>'
+        elif priority == 'watch':
+            return '<span class="priority-badge watch">🟡 Theo dõi</span>'
+        return '<span class="priority-badge stable">🟢 Ổn định</span>'
+
     def make_class_rows(classes_list, is_cv=False):
+        # Sắp xếp theo mức ưu tiên (Khẩn lên đầu)
+        priority_order = {'urgent': 0, 'watch': 1, 'stable': 2}
+        if not is_cv:
+            classes_list = sorted(classes_list, key=lambda x: priority_order[get_priority(x)])
+
         rows_html = ""
         for idx, c in enumerate(classes_list):
             cname = c['class_name']
             risks = class_risks.get(cname, [])
             num_risks = len(risks)
-            
+
             # Cột cuối cùng (Hành động hoặc kết quả thực tế)
             if is_cv:
                 err_val = c['pred_old'] - c['actual_pass']
@@ -47,16 +67,19 @@ def build_unified_prediction_dashboard(data, output_path):
                 <td class="text-center font-mono font-bold">{c['actual_pass']:.1f}%</td>
                 <td class="text-center font-mono font-bold {'text-rose' if c['err'] > 10 else 'text-emerald'}">{err_val:+.1f}%</td>
                 """
+                priority_cell = ""
             else:
                 action_cell = f"""
                 <td class="text-center font-mono font-bold text-rose">{c['pred_new']:.1f}%</td>
                 """
-            
+                priority = get_priority(c)
+                priority_cell = f"<td class='text-center'>{render_priority_badge(priority)}</td>"
+
             # Lấy danh sách lỗi tác nghiệp của lớp này
             norm_cname = norm_c(cname)
             class_errs = class_violations.get(norm_cname, [])
             num_class_errs = len(class_errs)
-            
+
             # Icon cảnh báo GV/TG
             warning_icon_html = ""
             if not is_cv and num_class_errs > 0:
@@ -65,26 +88,25 @@ def build_unified_prediction_dashboard(data, output_path):
                     err_code = v.get('Error', 'GV-08')
                     err_counts[err_code] = err_counts.get(err_code, 0) + 1
                 err_summary = ", ".join([f"{err_counts[k]} lỗi {k}" for k in err_counts])
-                
                 warning_icon_html = f"""
                 <div class="tooltip-container">
                     <span style="color: var(--warning); font-size: 1.1rem;"><i class="fas fa-exclamation-triangle"></i></span>
                     <div class="tooltip-text">
                         <strong>Cảnh báo tác nghiệp ({err_summary}):</strong><br>
-                        Lớp học ghi nhận các lỗi giảng viên/trợ giảng vi phạm quy chế hành chính. Yêu cầu cập nhật điều chỉnh trên hệ thống QLĐT để đảm bảo quyền lợi học viên.
+                        Lớp học ghi nhận các lỗi giảng viên/trợ giảng vi phạm quy chế hành chính. Yêu cầu hiệu chỉnh trên hệ thống QLĐT để đảm bảo quyền lợi học viên.
                     </div>
                 </div>
                 """
             else:
                 warning_icon_html = """<span style="color: var(--success);"><i class="fas fa-check-circle"></i></span>"""
-            
+
             # Nút Chi tiết mở drawer
             detail_button = f"""
             <button onclick="openClassDrawer('{cname}', {str(is_cv).lower()})" class="btn-risk" style="background: var(--primary-light); color: var(--primary); border-color: rgba(99,102,241,0.2);">
                 <i class="fas fa-search"></i> Chi tiết
             </button>
             """
-                
+
             rows_html += f"""
             <tr>
                 <td class="font-mono font-bold">{cname}</td>
@@ -93,6 +115,7 @@ def build_unified_prediction_dashboard(data, output_path):
                 <td class="text-center font-mono" style="color: var(--text-muted);">{c['mult_env']:.2f}</td>
                 <td class="text-center font-mono font-bold" style="color: var(--text-muted);">{c['pred_old']:.1f}%</td>
                 {action_cell}
+                {priority_cell}
                 <td class="text-center">{warning_icon_html}</td>
                 <td class="text-right">{detail_button}</td>
             </tr>
@@ -124,21 +147,21 @@ def build_unified_prediction_dashboard(data, output_path):
         if cohort in teacher_violations_count:
             teacher_violations_count[cohort] += 1
             
-    # Generate automatic Action Plan items (Tab 1)
+    # ── Tab 1: Phân loại hành động theo vai trò ──────────────────────────────
     low_classes_items = []
     for cohort in ['KS25', 'KS24', 'QTKD']:
         for c in data['dashboard_data'].get(cohort, {}).get('curr', []):
             if c.get('pred_new', 100.0) < 60.0:
                 low_classes_items.append(c)
     low_classes_items.sort(key=lambda x: x.get('pred_new', 100.0))
-    
+
     high_viol_items = []
     for cohort in ['KS25', 'KS24', 'QTKD']:
         for c in data['dashboard_data'].get(cohort, {}).get('curr', []):
             if c.get('v_class', 0.0) > 15.0:
                 high_viol_items.append(c)
     high_viol_items.sort(key=lambda x: x.get('v_class', 0.0), reverse=True)
-    
+
     ops_err_items = []
     for v in teacher_violations:
         cls_name = v.get('Class', '')
@@ -146,90 +169,140 @@ def build_unified_prediction_dashboard(data, output_path):
         ops_err_items.append((cls_name, err_code))
     ops_err_items = list(set(ops_err_items))
 
-    limits_html = ""
-    solutions_html = ""
-    
-    for c in low_classes_items[:3]:
-        cname = c['class_name']
-        pred_val = c.get('pred_new', 0.0)
-        limits_html += f"""
-        <div class="action-item-card" style="border-left: 4px solid var(--danger); background: rgba(239, 68, 68, 0.03);">
-            <strong>Lớp {cname} có tỉ lệ đỗ dự kiến thấp:</strong><br>
-            Tỉ lệ đỗ dự kiến đạt <strong>{pred_val:.1f}%</strong> do ý thức kỷ luật hoặc học lực môn học trước sa sút.
-        </div>
-        """
-        solutions_html += f"""
-        <div class="action-item-card" style="border-left: 4px solid var(--danger); background: rgba(239, 68, 68, 0.03);">
-            <strong>Tổ chức phụ đạo lớp {cname}:</strong><br>
-            Yêu cầu Giảng viên/Trợ giảng tổ chức <strong>ít nhất 1 buổi phụ đạo/tuần</strong> ôn tập kiến thức nền cho nhóm sinh viên yếu.
-        </div>
-        """
-        
-    for c in high_viol_items[:3]:
-        cname = c['class_name']
-        v_val = c.get('v_class', 0.0)
-        limits_html += f"""
-        <div class="action-item-card" style="border-left: 4px solid var(--warning); background: rgba(245, 158, 11, 0.03);">
-            <strong>Lớp {cname} vi phạm kỷ luật cao ({v_val:.1f}%):</strong><br>
-            Tỷ lệ vắng mặt chuyên cần và nợ bài tập lớp vượt ngưỡng cảnh báo an toàn.
-        </div>
-        """
-        solutions_html += f"""
-        <div class="action-item-card" style="border-left: 4px solid var(--warning); background: rgba(245, 158, 11, 0.03);">
-            <strong>Siết chặt giờ giấc lớp {cname}:</strong><br>
-            Cố vấn học tập liên hệ nhắc nhở gia đình, giảng viên chấn chỉnh kỷ luật giờ giấc học tập đầu giờ học.
-        </div>
-        """
-        
-    for cls_name, err_code in ops_err_items[:3]:
-        limits_html += f"""
-        <div class="action-item-card" style="border-left: 4px solid #a855f7; background: rgba(168, 85, 247, 0.03);">
-            <strong>Lớp {cls_name} ghi nhận lỗi tác nghiệp {err_code}:</strong><br>
-            Phát hiện lỗi tích vắng sai hoặc quên điểm danh của giảng viên/trợ giảng.
-        </div>
-        """
-        solutions_html += f"""
-        <div class="action-item-card" style="border-left: 4px solid #a855f7; background: rgba(168, 85, 247, 0.03);">
-            <strong>Khắc phục dữ liệu lớp {cls_name}:</strong><br>
-            Yêu cầu Trợ giảng đối chiếu và hiệu chỉnh thông tin điểm danh chính xác trên hệ thống QLĐT.
-        </div>
-        """
-        
-    if not limits_html:
-        limits_html = """<div class="action-item-card">Không ghi nhận điểm nghẽn học vụ nổi bật nào.</div>"""
-        solutions_html = """<div class="action-item-card">Hệ thống học vụ vận hành ổn định.</div>"""
+    # Thẻ 🔴 GV/TG
+    gv_actions = []
+    for c in low_classes_items[:2]:
+        gv_actions.append(f"Lớp <strong>{c['class_name']}</strong>: Tổ chức buổi phụ đạo bổ sung — tỉ lệ đỗ hiện tại chỉ đạt <strong>{c.get('pred_new', 0):.1f}%</strong>.")
+    for cls_name, err_code in ops_err_items[:2]:
+        gv_actions.append(f"Lớp <strong>{cls_name}</strong>: Kiểm tra và hiệu chỉnh lỗi <strong>{err_code}</strong> trên hệ thống QLĐT ngay lập tức.")
+    if not gv_actions:
+        gv_actions = ["Không ghi nhận hành động cấp bách cần xử lý trong 24–48h."]
 
-    # Generate central Care List rows (Tab 3)
-    care_list_rows_html = ""
+    # Thẻ 🟡 GVCN/Cố vấn
+    gvcn_actions = []
+    red_sv_sample = [s for s in data['care_list'] if s['risk_level'] == 'RED' and s['att'] > 15]
+    for s in red_sv_sample[:3]:
+        gvcn_actions.append(f"Liên hệ gia đình <strong>{s['full_name']}</strong> ({s['class_name']}): Vắng <strong>{s['att']:.1f}%</strong> — có nguy cơ cấm thi.")
+    if high_viol_items:
+        top_viol = high_viol_items[0]
+        gvcn_actions.append(f"Nhắc nhở toàn lớp <strong>{top_viol['class_name']}</strong> về kỷ luật giờ giấc (vi phạm lớp đang ở mức <strong>{top_viol['v_class']:.1f}%</strong>).")
+    if not gvcn_actions:
+        gvcn_actions = ["Không có học viên nào cần liên hệ gia đình khẩn cấp trong tuần này."]
+
+    # Thẻ 🔵 PMO
+    pmo_actions = []
+    if low_classes_items:
+        pmo_actions.append(f"Điều phối hỗ trợ phụ đạo cho <strong>{len(low_classes_items)}</strong> lớp có tỉ lệ đỗ dự kiến dưới 60%.")
+    if ops_err_items:
+        pmo_actions.append(f"Xác nhận <strong>{len(set(v[0] for v in ops_err_items))}</strong> lỗi tác nghiệp GV/TG đã được hiệu chỉnh trên QLĐT trước cuối tuần.")
+    pmo_actions.append(f"Tổng cộng <strong>{red_count + yellow_count}</strong> học viên cần can thiệp — phân công GVCN phụ trách liên hệ theo danh sách ở Tab 3.")
+
+    def render_action_card(role_title, color_val, icon_cls, deadline_text, actions_list):
+        items_html = "".join(f"<li>{a}</li>" for a in actions_list)
+        return f"""
+        <div class="action-role-card" style="border-left: 4px solid {color_val};">
+            <div class="arc-header">
+                <div class="arc-icon" style="background: {color_val}22; color: {color_val};">
+                    <i class="{icon_cls}"></i>
+                </div>
+                <div>
+                    <div class="arc-title">{role_title}</div>
+                    <div class="arc-deadline">{deadline_text}</div>
+                </div>
+            </div>
+            <ul class="arc-list">{items_html}</ul>
+        </div>"""
+
+    gv_card_html  = render_action_card("🔴 Việc của Giảng viên / Trợ giảng",  "#f43f5e", "fas fa-chalkboard-teacher", "Cần thực hiện trong 24–48h", gv_actions)
+    gvcn_card_html = render_action_card("🟡 Việc của Cố vấn / GVCN",           "#f59e0b", "fas fa-user-friends",        "Cần thực hiện trong tuần này", gvcn_actions)
+    pmo_card_html  = render_action_card("🔵 Việc của PMO Điều phối",            "#3b82f6", "fas fa-sitemap",             "Giám sát & Phân bổ nguồn lực", pmo_actions)
+
+    # ── Tab 3: Phân nhóm sinh viên theo loại vấn đề ───────────────────────────
+    def classify_student(s):
+        anomalies = s.get('anomalies', [])
+        if s['att'] > 20.0 or s['el'] >= 2:
+            return 'ban_thi'
+        if 'discipline_paradox' in anomalies:
+            return 'paradox'
+        if 'copy_suspect' in anomalies or 'passive_learner' in anomalies:
+            return 'bat_thuong'
+        return 'hoc_luc'
+
+    groups = {
+        'ban_thi':    {'title': '🔴 Nguy cơ Cấm thi',          'color': '#f43f5e',
+                       'context': 'Học viên có thể không được vào phòng thi nếu không khắc phục ngay.',
+                       'solution': 'Yêu cầu học viên nộp đơn xin phép bổ sung. Cố vấn liên hệ gia đình trong 24h.',
+                       'students': []},
+        'hoc_luc':    {'title': '🟡 Học lực yếu',              'color': '#f59e0b',
+                       'context': 'Học viên có thể rớt môn dù không bị cấm thi.',
+                       'solution': 'Giảng viên sắp xếp gặp trực tiếp. Giao thêm bài luyện tập cơ bản trước buổi học tiếp theo.',
+                       'students': []},
+        'bat_thuong': {'title': '🟠 Bất thường Kỷ luật',       'color': '#f97316',
+                       'context': 'Học viên có hành vi đáng lo ngại cần xác minh thực tế.',
+                       'solution': 'Giảng viên kiểm tra trực tiếp trong buổi học gần nhất — yêu cầu giải thích bài tập miệng.',
+                       'students': []},
+        'paradox':    {'title': '🟣 Học giỏi — Kỷ luật kém',   'color': '#a855f7',
+                       'context': 'Học viên có năng lực tốt nhưng đang tự phá kỷ luật của mình.',
+                       'solution': 'GVCN gặp gỡ trao đổi về cam kết chuyên cần — đây không phải vấn đề năng lực.',
+                       'students': []},
+    }
     for s in data['care_list']:
-        sid = s['student_id']
-        name = s['full_name']
-        cname = s['class_name']
-        batch = s['batch']
-        p_final = s['p_final']
-        att = s['att']
-        hw = 100.0 - s['hw']
-        el = s['el']
-        risk = s['risk_level']
-        reasons = ", ".join(s['reasons'])
-        
-        badge_cls = "risk-badge-red" if risk == 'RED' else "risk-badge-yellow"
-        cohort_cls = "cntt" if "QTKD" not in cname else "qtkd"
-        risk_filter_cls = "filter-red" if risk == 'RED' else "filter-yellow"
-        
-        care_list_rows_html += f"""
-        <tr class="care-row {cohort_cls} {risk_filter_cls}">
-            <td class="font-mono">{batch}</td>
-            <td class="font-mono font-bold">{cname}</td>
-            <td class="font-bold">{name} ({sid})</td>
-            <td class="text-center font-mono font-bold {'text-rose' if risk == 'RED' else 'text-warning'}">{p_final:.1f}%</td>
-            <td class="text-center font-mono">{att:.1f}%</td>
-            <td class="text-center font-mono">{hw:.1f}%</td>
-            <td class="text-center font-mono">{el:.0f}</td>
-            <td><span class="{badge_cls}">{risk}</span></td>
-            <td style="font-size: 0.8rem; color: var(--text-muted);">{reasons}</td>
-        </tr>
-        """
+        gkey = classify_student(s)
+        groups[gkey]['students'].append(s)
+
+    accordion_html = ""
+    for gkey, gdata in groups.items():
+        count = len(gdata['students'])
+        if count == 0:
+            continue
+        student_rows = ""
+        for s in gdata['students']:
+            badge_cls = "risk-badge-red" if s['risk_level'] == 'RED' else "risk-badge-yellow"
+            hw_debt = 100.0 - s['hw']
+            student_rows += f"""
+            <tr>
+                <td class="font-mono">{s['batch']}</td>
+                <td class="font-mono font-bold">{s['class_name']}</td>
+                <td class="font-bold">{s['full_name']} <span style="color:var(--text-muted);font-size:0.75rem;">({s['student_id']})</span></td>
+                <td class="text-center font-mono font-bold {'text-rose' if s['risk_level'] == 'RED' else 'text-warning'}">{s['p_final']:.1f}%</td>
+                <td class="text-center font-mono">{s['att']:.1f}%</td>
+                <td class="text-center font-mono">{hw_debt:.1f}%</td>
+                <td class="text-center font-mono">{s['el']:.0f}</td>
+                <td><span class="{badge_cls}">{s['risk_level']}</span></td>
+            </tr>"""
+
+        solution_preview = gdata['solution'][:75] + ('...' if len(gdata['solution']) > 75 else '')
+        accordion_html += f"""
+        <div class="intervention-group">
+            <div class="ig-header" onclick="toggleGroup('{gkey}')">
+                <div class="ig-title-row">
+                    <span class="ig-title">{gdata['title']}</span>
+                    <span class="ig-count">{count} học viên</span>
+                </div>
+                <div class="ig-solution-preview">{solution_preview}</div>
+                <i class="fas fa-chevron-down ig-chevron" id="chev-{gkey}"></i>
+            </div>
+            <div class="ig-body" id="igbody-{gkey}" style="display:none;">
+                <div class="ig-context-box">
+                    <i class="fas fa-info-circle" style="flex-shrink:0;"></i>
+                    <span>{gdata['context']}</span>
+                </div>
+                <div class="ig-solution-box">
+                    <strong>📌 Giải pháp đề xuất:</strong> {gdata['solution']}
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead><tr>
+                            <th>Khóa</th><th>Lớp</th><th>Học viên</th>
+                            <th class="text-center">XS đỗ%</th><th class="text-center">Vắng%</th>
+                            <th class="text-center">Nợ bài%</th><th class="text-center">EL vi phạm</th>
+                            <th>Mức độ</th>
+                        </tr></thead>
+                        <tbody class="ig-rows" data-group="{gkey}">{student_rows}</tbody>
+                    </table>
+                </div>
+            </div>
+        </div>"""
 
     # Chuẩn bị dữ liệu cho biểu đồ Chart.js
     curr_classes = []
@@ -341,41 +414,140 @@ def build_unified_prediction_dashboard(data, output_path):
             display: block;
         }}
 
-        /* Action Plan Columns Style */
-        .action-plan-grid {{
+        /* Action Role Cards (Tab 1) */
+        .action-roles-grid {{
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 24px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 8px;
         }}
-        .action-plan-col {{
+        @media (max-width: 1000px) {{
+            .action-roles-grid {{ grid-template-columns: 1fr; }}
+        }}
+        .action-role-card {{
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 24px;
+            border-radius: 16px;
+            padding: 20px;
             box-shadow: var(--card-shadow);
         }}
-        .action-plan-col h3 {{
-            font-size: 1.1rem;
-            font-weight: 800;
-            margin-bottom: 16px;
+        .arc-header {{
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
             border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
         }}
-        .action-item-card {{
+        .arc-icon {{
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; flex-shrink: 0;
+        }}
+        .arc-title {{
+            font-size: 0.85rem; font-weight: 800; color: var(--text-main); line-height: 1.3;
+        }}
+        .arc-deadline {{
+            font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; font-weight: 600;
+        }}
+        .arc-list {{
+            list-style: none; padding: 0; margin: 0;
+            display: flex; flex-direction: column; gap: 8px;
+        }}
+        .arc-list li {{
+            font-size: 0.8rem; color: var(--text-main); line-height: 1.5;
+            padding: 10px 12px 10px 24px;
+            background: rgba(255,255,255,0.02);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
-            font-size: 0.85rem;
-            line-height: 1.5;
-            color: var(--text-main);
+            border-radius: 8px;
+            position: relative;
         }}
-        .action-item-card strong {{
-            color: #fff;
+        .arc-list li::before {{
+            content: "→";
+            position: absolute; left: 9px;
+            color: var(--text-muted);
+        }}
+
+        /* Priority Badge (Tab 2) */
+        .priority-badge {{
+            padding: 3px 9px; border-radius: 6px;
+            font-size: 0.7rem; font-weight: 700; white-space: nowrap;
+        }}
+        .priority-badge.urgent {{ background: rgba(244,63,94,0.15); color: var(--danger); }}
+        .priority-badge.watch  {{ background: rgba(245,158,11,0.15); color: var(--warning); }}
+        .priority-badge.stable {{ background: rgba(16,185,129,0.1);  color: var(--success); }}
+
+        /* Drawer action section */
+        .drawer-section-title {{
+            font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
+            color: var(--text-muted); margin: 0 0 8px; letter-spacing: 0.5px;
+        }}
+        .drawer-action-list {{
+            list-style:none; padding:0; margin:0 0 18px;
+            display:flex; flex-direction:column; gap:7px;
+        }}
+        .drawer-action-list li {{
+            font-size:0.8rem; padding:9px 12px;
+            background:rgba(59,130,246,0.06);
+            border:1px solid rgba(59,130,246,0.15);
+            border-radius:8px; line-height:1.4;
+        }}
+
+        /* Intervention Group Accordion (Tab 3) */
+        .intervention-group {{
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 14px;
+            box-shadow: var(--card-shadow);
+        }}
+        .ig-header {{
+            padding: 18px 22px;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.2s;
+        }}
+        .ig-header:hover {{ background: rgba(255,255,255,0.02); }}
+        .ig-title-row {{
+            display: flex; align-items: center; gap: 12px; margin-bottom: 5px;
+        }}
+        .ig-title {{
+            font-size: 0.95rem; font-weight: 800;
+        }}
+        .ig-count {{
+            font-size: 0.72rem; font-weight: 700;
+            padding: 2px 9px; border-radius: 20px;
+            background: rgba(255,255,255,0.06); color: var(--text-muted);
+        }}
+        .ig-solution-preview {{
+            font-size: 0.76rem; color: var(--text-muted);
+            line-height: 1.4; padding-right: 36px;
+        }}
+        .ig-chevron {{
+            position: absolute; right: 20px; top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.25s;
+            color: var(--text-muted);
+        }}
+        .ig-body {{
+            padding: 0 22px 18px;
+        }}
+        .ig-context-box {{
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 8px; padding: 10px 14px;
+            font-size: 0.78rem; color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex; gap: 8px; align-items: flex-start;
+        }}
+        .ig-solution-box {{
+            background: rgba(59,130,246,0.05);
+            border: 1px solid rgba(59,130,246,0.15);
+            border-radius: 8px; padding: 11px 14px;
+            font-size: 0.8rem; color: var(--text-main);
+            margin-bottom: 14px; line-height: 1.5;
         }}
 
         /* Tooltip style */
@@ -725,17 +897,12 @@ def build_unified_prediction_dashboard(data, output_path):
                 </div>
             </div>
 
-            <!-- Action Plan Grid -->
-            <h2>🎯 Hạn chế &amp; Giải pháp khắc phục (Đề xuất hệ thống)</h2>
-            <div class="action-plan-grid">
-                <div class="action-plan-col">
-                    <h3><i class="fas fa-search-minus" style="color: var(--danger);"></i> Các điểm nghẽn học vụ phát hiện</h3>
-                    {limits_html}
-                </div>
-                <div class="action-plan-col">
-                    <h3><i class="fas fa-toolbox" style="color: var(--success);"></i> Đề xuất hành động tức thời</h3>
-                    {solutions_html}
-                </div>
+            <!-- Action Role Cards -->
+            <h2 style="margin: 32px 0 16px; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">🎯 Kế hoạch Can thiệp Tuần này</h2>
+            <div class="action-roles-grid">
+                {gv_card_html}
+                {gvcn_card_html}
+                {pmo_card_html}
             </div>
         </div>
 
@@ -757,7 +924,8 @@ def build_unified_prediction_dashboard(data, output_path):
                                 <th class="text-center">Hệ số Env</th>
                                 <th class="text-center">Quy chuẩn cũ</th>
                                 <th class="text-center">Quy chế mới</th>
-                                <th class="text-center">Cảnh báo tác nghiệp</th>
+                                <th class="text-center">Ưu tiên</th>
+                                <th class="text-center">Tác nghiệp</th>
                                 <th class="text-right">Hành động</th>
                             </tr>
                         </thead>
@@ -784,7 +952,8 @@ def build_unified_prediction_dashboard(data, output_path):
                                 <th class="text-center">Hệ số Env</th>
                                 <th class="text-center">Quy chuẩn cũ</th>
                                 <th class="text-center">Quy chế mới</th>
-                                <th class="text-center">Cảnh báo tác nghiệp</th>
+                                <th class="text-center">Ưu tiên</th>
+                                <th class="text-center">Tác nghiệp</th>
                                 <th class="text-right">Hành động</th>
                             </tr>
                         </thead>
@@ -811,7 +980,8 @@ def build_unified_prediction_dashboard(data, output_path):
                                 <th class="text-center">Hệ số Env</th>
                                 <th class="text-center">Quy chuẩn cũ</th>
                                 <th class="text-center">Quy chế mới</th>
-                                <th class="text-center">Cảnh báo tác nghiệp</th>
+                                <th class="text-center">Ưu tiên</th>
+                                <th class="text-center">Tác nghiệp</th>
                                 <th class="text-right">Hành động</th>
                             </tr>
                         </thead>
@@ -823,41 +993,18 @@ def build_unified_prediction_dashboard(data, output_path):
             </div>
         </div>
 
-        <!-- TAB 3: CARE LIST CENTRAL -->
+        <!-- TAB 3: CARE LIST — PHÂN NHÓM CAN THIỆP -->
         <div id="tab-care-list" class="tab-content">
-            <div class="table-card">
-                <div class="table-header">
-                    <h3>Danh sách học viên cần can thiệp toàn khóa</h3>
-                    <div style="display: flex; gap: 8px; align-items: center;">
-                        <button class="filter-btn active" onclick="filterCareList('all')">Tất cả</button>
-                        <button class="filter-btn" onclick="filterCareList('red')" style="color: var(--danger);">Đỏ (Nguy cơ cao)</button>
-                        <button class="filter-btn" onclick="filterCareList('yellow')" style="color: var(--warning);">Vàng (Cảnh báo)</button>
-                        <button class="filter-btn" onclick="filterCareList('cntt')">Khối CNTT</button>
-                        <button class="filter-btn" onclick="filterCareList('qtkd')">Khối QTKD</button>
-                        <button class="filter-btn" onclick="exportCareListCSV()" style="background: var(--primary-light); color: var(--primary); margin-left: 16px;"><i class="fas fa-file-csv"></i> Xuất CSV</button>
-                    </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <div>
+                    <h2 style="font-size: 1.1rem; font-weight: 800;">Danh sách học viên cần can thiệp toàn khóa</h2>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Phân loại theo nhóm vấn đề — nhấn vào từng nhóm để xem chi tiết và giải pháp đề xuất</p>
                 </div>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Khóa</th>
-                                <th>Lớp học</th>
-                                <th>Học viên</th>
-                                <th class="text-center">XS đỗ%</th>
-                                <th class="text-center">Vắng chuyên cần%</th>
-                                <th class="text-center">Nợ bài tập%</th>
-                                <th class="text-center">Elearning vi phạm</th>
-                                <th>Mức độ</th>
-                                <th>Lý do &amp; Dấu hiệu cảnh báo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {care_list_rows_html}
-                        </tbody>
-                    </table>
-                </div>
+                <button onclick="exportCareListCSV()" class="btn-risk" style="background: var(--primary-light); color: var(--primary); padding: 10px 18px; font-size: 0.82rem;">
+                    <i class="fas fa-file-csv"></i> Xuất CSV
+                </button>
             </div>
+            {accordion_html}
         </div>
 
     </div>
@@ -880,149 +1027,121 @@ def build_unified_prediction_dashboard(data, output_path):
         const rawClassRisks = {json.dumps(class_risks)};
         const rawClassViolations = {json.dumps(class_violations)};
         const rawAllCareList = {json.dumps(data['care_list'])};
-        
+        const groupMeta = {json.dumps({k: {'title': v['title'], 'solution': v['solution']} for k, v in groups.items()})};
+
         function switchTab(tabId) {{
             document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
             event.currentTarget.classList.add('active');
-            
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
             document.getElementById('tab-' + tabId).classList.add('active');
         }}
 
+        // ── Accordion Toggle (Tab 3) ────────────────────────────────────────────
+        function toggleGroup(gkey) {{
+            const body = document.getElementById('igbody-' + gkey);
+            const chev = document.getElementById('chev-' + gkey);
+            const isOpen = body.style.display !== 'none';
+            body.style.display = isOpen ? 'none' : 'block';
+            chev.style.transform = isOpen ? 'translateY(-50%)' : 'translateY(-50%) rotate(180deg)';
+        }}
+
+        // ── Drawer (Tab 2) ─────────────────────────────────────────────────────
         function openClassDrawer(className, isCv) {{
-            document.getElementById('drawer-title').innerText = "Rà soát lớp: " + className;
+            document.getElementById('drawer-title').innerText = 'Rà soát lớp: ' + className;
             const contentDiv = document.getElementById('drawer-body');
             contentDiv.innerHTML = '';
-            
-            // 1. Render lỗi tác nghiệp GV
+
             const errs = rawClassViolations[className] || rawClassViolations[className.replace('KS', 'K')] || [];
-            if (errs.length > 0) {{
-                let errHtml = `<div class="class-violation-alert" style="margin-bottom: 20px;">
-                    <i class="fas fa-exclamation-triangle" style="font-size: 1.2rem; margin-right: 8px; color: var(--warning);"></i>
-                    <div>
-                        <strong style="color:var(--warning);">Cảnh báo tác nghiệp đào tạo:</strong><br>
-                        Ghi nhận ${{errs.length}} lỗi vi phạm quy chế. Yêu cầu rà soát và hiệu chỉnh dữ liệu trên QLĐT ngay lập tức.
-                    </div>
-                </div>`;
-                contentDiv.innerHTML += errHtml;
-            }}
-            
-            // 2. Render Care List sinh viên của lớp
             const students = rawClassRisks[className] || [];
+
+            // Phần Hành động cần thực hiện
+            let actionsHtml = `<div class="drawer-section-title">📋 Hành động cần thực hiện</div><ul class="drawer-action-list">`;
+            const redSv = students.filter(s => s.risk_level === 'RED');
+            if (redSv.length > 0)
+                actionsHtml += `<li>Gặp trực tiếp <strong>${{redSv.length}}</strong> học viên Báo động Đỏ trước buổi học tuần tới.</li>`;
+            if (errs.length > 0)
+                actionsHtml += `<li>Hiệu chỉnh <strong>${{errs.length}}</strong> lỗi tác nghiệp trên hệ thống QLĐT.</li>`;
+            if (redSv.length === 0 && errs.length === 0)
+                actionsHtml += `<li style="color:var(--success);">Lớp học đang vận hành ổn định — tiếp tục duy trì.</li>`;
+            actionsHtml += `</ul>`;
+            contentDiv.innerHTML = actionsHtml;
+
+            // Cảnh báo tác nghiệp
+            if (errs.length > 0) {{
+                contentDiv.innerHTML += `<div class="class-violation-alert" style="margin-bottom: 18px;">
+                    <i class="fas fa-exclamation-triangle" style="font-size:1.1rem;color:var(--warning);"></i>
+                    <div><strong style="color:var(--warning);">Cảnh báo tác nghiệp:</strong><br>
+                    Ghi nhận ${{errs.length}} lỗi vi phạm quy chế. Yêu cầu hiệu chỉnh dữ liệu trên QLĐT ngay lập tức.</div>
+                </div>`;
+            }}
+
+            // Học viên nguy cơ
             if (students.length > 0) {{
-                let stHtml = `<div class="risk-details-header" style="margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; color: var(--danger); display:flex; justify-content:space-between; font-size:0.8rem; font-weight:bold;">
-                    <span><i class="fas fa-user-shield"></i> Học viên cần hỗ trợ</span>
-                    <span>Tổng số: ${{students.length}} SV</span>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 12px;">`;
-                
+                let stHtml = `<div class="drawer-section-title" style="margin-top:4px;">👥 Học viên cần hỗ trợ (${{students.length}} SV)</div>
+                <div style="display:flex;flex-direction:column;gap:10px;">`;
                 students.forEach(s => {{
                     const borderClass = s.risk_level === 'RED' ? 'red-border' : 'yellow-border';
                     let pills = '';
                     if (s.att > 15) pills += `<span class="student-metric-pill red-pill"><i class="fas fa-user-slash"></i> Vắng: ${{s.att.toFixed(1)}}%</span>`;
                     else if (s.att > 0) pills += `<span class="student-metric-pill yellow-pill"><i class="fas fa-user-clock"></i> Vắng: ${{s.att.toFixed(1)}}%</span>`;
-                    
                     const hwDebt = 100 - s.hw;
                     if (hwDebt > 30) pills += `<span class="student-metric-pill red-pill"><i class="fas fa-tasks"></i> Nợ bài: ${{hwDebt.toFixed(1)}}%</span>`;
                     else if (hwDebt > 15) pills += `<span class="student-metric-pill yellow-pill"><i class="fas fa-tasks"></i> Nợ bài: ${{hwDebt.toFixed(1)}}%</span>`;
-                    
-                    if (s.el >= 2) pills += `<span class="student-metric-pill red-pill"><i class="fas fa-clock"></i> EL trễ: ${{s.el}}</span>`;
-                    else if (s.el >= 1) pills += `<span class="student-metric-pill yellow-pill"><i class="fas fa-clock"></i> EL trễ: ${{s.el}}</span>`;
-                    
+                    if (s.el >= 2) pills += `<span class="student-metric-pill red-pill"><i class="fas fa-clock"></i> EL: ${{s.el}}</span>`;
+                    else if (s.el >= 1) pills += `<span class="student-metric-pill yellow-pill"><i class="fas fa-clock"></i> EL: ${{s.el}}</span>`;
                     if (s.anomalies) {{
                         s.anomalies.forEach(anom => {{
                             if (anom === 'copy_suspect') pills += `<span class="student-metric-pill red-pill"><i class="fas fa-copy"></i> Copy?</span>`;
-                            else if (anom === 'discipline_paradox') pills += `<span class="student-metric-pill" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.2);"><i class="fas fa-brain"></i> KL kém</span>`;
-                            else if (anom === 'passive_learner') pills += `<span class="student-metric-pill" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.2);"><i class="fas fa-mouse-pointer"></i> Học vẹt</span>`;
-                            else if (anom === 'sudden_drop') pills += `<span class="student-metric-pill" style="color: #f43f5e; border-color: rgba(244, 63, 94, 0.2);"><i class="fas fa-chart-line"></i> Sụt phong độ</span>`;
+                            else if (anom === 'discipline_paradox') pills += `<span class="student-metric-pill" style="color:#c084fc;border-color:rgba(168,85,247,0.2);"><i class="fas fa-brain"></i> KL kém</span>`;
+                            else if (anom === 'passive_learner') pills += `<span class="student-metric-pill" style="color:#60a5fa;border-color:rgba(96,165,250,0.2);"><i class="fas fa-mouse-pointer"></i> Học vẹt</span>`;
                         }});
                     }}
-                    
-                    stHtml += `
-                    <div class="student-risk-card ${{borderClass}}" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-left-width: 3px; border-radius: 8px; padding: 12px; display:flex; flex-direction:column; gap:8px;">
-                        <div class="student-card-header" style="display:flex; justify-content:space-between; align-items:center;">
-                            <span class="student-name" style="font-weight:bold; font-size:0.85rem; color:#fff;">${{s.full_name}}</span>
-                            <span class="student-id" style="font-size:0.7rem; color:var(--text-muted); background:rgba(255,255,255,0.05); padding:1px 4px; border-radius:3px;">${{s.student_id}}</span>
+                    stHtml += `<div class="student-risk-card ${{borderClass}}" style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-left-width:3px;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;">
+                            <span style="font-weight:bold;font-size:0.85rem;color:#fff;">${{s.full_name}}</span>
+                            <span style="font-size:0.7rem;color:var(--text-muted);background:rgba(255,255,255,0.05);padding:1px 4px;border-radius:3px;">${{s.student_id}}</span>
                         </div>
-                        <div class="student-card-body" style="display:flex; flex-wrap:wrap; gap:6px;">
-                            ${{pills}}
-                        </div>
-                        <div style="font-size:0.75rem; color:var(--text-muted); line-height:1.4;">
-                            <strong>Lý do chính:</strong> ${{s.reasons.join(', ')}}
-                        </div>
+                        <div style="display:flex;flex-wrap:wrap;gap:6px;">${{pills}}</div>
+                        <div style="font-size:0.75rem;color:var(--text-muted);">${{s.reasons.join(', ')}}</div>
                     </div>`;
                 }});
                 stHtml += `</div>`;
                 contentDiv.innerHTML += stHtml;
             }} else {{
-                contentDiv.innerHTML += `<div style="text-align:center; padding: 40px; color: var(--text-muted);">
-                    <i class="fas fa-check-circle" style="font-size: 2.2rem; color: var(--success); margin-bottom: 12px;"></i><br>
-                    Lớp học này không có học viên thuộc nhóm nguy cơ cần hỗ trợ.
-                </div>`;
+                contentDiv.innerHTML += `<div style="text-align:center;padding:32px;color:var(--text-muted);">
+                    <i class="fas fa-check-circle" style="font-size:2rem;color:var(--success);margin-bottom:10px;"></i><br>
+                    Lớp học này không có học viên thuộc nhóm nguy cơ cần hỗ trợ.</div>`;
             }}
-            
+
             document.getElementById('class-drawer').classList.add('open');
             document.getElementById('drawer-backdrop').style.display = 'block';
         }}
-        
+
         function closeClassDrawer() {{
             document.getElementById('class-drawer').classList.remove('open');
             document.getElementById('drawer-backdrop').style.display = 'none';
         }}
 
-        function filterCareList(type) {{
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-            
-            const rows = document.querySelectorAll('.care-row');
-            rows.forEach(row => {{
-                let show = false;
-                if (type === 'all') {{
-                    show = true;
-                }} else if (type === 'red') {{
-                    show = row.classList.contains('filter-red');
-                }} else if (type === 'yellow') {{
-                    show = row.classList.contains('filter-yellow');
-                }} else if (type === 'cntt') {{
-                    show = row.classList.contains('cntt');
-                }} else if (type === 'qtkd') {{
-                    show = row.classList.contains('qtkd');
-                }}
-                row.style.display = show ? 'table-row' : 'none';
-            }});
-        }}
-
+        // ── Export CSV với cột Nhóm can thiệp & Giải pháp ─────────────────────
         function exportCareListCSV() {{
-            const rows = document.querySelectorAll('.care-row');
-            let csvContent = "\\ufeff"; 
-            csvContent += "Khóa,Lớp học,Học viên,Xác suất đỗ (%),Vắng chuyên cần (%),Nợ bài tập (%),Elearning trễ,Mức độ nguy cơ,Lý do chính\\n";
-            
-            rows.forEach(row => {{
-                if (row.style.display !== 'none') {{
+            let csv = '\\ufeffKhóa,Lớp,Học viên,XS đỗ%,Vắng%,Nợ bài%,EL vi phạm,Mức độ,Nhóm can thiệp,Giải pháp đề xuất\\n';
+            document.querySelectorAll('.ig-rows').forEach(tbody => {{
+                const gkey = tbody.dataset.group;
+                const title = (groupMeta[gkey] || {{}}).title || gkey;
+                const sol   = ((groupMeta[gkey] || {{}}).solution || '').replace(/"/g, '""');
+                tbody.querySelectorAll('tr').forEach(row => {{
                     const cols = row.querySelectorAll('td');
-                    let batch = cols[0].innerText;
-                    let cname = cols[1].innerText;
-                    let student = cols[2].innerText.replace(/"/g, '""');
-                    let p_final = cols[3].innerText;
-                    let att = cols[4].innerText;
-                    let hw = cols[5].innerText;
-                    let el = cols[6].innerText;
-                    let risk = cols[7].innerText;
-                    let reasons = cols[8].innerText.replace(/"/g, '""');
-                    
-                    csvContent += `"${{batch}}","${{cname}}","${{student}}","${{p_final}}","${{att}}","${{hw}}","${{el}}","${{risk}}","${{reasons}}"\\n`;
-                }}
+                    if (cols.length < 8) return;
+                    csv += `"${{cols[0].innerText}}","${{cols[1].innerText}}","${{cols[2].innerText.replace(/"/g,'""')}}",`;
+                    csv += `"${{cols[3].innerText}}","${{cols[4].innerText}}","${{cols[5].innerText}}","${{cols[6].innerText}}","${{cols[7].innerText}}",`;
+                    csv += `"${{title}}","${{sol}}"\\n`;
+                }});
             }});
-            
-            const blob = new Blob([csvContent], {{ type: 'text/csv;charset=utf-8;' }});
-            const link = document.createElement("a");
-            const url = URL.createObjectURL(blob);
-            link.setAttribute("href", url);
-            link.setAttribute("download", "Care_List_Sinh_Vien_Nguy_Co.csv");
-            link.style.visibility = 'hidden';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            const blob = new Blob([csv], {{type:'text/csv;charset=utf-8;'}});
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'Care_List_Phan_Nhom_Can_Thiep.csv';
+            document.body.appendChild(link); link.click(); document.body.removeChild(link);
         }}
 
         // Data from Python backend
