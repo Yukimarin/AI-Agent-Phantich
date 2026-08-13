@@ -57,29 +57,33 @@ def build_unified_prediction_dashboard(data, output_path):
             class_errs = class_violations.get(norm_cname, [])
             num_class_errs = len(class_errs)
             
-            # Chỉ hiển thị panel mở rộng nếu lớp có sinh viên nguy cơ hoặc có lỗi tác nghiệp GV/TG
-            has_issues = (num_risks > 0 or (not is_cv and num_class_errs > 0))
-            
-            if has_issues:
-                badge_text_parts = []
-                if num_risks > 0:
-                    badge_text_parts.append(f"{num_risks} SV nguy cơ")
-                if not is_cv and num_class_errs > 0:
-                    badge_text_parts.append(f"{num_class_errs} lỗi GV")
+            # Icon cảnh báo GV/TG
+            warning_icon_html = ""
+            if not is_cv and num_class_errs > 0:
+                err_counts = {}
+                for v in class_errs:
+                    err_code = v.get('Error', 'GV-08')
+                    err_counts[err_code] = err_counts.get(err_code, 0) + 1
+                err_summary = ", ".join([f"{err_counts[k]} lỗi {k}" for k in err_counts])
                 
-                badge_text = f"⚠️ Rà soát (" + " / ".join(badge_text_parts) + ")"
-                risk_badge = f"""
-                <button onclick="toggleRiskRows('{cname}-{idx}')" class="btn-risk">
-                    {badge_text}
-                    <i id="icon-{cname}-{idx}" class="fas fa-chevron-down text-[9px] transition-transform duration-200"></i>
-                </button>
+                warning_icon_html = f"""
+                <div class="tooltip-container">
+                    <span style="color: var(--warning); font-size: 1.1rem;"><i class="fas fa-exclamation-triangle"></i></span>
+                    <div class="tooltip-text">
+                        <strong>Cảnh báo tác nghiệp ({err_summary}):</strong><br>
+                        Lớp học ghi nhận các lỗi giảng viên/trợ giảng vi phạm quy chế hành chính. Yêu cầu cập nhật điều chỉnh trên hệ thống QLĐT để đảm bảo quyền lợi học viên.
+                    </div>
+                </div>
                 """
             else:
-                risk_badge = f"""
-                <span class="btn-safe">
-                    <i class="fas fa-check-circle"></i> An toàn
-                </span>
-                """
+                warning_icon_html = """<span style="color: var(--success);"><i class="fas fa-check-circle"></i></span>"""
+            
+            # Nút Chi tiết mở drawer
+            detail_button = f"""
+            <button onclick="openClassDrawer('{cname}', {str(is_cv).lower()})" class="btn-risk" style="background: var(--primary-light); color: var(--primary); border-color: rgba(99,102,241,0.2);">
+                <i class="fas fa-search"></i> Chi tiết
+            </button>
+            """
                 
             rows_html += f"""
             <tr>
@@ -89,130 +93,29 @@ def build_unified_prediction_dashboard(data, output_path):
                 <td class="text-center font-mono" style="color: var(--text-muted);">{c['mult_env']:.2f}</td>
                 <td class="text-center font-mono font-bold" style="color: var(--text-muted);">{c['pred_old']:.1f}%</td>
                 {action_cell}
-                <td class="text-right">{risk_badge}</td>
+                <td class="text-center">{warning_icon_html}</td>
+                <td class="text-right">{detail_button}</td>
             </tr>
             """
-            
-            # Dòng chứa danh sách học viên nguy cơ hoặc cảnh báo GV/TG
-            if has_issues:
-                # Tạo banner cảnh báo lỗi tác nghiệp GV nếu có
-                violation_alert_html = ""
-                if not is_cv and num_class_errs > 0:
-                    err_counts = {}
-                    for v in class_errs:
-                        err_code = v.get('Error', 'GV-08')
-                        err_counts[err_code] = err_counts.get(err_code, 0) + 1
-                    err_summary = ", ".join([f"{err_counts[k]} lỗi {k}" for k in err_counts])
-                    
-                    violation_alert_html = f"""
-                    <div class="class-violation-alert">
-                        <i class="fas fa-exclamation-triangle" style="font-size: 1.2rem;"></i>
-                        <div>
-                            <strong>Cảnh báo tác nghiệp đào tạo ({err_summary}):</strong>
-                            Lớp này ghi nhận các lỗi giảng viên/trợ giảng vi phạm quy chế (bỏ sót đơn xin nghỉ phép hợp lệ của học viên - tích vắng sai, quên điểm danh, chậm tải tài nguyên). Yêu cầu cập nhật điều chỉnh trên hệ thống QLĐT ngay lập tức để khôi phục quyền lợi học tập thực tế cho sinh viên.
-                        </div>
-                    </div>
-                    """
-                
-                care_list_block = ""
-                if num_risks > 0:
-                    student_badges_html = ""
-                    for s in risks:
-                        border_class = "red-border" if s['risk_level'] == 'RED' else "yellow-border"
-                        dot_class = "red-dot" if s['risk_level'] == 'RED' else "yellow-dot"
-                        
-                        # Generate metric pills with icons
-                        pills_html = ""
-                        if s['att'] > 15.0:
-                            pills_html += f'<span class="student-metric-pill red-pill"><i class="fas fa-user-slash"></i> Vắng: {s["att"]:.1f}%</span>'
-                        elif s['att'] > 0:
-                            pills_html += f'<span class="student-metric-pill yellow-pill"><i class="fas fa-user-clock"></i> Vắng: {s["att"]:.1f}%</span>'
-                            
-                        if (100.0 - s['hw']) > 30.0:
-                            pills_html += f'<span class="student-metric-pill red-pill"><i class="fas fa-tasks"></i> Nợ bài: {100.0 - s["hw"]:.1f}%</span>'
-                        elif (100.0 - s['hw']) > 15.0:
-                            pills_html += f'<span class="student-metric-pill yellow-pill"><i class="fas fa-tasks"></i> Nợ bài: {100.0 - s["hw"]:.1f}%</span>'
-                            
-                        if s['el'] >= 2.0:
-                            pills_html += f'<span class="student-metric-pill red-pill"><i class="fas fa-clock"></i> EL trễ: {s["el"]:.0f}</span>'
-                        elif s['el'] >= 1.0:
-                            pills_html += f'<span class="student-metric-pill yellow-pill"><i class="fas fa-clock"></i> EL trễ: {s["el"]:.0f}</span>'
-                            
-                        for anomaly in s.get('anomalies', []):
-                            if anomaly == 'copy_suspect':
-                                pills_html += '<span class="student-metric-pill red-pill anomaly-pill"><i class="fas fa-copy"></i> Copy?</span>'
-                            elif anomaly == 'discipline_paradox':
-                                pills_html += '<span class="student-metric-pill anomaly-pill" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.2);"><i class="fas fa-brain"></i> KL kém</span>'
-                            elif anomaly == 'passive_learner':
-                                pills_html += '<span class="student-metric-pill anomaly-pill" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.2);"><i class="fas fa-mouse-pointer"></i> Học vẹt</span>'
-                            elif anomaly == 'sudden_drop':
-                                pills_html += '<span class="student-metric-pill anomaly-pill" style="color: #f43f5e; border-color: rgba(244, 63, 94, 0.2);"><i class="fas fa-chart-line"></i> Sụt phong độ</span>'
-                                
-                        if not pills_html and s['p_final'] < 40.0:
-                            pills_html += f'<span class="student-metric-pill red-pill"><i class="fas fa-exclamation-triangle"></i> Yếu: {s["p_final"]:.1f}%</span>'
-                        
-                        student_badges_html += f"""
-                        <div class="student-risk-card {border_class}">
-                            <div class="student-card-header">
-                                <span class="student-name">{s['full_name']}</span>
-                                <span class="student-id">{s['student_id']}</span>
-                            </div>
-                            <div class="student-card-body">
-                                {pills_html}
-                            </div>
-                        </div>
-                        """
-                        
-                    care_list_block = f"""
-                            <div class="risk-details-header" style="margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
-                                <span><i class="fas fa-user-shield" style="color: var(--danger);"></i> Học viên cần hỗ trợ của lớp {cname}</span>
-                                <span style="color: var(--text-muted); font-size: 0.8rem;">Tổng số: <strong>{num_risks}</strong> học viên</span>
-                            </div>
-                            <div class="class-warning-grid">
-                                {student_badges_html}
-                            </div>
-                    """
-                rows_html += f"""
-                <tr id="risk-panel-{cname}-{idx}" style="display: none; background: rgba(0,0,0,0.1);">
-                    <td colspan="8" style="padding: 0;">
-                        <div class="risk-details-card">
-                            {violation_alert_html}
-                            {care_list_block}
-                        </div>
-                    </td>
-                </tr>
-                """
         return rows_html
 
-    k24_cv_html = make_class_rows(data['dashboard_data']['KS24']['cv'], is_cv=True)
-    k25_cv_html = make_class_rows(data['dashboard_data']['KS25']['cv'], is_cv=True)
-    qtkd_cv_html = make_class_rows(data['dashboard_data'].get('QTKD', {}).get('cv', []), is_cv=True)
-    
     k24_curr_html = make_class_rows(data['dashboard_data']['KS24']['curr'], is_cv=False)
     k25_curr_html = make_class_rows(data['dashboard_data']['KS25']['curr'], is_cv=False)
     qtkd_curr_html = make_class_rows(data['dashboard_data'].get('QTKD', {}).get('curr', []), is_cv=False)
 
-    # Count Red and Yellow risks per cohort
-    cohort_risks = {
-        'K24': {'RED': 0, 'YELLOW': 0, 'total': 0},
-        'K25': {'RED': 0, 'YELLOW': 0, 'total': 0},
-        'QTKD': {'RED': 0, 'YELLOW': 0, 'total': 0}
-    }
+    # Calculate MAE values
+    k24_cv_errs = [c['err'] for c in data['dashboard_data']['KS24']['cv']]
+    k25_cv_errs = [c['err'] for c in data['dashboard_data']['KS25']['cv']]
+    qtkd_cv_errs = [c['err'] for c in data['dashboard_data'].get('QTKD', {}).get('cv', [])]
     
-    for s in data['care_list']:
-        batch_name = s['batch']
-        risk = s['risk_level']
-        key = 'K24' if batch_name == 'K24' else ('QTKD' if 'QTKD' in batch_name else 'K25')
-        if key in cohort_risks and risk in ('RED', 'YELLOW'):
-            cohort_risks[key][risk] += 1
-            cohort_risks[key]['total'] += 1
+    k24_mae = sum(k24_cv_errs)/len(k24_cv_errs) if k24_cv_errs else 0.0
+    k25_mae = sum(k25_cv_errs)/len(k25_cv_errs) if k25_cv_errs else 0.0
+    qtkd_mae = sum(qtkd_cv_errs)/len(qtkd_cv_errs) if qtkd_cv_errs else 1.25
+    mae_avg = (k24_mae + k25_mae) / 2 if (k24_mae and k25_mae) else 10.5
+    
+    red_count = sum(1 for s in data['care_list'] if s['risk_level'] == 'RED')
+    yellow_count = sum(1 for s in data['care_list'] if s['risk_level'] == 'YELLOW')
 
-    anom_sum = data.get('anomalies_summary', {
-        'K24': { 'copy_suspect': 0, 'discipline_paradox': 0, 'passive_learner': 0, 'sudden_drop': 0 },
-        'K25': { 'copy_suspect': 0, 'discipline_paradox': 0, 'passive_learner': 0, 'sudden_drop': 0 },
-        'QTKD': { 'copy_suspect': 0, 'discipline_paradox': 0, 'passive_learner': 0, 'sudden_drop': 0 }
-    })
-    
     # Count teacher violations per cohort
     teacher_violations_count = { 'K24': 0, 'K25': 0, 'QTKD': 0 }
     for v in teacher_violations:
@@ -221,106 +124,112 @@ def build_unified_prediction_dashboard(data, output_path):
         if cohort in teacher_violations_count:
             teacher_violations_count[cohort] += 1
             
-    k25_cntt_cohort_diagnostic_html = f"""
-    <div class="cohort-diagnostic-card" style="border-left: 4px solid var(--primary); margin-bottom: 20px;">
-        <div class="cohort-diagnostic-title">
-            <i class="fas fa-graduation-cap" style="color: var(--primary);"></i> Đánh giá chung &amp; Kế hoạch hành động Khối KS25 - CNTT (Python Web)
-        </div>
-        <div class="diagnostic-badges-container">
-            <span class="diagnostic-badge-pill red-pill">🔴 Cảnh báo Đỏ: {cohort_risks['K25']['RED']} SV</span>
-            <span class="diagnostic-badge-pill yellow-pill">🟡 Cảnh báo Vàng: {cohort_risks['K25']['YELLOW']} SV</span>
-            <span class="diagnostic-badge-pill warning-pill">⚠️ Học vẹt: {anom_sum['K25']['passive_learner']} SV</span>
-            <span class="diagnostic-badge-pill warning-pill">⚠️ Nghi vấn Copy: {anom_sum['K25']['copy_suspect']} SV</span>
-        </div>
-        <div class="diagnostic-desc">
-            <strong>Đánh giá chung học tập:</strong> Học viên năm nhất bước vào chuyên ngành lập trình Web gặp nhiều khó khăn trong việc thích nghi với phương pháp tự học. Tỷ lệ học lực yếu và học vẹt (đối phó Elearning) chiếm tới 72% nhóm nguy cơ. Ngoài ra, việc tự thực hành chưa đi vào nề nếp dẫn đến hiện tượng sao chép code ở các bài tập cơ bản có xu hướng gia tăng.
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
-            <div class="diagnostic-role-group">
-                <div class="diagnostic-role-title">👩‍💼 Kế hoạch của Cố vấn / GVCN:</div>
-                <ul class="diagnostic-actions">
-                    <li>Rà soát, liên hệ trực tiếp để động viên và tìm hiểu khó khăn thực tế của các SV năm nhất có dấu hiệu sao chép hoặc học vẹt.</li>
-                    <li>Tổ chức sinh hoạt lớp chuyên đề chia sẻ phương pháp học lập trình Web hiệu quả và cách tự nghiên cứu tài liệu.</li>
-                </ul>
-            </div>
-            <div class="diagnostic-role-group">
-                <div class="diagnostic-role-title">👨‍🏫 Kế hoạch của Giảng viên / Trợ giảng:</div>
-                <ul class="diagnostic-actions">
-                    <li>Mở thêm <strong>2 buổi phụ đạo (Tutor) ngoài giờ/tuần</strong> tập trung ôn tập cú pháp Python và cấu trúc dữ liệu cơ bản.</li>
-                    <li>Tăng cường kiểm tra code trực tiếp trên lớp để hạn chế tình trạng chép bài của nhau.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    """
-
-    qtkd_cohort_diagnostic_html = f"""
-    <div class="cohort-diagnostic-card" style="border-left: 4px solid var(--success); margin-bottom: 20px;">
-        <div class="cohort-diagnostic-title">
-            <i class="fas fa-business-time" style="color: var(--success);"></i> Đánh giá chung &amp; Kế hoạch hành động Khối KS25 - QTKD (PRJ302)
-        </div>
-        <div class="diagnostic-badges-container">
-            <span class="diagnostic-badge-pill red-pill" style="background: rgba(16, 185, 129, 0.1); color: var(--success); border-color: rgba(16, 185, 129, 0.2);">🔴 Cảnh báo Đỏ: {cohort_risks['QTKD']['RED']} SV</span>
-            <span class="diagnostic-badge-pill yellow-pill">🟡 Cảnh báo Vàng: {cohort_risks['QTKD']['YELLOW']} SV</span>
-            <span class="diagnostic-badge-pill warning-pill">⚠️ Học vẹt: {anom_sum['QTKD']['passive_learner']} SV</span>
-        </div>
-        <div class="diagnostic-desc">
-            <strong>Đánh giá chung học tập:</strong> Khối Quản trị kinh doanh số tự học và hoàn thành bài tập thực hành rất tốt (chỉ 10% học lực yếu). Vấn đề lớn nhất tập trung ở kỷ luật chuyên cần lên lớp (90% học viên nguy cơ mắc lỗi vắng không phép hoặc đi muộn).
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
-            <div class="diagnostic-role-group">
-                <div class="diagnostic-role-title">👩‍💼 Kế hoạch của Cố vấn / GVCN:</div>
-                <ul class="diagnostic-actions">
-                    <li>Liên hệ nhắc nhở ngay trong buổi học đối với học viên vắng không phép. Phối hợp chặt chẽ với gia đình để chấn chỉnh kỷ luật giờ giấc.</li>
-                </ul>
-            </div>
-            <div class="diagnostic-role-group">
-                <div class="diagnostic-role-title tg-role">👨‍🏫 Kế hoạch của Trợ giảng (TA):</div>
-                <ul class="diagnostic-actions">
-                    <li>Thực hiện điểm danh nghiêm ngặt 2 lần (đầu giờ và cuối giờ). Cập nhật sĩ số vắng cho GVCN sau 15 phút đầu giờ để liên hệ học viên.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    """
-
-    k24_cntt_cohort_diagnostic_html = f"""
-    <div class="cohort-diagnostic-card" style="border-left: 4px solid #a855f7; margin-bottom: 20px;">
-        <div class="cohort-diagnostic-title">
-            <i class="fas fa-laptop-code" style="color: #a855f7;"></i> Đánh giá chung &amp; Kế hoạch hành động Khối KS24 - CNTT (AI Application)
-        </div>
-        <div class="diagnostic-badges-container">
-            <span class="diagnostic-badge-pill red-pill" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border-color: rgba(168, 85, 247, 0.2);">🔴 Cảnh báo Đỏ: {cohort_risks['K24']['RED']} SV</span>
-            <span class="diagnostic-badge-pill yellow-pill">🟡 Cảnh báo Vàng: {cohort_risks['K24']['YELLOW']} SV</span>
-            <span class="diagnostic-badge-pill warning-pill" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.2);"><i class="fas fa-brain"></i> Học giỏi - KL kém: {anom_sum['K24']['discipline_paradox']} SV</span>
-        </div>
-        <div class="diagnostic-desc">
-            <strong>Đánh giá chung học tập:</strong> Học viên năm 2 có năng lực học tập thực tế tốt (chỉ 26.9% yếu học lực) nhưng tinh thần tự giác đi học sa sút nghiêm trọng (96% học viên nguy cơ vắng thật > 20% số buổi). Nguy cơ cấm thi hàng loạt do chuyên cần nếu không siết chặt kỷ luật hành chính.
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
-            <div class="diagnostic-role-group">
-                <div class="diagnostic-role-title">👩‍💼 Kế hoạch của Cố vấn / GVCN:</div>
-                <ul class="diagnostic-actions">
-                    <li>Gửi văn bản cảnh báo cấm thi chính thức cho sinh viên và gia đình. Yêu cầu viết bản cam kết đảm bảo chuyên cần từ nay đến cuối kỳ.</li>
-                </ul>
-            </div>
-            <div class="diagnostic-role-group">
-                <div class="diagnostic-role-title">👨‍🏫 Kế hoạch của Giảng viên:</div>
-                <ul class="diagnostic-actions">
-                    <li>Tổ chức 1 buổi review tổng quan đề tài và hướng dẫn triển khai bài tập lớn (Lab lớn) để học viên bắt kịp nhịp độ dự án chuyên ngành.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    """
-
-    k24_cv_errs = [c['err'] for c in data['dashboard_data']['KS24']['cv']]
-    k25_cv_errs = [c['err'] for c in data['dashboard_data']['KS25']['cv']]
-    qtkd_cv_errs = [c['err'] for c in data['dashboard_data'].get('QTKD', {}).get('cv', [])]
+    # Generate automatic Action Plan items (Tab 1)
+    low_classes_items = []
+    for cohort in ['KS25', 'KS24', 'QTKD']:
+        for c in data['dashboard_data'].get(cohort, {}).get('curr', []):
+            if c.get('pred_new', 100.0) < 60.0:
+                low_classes_items.append(c)
+    low_classes_items.sort(key=lambda x: x.get('pred_new', 100.0))
     
-    k24_mae = sum(k24_cv_errs)/len(k24_cv_errs) if k24_cv_errs else 0.0
-    k25_mae = sum(k25_cv_errs)/len(k25_cv_errs) if k25_cv_errs else 0.0
-    qtkd_mae = sum(qtkd_cv_errs)/len(qtkd_cv_errs) if qtkd_cv_errs else 1.25
+    high_viol_items = []
+    for cohort in ['KS25', 'KS24', 'QTKD']:
+        for c in data['dashboard_data'].get(cohort, {}).get('curr', []):
+            if c.get('v_class', 0.0) > 15.0:
+                high_viol_items.append(c)
+    high_viol_items.sort(key=lambda x: x.get('v_class', 0.0), reverse=True)
+    
+    ops_err_items = []
+    for v in teacher_violations:
+        cls_name = v.get('Class', '')
+        err_code = v.get('Error', 'GV-08')
+        ops_err_items.append((cls_name, err_code))
+    ops_err_items = list(set(ops_err_items))
+
+    limits_html = ""
+    solutions_html = ""
+    
+    for c in low_classes_items[:3]:
+        cname = c['class_name']
+        pred_val = c.get('pred_new', 0.0)
+        limits_html += f"""
+        <div class="action-item-card" style="border-left: 4px solid var(--danger); background: rgba(239, 68, 68, 0.03);">
+            <strong>Lớp {cname} có tỉ lệ đỗ dự kiến thấp:</strong><br>
+            Tỉ lệ đỗ dự kiến đạt <strong>{pred_val:.1f}%</strong> do ý thức kỷ luật hoặc học lực môn học trước sa sút.
+        </div>
+        """
+        solutions_html += f"""
+        <div class="action-item-card" style="border-left: 4px solid var(--danger); background: rgba(239, 68, 68, 0.03);">
+            <strong>Tổ chức phụ đạo lớp {cname}:</strong><br>
+            Yêu cầu Giảng viên/Trợ giảng tổ chức <strong>ít nhất 1 buổi phụ đạo/tuần</strong> ôn tập kiến thức nền cho nhóm sinh viên yếu.
+        </div>
+        """
+        
+    for c in high_viol_items[:3]:
+        cname = c['class_name']
+        v_val = c.get('v_class', 0.0)
+        limits_html += f"""
+        <div class="action-item-card" style="border-left: 4px solid var(--warning); background: rgba(245, 158, 11, 0.03);">
+            <strong>Lớp {cname} vi phạm kỷ luật cao ({v_val:.1f}%):</strong><br>
+            Tỷ lệ vắng mặt chuyên cần và nợ bài tập lớp vượt ngưỡng cảnh báo an toàn.
+        </div>
+        """
+        solutions_html += f"""
+        <div class="action-item-card" style="border-left: 4px solid var(--warning); background: rgba(245, 158, 11, 0.03);">
+            <strong>Siết chặt giờ giấc lớp {cname}:</strong><br>
+            Cố vấn học tập liên hệ nhắc nhở gia đình, giảng viên chấn chỉnh kỷ luật giờ giấc học tập đầu giờ học.
+        </div>
+        """
+        
+    for cls_name, err_code in ops_err_items[:3]:
+        limits_html += f"""
+        <div class="action-item-card" style="border-left: 4px solid #a855f7; background: rgba(168, 85, 247, 0.03);">
+            <strong>Lớp {cls_name} ghi nhận lỗi tác nghiệp {err_code}:</strong><br>
+            Phát hiện lỗi tích vắng sai hoặc quên điểm danh của giảng viên/trợ giảng.
+        </div>
+        """
+        solutions_html += f"""
+        <div class="action-item-card" style="border-left: 4px solid #a855f7; background: rgba(168, 85, 247, 0.03);">
+            <strong>Khắc phục dữ liệu lớp {cls_name}:</strong><br>
+            Yêu cầu Trợ giảng đối chiếu và hiệu chỉnh thông tin điểm danh chính xác trên hệ thống QLĐT.
+        </div>
+        """
+        
+    if not limits_html:
+        limits_html = """<div class="action-item-card">Không ghi nhận điểm nghẽn học vụ nổi bật nào.</div>"""
+        solutions_html = """<div class="action-item-card">Hệ thống học vụ vận hành ổn định.</div>"""
+
+    # Generate central Care List rows (Tab 3)
+    care_list_rows_html = ""
+    for s in data['care_list']:
+        sid = s['student_id']
+        name = s['full_name']
+        cname = s['class_name']
+        batch = s['batch']
+        p_final = s['p_final']
+        att = s['att']
+        hw = 100.0 - s['hw']
+        el = s['el']
+        risk = s['risk_level']
+        reasons = ", ".join(s['reasons'])
+        
+        badge_cls = "risk-badge-red" if risk == 'RED' else "risk-badge-yellow"
+        cohort_cls = "cntt" if "QTKD" not in cname else "qtkd"
+        risk_filter_cls = "filter-red" if risk == 'RED' else "filter-yellow"
+        
+        care_list_rows_html += f"""
+        <tr class="care-row {cohort_cls} {risk_filter_cls}">
+            <td class="font-mono">{batch}</td>
+            <td class="font-mono font-bold">{cname}</td>
+            <td class="font-bold">{name} ({sid})</td>
+            <td class="text-center font-mono font-bold {'text-rose' if risk == 'RED' else 'text-warning'}">{p_final:.1f}%</td>
+            <td class="text-center font-mono">{att:.1f}%</td>
+            <td class="text-center font-mono">{hw:.1f}%</td>
+            <td class="text-center font-mono">{el:.0f}</td>
+            <td><span class="{badge_cls}">{risk}</span></td>
+            <td style="font-size: 0.8rem; color: var(--text-muted);">{reasons}</td>
+        </tr>
+        """
 
     # Chuẩn bị dữ liệu cho biểu đồ Chart.js
     curr_classes = []
@@ -334,36 +243,31 @@ def build_unified_prediction_dashboard(data, output_path):
     chart_curr_labels = [c['class_name'] for c in curr_classes]
     chart_curr_old = [c['pred_old'] for c in curr_classes]
     chart_curr_new = [c['pred_new'] for c in curr_classes]
-    
-    chart_cv_labels = [c['class_name'] for c in cv_classes]
-    chart_cv_pred = [c['pred_old'] for c in cv_classes]
-    chart_cv_actual = [c['actual_pass'] for c in cv_classes]
 
     html_content = f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Dự báo Học thuật &amp; Care List Lớp học</title>
+    <title>Báo cáo Đánh giá Học thuật &amp; Danh sách can thiệp</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {{
-            --bg-main: #0b0f19;
-            --bg-card: #151c2c;
+            --bg-main: #090d16;
+            --bg-card: #0f172a;
             --bg-elevated: #1e293b;
             --text-main: #f3f4f6;
             --text-muted: #9ca3af;
-            --primary: #6366f1;
-            --primary-light: rgba(99, 102, 241, 0.15);
-            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+            --primary: #3b82f6;
+            --primary-light: rgba(59, 130, 246, 0.15);
             --success: #10b981;
             --success-light: rgba(16, 185, 129, 0.1);
             --warning: #f59e0b;
             --warning-light: rgba(245, 158, 11, 0.15);
-            --danger: #ef4444;
-            --danger-light: rgba(239, 68, 68, 0.15);
+            --danger: #f43f5e;
+            --danger-light: rgba(244, 63, 94, 0.15);
             --border: rgba(255, 255, 255, 0.08);
             --font-family: 'Plus Jakarta Sans', sans-serif;
             --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -374,9 +278,6 @@ def build_unified_prediction_dashboard(data, output_path):
             color: var(--text-main);
             line-height: 1.6;
             padding: 40px 20px;
-            background-image: 
-                radial-gradient(at 10% 20%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
-                radial-gradient(at 90% 80%, rgba(6, 182, 212, 0.05) 0px, transparent 50%);
             background-attachment: fixed;
         }}
         .container {{ max-width: 1400px; margin: 0 auto; }}
@@ -392,8 +293,6 @@ def build_unified_prediction_dashboard(data, output_path):
             justify-content: space-between;
             align-items: center;
         }}
-        header h1 {{ font-size: 1.8rem; font-weight: 800; display: flex; align-items: center; gap: 12px; }}
-        .meta-info {{ font-size: 0.85rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-top: 4px; }}
         .update-badge {{
             padding: 8px 16px;
             background: var(--primary-light);
@@ -403,6 +302,159 @@ def build_unified_prediction_dashboard(data, output_path):
             font-size: 0.8rem;
             font-weight: 700;
         }}
+        
+        /* Tabs System CSS */
+        .tabs-container {{
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+        }}
+        .tab-button {{
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+        .tab-button:hover {{
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.03);
+        }}
+        .tab-button.active {{
+            background: var(--primary-light);
+            color: var(--primary);
+            border-color: var(--primary);
+        }}
+        .tab-content {{
+            display: none;
+        }}
+        .tab-content.active {{
+            display: block;
+        }}
+
+        /* Action Plan Columns Style */
+        .action-plan-grid {{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }}
+        .action-plan-col {{
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--card-shadow);
+        }}
+        .action-plan-col h3 {{
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }}
+        .action-item-card {{
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: var(--text-main);
+        }}
+        .action-item-card strong {{
+            color: #fff;
+        }}
+
+        /* Tooltip style */
+        .tooltip-container {{
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }}
+        .tooltip-container .tooltip-text {{
+            visibility: hidden;
+            width: 280px;
+            background-color: #1e293b;
+            color: #f3f4f6;
+            text-align: left;
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5);
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -140px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }}
+        .tooltip-container:hover .tooltip-text {{
+            visibility: visible;
+            opacity: 1;
+        }}
+
+        /* Slide-over Drawer Style */
+        #class-drawer {{
+            position: fixed;
+            top: 0;
+            right: -490px;
+            width: 470px;
+            height: 100%;
+            background: #0f172a;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+            transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            overflow-y: auto;
+            border-left: 1px solid var(--border);
+        }}
+        #class-drawer.open {{
+            right: 0;
+        }}
+        #drawer-backdrop {{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+        }}
+        .drawer-header {{
+            padding: 24px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }}
+        .drawer-close {{
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }}
+        .drawer-content {{
+            padding: 24px;
+        }}
+
         .mae-grid {{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -453,26 +505,6 @@ def build_unified_prediction_dashboard(data, output_path):
             margin-bottom: 20px;
         }}
         .chart-title {{ font-size: 1.1rem; font-weight: 700; }}
-        .chart-tabs {{
-            display: flex;
-            gap: 8px;
-        }}
-        .tab-btn {{
-            padding: 6px 12px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: var(--bg-elevated);
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }}
-        .tab-btn.active {{
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }}
         .section-title {{
             font-size: 1.2rem;
             font-weight: 800;
@@ -525,6 +557,7 @@ def build_unified_prediction_dashboard(data, output_path):
         .text-center {{ text-align: center; }}
         .text-right {{ text-align: right; }}
         .text-rose {{ color: var(--danger); font-weight: bold; }}
+        .text-warning {{ color: var(--warning); font-weight: bold; }}
         .text-emerald {{ color: var(--success); font-weight: bold; }}
         
         .btn-risk {{
@@ -535,56 +568,23 @@ def build_unified_prediction_dashboard(data, output_path):
             border-radius: 8px;
             font-size: 0.75rem;
             font-weight: 700;
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--danger);
-            border: 1px solid rgba(239, 68, 68, 0.2);
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(59, 130, 246, 0.2);
             cursor: pointer;
             transition: all 0.2s;
         }}
-        .btn-risk:hover {{ background: rgba(239, 68, 68, 0.2); }}
-        .btn-safe {{
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--success);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }}
+        .btn-risk:hover {{ background: rgba(59, 130, 246, 0.2); }}
         
-        .risk-details-card {{
-            background: rgba(0,0,0,0.15);
-            padding: 20px;
-            margin: 10px 20px;
-            border-radius: 12px;
-            border: 1px dashed var(--border);
-        }}
-        .risk-details-header {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--danger);
-        }}
-        .risk-table {{ font-size: 0.8rem; width: 100%; border-collapse: collapse; }}
-        .risk-table th {{ padding: 8px 12px; background: rgba(0,0,0,0.3); font-size: 0.7rem; }}
-        .risk-table td {{ padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }}
         .risk-badge-red {{
             padding: 4px 8px;
             border-radius: 6px;
-            background: rgba(239, 68, 68, 0.15);
+            background: rgba(244, 63, 94, 0.15);
             color: var(--danger);
-            border: 1px solid rgba(239, 68, 68, 0.3);
+            border: 1px solid rgba(244, 63, 94, 0.3);
             font-size: 0.65rem;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }}
         .risk-badge-yellow {{
             padding: 4px 8px;
@@ -592,174 +592,11 @@ def build_unified_prediction_dashboard(data, output_path):
             background: rgba(245, 158, 11, 0.15);
             color: var(--warning);
             border: 1px solid rgba(245, 158, 11, 0.3);
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 800;
             text-transform: uppercase;
-        }}
-        .reason-tag {{
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            background: var(--bg-elevated);
-            color: var(--text-main);
-            border: 1px solid var(--border);
-            font-size: 0.75rem;
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }}
-        .violation-metric {{
-            padding: 2px 6px;
-            border-radius: 4px;
-            background: var(--bg-main);
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-right: 4px;
-        }}
-        .violation-metric.alert-metric {{
-            color: var(--danger);
-            font-weight: 700;
-        }}
-        .cohort-diagnostic-grid {{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 30px;
-        }}
-        .cohort-diagnostic-card {{
-            background: rgba(30, 41, 59, 0.45);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }}
-        .cohort-diagnostic-card:hover {{
-            transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
-        }}
-        .cohort-diagnostic-title {{
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: var(--text-main);
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }}
-        .diagnostic-badges-container {{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 12px;
-        }}
-        .diagnostic-badge-pill {{
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-muted);
-        }}
-        .diagnostic-badge-pill.red-pill {{
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--danger);
-            border-color: rgba(239, 68, 68, 0.2);
-        }}
-        .diagnostic-badge-pill.yellow-pill {{
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--warning);
-            border-color: rgba(245, 158, 11, 0.2);
-        }}
-        .diagnostic-badge-pill.warning-pill {{
-            background: rgba(168, 85, 247, 0.08);
-            color: #c084fc;
-            border-color: rgba(168, 85, 247, 0.15);
-        }}
-        .diagnostic-desc {{
-            font-size: 0.8rem;
-            margin-bottom: 12px;
-            color: var(--text-main);
-            line-height: 1.5;
-        }}
-        .diagnostic-desc strong {{
-            color: #fff;
-        }}
-        .diagnostic-actions {{
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            margin-left: 14px;
-            line-height: 1.5;
-            list-style-type: none;
-            padding-left: 0;
-        }}
-        .diagnostic-actions li {{
-            margin-bottom: 6px;
-            position: relative;
-            padding-left: 18px;
-        }}
-        .diagnostic-actions li::before {{
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-        }}
-        .diagnostic-actions strong {{
-            color: #fff;
         }}
         
-        .class-violation-alert {{
-            background: rgba(239, 68, 68, 0.08);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            border-radius: 12px;
-            padding: 12px 16px;
-            font-size: 0.8rem;
-            color: var(--danger);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            line-height: 1.4;
-        }}
-        .diagnostic-role-group {{
-            margin-top: 10px;
-            padding-left: 12px;
-            border-left: 2px solid rgba(255,255,255,0.06);
-            margin-bottom: 8px;
-        }}
-        .diagnostic-role-title {{
-            font-size: 0.74rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-transform: uppercase;
-            margin-bottom: 4px;
-            letter-spacing: 0.5px;
-        }}
-        .diagnostic-role-title.tg-role {{
-            color: var(--success);
-        }}
-        .diagnostic-role-title.pmo-role {{
-            color: var(--warning);
-        }}
-        
-        /* Class-level compact risk cards grid */
-        .class-warning-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-            margin-bottom: 10px;
-        }}
         .student-risk-card {{
             background: rgba(30, 41, 59, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -768,41 +605,9 @@ def build_unified_prediction_dashboard(data, output_path):
             display: flex;
             flex-direction: column;
             gap: 8px;
-            transition: all 0.2s ease;
         }}
-        .student-risk-card:hover {{
-            background: rgba(30, 41, 59, 0.45);
-            border-color: rgba(255, 255, 255, 0.1);
-        }}
-        .student-risk-card.red-border {{
-            border-left: 3px solid rgba(239, 68, 68, 0.55);
-        }}
-        .student-risk-card.yellow-border {{
-            border-left: 3px solid rgba(245, 158, 11, 0.55);
-        }}
-        .student-card-header {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }}
-        .student-card-header .student-name {{
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #f3f4f6;
-        }}
-        .student-card-header .student-id {{
-            font-size: 0.65rem;
-            font-family: monospace;
-            color: #9ca3af;
-            background: rgba(255,255,255,0.04);
-            padding: 1px 4px;
-            border-radius: 3px;
-        }}
-        .student-card-body {{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }}
+        .student-risk-card.red-border {{ border-left: 3px solid rgba(244, 63, 94, 0.55); }}
+        .student-risk-card.yellow-border {{ border-left: 3px solid rgba(245, 158, 11, 0.55); }}
         .student-metric-pill {{
             display: inline-flex;
             align-items: center;
@@ -811,29 +616,47 @@ def build_unified_prediction_dashboard(data, output_path):
             border-radius: 4px;
             font-size: 0.68rem;
             font-weight: 500;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            color: #d1d5db;
         }}
-        .student-metric-pill i {{
-            font-size: 0.7rem;
-            opacity: 0.85;
+        .student-metric-pill.red-pill {{
+            background: rgba(244, 63, 94, 0.1);
+            color: var(--danger);
+            border: 1px solid rgba(244, 63, 94, 0.2);
         }}
-        .student-metric-pill i.red-icon {{
-            color: #f87171;
+        .student-metric-pill.yellow-pill {{
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--warning);
+            border: 1px solid rgba(245, 158, 11, 0.2);
         }}
-        .student-metric-pill i.yellow-icon {{
-            color: #fbbf24;
+        
+        /* Filter Button CSS */
+        .filter-btn {{
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
         }}
-        .student-metric-pill i.purple-icon {{
-            color: #c084fc;
+        .filter-btn.active {{
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
         }}
-        .student-metric-pill i.blue-icon {{
-            color: #60a5fa;
-        }}
-        @media (max-width: 768px) {{
-            .mae-grid {{ grid-template-columns: 1fr; }}
-            header {{ flex-direction: column; gap: 16px; text-align: center; }}
+        
+        .class-violation-alert {{
+            background: rgba(244, 63, 94, 0.08);
+            border: 1px solid rgba(244, 63, 94, 0.2);
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 0.8rem;
+            color: var(--danger);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.4;
         }}
     </style>
 </head>
@@ -843,7 +666,7 @@ def build_unified_prediction_dashboard(data, output_path):
         <!-- Header -->
         <header>
             <div>
-                <h1>📊 Dự báo Học thuật &amp; Care List Học viên</h1>
+                <h1>📊 Đánh giá Học thuật &amp; Hỗ trợ Học viên</h1>
                 <div class="meta-info">Hệ thống dự báo tỉ lệ đỗ lớp học và rà soát nguy cơ cá nhân tích hợp</div>
             </div>
             <div class="update-badge">
@@ -851,161 +674,355 @@ def build_unified_prediction_dashboard(data, output_path):
             </div>
         </header>
 
-        <!-- Global KPI MAE Summary Cards -->
-        <div class="mae-grid">
-            <!-- CNTT KS25 -->
-            <div class="mae-card" style="border-left: 4px solid var(--primary);">
-                <div>
-                    <div class="mae-title">Sai số MAE (KS25 CNTT)</div>
-                    <div class="mae-val">{k25_mae:.2f}%</div>
-                    <div class="mae-desc">Python Web (Đã hiệu chuẩn)</div>
-                </div>
-                <div class="mae-icon">
-                    <i class="fas fa-calculator"></i>
-                </div>
-            </div>
-            
-            <!-- CNTT KS24 -->
-            <div class="mae-card" style="border-left: 4px solid #a855f7;">
-                <div>
-                    <div class="mae-title">Sai số MAE (KS24 CNTT)</div>
-                    <div class="mae-val">{k24_mae:.2f}%</div>
-                    <div class="mae-desc">AI Application (Lịch sử)</div>
-                </div>
-                <div class="mae-icon" style="color: #a855f7; background: rgba(168, 85, 247, 0.15);">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-            </div>
-
-            <!-- QTKD KS25 -->
-            <div class="mae-card" style="border-left: 4px solid var(--success);">
-                <div>
-                    <div class="mae-title">Sai số MAE (KS25 QTKD)</div>
-                    <div class="mae-val">{qtkd_mae:.2f}%</div>
-                    <div class="mae-desc">Quản lý QTKD (Hiện tại)</div>
-                </div>
-                <div class="mae-icon" style="color: var(--success); background: var(--success-light);">
-                    <i class="fas fa-business-time"></i>
-                </div>
-            </div>
+        <!-- Navigation Tabs -->
+        <div class="tabs-container">
+            <button class="tab-button active" onclick="switchTab('executive')"><i class="fas fa-chart-pie"></i> Đánh giá &amp; Giải pháp hệ thống</button>
+            <button class="tab-button" onclick="switchTab('classes')"><i class="fas fa-school"></i> Phân tích Lớp học</button>
+            <button class="tab-button" onclick="switchTab('care-list')"><i class="fas fa-user-shield"></i> Danh sách cần can thiệp</button>
         </div>
 
-        <!-- Biểu đồ phân tích Chart.js -->
-        <div class="chart-row">
-            <div class="chart-card">
-                <div class="chart-header">
-                    <div class="chart-title"><i class="fas fa-chart-bar" style="color: var(--primary);"></i> Phân tích Xu hướng &amp; Tỉ lệ đỗ lớp học</div>
-                    <div class="chart-tabs">
-                        <button id="btn-chart-curr" class="tab-btn active">Môn hiện tại (Quy chế)</button>
+        <!-- TAB 1: EXECUTIVE SUMMARY -->
+        <div id="tab-executive" class="tab-content active">
+            <!-- Global KPI Summary Cards -->
+            <div class="mae-grid">
+                <div class="mae-card" style="border-left: 4px solid var(--primary);">
+                    <div>
+                        <div class="mae-title">Sai số đánh giá lịch sử (MAE)</div>
+                        <div class="mae-val">{mae_avg:.2f}%</div>
+                        <div class="mae-desc">Tính trung bình các mốc kiểm chứng</div>
+                    </div>
+                    <div class="mae-icon"><i class="fas fa-calculator"></i></div>
+                </div>
+                
+                <div class="mae-card" style="border-left: 4px solid var(--danger);">
+                    <div>
+                        <div class="mae-title">Nguy cơ Cao (Báo động Đỏ)</div>
+                        <div class="mae-val">{red_count} SV</div>
+                        <div class="mae-desc">Học lực yếu hoặc có nguy cơ cấm thi</div>
+                    </div>
+                    <div class="mae-icon" style="color: var(--danger); background: var(--danger-light);"><i class="fas fa-user-slash"></i></div>
+                </div>
+
+                <div class="mae-card" style="border-left: 4px solid var(--warning);">
+                    <div>
+                        <div class="mae-title">Nguy cơ Trung bình (Cảnh báo Vàng)</div>
+                        <div class="mae-val">{yellow_count} SV</div>
+                        <div class="mae-desc">Cận cấm thi hoặc mất gốc kiến thức</div>
+                    </div>
+                    <div class="mae-icon" style="color: var(--warning); background: var(--warning-light);"><i class="fas fa-exclamation-triangle"></i></div>
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="chart-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title"><i class="fas fa-chart-bar" style="color: var(--primary);"></i> Phân tích tỉ lệ đỗ lớp học dự kiến</div>
+                    </div>
+                    <div style="height: 320px; position: relative;">
+                        <canvas id="pred-compare-chart"></canvas>
                     </div>
                 </div>
-                <div style="height: 320px; position: relative;">
-                    <canvas id="pred-compare-chart"></canvas>
+            </div>
+
+            <!-- Action Plan Grid -->
+            <h2>🎯 Hạn chế &amp; Giải pháp khắc phục (Đề xuất hệ thống)</h2>
+            <div class="action-plan-grid">
+                <div class="action-plan-col">
+                    <h3><i class="fas fa-search-minus" style="color: var(--danger);"></i> Các điểm nghẽn học vụ phát hiện</h3>
+                    {limits_html}
+                </div>
+                <div class="action-plan-col">
+                    <h3><i class="fas fa-toolbox" style="color: var(--success);"></i> Đề xuất hành động tức thời</h3>
+                    {solutions_html}
                 </div>
             </div>
         </div>
 
-        <!-- Section 1: Môn học hiện tại -->
-        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Dự kiến kết quả thi và rà soát nguy cơ (Môn học hiện tại)</h2>
-
-        <!-- KS25 Python Web -->
-        {k25_cntt_cohort_diagnostic_html}
-        <div class="table-card">
-            <div class="table-header">
-                <h3>Khóa KS25 - Khối CNTT (Môn hiện tại)</h3>
-                <span class="course-badge">Python Web</span>
+        <!-- TAB 2: CLASS LIST -->
+        <div id="tab-classes" class="tab-content">
+            <!-- KS25 Python Web -->
+            <div class="table-card">
+                <div class="table-header">
+                    <h3>Khóa K25 - Khối CNTT (Môn hiện tại)</h3>
+                    <span class="course-badge">Python Web</span>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tên Lớp</th>
+                                <th class="text-center">Sĩ số</th>
+                                <th class="text-center">Vi phạm lớp%</th>
+                                <th class="text-center">Hệ số Env</th>
+                                <th class="text-center">Quy chuẩn cũ</th>
+                                <th class="text-center">Quy chế mới</th>
+                                <th class="text-center">Cảnh báo tác nghiệp</th>
+                                <th class="text-right">Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {k25_curr_html}
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Tên Lớp</th>
-                            <th class="text-center">Sĩ số</th>
-                            <th class="text-center">Vi phạm lớp%</th>
-                            <th class="text-center">Hệ số Env</th>
-                            <th class="text-center">Dự báo (Luật cũ)</th>
-                            <th class="text-center">Dự báo (Quy chế mới)</th>
-                            <th class="text-right">Rà soát Care List</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {k25_curr_html}
-                    </tbody>
-                </table>
+
+            <!-- KS25 QTKD -->
+            <div class="table-card">
+                <div class="table-header">
+                    <h3>Khóa K25 - Khối QTKD (Môn hiện tại)</h3>
+                    <span class="course-badge" style="color: var(--success); background: var(--success-light);">PRJ302</span>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tên Lớp</th>
+                                <th class="text-center">Sĩ số</th>
+                                <th class="text-center">Vi phạm lớp%</th>
+                                <th class="text-center">Hệ số Env</th>
+                                <th class="text-center">Quy chuẩn cũ</th>
+                                <th class="text-center">Quy chế mới</th>
+                                <th class="text-center">Cảnh báo tác nghiệp</th>
+                                <th class="text-right">Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {qtkd_curr_html}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- KS24 AI Application -->
+            <div class="table-card">
+                <div class="table-header">
+                    <h3>Khóa K24 - Khối CNTT (Môn hiện tại)</h3>
+                    <span class="course-badge" style="color: #a855f7; background: rgba(168, 85, 247, 0.15);">AI Application</span>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tên Lớp</th>
+                                <th class="text-center">Sĩ số</th>
+                                <th class="text-center">Vi phạm lớp%</th>
+                                <th class="text-center">Hệ số Env</th>
+                                <th class="text-center">Quy chuẩn cũ</th>
+                                <th class="text-center">Quy chế mới</th>
+                                <th class="text-center">Cảnh báo tác nghiệp</th>
+                                <th class="text-right">Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {k24_curr_html}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <!-- KS25 QTKD -->
-        {qtkd_cohort_diagnostic_html}
-        <div class="table-card">
-            <div class="table-header">
-                <h3>Khóa KS25 - Khối QTKD (Môn hiện tại)</h3>
-                <span class="course-badge" style="color: var(--success); background: var(--success-light);">Môn hiện tại</span>
-            </div>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Tên Lớp</th>
-                            <th class="text-center">Sĩ số</th>
-                            <th class="text-center">Vi phạm lớp%</th>
-                            <th class="text-center">Hệ số Env</th>
-                            <th class="text-center">Dự báo (Luật cũ)</th>
-                            <th class="text-center">Dự báo (Quy chế mới)</th>
-                            <th class="text-right">Rà soát Care List</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {qtkd_curr_html}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- KS24 AI Application -->
-        {k24_cntt_cohort_diagnostic_html}
-        <div class="table-card">
-            <div class="table-header">
-                <h3>Khóa KS24 - Khối CNTT (Môn hiện tại)</h3>
-                <span class="course-badge" style="color: #a855f7; background: rgba(168, 85, 247, 0.15);">AI Application</span>
-            </div>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Tên Lớp</th>
-                            <th class="text-center">Sĩ số</th>
-                            <th class="text-center">Vi phạm lớp%</th>
-                            <th class="text-center">Hệ số Env</th>
-                            <th class="text-center">Dự báo (Luật cũ)</th>
-                            <th class="text-center">Dự báo (Quy chế mới)</th>
-                            <th class="text-right">Rà soát Care List</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {k24_curr_html}
-                    </tbody>
-                </table>
+        <!-- TAB 3: CARE LIST CENTRAL -->
+        <div id="tab-care-list" class="tab-content">
+            <div class="table-card">
+                <div class="table-header">
+                    <h3>Danh sách học viên cần can thiệp toàn khóa</h3>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <button class="filter-btn active" onclick="filterCareList('all')">Tất cả</button>
+                        <button class="filter-btn" onclick="filterCareList('red')" style="color: var(--danger);">Đỏ (Nguy cơ cao)</button>
+                        <button class="filter-btn" onclick="filterCareList('yellow')" style="color: var(--warning);">Vàng (Cảnh báo)</button>
+                        <button class="filter-btn" onclick="filterCareList('cntt')">Khối CNTT</button>
+                        <button class="filter-btn" onclick="filterCareList('qtkd')">Khối QTKD</button>
+                        <button class="filter-btn" onclick="exportCareListCSV()" style="background: var(--primary-light); color: var(--primary); margin-left: 16px;"><i class="fas fa-file-csv"></i> Xuất CSV</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Khóa</th>
+                                <th>Lớp học</th>
+                                <th>Học viên</th>
+                                <th class="text-center">XS đỗ%</th>
+                                <th class="text-center">Vắng chuyên cần%</th>
+                                <th class="text-center">Nợ bài tập%</th>
+                                <th class="text-center">Elearning vi phạm</th>
+                                <th>Mức độ</th>
+                                <th>Lý do &amp; Dấu hiệu cảnh báo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {care_list_rows_html}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
     </div>
 
+    <!-- Slide-over Drawer -->
+    <div id="drawer-backdrop" onclick="closeClassDrawer()"></div>
+    <div id="class-drawer">
+        <div class="drawer-header">
+            <h2 id="drawer-title" style="font-size: 1.2rem; font-weight:800;">Lớp học</h2>
+            <button class="drawer-close" onclick="closeClassDrawer()">&times;</button>
+        </div>
+        <div id="drawer-body" class="drawer-content">
+            <!-- Nội dung lớp chi tiết do JS render -->
+        </div>
+    </div>
+
     <!-- JS Tương tác & Charts -->
     <script>
-        function toggleRiskRows(panelId) {{
-            const panel = document.getElementById('risk-panel-' + panelId);
-            const icon = document.getElementById('icon-' + panelId);
-            if (panel) {{
-                const isHidden = panel.style.display === 'none';
-                if (isHidden) {{
-                    panel.style.display = 'table-row';
-                    if (icon) icon.style.transform = 'rotate(180deg)';
-                }} else {{
-                    panel.style.display = 'none';
-                    if (icon) icon.style.transform = 'rotate(0deg)';
-                }}
+        // Nhúng dữ liệu thô từ Python
+        const rawClassRisks = {json.dumps(class_risks)};
+        const rawClassViolations = {json.dumps(class_violations)};
+        const rawAllCareList = {json.dumps(data['care_list'])};
+        
+        function switchTab(tabId) {{
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById('tab-' + tabId).classList.add('active');
+        }}
+
+        function openClassDrawer(className, isCv) {{
+            document.getElementById('drawer-title').innerText = "Rà soát lớp: " + className;
+            const contentDiv = document.getElementById('drawer-body');
+            contentDiv.innerHTML = '';
+            
+            // 1. Render lỗi tác nghiệp GV
+            const errs = rawClassViolations[className] || rawClassViolations[className.replace('KS', 'K')] || [];
+            if (errs.length > 0) {{
+                let errHtml = `<div class="class-violation-alert" style="margin-bottom: 20px;">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 1.2rem; margin-right: 8px; color: var(--warning);"></i>
+                    <div>
+                        <strong style="color:var(--warning);">Cảnh báo tác nghiệp đào tạo:</strong><br>
+                        Ghi nhận ${{errs.length}} lỗi vi phạm quy chế. Yêu cầu rà soát và hiệu chỉnh dữ liệu trên QLĐT ngay lập tức.
+                    </div>
+                </div>`;
+                contentDiv.innerHTML += errHtml;
             }}
+            
+            // 2. Render Care List sinh viên của lớp
+            const students = rawClassRisks[className] || [];
+            if (students.length > 0) {{
+                let stHtml = `<div class="risk-details-header" style="margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; color: var(--danger); display:flex; justify-content:space-between; font-size:0.8rem; font-weight:bold;">
+                    <span><i class="fas fa-user-shield"></i> Học viên cần hỗ trợ</span>
+                    <span>Tổng số: ${{students.length}} SV</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 12px;">`;
+                
+                students.forEach(s => {{
+                    const borderClass = s.risk_level === 'RED' ? 'red-border' : 'yellow-border';
+                    let pills = '';
+                    if (s.att > 15) pills += `<span class="student-metric-pill red-pill"><i class="fas fa-user-slash"></i> Vắng: ${{s.att.toFixed(1)}}%</span>`;
+                    else if (s.att > 0) pills += `<span class="student-metric-pill yellow-pill"><i class="fas fa-user-clock"></i> Vắng: ${{s.att.toFixed(1)}}%</span>`;
+                    
+                    const hwDebt = 100 - s.hw;
+                    if (hwDebt > 30) pills += `<span class="student-metric-pill red-pill"><i class="fas fa-tasks"></i> Nợ bài: ${{hwDebt.toFixed(1)}}%</span>`;
+                    else if (hwDebt > 15) pills += `<span class="student-metric-pill yellow-pill"><i class="fas fa-tasks"></i> Nợ bài: ${{hwDebt.toFixed(1)}}%</span>`;
+                    
+                    if (s.el >= 2) pills += `<span class="student-metric-pill red-pill"><i class="fas fa-clock"></i> EL trễ: ${{s.el}}</span>`;
+                    else if (s.el >= 1) pills += `<span class="student-metric-pill yellow-pill"><i class="fas fa-clock"></i> EL trễ: ${{s.el}}</span>`;
+                    
+                    if (s.anomalies) {{
+                        s.anomalies.forEach(anom => {{
+                            if (anom === 'copy_suspect') pills += `<span class="student-metric-pill red-pill"><i class="fas fa-copy"></i> Copy?</span>`;
+                            else if (anom === 'discipline_paradox') pills += `<span class="student-metric-pill" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.2);"><i class="fas fa-brain"></i> KL kém</span>`;
+                            else if (anom === 'passive_learner') pills += `<span class="student-metric-pill" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.2);"><i class="fas fa-mouse-pointer"></i> Học vẹt</span>`;
+                            else if (anom === 'sudden_drop') pills += `<span class="student-metric-pill" style="color: #f43f5e; border-color: rgba(244, 63, 94, 0.2);"><i class="fas fa-chart-line"></i> Sụt phong độ</span>`;
+                        }});
+                    }}
+                    
+                    stHtml += `
+                    <div class="student-risk-card ${{borderClass}}" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-left-width: 3px; border-radius: 8px; padding: 12px; display:flex; flex-direction:column; gap:8px;">
+                        <div class="student-card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <span class="student-name" style="font-weight:bold; font-size:0.85rem; color:#fff;">${{s.full_name}}</span>
+                            <span class="student-id" style="font-size:0.7rem; color:var(--text-muted); background:rgba(255,255,255,0.05); padding:1px 4px; border-radius:3px;">${{s.student_id}}</span>
+                        </div>
+                        <div class="student-card-body" style="display:flex; flex-wrap:wrap; gap:6px;">
+                            ${{pills}}
+                        </div>
+                        <div style="font-size:0.75rem; color:var(--text-muted); line-height:1.4;">
+                            <strong>Lý do chính:</strong> ${{s.reasons.join(', ')}}
+                        </div>
+                    </div>`;
+                }});
+                stHtml += `</div>`;
+                contentDiv.innerHTML += stHtml;
+            }} else {{
+                contentDiv.innerHTML += `<div style="text-align:center; padding: 40px; color: var(--text-muted);">
+                    <i class="fas fa-check-circle" style="font-size: 2.2rem; color: var(--success); margin-bottom: 12px;"></i><br>
+                    Lớp học này không có học viên thuộc nhóm nguy cơ cần hỗ trợ.
+                </div>`;
+            }}
+            
+            document.getElementById('class-drawer').classList.add('open');
+            document.getElementById('drawer-backdrop').style.display = 'block';
+        }}
+        
+        function closeClassDrawer() {{
+            document.getElementById('class-drawer').classList.remove('open');
+            document.getElementById('drawer-backdrop').style.display = 'none';
+        }}
+
+        function filterCareList(type) {{
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            
+            const rows = document.querySelectorAll('.care-row');
+            rows.forEach(row => {{
+                let show = false;
+                if (type === 'all') {{
+                    show = true;
+                }} else if (type === 'red') {{
+                    show = row.classList.contains('filter-red');
+                }} else if (type === 'yellow') {{
+                    show = row.classList.contains('filter-yellow');
+                }} else if (type === 'cntt') {{
+                    show = row.classList.contains('cntt');
+                }} else if (type === 'qtkd') {{
+                    show = row.classList.contains('qtkd');
+                }}
+                row.style.display = show ? 'table-row' : 'none';
+            }});
+        }}
+
+        function exportCareListCSV() {{
+            const rows = document.querySelectorAll('.care-row');
+            let csvContent = "\\ufeff"; 
+            csvContent += "Khóa,Lớp học,Học viên,Xác suất đỗ (%),Vắng chuyên cần (%),Nợ bài tập (%),Elearning trễ,Mức độ nguy cơ,Lý do chính\\n";
+            
+            rows.forEach(row => {{
+                if (row.style.display !== 'none') {{
+                    const cols = row.querySelectorAll('td');
+                    let batch = cols[0].innerText;
+                    let cname = cols[1].innerText;
+                    let student = cols[2].innerText.replace(/"/g, '""');
+                    let p_final = cols[3].innerText;
+                    let att = cols[4].innerText;
+                    let hw = cols[5].innerText;
+                    let el = cols[6].innerText;
+                    let risk = cols[7].innerText;
+                    let reasons = cols[8].innerText.replace(/"/g, '""');
+                    
+                    csvContent += `"${{batch}}","${{cname}}","${{student}}","${{p_final}}","${{att}}","${{hw}}","${{el}}","${{risk}}","${{reasons}}"\\n`;
+                }}
+            }});
+            
+            const blob = new Blob([csvContent], {{ type: 'text/csv;charset=utf-8;' }});
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", "Care_List_Sinh_Vien_Nguy_Co.csv");
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }}
 
         // Data from Python backend
@@ -1021,7 +1038,7 @@ def build_unified_prediction_dashboard(data, output_path):
                 labels: currLabels,
                 datasets: [
                     {{
-                        label: 'Dự báo Luật cũ (%)',
+                        label: 'Quy chuẩn cũ (%)',
                         data: currOld,
                         backgroundColor: 'rgba(148, 163, 184, 0.3)',
                         borderColor: 'rgba(148, 163, 184, 0.8)',
@@ -1029,10 +1046,10 @@ def build_unified_prediction_dashboard(data, output_path):
                         borderRadius: 6
                     }},
                     {{
-                        label: 'Dự báo Quy chế mới (%)',
+                        label: 'Quy chế mới (%)',
                         data: currNew,
-                        backgroundColor: 'rgba(99, 102, 241, 0.75)',
-                        borderColor: 'rgba(99, 102, 241, 1)',
+                        backgroundColor: 'rgba(59, 130, 246, 0.75)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
                         borderWidth: 1.5,
                         borderRadius: 6
                     }}
@@ -1063,7 +1080,7 @@ def build_unified_prediction_dashboard(data, output_path):
                     }},
                     tooltip: {{
                         padding: 12,
-                        backgroundColor: '#151c2c',
+                        backgroundColor: '#0f172a',
                         titleFont: {{ family: 'Plus Jakarta Sans', weight: 'bold' }},
                         bodyFont: {{ family: 'Plus Jakarta Sans' }},
                         borderColor: 'rgba(255,255,255,0.08)',

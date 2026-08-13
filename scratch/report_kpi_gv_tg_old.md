@@ -14,27 +14,27 @@
 | **Nguyễn Đức Minh** | Trợ giảng thử việc |  | 100.0 | 100.0 | 76.4 | **92.92** |
 | **Nguyễn Ngọc Sơn** | Trợ giảng thử việc |  | 100.0 | 100.0 | 75.6 | **92.68** |
 | **Mai Xuân Chinh** | Trợ giảng |  | 100.0 | 100.0 | 74.3 | **92.29** |
-| **Bùi Thanh Hải** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34-32) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI_Intergration)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(32) (KS24_AI_Intergration)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI_Intergration)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(32-25) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(48-43-42) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(40-39) (KS24_JavaWeb)]] | 95.6 | 91.2 | 88.9 | **92.27** |
-| **Nguyễn Công Hưởng** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(36) (KS24_AI_Intergration)]] | 100.0 | 100.0 | 72.7 | **91.81** |
+| **Nguyễn Công Hưởng** | Giảng viên |  | 100.0 | 100.0 | 72.7 | **91.81** |
 | **Phan Ngọc Tài** | Trợ giảng thử việc |  | 100.0 | 100.0 | 71.8 | **91.54** |
+| **Bùi Thanh Hải** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(40-39) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(32-25) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34-32) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(48-43-42) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34) (KS24_JWS)]] | 93.8 | 87.6 | 88.9 | **90.48** |
 | **Phạm Viết Hùng** | Trợ giảng |  | 95.0 | 100.0 | 71.8 | **89.54** |
 | **Phạm Ngọc Kiên** | Trợ giảng |  | 85.0 | 100.0 | 85.1 | **89.53** |
 | **Trần Minh Cường** | Leader |  | 100.0 | 100.0 | 63.6 | **89.08** |
+| **Lâm Tùng Dương** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(38) (KS25_Python_Web)]] | 87.6 | 90.2 | 88.4 | **88.64** |
 | **Lưu Hoàng Xuân Nguyên** | Trợ giảng |  | 92.5 | 100.0 | 70.6 | **88.18** |
-| **Lâm Tùng Dương** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(38) (KS25_Python_Web)]] | 86.9 | 88.9 | 88.4 | **87.97** |
-| **Lê Hà Thanh Sang** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT2|HCM-K25-CNTT2 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(43-39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(43-42) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(39) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(38) (KS25_Python)]] | 84.7 | 84.5 | 91.8 | **86.78** |
-| **Trần Quốc Tuấn** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT4|HCM-K25-CNTT4 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(47-41) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(41-40) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT1|HCM-K25-CNTT1 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]] | 84.8 | 84.6 | 90.3 | **86.39** |
+| **Trần Quốc Tuấn** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(47-41) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT4|HCM-K25-CNTT4 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(41-40) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT1|HCM-K25-CNTT1 (KS25_Javascript)]] | 84.7 | 84.5 | 90.3 | **86.33** |
 | **Lại Trung Lâm** | Trợ giảng |  | 85.0 | 100.0 | 74.0 | **86.20** |
-| **Phạm Tuấn Bình** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(41-39) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(38-34) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5 (KS24-JavaAdvance)]] | 90.7 | 81.4 | 81.2 | **85.05** |
+| **Lê Hà Thanh Sang** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(38) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT2|HCM-K25-CNTT2 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(43-39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(39) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(43-42) (KS25_Database)]] | 83.3 | 81.7 | 91.8 | **85.37** |
 | **Nguyễn Duy Quang** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT8-HL|HN-K25-CNTT8-HL(18) (KS25_Database)]] | 87.3 | 89.5 | 75.0 | **84.26** |
 | **Nguyễn Thanh Bình Phước** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1 (KS24-JavaAdvance)]] | 87.1 | 84.3 | 80.0 | **84.15** |
-| **Tạ Quang Tùng** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(23-24) (KS25_Python)]] | 86.3 | 87.6 | 75.0 | **83.30** |
-| **Hồ Xuân Hùng** | Leader | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38-36) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5(29-19) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38) (KS24_JWS)]] | 90.6 | 81.1 | 67.7 | **80.88** |
-| **Lương Quốc Tuấn** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(43-40-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(47-44) (KS25_Database)]] | 77.1 | 84.1 | 82.1 | **80.69** |
-| **Nguyễn Quảng An** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(44-43-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(47-43) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(35-33) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39-37) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Database)]] | 73.5 | 77.0 | 91.3 | **79.90** |
-| **Trịnh Quốc Hai** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(42) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(44-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (KS25_Javascript)]] | 70.2 | 70.3 | 85.1 | **74.69** |
-| **Nguyễn Bá Minh Đạo** | Leader | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT3|HCM-K25-CNTT3 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT2|HCM-K24-CNTT2 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI_Intergration)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JWS)]] | 70.6 | 86.3 | 66.5 | **74.09** |
-| **Ngọ Văn Quý** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(38-35) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT7|HN-K25-CNTT7 (KS25_Javascript)]] | 74.5 | 63.9 | 81.9 | **73.54** |
+| **Phạm Tuấn Bình** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(38-34) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(41-39) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5 (KS24-JavaAdvance)]] | 89.3 | 78.5 | 81.2 | **83.63** |
+| **Tạ Quang Tùng** | GV | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(23-24) (KS25_Python)]] | 85.7 | 86.5 | 75.0 | **82.75** |
+| **Hồ Xuân Hùng** | Leader | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5(29-19) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38-36) (KS24_AI)]] | 91.7 | 83.5 | 67.7 | **82.06** |
+| **Lương Quốc Tuấn** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(43-40-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(47-44) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (KS25_Javascript)]] | 76.4 | 82.9 | 82.1 | **80.06** |
+| **Nguyễn Quảng An** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(44-43-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39-37) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(35-33) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(47-43) (KS25_Database)]] | 73.4 | 76.7 | 91.3 | **79.75** |
+| **Trịnh Quốc Hai** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(42) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(44-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]] | 70.0 | 70.0 | 85.1 | **74.51** |
+| **Ngọ Văn Quý** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(38-35) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT7|HN-K25-CNTT7 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (KS25_Javascript)]] | 75.2 | 65.4 | 81.9 | **74.26** |
+| **Nguyễn Bá Minh Đạo** | Leader | [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT3|HCM-K25-CNTT3 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT2|HCM-K24-CNTT2 (KS24-JavaAdvance)]] | 69.1 | 83.1 | 66.5 | **72.52** |
 
 ### 1.2. Khối QTKD
 
@@ -44,22 +44,22 @@
 | **Lê Thị Bảo Yến** | Giảng viên |  | 100.0 | 100.0 | 97.4 | **99.22** |
 | **Lê Nhựt Mi** | Giảng viên |  | 100.0 | 100.0 | 93.9 | **98.17** |
 | **Nguyễn Thị Như Quỳnh** | Trợ giảng |  | 100.0 | 100.0 | 91.6 | **97.48** |
-| **Hoàng Thị Kim Oanh** | Leader | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_M104)]] | 88.5 | 86.9 | 95.0 | **89.96** |
-| **Nguyễn Ngọc Vân Khanh** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_BA201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB202)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(33) (KS25_QTKD_BA201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB202)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_DTB201)]] | 89.0 | 88.0 | 87.6 | **88.26** |
-| **Hoàng Thị Hậu** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_M104)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (SKL_KS24)]] | 80.9 | 86.8 | 98.1 | **87.82** |
-| **Đặng Quỳnh Trang** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(26) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3 (KS25_QTKD_M103)]] | 87.6 | 85.2 | 85.0 | **86.08** |
-| **Nguyễn Thị Hồng Minh** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_M104)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(28) (KS25_QTKD_BA201)]] | 80.1 | 85.2 | 90.4 | **84.72** |
-| **Lê Thành Ngọc** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37-33) (KS25_QTKD_DTB202)]] | 86.4 | 82.9 | 80.0 | **83.43** |
+| **Nguyễn Thị Hồng Minh** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_M104)]] | 93.3 | 96.6 | 90.4 | **93.43** |
+| **Hoàng Thị Hậu** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_M104)]] | 87.6 | 85.3 | 98.1 | **90.07** |
+| **Hoàng Thị Kim Oanh** | Leader | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_M104)]] | 88.4 | 86.8 | 95.0 | **89.92** |
+| **Đặng Quỳnh Trang** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(26) (KS25_QTKD_PRJ302)]] | 87.9 | 85.8 | 85.0 | **86.38** |
+| **Nguyễn Ngọc Vân Khanh** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB202)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_DTB201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB202)]] | 84.6 | 79.3 | 87.6 | **83.91** |
+| **Lê Thành Ngọc** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37-33) (KS25_QTKD_DTB202)]] | 83.0 | 76.0 | 80.0 | **80.02** |
 
 ### 1.3. Khối Ngoại ngữ và kỹ năng mềm
 
 | Họ và tên | Vai trò | Lớp phụ trách | Điểm Kỷ luật SV & Tác nghiệp (40%) | Điểm Học tập (30%) | Điểm Báo cáo ngày (30%) | Điểm KPI tổng |
 | :--- | :---: | :--- | :---: | :---: | :---: | :---: |
 | **Giáp Thị Minh Hằng** | Giảng viên |  | 100.0 | 100.0 | 94.8 | **98.44** |
-| **Lê Thị Đỏ** | Giảng viên |  | 100.0 | 100.0 | 87.6 | **96.28** |
+| **Lê Thị Đỏ** | Giảng viên |  | 100.0 | 100.0 | 84.5 | **95.35** |
 | **Lò Thị Ngọc Anh** | Giảng viên |  | 100.0 | 100.0 | 83.6 | **95.08** |
+| **Ngô Quang Huấn** | Giảng viên |  | 100.0 | 100.0 | 80.2 | **94.06** |
 | **Hoàng Phương Thảo** | Giảng viên thử việc |  | 100.0 | 100.0 | 71.3 | **91.39** |
-| **Ngô Quang Huấn** | Giảng viên | [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1 (KS25_QTKD_SKL)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_SKL)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3 (KS25_QTKD_SKL)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (SKL_KS24)]] | 90.4 | 90.7 | 80.2 | **87.42** |
 | **Bùi Thị Xuân Mai** | Thực tập sinh |  | 100.0 | 100.0 | 44.4 | **83.32** |
 
 ### 1.4. Khối QLCLĐT
@@ -128,18 +128,8 @@
 - **Đề xuất cải thiện cụ thể**:
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
-#### Giảng viên. Bùi Thanh Hải
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34-32) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI_Intergration)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(32) (KS24_AI_Intergration)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI_Intergration)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(32-25) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(48-43-42) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(40-39) (KS24_JavaWeb)]]
-- **Điểm KPI tổng**: **92.27** (Kỷ luật: 95.6, Học tập: 91.2, Báo cáo ngày: 88.9)
-- **Điểm mạnh**:
-  - Duy trì tỷ lệ vi phạm của lớp ở mức rất thấp (trung bình chỉ 12.02%). Quản lý tốt 10 lớp học khối KS24.
-- **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Một số sinh viên ở gần mức cảnh báo chuyên cần tại lớp CNTT4. Lỗi báo cáo ngày: Thiếu nộp báo cáo ngày (20/07, 21/07, 22/07, 23/07, 24/07); Có task chậm trễ/tồn đọng: TRIEKHAI-1 [Buổi 1] Triển khai hướng dẫn DA K24 — CNTT2 (UNVERIFIED); Khai báo vượt định mức KPI Master: 29/07: Task 'Nghiên cứu để giảng dạy và làm tài liệu môn DEVOPS' khai báo 6.0h so với định mức tiêu chuẩn 3.0h; 31/07: Task 'Tham gia sản xuất tài nguyên K24: Làm mindmap, soạn quiz đầu giờ, cuối giờ DEVOPS' khai báo 3.0h so với định mức tiêu chuẩn 1.0h; 03/08: Task 'Tham gia sản xuất tài nguyên K24: Làm mindmap, soạn quiz đầu giờ, cuối giờ DEVOPS' khai báo 3.0h so với định mức tiêu chuẩn 1.0h; Có task lạ chưa có định mức: Task 'PTITTRIE-6 [Buổi 11] Giảng LT — IT212 K24 (HN-KS24-CNTT2)' chưa định dạng (gán tạm 30 phút); Task 'PTITTRIE-6 [Buổi 10] Giảng LT — IT212 K24 (HN-KS24-CNTT3)' chưa định dạng (gán tạm 30 phút); Task 'PTITTRIE-6 [Buổi 12] Giảng LT — IT212 K24 (HN-KS24-CNTT4)' chưa định dạng (gán tạm 30 phút).
-- **Đề xuất cải thiện cụ thể**:
-  - Cần làm việc sát sao hơn và thường xuyên thông báo tỷ lệ chuyên cần cho sinh viên. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
-
 #### Giảng viên. Nguyễn Công Hưởng
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(36) (KS24_AI_Intergration)]]
+- **Lớp phụ trách**: 
 - **Điểm KPI tổng**: **91.81** (Kỷ luật: 100.0, Học tập: 100.0, Báo cáo ngày: 72.7)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
@@ -157,6 +147,16 @@
   - Có task chậm trễ/tồn đọng: HCM-KS25-CNTT8 - IT-215 - Session11: Dự giờ thực hành (0%), HCM-KS25-CNTT8 - IT-215 - Session10: Chấm bài tập về nhà. (0%), HCM-KS25-CNTT5 - IT-215 - Session10, 11: Chấm bài tập về nhà. (0%); Khai báo vượt định mức KPI Master: 01/07: Task 'HCM-KS25-CNTT8 - IT-215 - Session4: Chấm bài tập về nhà.' khai báo 1.0h so với định mức tiêu chuẩn 0.5h; 01/07: Task 'HCM-KS25-CNTT5 - IT-215 - Session4: Chấm bài tập về nhà.' khai báo 1.0h so với định mức tiêu chuẩn 0.5h; 02/07: Task 'HCM-KS25-CNTT8 - IT-215 - Session5: Chấm bài tập về nhà.' khai báo 1.0h so với định mức tiêu chuẩn 0.5h; Có task lạ chưa có định mức: Task 'HCM-KS25-CNTT8 - IT-215 - Session4, 5: Dự giờ lớp lý thuyết.' chưa định dạng (gán tạm 30 phút); Task 'HCM-CNTT: Tham gia dự giờ demo giảng thử Thầy Nguyễn Viết Hùng.' chưa định dạng (gán tạm 30 phút); Task 'HCM-CNTT: Tham gia dự giờ demo giảng thử Thầy Đặng Minh Luân.' chưa định dạng (gán tạm 30 phút)
 - **Đề xuất cải thiện cụ thể**:
   - Cần đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
+
+#### Giảng viên. Bùi Thanh Hải
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(40-39) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(32-25) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34-32) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(42) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2(39) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3(48-43-42) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(34) (KS24_JWS)]]
+- **Điểm KPI tổng**: **90.48** (Kỷ luật: 93.8, Học tập: 87.6, Báo cáo ngày: 88.9)
+- **Điểm mạnh**:
+  - Duy trì tỷ lệ vi phạm của lớp ở mức rất thấp (trung bình chỉ 12.02%). Quản lý tốt 10 lớp học khối KS24.
+- **Điểm yếu / Lỗi vi phạm đã mắc**:
+  - Một số sinh viên ở gần mức cảnh báo chuyên cần tại lớp CNTT4. Lỗi báo cáo ngày: Thiếu nộp báo cáo ngày (20/07, 21/07, 22/07, 23/07, 24/07); Có task chậm trễ/tồn đọng: TRIEKHAI-1 [Buổi 1] Triển khai hướng dẫn DA K24 — CNTT2 (UNVERIFIED); Khai báo vượt định mức KPI Master: 29/07: Task 'Nghiên cứu để giảng dạy và làm tài liệu môn DEVOPS' khai báo 6.0h so với định mức tiêu chuẩn 3.0h; 31/07: Task 'Tham gia sản xuất tài nguyên K24: Làm mindmap, soạn quiz đầu giờ, cuối giờ DEVOPS' khai báo 3.0h so với định mức tiêu chuẩn 1.0h; 03/08: Task 'Tham gia sản xuất tài nguyên K24: Làm mindmap, soạn quiz đầu giờ, cuối giờ DEVOPS' khai báo 3.0h so với định mức tiêu chuẩn 1.0h; Có task lạ chưa có định mức: Task 'PTITTRIE-6 [Buổi 11] Giảng LT — IT212 K24 (HN-KS24-CNTT2)' chưa định dạng (gán tạm 30 phút); Task 'PTITTRIE-6 [Buổi 10] Giảng LT — IT212 K24 (HN-KS24-CNTT3)' chưa định dạng (gán tạm 30 phút); Task 'PTITTRIE-6 [Buổi 12] Giảng LT — IT212 K24 (HN-KS24-CNTT4)' chưa định dạng (gán tạm 30 phút).
+- **Đề xuất cải thiện cụ thể**:
+  - Cần làm việc sát sao hơn và thường xuyên thông báo tỷ lệ chuyên cần cho sinh viên. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### Trợ giảng. Phạm Viết Hùng
 - **Lớp phụ trách**: 
@@ -188,6 +188,16 @@
 - **Đề xuất cải thiện cụ thể**:
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
+#### Giảng viên. Lâm Tùng Dương
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(38) (KS25_Python_Web)]]
+- **Điểm KPI tổng**: **88.64** (Kỷ luật: 87.6, Học tập: 90.2, Báo cáo ngày: 88.4)
+- **Điểm mạnh**:
+  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
+- **Điểm yếu / Lỗi vi phạm đã mắc**:
+  - Thiếu nộp báo cáo ngày (02/07, 20/07, 23/07); Có task chậm trễ/tồn đọng: Sản xuất session 14 (25%), KS26NANG-119 S08 - L01: Quiz (UNVERIFIED), KS26NANG-124 S08 - L02: Câu hỏi bài đọc (UNVERIFIED); Khai báo vượt định mức KPI Master: 16/07: Task 'Chấm thi môn IT205-KS25' khai báo 4.0h so với định mức tiêu chuẩn 0.5h; 30/07: Task 'Xây dứng AI Agent MindMap' khai báo 3.0h so với định mức tiêu chuẩn 1.0h; 03/08: Task 'KS26NANG-133 S08: Mindmap' khai báo 2.0h so với định mức tiêu chuẩn 1.0h; Có task lạ chưa có định mức: Task 'SANXUAT-28 bài đọc session 10' chưa định dạng (gán tạm 30 phút); Task 'Phát triển AI Agent' chưa định dạng (gán tạm 30 phút); Task 'Làm checkpoint' chưa định dạng (gán tạm 30 phút)
+- **Đề xuất cải thiện cụ thể**:
+  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
+
 #### Trợ giảng. Lưu Hoàng Xuân Nguyên
 - **Lớp phụ trách**: 
 - **Điểm KPI tổng**: **88.18** (Kỷ luật: 92.5, Học tập: 100.0, Báo cáo ngày: 70.6)
@@ -198,29 +208,9 @@
 - **Đề xuất cải thiện cụ thể**:
   - Cần chủ động và sát sao hơn trong việc kiểm tra bài tập, nhắc nhở sinh viên nộp bài bổ sung kịp thời. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
-#### Giảng viên. Lâm Tùng Dương
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(38) (KS25_Python_Web)]]
-- **Điểm KPI tổng**: **87.97** (Kỷ luật: 86.9, Học tập: 88.9, Báo cáo ngày: 88.4)
-- **Điểm mạnh**:
-  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
-- **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Thiếu nộp báo cáo ngày (02/07, 20/07, 23/07); Có task chậm trễ/tồn đọng: Sản xuất session 14 (25%), KS26NANG-119 S08 - L01: Quiz (UNVERIFIED), KS26NANG-124 S08 - L02: Câu hỏi bài đọc (UNVERIFIED); Khai báo vượt định mức KPI Master: 16/07: Task 'Chấm thi môn IT205-KS25' khai báo 4.0h so với định mức tiêu chuẩn 0.5h; 30/07: Task 'Xây dứng AI Agent MindMap' khai báo 3.0h so với định mức tiêu chuẩn 1.0h; 03/08: Task 'KS26NANG-133 S08: Mindmap' khai báo 2.0h so với định mức tiêu chuẩn 1.0h; Có task lạ chưa có định mức: Task 'SANXUAT-28 bài đọc session 10' chưa định dạng (gán tạm 30 phút); Task 'Phát triển AI Agent' chưa định dạng (gán tạm 30 phút); Task 'Làm checkpoint' chưa định dạng (gán tạm 30 phút)
-- **Đề xuất cải thiện cụ thể**:
-  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
-
-#### Giảng viên. Lê Hà Thanh Sang
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT2|HCM-K25-CNTT2 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(43-39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(43-42) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(39) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(38) (KS25_Python)]]
-- **Điểm KPI tổng**: **86.78** (Kỷ luật: 84.7, Học tập: 84.5, Báo cáo ngày: 91.8)
-- **Điểm mạnh**:
-  - Quản lý giảng dạy hiệu quả 7 lớp học khối KS25, chỉ số vi phạm học tập ở mức thấp (trung bình 13.25%).
-- **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Không có vi phạm nghiêm trọng nào ghi nhận. Lỗi báo cáo ngày: Thiếu nộp báo cáo ngày (01/07, 03/07, 06/07, 16/07, 20/07, 22/07); Có task chậm trễ/tồn đọng: KS25TICH-141 S09 - L05: Kế hoạch quay video (UNVERIFIED), KS25TICH-141 S09 - L05: Kế hoạch quay video (UNVERIFIED); Có task lạ chưa có định mức: Task 'Cập nhật tính năng của AI Agent' chưa định dạng (gán tạm 30 phút); Task 'Chăm sóc, quản lý chỉ số sinh viên' chưa định dạng (gán tạm 30 phút); Task 'Bổ trợ kiến thức môn Python' chưa định dạng (gán tạm 30 phút).
-- **Đề xuất cải thiện cụ thể**:
-  - Tiếp tục phát huy phong cách quản lý lớp học tích cực. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
-
 #### Giảng viên. Trần Quốc Tuấn
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT4|HCM-K25-CNTT4 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(47-41) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(41-40) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT1|HCM-K25-CNTT1 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]]
-- **Điểm KPI tổng**: **86.39** (Kỷ luật: 84.8, Học tập: 84.6, Báo cáo ngày: 90.3)
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(40-39) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(47-41) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT4|HCM-K25-CNTT4 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(41-40) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT6|HCM-K25-CNTT6(40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT1|HCM-K25-CNTT1 (KS25_Javascript)]]
+- **Điểm KPI tổng**: **86.33** (Kỷ luật: 84.7, Học tập: 84.5, Báo cáo ngày: 90.3)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
@@ -238,15 +228,15 @@
 - **Đề xuất cải thiện cụ thể**:
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
-#### Giảng viên. Phạm Tuấn Bình
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(41-39) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(38-34) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5 (KS24-JavaAdvance)]]
-- **Điểm KPI tổng**: **85.05** (Kỷ luật: 90.7, Học tập: 81.4, Báo cáo ngày: 81.2)
+#### Giảng viên. Lê Hà Thanh Sang
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(38) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(37) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT2|HCM-K25-CNTT2 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT8|HCM-K25-CNTT8(36) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(43-39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT5|HCM-K25-CNTT5(39) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT7|HCM-K25-CNTT7(43-42) (KS25_Database)]]
+- **Điểm KPI tổng**: **85.37** (Kỷ luật: 83.3, Học tập: 81.7, Báo cáo ngày: 91.8)
 - **Điểm mạnh**:
-  - Đảm nhiệm giảng dạy các lớp CNTT3 và CNTT5 khối KS24.
+  - Quản lý giảng dạy hiệu quả 7 lớp học khối KS25, chỉ số vi phạm học tập ở mức thấp (trung bình 13.25%).
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Tỷ lệ chuyên cần và bài tập về nhà của sinh viên ở mức báo động 2 (sinh viên có nền tảng yếu). Lỗi báo cáo ngày: Thiếu nộp báo cáo ngày (03/07); Có task chậm trễ/tồn đọng: [Chấm thi] - AI Application In Action - HN-KS24-CNTT1 (0%), [Nguyên cứu] - Hyperframes - Sử dụng như nào và tích hợp vào như nào (0%), [Chấm thi] - Exam Hackaathon - HN-KS24-CNTT3 - AI Application (30%); Khai báo vượt định mức KPI Master: 01/07: Task '[Chấm thi] - AI Application In Action - HN-KS24-CNTT1' khai báo 3.0h so với định mức tiêu chuẩn 0.5h; 02/07: Task '[Chấm thi sản phẩm] - Project - Java Web Service' khai báo 4.0h so với định mức tiêu chuẩn 0.5h; 06/07: Task '[Chấm thi] - Exam Hackathon - HN-KS24-CNTT1 - AI Application' khai báo 4.0h so với định mức tiêu chuẩn 0.5h; Có task lạ chưa có định mức: Task '[Microservice] - Làm slide - session 02' chưa định dạng (gán tạm 30 phút); Task '[Nguyên cứu] - Hyperframes - Sử dụng như nào và tích hợp vào như nào' chưa định dạng (gán tạm 30 phút); Task '[Trông thi] TN + TL - Python Exam Final - HN-KS24-CNTT8' chưa định dạng (gán tạm 30 phút).
+  - Không có vi phạm nghiêm trọng nào ghi nhận. Lỗi báo cáo ngày: Thiếu nộp báo cáo ngày (01/07, 03/07, 06/07, 16/07, 20/07, 22/07); Có task chậm trễ/tồn đọng: KS25TICH-141 S09 - L05: Kế hoạch quay video (UNVERIFIED), KS25TICH-141 S09 - L05: Kế hoạch quay video (UNVERIFIED); Có task lạ chưa có định mức: Task 'Cập nhật tính năng của AI Agent' chưa định dạng (gán tạm 30 phút); Task 'Chăm sóc, quản lý chỉ số sinh viên' chưa định dạng (gán tạm 30 phút); Task 'Bổ trợ kiến thức môn Python' chưa định dạng (gán tạm 30 phút).
 - **Đề xuất cải thiện cụ thể**:
-  - Phối hợp với phòng CTSV kéo sinh viên quay lại và triển khai các buổi hỗ trợ kiến thức nền tảng. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
+  - Tiếp tục phát huy phong cách quản lý lớp học tích cực. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### GV. Nguyễn Duy Quang
 - **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT8-HL|HN-K25-CNTT8-HL(18) (KS25_Database)]]
@@ -268,9 +258,19 @@
 - **Đề xuất cải thiện cụ thể**:
   - Tiếp tục duy trì và nâng cao chất lượng quản lý lớp học.
 
+#### Giảng viên. Phạm Tuấn Bình
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4(38-34) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(41-39) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5 (KS24-JavaAdvance)]]
+- **Điểm KPI tổng**: **83.63** (Kỷ luật: 89.3, Học tập: 78.5, Báo cáo ngày: 81.2)
+- **Điểm mạnh**:
+  - Đảm nhiệm giảng dạy các lớp CNTT3 và CNTT5 khối KS24.
+- **Điểm yếu / Lỗi vi phạm đã mắc**:
+  - Tỷ lệ chuyên cần và bài tập về nhà của sinh viên ở mức báo động 2 (sinh viên có nền tảng yếu). Lỗi báo cáo ngày: Thiếu nộp báo cáo ngày (03/07); Có task chậm trễ/tồn đọng: [Chấm thi] - AI Application In Action - HN-KS24-CNTT1 (0%), [Nguyên cứu] - Hyperframes - Sử dụng như nào và tích hợp vào như nào (0%), [Chấm thi] - Exam Hackaathon - HN-KS24-CNTT3 - AI Application (30%); Khai báo vượt định mức KPI Master: 01/07: Task '[Chấm thi] - AI Application In Action - HN-KS24-CNTT1' khai báo 3.0h so với định mức tiêu chuẩn 0.5h; 02/07: Task '[Chấm thi sản phẩm] - Project - Java Web Service' khai báo 4.0h so với định mức tiêu chuẩn 0.5h; 06/07: Task '[Chấm thi] - Exam Hackathon - HN-KS24-CNTT1 - AI Application' khai báo 4.0h so với định mức tiêu chuẩn 0.5h; Có task lạ chưa có định mức: Task '[Microservice] - Làm slide - session 02' chưa định dạng (gán tạm 30 phút); Task '[Nguyên cứu] - Hyperframes - Sử dụng như nào và tích hợp vào như nào' chưa định dạng (gán tạm 30 phút); Task '[Trông thi] TN + TL - Python Exam Final - HN-KS24-CNTT8' chưa định dạng (gán tạm 30 phút).
+- **Đề xuất cải thiện cụ thể**:
+  - Phối hợp với phòng CTSV kéo sinh viên quay lại và triển khai các buổi hỗ trợ kiến thức nền tảng. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
+
 #### GV. Tạ Quang Tùng
 - **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(23-24) (KS25_Python)]]
-- **Điểm KPI tổng**: **83.30** (Kỷ luật: 86.3, Học tập: 87.6, Báo cáo ngày: 75.0)
+- **Điểm KPI tổng**: **82.75** (Kỷ luật: 85.7, Học tập: 86.5, Báo cáo ngày: 75.0)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
@@ -279,8 +279,8 @@
   - Tiếp tục duy trì và nâng cao chất lượng quản lý lớp học.
 
 #### Leader. Hồ Xuân Hùng
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38-36) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5(29-19) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38) (KS24_JWS)]]
-- **Điểm KPI tổng**: **80.88** (Kỷ luật: 90.6, Học tập: 81.1, Báo cáo ngày: 67.7)
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT5|HN-K24-CNTT5(29-19) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1(38-36) (KS24_AI)]]
+- **Điểm KPI tổng**: **82.06** (Kỷ luật: 91.7, Học tập: 83.5, Báo cáo ngày: 67.7)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
@@ -289,8 +289,8 @@
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
 #### Giảng viên. Lương Quốc Tuấn
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(43-40-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(47-44) (KS25_Database)]]
-- **Điểm KPI tổng**: **80.69** (Kỷ luật: 77.1, Học tập: 84.1, Báo cáo ngày: 82.1)
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(37) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(43-40-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(47-44) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (KS25_Javascript)]]
+- **Điểm KPI tổng**: **80.06** (Kỷ luật: 76.4, Học tập: 82.9, Báo cáo ngày: 82.1)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
@@ -299,8 +299,8 @@
   - Phải rà soát kỹ điểm thi sau khi đẩy lên hệ thống QLDT; hướng dẫn kỹ sinh viên cách chia file và hạn chế lạm dụng AI khi làm Project. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### Giảng viên. Nguyễn Quảng An
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(44-43-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(47-43) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(35-33) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39-37) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Database)]]
-- **Điểm KPI tổng**: **79.90** (Kỷ luật: 73.5, Học tập: 77.0, Báo cáo ngày: 91.3)
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(32-31) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(35) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(44-43-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2(43) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39-37) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(35-33) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(41-40) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4(47-43) (KS25_Database)]]
+- **Điểm KPI tổng**: **79.75** (Kỷ luật: 73.4, Học tập: 76.7, Báo cáo ngày: 91.3)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
@@ -309,8 +309,8 @@
   - Phải rà soát kỹ điểm thi sau khi đẩy lên hệ thống QLDT; hướng dẫn kỹ sinh viên cách chia file và hạn chế lạm dụng AI khi làm Project. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
 #### Giảng viên. Trịnh Quốc Hai
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(42) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(44-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (KS25_Javascript)]]
-- **Điểm KPI tổng**: **74.69** (Kỷ luật: 70.2, Học tập: 70.3, Báo cáo ngày: 85.1)
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5(42) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1(44-42) (KS25_Python)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT8|HN-K25-CNTT8(22) (KS25_Python_Web)]]
+- **Điểm KPI tổng**: **74.51** (Kỷ luật: 70.0, Học tập: 70.0, Báo cáo ngày: 85.1)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
@@ -318,19 +318,9 @@
 - **Đề xuất cải thiện cụ thể**:
   - Phải rà soát kỹ điểm thi sau khi đẩy lên hệ thống QLDT; hướng dẫn kỹ sinh viên cách chia file và hạn chế lạm dụng AI khi làm Project. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, kiểm soát giờ khai báo đúng định mức kpi master, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
-#### Leader. Nguyễn Bá Minh Đạo
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT3|HCM-K25-CNTT3 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT2|HCM-K24-CNTT2 (KS24-JavaAdvance)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI_Intergration)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JWS)]]
-- **Điểm KPI tổng**: **74.09** (Kỷ luật: 70.6, Học tập: 86.3, Báo cáo ngày: 66.5)
-- **Điểm mạnh**:
-  - Có chuyên môn giảng dạy tốt, quản lý các lớp học lớn khối KS24 và KS25.
-- **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Từ đầu môn không set lịch học lớp HCM-CNTT2 dẫn đến không nắm bắt được chỉ số để xử lý kịp thời. Lỗi báo cáo ngày: Thiếu nộp báo cáo ngày (01/07, 02/07, 03/07, 06/07, 07/07, 08/07, 09/07, 13/07, 14/07, 16/07, 17/07, 20/07, 23/07, 24/07, 28/07, 29/07, 30/07, 31/07, 03/08, 04/08, 05/08, 06/08, 07/08, 10/08, 11/08, 12/08); Có task lạ chưa có định mức: Task 'Phân chia công việc sản xuất học liệu môn Microservice' chưa định dạng (gán tạm 30 phút); Task 'Họp ĐT - Checkpoint' chưa định dạng (gán tạm 30 phút); Task 'Họp chốt nhiệm vụ SX TNHT - Kỳ nghỉ hè 2026' chưa định dạng (gán tạm 30 phút).
-- **Đề xuất cải thiện cụ thể**:
-  - Phải lập và thiết lập lịch học đầy đủ trên hệ thống trước khi bắt đầu khóa học để theo dõi chỉ số. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
-
 #### Giảng viên. Ngọ Văn Quý
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(38-35) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT7|HN-K25-CNTT7 (KS25_Javascript)]]
-- **Điểm KPI tổng**: **73.54** (Kỷ luật: 74.5, Học tập: 63.9, Báo cáo ngày: 81.9)
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3(40-39) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6(38-35) (KS25_Database)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT7|HN-K25-CNTT7 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (KS25_Javascript)]]
+- **Điểm KPI tổng**: **74.26** (Kỷ luật: 75.2, Học tập: 65.4, Báo cáo ngày: 81.9)
 - **Điểm mạnh**:
   - Giảng dạy tốt các môn chính khối KS25 CNTT.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
@@ -338,51 +328,21 @@
 - **Đề xuất cải thiện cụ thể**:
   - Phải rà soát kỹ điểm thi sau khi đẩy lên hệ thống QLDT; hướng dẫn kỹ sinh viên cách chia file và hạn chế lạm dụng AI khi làm Project. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
 
+#### Leader. Nguyễn Bá Minh Đạo
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS25-CNTT3|HCM-K25-CNTT3 (KS25_Javascript)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_AI)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JWS)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT1|HCM-K24-CNTT1(44) (KS24_JavaWeb)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HCM-KS24-CNTT2|HCM-K24-CNTT2 (KS24-JavaAdvance)]]
+- **Điểm KPI tổng**: **72.52** (Kỷ luật: 69.1, Học tập: 83.1, Báo cáo ngày: 66.5)
+- **Điểm mạnh**:
+  - Có chuyên môn giảng dạy tốt, quản lý các lớp học lớn khối KS24 và KS25.
+- **Điểm yếu / Lỗi vi phạm đã mắc**:
+  - Từ đầu môn không set lịch học lớp HCM-CNTT2 dẫn đến không nắm bắt được chỉ số để xử lý kịp thời. Lỗi báo cáo ngày: Thiếu nộp báo cáo ngày (01/07, 02/07, 03/07, 06/07, 07/07, 08/07, 09/07, 13/07, 14/07, 16/07, 17/07, 20/07, 23/07, 24/07, 28/07, 29/07, 30/07, 31/07, 03/08, 04/08, 05/08, 06/08, 07/08, 10/08, 11/08, 12/08); Có task lạ chưa có định mức: Task 'Phân chia công việc sản xuất học liệu môn Microservice' chưa định dạng (gán tạm 30 phút); Task 'Họp ĐT - Checkpoint' chưa định dạng (gán tạm 30 phút); Task 'Họp chốt nhiệm vụ SX TNHT - Kỳ nghỉ hè 2026' chưa định dạng (gán tạm 30 phút).
+- **Đề xuất cải thiện cụ thể**:
+  - Phải lập và thiết lập lịch học đầy đủ trên hệ thống trước khi bắt đầu khóa học để theo dõi chỉ số. Đồng thời, cần tuân thủ lịch nộp báo cáo ngày đầy đủ, báo cáo qlđt bổ sung định mức cho đầu việc lạ.
+
 ### 🔹 Chi tiết nhân sự Khối QTKD
 
-#### Leader. Hoàng Thị Kim Oanh
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_M104)]]
-- **Điểm KPI tổng**: **89.96** (Kỷ luật: 88.5, Học tập: 86.9, Báo cáo ngày: 95.0)
-- **Điểm mạnh**:
-  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
-- **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Thiếu nộp báo cáo ngày (05/08, 06/08); Có task chậm trễ/tồn đọng: QTKDCAC-6 Xây dựng cẩm nang xử lý tình huống với sinh viên (dành cho GV, TG) - Cô Oanh (20%), Bổ sung báo cáo CTĐT K26 (30%), Rà soát thống kê báo cáo hàng ngày của nhân sự (50%); Khai báo vượt định mức KPI Master: 13/07: Task 'Giảng dạy, chuẩn bị giảng dạy SS8 - PRB302' khai báo 2.5h so với định mức tiêu chuẩn 0.5h; Có task lạ chưa có định mức: Task 'Chuẩn bị báo cáo + họp giao ban Đào tạo' chưa định dạng (gán tạm 30 phút); Task 'Chuẩn bị dữ liệu, họp trình bày CTĐT K26 với Giám đốc đào tạo' chưa định dạng (gán tạm 30 phút); Task 'Đánh giá hiệu suất, review nhân sự tháng 6' chưa định dạng (gán tạm 30 phút)
-- **Đề xuất cải thiện cụ thể**:
-  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
-
-#### Giảng viên. Nguyễn Ngọc Vân Khanh
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_BA201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB202)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(33) (KS25_QTKD_BA201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB202)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_DTB201)]]
-- **Điểm KPI tổng**: **88.26** (Kỷ luật: 89.0, Học tập: 88.0, Báo cáo ngày: 87.6)
-- **Điểm mạnh**:
-  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
-- **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Thiếu nộp báo cáo ngày (20/07, 21/07, 22/07, 23/07, 24/07, 12/08); Có task chậm trễ/tồn đọng: Chuẩn bị nội dung session Stakeholder Analysis & Elicitation Techniques (BA) (70%), Nghiên cứu SS07 BA201 (20%), Nghiên cứu SS7 BA201 (48%); Khai báo vượt định mức KPI Master: 03/07: Task 'Chấm thi' khai báo 3.5h so với định mức tiêu chuẩn 0.5h; 11/08: Task 'Coi thi - Chấm thi vấn đáp ĐGNL' khai báo 3.75h so với định mức tiêu chuẩn 0.5h; Có task lạ chưa có định mức: Task 'Coi thi DTB202 - QTKD1 (Do 1 sv bị lỗi thi TN, phải coi thi bổ sung thêm 30')' chưa định dạng (gán tạm 30 phút); Task 'Hoàn thành báo cáo Check point' chưa định dạng (gán tạm 30 phút); Task 'Làm việc cùng 5 đội thi Khởi nguyên' chưa định dạng (gán tạm 30 phút)
-- **Đề xuất cải thiện cụ thể**:
-  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
-
-#### Giảng viên. Hoàng Thị Hậu
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT5|HN-K25-CNTT5 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT6|HN-K25-CNTT6 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_M104)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT4|HN-K25-CNTT4 (SKL_KS24)]]
-- **Điểm KPI tổng**: **87.82** (Kỷ luật: 80.9, Học tập: 86.8, Báo cáo ngày: 98.1)
-- **Điểm mạnh**:
-  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
-- **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Có task chậm trễ/tồn đọng: Nghiên cứu xây dựng khung PM môn học (0%), Đọc dự án, nghiên cứu tìm kiếm thông tin để góp ý cuộc thi khởi nguyên (0%), Nghiên cứu AI agent (0%); Có task lạ chưa có định mức: Task 'Nghiên cứu AI agent' chưa định dạng (gán tạm 30 phút); Task 'Nghiên cứu làm nội dung khung chương trình Nhập môn quản trị kinh doanh' chưa định dạng (gán tạm 30 phút); Task 'Nghiên cứu góp ý cho cuộc thi khởi nguyên' chưa định dạng (gán tạm 30 phút)
-- **Đề xuất cải thiện cụ thể**:
-  - Cần đẩy nhanh tiến độ hoàn thành task, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
-
-#### Giảng viên. Đặng Quỳnh Trang
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(26) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3 (KS25_QTKD_M103)]]
-- **Điểm KPI tổng**: **86.08** (Kỷ luật: 87.6, Học tập: 85.2, Báo cáo ngày: 85.0)
-- **Điểm mạnh**:
-  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
-- **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Thiếu nộp báo cáo ngày (07/07, 10/07, 17/07, 05/08, 06/08, 07/08); Có task chậm trễ/tồn đọng: Mentor đội Khởi nguyên Tuyệt (75%), Mentor đội Khởi nguyên Phoenix (50%), Hướng dẫn Khởi nguyên team Horizon, hướng dẫn xây dựng báo cáo chi tiết và khung tài chính, rủi ro (25%); Khai báo vượt định mức KPI Master: 13/07: Task 'Góp ý bài sinh viên về báo cáo cuối môn và slide' khai báo 1.5h so với định mức tiêu chuẩn 0.5h; 27/07: Task 'Training AI Antigravity tạo các bảng giao diện html, slides và cấu trúc lại các học liệu' khai báo 2.0h so với định mức tiêu chuẩn 0.5h; 27/07: Task 'Training xây dựng học liệu MAN101 và điều chỉnh đầu ra sản phẩm html, slides' khai báo 2.0h so với định mức tiêu chuẩn 0.5h; Có task lạ chưa có định mức: Task 'Giảng dạy QTKD3' chưa định dạng (gán tạm 30 phút); Task 'Chăm sóc, hỗ trợ sinh viên, giải đáp thắc mắc ngoài giờ' chưa định dạng (gán tạm 30 phút); Task 'Nhận xét mentor cho bài làm cuộc thi Khởi nguyên' chưa định dạng (gán tạm 30 phút)
-- **Đề xuất cải thiện cụ thể**:
-  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
-
 #### Giảng viên. Nguyễn Thị Hồng Minh
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT3|HN-K25-CNTT3 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT2|HN-K25-CNTT2 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-CNTT1|HN-K25-CNTT1 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_M104)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(28) (KS25_QTKD_BA201)]]
-- **Điểm KPI tổng**: **84.72** (Kỷ luật: 80.1, Học tập: 85.2, Báo cáo ngày: 90.4)
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_M104)]]
+- **Điểm KPI tổng**: **93.43** (Kỷ luật: 93.3, Học tập: 96.6, Báo cáo ngày: 90.4)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
@@ -390,9 +350,49 @@
 - **Đề xuất cải thiện cụ thể**:
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
+#### Giảng viên. Hoàng Thị Hậu
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_M104)]]
+- **Điểm KPI tổng**: **90.07** (Kỷ luật: 87.6, Học tập: 85.3, Báo cáo ngày: 98.1)
+- **Điểm mạnh**:
+  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
+- **Điểm yếu / Lỗi vi phạm đã mắc**:
+  - Có task chậm trễ/tồn đọng: Nghiên cứu xây dựng khung PM môn học (0%), Đọc dự án, nghiên cứu tìm kiếm thông tin để góp ý cuộc thi khởi nguyên (0%), Nghiên cứu AI agent (0%); Có task lạ chưa có định mức: Task 'Nghiên cứu AI agent' chưa định dạng (gán tạm 30 phút); Task 'Nghiên cứu làm nội dung khung chương trình Nhập môn quản trị kinh doanh' chưa định dạng (gán tạm 30 phút); Task 'Nghiên cứu góp ý cho cuộc thi khởi nguyên' chưa định dạng (gán tạm 30 phút)
+- **Đề xuất cải thiện cụ thể**:
+  - Cần đẩy nhanh tiến độ hoàn thành task, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
+
+#### Leader. Hoàng Thị Kim Oanh
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_M104)]]
+- **Điểm KPI tổng**: **89.92** (Kỷ luật: 88.4, Học tập: 86.8, Báo cáo ngày: 95.0)
+- **Điểm mạnh**:
+  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
+- **Điểm yếu / Lỗi vi phạm đã mắc**:
+  - Thiếu nộp báo cáo ngày (05/08, 06/08); Có task chậm trễ/tồn đọng: QTKDCAC-6 Xây dựng cẩm nang xử lý tình huống với sinh viên (dành cho GV, TG) - Cô Oanh (20%), Bổ sung báo cáo CTĐT K26 (30%), Rà soát thống kê báo cáo hàng ngày của nhân sự (50%); Khai báo vượt định mức KPI Master: 13/07: Task 'Giảng dạy, chuẩn bị giảng dạy SS8 - PRB302' khai báo 2.5h so với định mức tiêu chuẩn 0.5h; Có task lạ chưa có định mức: Task 'Chuẩn bị báo cáo + họp giao ban Đào tạo' chưa định dạng (gán tạm 30 phút); Task 'Chuẩn bị dữ liệu, họp trình bày CTĐT K26 với Giám đốc đào tạo' chưa định dạng (gán tạm 30 phút); Task 'Đánh giá hiệu suất, review nhân sự tháng 6' chưa định dạng (gán tạm 30 phút)
+- **Đề xuất cải thiện cụ thể**:
+  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
+
+#### Giảng viên. Đặng Quỳnh Trang
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3 (KS25_QTKD_M103)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(26) (KS25_QTKD_PRJ302)]]
+- **Điểm KPI tổng**: **86.38** (Kỷ luật: 87.9, Học tập: 85.8, Báo cáo ngày: 85.0)
+- **Điểm mạnh**:
+  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
+- **Điểm yếu / Lỗi vi phạm đã mắc**:
+  - Thiếu nộp báo cáo ngày (07/07, 10/07, 17/07, 05/08, 06/08, 07/08); Có task chậm trễ/tồn đọng: Mentor đội Khởi nguyên Tuyệt (75%), Mentor đội Khởi nguyên Phoenix (50%), Hướng dẫn Khởi nguyên team Horizon, hướng dẫn xây dựng báo cáo chi tiết và khung tài chính, rủi ro (25%); Khai báo vượt định mức KPI Master: 13/07: Task 'Góp ý bài sinh viên về báo cáo cuối môn và slide' khai báo 1.5h so với định mức tiêu chuẩn 0.5h; 27/07: Task 'Training AI Antigravity tạo các bảng giao diện html, slides và cấu trúc lại các học liệu' khai báo 2.0h so với định mức tiêu chuẩn 0.5h; 27/07: Task 'Training xây dựng học liệu MAN101 và điều chỉnh đầu ra sản phẩm html, slides' khai báo 2.0h so với định mức tiêu chuẩn 0.5h; Có task lạ chưa có định mức: Task 'Giảng dạy QTKD3' chưa định dạng (gán tạm 30 phút); Task 'Chăm sóc, hỗ trợ sinh viên, giải đáp thắc mắc ngoài giờ' chưa định dạng (gán tạm 30 phút); Task 'Nhận xét mentor cho bài làm cuộc thi Khởi nguyên' chưa định dạng (gán tạm 30 phút)
+- **Đề xuất cải thiện cụ thể**:
+  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
+
+#### Giảng viên. Nguyễn Ngọc Vân Khanh
+- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB202)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37) (KS25_QTKD_DTB201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2(40) (KS25_QTKD_DTB201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB202)]]
+- **Điểm KPI tổng**: **83.91** (Kỷ luật: 84.6, Học tập: 79.3, Báo cáo ngày: 87.6)
+- **Điểm mạnh**:
+  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
+- **Điểm yếu / Lỗi vi phạm đã mắc**:
+  - Thiếu nộp báo cáo ngày (20/07, 21/07, 22/07, 23/07, 24/07, 12/08); Có task chậm trễ/tồn đọng: Chuẩn bị nội dung session Stakeholder Analysis & Elicitation Techniques (BA) (70%), Nghiên cứu SS07 BA201 (20%), Nghiên cứu SS7 BA201 (48%); Khai báo vượt định mức KPI Master: 03/07: Task 'Chấm thi' khai báo 3.5h so với định mức tiêu chuẩn 0.5h; 11/08: Task 'Coi thi - Chấm thi vấn đáp ĐGNL' khai báo 3.75h so với định mức tiêu chuẩn 0.5h; Có task lạ chưa có định mức: Task 'Coi thi DTB202 - QTKD1 (Do 1 sv bị lỗi thi TN, phải coi thi bổ sung thêm 30')' chưa định dạng (gán tạm 30 phút); Task 'Hoàn thành báo cáo Check point' chưa định dạng (gán tạm 30 phút); Task 'Làm việc cùng 5 đội thi Khởi nguyên' chưa định dạng (gán tạm 30 phút)
+- **Đề xuất cải thiện cụ thể**:
+  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
+
 #### Giảng viên. Lê Thành Ngọc
 - **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3(27) (KS25_QTKD_DTB201)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1(37-33) (KS25_QTKD_DTB202)]]
-- **Điểm KPI tổng**: **83.43** (Kỷ luật: 86.4, Học tập: 82.9, Báo cáo ngày: 80.0)
+- **Điểm KPI tổng**: **80.02** (Kỷ luật: 83.0, Học tập: 76.0, Báo cáo ngày: 80.0)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
@@ -404,11 +404,11 @@
 
 #### Giảng viên. Lê Thị Đỏ
 - **Lớp phụ trách**: 
-- **Điểm KPI tổng**: **96.28** (Kỷ luật: 100.0, Học tập: 100.0, Báo cáo ngày: 87.6)
+- **Điểm KPI tổng**: **95.35** (Kỷ luật: 100.0, Học tập: 100.0, Báo cáo ngày: 84.5)
 - **Điểm mạnh**:
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Thiếu nộp báo cáo ngày (06/07, 08/07, 09/07); Có task chậm trễ/tồn đọng: PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng của tuần 1 (60%), PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng tuần 1 (90%), PTITSAN3-29 T20_Slide (UNVERIFIED); Khai báo vượt định mức KPI Master: 13/07: Task 'PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng của tuần 1' khai báo 6.0h so với định mức tiêu chuẩn 0.8h; 14/07: Task 'PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng tuần 1' khai báo 3.0h so với định mức tiêu chuẩn 0.8h; 20/07: Task 'Làm list danh sách các video cần chuẩn bị trước lớp' khai báo 3.0h so với định mức tiêu chuẩn 0.8h; Có task lạ chưa có định mức: Task 'Onboard - Được bạn Hạnh Hr giới thiệu quy mô hoạt động, ban lãnh đạo công ty, chế độ phúc lợi đối với nhân viên mới.····' chưa định dạng (gán tạm 30 phút); Task 'Được cô Giáp Hằng giới thiệu chương trình đào tạo ngoại ngữ - Tiếng nhật. Tìm hiểu tài liệu liên quan đến đào tạo tiếng Nhật····' chưa định dạng (gán tạm 30 phút); Task 'Lập lịch dự giờ các lớp để phục vụ công tác quản lý lớp học' chưa định dạng (gán tạm 30 phút)
+  - Thiếu nộp báo cáo ngày (06/07, 08/07, 09/07); Có task chậm trễ/tồn đọng: PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng của tuần 1 (60%), PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng tuần 1 (90%), PTITSAN3-13 T2_Video (UNVERIFIED); Khai báo vượt định mức KPI Master: 13/07: Task 'PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng của tuần 1' khai báo 6.0h so với định mức tiêu chuẩn 0.8h; 14/07: Task 'PTITXAY-4 Kế hoạch chuẩn bị học liệu/video trước bài giảng tuần 1' khai báo 3.0h so với định mức tiêu chuẩn 0.8h; 20/07: Task 'Làm list danh sách các video cần chuẩn bị trước lớp' khai báo 3.0h so với định mức tiêu chuẩn 0.8h; Có task lạ chưa có định mức: Task 'Onboard - Được bạn Hạnh Hr giới thiệu quy mô hoạt động, ban lãnh đạo công ty, chế độ phúc lợi đối với nhân viên mới.····' chưa định dạng (gán tạm 30 phút); Task 'Được cô Giáp Hằng giới thiệu chương trình đào tạo ngoại ngữ - Tiếng nhật. Tìm hiểu tài liệu liên quan đến đào tạo tiếng Nhật····' chưa định dạng (gán tạm 30 phút); Task 'Lập lịch dự giờ các lớp để phục vụ công tác quản lý lớp học' chưa định dạng (gán tạm 30 phút)
 - **Đề xuất cải thiện cụ thể**:
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
@@ -422,6 +422,16 @@
 - **Đề xuất cải thiện cụ thể**:
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 
+#### Giảng viên. Ngô Quang Huấn
+- **Lớp phụ trách**: 
+- **Điểm KPI tổng**: **94.06** (Kỷ luật: 100.0, Học tập: 100.0, Báo cáo ngày: 80.2)
+- **Điểm mạnh**:
+  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
+- **Điểm yếu / Lỗi vi phạm đã mắc**:
+  - Thiếu nộp báo cáo ngày (09/07, 15/07, 20/07, 22/07, 04/08, 12/08); Có task chậm trễ/tồn đọng: Xây dựng kho tài nguyên video truyền động lực cho sinh viên (20%), Sản xuất học liệu môn SKL04 Chinh phục nhà tuyển dụng (60%), Đánh giá lại và điều chỉnh khung CTĐT kỹ năng mềm và tiêu chí đánh giá (10%); Khai báo vượt định mức KPI Master: 11/08: Task 'Coi thi ĐGNL môn tiếng Anh + công tác chuẩn bị coi thi' khai báo 5.0h so với định mức tiêu chuẩn 0.8h; Có task lạ chưa có định mức: Task 'Phỏng vấn ứng viên GV Ký năng mềm HCM' chưa định dạng (gán tạm 30 phút); Task 'Cập nhật điểm thi môn SKL01 cho K24 và K25 CNTT' chưa định dạng (gán tạm 30 phút); Task 'Xây dựng kho tài nguyên video truyền động lực cho sinh viên' chưa định dạng (gán tạm 30 phút)
+- **Đề xuất cải thiện cụ thể**:
+  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
+
 #### Giảng viên thử việc. Hoàng Phương Thảo
 - **Lớp phụ trách**: 
 - **Điểm KPI tổng**: **91.39** (Kỷ luật: 100.0, Học tập: 100.0, Báo cáo ngày: 71.3)
@@ -429,16 +439,6 @@
   - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
 - **Điểm yếu / Lỗi vi phạm đã mắc**:
   - Thiếu nộp báo cáo ngày (01/07, 02/07, 03/07, 06/07, 07/07, 08/07, 09/07, 10/07, 13/07, 14/07, 21/07, 29/07, 31/07, 04/08); Có task chậm trễ/tồn đọng: REXPCHUO-28 [RE] DỰ GIỜ LỚP HN-ENG-LV2.3 (50%), REXPENGL-14 [RE] THAM GIA VÀO VIỆC XÂY DỰNG ENGLISH PROGRAM CHO K26 (50%), REXPENGL-14 [RE] THAM GIA VÀO VIỆC XÂY DỰNG ENGLISH PROGRAM CHO K26 (95%); Khai báo vượt định mức KPI Master: 15/07: Task 'REKHAO-13 [RE] CHUẨN BỊ TOEIC TEST 3' khai báo 5.0h so với định mức tiêu chuẩn 0.8h; 16/07: Task 'REKHAO-13 [RE] CHUẨN BỊ TOEIC TEST 3' khai báo 2.0h so với định mức tiêu chuẩn 0.8h; Có task lạ chưa có định mức: Task 'REXPCHUO-24 [RExJAX] TIẾP NHẬN THÔNG TIN CÁC LỚP' chưa định dạng (gán tạm 30 phút); Task 'REXPENGL-14 [RE] THAM GIA VÀO VIỆC XÂY DỰNG ENGLISH PROGRAM CHO K26' chưa định dạng (gán tạm 30 phút); Task 'Họp team tiếng Anh để triển khai chương trình đào tạo tiếng Anh mới cho K26' chưa định dạng (gán tạm 30 phút)
-- **Đề xuất cải thiện cụ thể**:
-  - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
-
-#### Giảng viên. Ngô Quang Huấn
-- **Lớp phụ trách**: [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT4|HN-K24-CNTT4 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD1|HN-K25-QTKD1 (KS25_QTKD_SKL)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD2|HN-K25-QTKD2 (KS25_QTKD_SKL)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT1|HN-K24-CNTT1 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT2|HN-K24-CNTT2 (SKL_KS24)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS25-QTKD3|HN-K25-QTKD3 (KS25_QTKD_SKL)]], [[output/reports/core/agent_2_academic_prediction#Lớp: HN-KS24-CNTT3|HN-K24-CNTT3 (SKL_KS24)]]
-- **Điểm KPI tổng**: **87.42** (Kỷ luật: 90.4, Học tập: 90.7, Báo cáo ngày: 80.2)
-- **Điểm mạnh**:
-  - Duy trì các chỉ số học tập của sinh viên ở mức ổn định.
-- **Điểm yếu / Lỗi vi phạm đã mắc**:
-  - Thiếu nộp báo cáo ngày (09/07, 15/07, 20/07, 22/07, 04/08, 12/08); Có task chậm trễ/tồn đọng: Xây dựng kho tài nguyên video truyền động lực cho sinh viên (20%), Sản xuất học liệu môn SKL04 Chinh phục nhà tuyển dụng (60%), Đánh giá lại và điều chỉnh khung CTĐT kỹ năng mềm và tiêu chí đánh giá (10%); Khai báo vượt định mức KPI Master: 11/08: Task 'Coi thi ĐGNL môn tiếng Anh + công tác chuẩn bị coi thi' khai báo 5.0h so với định mức tiêu chuẩn 0.8h; Có task lạ chưa có định mức: Task 'Phỏng vấn ứng viên GV Ký năng mềm HCM' chưa định dạng (gán tạm 30 phút); Task 'Cập nhật điểm thi môn SKL01 cho K24 và K25 CNTT' chưa định dạng (gán tạm 30 phút); Task 'Xây dựng kho tài nguyên video truyền động lực cho sinh viên' chưa định dạng (gán tạm 30 phút)
 - **Đề xuất cải thiện cụ thể**:
   - Cần tuân thủ lịch nộp báo cáo ngày đầy đủ, đẩy nhanh tiến độ hoàn thành task, kiểm soát giờ khai báo đúng định mức KPI Master, báo cáo QLĐT bổ sung định mức cho đầu việc lạ.
 

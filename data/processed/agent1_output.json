@@ -3,19 +3,19 @@
         "name": "Bùi Thanh Hải",
         "role": "GV",
         "classes": [
-            "HN-K24-CNTT3(32-25) (KS24_JavaWeb)",
-            "HN-K24-CNTT2(40-39) (KS24_JavaWeb)",
-            "HN-K24-CNTT3(42) (KS24_AI)",
-            "HN-K24-CNTT4 (KS24-JavaAdvance)",
-            "HN-K24-CNTT1 (KS24-JavaAdvance)",
-            "HN-K24-CNTT2(39) (KS24_JWS)",
+            "HN-K24-CNTT4(34) (KS24_JWS)",
             "HN-K24-CNTT4(32) (KS24_AI_Intergration)",
+            "HN-K24-CNTT2(39) (KS24_JWS)",
             "HN-K24-CNTT2(39) (KS24_AI)",
             "HN-K24-CNTT4(34-32) (KS24_AI)",
             "HN-K24-CNTT3(48-43-42) (KS24_JWS)",
-            "HN-K24-CNTT2(39) (KS24_AI_Intergration)",
             "HN-K24-CNTT3(42) (KS24_AI_Intergration)",
-            "HN-K24-CNTT4(34) (KS24_JWS)"
+            "HN-K24-CNTT3(42) (KS24_AI)",
+            "HN-K24-CNTT2(39) (KS24_AI_Intergration)",
+            "HN-K24-CNTT1 (KS24-JavaAdvance)",
+            "HN-K24-CNTT3(32-25) (KS24_JavaWeb)",
+            "HN-K24-CNTT2(40-39) (KS24_JavaWeb)",
+            "HN-K24-CNTT4 (KS24-JavaAdvance)"
         ],
         "avg_violation_rate": 8.79,
         "student_discipline_score": 91.2
@@ -24,11 +24,11 @@
         "name": "Hoàng Thị Hậu",
         "role": "GV",
         "classes": [
-            "HN-K25-QTKD3(27) (KS25_QTKD_M104)",
+            "HN-K25-QTKD1 (KS25_QTKD_M103)",
             "HN-K25-CNTT6 (SKL_KS24)",
             "HN-K25-CNTT4 (SKL_KS24)",
             "HN-K25-CNTT5 (SKL_KS24)",
-            "HN-K25-QTKD1 (KS25_QTKD_M103)"
+            "HN-K25-QTKD3(27) (KS25_QTKD_M104)"
         ],
         "avg_violation_rate": 13.21,
         "student_discipline_score": 86.8
@@ -37,9 +37,9 @@
         "name": "Hoàng Thị Kim Oanh",
         "role": "GV",
         "classes": [
-            "HN-K25-QTKD1(37) (KS25_QTKD_M104)",
+            "HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)",
             "HN-K25-QTKD2 (KS25_QTKD_M103)",
-            "HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)"
+            "HN-K25-QTKD1(37) (KS25_QTKD_M104)"
         ],
         "avg_violation_rate": 13.08,
         "student_discipline_score": 86.9
@@ -48,10 +48,10 @@
         "name": "Hồ Xuân Hùng",
         "role": "GV",
         "classes": [
-            "HN-K24-CNTT2 (KS24-JavaAdvance)",
             "HN-K24-CNTT5(29-19) (KS24_JavaWeb)",
+            "HN-K24-CNTT1(38) (KS24_JWS)",
             "HN-K24-CNTT1(38-36) (KS24_AI)",
-            "HN-K24-CNTT1(38) (KS24_JWS)"
+            "HN-K24-CNTT2 (KS24-JavaAdvance)"
         ],
         "avg_violation_rate": 18.86,
         "student_discipline_score": 81.1
@@ -69,13 +69,13 @@
         "name": "Lê Hà Thanh Sang",
         "role": "GV",
         "classes": [
-            "HCM-K25-CNTT7(43-42) (KS25_Database)",
             "HCM-K25-CNTT5(37) (KS25_Python_Web)",
+            "HCM-K25-CNTT7(43-42) (KS25_Database)",
+            "HCM-K25-CNTT5(43-39) (KS25_Database)",
             "HCM-K25-CNTT5(39) (KS25_Python)",
             "HCM-K25-CNTT8(38) (KS25_Python)",
-            "HCM-K25-CNTT8(36) (KS25_Python_Web)",
             "HCM-K25-CNTT2 (KS25_Javascript)",
-            "HCM-K25-CNTT5(43-39) (KS25_Database)"
+            "HCM-K25-CNTT8(36) (KS25_Python_Web)"
         ],
         "avg_violation_rate": 15.53,
         "student_discipline_score": 84.5
@@ -94,12 +94,12 @@
         "name": "Lương Quốc Tuấn",
         "role": "GV",
         "classes": [
-            "HN-K25-CNTT5(37) (KS25_Python_Web)",
+            "HN-K25-CNTT3 (KS25_Javascript)",
             "HN-K25-CNTT2(43) (KS25_Python)",
-            "HN-K25-CNTT1(40) (KS25_Python_Web)",
-            "HN-K25-CNTT1(47-44) (KS25_Database)",
+            "HN-K25-CNTT5(37) (KS25_Python_Web)",
             "HN-K25-CNTT5(43-40-42) (KS25_Python)",
-            "HN-K25-CNTT3 (KS25_Javascript)"
+            "HN-K25-CNTT1(47-44) (KS25_Database)",
+            "HN-K25-CNTT1(40) (KS25_Python_Web)"
         ],
         "avg_violation_rate": 15.89,
         "student_discipline_score": 84.1
@@ -108,10 +108,10 @@
         "name": "Nguyễn Bá Minh Đạo",
         "role": "GV",
         "classes": [
-            "HCM-K24-CNTT1(44) (KS24_AI)",
             "HCM-K24-CNTT2 (KS24-JavaAdvance)",
-            "HCM-K24-CNTT1(44) (KS24_JavaWeb)",
             "HCM-K24-CNTT1(44) (KS24_AI_Intergration)",
+            "HCM-K24-CNTT1(44) (KS24_AI)",
+            "HCM-K24-CNTT1(44) (KS24_JavaWeb)",
             "HCM-K25-CNTT3 (KS25_Javascript)",
             "HCM-K24-CNTT1(44) (KS24_JWS)"
         ],
@@ -140,12 +140,12 @@
         "name": "Nguyễn Ngọc Vân Khanh",
         "role": "GV",
         "classes": [
-            "HN-K25-QTKD1(33) (KS25_QTKD_BA201)",
-            "HN-K25-QTKD2(40) (KS25_QTKD_DTB201)",
-            "HN-K25-QTKD2(40) (KS25_QTKD_DTB202)",
-            "HN-K25-QTKD3(27) (KS25_QTKD_DTB202)",
             "HN-K25-QTKD2(40) (KS25_QTKD_BA201)",
-            "HN-K25-QTKD1(37) (KS25_QTKD_DTB201)"
+            "HN-K25-QTKD2(40) (KS25_QTKD_DTB202)",
+            "HN-K25-QTKD2(40) (KS25_QTKD_DTB201)",
+            "HN-K25-QTKD1(37) (KS25_QTKD_DTB201)",
+            "HN-K25-QTKD3(27) (KS25_QTKD_DTB202)",
+            "HN-K25-QTKD1(33) (KS25_QTKD_BA201)"
         ],
         "avg_violation_rate": 12.03,
         "student_discipline_score": 88.0
@@ -154,16 +154,16 @@
         "name": "Nguyễn Quảng An",
         "role": "GV",
         "classes": [
-            "HN-K25-CNTT3(40-39-37) (KS25_Python)",
-            "HN-K25-CNTT6(35-33) (KS25_Python)",
-            "HN-K25-CNTT2(43) (KS25_Database)",
-            "HN-K25-CNTT3(35) (KS25_Python_Web)",
-            "HN-K25-CNTT6 (KS25_Javascript)",
-            "HN-K25-CNTT4(47-43) (KS25_Database)",
             "HN-K25-CNTT6(32-31) (KS25_Python_Web)",
-            "HN-K25-CNTT4(41-40) (KS25_Python_Web)",
             "HN-K25-CNTT2 (KS25_Javascript)",
-            "HN-K25-CNTT4(44-43-42) (KS25_Python)"
+            "HN-K25-CNTT4(47-43) (KS25_Database)",
+            "HN-K25-CNTT3(35) (KS25_Python_Web)",
+            "HN-K25-CNTT4(44-43-42) (KS25_Python)",
+            "HN-K25-CNTT4(41-40) (KS25_Python_Web)",
+            "HN-K25-CNTT3(40-39-37) (KS25_Python)",
+            "HN-K25-CNTT6 (KS25_Javascript)",
+            "HN-K25-CNTT6(35-33) (KS25_Python)",
+            "HN-K25-CNTT2(43) (KS25_Database)"
         ],
         "avg_violation_rate": 22.99,
         "student_discipline_score": 77.0
@@ -181,12 +181,12 @@
         "name": "Nguyễn Thị Hồng Minh",
         "role": "GV",
         "classes": [
-            "HN-K25-QTKD2(40) (KS25_QTKD_M104)",
+            "HN-K25-CNTT2 (SKL_KS24)",
             "HN-K25-QTKD3(28) (KS25_QTKD_BA201)",
+            "HN-K25-QTKD2(40) (KS25_QTKD_M104)",
             "HN-K25-CNTT1 (SKL_KS24)",
             "HN-K25-CNTT3 (SKL_KS24)",
-            "HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)",
-            "HN-K25-CNTT2 (SKL_KS24)"
+            "HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)"
         ],
         "avg_violation_rate": 14.79,
         "student_discipline_score": 85.2
@@ -195,13 +195,13 @@
         "name": "Ngô Quang Huấn",
         "role": "GV",
         "classes": [
+            "HN-K24-CNTT4 (SKL_KS24)",
+            "HN-K25-QTKD1 (KS25_QTKD_SKL)",
             "HN-K25-QTKD3 (KS25_QTKD_SKL)",
             "HN-K24-CNTT1 (SKL_KS24)",
-            "HN-K25-QTKD1 (KS25_QTKD_SKL)",
             "HN-K25-QTKD2 (KS25_QTKD_SKL)",
-            "HN-K24-CNTT4 (SKL_KS24)",
-            "HN-K24-CNTT2 (SKL_KS24)",
-            "HN-K24-CNTT3 (SKL_KS24)"
+            "HN-K24-CNTT3 (SKL_KS24)",
+            "HN-K24-CNTT2 (SKL_KS24)"
         ],
         "avg_violation_rate": 9.28,
         "student_discipline_score": 90.7
@@ -210,8 +210,8 @@
         "name": "Ngọ Văn Quý",
         "role": "GV",
         "classes": [
-            "HN-K25-CNTT6(38-35) (KS25_Database)",
             "HN-K25-CNTT4 (KS25_Javascript)",
+            "HN-K25-CNTT6(38-35) (KS25_Database)",
             "HN-K25-CNTT7 (KS25_Javascript)",
             "HN-K25-CNTT3(40-39) (KS25_Database)"
         ],
@@ -222,10 +222,10 @@
         "name": "Phạm Tuấn Bình",
         "role": "GV",
         "classes": [
-            "HN-K24-CNTT4(38-34) (KS24_JavaWeb)",
-            "HN-K24-CNTT5 (KS24-JavaAdvance)",
             "HN-K24-CNTT1(41-39) (KS24_JavaWeb)",
-            "HN-K24-CNTT3 (KS24-JavaAdvance)"
+            "HN-K24-CNTT3 (KS24-JavaAdvance)",
+            "HN-K24-CNTT4(38-34) (KS24_JavaWeb)",
+            "HN-K24-CNTT5 (KS24-JavaAdvance)"
         ],
         "avg_violation_rate": 18.63,
         "student_discipline_score": 81.4
@@ -234,14 +234,14 @@
         "name": "Trần Quốc Tuấn",
         "role": "GV",
         "classes": [
-            "HCM-K25-CNTT7(40-39) (KS25_Python_Web)",
-            "HCM-K25-CNTT6(47-41) (KS25_Database)",
-            "HCM-K25-CNTT8(39) (KS25_Database)",
-            "HCM-K25-CNTT6(41-40) (KS25_Python)",
-            "HCM-K25-CNTT4 (KS25_Javascript)",
-            "HCM-K25-CNTT7(42) (KS25_Python)",
             "HCM-K25-CNTT6(40) (KS25_Python_Web)",
-            "HCM-K25-CNTT1 (KS25_Javascript)"
+            "HCM-K25-CNTT7(40-39) (KS25_Python_Web)",
+            "HCM-K25-CNTT6(41-40) (KS25_Python)",
+            "HCM-K25-CNTT1 (KS25_Javascript)",
+            "HCM-K25-CNTT4 (KS25_Javascript)",
+            "HCM-K25-CNTT8(39) (KS25_Database)",
+            "HCM-K25-CNTT6(47-41) (KS25_Database)",
+            "HCM-K25-CNTT7(42) (KS25_Python)"
         ],
         "avg_violation_rate": 15.4,
         "student_discipline_score": 84.6
@@ -250,11 +250,11 @@
         "name": "Trịnh Quốc Hai",
         "role": "GV",
         "classes": [
-            "HN-K25-CNTT5(42) (KS25_Database)",
-            "HN-K25-CNTT8(22) (KS25_Python_Web)",
-            "HN-K25-CNTT1 (KS25_Javascript)",
+            "HN-K25-CNTT5 (KS25_Javascript)",
             "HN-K25-CNTT1(44-42) (KS25_Python)",
-            "HN-K25-CNTT5 (KS25_Javascript)"
+            "HN-K25-CNTT8(22) (KS25_Python_Web)",
+            "HN-K25-CNTT5(42) (KS25_Database)",
+            "HN-K25-CNTT1 (KS25_Javascript)"
         ],
         "avg_violation_rate": 29.67,
         "student_discipline_score": 70.3

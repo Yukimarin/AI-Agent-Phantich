@@ -46,6 +46,63 @@ def validate_output(file_path, file_type):
         print(f"✗ FALLBACK: Không thể sửa lỗi file {file_path}. Bỏ qua lỗi.")
         return False
 
+def ensure_mysql_started():
+    print("=" * 80)
+    print("KIỂM TRA DỊCH VỤ DATABASE (MYSQL PORT 3307)")
+    print("=" * 80)
+    import socket
+    import time
+    
+    # Check if port 3307 is already listening
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(1.0)
+    try:
+        s.connect(('127.0.0.1', 3307))
+        print("✓ MySQL Server trên cổng 3307 đã hoạt động.")
+        s.close()
+        return True
+    except socket.error:
+        print("⚠️ MySQL Server trên cổng 3307 đang tắt. Đang khởi động tự động...")
+        s.close()
+        
+    # Attempt to start the server
+    mysql_bin = r"C:\Program Files\MySQL\MySQL Server 9.7\bin\mysqld.exe"
+    data_dir = os.path.abspath("data/mysql_data_97")
+    
+    if not os.path.exists(mysql_bin):
+        print(f"✗ Không tìm thấy MySQL binary tại {mysql_bin}. Fallback về Mock Mode.")
+        return False
+        
+    cmd = [
+        mysql_bin,
+        "--no-defaults",
+        f"--datadir={data_dir}",
+        "--port=3307",
+        "--shared-memory"
+    ]
+    
+    try:
+        # Launch as background process
+        subprocess.Popen(cmd, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+        
+        # Wait up to 10 seconds for the port to open
+        for _ in range(10):
+            time.sleep(1.0)
+            s2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s2.settimeout(0.5)
+            try:
+                s2.connect(('127.0.0.1', 3307))
+                print("✓ Khởi động MySQL Server 3307 thành công!")
+                s2.close()
+                return True
+            except socket.error:
+                s2.close()
+        print("✗ Quá thời gian chờ khởi động MySQL Server (10s). Tiếp tục chạy ở chế độ Mock.")
+        return False
+    except Exception as e:
+        print(f"✗ Lỗi khi khởi động MySQL Server: {e}")
+        return False
+
 def main():
     print("================================================================================")
     print("KHỞI CHẠY ĐƯỜNG ỐNG TỰ ĐỘNG (HARNESS - LOOP - GRAPH ARCHITECTURE)")
@@ -57,6 +114,9 @@ def main():
         "agents/common/data_sanitizer.py",
         with_deps=["openpyxl", "pandas"]
     )
+
+    # Đảm bảo dịch vụ database đã khởi chạy
+    ensure_mysql_started()
 
     # Khởi tạo các thư mục đầu ra nếu chưa có
     os.makedirs("output/dashboards/core", exist_ok=True)

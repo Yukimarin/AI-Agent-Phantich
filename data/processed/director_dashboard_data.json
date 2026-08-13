@@ -59768,6 +59768,13 @@
       ],
       "issues": [
         {
+          "code": "QTKDRA-14",
+          "title": "Biên bản họp thống nhất thay đổi Tiêu chuẩn học liệu",
+          "state": "Đang làm",
+          "assignee": "Đặng Quỳnh Trang",
+          "dueDate": "2026-08-13T00:00:00.000Z"
+        },
+        {
           "code": "QTKDRA-2",
           "title": "Rà soát Tiêu chuẩn bài đọc (cô Oanh)",
           "state": "Hoàn thành",
@@ -59850,13 +59857,6 @@
           "state": "Cần làm",
           "assignee": "Lê Nhựt Mi",
           "dueDate": "2026-08-19T00:00:00.000Z"
-        },
-        {
-          "code": "QTKDRA-14",
-          "title": "Biên bản họp thống nhất thay đổi Tiêu chuẩn học liệu",
-          "state": "Cần làm",
-          "assignee": "Đặng Quỳnh Trang",
-          "dueDate": "2026-08-13T00:00:00.000Z"
         },
         {
           "code": "QTKDRA-11",

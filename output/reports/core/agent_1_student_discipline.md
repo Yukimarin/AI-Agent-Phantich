@@ -217,7 +217,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Bá Minh Đạo</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HCM-K24-CNTT1, HCM-K24-CNTT2, HCM-K25-CNTT3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HCM-K25-CNTT3, HCM-K24-CNTT2, HCM-K24-CNTT1)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -238,7 +238,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lương Quốc Tuấn</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT1, HN-K25-CNTT3, HN-K25-CNTT2, HN-K25-CNTT5)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT1, HN-K25-CNTT2, HN-K25-CNTT5, HN-K25-CNTT3)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -280,7 +280,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Thế Kiên</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT6, HN-K25-CNTT3, HN-K25-CNTT4)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT4, HN-K25-CNTT3, HN-K25-CNTT6)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -301,7 +301,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Bùi Thanh Hải</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT4, HN-K24-CNTT2, HN-K24-CNTT1, HN-K24-CNTT3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT3, HN-K24-CNTT4, HN-K24-CNTT1, HN-K24-CNTT2)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -343,7 +343,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Viết Hùng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HCM-K25-CNTT2, HCM-K25-CNTT7, HCM-K25-CNTT5, HCM-K25-CNTT8, HCM-K24-CNTT1, HCM-K25-CNTT3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HCM-K25-CNTT5, HCM-K25-CNTT7, HCM-K25-CNTT8, HCM-K24-CNTT1, HCM-K25-CNTT3, HCM-K25-CNTT2)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -364,7 +364,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Mai Xuân Chinh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 4 Lớp (HN-K24-CNTT2, HN-K24-CNTT5, HN-K24-CNTT4, HN-K24-CNTT3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 4 Lớp (HN-K24-CNTT3, HN-K24-CNTT4, HN-K24-CNTT5, HN-K24-CNTT2)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -427,7 +427,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Trần Quốc Tuấn</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HCM-K25-CNTT6, HCM-K25-CNTT7, HCM-K25-CNTT8, HCM-K25-CNTT4, HCM-K25-CNTT1)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT6, HCM-K25-CNTT8, HCM-K25-CNTT1, HCM-K25-CNTT4)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -448,7 +448,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Ngọc Kiên</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT6, HN-K25-CNTT3, HN-K25-CNTT4)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT4, HN-K25-CNTT3, HN-K25-CNTT6)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -469,7 +469,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Trịnh Quốc Hai</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-CNTT1, HN-K25-CNTT8, HN-K25-CNTT5)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-CNTT1, HN-K25-CNTT5, HN-K25-CNTT8)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -490,7 +490,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Quảng An</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT6, HN-K25-CNTT3, HN-K25-CNTT2, HN-K25-CNTT4)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT3, HN-K25-CNTT2, HN-K25-CNTT4, HN-K25-CNTT6)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -511,7 +511,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Tuấn Bình</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT4, HN-K24-CNTT5, HN-K24-CNTT1, HN-K24-CNTT3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT3, HN-K24-CNTT4, HN-K24-CNTT5, HN-K24-CNTT1)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -553,7 +553,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lưu Hoàng Xuân Nguyên</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 5 Lớp (HCM-K25-CNTT6, HCM-K25-CNTT7, HCM-K25-CNTT5, HCM-K25-CNTT8, HCM-K25-CNTT1)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 5 Lớp (HCM-K25-CNTT5, HCM-K25-CNTT7, HCM-K25-CNTT6, HCM-K25-CNTT8, HCM-K25-CNTT1)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -574,7 +574,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Công Hưởng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K24-CNTT5, HN-K24-CNTT2, HN-K24-CNTT1)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K24-CNTT5, HN-K24-CNTT1, HN-K24-CNTT2)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -595,7 +595,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hồ Xuân Hùng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K24-CNTT5, HN-K24-CNTT2, HN-K24-CNTT1)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K24-CNTT1, HN-K24-CNTT5, HN-K24-CNTT2)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -616,7 +616,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Minh Triết</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 2 Lớp (HCM-K25-CNTT6, HCM-K25-CNTT7)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 2 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT6)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -637,7 +637,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Xuân Thức</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT6, HN-K25-CNTT3, HN-K25-CNTT2)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT2, HN-K25-CNTT3, HN-K25-CNTT6)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -658,7 +658,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Ngọ Văn Quý</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT6, HN-K25-CNTT7, HN-K25-CNTT3, HN-K25-CNTT4)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT3, HN-K25-CNTT7, HN-K25-CNTT4, HN-K25-CNTT6)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -679,7 +679,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lê Hà Thanh Sang</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT2, HCM-K25-CNTT5, HCM-K25-CNTT8)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HCM-K25-CNTT5, HCM-K25-CNTT8, HCM-K25-CNTT7, HCM-K25-CNTT2)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -704,7 +704,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hoàng Thị Hậu</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-QTKD3, HN-K25-CNTT4, HN-K25-CNTT6, HN-K25-QTKD1, HN-K25-CNTT5)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-QTKD3, HN-K25-CNTT5, HN-K25-CNTT6, HN-K25-CNTT4, HN-K25-QTKD1)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -746,7 +746,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Ngô Quang Huấn</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 7 Lớp (HN-K24-CNTT3, HN-K25-QTKD2, HN-K25-QTKD3, HN-K24-CNTT1, HN-K24-CNTT4, HN-K25-QTKD1, HN-K24-CNTT2)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 7 Lớp (HN-K25-QTKD3, HN-K24-CNTT1, HN-K25-QTKD2, HN-K24-CNTT3, HN-K24-CNTT4, HN-K24-CNTT2, HN-K25-QTKD1)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -767,7 +767,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lâm Tùng Dương</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HN-K25-CNTT7, HN-K25-QTKD2, HN-K25-QTKD3, HN-K25-CNTT4, HN-K25-CNTT2, HN-K25-QTKD1)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HN-K25-QTKD3, HN-K25-QTKD2, HN-K25-CNTT2, HN-K25-CNTT4, HN-K25-QTKD1, HN-K25-CNTT7)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -788,7 +788,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Thị Hồng Minh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-CNTT1, HN-K25-CNTT3, HN-K25-QTKD2, HN-K25-QTKD3, HN-K25-CNTT2)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-QTKD3, HN-K25-QTKD2, HN-K25-CNTT1, HN-K25-CNTT3, HN-K25-CNTT2)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -830,7 +830,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Ngọc Vân Khanh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-QTKD1, HN-K25-QTKD2, HN-K25-QTKD3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-QTKD1, HN-K25-QTKD3, HN-K25-QTKD2)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)

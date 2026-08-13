@@ -19,6 +19,7 @@ Tài liệu này lưu trữ các quyết định thiết kế, lỗi thường g
     - Nâng cấp Báo cáo QLĐT thành Dashboard SPA 3 Tab: Ngày, Tuần, Tháng. Client-side JS quản lý state, chuyển đổi tabs, tự động vẽ lại Chart.js và cập nhật bảng dữ liệu động.
     - Tích hợp nút **"🔄 Cập nhật dữ liệu"** cho Dashboard Agent 4 (`agent_4_daily_logs.html`) sử dụng cơ chế dynamic fetching từ file JSON payload cục bộ (`agent4_payload.json`) giúp cập nhật dữ liệu realtime mà không cần load lại trang.
 - **Quyết định chốt cấu trúc Báo cáo Agent 1 (Class KPI):** Toàn bộ cấu trúc báo cáo, logic trung bình có trọng số theo sỉ số lớp, cơ chế đối chiếu tuần linh hoạt (tự động lùi tuần học thực tế gần nhất, tự động so sánh chéo môn học liền kề dựa trên dòng thời gian dạy học) và cách phân khối CNTT/QTKD đã được chốt và đóng băng thiết kế. Từ các phiên làm việc sau, hệ thống sẽ duy trì giao diện này và chỉ nạp dữ liệu Excel mới nhất để cập nhật chỉ số hiển thị tự động.
+- **Quyết định chốt cấu trúc Báo cáo Agent 2 (Academic Predictor) (Aug 2026):** Tái cấu trúc Dashboard Agent 2 thành dạng 3 Tab SPA (Đánh giá & Giải pháp hệ thống, Phân tích Lớp học, Danh sách can thiệp). Tích hợp Slide-over Drawer tương tác trượt từ cạnh phải màn hình để xem thông tin drill-down lớp học chi tiết. Rút gọn lỗi tác nghiệp GV/TG thành tooltip tam giác cam tại chỗ thay vì accordion cũ. Loại bỏ hoàn toàn các thuật ngữ mang tính chất kỹ thuật AI.
 
 ## 2. Kỹ thuật Xử lý Data & API
 - **Match Dự án Worklane:** 
