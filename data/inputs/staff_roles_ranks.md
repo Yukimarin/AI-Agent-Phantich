@@ -40,9 +40,7 @@
 - Triệu Thị Thanh Tâm | Trợ giảng | Rank 2
 
 ## Khối Ngoại ngữ và Kỹ năng mềm
-- Bùi Thị Xuân Mai | Thực tập sinh | Rank: N/A
 - Giáp Thị Minh Hằng | Giảng viên | Rank: 5
-- Hoàng Phương Thảo | Giảng viên thử việc | Rank: N/A
 - Lê Thị Đỏ | Giảng viên | Rank: 3
 - Lò Thị Ngọc Anh | Giảng viên | Rank: 5
 - Ngô Quang Huấn | Giảng viên | Rank: 3

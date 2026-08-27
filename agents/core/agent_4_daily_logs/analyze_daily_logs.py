@@ -54,8 +54,6 @@ target_groups = {
         "Giáp Thị Minh Hằng",
         "Lò Thị Ngọc Anh",
         "Ngô Quang Huấn",
-        "Bùi Thị Xuân Mai",
-        "Hoàng Phương Thảo",
         "Lê Thị Đỏ"
     ],
     "Khối QLCLĐT": [
@@ -63,6 +61,13 @@ target_groups = {
         "Nguyễn Huyền Trang",
         "Trần Thị Mỹ Phước"
     ]
+}
+
+LEAVE_DAYS = {
+    "nguyễn thị như quỳnh": ["2026-08-10"],
+    "nguyễn thị tươi": ["2026-08-13"],
+    "nguyễn ngọc vân khanh": ["2026-08-12"],
+    "trần minh cường": ["2026-08-14"]
 }
 
 special_mappings = {
@@ -115,7 +120,7 @@ def call_mcp_tool(tool_name, arguments={}):
     )
 
     try:
-        with urllib.request.urlopen(req, context=ctx) as response:
+        with urllib.request.urlopen(req, context=ctx, timeout=1.5) as response:
             resp_str = response.read().decode("utf-8")
             for line in resp_str.split("\n"):
                 if line.startswith("data:"):
@@ -286,13 +291,18 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
     if worklane_projects is None:
         worklane_projects = []
     analysis = {}
-    total_days = len(target_dates)
     
     for group, members in results.items():
         for m, m_data in members.items():
-            reported_days_list = [d for d in target_dates if m_data["reports"][d] is not None]
+            norm_name = normalize_name(m)
+            # Lọc bỏ ngày nghỉ phép khỏi danh sách ngày cần báo cáo
+            personal_leave = LEAVE_DAYS.get(norm_name, [])
+            effective_target_dates = [d for d in target_dates if d not in personal_leave]
+            personal_total_days = len(effective_target_dates)
+            
+            reported_days_list = [d for d in effective_target_dates if m_data["reports"][d] is not None]
             reported_days_count = len(reported_days_list)
-            missing_days = [d for d in target_dates if m_data["reports"][d] is None]
+            missing_days = [d for d in effective_target_dates if m_data["reports"][d] is None]
             
             norm_name = normalize_name(m)
             profile = staff_profiles.get(norm_name, {"role": "Giảng viên", "rank": "3"})
@@ -388,16 +398,18 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
                             uncompleted_reasons.append(f"{t_title} ({t.get('percent', 0)}%)")
 
             time_score = max(0.0, time_score)
-            report_rate = (reported_days_count / float(total_days)) if total_days > 0 else 0.0
+            report_rate = (reported_days_count / float(personal_total_days)) if personal_total_days > 0 else 1.0
             
-            completion_rate = 1.0
-            if total_tasks > 0:
-                completion_rate = completed_tasks / total_tasks
-
-            # Work Score = (Report Rate * 40%) + (Completion Rate * 40%) + (Time Score * 20%)
-            work_score = (report_rate * 40.0) + (completion_rate * 40.0) + (time_score * 0.20)
             if reported_days_count == 0:
-                work_score = 0.0 
+                completion_rate = 0.0
+                time_score = 0.0
+                work_score = 0.0
+            elif total_tasks > 0:
+                completion_rate = completed_tasks / total_tasks
+                work_score = (report_rate * 40.0) + (completion_rate * 40.0) + (time_score * 0.20)
+            else:
+                completion_rate = 1.0
+                work_score = (report_rate * 40.0) + (completion_rate * 40.0) + (time_score * 0.20)
 
             analysis[norm_name] = {
                 "name": m,
@@ -539,8 +551,11 @@ def main():
     if yesterday_str in dates_all:
         for group, members in results.items():
             for m, m_data in members.items():
+                norm_name = normalize_name(m)
+                # Bỏ qua nếu ngày hôm qua là ngày nghỉ phép của nhân sự này
+                if yesterday_str in LEAVE_DAYS.get(norm_name, []):
+                    continue
                 if m_data["reports"].get(yesterday_str) is None:
-                    norm_name = normalize_name(m)
                     profile = staff_profiles.get(norm_name, {"role": "Giảng viên", "rank": "3"})
                     missing_yesterday.append({
                         "name": m,

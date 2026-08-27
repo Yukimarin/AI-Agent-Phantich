@@ -2,7 +2,10 @@ import os
 import sys
 import json
 import re
-import mysql.connector
+try:
+    import mysql.connector
+except ImportError:
+    mysql = None
 import openpyxl
 from datetime import datetime, date
 from collections import defaultdict
@@ -284,75 +287,94 @@ def calibrate_students(students_results, excel_disc):
 
 db_mode = "MySQL"
 
+def get_class_students_from_db(cursor, cname, coname):
+    low_co = coname.lower()
+    patterns = []
+    if 'python web' in low_co or 'fastapi' in low_co:
+        patterns = ['%FastAPI%', '%Python Web%']
+    elif 'python' in low_co:
+        patterns = ['%Python%']
+    elif 'java web' in low_co or 'jws' in low_co:
+        patterns = ['%Java Web%', '%Java Advanced%', '%IT210%', '%IT203B%']
+    elif 'ai' in low_co:
+        patterns = ['%AI%', '%IT206%']
+    elif 'database' in low_co or 'cơ sở dữ liệu' in low_co:
+        patterns = ['%Cơ sở dữ liệu%', '%IT202%']
+    elif 'javascript' in low_co:
+        patterns = ['%Javascript%', '%IT103B%']
+    elif 'qtkd' in cname.lower():
+        patterns = ['%M103%', '%M104%', '%DTB%', '%PRJ%', '%BA201%']
+    else:
+        patterns = [f'%{coname}%']
+
+    cname_clean = cname.strip()
+    class_patterns = [cname_clean, f"%{cname_clean}%"]
+    if '_HL' in cname_clean:
+        class_patterns.append(cname_clean.replace('_HL', ''))
+    elif '_HK2' in cname_clean:
+        class_patterns.append(cname_clean.replace('_HK2', ''))
+
+    rows = []
+    for cp in class_patterns:
+        for sp in patterns:
+            cursor.execute("""
+                SELECT student_id, student_name, AVG(midterm_score) as score, subject
+                FROM student_grades
+                WHERE (class_id = ? OR class_id LIKE ?) AND subject LIKE ?
+                GROUP BY student_id, student_name
+            """, (cname_clean, cp, sp))
+            rows = cursor.fetchall()
+            if rows:
+                break
+        if rows:
+            break
+
+    # Fallback to general students in this class
+    if not rows:
+        cursor.execute("""
+            SELECT student_id, student_name, AVG(midterm_score) as score, 'General'
+            FROM student_grades
+            WHERE class_id = ? OR class_id LIKE ?
+            GROUP BY student_id, student_name
+        """, (cname_clean, f"%{cname_clean}%"))
+        rows = cursor.fetchall()
+
+    result = []
+    for idx, r in enumerate(rows):
+        sid, sname, score, subj = r
+        try:
+            num_sid = int(str(sid).replace('SV', ''))
+        except ValueError:
+            num_sid = 1000 + idx
+        score_val = float(score) if score is not None else 65.0
+        if score_val <= 10.0:
+            score_val = score_val * 10.0
+        
+        is_passed = 1 if score_val >= 50.0 else 0
+        result.append({
+            'student_id': num_sid,
+            'attendance': 5.0,
+            'homework': 90.0,
+            'elearning': 0.0,
+            'rpoints': 100.0,
+            'project': score_val,
+            'pass': is_passed,
+            'full_name': sname,
+            'hackathon_1': score_val,
+            'hackathon_2': None
+        })
+    return result
+
 def run_query(cursor, query, params=None):
     global db_mode
     if db_mode == "SQLite":
-        cleaned_query = query.replace('qldt_el.', '').replace('%s', '?').lower()
-        if 'final_results' in cleaned_query and ('students' in cleaned_query or 'student_id' in cleaned_query):
-            # Querying students or student scores/history
-            cursor.execute("SELECT student_id, student_name, class_id, subject, midterm_score FROM student_grades")
-            rows = cursor.fetchall()
-            result = []
-            for idx, r in enumerate(rows):
-                sid, sname, cid_val, subject_val, score = r
-                try:
-                    num_sid = int(str(sid).replace('SV', ''))
-                except ValueError:
-                    num_sid = 1000 + idx
-                # Map pass state based on midterm score >= 5.0
-                is_passed = 1 if score >= 5.0 else 0
-                result.append({
-                    'student_id': num_sid,
-                    'attendance': 5.0,
-                    'homework': 90.0,
-                    'elearning': 0.0,
-                    'rpoints': 100.0,
-                    'project': 80.0,
-                    'pass': is_passed,
-                    'full_name': sname,
-                    'hackathon_1': None
-                })
-            return result
-        elif 'attendance_detail' in cleaned_query or 'attendance' in cleaned_query:
+        try:
+            sql_to_run = query.replace('qldt_el.', '').replace('%s', '?')
+            cursor.execute(sql_to_run, params or ())
+            columns = [desc[0] for desc in cursor.description]
+            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        except Exception as e:
             return []
-        elif 'exercise' in cleaned_query:
-            return []
-        elif 'result_test' in cleaned_query:
-            return []
-        elif 'auto_rpoints' in cleaned_query:
-            return []
-        elif 'from classes' in cleaned_query or ' classes ' in cleaned_query or cleaned_query.strip().endswith('classes'):
-            return [
-                {'id': 1, 'name': 'HN-KS25-CNTT6'},
-                {'id': 2, 'name': 'HN-KS25-CNTT8'},
-                {'id': 3, 'name': 'HN-KS24-CNTT1'}
-            ]
-        elif 'from courses' in cleaned_query or ' courses ' in cleaned_query or cleaned_query.strip().endswith('courses'):
-            return [
-                {'id': 217, 'name': 'Python Web'},
-                {'id': 214, 'name': 'AI Application'},
-                {'id': 193, 'name': 'Python'},
-                {'id': 194, 'name': 'Java Web Service'}
-            ]
-        elif 'final_results' in cleaned_query:
-            return [
-                {'class_id': 1, 'course_id': 193},
-                {'class_id': 1, 'course_id': 217},
-                {'class_id': 2, 'course_id': 193},
-                {'class_id': 2, 'course_id': 217},
-                {'class_id': 3, 'course_id': 194},
-                {'class_id': 3, 'course_id': 214}
-            ]
-        else:
-            try:
-                # Fallback to execute raw query on SQLite (replacing MySQL schema prefix and placeholders)
-                sql_to_run = query.replace('qldt_el.', '').replace('%s', '?')
-                cursor.execute(sql_to_run, params or ())
-                columns = [desc[0] for desc in cursor.description]
-                return [dict(zip(columns, row)) for row in cursor.fetchall()]
-            except Exception as e:
-                # print(f"SQLite fallback query failed: {e}")
-                return []
     else:
         cursor.execute(query, params or ())
         columns = [desc[0] for desc in cursor.description]
@@ -362,43 +384,48 @@ def predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cn
     is_soft_skill = any(kw in coname.lower() for kw in ['kỹ năng', 'tin học văn phòng', 'skl', 'thực tập', 'ttrk', 'project'])
     
     # 1. Fetch Students
-    raw_st = run_query(cursor, """
-        SELECT f.student_id, f.attendance, f.homework, f.elearning, f.rpoints, f.project, f.pass, s.full_name
-        FROM qldt_el.final_results f
-        JOIN qldt_el.students s ON f.student_id = s.id
-        WHERE f.class_id = %s AND f.course_id = %s;
-    """, (cid, co_id))
-    
-    if not raw_st:
-        return {'size': 0, 'avg_pred_old': 0.0, 'avg_pred_new': 0.0, 'actual_pass_rate': 0.0, 'students': [], 'v_class': 0.0, 'mult_env': 1.0}
+    if db_mode == "SQLite":
+        students_db_data = get_class_students_from_db(cursor, cname, coname)
+        if not students_db_data:
+            return {'size': 0, 'avg_pred_old': 0.0, 'avg_pred_new': 0.0, 'actual_pass_rate': 0.0, 'students': [], 'v_class': 0.0, 'mult_env': 1.0}
+    else:
+        raw_st = run_query(cursor, """
+            SELECT f.student_id, f.attendance, f.homework, f.elearning, f.rpoints, f.project, f.pass, s.full_name
+            FROM qldt_el.final_results f
+            JOIN qldt_el.students s ON f.student_id = s.id
+            WHERE f.class_id = %s AND f.course_id = %s;
+        """, (cid, co_id))
         
-    # Get Hackathon
-    hackathon_map = {}
-    hack_raw = run_query(cursor, """
-        SELECT r.student_id, AVG(r.point) as avg_point
-        FROM qldt_el.result_test r
-        JOIN qldt_el.test_schedule ts ON r.test_schedule_id = ts.id
-        WHERE ts.type = 'THI HACKATHON' AND ts.course_id = %s
-        GROUP BY r.student_id;
-    """, (co_id,))
-    for h in hack_raw:
-        hackathon_map[int(h['student_id'])] = float(h['avg_point']) if h['avg_point'] is not None else 65.0
-        
-    students_db_data = []
-    for s in raw_st:
-        sid = int(s['student_id'])
-        students_db_data.append({
-            'student_id': sid,
-            'attendance': float(s['attendance']) if s['attendance'] is not None else 0.0,
-            'homework': float(s['homework']) if s['homework'] is not None else 100.0,
-            'elearning': float(s['elearning']) if s['elearning'] is not None else 0.0,
-            'rpoints': float(s['rpoints']) if s['rpoints'] is not None else 100.0,
-            'hackathon_1': hackathon_map.get(sid),
-            'hackathon_2': None,
-            'project': float(s['project']) if s['project'] is not None else None,
-            'pass': int(s['pass']) if s['pass'] is not None else None,
-            'full_name': s['full_name']
-        })
+        if not raw_st:
+            return {'size': 0, 'avg_pred_old': 0.0, 'avg_pred_new': 0.0, 'actual_pass_rate': 0.0, 'students': [], 'v_class': 0.0, 'mult_env': 1.0}
+            
+        # Get Hackathon
+        hackathon_map = {}
+        hack_raw = run_query(cursor, """
+            SELECT r.student_id, AVG(r.point) as avg_point
+            FROM qldt_el.result_test r
+            JOIN qldt_el.test_schedule ts ON r.test_schedule_id = ts.id
+            WHERE ts.type = 'THI HACKATHON' AND ts.course_id = %s
+            GROUP BY r.student_id;
+        """, (co_id,))
+        for h in hack_raw:
+            hackathon_map[int(h['student_id'])] = float(h['avg_point']) if h['avg_point'] is not None else 65.0
+            
+        students_db_data = []
+        for s in raw_st:
+            sid = int(s['student_id'])
+            students_db_data.append({
+                'student_id': sid,
+                'attendance': float(s['attendance']) if s['attendance'] is not None else 0.0,
+                'homework': float(s['homework']) if s['homework'] is not None else 100.0,
+                'elearning': float(s['elearning']) if s['elearning'] is not None else 0.0,
+                'rpoints': float(s['rpoints']) if s['rpoints'] is not None else 100.0,
+                'hackathon_1': hackathon_map.get(sid),
+                'hackathon_2': None,
+                'project': float(s['project']) if s['project'] is not None else None,
+                'pass': int(s['pass']) if s['pass'] is not None else None,
+                'full_name': s['full_name']
+            })
         
     # 2. Get Excel Calibrations
     norm_cname = normalize_class_name(cname)
@@ -428,28 +455,39 @@ def predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cn
     
     calibrated_students = calibrate_students(students_db_data, excel_disc)
     
+    # 4. Param Settings (Đọc động cấu hình hiệu chuẩn tối ưu)
+    w1, w2 = 0.40, 0.60
+    p_prereq_pass = 0.98 if batch == 'K24' else 0.85
+    p_prereq_fail = 0.10
+    p_hack_mult = 1.25 if batch == 'K24' else 1.30
+    base_scale = 1.00 if batch == 'K24' else 0.95
+    env_threshold = 10.0
+    
+    try:
+        metadata_path = "data/inputs/course_metadata.json"
+        if os.path.exists(metadata_path):
+            with open(metadata_path, 'r', encoding='utf-8') as f:
+                meta = json.load(f)
+                calib = meta.get("calibration_params", {})
+                key = "QTKD" if "qtkd" in cname.lower() else ("KS25" if "ks25" in cname.lower() or "k25" in cname.lower() else "KS24")
+                if key in calib:
+                    p = calib[key]
+                    w1 = p.get("w1", w1)
+                    w2 = p.get("w2", w2)
+                    p_hack_mult = p.get("p_hack_mult", p_hack_mult)
+                    base_scale = p.get("base_scale", base_scale)
+                    env_threshold = p.get("env_threshold", env_threshold)
+    except Exception as e:
+        print(f"Warning: Failed to load calibration params ({e}). Using defaults.")
+
     # 3. Environmental Penalty (Peer Pressure)
     mult_env = 1.0
     v_class = 0.0
     if excel_disc:
         # Calculate environmental violation percentage
         v_class = (excel_disc['cc'] + excel_disc['bt'] + excel_disc['el']) / 3.0
-        if v_class > 10.0:
-            mult_env = max(0.90, 1.0 - 0.5 * (v_class - 10.0)/100.0)
-            
-    # 4. Param Settings
-    if batch == 'K25':
-        w1, w2 = 0.00, 1.00
-        p_prereq_pass = 0.85
-        p_prereq_fail = 0.10
-        p_hack_mult = 1.30
-        base_scale = 0.95
-    else:
-        w1, w2 = 0.40, 0.60
-        p_prereq_pass = 0.98
-        p_prereq_fail = 0.10
-        p_hack_mult = 1.25
-        base_scale = 1.00
+        if v_class > env_threshold:
+            mult_env = max(0.90, 1.0 - 0.5 * (v_class - env_threshold)/100.0)
         
     has_project = any(s['project'] is not None and s['project'] > 5.0 for s in calibrated_students)
     has_hackathon = any(s['hackathon_1'] is not None and s['hackathon_1'] > 5.0 for s in calibrated_students)
@@ -574,6 +612,13 @@ def predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cn
                 is_resumed_student = True
                 
         # Discipline Score
+        # 1. Đánh giá Điểm Kỷ luật & Ý thức Học tập Hiện tại (Discipline Score)
+        # Kết hợp đa chiều: Chuyên cần (40%) + Nộp bài tập (40%) + Tiến độ Elearning (20%)
+        p_att_curr = max(0.0, 100.0 - att_val)
+        p_hw_curr = max(0.0, min(100.0, float(hw_val)))
+        p_el_curr = max(0.0, 100.0 - min(100.0, float(el_val) * 10.0))
+        discipline_curr = 0.40 * p_att_curr + 0.40 * p_hw_curr + 0.20 * p_el_curr
+
         discipline_prev = None
         if not is_resumed_student:
             prev_rps = []
@@ -597,89 +642,104 @@ def predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cn
                 discipline_prev = mean(prev_rps)
                 
         if is_resumed_student:
-            discipline_prev = 70.0
+            discipline_prev = 65.0
         elif discipline_prev is None:
-            discipline_prev = 100.0
+            discipline_prev = discipline_curr
             
-        discipline_curr = max(0.0, 100.0 - att_val)
-        discipline_val = 0.5 * discipline_prev + 0.5 * discipline_curr
+        discipline_val = 0.40 * discipline_prev + 0.60 * discipline_curr
         
-        # Study Performance: P_prereq
+        # 2. Đánh giá Nền tảng Môn Tiên Quyết (Prerequisite Academic Base)
+        # Phản ánh thực tế: mất gốc JS/DB sẽ làm giảm đáng kể khả năng tiếp thu môn Web/AI
         penalty_resumption = 1.0
         prior_pass = None
         prior_hack = None
         if is_resumed_student:
-            P_prereq = 50.0
+            P_prereq = 45.0
             penalty_resumption = 0.85
         elif len(prev_courses) >= 1:
             prev_c_main = prev_courses[0]
             prev_pass_status = student_pass_history.get((sid, prev_c_main))
-            if prev_pass_status:
-                P_prereq = p_prereq_pass if prev_pass_status['pass'] == 1 else p_prereq_fail
+            if prev_pass_status and prev_pass_status.get('pass') is not None:
                 prior_pass = prev_pass_status.get('pass')
                 prior_hack = prev_pass_status.get('hackathon_1')
+                if prior_pass == 1:
+                    P_prereq = 78.0 # Đã qua môn tiên quyết
+                else:
+                    # Chưa qua môn trước: đánh giá thận trọng theo nỗ lực hiện tại
+                    if discipline_curr >= 85.0:
+                        P_prereq = 58.0
+                    elif discipline_curr >= 65.0:
+                        P_prereq = 42.0
+                    else:
+                        P_prereq = 25.0
             else:
-                P_prereq = 75.0
+                # Chưa có dữ liệu môn trước / vắng thi: đánh giá ở mức trung bình thận trọng
+                P_prereq = 62.0 if discipline_curr >= 80.0 else (48.0 if discipline_curr >= 60.0 else 30.0)
         else:
-            P_prereq = 75.0
+            P_prereq = 65.0
             
-        # P_hack
-        shack_val = s['hackathon_1'] if s['hackathon_1'] is not None else 65.0
-        p_hack = min(100.0, shack_val * p_hack_mult)
-            
-        # P_learning
-        if has_hackathon:
-            P_learning = w1 * P_prereq + w2 * (p_hack / 100.0)
+        # 3. Đánh giá Năng lực Thực Hành Thực Chiến (P_hack)
+        if s['hackathon_1'] is not None and s['hackathon_1'] > 0:
+            shack_val = s['hackathon_1']
+            p_hack = min(100.0, shack_val * 1.1)
         else:
-            P_learning = 0.3 * P_prereq/100.0 + 0.7 * (p_hack / 100.0)
+            # Ước lượng năng lực thực hành với hệ số suy giảm thực tế
+            shack_val = (0.50 * p_hw_curr + 0.30 * p_att_curr + 0.20 * P_prereq) * 0.82
+            p_hack = max(0.0, min(100.0, shack_val))
+            
+        # 4. Xác suất Học tập Thực Chiến (P_learning)
+        P_learning = 0.40 * (P_prereq / 100.0) + 0.60 * (p_hack / 100.0)
         P_learning = min(1.0, max(0.0, P_learning))
         
-        # Apply CDC
+        # Áp dụng Hệ số Độ khó Môn học (CDC Thực Tế)
         cdc_val = get_course_difficulty_combined(cursor, co_id, coname)
+        if 'python web' in coname.lower() or 'fastapi' in coname.lower():
+            cdc_val = max(cdc_val, 1.22)
+        elif 'ai' in coname.lower() or 'intergration' in coname.lower():
+            cdc_val = max(cdc_val, 1.30)
+        elif 'ba201' in coname.lower() or 'business' in coname.lower():
+            cdc_val = max(cdc_val, 1.10)
+            
         P_learning_adj = P_learning / cdc_val
-        p_eligible = P_learning_adj * 0.6 + (discipline_val / 100.0) * 0.4
         
-        # Scale & penalties
-        p_eligible = p_eligible * penalty_abs * penalty_hw * penalty_resumption * base_scale
-        p_eligible = min(1.0, max(0.0, p_eligible)) * 100.0
+        # 5. Xác suất Đỗ Tổng Hợp của Cá Nhân (P_eligible)
+        p_eligible = (P_learning_adj * 0.60 + (discipline_val / 100.0) * 0.40) * 0.92
+        p_eligible = p_eligible * penalty_abs * penalty_hw * penalty_resumption
+        p_eligible = min(100.0, max(0.0, p_eligible * 100.0))
         
         if is_soft_skill:
-            p_eligible = 93.0
+            p_eligible = 88.0
             
-        # Apply environmental penalty
+        # Áp dụng Hệ số Phạt Môi trường (Peer Pressure)
         p_final = p_eligible * mult_env
         p_final = min(100.0, max(0.0, p_final))
         
-        # 1. Prediction under OLD rule (no hard blocks, matches historical DB)
         p_eligible_old = p_final
         sum_p_final_old += p_eligible_old
         
-        # 2. Prediction under NEW rule (cấm thi chặn cứng)
+        # 6. Chốt Chặn Quy Chế Cấm Thi Quá Trình (Quy chế mới)
+        # Theo quy chế đào tạo: Cấm thi quá trình áp dụng khi Vắng CC > 20% HOẶC Nợ bài tập > 20% HOẶC Trễ Elearning > 3 bài
+        # (Lưu ý: Điểm Project là điểm thi cuối kỳ, không dùng làm điều kiện cấm thi giữa kỳ khi sinh viên chưa nộp đồ án)
         is_cc_new = att_val <= 20.0
         is_bt_new = hw_val >= 80.0
         is_el_new = el_val <= 3.0
-        is_rp_new = True if (excel_disc is None or excel_disc.get('rp') is None) else (rp >= 80.0)
-        is_proj_new_ok = True
-        if has_project and proj is not None:
-            is_proj_new_ok = proj >= 50.0
             
         if total_sessions <= 3:
             is_failed_new = False
         else:
-            is_failed_new = not (is_cc_new and is_bt_new and is_el_new and is_rp_new and is_proj_new_ok)
+            is_failed_new = not (is_cc_new and is_bt_new and is_el_new)
+            
         p_eligible_new = 0.0 if is_failed_new else p_final
         sum_p_final_new += p_eligible_new
         
-        # Risk classification for current courses
-        risk_level = "GREEN" # Thấp/Không cảnh báo
+        # Phân loại mức độ rủi ro (Risk Classification)
+        risk_level = "GREEN" # Thấp / Đạt chuẩn
         reasons = []
         if total_sessions > 3 and is_failed_new:
             risk_level = "RED" # CAO - Bị cấm thi theo Quy chế mới
             if not is_cc_new: reasons.append(f"Vắng chuyên cần > 20% ({att_val:.1f}%)")
             if not is_bt_new: reasons.append(f"Nợ bài tập > 20% ({100.0 - hw_val:.1f}%)")
             if not is_el_new: reasons.append(f"Vi phạm Elearning quá 3 bài ({el_val} bài)")
-            if not is_rp_new: reasons.append(f"Rpoints thấp ({rp:.1f}/80)")
-            if not is_proj_new_ok: reasons.append("Project dưới 50 điểm")
         elif p_final < 30.0 and (total_sessions > 3 and (att_val > 15.0 or (100.0 - hw_val) > 20.0)):
             risk_level = "RED" # CAO - Học lực quá yếu VÀ Vi phạm kỷ luật
             reasons.append(f"Xác suất đỗ quá thấp ({p_final:.1f}%) kèm vi phạm KL")
@@ -722,19 +782,55 @@ def predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cn
             if (att_val > 15.0) or ((100.0 - hw_val) > 30.0):
                 student_anomalies.append("sudden_drop")
 
+        # Học lực giỏi: điểm thi hiện tại >= 75 hoặc điểm project hiện tại >= 75 hoặc điểm môn trước >= 75
+        is_excellent = False
+        if s['hackathon_1'] is not None and s['hackathon_1'] >= 75.0:
+            is_excellent = True
+        elif s['project'] is not None and s['project'] >= 75.0:
+            is_excellent = True
+        elif prior_hack is not None and prior_hack >= 75.0:
+            is_excellent = True
+
+        # Action Routing cho từng học viên
+        action_pic = "Trợ giảng lớp"
+        action_plan = "Theo dõi và đôn đốc bài tập"
+        action_deadline = "Trong 48h"
+        
+        if is_excellent and is_failed_new:
+            action_pic = "Giảng viên Leader / Trưởng bộ môn"
+            action_plan = "Giao đề tài Hackathon nâng cao & xem xét điều kiện gỡ cấm thi"
+            action_deadline = "Trong 24h"
+        elif att_val > 15.0:
+            action_pic = "GVCN / Cố vấn học tập"
+            action_plan = "Gọi điện phụ huynh & gặp trực tiếp chấn chỉnh kỷ luật"
+            action_deadline = "Trong tuần này"
+        elif (100.0 - hw_val) > 30.0:
+            action_pic = "Trợ giảng lớp"
+            action_plan = "Kèm 1-1 phụ đạo & giải quyết nợ bài tập tồn đọng"
+            action_deadline = "Trong 48h"
+        elif p_final < 40.0:
+            action_pic = "Trợ giảng & Nhóm học tập"
+            action_plan = "Phụ đạo kiến thức nền tảng môn tiên quyết"
+            action_deadline = "Trong tuần này"
+
         students_output.append({
             'student_id': sid,
             'full_name': s['full_name'],
             'p_final': p_final,
             'is_failed_new': is_failed_new,
+            'is_excellent': is_excellent,
+            'prior_hack': prior_hack,
             'risk_level': risk_level,
             'reasons': reasons,
             'att': att_val,
             'hw': hw_val,
             'el': el_val,
             'rp': rp,
-            'hack': shack_val,
-            'anomalies': student_anomalies
+            'hack': s['hackathon_1'],
+            'anomalies': student_anomalies,
+            'action_pic': action_pic,
+            'action_plan': action_plan,
+            'action_deadline': action_deadline
         })
         
     avg_pred_old = sum_p_final_old / len(calibrated_students)
@@ -757,6 +853,8 @@ def predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cn
 def main():
     global db_mode
     try:
+        if mysql is None:
+            raise Exception("mysql-connector not installed")
         conn = mysql.connector.connect(
             host="localhost",
             port=3307,
@@ -803,11 +901,28 @@ def main():
     ks25_cv_course = 193
     ks25_curr_course = 217
     
-    classes_raw = run_query(cursor, "SELECT id, name FROM qldt_el.classes;")
-    classes_map = {int(c['id']): c['name'] for c in classes_raw}
-    
-    courses_raw = run_query(cursor, "SELECT id, name FROM qldt_el.courses;")
-    courses_map = {int(c['id']): c['name'] for c in courses_raw}
+    if db_mode == "SQLite":
+        cursor.execute("SELECT DISTINCT class_id FROM student_grades")
+        raw_classes = [r[0] for r in cursor.fetchall() if r[0]]
+        ptit_classes = []
+        for cl in raw_classes:
+            is_cntt_ks24 = bool(re.search(r'(HN|HCM).*?(KS24|K24).*?(CNTT)', cl, re.I))
+            is_cntt_ks25 = bool(re.search(r'(HN|HCM).*?(KS25|K25).*?(CNTT)', cl, re.I))
+            is_qtkd = bool(re.search(r'(HN|HCM).*?(KS25|K25).*?(QTKD)', cl, re.I))
+            if (is_cntt_ks24 or is_cntt_ks25 or is_qtkd) and not any(kw in cl for kw in ['cũ', 'Retake', 'Học lại']):
+                ptit_classes.append(cl.strip())
+        classes_map = {idx + 1: cl for idx, cl in enumerate(sorted(list(set(ptit_classes))))}
+        courses_map = {
+            193: "Python",
+            217: "Python Web",
+            194: "Java Web Service",
+            214: "AI Application"
+        }
+    else:
+        classes_raw = run_query(cursor, "SELECT id, name FROM qldt_el.classes;")
+        classes_map = {int(c['id']): c['name'] for c in classes_raw}
+        courses_raw = run_query(cursor, "SELECT id, name FROM qldt_el.courses;")
+        courses_map = {int(c['id']): c['name'] for c in courses_raw}
     
     # Data structures to save JSON for HTML Dashboard
     dashboard_data = {
@@ -876,6 +991,10 @@ def main():
                             'risk_level': s['risk_level'],
                             'reasons': s['reasons'],
                             'p_final': s['p_final'],
+                            'is_failed_new': s['is_failed_new'],
+                            'is_excellent': s['is_excellent'],
+                            'prior_hack': s['prior_hack'],
+                            'hack': s['hack'],
                             'att': s['att'],
                             'hw': s['hw'],
                             'el': s['el'],
@@ -928,6 +1047,10 @@ def main():
                             'risk_level': s['risk_level'],
                             'reasons': s['reasons'],
                             'p_final': s['p_final'],
+                            'is_failed_new': s['is_failed_new'],
+                            'is_excellent': s['is_excellent'],
+                            'prior_hack': s['prior_hack'],
+                            'hack': s['hack'],
                             'att': s['att'],
                             'hw': s['hw'],
                             'el': s['el'],
@@ -980,6 +1103,10 @@ def main():
                             'risk_level': s['risk_level'],
                             'reasons': s['reasons'],
                             'p_final': s['p_final'],
+                            'is_failed_new': s['is_failed_new'],
+                            'is_excellent': s['is_excellent'],
+                            'prior_hack': s['prior_hack'],
+                            'hack': s['hack'],
                             'att': s['att'],
                             'hw': s['hw'],
                             'el': s['el'],
@@ -1049,7 +1176,15 @@ def main():
         f.write("| :---: | :--- | :--- | :---: | :---: | :---: | :---: | :--- |\n")
         reds = [s for s in all_care_list if s['risk_level'] == 'RED']
         for s in sorted(reds, key=lambda x: (x['batch'], x['class_name'], x['p_final'])):
-            f.write(f"| {s['batch']} | {s['class_name']} | **{s['full_name']}** | **{s['p_final']:.1f}%** | {s['att']:.1f}% | {100.0 - s['hw']:.1f}% | {s['el']:.0f} bài | {', '.join(s['reasons'])} |\n")
+            p_display = "0.0% (Cấm thi)" if s.get('is_failed_new', False) else f"{s['p_final']:.1f}%"
+            is_excellent = s.get('is_excellent', False)
+            is_banned = s.get('is_failed_new', False)
+            name_display = f"**{s['full_name']}**"
+            if is_excellent and is_banned:
+                score_val = s['hack'] if (s['hack'] is not None and s['hack'] >= 75.0) else s.get('prior_hack')
+                score_str = f" ⚡ {score_val:.0f}đ" if score_val else " ⚡"
+                name_display += score_str
+            f.write(f"| {s['batch']} | {s['class_name']} | {name_display} | **{p_display}** | {s['att']:.1f}% | {100.0 - s['hw']:.1f}% | {s['el']:.0f} bài | {', '.join(s['reasons'])} |\n")
             
         # Yellow Risk
         f.write("\n## 🟡 2. DANH SÁCH NGUY CƠ TRUNG BÌNH (CẢNH BÁO VÀNG - CẬN CẤM THI / MẤT GỐC)\n\n")
@@ -1057,7 +1192,15 @@ def main():
         f.write("| :---: | :--- | :--- | :---: | :---: | :---: | :---: | :--- |\n")
         yellows = [s for s in all_care_list if s['risk_level'] == 'YELLOW']
         for s in sorted(yellows, key=lambda x: (x['batch'], x['class_name'], x['p_final'])):
-            f.write(f"| {s['batch']} | {s['class_name']} | **{s['full_name']}** | **{s['p_final']:.1f}%** | {s['att']:.1f}% | {100.0 - s['hw']:.1f}% | {s['el']:.0f} bài | {', '.join(s['reasons'])} |\n")
+            p_display = "0.0% (Cấm thi)" if s.get('is_failed_new', False) else f"{s['p_final']:.1f}%"
+            is_excellent = s.get('is_excellent', False)
+            is_banned = s.get('is_failed_new', False)
+            name_display = f"**{s['full_name']}**"
+            if is_excellent and is_banned:
+                score_val = s['hack'] if (s['hack'] is not None and s['hack'] >= 75.0) else s.get('prior_hack')
+                score_str = f" ⚡ {score_val:.0f}đ" if score_val else " ⚡"
+                name_display += score_str
+            f.write(f"| {s['batch']} | {s['class_name']} | {name_display} | **{p_display}** | {s['att']:.1f}% | {100.0 - s['hw']:.1f}% | {s['el']:.0f} bài | {', '.join(s['reasons'])} |\n")
 
     # Aggregate cohort anomalies summary
     anomalies_summary = {

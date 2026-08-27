@@ -213,17 +213,13 @@ weekly_groups = {
         'sheet_prev': 'KS25_QTKD_PRJ302',
         'label': 'Khóa KS25 QTKD Hà Nội (BA201 / PRJ302)'
     },
+    # Sau khi gộp lớp: HN-K24-CNTT5 và HCM-K24-CNTT2 đã giải thể.
+    # HCM-K24-CNTT1 được chuyển vào cùng bảng cơ sở HN để quản lý thống nhất.
     'KS24_CNTT_HN': {
-        'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HN-K24-CNTT5'],
+        'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HCM-K24-CNTT1'],
         'sheet_curr': 'KS24_AI_Intergration',
         'sheet_prev': 'KS24_AI',
-        'label': 'Khóa KS24 CNTT Hà Nội (AI Integration / AI)'
-    },
-    'KS24_CNTT_HCM': {
-        'classes': ['HCM-K24-CNTT1', 'HCM-K24-CNTT2'],
-        'sheet_curr': 'KS24_AI_Intergration',
-        'sheet_prev': 'KS24_AI',
-        'label': 'Khóa KS24 CNTT TP. HCM (AI Integration / AI)'
+        'label': 'Khóa KS24 CNTT (AI Integration / AI) — Hà Nội & HCM-CNTT1'
     }
 }
 
@@ -286,18 +282,32 @@ def get_weekly_metrics(sheetname, classes_target, start_date, end_date):
                 if not next_c2 and next_c3:
                     tg_name = str(next_c3).strip()
                     
-            day_vals = defaultdict(list)
+            # Gom giá trị theo ngày học và loại của ngày đó
+            date_metrics = defaultdict(dict)
             for c_idx, d, val4 in dates_list:
                 val = sheet.cell(row=r, column=c_idx + 1).value
                 if val is not None:
                     try:
-                        day_vals[val4].append(float(val))
+                        date_metrics[d][val4] = float(val)
                     except ValueError:
                         pass
-                        
+            
+            # Lọc bỏ các ngày trống (tất cả chỉ số vắng/nợ/vi phạm bằng 0 hoặc None)
+            active_dates_vals = defaultdict(list)
+            for d, metrics in date_metrics.items():
+                is_empty_day = True
+                for val in metrics.values():
+                    if val is not None and val != 0.0:
+                        is_empty_day = False
+                        break
+                
+                if not is_empty_day:
+                    for val4, val in metrics.items():
+                        active_dates_vals[val4].append(val)
+            
             averages = {}
             for metric in ['Chuyên cần', 'Bài tập', 'Elearning']:
-                vals = day_vals.get(metric, [])
+                vals = active_dates_vals.get(metric, [])
                 averages[metric] = sum(vals) / len(vals) if vals else 0.0
                 
             res[matched_class] = {
@@ -309,25 +319,179 @@ def get_weekly_metrics(sheetname, classes_target, start_date, end_date):
 
 timelines = build_class_timelines(wb)
 
+def read_class_metrics_for_date(sheet_obj, class_name, target_date):
+    row3 = list(sheet_obj.iter_rows(min_row=3, max_row=3, values_only=True))[0]
+    row4 = list(sheet_obj.iter_rows(min_row=4, max_row=4, values_only=True))[0]
+    
+    cols = []
+    current_date = None
+    for c in range(2, len(row3)):
+        col_letter = openpyxl.utils.get_column_letter(c + 1)
+        dim = sheet_obj.column_dimensions.get(col_letter)
+        if dim and dim.hidden:
+            continue
+        val3 = row3[c]
+        val4 = row4[c]
+        if val3:
+            current_date = parse_date(val3)
+        if current_date == target_date and val4 in ['Chuyên cần', 'Bài tập', 'Elearning']:
+            cols.append((c + 1, val4))
+            
+    if not cols:
+        return None
+        
+    header_row_idx = None
+    for r in range(1, 20):
+        row_vals = [str(sheet_obj.cell(row=r, column=c).value or "").strip() for c in range(1, sheet_obj.max_column + 1)]
+        if 'Lớp' in row_vals:
+            header_row_idx = r
+            break
+            
+    headers = [str(sheet_obj.cell(row=header_row_idx, column=c).value or "").strip() for c in range(1, sheet_obj.max_column + 1)]
+    class_col_idx = headers.index('Lớp') + 1
+    person_col_idx = None
+    for c_idx, h in enumerate(headers):
+        if 'Giảng viên' in h or 'Trợ giảng' in h or 'Giảng viên/Trợ giảng' in h:
+            person_col_idx = c_idx + 1
+            break
+            
+    current_class = None
+    gv_name = "N/A"
+    tg_name = "N/A"
+    gv_metrics = {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}
+    tg_metrics = {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}
+    
+    has_gv = False
+    has_tg = False
+    
+    for r in range(header_row_idx + 1, sheet_obj.max_row + 1):
+        c_val = sheet_obj.cell(row=r, column=class_col_idx).value
+        p_val = sheet_obj.cell(row=r, column=person_col_idx).value
+        
+        if c_val:
+            current_class = normalize_class_name(str(c_val).strip())
+            
+        if current_class == class_name and p_val and str(p_val).strip() not in ['', 'nan', 'Giảng viên/Trợ giảng']:
+            name = str(p_val).strip()
+            is_tg = (c_val is None or str(c_val).strip() == "")
+            
+            # Đọc điểm
+            metrics = {}
+            for col_idx, metric in cols:
+                val = sheet_obj.cell(row=r, column=col_idx).value
+                if val is not None:
+                    metrics[metric] = float(val)
+                    
+            if not is_tg:
+                gv_name = name
+                gv_metrics = metrics
+                has_gv = True
+            else:
+                tg_name = name
+                tg_metrics = metrics
+                has_tg = True
+                
+    if not has_gv and not has_tg:
+        return None
+        
+    for m in ['Chuyên cần', 'Bài tập', 'Elearning']:
+        if m not in gv_metrics or gv_metrics[m] is None:
+            gv_metrics[m] = 0.0
+            
+    if has_tg:
+        for m in ['Chuyên cần', 'Bài tập', 'Elearning']:
+            if m not in tg_metrics or tg_metrics[m] is None:
+                tg_metrics[m] = gv_metrics[m]
+                
+    return {
+        'teacher': gv_name,
+        'tg': tg_name,
+        'metrics': gv_metrics,
+        'date': target_date
+    }
+
+def get_class_latest_and_prev_metrics(workbook, sheetname, class_name, ref_date, timelines):
+    if sheetname not in workbook.sheetnames:
+        return None, None
+    sheet = workbook[sheetname]
+    
+    subject_dates = timelines.get(class_name, {}).get(sheetname, [])
+    valid_dates = [d for d in subject_dates if d <= ref_date]
+    if not valid_dates:
+        return None, None
+        
+    valid_dates.sort()
+    latest_date = valid_dates[-1]
+    
+    curr_metrics = read_class_metrics_for_date(sheet, class_name, latest_date)
+    
+    prev_metrics = None
+    if len(valid_dates) >= 2:
+        prev_date = valid_dates[-2]
+        prev_metrics = read_class_metrics_for_date(sheet, class_name, prev_date)
+    else:
+        other_subjects = timelines.get(class_name, {})
+        candidates = []
+        for s_name, date_list in other_subjects.items():
+            if s_name == sheetname:
+                continue
+            past_dates = [d for d in date_list if d < latest_date]
+            if past_dates:
+                candidates.append((max(past_dates), s_name))
+        if candidates:
+            candidates.sort(key=lambda x: x[0], reverse=True)
+            prev_date, prev_sheet = candidates[0]
+            prev_metrics = read_class_metrics_for_date(workbook[prev_sheet], class_name, prev_date)
+            
+    return curr_metrics, prev_metrics
+
 weekly_stats = {}
 for gkey, ginfo in weekly_groups.items():
     classes = ginfo['classes']
-    curr_data = get_weekly_metrics(ginfo['sheet_curr'], classes, start_curr, end_curr)
-    
+    curr_data = {}
     prev_data = {}
+    
     for cls in classes:
-        # Default empty comparison metrics
-        prev_data[cls] = {
-            'teacher': 'N/A',
-            'tg': 'N/A',
-            'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}
-        }
-        m_prev, s_prev_date, sheet_prev, is_new = get_compare_date_range(cls, ginfo['sheet_curr'], start_curr, timelines)
-        if m_prev and s_prev_date and sheet_prev:
-            cls_prev_metrics = get_weekly_metrics(sheet_prev, [cls], m_prev, s_prev_date)
-            if cls in cls_prev_metrics:
-                prev_data[cls] = cls_prev_metrics[cls]
-                
+        curr_metrics, prev_metrics = get_class_latest_and_prev_metrics(wb, ginfo['sheet_curr'], cls, max_date, timelines)
+        if curr_metrics:
+            curr_data[cls] = curr_metrics
+            if prev_metrics:
+                prev_data[cls] = prev_metrics
+            else:
+                prev_data[cls] = {
+                    'teacher': curr_metrics['teacher'],
+                    'tg': curr_metrics['tg'],
+                    'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}
+                }
+        else:
+            # Fallback
+            subject_dates = timelines.get(cls, {}).get(ginfo['sheet_curr'], [])
+            if subject_dates:
+                last_date = max(subject_dates)
+                curr_m, prev_m = get_class_latest_and_prev_metrics(wb, ginfo['sheet_curr'], cls, last_date, timelines)
+                if curr_m:
+                    curr_data[cls] = curr_m
+                    prev_data[cls] = prev_m if prev_m else {
+                        'teacher': curr_m['teacher'],
+                        'tg': curr_m['tg'],
+                        'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}
+                    }
+            else:
+                all_dates = []
+                for s_n, d_l in timelines.get(cls, {}).items():
+                    all_dates.extend([(d, s_n) for d in d_l])
+                if all_dates:
+                    all_dates.sort(key=lambda x: x[0])
+                    last_date, s_n = all_dates[-1]
+                    curr_m, prev_m = get_class_latest_and_prev_metrics(wb, s_n, cls, last_date, timelines)
+                    if curr_m:
+                        curr_data[cls] = curr_m
+                        prev_data[cls] = prev_m if prev_m else {
+                            'teacher': curr_m['teacher'],
+                            'tg': curr_m['tg'],
+                            'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}
+                        }
+                        
     weekly_stats[gkey] = {
         'label': ginfo['label'],
         'classes': classes,
@@ -540,8 +704,8 @@ trends_data = {
     'QTKD': {'courses': [], 'cc': [], 'bt': [], 'el': []}
 }
 cohort_sheets = {
+    # KS24_HN: gộp cả HCM-K24-CNTT1 vào cùng nhóm HN để phản ánh cấu trúc lớp mới sau khi gộp
     'KS24_HN': ['KS24-JavaAdvance', 'KS24_JavaWeb', 'KS24_JWS', 'KS24_AI', 'KS24_AI_Intergration'],
-    'KS24_HCM': ['KS24-JavaAdvance', 'KS24_JavaWeb', 'KS24_JWS', 'KS24_AI', 'KS24_AI_Intergration'],
     'HN': ['KS25_Javascript', 'KS25_Database', 'KS25_Python', 'KS25_Python_Web'],
     'HCM': ['KS25_Javascript', 'KS25_Database', 'KS25_Python', 'KS25_Python_Web'],
     'QTKD': ['KS25_QTKD_M103', 'KS25_QTKD_M104', 'KS25_QTKD_DTB201', 'KS25_QTKD_DTB202', 'KS25_QTKD_PRJ302', 'KS25_QTKD_BA201']
@@ -556,8 +720,7 @@ for cohort, sheets in cohort_sheets.items():
         for (cname, role), courses in class_course_data.items():
             if role != 'GV' or sheetname not in courses:
                 continue
-            if cohort == 'KS24_HN' and not ('HN' in cname and 'CNTT' in cname and 'K24' in cname): continue
-            if cohort == 'KS24_HCM' and not ('HCM' in cname and 'CNTT' in cname and 'K24' in cname): continue
+            if cohort == 'KS24_HN' and not ('CNTT' in cname and 'K24' in cname): continue
             if cohort == 'HN' and not ('HN' in cname and 'CNTT' in cname and 'K25' in cname): continue
             if cohort == 'HCM' and not ('HCM' in cname and 'CNTT' in cname and 'K25' in cname): continue
             if cohort == 'QTKD' and not 'QTKD' in cname: continue
@@ -582,7 +745,6 @@ for cohort, sheets in cohort_sheets.items():
 trends_data['compare'] = {}
 for gkey, dict_key in [
     ('KS24_CNTT_HN', 'KS24_HN'),
-    ('KS24_CNTT_HCM', 'KS24_HCM'),
     ('KS25_CNTT_HN', 'HN'),
     ('KS25_CNTT_HCM', 'HCM'),
     ('KS25_QTKD_HN', 'QTKD')
@@ -627,10 +789,10 @@ for gkey, dict_key in [
 with open('data/processed/historical_trends.json', 'w', encoding='utf-8') as f:
     json.dump(trends_data, f, ensure_ascii=False, indent=4)
 
-markdown_content = f"""# BÁO CÁO THỐNG KÊ CHỈ SỐ ĐÀO TẠO TUẦN & NĂNG LỰC QUẢN TRỊ LỚP CỦA GV/TG
+markdown_content = f"""# BÁO CÁO THỐNG KÊ CHỈ SỐ VI PHẠM HÀNG NGÀY & NĂNG LỰC QUẢN TRỊ LỚP CỦA GV/TG
 
 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 12px 20px; border-radius: 8px; display: inline-block; font-weight: 600; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);">
-  <i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Báo cáo Tuần: {start_curr.strftime('%d/%m/%Y')} - {end_curr.strftime('%d/%m/%Y')}
+  <i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Báo cáo Ngày: {max_date.strftime('%d/%m/%Y')}
 </div>
 """
 
@@ -645,7 +807,7 @@ def generate_kpi_card(title, curr_val, prev_val):
     <div class="kpi-card">
         <div class="kpi-title">{title}</div>
         <div class="kpi-value">{curr_val:.2f}%</div>
-        <div class="kpi-trend {trend_class}">{arrow} {diff_str} so với tuần trước</div>
+        <div class="kpi-trend {trend_class}">{arrow} {diff_str} so với hôm qua</div>
     </div>
     """
 
@@ -675,41 +837,128 @@ def generate_cohort_section(cohort_id, weekly_stats_group):
     el_diff_overall = curr_vals['Elearning'] - prev_vals['Elearning']
     
     issues = []
-    if cc_diff_overall > 2.0: issues.append(f"Tỷ lệ vắng mặt chuyên cần tăng mạnh (+{cc_diff_overall:.2f}%) so với tuần trước.")
-    if bt_diff_overall > 2.0: issues.append(f"Tỷ lệ nợ bài tập có dấu hiệu đáng báo động (+{bt_diff_overall:.2f}%).")
-    if el_diff_overall > 2.0: issues.append(f"Học viên đang lơ là Elearning (+{el_diff_overall:.2f}%).")
+    gv_actions_cc = []
+    gv_actions_bt = []
+    gv_actions_el = []
+    cv_actions_cc = []
+    cv_actions_bt = []
+    cv_actions_el = []
+
+    curr_cc = curr_vals['Chuyên cần']
+    curr_bt = curr_vals['Bài tập']
+    curr_el = curr_vals['Elearning']
+
+    cc_violated = (cc_diff_overall > 1.5 or curr_cc > 5.0)
+    bt_violated = (bt_diff_overall > 1.5 or curr_bt > 10.0)
+    el_violated = (el_diff_overall > 1.5 or curr_el > 10.0)
+
+    # 1. Phát hiện vấn đề & Ghi nhận cảnh báo
+    if cc_violated:
+        if cc_diff_overall > 1.5 and curr_cc > 5.0:
+            issues.append(f"Tỷ lệ vắng mặt chuyên cần ở mức nguy hiểm ({curr_cc:.2f}%) và tăng nhanh (+{cc_diff_overall:.2f}%) so với hôm qua.")
+        elif curr_cc > 5.0:
+            issues.append(f"Tỷ lệ vắng mặt chuyên cần duy trì ở mức cao nguy hiểm ({curr_cc:.2f}%).")
+        else:
+            issues.append(f"Tỷ lệ vắng mặt chuyên cần có xu hướng tăng nhanh (+{cc_diff_overall:.2f}%).")
+
+    if bt_violated:
+        if bt_diff_overall > 1.5 and curr_bt > 10.0:
+            issues.append(f"Tỷ lệ nợ bài tập ở mức báo động ({curr_bt:.2f}%) và tăng nhanh (+{bt_diff_overall:.2f}%) so với hôm qua.")
+        elif curr_bt > 10.0:
+            issues.append(f"Tỷ lệ nợ bài tập duy trì ở mức cao báo động ({curr_bt:.2f}%).")
+        else:
+            issues.append(f"Tỷ lệ nợ bài tập có xu hướng tăng (+{bt_diff_overall:.2f}%).")
+
+    if el_violated:
+        if el_diff_overall > 1.5 and curr_el > 10.0:
+            issues.append(f"Tỷ lệ vi phạm Elearning ở mức nghiêm trọng ({curr_el:.2f}%) và tăng nhanh (+{el_diff_overall:.2f}%) so với hôm qua.")
+        elif curr_el > 10.0:
+            issues.append(f"Tỷ lệ vi phạm Elearning duy trì ở mức cao nghiêm trọng ({curr_el:.2f}%).")
+        else:
+            issues.append(f"Tỷ lệ vi phạm Elearning có xu hướng gia tăng (+{el_diff_overall:.2f}%).")
+
+    # 2. Sinh Kế hoạch Hành động Tích hợp Tinh gọn (Tối đa 2-3 giải pháp đi sâu cho GV và CVHT)
+    gv_final = []
+    cv_final = []
     
+    n_violations = sum([1 for v in [cc_violated, bt_violated, el_violated] if v])
+
+    if n_violations >= 2:
+        # Trường hợp vi phạm hỗn hợp (từ 2 lỗi trở lên): Dùng các giải pháp tích hợp đa chiều
+        gv_final = [
+            "Kiểm soát nghiêm đầu giờ: Điểm danh và kiểm tra nhanh 5 phút đầu buổi dựa trên nội dung Elearning; từ chối cho SV vào lớp nếu chưa hoàn thành lý thuyết Elearning.",
+            "Kèm cặp trực tiếp tại lớp: Dành 15-20 phút cuối ca học trực tiếp kèm cặp nhóm sinh viên chưa nộp bài hoàn thành các bài tập trọng tâm.",
+            "Cảnh báo & Báo cáo nóng: Gửi tin nhắn Zalo cá nhân cho SV vắng/nợ ngay sau ca học và báo cáo danh sách SV vắng liên tiếp 2 buổi cho CVHT trước 12h ngày hôm sau."
+        ]
+        cv_final = [
+            "Hotline khẩn cấp: Thực hiện cuộc gọi Hotline trực tiếp cho phụ huynh/người giám hộ báo cáo tình trạng vắng học và nợ bài của sinh viên trong vòng 24h.",
+            "Triệu tập 3 bên: Triệu tập cuộc gặp trực tiếp bắt buộc (GV - CVHT - SV) đối với các trường hợp vi phạm từ 3 buổi trở lên để ký biên bản cam kết học tập.",
+            "Kiểm toán điều kiện học vụ: Rà soát lập danh sách SV có tỷ lệ chuyên cần < 80% hoặc Elearning < 50% để đưa vào diện xem xét cấm thi cuối kỳ sớm."
+        ]
+    elif cc_violated:
+        # Chỉ vi phạm chuyên cần
+        gv_final = [
+            "Gửi tin nhắn cảnh cáo Zalo cá nhân cho từng sinh viên vắng mặt ngay sau khi kết thúc ca học.",
+            "Yêu cầu SV vắng nộp giải trình bằng văn bản trong 24h và áp dụng trừ điểm chuyên cần trực tiếp nếu không phép.",
+            "Báo cáo khẩn danh sách SV vắng liên tiếp 2 buổi cho Cố vấn học tập (CVHT) trước 12h ngày hôm sau để can thiệp nóng."
+        ]
+        cv_final = [
+            "Thực hiện cuộc gọi khẩn cấp (Hotline) trực tiếp cho phụ huynh/người giám hộ để cảnh báo tình trạng vắng học.",
+            "Triệu tập cuộc gặp 3 bên bắt buộc (GV - CVHT - SV) đối với các trường hợp vắng từ 3 buổi để ký cam kết học tập.",
+            "Kích hoạt quy trình xem xét cấm thi cuối kỳ sớm đối với sinh viên có tỷ lệ chuyên cần môn học dưới 80%."
+        ]
+    elif bt_violated:
+        # Chỉ vi phạm bài tập
+        gv_final = [
+            "Thiết lập thời gian hoàn thành bù bắt buộc trong 24h đối với sinh viên nợ bài và cập nhật tỷ lệ nợ lên nhóm lớp hàng ngày.",
+            "Dành 15-20 phút cuối ca học trực tiếp kèm cặp nhóm sinh viên chưa nộp bài hoàn thành các bài tập trọng tâm."
+        ]
+        cv_final = [
+            "Tổ chức các buổi học bù / phòng Lab tự học bắt buộc trong tuần và phân công Trợ giảng giám sát SV hoàn thành bài nợ.",
+            "Liên hệ Hotline phụ huynh đối với sinh viên nợ tích lũy từ 3 bài tập trở lên để phối hợp đôn đốc."
+        ]
+    elif el_violated:
+        # Chỉ vi phạm Elearning
+        gv_final = [
+            "Nhắn tin gửi link bài tập Elearning trực tiếp trước 24h deadline; kiểm tra đột xuất 5 phút đầu giờ dựa trên nội dung Elearning.",
+            "Áp dụng quy định từ chối cho SV vào lớp hoặc ghi nhận vắng nếu SV hoàn toàn không học lý thuyết Elearning trước ca học."
+        ]
+        cv_final = [
+            "Rà soát kỹ danh sách sinh viên có tỷ lệ hoàn thành Elearning dưới 50% để đưa vào diện xem xét cấm thi theo Quy chế.",
+            "Phối hợp với Ban cán sự lớp tổ chức các nhóm học tập hỗ trợ SV hoàn thành Elearning đúng hạn."
+        ]
+
     ai_insights = ""
     if issues:
+        issues_html = "".join(f"<li>{i}</li>" for i in issues)
+        gv_html = "".join(f"<li style='margin-bottom:5px;'>{a}</li>" for a in gv_final)
+        cv_html = "".join(f"<li style='margin-bottom:5px;'>{a}</li>" for a in cv_final)
+        n_issues = len(issues)
         ai_insights = f"""
-<div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px; margin: 20px 0; backdrop-filter: blur(10px);">
-    <h4 style="margin-top:0; color:#e2e8f0; display:flex; align-items:center; gap:8px;">
-        <span style="font-size:1.2rem;">📌</span> Kế hoạch Hành động Khắc phục (Hệ thống đề xuất)
-    </h4>
-    <div style="display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
-        <div style="flex:1; min-width: 250px; background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 12px; border-radius: 4px;">
-            <div style="color: #fca5a5; font-weight: 600; margin-bottom: 8px;">🚨 Vấn đề phát hiện</div>
-            <ul style="margin:0; padding-left:20px; color:#e2e8f0; font-size:0.9rem;">
-                {''.join(f'<li>{i}</li>' for i in issues)}
-            </ul>
-        </div>
-        <div style="flex:1; min-width: 250px; background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 12px; border-radius: 4px;">
-            <div style="color: #6ee7b7; font-weight: 600; margin-bottom: 8px;">💡 Hành động yêu cầu</div>
-            <ul style="margin:0; padding-left:20px; color:#e2e8f0; font-size:0.9rem;">
-                <li>Chỉ đạo Trợ giảng liên hệ ngay sinh viên vi phạm để đôn đốc.</li>
-                <li>Giảng viên cần chấn chỉnh kỷ luật lớp đầu giờ học tiếp theo.</li>
-            </ul>
-        </div>
+<div style="background:rgba(15,23,42,0.7);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px 20px;margin:16px 0;backdrop-filter:blur(10px);">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+        <span style="font-size:1.1rem;">📌</span>
+        <span style="font-weight:700;font-size:0.93rem;color:#e2e8f0;">Kế hoạch Hành động Khắc phục Vi phạm Gia tăng</span>
+    </div>
+    <div style="background:rgba(239,68,68,0.12);border-left:4px solid #ef4444;padding:10px 14px;border-radius:6px;margin-bottom:10px;">
+        <div style="color:#fca5a5;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;">🚨 {n_issues} vấn đề phát hiện hôm nay</div>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.6;">{issues_html}</ul>
+    </div>
+    <div style="background:rgba(245,158,11,0.08);border-left:4px solid #f59e0b;padding:11px 15px;border-radius:6px;margin-bottom:10px;">
+        <div style="color:#fcd34d;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">👨‍🏫 Giảng Viên Lớp &mdash; Thực hiện 24&ndash;48h</div>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.65;">{gv_html}</ul>
+    </div>
+    <div style="background:rgba(59,130,246,0.08);border-left:4px solid #3b82f6;padding:11px 15px;border-radius:6px;">
+        <div style="color:#93c5fd;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">🧑‍💼 Cố Vấn Học Tập &mdash; Thực hiện trong hôm nay</div>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.65;">{cv_html}</ul>
     </div>
 </div>
 """
     else:
         ai_insights = f"""
-<div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 12px; padding: 16px; margin: 20px 0; display: flex; align-items: center; gap: 12px;">
-    <span style="font-size: 1.5rem;">✅</span>
-    <div>
-        <strong style="color: #6ee7b7;">Đánh giá chung:</strong> Kỷ luật học tập của khóa {cohort_id} duy trì ổn định so với tuần trước. Không cần can thiệp khẩn cấp.
-    </div>
+<div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:13px 17px;margin:16px 0;display:flex;align-items:center;gap:11px;">
+    <span style="font-size:1.35rem;">✅</span>
+    <div><strong style="color:#6ee7b7;">Kỷ luật ổn định:</strong> Khóa {cohort_id} không có chỉ số vi phạm nào tăng đột biến hôm nay. Không cần can thiệp khẩn cấp.</div>
 </div>
 """
     
@@ -743,8 +992,8 @@ def generate_cohort_section(cohort_id, weekly_stats_group):
 """
     return html
 
-markdown_content += generate_cohort_section('HN-KS24-CNTT', weekly_stats['KS24_CNTT_HN'])
-markdown_content += generate_cohort_section('HCM-KS24-CNTT', weekly_stats['KS24_CNTT_HCM'])
+# KS24: Hà Nội + HCM-CNTT1 gộp chung sau tái cơ cấu lớp
+markdown_content += generate_cohort_section('KS24-CNTT (HN & HCM-CNTT1)', weekly_stats['KS24_CNTT_HN'])
 markdown_content += generate_cohort_section('HN-KS25-CNTT', weekly_stats['KS25_CNTT_HN'])
 markdown_content += generate_cohort_section('HCM-KS25-CNTT', weekly_stats['KS25_CNTT_HCM'])
 markdown_content += generate_cohort_section('HN-KS25-QTKD', weekly_stats['KS25_QTKD_HN'])

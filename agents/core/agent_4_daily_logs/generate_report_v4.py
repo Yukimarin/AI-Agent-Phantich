@@ -11,6 +11,13 @@ daily_log_analysis_path = "data/processed/daily_log_analysis.json"
 output_html_path = "output/dashboards/core/agent_4_daily_logs.html"
 output_md_path = "output/reports/core/agent_4_daily_logs.md"
 
+LEAVE_DAYS = {
+    "nguyễn thị như quỳnh": ["2026-08-10"],
+    "nguyễn thị tươi": ["2026-08-13"],
+    "nguyễn ngọc vân khanh": ["2026-08-12"],
+    "trần minh cường": ["2026-08-14"]
+}
+
 def main():
     try:
         with open(daily_log_analysis_path, "r", encoding="utf-8") as f:
@@ -66,6 +73,9 @@ def main():
             reports_for_m = raw_reports[group][name].get("reports", {})
             for d in dates_weekly:
                 if not reports_for_m.get(d):
+                    norm_m_key = m_norm.lower().strip()
+                    if d in LEAVE_DAYS.get(norm_m_key, []):
+                        continue
                     miss_days.append(d)
                     try:
                         weekday = datetime.strptime(d, "%Y-%m-%d").weekday() + 2
@@ -74,10 +84,13 @@ def main():
                     except:
                         pass
                             
+        personal_leave = LEAVE_DAYS.get(m_norm.lower().strip(), [])
+        personal_expected_days = len([d for d in dates_weekly if d not in personal_leave])
+
         payload["personnel"][name] = {
             "group": group,
             "reported_days": stats.get('reported_days', 0),
-            "expected_days": len(dates_weekly),
+            "expected_days": personal_expected_days,
             "hours": stats.get('declared_hours', 0),
             "completion_rate": stats.get('completion_rate', 0),
             "warning_flags": stats.get('warning_flags', []),

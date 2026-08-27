@@ -316,10 +316,10 @@ html_template = """<!DOCTYPE html>
             <header>
                 <div>
                     <h1><i class="fas fa-chart-line" style="color: var(--primary)"></i> Quản Trị Lớp &amp; Chỉ Số Đào Tạo</h1>
-                    <div class="meta">Hệ thống theo dõi vi phạm tuần - Agent 1</div>
+                    <div class="meta">Hệ thống theo dõi vi phạm ngày - Agent 1</div>
                 </div>
                 <div>
-                    <span class="week-badge"><i class="fas fa-calendar-alt"></i> Báo cáo Tuần</span>
+                    <span class="week-badge"><i class="fas fa-calendar-alt"></i> Báo cáo Ngày</span>
                 </div>
             </header>
 
@@ -327,10 +327,9 @@ html_template = """<!DOCTYPE html>
             <div class="charts-row">
                 <div class="chart-card">
                     <div class="chart-header">
-                        <h3 class="chart-title"><i class="fas fa-balance-scale"></i> So sánh Vi phạm Tuần này vs Tuần trước (%)</h3>
+                        <h3 class="chart-title"><i class="fas fa-balance-scale"></i> So sánh Vi phạm Hôm nay vs Hôm qua (%)</h3>
                         <div class="tabs" style="display: flex; gap: 6px;">
-                            <button id="btn-compare-ks24_hn" class="tab-btn" onclick="switchCompareData('KS24_HN')">CNTT HN (KS24)</button>
-                            <button id="btn-compare-ks24_hcm" class="tab-btn" onclick="switchCompareData('KS24_HCM')">CNTT HCM (KS24)</button>
+                            <button id="btn-compare-ks24_hn" class="tab-btn" onclick="switchCompareData('KS24_HN')">CNTT KS24 (HN &amp; HCM-CNTT1)</button>
                             <button id="btn-compare-hn" class="tab-btn active" onclick="switchCompareData('HN')">CNTT HN (KS25)</button>
                             <button id="btn-compare-hcm" class="tab-btn" onclick="switchCompareData('HCM')">CNTT HCM (KS25)</button>
                             <button id="btn-compare-qtkd" class="tab-btn" onclick="switchCompareData('QTKD')">QTKD HN (KS25)</button>
@@ -344,8 +343,7 @@ html_template = """<!DOCTYPE html>
                     <div class="chart-header">
                         <h3 class="chart-title"><i class="fas fa-chart-area"></i> Xu hướng Vi phạm qua các Môn học (%)</h3>
                         <div class="tabs" style="display: flex; gap: 6px;">
-                            <button id="btn-trend-ks24_hn" class="tab-btn" onclick="switchTrendData('KS24_HN')">CNTT HN (KS24)</button>
-                            <button id="btn-trend-ks24_hcm" class="tab-btn" onclick="switchTrendData('KS24_HCM')">CNTT HCM (KS24)</button>
+                            <button id="btn-trend-ks24_hn" class="tab-btn" onclick="switchTrendData('KS24_HN')">CNTT KS24 (HN &amp; HCM-CNTT1)</button>
                             <button id="btn-trend-hn" class="tab-btn active" onclick="switchTrendData('HN')">CNTT HN (KS25)</button>
                             <button id="btn-trend-hcm" class="tab-btn" onclick="switchTrendData('HCM')">CNTT HCM (KS25)</button>
                             <button id="btn-trend-qtkd" class="tab-btn" onclick="switchTrendData('QTKD')">QTKD HN (KS25)</button>
@@ -384,13 +382,13 @@ html_template = """<!DOCTYPE html>
                 labels: ['Vắng Chuyên Cần', 'Nợ Bài Tập', 'Chậm Elearning'],
                 datasets: [
                     {{
-                        label: 'Tuần trước',
+                        label: 'Hôm qua',
                         data: trends.compare.HN.prev,
                         backgroundColor: '#334155',
                         borderRadius: 6
                     }},
                     {{
-                        label: 'Tuần này',
+                        label: 'Hôm nay',
                         data: trends.compare.HN.curr,
                         backgroundColor: '#3b82f6',
                         borderRadius: 6

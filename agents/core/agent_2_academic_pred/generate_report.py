@@ -23,7 +23,7 @@ def build_unified_prediction_dashboard(data, output_path):
         cname = norm_c(v.get('Class', ''))
         if cname not in class_violations:
             class_violations[cname] = []
-        class_violations[cname].append(v)
+        class_violations[cname].append({'Error': v.get('Error', 'GV-08')})
 
     # Lấy danh sách học viên nguy cơ theo từng lớp để tra cứu nhanh
     class_risks = {}
@@ -259,12 +259,22 @@ def build_unified_prediction_dashboard(data, output_path):
         for s in gdata['students']:
             badge_cls = "risk-badge-red" if s['risk_level'] == 'RED' else "risk-badge-yellow"
             hw_debt = 100.0 - s['hw']
+            is_banned = s.get('is_failed_new', False)
+            is_excellent = s.get('is_excellent', False)
+            p_display = "0.0%<br><span style='font-size:0.72rem;color:#f43f5e;font-weight:normal;'>[Cấm thi]</span>" if is_banned else f"{s['p_final']:.1f}%"
+            
+            excellent_tag = ""
+            if is_excellent and is_banned:
+                score_val = s['hack'] if (s['hack'] is not None and s['hack'] >= 75.0) else s.get('prior_hack')
+                score_str = f" {score_val:.0f}đ" if score_val else ""
+                excellent_tag = f" <span class='excellent-pill' style='color:#a855f7;background:rgba(168,85,247,0.1);padding:2px 6px;border-radius:4px;font-size:0.7rem;margin-left:5px;border:1px solid rgba(168,85,247,0.2);font-weight:normal;display:inline-block;' title='Học lực giỏi nhưng bị cấm thi'><i class='fas fa-bolt'></i>{score_str}</span>"
+                
             student_rows += f"""
             <tr>
                 <td class="font-mono">{s['batch']}</td>
                 <td class="font-mono font-bold">{s['class_name']}</td>
-                <td class="font-bold">{s['full_name']} <span style="color:var(--text-muted);font-size:0.75rem;">({s['student_id']})</span></td>
-                <td class="text-center font-mono font-bold {'text-rose' if s['risk_level'] == 'RED' else 'text-warning'}">{s['p_final']:.1f}%</td>
+                <td class="font-bold">{s['full_name']}{excellent_tag} <span style="color:var(--text-muted);font-size:0.75rem;">({s['student_id']})</span></td>
+                <td class="text-center font-mono font-bold {'text-rose' if s['risk_level'] == 'RED' or is_banned else 'text-warning'}">{p_display}</td>
                 <td class="text-center font-mono">{s['att']:.1f}%</td>
                 <td class="text-center font-mono">{hw_debt:.1f}%</td>
                 <td class="text-center font-mono">{s['el']:.0f}</td>

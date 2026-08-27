@@ -29,5 +29,28 @@
       "notes": "Tự động gán và lưu bởi hệ thống"
     }
   },
-  "default_difficulty": 1.2
+  "default_difficulty": 1.2,
+  "calibration_params": {
+    "KS24": {
+      "w1": 0.1,
+      "w2": 0.9,
+      "p_hack_mult": 1.5,
+      "base_scale": 1.1,
+      "env_threshold": 7.5
+    },
+    "KS25": {
+      "w1": 0.1,
+      "w2": 0.9,
+      "p_hack_mult": 1.0,
+      "base_scale": 1.05,
+      "env_threshold": 7.5
+    },
+    "QTKD": {
+      "w1": 0.0,
+      "w2": 1.0,
+      "p_hack_mult": 1.2,
+      "base_scale": 1.1,
+      "env_threshold": 5.0
+    }
+  }
 }

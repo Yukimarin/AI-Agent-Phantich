@@ -1,10 +1,8 @@
-# Task Tracker - Brainstorming QLDT Report Restructuring
+# Task Tracker - Cập nhật Báo cáo Agent 1 theo dữ liệu mới nhất
 
 | Task | Status | Details |
 | :--- | :---: | :--- |
-| **1. Explore project context** | [x] | Checked `generate_qldt_report.py` code logic and the QLDT monthly report output. |
-| **2. Ask clarifying questions** | [x] | Ask the user one clarifying question at a time to refine the requirements. |
-| **3. Propose 2-3 approaches** | [x] | Present alternative technical options with trade-offs. |
-| **4. Present design** | [/] | Present the architecture and details of the selected approach. |
-| **5. Write design doc** | [ ] | Save validated design to `docs/plans/YYYY-MM-DD-qldt-report-restructure-design.md`. |
-| **6. Transition to implementation** | [ ] | Launch `writing-plans` to guide execution. |
+| **1. Đồng bộ dữ liệu Excel nguồn** | [x] | Chạy `agents/common/data_sanitizer.py` để copy và làm sạch file Excel từ Backup. |
+| **2. Khởi chạy Pipeline cập nhật báo cáo** | [x] | Chạy `run_pipeline.py` để chạy lại toàn bộ pipeline báo cáo từ Agent 1 đến Agent 5. |
+| **3. Xác minh kết quả đầu ra của Agent 1** | [x] | Kiểm tra file `data/processed/agent1_output.json` và `output/dashboards/core/agent_1_student_discipline.html`. |
+| **4. Báo cáo kết quả và cập nhật Super Memory** | [x] | Cập nhật nhật ký phiên làm việc trong `docs/super_memory.md` và phản hồi người dùng. |

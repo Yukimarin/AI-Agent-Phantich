@@ -1,281 +1,399 @@
 {
-    "Bùi Thanh Hải": {
-        "name": "Bùi Thanh Hải",
-        "role": "GV",
-        "classes": [
-            "HN-K24-CNTT4(34) (KS24_JWS)",
-            "HN-K24-CNTT4(32) (KS24_AI_Intergration)",
-            "HN-K24-CNTT2(39) (KS24_JWS)",
-            "HN-K24-CNTT2(39) (KS24_AI)",
-            "HN-K24-CNTT4(34-32) (KS24_AI)",
-            "HN-K24-CNTT3(48-43-42) (KS24_JWS)",
-            "HN-K24-CNTT3(42) (KS24_AI_Intergration)",
-            "HN-K24-CNTT3(42) (KS24_AI)",
-            "HN-K24-CNTT2(39) (KS24_AI_Intergration)",
-            "HN-K24-CNTT1 (KS24-JavaAdvance)",
-            "HN-K24-CNTT3(32-25) (KS24_JavaWeb)",
-            "HN-K24-CNTT2(40-39) (KS24_JavaWeb)",
-            "HN-K24-CNTT4 (KS24-JavaAdvance)"
-        ],
-        "avg_violation_rate": 8.79,
-        "student_discipline_score": 91.2
+    "generated_at": "2026-08-27T23:46:45.291526",
+    "instructors": {
+        "Bùi Thanh Hải": {
+            "name": "Bùi Thanh Hải",
+            "role": "GV",
+            "classes": [
+                "HN-K24-CNTT4(32) (KS24_AI_Intergration)",
+                "HN-K24-CNTT2(39) (KS24_AI_Intergration)",
+                "HN-K24-CNTT3(42-41) (KS24_AI_Intergration)"
+            ],
+            "avg_violation_rate": 11.64,
+            "student_discipline_score": 88.4
+        },
+        "Lâm Tùng Dương": {
+            "name": "Lâm Tùng Dương",
+            "role": "GV",
+            "classes": [
+                "HN-K25-CNTT2(38) (KS25_Python_Web)"
+            ],
+            "avg_violation_rate": 28.43,
+            "student_discipline_score": 71.6
+        },
+        "Lê Hà Thanh Sang": {
+            "name": "Lê Hà Thanh Sang",
+            "role": "GV",
+            "classes": [
+                "HCM-K25-CNTT5(37) (KS25_Python_Web)",
+                "HCM-K25-CNTT8(36) (KS25_Python_Web)"
+            ],
+            "avg_violation_rate": 35.22,
+            "student_discipline_score": 64.8
+        },
+        "Lưu Hoàng Xuân Nguyên": {
+            "name": "Lưu Hoàng Xuân Nguyên",
+            "role": "TG",
+            "classes": [
+                "HCM-K25-CNTT7(40-39) (KS25_Python_Web)",
+                "HCM-K25-CNTT6(40) (KS25_Python_Web)"
+            ],
+            "avg_violation_rate": 23.1,
+            "student_discipline_score": 76.9
+        },
+        "Lương Quốc Tuấn": {
+            "name": "Lương Quốc Tuấn",
+            "role": "GV",
+            "classes": [
+                "HN-K25-CNTT1(40) (KS25_Python_Web)",
+                "HN-K25-CNTT5(37) (KS25_Python_Web)"
+            ],
+            "avg_violation_rate": 21.47,
+            "student_discipline_score": 78.5
+        },
+        "Lại Trung Lâm": {
+            "name": "Lại Trung Lâm",
+            "role": "TG",
+            "classes": [
+                "HN-K25-CNTT1(40) (KS25_Python_Web)",
+                "HN-K25-CNTT2(38) (KS25_Python_Web)",
+                "HN-K25-CNTT5(37) (KS25_Python_Web)"
+            ],
+            "avg_violation_rate": 23.79,
+            "student_discipline_score": 76.2
+        },
+        "Nguyễn Bá Minh Đạo": {
+            "name": "Nguyễn Bá Minh Đạo",
+            "role": "GV",
+            "classes": [
+                "HCM-K24-CNTT1(44-43) (KS24_AI_Intergration)"
+            ],
+            "avg_violation_rate": 10.47,
+            "student_discipline_score": 89.5
+        },
+        "Nguyễn Công Hưởng": {
+            "name": "Nguyễn Công Hưởng",
+            "role": "GV",
+            "classes": [
+                "HN-K24-CNTT1(36) (KS24_AI_Intergration)"
+            ],
+            "avg_violation_rate": 16.22,
+            "student_discipline_score": 83.8
+        },
+        "Nguyễn Ngọc Vân Khanh": {
+            "name": "Nguyễn Ngọc Vân Khanh",
+            "role": "GV",
+            "classes": [
+                "HN-K25-QTKD2(40-39) (KS25_QTKD_BA201)",
+                "HN-K25-QTKD3(28-26) (KS25_QTKD_BA201)"
+            ],
+            "avg_violation_rate": 7.3,
+            "student_discipline_score": 92.7
+        },
+        "Nguyễn Quảng An": {
+            "name": "Nguyễn Quảng An",
+            "role": "GV",
+            "classes": [
+                "HN-K25-CNTT4(41-40) (KS25_Python_Web)",
+                "HN-K25-CNTT6(32-31) (KS25_Python_Web)",
+                "HN-K25-CNTT3(35) (KS25_Python_Web)"
+            ],
+            "avg_violation_rate": 30.27,
+            "student_discipline_score": 69.7
+        },
+        "Nguyễn Thị Hồng Minh": {
+            "name": "Nguyễn Thị Hồng Minh",
+            "role": "GV",
+            "classes": [
+                "HN-K25-QTKD1(33) (KS25_QTKD_BA201)"
+            ],
+            "avg_violation_rate": 14.38,
+            "student_discipline_score": 85.6
+        },
+        "Phạm Ngọc Kiên": {
+            "name": "Phạm Ngọc Kiên",
+            "role": "TG",
+            "classes": [
+                "HN-K25-CNTT4(41-40) (KS25_Python_Web)",
+                "HN-K25-CNTT6(32-31) (KS25_Python_Web)",
+                "HN-K25-CNTT3(35) (KS25_Python_Web)"
+            ],
+            "avg_violation_rate": 30.27,
+            "student_discipline_score": 69.7
+        },
+        "Phạm Viết Hùng": {
+            "name": "Phạm Viết Hùng",
+            "role": "TG",
+            "classes": [
+                "HCM-K25-CNTT5(37) (KS25_Python_Web)",
+                "HCM-K25-CNTT8(36) (KS25_Python_Web)"
+            ],
+            "avg_violation_rate": 35.22,
+            "student_discipline_score": 64.8
+        },
+        "Trần Quốc Tuấn": {
+            "name": "Trần Quốc Tuấn",
+            "role": "GV",
+            "classes": [
+                "HCM-K25-CNTT7(40-39) (KS25_Python_Web)",
+                "HCM-K25-CNTT6(40) (KS25_Python_Web)"
+            ],
+            "avg_violation_rate": 23.1,
+            "student_discipline_score": 76.9
+        }
     },
-    "Hoàng Thị Hậu": {
-        "name": "Hoàng Thị Hậu",
-        "role": "GV",
-        "classes": [
-            "HN-K25-QTKD1 (KS25_QTKD_M103)",
-            "HN-K25-CNTT6 (SKL_KS24)",
-            "HN-K25-CNTT4 (SKL_KS24)",
-            "HN-K25-CNTT5 (SKL_KS24)",
-            "HN-K25-QTKD3(27) (KS25_QTKD_M104)"
-        ],
-        "avg_violation_rate": 13.21,
-        "student_discipline_score": 86.8
-    },
-    "Hoàng Thị Kim Oanh": {
-        "name": "Hoàng Thị Kim Oanh",
-        "role": "GV",
-        "classes": [
-            "HN-K25-QTKD1(21-11-1) (KS25_QTKD_PRJ302)",
-            "HN-K25-QTKD2 (KS25_QTKD_M103)",
-            "HN-K25-QTKD1(37) (KS25_QTKD_M104)"
-        ],
-        "avg_violation_rate": 13.08,
-        "student_discipline_score": 86.9
-    },
-    "Hồ Xuân Hùng": {
-        "name": "Hồ Xuân Hùng",
-        "role": "GV",
-        "classes": [
-            "HN-K24-CNTT5(29-19) (KS24_JavaWeb)",
-            "HN-K24-CNTT1(38) (KS24_JWS)",
-            "HN-K24-CNTT1(38-36) (KS24_AI)",
-            "HN-K24-CNTT2 (KS24-JavaAdvance)"
-        ],
-        "avg_violation_rate": 18.86,
-        "student_discipline_score": 81.1
-    },
-    "Lâm Tùng Dương": {
-        "name": "Lâm Tùng Dương",
-        "role": "GV",
-        "classes": [
-            "HN-K25-CNTT2(38) (KS25_Python_Web)"
-        ],
-        "avg_violation_rate": 11.11,
-        "student_discipline_score": 88.9
-    },
-    "Lê Hà Thanh Sang": {
-        "name": "Lê Hà Thanh Sang",
-        "role": "GV",
-        "classes": [
-            "HCM-K25-CNTT5(37) (KS25_Python_Web)",
-            "HCM-K25-CNTT7(43-42) (KS25_Database)",
-            "HCM-K25-CNTT5(43-39) (KS25_Database)",
-            "HCM-K25-CNTT5(39) (KS25_Python)",
-            "HCM-K25-CNTT8(38) (KS25_Python)",
-            "HCM-K25-CNTT2 (KS25_Javascript)",
-            "HCM-K25-CNTT8(36) (KS25_Python_Web)"
-        ],
-        "avg_violation_rate": 15.53,
-        "student_discipline_score": 84.5
-    },
-    "Lê Thành Ngọc": {
-        "name": "Lê Thành Ngọc",
-        "role": "GV",
-        "classes": [
-            "HN-K25-QTKD3(27) (KS25_QTKD_DTB201)",
-            "HN-K25-QTKD1(37-33) (KS25_QTKD_DTB202)"
-        ],
-        "avg_violation_rate": 17.15,
-        "student_discipline_score": 82.9
-    },
-    "Lương Quốc Tuấn": {
-        "name": "Lương Quốc Tuấn",
-        "role": "GV",
-        "classes": [
-            "HN-K25-CNTT3 (KS25_Javascript)",
-            "HN-K25-CNTT2(43) (KS25_Python)",
-            "HN-K25-CNTT5(37) (KS25_Python_Web)",
-            "HN-K25-CNTT5(43-40-42) (KS25_Python)",
-            "HN-K25-CNTT1(47-44) (KS25_Database)",
-            "HN-K25-CNTT1(40) (KS25_Python_Web)"
-        ],
-        "avg_violation_rate": 15.89,
-        "student_discipline_score": 84.1
-    },
-    "Nguyễn Bá Minh Đạo": {
-        "name": "Nguyễn Bá Minh Đạo",
-        "role": "GV",
-        "classes": [
-            "HCM-K24-CNTT2 (KS24-JavaAdvance)",
-            "HCM-K24-CNTT1(44) (KS24_AI_Intergration)",
-            "HCM-K24-CNTT1(44) (KS24_AI)",
-            "HCM-K24-CNTT1(44) (KS24_JavaWeb)",
-            "HCM-K25-CNTT3 (KS25_Javascript)",
-            "HCM-K24-CNTT1(44) (KS24_JWS)"
-        ],
-        "avg_violation_rate": 13.72,
-        "student_discipline_score": 86.3
-    },
-    "Nguyễn Công Hưởng": {
-        "name": "Nguyễn Công Hưởng",
-        "role": "GV",
-        "classes": [
-            "HN-K24-CNTT1(36) (KS24_AI_Intergration)"
-        ],
-        "avg_violation_rate": 0.0,
-        "student_discipline_score": 100.0
-    },
-    "Nguyễn Duy Quang": {
-        "name": "Nguyễn Duy Quang",
-        "role": "GV",
-        "classes": [
-            "HN-K25-CNTT8-HL(18) (KS25_Database)"
-        ],
-        "avg_violation_rate": 10.47,
-        "student_discipline_score": 89.5
-    },
-    "Nguyễn Ngọc Vân Khanh": {
-        "name": "Nguyễn Ngọc Vân Khanh",
-        "role": "GV",
-        "classes": [
-            "HN-K25-QTKD2(40) (KS25_QTKD_BA201)",
-            "HN-K25-QTKD2(40) (KS25_QTKD_DTB202)",
-            "HN-K25-QTKD2(40) (KS25_QTKD_DTB201)",
-            "HN-K25-QTKD1(37) (KS25_QTKD_DTB201)",
-            "HN-K25-QTKD3(27) (KS25_QTKD_DTB202)",
-            "HN-K25-QTKD1(33) (KS25_QTKD_BA201)"
-        ],
-        "avg_violation_rate": 12.03,
-        "student_discipline_score": 88.0
-    },
-    "Nguyễn Quảng An": {
-        "name": "Nguyễn Quảng An",
-        "role": "GV",
-        "classes": [
-            "HN-K25-CNTT6(32-31) (KS25_Python_Web)",
-            "HN-K25-CNTT2 (KS25_Javascript)",
-            "HN-K25-CNTT4(47-43) (KS25_Database)",
-            "HN-K25-CNTT3(35) (KS25_Python_Web)",
-            "HN-K25-CNTT4(44-43-42) (KS25_Python)",
-            "HN-K25-CNTT4(41-40) (KS25_Python_Web)",
-            "HN-K25-CNTT3(40-39-37) (KS25_Python)",
-            "HN-K25-CNTT6 (KS25_Javascript)",
-            "HN-K25-CNTT6(35-33) (KS25_Python)",
-            "HN-K25-CNTT2(43) (KS25_Database)"
-        ],
-        "avg_violation_rate": 22.99,
-        "student_discipline_score": 77.0
-    },
-    "Nguyễn Thanh Bình Phước": {
-        "name": "Nguyễn Thanh Bình Phước",
-        "role": "GV",
-        "classes": [
-            "HCM-K24-CNTT1 (KS24-JavaAdvance)"
-        ],
-        "avg_violation_rate": 15.7,
-        "student_discipline_score": 84.3
-    },
-    "Nguyễn Thị Hồng Minh": {
-        "name": "Nguyễn Thị Hồng Minh",
-        "role": "GV",
-        "classes": [
-            "HN-K25-CNTT2 (SKL_KS24)",
-            "HN-K25-QTKD3(28) (KS25_QTKD_BA201)",
-            "HN-K25-QTKD2(40) (KS25_QTKD_M104)",
-            "HN-K25-CNTT1 (SKL_KS24)",
-            "HN-K25-CNTT3 (SKL_KS24)",
-            "HN-K25-QTKD2(40) (KS25_QTKD_PRJ302)"
-        ],
-        "avg_violation_rate": 14.79,
-        "student_discipline_score": 85.2
-    },
-    "Ngô Quang Huấn": {
-        "name": "Ngô Quang Huấn",
-        "role": "GV",
-        "classes": [
-            "HN-K24-CNTT4 (SKL_KS24)",
-            "HN-K25-QTKD1 (KS25_QTKD_SKL)",
-            "HN-K25-QTKD3 (KS25_QTKD_SKL)",
-            "HN-K24-CNTT1 (SKL_KS24)",
-            "HN-K25-QTKD2 (KS25_QTKD_SKL)",
-            "HN-K24-CNTT3 (SKL_KS24)",
-            "HN-K24-CNTT2 (SKL_KS24)"
-        ],
-        "avg_violation_rate": 9.28,
-        "student_discipline_score": 90.7
-    },
-    "Ngọ Văn Quý": {
-        "name": "Ngọ Văn Quý",
-        "role": "GV",
-        "classes": [
-            "HN-K25-CNTT4 (KS25_Javascript)",
-            "HN-K25-CNTT6(38-35) (KS25_Database)",
-            "HN-K25-CNTT7 (KS25_Javascript)",
-            "HN-K25-CNTT3(40-39) (KS25_Database)"
-        ],
-        "avg_violation_rate": 36.05,
-        "student_discipline_score": 63.9
-    },
-    "Phạm Tuấn Bình": {
-        "name": "Phạm Tuấn Bình",
-        "role": "GV",
-        "classes": [
-            "HN-K24-CNTT1(41-39) (KS24_JavaWeb)",
-            "HN-K24-CNTT3 (KS24-JavaAdvance)",
-            "HN-K24-CNTT4(38-34) (KS24_JavaWeb)",
-            "HN-K24-CNTT5 (KS24-JavaAdvance)"
-        ],
-        "avg_violation_rate": 18.63,
-        "student_discipline_score": 81.4
-    },
-    "Trần Quốc Tuấn": {
-        "name": "Trần Quốc Tuấn",
-        "role": "GV",
-        "classes": [
-            "HCM-K25-CNTT6(40) (KS25_Python_Web)",
-            "HCM-K25-CNTT7(40-39) (KS25_Python_Web)",
-            "HCM-K25-CNTT6(41-40) (KS25_Python)",
-            "HCM-K25-CNTT1 (KS25_Javascript)",
-            "HCM-K25-CNTT4 (KS25_Javascript)",
-            "HCM-K25-CNTT8(39) (KS25_Database)",
-            "HCM-K25-CNTT6(47-41) (KS25_Database)",
-            "HCM-K25-CNTT7(42) (KS25_Python)"
-        ],
-        "avg_violation_rate": 15.4,
-        "student_discipline_score": 84.6
-    },
-    "Trịnh Quốc Hai": {
-        "name": "Trịnh Quốc Hai",
-        "role": "GV",
-        "classes": [
-            "HN-K25-CNTT5 (KS25_Javascript)",
-            "HN-K25-CNTT1(44-42) (KS25_Python)",
-            "HN-K25-CNTT8(22) (KS25_Python_Web)",
-            "HN-K25-CNTT5(42) (KS25_Database)",
-            "HN-K25-CNTT1 (KS25_Javascript)"
-        ],
-        "avg_violation_rate": 29.67,
-        "student_discipline_score": 70.3
-    },
-    "Tạ Quang Tùng": {
-        "name": "Tạ Quang Tùng",
-        "role": "GV",
-        "classes": [
-            "HN-K25-CNTT8(23-24) (KS25_Python)"
-        ],
-        "avg_violation_rate": 12.39,
-        "student_discipline_score": 87.6
-    },
-    "Đặng Quỳnh Trang": {
-        "name": "Đặng Quỳnh Trang",
-        "role": "GV",
-        "classes": [
-            "HN-K25-QTKD3 (KS25_QTKD_M103)",
-            "HN-K25-QTKD3(26) (KS25_QTKD_PRJ302)"
-        ],
-        "avg_violation_rate": 14.83,
-        "student_discipline_score": 85.2
+    "classes_analysis": {
+        "HN-K24-CNTT1": {
+            "class_name": "HN-K24-CNTT1(36)",
+            "norm_name": "HN-K24-CNTT1",
+            "sheet": "KS24_AI_Intergration",
+            "size": 36,
+            "instructor": "Nguyễn Công Hưởng",
+            "assistant": "",
+            "today_violation": 16.22,
+            "prev_violation": 19.45,
+            "diff": -3.22,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K24-CNTT2": {
+            "class_name": "HN-K24-CNTT2(39)",
+            "norm_name": "HN-K24-CNTT2",
+            "sheet": "KS24_AI_Intergration",
+            "size": 39,
+            "instructor": "Bùi Thanh Hải",
+            "assistant": "",
+            "today_violation": 5.77,
+            "prev_violation": 8.55,
+            "diff": -2.78,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K24-CNTT3": {
+            "class_name": "HN-K24-CNTT3(42-41)",
+            "norm_name": "HN-K24-CNTT3",
+            "sheet": "KS24_AI_Intergration",
+            "size": 30,
+            "instructor": "Bùi Thanh Hải",
+            "assistant": "",
+            "today_violation": 23.67,
+            "prev_violation": 25.2,
+            "diff": -1.53,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K24-CNTT4": {
+            "class_name": "HN-K24-CNTT4(32)",
+            "norm_name": "HN-K24-CNTT4",
+            "sheet": "KS24_AI_Intergration",
+            "size": 32,
+            "instructor": "Bùi Thanh Hải",
+            "assistant": "",
+            "today_violation": 5.47,
+            "prev_violation": 7.29,
+            "diff": -1.82,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HCM-K24-CNTT1": {
+            "class_name": "HCM-K24-CNTT1(44-43)",
+            "norm_name": "HCM-K24-CNTT1",
+            "sheet": "KS24_AI_Intergration",
+            "size": 30,
+            "instructor": "Nguyễn Bá Minh Đạo",
+            "assistant": "",
+            "today_violation": 10.47,
+            "prev_violation": 10.08,
+            "diff": 0.39,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K25-CNTT1": {
+            "class_name": "HN-K25-CNTT1(40)",
+            "norm_name": "HN-K25-CNTT1",
+            "sheet": "KS25_Python_Web",
+            "size": 40,
+            "instructor": "Lương Quốc Tuấn",
+            "assistant": "Lại Trung Lâm",
+            "today_violation": 27.0,
+            "prev_violation": 31.67,
+            "diff": -4.67,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K25-CNTT2": {
+            "class_name": "HN-K25-CNTT2(38)",
+            "norm_name": "HN-K25-CNTT2",
+            "sheet": "KS25_Python_Web",
+            "size": 38,
+            "instructor": "Lâm Tùng Dương",
+            "assistant": "Lại Trung Lâm",
+            "today_violation": 28.43,
+            "prev_violation": 33.91,
+            "diff": -5.48,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K25-CNTT3": {
+            "class_name": "HN-K25-CNTT3(35)",
+            "norm_name": "HN-K25-CNTT3",
+            "sheet": "KS25_Python_Web",
+            "size": 35,
+            "instructor": "Nguyễn Quảng An",
+            "assistant": "Phạm Ngọc Kiên",
+            "today_violation": 39.0,
+            "prev_violation": 46.67,
+            "diff": -7.67,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K25-CNTT4": {
+            "class_name": "HN-K25-CNTT4(41-40)",
+            "norm_name": "HN-K25-CNTT4",
+            "sheet": "KS25_Python_Web",
+            "size": 30,
+            "instructor": "Nguyễn Quảng An",
+            "assistant": "Phạm Ngọc Kiên",
+            "today_violation": 17.62,
+            "prev_violation": 20.83,
+            "diff": -3.21,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K25-CNTT5": {
+            "class_name": "HN-K25-CNTT5(37)",
+            "norm_name": "HN-K25-CNTT5",
+            "sheet": "KS25_Python_Web",
+            "size": 37,
+            "instructor": "Lương Quốc Tuấn",
+            "assistant": "Lại Trung Lâm",
+            "today_violation": 15.94,
+            "prev_violation": 18.92,
+            "diff": -2.98,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K25-CNTT6": {
+            "class_name": "HN-K25-CNTT6(32-31)",
+            "norm_name": "HN-K25-CNTT6",
+            "sheet": "KS25_Python_Web",
+            "size": 30,
+            "instructor": "Nguyễn Quảng An",
+            "assistant": "Phạm Ngọc Kiên",
+            "today_violation": 34.2,
+            "prev_violation": 41.93,
+            "diff": -7.73,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HCM-K25-CNTT8": {
+            "class_name": "HCM-K25-CNTT8(36)",
+            "norm_name": "HCM-K25-CNTT8",
+            "sheet": "KS25_Python_Web",
+            "size": 36,
+            "instructor": "Lê Hà Thanh Sang",
+            "assistant": "Phạm Viết Hùng",
+            "today_violation": 51.14,
+            "prev_violation": 60.19,
+            "diff": -9.05,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HCM-K25-CNTT7": {
+            "class_name": "HCM-K25-CNTT7(40-39)",
+            "norm_name": "HCM-K25-CNTT7",
+            "sheet": "KS25_Python_Web",
+            "size": 30,
+            "instructor": "Trần Quốc Tuấn",
+            "assistant": "Lưu Hoàng Xuân Nguyên",
+            "today_violation": 26.33,
+            "prev_violation": 30.77,
+            "diff": -4.44,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HCM-K25-CNTT6": {
+            "class_name": "HCM-K25-CNTT6(40)",
+            "norm_name": "HCM-K25-CNTT6",
+            "sheet": "KS25_Python_Web",
+            "size": 40,
+            "instructor": "Trần Quốc Tuấn",
+            "assistant": "Lưu Hoàng Xuân Nguyên",
+            "today_violation": 19.88,
+            "prev_violation": 24.17,
+            "diff": -4.29,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HCM-K25-CNTT5": {
+            "class_name": "HCM-K25-CNTT5(37)",
+            "norm_name": "HCM-K25-CNTT5",
+            "sheet": "KS25_Python_Web",
+            "size": 37,
+            "instructor": "Lê Hà Thanh Sang",
+            "assistant": "Phạm Viết Hùng",
+            "today_violation": 19.31,
+            "prev_violation": 23.08,
+            "diff": -3.77,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K25-QTKD1": {
+            "class_name": "HN-K25-QTKD1(33)",
+            "norm_name": "HN-K25-QTKD1",
+            "sheet": "KS25_QTKD_BA201",
+            "size": 33,
+            "instructor": "Nguyễn Thị Hồng Minh",
+            "assistant": "",
+            "today_violation": 14.38,
+            "prev_violation": 17.17,
+            "diff": -2.78,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K25-QTKD2": {
+            "class_name": "HN-K25-QTKD2(40-39)",
+            "norm_name": "HN-K25-QTKD2",
+            "sheet": "KS25_QTKD_BA201",
+            "size": 30,
+            "instructor": "Nguyễn Ngọc Vân Khanh",
+            "assistant": "",
+            "today_violation": 6.91,
+            "prev_violation": 8.55,
+            "diff": -1.64,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        },
+        "HN-K25-QTKD3": {
+            "class_name": "HN-K25-QTKD3(28-26)",
+            "norm_name": "HN-K25-QTKD3",
+            "sheet": "KS25_QTKD_BA201",
+            "size": 30,
+            "instructor": "Nguyễn Ngọc Vân Khanh",
+            "assistant": "",
+            "today_violation": 7.69,
+            "prev_violation": 7.69,
+            "diff": 0.0,
+            "anomaly_status": "STABLE",
+            "tampering_suspect": false,
+            "root_cause": "Bình thường"
+        }
     }
 }

@@ -189,6 +189,8 @@ def main():
         if not m_norm.strip():
             continue
         norm_key = strip_accents(m_norm)
+        if norm_key.lower() == "bui thi xuan mai":
+            continue
         info_resolved = group_map.get(norm_key)
         if info_resolved:
             raw_name = info_resolved["raw_name"]

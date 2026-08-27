@@ -49,7 +49,7 @@ def get_department(name, classes_str):
     # 1. Khối Ngoại ngữ và kỹ năng mềm
     foreign_lang_staff = [
         "giáp thị minh hằng", "lò thị ngọc anh", "ngô quang huấn", 
-        "bùi thị xuân mai", "hoàng phương thảo", "lê thị đỏ"
+        "lê thị đỏ"
     ]
     if any(n in name_clean for n in foreign_lang_staff):
         return "Khối Ngoại ngữ và kỹ năng mềm"
@@ -162,20 +162,91 @@ sample_instructors = []
 print("Đang đọc dữ liệu chỉ số đào tạo bằng openpyxl...")
 wb = openpyxl.load_workbook(excel_path, data_only=True)
 
-target_sheets = []
-for s_name in wb.sheetnames:
-    if s_name.lower() == 'sheet1':
-        continue
-    if any(k in s_name for k in ['KS24', 'KS25', 'SKL']):
-        target_sheets.append(s_name)
+from datetime import date, timedelta, datetime
+from collections import defaultdict
+
+def parse_date(d_val):
+    if not d_val:
+        return None
+    if isinstance(d_val, datetime):
+        return d_val.date()
+    if isinstance(d_val, date):
+        return d_val
+    d_str = str(d_val).strip()
+    parts = d_str.split('/')
+    if len(parts) == 2:
+        try:
+            return date(2026, int(parts[1]), int(parts[0]))
+        except ValueError:
+            return None
+    elif len(parts) == 3:
+        try:
+            year = int(parts[2])
+            if year < 100:
+                year += 2000
+            return date(year, int(parts[1]), int(parts[0]))
+        except ValueError:
+            return None
+    return None
+
+def get_max_excel_date(workbook, sheets):
+    all_dates = []
+    for s in sheets:
+        sheet = workbook[s]
+        row3 = list(sheet.iter_rows(min_row=3, max_row=3, values_only=True))[0]
+        for val in row3:
+            parsed = parse_date(val)
+            if parsed:
+                all_dates.append(parsed)
+    return max(all_dates) if all_dates else date(2026, 8, 18)
+
+active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s for k in ['KS24', 'KS25', 'SKL'])]
+max_date = get_max_excel_date(wb, active_sheets)
+monday_curr = max_date - timedelta(days=max_date.weekday())
+sunday_curr = monday_curr + timedelta(days=6)
+
+print(f"Tuần báo cáo hiện tại (Master): {monday_curr} đến {sunday_curr}")
+
+weekly_groups = {
+    'KS25_CNTT_HN': {
+        'classes': ['HN-K25-CNTT1', 'HN-K25-CNTT2', 'HN-K25-CNTT3', 'HN-K25-CNTT4', 'HN-K25-CNTT5', 'HN-K25-CNTT6'],
+        'sheet_curr': 'KS25_Python_Web'
+    },
+    'KS25_CNTT_HCM': {
+        'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7', 'HCM-K25-CNTT8'],
+        'sheet_curr': 'KS25_Python_Web'
+    },
+    'KS25_QTKD_HN': {
+        'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
+        'sheet_curr': 'KS25_QTKD_BA201'
+    },
+    'KS24_CNTT_HN': {
+        'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HCM-K24-CNTT1'],
+        'sheet_curr': 'KS24_AI_Intergration'
+    }
+}
+
+class_to_current_sheet = {}
+for gkey, ginfo in weekly_groups.items():
+    for c in ginfo['classes']:
+        class_to_current_sheet[c] = ginfo['sheet_curr']
+
+def normalize_class_name(name):
+    if not name:
+        return ""
+    name_str = str(name).strip()
+    if '(' in name_str:
+        name_str = name_str.split('(')[0].strip()
+    for suffix in ['_HK2', '_HL', '-HL', '\t', ' - cũ', '_GL']:
+        if name_str.endswith(suffix):
+            name_str = name_str[:-len(suffix)].strip()
+    name_str = name_str.replace("KS25", "K25").replace("KS24", "K24").replace("KS23", "K23")
+    return name_str
 
 instructors_data = {}
 
-for sheet in target_sheets:
-    if sheet not in wb.sheetnames:
-        continue
+for sheet in active_sheets:
     sheet_obj = wb[sheet]
-    
     header_row_idx = None
     for r in range(1, min(20, sheet_obj.max_row + 1)):
         row_vals = [str(sheet_obj.cell(row=r, column=c).value or "").strip() for c in range(1, sheet_obj.max_column + 1)]
@@ -187,18 +258,37 @@ for sheet in target_sheets:
         continue
         
     headers = [str(sheet_obj.cell(row=header_row_idx, column=c).value or "").strip() for c in range(1, sheet_obj.max_column + 1)]
-    class_col_idx = None
+    class_col_idx = headers.index('Lớp') + 1 if 'Lớp' in headers else None
     person_col_idx = None
     for c_idx, h in enumerate(headers):
-        if 'Lớp' in h:
-            class_col_idx = c_idx + 1
-        elif 'Giảng viên/Trợ giảng' in h or 'Giảng viên' in h or 'Trợ giảng' in h:
+        if 'Giảng viên' in h or 'Trợ giảng' in h or 'Giảng viên/Trợ giảng' in h:
             person_col_idx = c_idx + 1
+            break
             
     if class_col_idx is None or person_col_idx is None:
         continue
         
+    row3 = list(sheet_obj.iter_rows(min_row=3, max_row=3, values_only=True))[0]
+    row4 = list(sheet_obj.iter_rows(min_row=4, max_row=4, values_only=True))[0]
+    
+    # Xác định các ngày học hiển thị (không ẩn)
+    columns_by_date = defaultdict(list)
+    current_date = None
+    for c in range(2, len(row3)):
+        col_letter = openpyxl.utils.get_column_letter(c + 1)
+        dim = sheet_obj.column_dimensions.get(col_letter)
+        if dim and dim.hidden:
+            continue
+        val3 = row3[c]
+        val4 = row4[c]
+        if val3:
+            current_date = parse_date(val3)
+        if current_date and val4 in ['Chuyên cần', 'Bài tập', 'Elearning']:
+            columns_by_date[current_date].append((c + 1, val4))
+
     current_class = None
+    class_main_scores = {} # Lưu điểm dòng chính của lớp để làm fallback cho trợ giảng
+    
     for r in range(header_row_idx + 1, sheet_obj.max_row + 1):
         c_val = sheet_obj.cell(row=r, column=class_col_idx).value
         p_val = sheet_obj.cell(row=r, column=person_col_idx).value
@@ -209,40 +299,84 @@ for sheet in target_sheets:
         if p_val is not None and str(p_val).strip() not in ['', 'nan', 'Giảng viên/Trợ giảng']:
             name = str(p_val).strip()
             
-            numeric_vals = []
-            for c in range(4, sheet_obj.max_column + 1):
-                col_letter = openpyxl.utils.get_column_letter(c)
-                dim = sheet_obj.column_dimensions.get(col_letter)
-                if dim and dim.hidden:
-                    continue
-                val = sheet_obj.cell(row=r, column=c).value
-                if isinstance(val, (int, float)) and val is not None:
-                    numeric_vals.append(float(val))
-                    
-            if not numeric_vals:
+            if strip_accents(name).lower() == "bui thi xuan mai":
                 continue
                 
-            avg_violation = sum(numeric_vals) / len(numeric_vals)
+            norm_class = normalize_class_name(current_class)
+            
+            # Chỉ tính toán nếu lớp này thuộc môn đang học ở tuần hiện tại trong sheet tương ứng
+            expected_sheet = class_to_current_sheet.get(norm_class, None)
+            if expected_sheet != sheet:
+                continue
+                
+            # Đọc điểm
+            date_vals = defaultdict(dict)
+            for d, cols in columns_by_date.items():
+                for col_idx, metric in cols:
+                    val = sheet_obj.cell(row=r, column=col_idx).value
+                    if val is not None:
+                        try:
+                            date_vals[d][metric] = float(val)
+                        except ValueError:
+                            pass
+                            
+            # Phân tách: ngày trong tuần báo cáo vs ngày quá khứ
+            curr_week_vals = []
+            past_vals = defaultdict(list)
+            
+            for d, metrics in date_vals.items():
+                is_empty_day = True
+                for val in metrics.values():
+                    if val is not None and val != 0.0:
+                        is_empty_day = False
+                        break
+                if not is_empty_day:
+                    day_scores = [v for v in metrics.values() if v is not None]
+                    if monday_curr <= d <= sunday_curr:
+                        curr_week_vals.extend(day_scores)
+                    else:
+                        past_vals[d].extend(day_scores)
+            
+            # Xác định danh sách điểm số cuối cùng để tính toán
+            final_scores = []
+            if curr_week_vals:
+                final_scores = curr_week_vals
+            elif past_vals:
+                last_date = max(past_vals.keys())
+                final_scores = past_vals[last_date]
+            
+            # Lưu điểm dòng chính nếu đây là giảng viên chính (có c_val điền sẵn)
             is_tg = (c_val is None or str(c_val).strip() == "")
-            role = 'TG' if is_tg else 'GV'
-            resolved_role = get_resolved_role(name, role)
-            
-            if name not in instructors_data:
-                instructors_data[name] = {
-                    'Role': resolved_role,
-                    'Classes': set(),
-                    'ViolationRates': []
-                }
-            else:
-                instructors_data[name]['Role'] = resolved_role
-            
-            instructors_data[name]['Classes'].add(f"{current_class} ({sheet})")
-            instructors_data[name]['ViolationRates'].append(avg_violation)
+            if not is_tg and final_scores:
+                class_main_scores[current_class] = final_scores
+                
+            # Nếu dòng này (ví dụ trợ giảng) trống điểm, lấy điểm dòng chính của lớp
+            if not final_scores and current_class in class_main_scores:
+                final_scores = class_main_scores[current_class]
+                
+            if final_scores:
+                avg_violation = sum(final_scores) / len(final_scores)
+                role = 'TG' if is_tg else 'GV'
+                resolved_role = get_resolved_role(name, role)
+                
+                if name not in instructors_data:
+                    instructors_data[name] = {
+                        'Role': resolved_role,
+                        'Classes': set(),
+                        'ViolationRates': []
+                    }
+                else:
+                    instructors_data[name]['Role'] = resolved_role
+                
+                instructors_data[name]['Classes'].add(f"{current_class} ({sheet})")
+                instructors_data[name]['ViolationRates'].append(avg_violation)
 
 wb.close()
 
 # TỰ ĐỘNG BỔ SUNG NHÂN SỰ TỪ LOGS BÁO CÁO NGÀY (Để bao phủ đầy đủ 39 nhân sự của Trung tâm)
 for log_name, log_info in daily_log_data.items():
+    if log_name == "bùi thị xuân mai":
+        continue
     found = False
     for name in instructors_data.keys():
         if normalize_name_log(name) == log_name:
@@ -286,13 +420,26 @@ for name, data in sorted(instructors_data.items()):
     student_discipline = max(0.0, min(100.0, student_discipline))
     
     tg_discipline = 100.0
-    violation_json_path = "data/processed/vi_pham_gvtg.json"
+    violation_json_path = "data/processed/agent3_output.json"
     actual_violations_count = 0
     if os.path.exists(violation_json_path):
         try:
             with open(violation_json_path, "r", encoding="utf-8") as f:
                 violations_data = json.load(f)
-                actual_violations_count = sum(1 for v in violations_data if v.get('Instructor', '').strip().lower() == name.strip().lower())
+                
+                sunday_curr = monday_curr + timedelta(days=6)
+                weekly_violations = []
+                for v in violations_data:
+                    if v.get('Instructor', '').strip().lower() == name.strip().lower():
+                        v_date_str = v.get('Date')
+                        if v_date_str:
+                            try:
+                                v_date = datetime.strptime(v_date_str, "%Y-%m-%d").date()
+                                if monday_curr <= v_date <= sunday_curr:
+                                    weekly_violations.append(v)
+                            except Exception:
+                                pass
+                actual_violations_count = len(weekly_violations)
         except Exception as e:
             print(f"Lỗi đọc file vi phạm tác nghiệp: {e}")
             
