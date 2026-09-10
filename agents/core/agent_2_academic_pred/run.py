@@ -396,6 +396,33 @@ def predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cn
             WHERE f.class_id = %s AND f.course_id = %s;
         """, (cid, co_id))
         
+        if not raw_st or len(raw_st) < 5:
+            # Fallback cho môn mới đang diễn ra chưa chốt điểm trên final_results
+            seq = class_course_seq.get(cid, [])
+            prev_c = None
+            if co_id in seq:
+                idx = seq.index(co_id)
+                if idx >= 1:
+                    prev_c = seq[idx - 1]
+            if prev_c is None and len(seq) > 0:
+                prev_c = seq[-1]
+            if prev_c:
+                raw_st = run_query(cursor, """
+                    SELECT f.student_id, 0.0 as attendance, 100.0 as homework, 0.0 as elearning,
+                           COALESCE(f.rpoints, 100.0) as rpoints, NULL as project, NULL as pass, s.full_name
+                    FROM qldt_el.final_results f
+                    JOIN qldt_el.students s ON f.student_id = s.id
+                    WHERE f.class_id = %s AND f.course_id = %s;
+                """, (cid, prev_c))
+            if not raw_st:
+                raw_st = run_query(cursor, """
+                    SELECT sc.student_id, 0.0 as attendance, 100.0 as homework, 0.0 as elearning,
+                           100.0 as rpoints, NULL as project, NULL as pass, s.full_name
+                    FROM qldt_el.student_class sc
+                    JOIN qldt_el.students s ON sc.student_id = s.id
+                    WHERE sc.class_id = %s AND sc.is_active = 1;
+                """, (cid,))
+                
         if not raw_st:
             return {'size': 0, 'avg_pred_old': 0.0, 'avg_pred_new': 0.0, 'actual_pass_rate': 0.0, 'students': [], 'v_class': 0.0, 'mult_env': 1.0}
             
@@ -443,7 +470,14 @@ def predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cn
         'ai': 'KS24_AI',
         'python web': 'KS25_Python_Web',
         'fastapi': 'KS25_Python_Web',
-        'dịch vụ web': 'KS25_Python_Web'
+        'dịch vụ web': 'KS25_Python_Web',
+        'microservice': 'KS24_AI_Microservice',
+        'microservices': 'KS24_AI_Microservice',
+        'phân tích thiết kế': 'KS25_Phantichthietkehethong',
+        'thiết kế hệ thống': 'KS25_Phantichthietkehethong',
+        'ba201': 'KS25_QTKD_BA201',
+        'man107': 'KS25_QTKD_MAN107',
+        'chiến lược': 'KS25_QTKD_MAN107'
     }
     low_course = coname.lower()
     target_sheet = None
@@ -894,12 +928,15 @@ def main():
         class_course_seq[int(r['class_id'])].append(int(r['course_id']))
         
     # Mappings of Course IDs to inspect/predict
-    # KS24: JWS (211) -> AI (212)
-    # KS25: Python (124) -> Python Web (215)
-    ks24_cv_course = 194
-    ks24_curr_course = 214
-    ks25_cv_course = 193
-    ks25_curr_course = 217
+    # KS24: AI Integration (220) -> Microservices System Design (216)
+    # KS25: Python Web (217) -> Phân tích & thiết kế hệ thống (224)
+    # QTKD: BA201 (222) -> MAN107 Quản trị chiến lược (213)
+    ks24_cv_course = 220
+    ks24_curr_course = 216
+    ks25_cv_course = 217
+    ks25_curr_course = 224
+    qtkd_cv_course = 222
+    qtkd_curr_course = 213
     
     if db_mode == "SQLite":
         cursor.execute("SELECT DISTINCT class_id FROM student_grades")
@@ -913,10 +950,12 @@ def main():
                 ptit_classes.append(cl.strip())
         classes_map = {idx + 1: cl for idx, cl in enumerate(sorted(list(set(ptit_classes))))}
         courses_map = {
-            193: "Python",
+            220: "AI Integration in Action",
+            216: "Microservices System Design",
             217: "Python Web",
-            194: "Java Web Service",
-            214: "AI Application"
+            224: "Phân tích & thiết kế hệ thống",
+            222: "BA201 Phân tích nghiệp vụ",
+            213: "MAN107 Quản trị chiến lược"
         }
     else:
         classes_raw = run_query(cursor, "SELECT id, name FROM qldt_el.classes;")
@@ -924,6 +963,19 @@ def main():
         courses_raw = run_query(cursor, "SELECT id, name FROM qldt_el.courses;")
         courses_map = {int(c['id']): c['name'] for c in courses_raw}
     
+    # Lấy danh sách duy nhất 16 lớp chính quy PTIT đang học từ Agent 1
+    active_a1_map = {}
+    agent1_path = "data/processed/agent1_output.json"
+    if os.path.exists(agent1_path):
+        try:
+            with open(agent1_path, 'r', encoding='utf-8') as a1_f:
+                a1_data = json.load(a1_f)
+                for ckey in a1_data.get('classes_analysis', {}):
+                    active_a1_map[normalize_class_name(ckey)] = ckey
+            print(f"Agent 2: Đã nạp danh sách {len(active_a1_map)} lớp PTIT hiện tại từ Agent 1.")
+        except Exception as e:
+            print(f"Warning: Could not read {agent1_path}: {e}")
+
     # Data structures to save JSON for HTML Dashboard
     dashboard_data = {
         'KS24': {'cv': [], 'curr': []},
@@ -935,11 +987,22 @@ def main():
     
     # We loop through all classes and filter appropriately
     print("Processing evaluations...")
-    for cid, cname in sorted(classes_map.items()):
-        norm_cname = normalize_class_name(cname)
-        is_qtkd = "QTKD" in cname
-        is_ks25 = ("KS25" in cname or "K25" in cname) and not is_qtkd
-        is_ks24 = ("KS24" in cname or "K24" in cname)
+    for cid, raw_cname in sorted(classes_map.items()):
+        # Bỏ qua các lớp cũ, đình chỉ, ngoại ngữ
+        if 'cũ' in raw_cname or 'đình chỉ' in raw_cname.lower() or 'bảo lưu' in raw_cname.lower():
+            continue
+            
+        norm_cname = normalize_class_name(raw_cname)
+        # BẮT BUỘC: Chỉ lấy các lớp thuộc danh mục chính quy đang học ở Agent 1
+        if active_a1_map and norm_cname not in active_a1_map:
+            continue
+            
+        # Chuẩn hóa tên lớp hiển thị theo Agent 1 (e.g. HN-K24-CNTT1)
+        cname = active_a1_map.get(norm_cname, raw_cname)
+        
+        is_qtkd = "QTKD" in cname or "qtkd" in norm_cname
+        is_ks25 = ("KS25" in cname or "K25" in cname or "k25" in norm_cname) and not is_qtkd
+        is_ks24 = ("KS24" in cname or "K24" in cname or "k24" in norm_cname)
         
         if not (is_ks25 or is_ks24 or is_qtkd):
             continue
@@ -948,9 +1011,9 @@ def main():
         
         # KS24 Block
         if is_ks24:
-            # 1. Java Web Service CV
+            # 1. AI Integration CV
             co_id = ks24_cv_course
-            coname = courses_map.get(co_id, "Java Web Service")
+            coname = courses_map.get(co_id, "AI Integration in Action")
             res_cv = predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cname, coname, batch)
             if res_cv['size'] > 0:
                 dashboard_data['KS24']['cv'].append({
@@ -964,9 +1027,9 @@ def main():
                     'err': abs(res_cv['avg_pred_old'] - res_cv['actual_pass_rate'])
                 })
                 
-            # 2. AI Application CURR
+            # 2. Microservice CURR
             co_id_curr = ks24_curr_course
-            coname_curr = courses_map.get(co_id_curr, "AI Application")
+            coname_curr = courses_map.get(co_id_curr, "Microservices System Design")
             res_curr = predict_class_pass_rate(cursor, cid, co_id_curr, class_course_seq, excel_data, cname, coname_curr, batch)
             if res_curr['size'] > 0:
                 dashboard_data['KS24']['curr'].append({
@@ -1004,9 +1067,9 @@ def main():
                         
         # KS25 Block
         if is_ks25:
-            # 1. Python CV
+            # 1. Python Web CV
             co_id = ks25_cv_course
-            coname = courses_map.get(co_id, "Python")
+            coname = courses_map.get(co_id, "Python Web")
             res_cv = predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cname, coname, batch)
             if res_cv['size'] > 0:
                 dashboard_data['KS25']['cv'].append({
@@ -1020,9 +1083,9 @@ def main():
                     'err': abs(res_cv['avg_pred_old'] - res_cv['actual_pass_rate'])
                 })
                 
-            # 2. Python Web CURR
+            # 2. Phân tích thiết kế hệ thống CURR
             co_id_curr = ks25_curr_course
-            coname_curr = courses_map.get(co_id_curr, "Python Web")
+            coname_curr = courses_map.get(co_id_curr, "Phân tích & thiết kế hệ thống")
             res_curr = predict_class_pass_rate(cursor, cid, co_id_curr, class_course_seq, excel_data, cname, coname_curr, batch)
             if res_curr['size'] > 0:
                 dashboard_data['KS25']['curr'].append({
@@ -1060,9 +1123,9 @@ def main():
                         
         # QTKD Block
         if is_qtkd:
-            # 1. DTB201 CV
-            co_id = 188
-            coname = courses_map.get(co_id, "DTB201")
+            # 1. BA201 CV
+            co_id = qtkd_cv_course
+            coname = courses_map.get(co_id, "BA201")
             res_cv = predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cname, coname, "QTKD")
             if res_cv['size'] > 0:
                 dashboard_data['QTKD']['cv'].append({
@@ -1076,9 +1139,9 @@ def main():
                     'err': abs(res_cv['avg_pred_old'] - res_cv['actual_pass_rate'])
                 })
                 
-            # 2. PRJ302 CURR
-            co_id_curr = 218
-            coname_curr = courses_map.get(co_id_curr, "PRJ302")
+            # 2. MAN107 CURR
+            co_id_curr = qtkd_curr_course
+            coname_curr = courses_map.get(co_id_curr, "MAN107")
             res_curr = predict_class_pass_rate(cursor, cid, co_id_curr, class_course_seq, excel_data, cname, coname_curr, "QTKD")
             if res_curr['size'] > 0:
                 dashboard_data['QTKD']['curr'].append({
@@ -1127,22 +1190,22 @@ def main():
     k25_mae = mean(k25_cv_errs) if k25_cv_errs else 0.0
     
     with open(md_report_path, 'w', encoding='utf-8') as f:
-        f.write("# BÁO CÁO DỰ BÁO HỌC THUẬT & KIỂM CHỨNG SAI SỐ KHOÁ K24 & K25\n\n")
+        f.write("# BÁO CÁO DỰ BÁO HỌC THUẬT & KIỂM CHỨNG SAI SỐ KHOÁ K24, K25 & QTKD\n\n")
         f.write(f"*Báo cáo được lập tự động ngày {datetime.now().strftime('%d/%m/%Y')} tích hợp chỉ số Ý thức lớp (Peer Pressure Multiplier).*\n\n")
         
         f.write("## 📌 TÓM TẮT ĐÁNH GIÁ SAI SỐ KIỂM CHỨNG (MAE)\n")
-        f.write(f"- **Khóa K24 (Kiểm chứng qua môn Java Web Service)**: MAE = **{k24_mae:.2f}%**\n")
-        f.write(f"- **Khóa K25 (Kiểm chứng qua môn Python)**: MAE = **{k25_mae:.2f}%**\n\n")
+        f.write(f"- **Khóa K24 (Kiểm chứng qua môn AI Integration)**: MAE = **{k24_mae:.2f}%**\n")
+        f.write(f"- **Khóa K25 (Kiểm chứng qua môn Python Web)**: MAE = **{k25_mae:.2f}%**\n\n")
         
         f.write("## 📊 1. CHI TIẾT MÔN KIỂM CHỨNG (ĐỐI CHIẾU DB LỊCH SỬ)\n\n")
         
-        f.write("### 🔹 Khóa K24 - Môn Java Web Service\n\n")
+        f.write("### 🔹 Khóa K24 - Môn AI Integration in Action\n\n")
         f.write("| Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Thực tế DB% | Sai số% |\n")
         f.write("| :--- | :---: | :---: | :---: | :---: | :---: | :---: |\n")
         for c in dashboard_data['KS24']['cv']:
             f.write(f"| {c['class_name']} | {c['size']} | {c['v_class']:.1f}% | {c['mult_env']:.2f} | **{c['pred_old']:.1f}%** | **{c['actual_pass']:.1f}%** | {c['pred_old'] - c['actual_pass']:.1f}% |\n")
             
-        f.write("\n### 🔹 Khóa K25 - Môn Python\n\n")
+        f.write("\n### 🔹 Khóa K25 - Môn Python Web\n\n")
         f.write("| Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Thực tế DB% | Sai số% |\n")
         f.write("| :--- | :---: | :---: | :---: | :---: | :---: | :---: |\n")
         for c in dashboard_data['KS25']['cv']:
@@ -1151,16 +1214,22 @@ def main():
         f.write("\n---\n\n")
         f.write("## 📊 2. DỰ BÁO MÔN HỌC HIỆN TẠI (ÁP DỤNG QUY CHẾ MỚI)\n\n")
         
-        f.write("### 🔹 Khóa K24 - Môn AI Application (Hiện tại)\n\n")
+        f.write("### 🔹 Khóa K24 - Môn Microservices System Design (Hiện tại)\n\n")
         f.write("| Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Dự báo (Quy chế mới)% |\n")
         f.write("| :--- | :---: | :---: | :---: | :---: | :---: |\n")
         for c in dashboard_data['KS24']['curr']:
             f.write(f"| {c['class_name']} | {c['size']} | {c['v_class']:.1f}% | {c['mult_env']:.2f} | **{c['pred_old']:.1f}%** | **{c['pred_new']:.1f}%** |\n")
             
-        f.write("\n### 🔹 Khóa K25 - Môn Python Web (Hiện tại)\n\n")
+        f.write("\n### 🔹 Khóa K25 - Môn Phân tích & thiết kế hệ thống (Hiện tại)\n\n")
         f.write("| Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Dự báo (Quy chế mới)% |\n")
         f.write("| :--- | :---: | :---: | :---: | :---: | :---: |\n")
         for c in dashboard_data['KS25']['curr']:
+            f.write(f"| {c['class_name']} | {c['size']} | {c['v_class']:.1f}% | {c['mult_env']:.2f} | **{c['pred_old']:.1f}%** | **{c['pred_new']:.1f}%** |\n")
+
+        f.write("\n### 🔹 Khóa KS25 QTKD - Môn Quản trị chiến lược MAN107 (Hiện tại)\n\n")
+        f.write("| Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Dự báo (Quy chế mới)% |\n")
+        f.write("| :--- | :---: | :---: | :---: | :---: | :---: |\n")
+        for c in dashboard_data.get('QTKD', {}).get('curr', []):
             f.write(f"| {c['class_name']} | {c['size']} | {c['v_class']:.1f}% | {c['mult_env']:.2f} | **{c['pred_old']:.1f}%** | **{c['pred_new']:.1f}%** |\n")
 
     print("Writing multi-level risk student care list...")
@@ -1168,7 +1237,7 @@ def main():
         f.write("\n\n---\n\n")
         f.write("# DANH SÁCH HỌC VIÊN CẦN CAN THIỆP MÔN HIỆN TẠI (CARE LIST ĐA TẦNG)\n\n")
         f.write("> [!IMPORTANT]\n")
-        f.write("> Danh sách chỉ lọc ra các học viên có nguy cơ trượt của môn học hiện tại (AI Application đối với K24, Python Web đối với K25).\n\n")
+        f.write("> Danh sách lọc các học viên có nguy cơ trượt của môn học hiện tại (Microservices đối với K24, Phân tích thiết kế hệ thống đối với K25, MAN107 đối với QTKD).\n\n")
         
         # Red Risk
         f.write("## 🔴 1. DANH SÁCH NGUY CƠ CAO (BÁO ĐỘNG ĐỎ - CẤM THI / HỌC LỰC YẾU)\n\n")

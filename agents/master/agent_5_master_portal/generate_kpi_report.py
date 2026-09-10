@@ -200,7 +200,7 @@ def get_max_excel_date(workbook, sheets):
                 all_dates.append(parsed)
     return max(all_dates) if all_dates else date(2026, 8, 18)
 
-active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s for k in ['KS24', 'KS25', 'SKL'])]
+active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s for k in ['KS24', 'KS25', 'SKL', 'QTKD'])]
 max_date = get_max_excel_date(wb, active_sheets)
 monday_curr = max_date - timedelta(days=max_date.weekday())
 sunday_curr = monday_curr + timedelta(days=6)
@@ -209,20 +209,20 @@ print(f"Tuần báo cáo hiện tại (Master): {monday_curr} đến {sunday_cur
 
 weekly_groups = {
     'KS25_CNTT_HN': {
-        'classes': ['HN-K25-CNTT1', 'HN-K25-CNTT2', 'HN-K25-CNTT3', 'HN-K25-CNTT4', 'HN-K25-CNTT5', 'HN-K25-CNTT6'],
-        'sheet_curr': 'KS25_Python_Web'
+        'classes': ['HN-K25-CNTT1', 'HN-K25-CNTT2', 'HN-K25-CNTT3', 'HN-K25-CNTT4', 'HN-K25-CNTT5'],
+        'sheet_curr': 'KS25_Phantichthietkehethong' if 'KS25_Phantichthietkehethong' in wb.sheetnames else 'KS25_Python_Web'
     },
     'KS25_CNTT_HCM': {
         'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7', 'HCM-K25-CNTT8'],
-        'sheet_curr': 'KS25_Python_Web'
+        'sheet_curr': 'KS25_Phantichthietkehethong'
     },
     'KS25_QTKD_HN': {
-        'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
-        'sheet_curr': 'KS25_QTKD_BA201'
+        'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2'] if 'KS25_QTKD_MAN107' in wb.sheetnames else ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
+        'sheet_curr': 'KS25_QTKD_MAN107' if 'KS25_QTKD_MAN107' in wb.sheetnames else 'KS25_QTKD_BA201'
     },
     'KS24_CNTT_HN': {
         'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HCM-K24-CNTT1'],
-        'sheet_curr': 'KS24_AI_Intergration'
+        'sheet_curr': 'KS24_AI_Microservice' if 'KS24_AI_Microservice' in wb.sheetnames else ('KS24_AI_Intergration (2)' if 'KS24_AI_Intergration (2)' in wb.sheetnames else 'KS24_AI_Intergration')
     }
 }
 
@@ -325,11 +325,7 @@ for sheet in active_sheets:
             past_vals = defaultdict(list)
             
             for d, metrics in date_vals.items():
-                is_empty_day = True
-                for val in metrics.values():
-                    if val is not None and val != 0.0:
-                        is_empty_day = False
-                        break
+                is_empty_day = not any(val is not None for val in metrics.values())
                 if not is_empty_day:
                     day_scores = [v for v in metrics.values() if v is not None]
                     if monday_curr <= d <= sunday_curr:
@@ -551,6 +547,14 @@ for name, data in sorted(instructors_data.items()):
         strengths = 'Đảm nhiệm giảng dạy các lớp CNTT3 và CNTT5 khối KS24.'
         weaknesses = 'Tỷ lệ chuyên cần và bài tập về nhà của sinh viên ở mức báo động 2 (sinh viên có nền tảng yếu).'
         recommendations = 'Phối hợp với phòng CTSV kéo sinh viên quay lại và triển khai các buổi hỗ trợ kiến thức nền tảng.'
+    elif name == 'Trần Quốc Tuấn':
+        strengths = 'Khởi đầu môn mới Phân tích thiết kế hệ thống tốt tại lớp CNTT6 (vi phạm chỉ 1.75%). Quản lý kỷ luật tác nghiệp chuẩn mực.'
+        weaknesses = 'Tại lớp HCM-K25-CNTT8, so với mốc 0% đầu môn mới, tỷ lệ vi phạm Elearning xuất hiện ngay buổi đầu ở mức 24.24%.'
+        recommendations = 'Cần kiểm soát chặt và chấn chỉnh nề nếp Elearning lớp HCM-K25-CNTT8 ngay trước buổi 2; đôn đốc sinh viên hoàn thành lý thuyết trước khi đến lớp.'
+    elif name == 'Nguyễn Đức Minh':
+        strengths = 'Khởi đầu xuất sắc môn mới Phân tích thiết kế hệ thống tại cả 2 lớp HCM-K25-CNTT5 (0.0% vi phạm tuyệt đối) và HCM-K25-CNTT7 (chỉ 0.85% vi phạm).'
+        weaknesses = 'Không ghi nhận vi phạm nề nếp nghiêm trọng.'
+        recommendations = 'Duy trì phong độ kiểm soát lớp học và nề nếp sinh viên hoàn hảo xuyên suốt toàn bộ môn học.'
     elif name in ['Trịnh Quốc Hai', 'Lương Quốc Tuấn', 'Nguyễn Quảng An', 'Ngọ Văn Quý']:
         strengths = 'Giảng dạy tốt các môn chính khối KS25 CNTT.'
         weaknesses = 'Không kiểm tra lại sau khi đẩy task lên QLDT dẫn đến chấm thi sai về điểm số; triển khai làm PRJ chưa tốt (sinh viên lạm dụng AI, chia file chưa tốt).'
@@ -618,6 +622,24 @@ with open(output_report_path, 'w', encoding='utf-8') as f:
     f.write("> [!NOTE]\n")
     f.write("> Báo cáo này được tổng hợp và phân tích tự động từ các nguồn dữ liệu thực tế: Chỉ số vi phạm lớp học (`PTIT_Chiso.xlsx`), Báo cáo công việc (`daily_logs.txt`), Cơ sở dữ liệu học tập (`qldt.sql`), Tài liệu quy định (`quy_dinh.md`) và Nhật ký đào tạo tuần (`11.04.txt`).\n\n")
     
+    # Check for class size change alerts from cache / agent1
+    size_alerts = []
+    cache_path = "data/processed/classes_metrics_cache.json"
+    if os.path.exists(cache_path):
+        try:
+            with open(cache_path, "r", encoding="utf-8") as cf:
+                size_alerts = json.load(cf).get("size_alerts", [])
+        except Exception:
+            pass
+            
+    if size_alerts:
+        f.write("> [!WARNING]\n")
+        f.write("> **CẢNH BÁO BIẾN ĐỘNG SĨ SỐ LỚP HỌC (CLASS SIZE ALERTS):**\n")
+        f.write("> Phát hiện có sự thay đổi sĩ số trong các lớp học mới cập nhật. Cần đặc biệt lưu ý khi đối chiếu tỷ lệ vi phạm:\n")
+        for sa in size_alerts:
+            f.write(f"> - ⚠️ **{sa['class_raw']}** (Môn: `{sa['sheet']}`): Sĩ số thay đổi từ **{sa['initial_size']}** ➔ **{sa['current_size']}** học viên (Biến động: **{sa['diff']:+d} SV**)\n")
+        f.write("\n\n")
+
     f.write("## 1. Bảng tổng hợp đánh giá KPI theo Phòng ban\n\n")
     
     idx = 1

@@ -5,13 +5,13 @@
     "Khối Ngoại ngữ và kỹ năng mềm",
     "Khối QLCLĐT"
   ],
-  "today_date": "2026-08-26",
+  "today_date": "2026-08-28",
   "personnel": {
     "Lê Thành Ngọc": {
       "group": "Khối QTKD",
-      "reported_days": 2,
-      "expected_days": 3,
-      "hours": 16.5,
+      "reported_days": 4,
+      "expected_days": 5,
+      "hours": 32.5,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Họp giao ban nội bộ Khối Đào tạo' chưa định dạng (gán tạm 30 phút)",
@@ -22,12 +22,6 @@
         "2026-08-26"
       ],
       "assigned_projects": [
-        {
-          "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
-          "pic": "Lê Thành Ngọc",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
         {
           "name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26",
           "pic": "Hoàng Thị Kim Oanh",
@@ -43,16 +37,16 @@
         {
           "name": "[QTKD] SX Tài nguyên học tập K26",
           "pic": "Lê Thành Ngọc",
-          "health": "ON_TRACK",
+          "health": "OFF_TRACK",
           "status": "ACTIVE"
         }
       ]
     },
     "Hoàng Thị Kim Oanh": {
       "group": "Khối QTKD",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 23.75,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 39.75,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Điền báo cáo, họp Giao ban tuần Khối Đào tạo' chưa định dạng (gán tạm 30 phút)",
@@ -118,11 +112,17 @@
         {
           "name": "[QTKD] SX Tài nguyên học tập K26",
           "pic": "Lê Thành Ngọc",
-          "health": "ON_TRACK",
+          "health": "OFF_TRACK",
           "status": "ACTIVE"
         },
         {
           "name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107",
+          "pic": "Hoàng Thị Kim Oanh",
+          "health": "ON_TRACK",
+          "status": "COMPLETED"
+        },
+        {
+          "name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1",
           "pic": "Hoàng Thị Kim Oanh",
           "health": "ON_TRACK",
           "status": "ACTIVE"
@@ -131,16 +131,18 @@
     },
     "Hoàng Thị Hậu": {
       "group": "Khối QTKD",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.0,
-      "completion_rate": 100.0,
+      "reported_days": 4,
+      "expected_days": 5,
+      "hours": 32.0,
+      "completion_rate": 90.0,
       "warning_flags": [
         "Task 'Góp ý chương trình đào tạo kỹ năng bán hàng thực chiến' chưa định dạng (gán tạm 30 phút)",
         "Task 'Nghiên cứu chương trình đào tạo business development' chưa định dạng (gán tạm 30 phút)",
         "Task 'Nghiên cứu Môn quản trị chiến lược ss6' chưa định dạng (gán tạm 30 phút)"
       ],
-      "miss_days": [],
+      "miss_days": [
+        "2026-08-28"
+      ],
       "assigned_projects": [
         {
           "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
@@ -176,15 +178,27 @@
           "name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
           "pic": "Hoàng Thị Hậu",
           "health": "ON_TRACK",
+          "status": "COMPLETED"
+        },
+        {
+          "name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1",
+          "pic": "Hoàng Thị Kim Oanh",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
+          "pic": "Nguyễn Ngọc Vân Khanh",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         }
       ]
     },
     "Đặng Quỳnh Trang": {
       "group": "Khối QTKD",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 22.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 38.0,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Chấm điểm PRJ302 các nhóm intop và cập nhật điểm' chưa định dạng (gán tạm 30 phút)",
@@ -239,16 +253,28 @@
           "name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107",
           "pic": "Hoàng Thị Kim Oanh",
           "health": "ON_TRACK",
+          "status": "COMPLETED"
+        },
+        {
+          "name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1",
+          "pic": "Hoàng Thị Kim Oanh",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
+          "pic": "Nguyễn Ngọc Vân Khanh",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         }
       ]
     },
     "Lê Nhựt Mi": {
       "group": "Khối QTKD",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 19.5,
-      "completion_rate": 90.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 33.0,
+      "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Họp giao ban' chưa định dạng (gán tạm 30 phút)",
         "Task 'Hoàn thiện và điều chỉnh PM Digital marketing' chưa định dạng (gán tạm 30 phút)",
@@ -302,15 +328,27 @@
           "name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
           "pic": "Hoàng Thị Hậu",
           "health": "ON_TRACK",
+          "status": "COMPLETED"
+        },
+        {
+          "name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1",
+          "pic": "Hoàng Thị Kim Oanh",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
+          "pic": "Nguyễn Ngọc Vân Khanh",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         }
       ]
     },
     "Lê Thị Bảo Yến": {
       "group": "Khối QTKD",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 39.0,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Chủ động nghiên cứu thông tin cập nhật tin tức thị trường kinh tế' chưa định dạng (gán tạm 30 phút)",
@@ -360,19 +398,31 @@
           "pic": "Lê Nhựt Mi",
           "health": "ON_TRACK",
           "status": "COMPLETED"
+        },
+        {
+          "name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1",
+          "pic": "Hoàng Thị Kim Oanh",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
+          "pic": "Nguyễn Ngọc Vân Khanh",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
         }
       ]
     },
     "Nguyễn Ngọc Vân Khanh": {
       "group": "Khối QTKD",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 26.25,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 41.75,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Giảng dạy QTKD 2' chưa định dạng (gán tạm 30 phút)",
         "Task 'Giảng dạy QTKD 3' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Thống nhất nội dung ss9 với giảng viên bộ môn' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Làm việc với CVHT về tình hình sinh viên 2 lớp' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -411,15 +461,27 @@
           "pic": "Lê Nhựt Mi",
           "health": "ON_TRACK",
           "status": "COMPLETED"
+        },
+        {
+          "name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1",
+          "pic": "Hoàng Thị Kim Oanh",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
+          "pic": "Nguyễn Ngọc Vân Khanh",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
         }
       ]
     },
     "Nguyễn Thị Hồng Minh": {
       "group": "Khối QTKD",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.5,
-      "completion_rate": 100.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 40.5,
+      "completion_rate": 96.96969696969697,
       "warning_flags": [
         "Task 'Trao đổi, thảo luận nội dung giảng dạy vs GV Business Analysis về Session 09' chưa định dạng (gán tạm 30 phút)",
         "Task 'Trao đổi các vấn đề học tập vs CVHT, TG lớp về tình hình của lớp và báo cáo tình hình lớp' chưa định dạng (gán tạm 30 phút)",
@@ -435,9 +497,9 @@
         },
         {
           "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
-          "pic": "Lê Thành Ngọc",
+          "pic": "Nguyễn Thị Như Quỳnh",
           "health": "ON_TRACK",
-          "status": "COMPLETED"
+          "status": "ACTIVE"
         },
         {
           "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
@@ -479,11 +541,23 @@
           "name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107",
           "pic": "Hoàng Thị Kim Oanh",
           "health": "ON_TRACK",
-          "status": "ACTIVE"
+          "status": "COMPLETED"
         },
         {
           "name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
           "pic": "Hoàng Thị Hậu",
+          "health": "ON_TRACK",
+          "status": "COMPLETED"
+        },
+        {
+          "name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1",
+          "pic": "Hoàng Thị Kim Oanh",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
+          "pic": "Nguyễn Ngọc Vân Khanh",
           "health": "ON_TRACK",
           "status": "ACTIVE"
         }
@@ -491,9 +565,9 @@
     },
     "Nguyễn Thị Như Quỳnh": {
       "group": "Khối QTKD",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 23.25,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 39.25,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Tổng kết nhập điểm thi giữa kỳ 2 - QTKD2 & QTKD3' chưa định dạng (gán tạm 30 phút)",
@@ -504,9 +578,9 @@
       "assigned_projects": [
         {
           "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
-          "pic": "Lê Thành Ngọc",
+          "pic": "Nguyễn Thị Như Quỳnh",
           "health": "ON_TRACK",
-          "status": "COMPLETED"
+          "status": "ACTIVE"
         },
         {
           "name": "QTKD - Các công việc khác",
@@ -554,10 +628,10 @@
     },
     "Triệu Thị Thanh Tâm": {
       "group": "Khối QTKD",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.0,
-      "completion_rate": 82.35294117647058,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 40.0,
+      "completion_rate": 89.65517241379311,
       "warning_flags": [
         "Task 'QTKDDAO-8 Kịch bản giảng dạy 1 ca học (2h) - demo' chưa định dạng (gán tạm 30 phút)",
         "Task 'Xin đến muộn' chưa định dạng (gán tạm 30 phút)",
@@ -567,9 +641,9 @@
       "assigned_projects": [
         {
           "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
-          "pic": "Lê Thành Ngọc",
+          "pic": "Nguyễn Thị Như Quỳnh",
           "health": "ON_TRACK",
-          "status": "COMPLETED"
+          "status": "ACTIVE"
         },
         {
           "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
@@ -618,14 +692,16 @@
     "Trần Minh Cường": {
       "group": "Khối CNTT",
       "reported_days": 0,
-      "expected_days": 3,
+      "expected_days": 5,
       "hours": 0.0,
       "completion_rate": 0.0,
       "warning_flags": [],
       "miss_days": [
         "2026-08-24",
         "2026-08-25",
-        "2026-08-26"
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28"
       ],
       "assigned_projects": [
         {
@@ -639,14 +715,16 @@
     "Hồ Xuân Hùng": {
       "group": "Khối CNTT",
       "reported_days": 0,
-      "expected_days": 3,
+      "expected_days": 5,
       "hours": 0.0,
       "completion_rate": 0.0,
       "warning_flags": [],
       "miss_days": [
         "2026-08-24",
         "2026-08-25",
-        "2026-08-26"
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28"
       ],
       "assigned_projects": [
         {
@@ -683,14 +761,14 @@
     },
     "Trịnh Quốc Hai": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 22.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 38.0,
       "completion_rate": 100.0,
       "warning_flags": [
+        "Task 'giảng dạy session 22 cntt8' chưa định dạng (gán tạm 30 phút)",
         "Task 'họp giao ban khối đào tạo' chưa định dạng (gán tạm 30 phút)",
-        "Task 'tạo 100 câu trắc nghiệm fastapi cho k25 thi cuối môn' chưa định dạng (gán tạm 30 phút)",
-        "Task 'review quizz thi cuối môn k25 fastapi' chưa định dạng (gán tạm 30 phút)"
+        "Task 'chấm bài tập cntt8 session 20+ 21' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -717,14 +795,16 @@
     "Nguyễn Bá Minh Đạo": {
       "group": "Khối CNTT",
       "reported_days": 0,
-      "expected_days": 3,
+      "expected_days": 5,
       "hours": 0.0,
       "completion_rate": 0.0,
       "warning_flags": [],
       "miss_days": [
         "2026-08-24",
         "2026-08-25",
-        "2026-08-26"
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28"
       ],
       "assigned_projects": [
         {
@@ -749,14 +829,14 @@
     },
     "Nguyễn Công Hưởng": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 29.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 45.0,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Trông thi hackathon môn AI Integration lớp K24-CNTT4' chưa định dạng (gán tạm 30 phút)",
         "Task 'Làm 9 đề hackathon PTIT Microservices' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Chăm sóc sinh viên K24-CNTT2' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Chấm bài tập lớp JB-IOC-PTHB251027,JB-IOC-PTHB251229  ,JB-IOC-PTHB260316,JB-IOC-PTHB260515' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -785,12 +865,6 @@
           "status": "ACTIVE"
         },
         {
-          "name": "Triển khai môn Dự án K24",
-          "pic": "Hồ Xuân Hùng",
-          "health": "OFF_TRACK",
-          "status": "ACTIVE"
-        },
-        {
           "name": "[KS24]_IT213_AI Intergration_v2",
           "pic": "Nguyễn Bá Minh Đạo",
           "health": "ON_TRACK",
@@ -805,23 +879,25 @@
         {
           "name": "[KS24]_IT212_Microservice_v2",
           "pic": "Phạm Tuấn Bình",
-          "health": "OFF_TRACK",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         }
       ]
     },
     "Phạm Tuấn Bình": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.0,
+      "reported_days": 4,
+      "expected_days": 5,
+      "hours": 32.0,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task '[Trông thi] - Trông thi Hackathon lớp HN-KS24-CNTT4' chưa định dạng (gán tạm 30 phút)",
-        "Task '[Review] - Học liệu môn học microservice' chưa định dạng (gán tạm 30 phút)",
+        "Task '[Chấm thi] - Chấm thi hackathon lớp hn-ks24-cntt3' chưa định dạng (gán tạm 30 phút)",
         "Task '[Họp chuyên môn] - Họp chuyên môn về nội dung phân chia công việc sắp tới' chưa định dạng (gán tạm 30 phút)"
       ],
-      "miss_days": [],
+      "miss_days": [
+        "2026-08-28"
+      ],
       "assigned_projects": [
         {
           "name": "[K24-CNTT] Sản xuất tài nguyên môn IT212 - AI Application in Action",
@@ -838,16 +914,16 @@
         {
           "name": "[KS24]_IT212_Microservice_v2",
           "pic": "Phạm Tuấn Bình",
-          "health": "OFF_TRACK",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         }
       ]
     },
     "Mai Xuân Chinh": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.5,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 36.5,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Coi thi lớp cntt1' chưa định dạng (gán tạm 30 phút)",
@@ -884,14 +960,14 @@
     },
     "Đinh Thành Nam": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 40.5,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task '[Bàn giao app phụ huynh]' chưa định dạng (gán tạm 30 phút)",
-        "Task '[Quizz cuối môn Devops] - 100 câu quizz cuối môn Devops' chưa định dạng (gán tạm 30 phút)",
-        "Task '[SRS SS13 Devops] - xây dựng SRS session 13 và dự án mẫu (base project)' chưa định dạng (gán tạm 30 phút)"
+        "Task '[Chấm bài BRSE] Rà soát lại chấm bài BRSE lớp tháng 6 đầy đủ nhận xét' chưa định dạng (gán tạm 30 phút)",
+        "Task '[Chấm bài TSU] 2 lớp' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -935,12 +1011,14 @@
     },
     "Bùi Thanh Hải": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 20.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 36.0,
       "completion_rate": 100.0,
       "warning_flags": [
-        "Task 'Chấm điểm môn AI Integration in Action - HCM-KS24-CNTT1' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Giảng dạy HN-K24-CNTT4, AI Intergration In Action - SS10' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Giảng dạy HN-K24-CNTT2, AI Intergration In Action - SS10' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Giảng dạy HN-K24-CNTT3 AI Intergration In Action - SS10' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -966,14 +1044,14 @@
     },
     "Nguyễn Quảng An": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 40.0,
       "completion_rate": 100.0,
       "warning_flags": [
-        "Task 'Kiểm tra tiến độ project lớp CNTT3' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Kiểm tra tiến độ project lớp CNTT4' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Kiểm tra tiến độ project lớp CNTT6' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Đăng tải học liệu' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Đăng tải học liệu' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Đăng tải học liệu' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -993,16 +1071,18 @@
     },
     "Lương Quốc Tuấn": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 25.0,
+      "reported_days": 4,
+      "expected_days": 5,
+      "hours": 33.0,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Quay Video SS18 , SS20' chưa định dạng (gán tạm 30 phút)",
         "Task 'Dạy , Check Tiến Độ Buổi 4 CNTT 1' chưa định dạng (gán tạm 30 phút)",
         "Task 'Dạy , Check Tiến Độ Buổi 4 CNTT 5' chưa định dạng (gán tạm 30 phút)"
       ],
-      "miss_days": [],
+      "miss_days": [
+        "2026-08-28"
+      ],
       "assigned_projects": [
         {
           "name": "[HN-KS25-CNTT] giảng dạy",
@@ -1026,9 +1106,9 @@
     },
     "Lâm Tùng Dương": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.5,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 40.75,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Sửa đổi format bài đọc, quiz, câu hỏi tự luận bám sát nội dung bài đọc - theo format mới từ anh Quý' chưa định dạng (gán tạm 30 phút)",
@@ -1053,14 +1133,14 @@
     },
     "Ngọ Văn Quý": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.5,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 46.5,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Xây dựng tài nguyên học tập môn Python cơ bản' chưa định dạng (gán tạm 30 phút)",
         "Task 'Xây dựng PM môn lập trình C, Python và JavaScript' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Họp review PM 3 môn lập trình C, Python và JavaScript' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Chuyển đổi UI khảo thí sang LMS AI' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -1074,9 +1154,9 @@
     },
     "Nguyễn Xuân Bách": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.75,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 35.75,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Làm báo cáo họp giao ban đào tạo' chưa định dạng (gán tạm 30 phút)",
@@ -1088,14 +1168,14 @@
     },
     "Lại Trung Lâm": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 29.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 46.5,
       "completion_rate": 100.0,
       "warning_flags": [
-        "Task 'đẩy lên lms môn it101 các bài 1 2 4 6 8 10 bài đọc, quizz, câu hỏi tự luận ( và sửa format)' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Check tiến độ dự án các lớp CNTT1,2,5 trên lớp' chưa định dạng (gán tạm 30 phút)",
-        "Task 'format lại quizz session cuối giờ môn IT101' chưa định dạng (gán tạm 30 phút)"
+        "Task 'chấm bài thi  đợt thi bổ sung đánh giá năng lực cntt' chưa định dạng (gán tạm 30 phút)",
+        "Task 'chấm bài record các lớp 1 2 5 bài tập về nhà' chưa định dạng (gán tạm 30 phút)",
+        "Task 'đẩy lên lms môn it101 các bài 1 2 4 6 8 10 bài đọc, quizz, câu hỏi tự luận ( và sửa format)' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -1116,7 +1196,7 @@
     "Phạm Ngọc Kiên": {
       "group": "Khối CNTT",
       "reported_days": 3,
-      "expected_days": 3,
+      "expected_days": 5,
       "hours": 24.0,
       "completion_rate": 100.0,
       "warning_flags": [
@@ -1124,7 +1204,10 @@
         "Task 'Upload BTVN môn nhập môn CNTT (ảnh, format chữ ...) lên lms (Hoàn thiện 13 session)' chưa định dạng (gán tạm 30 phút)",
         "Task 'Call giải đáp sinh viên làm dự án https://prnt.sc/pwwWkNJU0U0_' chưa định dạng (gán tạm 30 phút)"
       ],
-      "miss_days": [],
+      "miss_days": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
       "assigned_projects": [
         {
           "name": "[HN-KS25-CNTT] giảng dạy",
@@ -1142,14 +1225,14 @@
     },
     "Đặng Minh Luân": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 18.75,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 29.25,
       "completion_rate": 100.0,
       "warning_flags": [
-        "Task 'Hỗ trợ chấm bài tập + vấn đáp project cuối môn FastApi lớp CNTT6' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ chấm bài tập + vấn đáp project cuối môn FastApi lớp CNTT7' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Giải đề project cuối môn tiết 4 FastApi' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Hỗ trợ giám sát thi kết thúc môn FastAPI HCM-KS25-CNTT6+CNTT7' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Hỗ trợ sinh viên CNTT6 thi vấn đáp online' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Chăm sóc sinh viên CNTT7' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -1163,16 +1246,17 @@
     },
     "Lê Hà Thanh Sang": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 18.0,
+      "reported_days": 4,
+      "expected_days": 5,
+      "hours": 26.5,
       "completion_rate": 100.0,
       "warning_flags": [
-        "Task 'Kiểm tra task project lớp HCM-KS25-CNTT5' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Kiểm tra task project lớp HCM-KS25-CNTT8' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ kỹ thuật sinh viên làm project lớp HCM-KS25-CNTT5' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Kiểm tra task lớp HCM-KS25-CNTT5' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Kiểm tra task lớp HCM-KS25-CNTT8' chưa định dạng (gán tạm 30 phút)"
       ],
-      "miss_days": [],
+      "miss_days": [
+        "2026-08-28"
+      ],
       "assigned_projects": [
         {
           "name": "[KS25]_IT303_Phân tích thiết kế hệ thống",
@@ -1184,16 +1268,18 @@
     },
     "Lưu Hoàng Xuân Nguyên": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 16.5,
+      "reported_days": 4,
+      "expected_days": 5,
+      "hours": 23.25,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Coi thi Hackathon KS24' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ Triển khai project cuối môn CNTT' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ sinh viên' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Hỗ trợ sinh viên' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Báo cáo ghi nhận các vấn đề đào tạo' chưa định dạng (gán tạm 30 phút)"
       ],
-      "miss_days": [],
+      "miss_days": [
+        "2026-08-28"
+      ],
       "assigned_projects": [
         {
           "name": "[KS25]_IT304_Agile/Scrum",
@@ -1211,14 +1297,14 @@
     },
     "Nguyễn Đức Minh": {
       "group": "Khối CNTT",
-      "reported_days": 2,
-      "expected_days": 3,
-      "hours": 10.0,
+      "reported_days": 4,
+      "expected_days": 5,
+      "hours": 18.75,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Hỗ trợ giám sát thi TN + TL lớp KS24 CNTT1' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ giảng viên trong tiết lý thuyết lớp KS24 CNTT1' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ kiểm tra tiến độ project lớp KS25 CNTT6 thầy Tuấn yêu cầu hỗ trợ' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Chuẩn bị kiến thức session 10 môn AI Integration in Action' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Chuẩn bị kiến thức session 11 môn AI Integration in Action' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [
         "2026-08-26"
@@ -1227,21 +1313,21 @@
         {
           "name": "[KS24]_IT212_Microservice_v2",
           "pic": "Phạm Tuấn Bình",
-          "health": "OFF_TRACK",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         }
       ]
     },
     "Nguyễn Ngọc Sơn": {
       "group": "Khối CNTT",
-      "reported_days": 2,
-      "expected_days": 3,
-      "hours": 11.75,
+      "reported_days": 4,
+      "expected_days": 5,
+      "hours": 18.75,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Chăm sóc sinh viên HCM-K24-CNTT1' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ mini project lớp HCM-K25-CNTT5' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ check task mini project lớp HCM-K25-CNTT7 theo yêu cầu hỗ trợ của thầy Tuấn' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Chấm bài lớp HCM-K24-CNTT1 session 10' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Chấm bài lớp HCM-K24-CNTT1 session 11' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [
         "2026-08-24"
@@ -1257,9 +1343,9 @@
     },
     "Phạm Viết Hùng": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 20.5,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 35.75,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Họp trao đổi HCM với thầy Bách + Họp riêng thầy Đạo' chưa định dạng (gán tạm 30 phút)",
@@ -1271,21 +1357,21 @@
         {
           "name": "[KS24]_IT212_Microservice_v2",
           "pic": "Phạm Tuấn Bình",
-          "health": "OFF_TRACK",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         }
       ]
     },
     "Phan Ngọc Tài": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 18.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 29.25,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Coi thi Hackathon - AI Integration in Action cho lớp HCM-KS24-CNTT1' chưa định dạng (gán tạm 30 phút)",
         "Task 'Tổng hợp và báo cáo ca thi' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ kiểm tra tiến độ project lớp CNTT5' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Hỗ trợ sinh viên' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -1299,14 +1385,14 @@
     },
     "Trần Quốc Tuấn": {
       "group": "Khối CNTT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 21.75,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 34.75,
       "completion_rate": 100.0,
       "warning_flags": [
-        "Task 'Đứng lớp buổi 3 project CNTT7' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Đứng lớp buổi 3 project CNTT6' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Hỗ trợ thêm 2 tiếng cho lớp CNTT6 về buổi project' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Họp trao đổi điểm r point và chỉ số k25 với thầy Bách' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Hỗ trợ sinh viên 2 lớp thêm về dự án, fix bug' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Fill task lên quản lý đào tạo' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -1320,10 +1406,10 @@
     },
     "Giáp Thị Minh Hằng": {
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.0,
-      "completion_rate": 93.33333333333333,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 37.0,
+      "completion_rate": 90.0,
       "warning_flags": [
         "Task 'PTITQUAN-33 Giao ban đầu tuần' chưa định dạng (gán tạm 30 phút)",
         "UNVERIFIED: Task 'PTITQUAN-33 Giao ban đầu tuần' khai báo xong nhưng trên Worklane chưa DONE.",
@@ -1335,10 +1421,10 @@
           "name": "🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật",
           "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
-          "status": "ACTIVE"
+          "status": "COMPLETED"
         },
         {
-          "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật",
+          "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25",
           "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
           "status": "ACTIVE"
@@ -1353,11 +1439,17 @@
           "name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101",
           "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
-          "status": "ACTIVE"
+          "status": "COMPLETED"
         },
         {
           "name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project",
           "pic": "Lê Thị Đỏ",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "[PTIT-JPN] Orientation Week 2026",
+          "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
           "status": "ACTIVE"
         }
@@ -1365,9 +1457,9 @@
     },
     "Lò Thị Ngọc Anh": {
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 32.5,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 53.5,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'REXPENGL-97 [RE] PHỎNG VẤN, DUYỆT CV VÀ FEEDBACK GVTA/TGTA' chưa định dạng (gán tạm 30 phút)",
@@ -1405,14 +1497,16 @@
     "Ngô Quang Huấn": {
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "reported_days": 0,
-      "expected_days": 3,
+      "expected_days": 5,
       "hours": 0.0,
       "completion_rate": 0.0,
       "warning_flags": [],
       "miss_days": [
         "2026-08-24",
         "2026-08-25",
-        "2026-08-26"
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28"
       ],
       "assigned_projects": [
         {
@@ -1437,14 +1531,14 @@
     },
     "Lê Thị Đỏ": {
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.0,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 40.0,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'PTITSAN3-44 Tải video từ folder JPN101 lên Youtube ngoại ngữ' chưa định dạng (gán tạm 30 phút)",
         "Task 'PTITSAN3-45 Chuyển file flashcard sang từng folder tiết tương ứng' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Tạo chương học từ chương 17 đến chương 48 trên LMS' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Chuẩn bị slide cho tiết dạy demo tìm hiểu bảng chữ Hiragana' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
       "assigned_projects": [
@@ -1452,10 +1546,10 @@
           "name": "🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật",
           "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
-          "status": "ACTIVE"
+          "status": "COMPLETED"
         },
         {
-          "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật",
+          "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25",
           "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
           "status": "ACTIVE"
@@ -1470,7 +1564,7 @@
           "name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101",
           "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
-          "status": "ACTIVE"
+          "status": "COMPLETED"
         },
         {
           "name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project",
@@ -1482,10 +1576,10 @@
     },
     "Nguyễn Thị Tươi": {
       "group": "Khối QLCLĐT",
-      "reported_days": 2,
-      "expected_days": 3,
-      "hours": 16.0,
-      "completion_rate": 62.5,
+      "reported_days": 4,
+      "expected_days": 5,
+      "hours": 31.75,
+      "completion_rate": 50.0,
       "warning_flags": [
         "Task 'Xếp TKB lớp BA tháng 8 & cập nhật thông tin dữ liệu' chưa định dạng (gán tạm 30 phút)",
         "Task 'Rà soát tình trạng SV -> Chốt ds SV thực học' chưa định dạng (gán tạm 30 phút)",
@@ -1511,9 +1605,9 @@
     },
     "Nguyễn Huyền Trang": {
       "group": "Khối QLCLĐT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 23.75,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 40.0,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Tổng hợp số liệu và Làm báo cáo ĐGNL bổ sung Lần 1' chưa định dạng (gán tạm 30 phút)",
@@ -1538,10 +1632,10 @@
     },
     "Trần Thị Mỹ Phước": {
       "group": "Khối QLCLĐT",
-      "reported_days": 3,
-      "expected_days": 3,
-      "hours": 24.0,
-      "completion_rate": 94.44444444444444,
+      "reported_days": 5,
+      "expected_days": 5,
+      "hours": 40.0,
+      "completion_rate": 96.7741935483871,
       "warning_flags": [
         "Task 'Điều chỉnh quy định đào tạo, quy định khảo thí, quy định CTSV theo nội dung và cơ cấu mới' chưa định dạng (gán tạm 30 phút)",
         "Task 'Phối hợp trao đổi các thông tin đầu mối để viết quy định' chưa định dạng (gán tạm 30 phút)",
@@ -1585,9 +1679,9 @@
     },
     {
       "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
-      "pic": "Lê Thành Ngọc",
+      "pic": "Nguyễn Thị Như Quỳnh",
       "health": "ON_TRACK",
-      "status": "COMPLETED"
+      "status": "ACTIVE"
     },
     {
       "name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26",
@@ -1611,7 +1705,7 @@
       "name": "🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật",
       "pic": "Giáp Thị Minh Hằng",
       "health": "ON_TRACK",
-      "status": "ACTIVE"
+      "status": "COMPLETED"
     },
     {
       "name": "🔵 [RE] ENGLISH EXAMINATION",
@@ -1632,7 +1726,7 @@
       "status": "COMPLETED"
     },
     {
-      "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật",
+      "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25",
       "pic": "Giáp Thị Minh Hằng",
       "health": "ON_TRACK",
       "status": "ACTIVE"
@@ -1772,7 +1866,7 @@
     {
       "name": "[KS24]_IT212_Microservice_v2",
       "pic": "Phạm Tuấn Bình",
-      "health": "OFF_TRACK",
+      "health": "ON_TRACK",
       "status": "ACTIVE"
     },
     {
@@ -1785,7 +1879,7 @@
       "name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101",
       "pic": "Giáp Thị Minh Hằng",
       "health": "ON_TRACK",
-      "status": "ACTIVE"
+      "status": "COMPLETED"
     },
     {
       "name": "[QTKDS] Hành trình trải nghiệm sinh viên",
@@ -1808,24 +1902,42 @@
     {
       "name": "[QTKD] SX Tài nguyên học tập K26",
       "pic": "Lê Thành Ngọc",
-      "health": "ON_TRACK",
+      "health": "OFF_TRACK",
       "status": "ACTIVE"
     },
     {
       "name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107",
       "pic": "Hoàng Thị Kim Oanh",
       "health": "ON_TRACK",
-      "status": "ACTIVE"
+      "status": "COMPLETED"
     },
     {
       "name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
       "pic": "Hoàng Thị Hậu",
       "health": "ON_TRACK",
-      "status": "ACTIVE"
+      "status": "COMPLETED"
     },
     {
       "name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project",
       "pic": "Lê Thị Đỏ",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1",
+      "pic": "Hoàng Thị Kim Oanh",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "[PTIT-JPN] Orientation Week 2026",
+      "pic": "Giáp Thị Minh Hằng",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
+      "pic": "Nguyễn Ngọc Vân Khanh",
       "health": "ON_TRACK",
       "status": "ACTIVE"
     }
@@ -1836,21 +1948,21 @@
       "3": 0,
       "4": 1,
       "5": 0,
-      "6": 0
+      "6": 1
     },
     "Khối CNTT": {
       "2": 4,
       "3": 3,
       "4": 4,
-      "5": 0,
-      "6": 0
+      "5": 4,
+      "6": 8
     },
     "Khối Ngoại ngữ và kỹ năng mềm": {
       "2": 1,
       "3": 1,
       "4": 1,
-      "5": 0,
-      "6": 0
+      "5": 1,
+      "6": 1
     },
     "Khối QLCLĐT": {
       "2": 1,

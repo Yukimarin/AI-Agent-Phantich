@@ -48,6 +48,8 @@ def find_target_sheet(coname, cname, sheetnames):
         'python web': 'KS25_Python_Web',
         'fastapi': 'KS25_Python_Web',
         'dịch vụ web': 'KS25_Python_Web',
+        'microservice': 'KS24_AI_Intergration (2)',
+        'microservices': 'KS24_AI_Intergration (2)',
         'kỹ năng': 'SKL'
     }
     

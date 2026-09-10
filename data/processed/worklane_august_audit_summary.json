@@ -1,0 +1,5234 @@
+{
+  "audit_period": "2026-08-01 to 2026-08-31",
+  "total_workdays": 20,
+  "workdays": [
+    "2026-08-03",
+    "2026-08-04",
+    "2026-08-05",
+    "2026-08-06",
+    "2026-08-07",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-28"
+  ],
+  "staff_daily_report_audit": {
+    "nguyễn bá minh đạo": {
+      "name": "Nguyễn Bá Minh Đạo",
+      "group": "Khối CNTT",
+      "campus": "HCM",
+      "campus_name": "Cơ sở Hồ Chí Minh",
+      "role": "Leader",
+      "rank": "5",
+      "expected_days_count": 20,
+      "reported_days_count": 0,
+      "violations_count": 20,
+      "missing_days": [
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [],
+      "compliance_rate": 0.0
+    },
+    "lê hà thanh sang": {
+      "name": "Lê Hà Thanh Sang",
+      "group": "Khối CNTT",
+      "campus": "HCM",
+      "campus_name": "Cơ sở Hồ Chí Minh",
+      "role": "Giảng viên",
+      "rank": "4",
+      "expected_days_count": 20,
+      "reported_days_count": 17,
+      "violations_count": 3,
+      "missing_days": [
+        "2026-08-17",
+        "2026-08-19",
+        "2026-08-28"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 85.0
+    },
+    "trần quốc tuấn": {
+      "name": "Trần Quốc Tuấn",
+      "group": "Khối CNTT",
+      "campus": "HCM",
+      "campus_name": "Cơ sở Hồ Chí Minh",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-04"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 95.0
+    },
+    "nguyễn đức minh": {
+      "name": "Nguyễn Đức Minh",
+      "group": "Khối CNTT",
+      "campus": "HCM",
+      "campus_name": "Cơ sở Hồ Chí Minh",
+      "role": "Trợ giảng thử việc",
+      "rank": "N/A",
+      "expected_days_count": 20,
+      "reported_days_count": 18,
+      "violations_count": 2,
+      "missing_days": [
+        "2026-08-19",
+        "2026-08-26"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 90.0
+    },
+    "đặng minh luân": {
+      "name": "Đặng Minh Luân",
+      "group": "Khối CNTT",
+      "campus": "HCM",
+      "campus_name": "Cơ sở Hồ Chí Minh",
+      "role": "Trợ giảng thử việc",
+      "rank": "N/A",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 100.0
+    },
+    "lưu hoàng xuân nguyên": {
+      "name": "Lưu Hoàng Xuân Nguyên",
+      "group": "Khối CNTT",
+      "campus": "HCM",
+      "campus_name": "Cơ sở Hồ Chí Minh",
+      "role": "Trợ giảng",
+      "rank": "2",
+      "expected_days_count": 20,
+      "reported_days_count": 12,
+      "violations_count": 8,
+      "missing_days": [
+        "2026-08-05",
+        "2026-08-07",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-28"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [],
+      "compliance_rate": 60.0
+    },
+    "phan ngọc tài": {
+      "name": "Phan Ngọc Tài",
+      "group": "Khối CNTT",
+      "campus": "HCM",
+      "campus_name": "Cơ sở Hồ Chí Minh",
+      "role": "Trợ giảng thử việc",
+      "rank": "N/A",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "compliance_rate": 100.0
+    },
+    "nguyễn ngọc sơn": {
+      "name": "Nguyễn Ngọc Sơn",
+      "group": "Khối CNTT",
+      "campus": "HCM",
+      "campus_name": "Cơ sở Hồ Chí Minh",
+      "role": "Trợ giảng thử việc",
+      "rank": "N/A",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-24"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [],
+      "compliance_rate": 95.0
+    },
+    "phạm viết hùng": {
+      "name": "Phạm Viết Hùng",
+      "group": "Khối CNTT",
+      "campus": "HCM",
+      "campus_name": "Cơ sở Hồ Chí Minh",
+      "role": "Trợ giảng",
+      "rank": "2",
+      "expected_days_count": 20,
+      "reported_days_count": 18,
+      "violations_count": 2,
+      "missing_days": [
+        "2026-08-10",
+        "2026-08-21"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-09",
+        "2026-08-22"
+      ],
+      "compliance_rate": 90.0
+    },
+    "hồ xuân hùng": {
+      "name": "Hồ Xuân Hùng",
+      "group": "Khối CNTT",
+      "campus": "HN-NT",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Leader",
+      "rank": "5",
+      "expected_days_count": 20,
+      "reported_days_count": 3,
+      "violations_count": 17,
+      "missing_days": [
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [],
+      "compliance_rate": 15.0
+    },
+    "lâm tùng dương": {
+      "name": "Lâm Tùng Dương",
+      "group": "Khối CNTT",
+      "campus": "HN-NT",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [],
+      "compliance_rate": 100.0
+    },
+    "lương quốc tuấn": {
+      "name": "Lương Quốc Tuấn",
+      "group": "Khối CNTT",
+      "campus": "HN-NT",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 15,
+      "violations_count": 5,
+      "missing_days": [
+        "2026-08-04",
+        "2026-08-07",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-28"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 75.0
+    },
+    "ngọ văn quý": {
+      "name": "Ngọ Văn Quý",
+      "group": "Khối CNTT",
+      "campus": "HN-NT",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "4",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-14"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-23",
+        "2026-08-30"
+      ],
+      "compliance_rate": 95.0
+    },
+    "nguyễn quảng an": {
+      "name": "Nguyễn Quảng An",
+      "group": "Khối CNTT",
+      "campus": "HN-NT",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "4",
+      "expected_days_count": 20,
+      "reported_days_count": 14,
+      "violations_count": 6,
+      "missing_days": [
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-12",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-20"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 70.0
+    },
+    "lại trung lâm": {
+      "name": "Lại Trung Lâm",
+      "group": "Khối CNTT",
+      "campus": "HN-NT",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Trợ giảng",
+      "rank": "2",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-06"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 95.0
+    },
+    "phạm ngọc kiên": {
+      "name": "Phạm Ngọc Kiên",
+      "group": "Khối CNTT",
+      "campus": "HN-NT",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Trợ giảng",
+      "rank": "2",
+      "expected_days_count": 20,
+      "reported_days_count": 17,
+      "violations_count": 3,
+      "missing_days": [
+        "2026-08-13",
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 85.0
+    },
+    "trịnh quốc hai": {
+      "name": "Trịnh Quốc Hai",
+      "group": "Khối CNTT",
+      "campus": "HN-HPC",
+      "campus_name": "Hà Nội (HPC)",
+      "role": "Giảng viên",
+      "rank": "4",
+      "expected_days_count": 20,
+      "reported_days_count": 18,
+      "violations_count": 2,
+      "missing_days": [
+        "2026-08-14",
+        "2026-08-21"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 90.0
+    },
+    "bùi thanh hải": {
+      "name": "Bùi Thanh Hải",
+      "group": "Khối CNTT",
+      "campus": "HN-HPC",
+      "campus_name": "Hà Nội (HPC)",
+      "role": "Giảng viên",
+      "rank": "5",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-17"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [],
+      "compliance_rate": 95.0
+    },
+    "nguyễn xuân bách": {
+      "name": "Nguyễn Xuân Bách",
+      "group": "Khối CNTT",
+      "campus": "HN-HPC",
+      "campus_name": "Hà Nội (HPC)",
+      "role": "Giảng viên",
+      "rank": "4",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 100.0
+    },
+    "phạm tuấn bình": {
+      "name": "Phạm Tuấn Bình",
+      "group": "Khối CNTT",
+      "campus": "HN-HPC",
+      "campus_name": "Hà Nội (HPC)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-28"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 95.0
+    },
+    "nguyễn công hưởng": {
+      "name": "Nguyễn Công Hưởng",
+      "group": "Khối CNTT",
+      "campus": "HN-HPC",
+      "campus_name": "Hà Nội (HPC)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-21"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 95.0
+    },
+    "đinh thành nam": {
+      "name": "Đinh Thành Nam",
+      "group": "Khối CNTT",
+      "campus": "HN-HPC",
+      "campus_name": "Hà Nội (HPC)",
+      "role": "Trợ giảng",
+      "rank": "2",
+      "expected_days_count": 20,
+      "reported_days_count": 16,
+      "violations_count": 4,
+      "missing_days": [
+        "2026-08-06",
+        "2026-08-13",
+        "2026-08-18",
+        "2026-08-20"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 80.0
+    },
+    "mai xuân chinh": {
+      "name": "Mai Xuân Chinh",
+      "group": "Khối CNTT",
+      "campus": "HN-HPC",
+      "campus_name": "Hà Nội (HPC)",
+      "role": "Trợ giảng",
+      "rank": "2",
+      "expected_days_count": 20,
+      "reported_days_count": 18,
+      "violations_count": 2,
+      "missing_days": [
+        "2026-08-06",
+        "2026-08-13"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 90.0
+    },
+    "trần minh cường": {
+      "name": "Trần Minh Cường",
+      "group": "Khối CNTT",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Leader chung)",
+      "role": "Leader",
+      "rank": "5",
+      "expected_days_count": 19,
+      "reported_days_count": 0,
+      "violations_count": 19,
+      "missing_days": [
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "approved_leaves": [
+        "2026-08-14"
+      ],
+      "extra_reports": [],
+      "compliance_rate": 0.0
+    },
+    "hoàng thị kim oanh": {
+      "name": "Hoàng Thị Kim Oanh",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Leader",
+      "rank": "5",
+      "expected_days_count": 20,
+      "reported_days_count": 17,
+      "violations_count": 3,
+      "missing_days": [
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-21"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 85.0
+    },
+    "hoàng thị hậu": {
+      "name": "Hoàng Thị Hậu",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "5",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-28"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 95.0
+    },
+    "đặng quỳnh trang": {
+      "name": "Đặng Quỳnh Trang",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 17,
+      "violations_count": 3,
+      "missing_days": [
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 85.0
+    },
+    "lê thành ngọc": {
+      "name": "Lê Thành Ngọc",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 12,
+      "violations_count": 8,
+      "missing_days": [
+        "2026-08-03",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-13",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-26"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 60.0
+    },
+    "lê nhựt mi": {
+      "name": "Lê Nhựt Mi",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 100.0
+    },
+    "lê thị bảo yến": {
+      "name": "Lê Thị Bảo Yến",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 100.0
+    },
+    "nguyễn ngọc vân khanh": {
+      "name": "Nguyễn Ngọc Vân Khanh",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 19,
+      "reported_days_count": 19,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [
+        "2026-08-12"
+      ],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 100.0
+    },
+    "nguyễn thị hồng minh": {
+      "name": "Nguyễn Thị Hồng Minh",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 100.0
+    },
+    "nguyễn thị như quỳnh": {
+      "name": "Nguyễn Thị Như Quỳnh",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Trợ giảng",
+      "rank": "2",
+      "expected_days_count": 19,
+      "reported_days_count": 16,
+      "violations_count": 3,
+      "missing_days": [
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07"
+      ],
+      "approved_leaves": [
+        "2026-08-10"
+      ],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 84.2
+    },
+    "triệu thị thanh tâm": {
+      "name": "Triệu Thị Thanh Tâm",
+      "group": "Khối QTKD",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Ngọc Trục)",
+      "role": "Trợ giảng",
+      "rank": "2",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 100.0
+    },
+    "giáp thị minh hằng": {
+      "name": "Giáp Thị Minh Hằng",
+      "group": "Khối Ngoại ngữ & KNM",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Tiếng Nhật)",
+      "role": "Giảng viên",
+      "rank": "5",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-20"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 95.0
+    },
+    "lê thị đỏ": {
+      "name": "Lê Thị Đỏ",
+      "group": "Khối Ngoại ngữ & KNM",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Tiếng Nhật)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 100.0
+    },
+    "lò thị ngọc anh": {
+      "name": "Lò Thị Ngọc Anh",
+      "group": "Khối Ngoại ngữ & KNM",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+      "role": "Giảng viên",
+      "rank": "5",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-03"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22",
+        "2026-08-31"
+      ],
+      "compliance_rate": 95.0
+    },
+    "ngô quang huấn": {
+      "name": "Ngô Quang Huấn",
+      "group": "Khối Ngoại ngữ & KNM",
+      "campus": "HN",
+      "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+      "role": "Giảng viên",
+      "rank": "3",
+      "expected_days_count": 20,
+      "reported_days_count": 8,
+      "violations_count": 12,
+      "missing_days": [
+        "2026-08-04",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [],
+      "compliance_rate": 40.0
+    },
+    "nguyễn thị tươi": {
+      "name": "Nguyễn Thị Tươi",
+      "group": "Khối QLCLĐT",
+      "campus": "HN",
+      "campus_name": "Hà Nội",
+      "role": "Leader",
+      "rank": "N/A",
+      "expected_days_count": 19,
+      "reported_days_count": 17,
+      "violations_count": 2,
+      "missing_days": [
+        "2026-08-04",
+        "2026-08-24"
+      ],
+      "approved_leaves": [
+        "2026-08-13"
+      ],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 89.5
+    },
+    "nguyễn huyền trang": {
+      "name": "Nguyễn Huyền Trang",
+      "group": "Khối QLCLĐT",
+      "campus": "HN",
+      "campus_name": "Hà Nội",
+      "role": "Giáo vụ",
+      "rank": "N/A",
+      "expected_days_count": 20,
+      "reported_days_count": 19,
+      "violations_count": 1,
+      "missing_days": [
+        "2026-08-21"
+      ],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 95.0
+    },
+    "trần thị mỹ phước": {
+      "name": "Trần Thị Mỹ Phước",
+      "group": "Khối QLCLĐT",
+      "campus": "HCM",
+      "campus_name": "Hồ Chí Minh",
+      "role": "Giáo vụ",
+      "rank": "N/A",
+      "expected_days_count": 20,
+      "reported_days_count": 20,
+      "violations_count": 0,
+      "missing_days": [],
+      "approved_leaves": [],
+      "extra_reports": [
+        "2026-08-22"
+      ],
+      "compliance_rate": 100.0
+    }
+  },
+  "project_audit": [
+    {
+      "key": "SANXUAT",
+      "name": "[HN-KS25-CNTT]Sản xuất tài nguyên Python Web",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Trịnh Quốc Hai",
+      "total_issues": 35,
+      "completed_issues": 11,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "SXHLDU",
+      "name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Kim Oanh",
+      "total_issues": 10,
+      "completed_issues": 10,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "K24CSAN2",
+      "name": "[K24-CNTT] Sản xuất tài nguyên môn IT212 - AI Application in Action",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Hồ Xuân Hùng",
+      "total_issues": 61,
+      "completed_issues": 61,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "CAULAC",
+      "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Lê Thành Ngọc",
+      "total_issues": 7,
+      "completed_issues": 7,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "RASOAT",
+      "name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Kim Oanh",
+      "total_issues": 4,
+      "completed_issues": 4,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDSO",
+      "name": "QTKD - Các công việc khác",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Kim Oanh",
+      "total_issues": 6,
+      "completed_issues": 6,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "REXPENGL",
+      "name": "🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Lò Thị Ngọc Anh",
+      "total_issues": 97,
+      "completed_issues": 93,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "PTITXAY",
+      "name": "🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Giáp Thị Minh Hằng",
+      "total_issues": 20,
+      "completed_issues": 17,
+      "active_uncompleted": 1,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "REKHAO",
+      "name": "🔵 [RE] ENGLISH EXAMINATION",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Lò Thị Ngọc Anh",
+      "total_issues": 52,
+      "completed_issues": 52,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "REXPCHUO",
+      "name": "🔵 [RE x PREP/JAXTINA] CHƯƠNG TRÌNH TIẾNG ANH K24 & K25",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Lò Thị Ngọc Anh",
+      "total_issues": 60,
+      "completed_issues": 60,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "KS25GIAN",
+      "name": "[HN-KS25-CNTT] giảng dạy",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Trịnh Quốc Hai",
+      "total_issues": 23,
+      "completed_issues": 15,
+      "active_uncompleted": 8,
+      "overdue_issues_count": 1,
+      "overdue_issues": [
+        {
+          "code": "KS25GIAN-23",
+          "title": "giảng dạy thực hành",
+          "project_key": "KS25GIAN",
+          "project_name": "[HN-KS25-CNTT] giảng dạy",
+          "assignee": "Phạm Ngọc Kiên",
+          "dueDate": "2026-07-14",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Ngọc Kiên",
+            "group": "Khối CNTT",
+            "campus": "HN-NT",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "1 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "PTITQUAN",
+      "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Giáp Thị Minh Hằng",
+      "total_issues": 37,
+      "completed_issues": 32,
+      "active_uncompleted": 4,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QLDTXAY",
+      "name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Nguyễn Thị Tươi",
+      "total_issues": 5,
+      "completed_issues": 5,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QLDTXAY2",
+      "name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Trần Thị Mỹ Phước",
+      "total_issues": 3,
+      "completed_issues": 0,
+      "active_uncompleted": 3,
+      "overdue_issues_count": 3,
+      "overdue_issues": [
+        {
+          "code": "QLDTXAY2-1",
+          "title": "Xây dựng cổng hành chính dịch vụ trên trang SV",
+          "project_key": "QLDTXAY2",
+          "project_name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
+          "assignee": "Trần Thị Mỹ Phước",
+          "dueDate": "2026-08-31",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Trần Thị Mỹ Phước",
+            "group": "Khối QLCLĐT",
+            "campus": "HCM",
+            "campus_name": "Hồ Chí Minh",
+            "role": "Giáo vụ",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "QLDTXAY2-2",
+          "title": "Xây dựng cổng hành chính dịch vụ trên trang PH",
+          "project_key": "QLDTXAY2",
+          "project_name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
+          "assignee": "Trần Thị Mỹ Phước",
+          "dueDate": "2026-08-31",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Trần Thị Mỹ Phước",
+            "group": "Khối QLCLĐT",
+            "campus": "HCM",
+            "campus_name": "Hồ Chí Minh",
+            "role": "Giáo vụ",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "QLDTXAY2-3",
+          "title": "Phát triển thêm tính năng cho trang QLĐT",
+          "project_key": "QLDTXAY2",
+          "project_name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
+          "assignee": "Trần Thị Mỹ Phước",
+          "dueDate": "2026-08-31",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Trần Thị Mỹ Phước",
+            "group": "Khối QLCLĐT",
+            "campus": "HCM",
+            "campus_name": "Hồ Chí Minh",
+            "role": "Giáo vụ",
+            "rank": "N/A"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "3 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "QLDTXAY3",
+      "name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Nguyễn Huyền Trang",
+      "total_issues": 11,
+      "completed_issues": 5,
+      "active_uncompleted": 6,
+      "overdue_issues_count": 6,
+      "overdue_issues": [
+        {
+          "code": "QLDTXAY3-7",
+          "title": "XÂY DỰNG QUY TRÌNH KHẢO THÍ DÀI HẠN LMS AI",
+          "project_key": "QLDTXAY3",
+          "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+          "assignee": null,
+          "dueDate": "2026-08-15",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": null
+        },
+        {
+          "code": "QLDTXAY3-4",
+          "title": "TRÌNH KÝ QUY ĐỊNH KHẢO THÍ DÀI HẠN LMS AI",
+          "project_key": "QLDTXAY3",
+          "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+          "assignee": null,
+          "dueDate": "2026-08-28",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": null
+        },
+        {
+          "code": "QLDTXAY3-8",
+          "title": "XÂY DỰNG QUY TRÌNH KHẢO THÍ NGẮN HẠN LMS AI",
+          "project_key": "QLDTXAY3",
+          "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+          "assignee": null,
+          "dueDate": "2026-08-15",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": null
+        },
+        {
+          "code": "QLDTXAY3-9",
+          "title": "XÂY DỰNG QUY TRÌNH KHẢO THÍ NGOẠI NGỮ ĐỐI TÁC K24 25 LMS AI",
+          "project_key": "QLDTXAY3",
+          "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+          "assignee": null,
+          "dueDate": "2026-08-15",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": null
+        },
+        {
+          "code": "QLDTXAY3-5",
+          "title": "TRÌNH KÝ QUY ĐỊNH KHẢO THÍ NGẮN HẠN LMS AI",
+          "project_key": "QLDTXAY3",
+          "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+          "assignee": null,
+          "dueDate": "2026-08-28",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": null
+        },
+        {
+          "code": "QLDTXAY3-6",
+          "title": "TRÌNH KÝ QUY ĐỊNH KHẢO THÍ NGOẠI NGỮ ĐỐI TÁC K24 25 LMS AI",
+          "project_key": "QLDTXAY3",
+          "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+          "assignee": null,
+          "dueDate": "2026-08-28",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": null
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "6 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "QLDTRA",
+      "name": "[QLĐT] - Rà soát + tổng hợp kết quả học tập các khóa",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Nguyễn Thị Tươi",
+      "total_issues": 0,
+      "completed_issues": 0,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QLDTSOAN",
+      "name": "[QLĐT] - Soạn thảo bộ Quy định đào tạo (hê PTIT)",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Trần Thị Mỹ Phước",
+      "total_issues": 1,
+      "completed_issues": 1,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "PTITTRIE",
+      "name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Hồ Xuân Hùng",
+      "total_issues": 62,
+      "completed_issues": 62,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "PTITSAN",
+      "name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Hồ Xuân Hùng",
+      "total_issues": 34,
+      "completed_issues": 5,
+      "active_uncompleted": 29,
+      "overdue_issues_count": 14,
+      "overdue_issues": [
+        {
+          "code": "PTITSAN-2",
+          "title": "[S01] Quay video bài giảng + câu hỏi popup — Session 01",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Nguyễn Bá Minh Đạo",
+          "dueDate": "2026-07-18",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Bá Minh Đạo",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Leader",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "PTITSAN-5",
+          "title": "[S02] Làm slides + Quay video bài giảng — Session 02",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Nguyễn Bá Minh Đạo",
+          "dueDate": "2026-07-25",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Bá Minh Đạo",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Leader",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "PTITSAN-6",
+          "title": "[S02] Câu hỏi popup theo video — Session 02",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Nguyễn Bá Minh Đạo",
+          "dueDate": "2026-07-25",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Bá Minh Đạo",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Leader",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "PTITSAN-10",
+          "title": "[S04] Làm slides + Quay video bài giảng — Session 04",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Nguyễn Bá Minh Đạo",
+          "dueDate": "2026-08-08",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Bá Minh Đạo",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Leader",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "PTITSAN-11",
+          "title": "[S04] Câu hỏi popup theo video — Session 04",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Nguyễn Bá Minh Đạo",
+          "dueDate": "2026-08-08",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Bá Minh Đạo",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Leader",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "PTITSAN-12",
+          "title": "[S04] Mindmap + Quizz đầu/cuối giờ — Session 04",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-08-08",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "PTITSAN-13",
+          "title": "[S04] Bài tập thực hành + Bài đọc + BTTHHOP — Session 04",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-08-08",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "PTITSAN-14",
+          "title": "[S05] 5 bài tập tổng hợp kiến thức — Session 05",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-08-15",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "PTITSAN-15",
+          "title": "[S06] 5 bài tập tổng hợp kiến thức — Session 06",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-08-15",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "PTITSAN-16",
+          "title": "[S07] Làm slides + Quay video bài giảng — Session 07",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Nguyễn Bá Minh Đạo",
+          "dueDate": "2026-08-22",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Bá Minh Đạo",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Leader",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "PTITSAN-17",
+          "title": "[S07] Câu hỏi popup theo video — Session 07",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Nguyễn Bá Minh Đạo",
+          "dueDate": "2026-08-22",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Bá Minh Đạo",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Leader",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "PTITSAN-18",
+          "title": "[S07] Mindmap + Quizz đầu/cuối giờ — Session 07",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-08-22",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "PTITSAN-19",
+          "title": "[S07] Bài tập thực hành + Bài đọc + BTTHHOP — Session 07",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-08-22",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "PTITSAN-20",
+          "title": "[S08] 5 bài tập tổng hợp kiến thức — Session 08",
+          "project_key": "PTITSAN",
+          "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-08-29",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "14 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "PTITSAN2",
+      "name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Hồ Xuân Hùng",
+      "total_issues": 37,
+      "completed_issues": 35,
+      "active_uncompleted": 2,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDNGHI",
+      "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Kim Oanh",
+      "total_issues": 9,
+      "completed_issues": 9,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDPM",
+      "name": "[QTKDS] CTĐT, PM Môn học K25, 26",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Lê Thành Ngọc",
+      "total_issues": 16,
+      "completed_issues": 16,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDCAC",
+      "name": "[QTKDS] CÔNG VIỆC CHUNG",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Kim Oanh",
+      "total_issues": 57,
+      "completed_issues": 46,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "TRIEKHAI",
+      "name": "Triển khai môn Dự án K24",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Hồ Xuân Hùng",
+      "total_issues": 24,
+      "completed_issues": 0,
+      "active_uncompleted": 24,
+      "overdue_issues_count": 24,
+      "overdue_issues": [
+        {
+          "code": "TRIEKHAI-3",
+          "title": "[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT1",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Nguyễn Công Hưởng",
+          "dueDate": "2026-07-07",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Công Hưởng",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "TRIEKHAI-8",
+          "title": "[Báo cáo ngày 06/07] Tiến độ CNTT4",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-9",
+          "title": "[Báo cáo ngày 07/07] Tiến độ CNTT4",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-07",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-2",
+          "title": "[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT4",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-07-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "TRIEKHAI-1",
+          "title": "[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT4",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-5",
+          "title": "[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT2",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-07-08",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "TRIEKHAI-4",
+          "title": "[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT2",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-08",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-7",
+          "title": "[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT3",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-07-09",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "TRIEKHAI-6",
+          "title": "[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT3",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-09",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-18",
+          "title": "Hỗ trợ SV làm dự án — CNTT4",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-07-10",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "TRIEKHAI-24",
+          "title": "Hỗ trợ SV làm dự án — CNTT3",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-07-10",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "TRIEKHAI-22",
+          "title": "Hỗ trợ SV làm dự án — CNTT2",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Mai Xuân Chinh",
+          "dueDate": "2026-07-10",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Mai Xuân Chinh",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "TRIEKHAI-10",
+          "title": "[Báo cáo ngày 07/07] Tiến độ CNTT1",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Nguyễn Công Hưởng",
+          "dueDate": "2026-07-07",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Công Hưởng",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "TRIEKHAI-11",
+          "title": "[Báo cáo ngày 08/07] Tiến độ CNTT4 + CNTT2",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-08",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-12",
+          "title": "[Báo cáo ngày 08/07] Tiến độ CNTT1",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Nguyễn Công Hưởng",
+          "dueDate": "2026-07-08",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Công Hưởng",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "TRIEKHAI-13",
+          "title": "[Báo cáo ngày 09/07] Tiến độ CNTT4 + CNTT2 + CNTT3",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-09",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-14",
+          "title": "[Báo cáo ngày 09/07] Tiến độ CNTT1",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Nguyễn Công Hưởng",
+          "dueDate": "2026-07-09",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Công Hưởng",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "TRIEKHAI-15",
+          "title": "[Báo cáo tuần] Kết quả triển khai CNTT2 + CNTT3 + CNTT4",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-10",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-16",
+          "title": "[Báo cáo tuần] Kết quả triển khai CNTT1",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Nguyễn Công Hưởng",
+          "dueDate": "2026-07-10",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Công Hưởng",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "TRIEKHAI-17",
+          "title": "Kiểm tra tiến độ + Chăm sóc SV — CNTT4",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-10",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-19",
+          "title": "Kiểm tra tiến độ + Chăm sóc SV — CNTT1",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Nguyễn Công Hưởng",
+          "dueDate": "2026-07-10",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Công Hưởng",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "TRIEKHAI-20",
+          "title": "Hỗ trợ SV làm dự án — CNTT1",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Nguyễn Công Hưởng",
+          "dueDate": "2026-07-10",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Công Hưởng",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "TRIEKHAI-21",
+          "title": "Kiểm tra tiến độ + Chăm sóc SV — CNTT2",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-10",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        },
+        {
+          "code": "TRIEKHAI-23",
+          "title": "Kiểm tra tiến độ + Chăm sóc SV — CNTT3",
+          "project_key": "TRIEKHAI",
+          "project_name": "Triển khai môn Dự án K24",
+          "assignee": "Bùi Thanh Hải",
+          "dueDate": "2026-07-10",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Bùi Thanh Hải",
+            "group": "Khối CNTT",
+            "campus": "HN-HPC",
+            "campus_name": "Hà Nội (HPC)",
+            "role": "Giảng viên",
+            "rank": "5"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "24 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "REXPCHUO2",
+      "name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Ngô Quang Huấn",
+      "total_issues": 6,
+      "completed_issues": 3,
+      "active_uncompleted": 3,
+      "overdue_issues_count": 3,
+      "overdue_issues": [
+        {
+          "code": "REXPCHUO2-1",
+          "title": "Sản xuất học liệu môn Học tập chủ động",
+          "project_key": "REXPCHUO2",
+          "project_name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT",
+          "assignee": "Ngô Quang Huấn",
+          "dueDate": "2026-08-30",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Ngô Quang Huấn",
+            "group": "Khối Ngoại ngữ & KNM",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "REXPCHUO2-4",
+          "title": "Sản xuất học liệu môn Quản trị mục tiêu",
+          "project_key": "REXPCHUO2",
+          "project_name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT",
+          "assignee": "Ngô Quang Huấn",
+          "dueDate": "2026-08-30",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Ngô Quang Huấn",
+            "group": "Khối Ngoại ngữ & KNM",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "REXPCHUO2-6",
+          "title": "Sản xuất học liệu môn Thực tập doanh nghiệp",
+          "project_key": "REXPCHUO2",
+          "project_name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT",
+          "assignee": "Ngô Quang Huấn",
+          "dueDate": "2026-08-31",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Ngô Quang Huấn",
+            "group": "Khối Ngoại ngữ & KNM",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "3 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "REXPCHUO3",
+      "name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Ngô Quang Huấn",
+      "total_issues": 6,
+      "completed_issues": 1,
+      "active_uncompleted": 5,
+      "overdue_issues_count": 5,
+      "overdue_issues": [
+        {
+          "code": "REXPCHUO3-5",
+          "title": "Sản xuất học liệu môn Chinh phục nhà tuyển dụng",
+          "project_key": "REXPCHUO3",
+          "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+          "assignee": "Ngô Quang Huấn",
+          "dueDate": "2026-07-31",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Ngô Quang Huấn",
+            "group": "Khối Ngoại ngữ & KNM",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "REXPCHUO3-1",
+          "title": "Sản xuất học liệu môn Học tập chủ động",
+          "project_key": "REXPCHUO3",
+          "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+          "assignee": "Ngô Quang Huấn",
+          "dueDate": "2026-08-31",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Ngô Quang Huấn",
+            "group": "Khối Ngoại ngữ & KNM",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "REXPCHUO3-2",
+          "title": "Sản xuất học liệu môn Làm việc nhóm",
+          "project_key": "REXPCHUO3",
+          "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+          "assignee": "Ngô Quang Huấn",
+          "dueDate": "2026-08-31",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Ngô Quang Huấn",
+            "group": "Khối Ngoại ngữ & KNM",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "REXPCHUO3-4",
+          "title": "Sản xuất học liệu môn Lên kế hoạch phát triển bản thân",
+          "project_key": "REXPCHUO3",
+          "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+          "assignee": "Ngô Quang Huấn",
+          "dueDate": "2026-08-31",
+          "state": "Đang làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Ngô Quang Huấn",
+            "group": "Khối Ngoại ngữ & KNM",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "REXPCHUO3-6",
+          "title": "Sản xuất học liệu môn Networking",
+          "project_key": "REXPCHUO3",
+          "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+          "assignee": "Ngô Quang Huấn",
+          "dueDate": "2026-08-31",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Ngô Quang Huấn",
+            "group": "Khối Ngoại ngữ & KNM",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "5 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "REXPDANH",
+      "name": "[RExPTIT] Đánh giá năng lực tổng hợp KNM cho sinh viên CNTT và QTKDS Hà Nội",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Ngô Quang Huấn",
+      "total_issues": 5,
+      "completed_issues": 5,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "KS26MON",
+      "name": "[KS26]_IT101_Nhập môn CNTT",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Lương Quốc Tuấn",
+      "total_issues": 287,
+      "completed_issues": 286,
+      "active_uncompleted": 1,
+      "overdue_issues_count": 1,
+      "overdue_issues": [
+        {
+          "code": "KS26MON-287",
+          "title": "S23: Đề thi cuối môn",
+          "project_key": "KS26MON",
+          "project_name": "[KS26]_IT101_Nhập môn CNTT",
+          "assignee": "Phạm Ngọc Kiên",
+          "dueDate": "2026-08-07",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Ngọc Kiên",
+            "group": "Khối CNTT",
+            "campus": "HN-NT",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "1 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "KS25",
+      "name": "[KS25]_IT304_Agile/Scrum",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Trần Quốc Tuấn",
+      "total_issues": 179,
+      "completed_issues": 179,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "KS26NANG",
+      "name": "[KS26]_IT102_Kỹ năng prompting với AI",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Trịnh Quốc Hai",
+      "total_issues": 145,
+      "completed_issues": 122,
+      "active_uncompleted": 5,
+      "overdue_issues_count": 5,
+      "overdue_issues": [
+        {
+          "code": "KS26NANG-125",
+          "title": "S08 - L02: Quiz",
+          "project_key": "KS26NANG",
+          "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+          "assignee": "Lâm Tùng Dương",
+          "dueDate": "2026-08-07",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Lâm Tùng Dương",
+            "group": "Khối CNTT",
+            "campus": "HN-NT",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "KS26NANG-129",
+          "title": "S08 - L03: Bài đọc HTML",
+          "project_key": "KS26NANG",
+          "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+          "assignee": "Lâm Tùng Dương",
+          "dueDate": "2026-08-07",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Lâm Tùng Dương",
+            "group": "Khối CNTT",
+            "campus": "HN-NT",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "KS26NANG-131",
+          "title": "S08 - L03: Quiz",
+          "project_key": "KS26NANG",
+          "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+          "assignee": "Lâm Tùng Dương",
+          "dueDate": "2026-08-07",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Lâm Tùng Dương",
+            "group": "Khối CNTT",
+            "campus": "HN-NT",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "KS26NANG-133",
+          "title": "S08: Mindmap",
+          "project_key": "KS26NANG",
+          "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+          "assignee": "Lâm Tùng Dương",
+          "dueDate": "2026-08-07",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Lâm Tùng Dương",
+            "group": "Khối CNTT",
+            "campus": "HN-NT",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "KS26NANG-134",
+          "title": "S08: Quiz cuối giờ",
+          "project_key": "KS26NANG",
+          "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+          "assignee": "Lâm Tùng Dương",
+          "dueDate": "2026-08-07",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Lâm Tùng Dương",
+            "group": "Khối CNTT",
+            "campus": "HN-NT",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "5 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "KS25TICH",
+      "name": "[KS25]_IT303_Phân tích thiết kế hệ thống",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Lê Hà Thanh Sang",
+      "total_issues": 326,
+      "completed_issues": 326,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDCO",
+      "name": "[QTKDS] CỐ VẤN HỌC TẬP",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Kim Oanh",
+      "total_issues": 22,
+      "completed_issues": 18,
+      "active_uncompleted": 3,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "KS24INTE",
+      "name": "[KS24]_IT213_AI Intergration_v2",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Nguyễn Bá Minh Đạo",
+      "total_issues": 183,
+      "completed_issues": 183,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "KS24",
+      "name": "[KS24]_IT209_Devops_v2",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Nguyễn Bá Minh Đạo",
+      "total_issues": 160,
+      "completed_issues": 160,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "KS242",
+      "name": "[KS24]_IT212_Microservice_v2",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Phạm Tuấn Bình",
+      "total_issues": 142,
+      "completed_issues": 105,
+      "active_uncompleted": 37,
+      "overdue_issues_count": 37,
+      "overdue_issues": [
+        {
+          "code": "KS242-107",
+          "title": "S12: Quiz cuối giờ",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-04",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-109",
+          "title": "S13: Bài tập tổng hợp (5 bài)",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-04",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-112",
+          "title": "S12 - L03: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-04",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-113",
+          "title": "S12: Quiz đầu giờ",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-04",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-126",
+          "title": "S16 - L01: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-127",
+          "title": "S16 - L01: Quiz",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-128",
+          "title": "S16 - L02: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-129",
+          "title": "S16 - L02: Quiz",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-130",
+          "title": "S16 - L03: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-131",
+          "title": "S16 - L03: Quiz",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-132",
+          "title": "S16 - L04: Quiz",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-133",
+          "title": "S16: Quiz đầu giờ",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-134",
+          "title": "S16: Quiz cuối giờ",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-135",
+          "title": "S16: Mindmap",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-06",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-86",
+          "title": "S10 - L01: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-137",
+          "title": "S18: Đề kiểm tra 45'",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-07",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-87",
+          "title": "S10 - L01: Quiz",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-138",
+          "title": "S18: SRS Mini Project",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-07",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-88",
+          "title": "S10 - L02: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-89",
+          "title": "S10 - L02: Quiz",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-90",
+          "title": "S10 - L03: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-91",
+          "title": "S10 - L03: Quiz",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-92",
+          "title": "S10 - L04: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-93",
+          "title": "S10 - L04: Quiz",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-94",
+          "title": "S10 - L05: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-95",
+          "title": "S10 - L05: Quiz",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-96",
+          "title": "S10: Quiz đầu giờ",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-97",
+          "title": "S10: Quiz cuối giờ",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-99",
+          "title": "S11: Bài tập tổng hợp (5 bài)",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-03",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-114",
+          "title": "S09: Đề thi thực hành (đề 2-6)",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-07-31",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-115",
+          "title": "S14 - L01: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-05",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-117",
+          "title": "S14 - L02: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-05",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-119",
+          "title": "S14 - L03: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-05",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-121",
+          "title": "S14 - L04: Bài đọc + Câu hỏi bài đọc",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-05",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-125",
+          "title": "S15: Bài tập tổng hợp (5 bài)",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Nguyễn Đức Minh",
+          "dueDate": "2026-08-05",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Đức Minh",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng thử việc",
+            "rank": "N/A"
+          }
+        },
+        {
+          "code": "KS242-110",
+          "title": "S20: 100 câu trắc nghiệm",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-10",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "KS242-111",
+          "title": "S20: Đề thi thực hành (đề 1 - mẫu)",
+          "project_key": "KS242",
+          "project_name": "[KS24]_IT212_Microservice_v2",
+          "assignee": "Phạm Viết Hùng",
+          "dueDate": "2026-08-10",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Phạm Viết Hùng",
+            "group": "Khối CNTT",
+            "campus": "HCM",
+            "campus_name": "Cơ sở Hồ Chí Minh",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "37 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "QTKDDAO",
+      "name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Lê Nhựt Mi",
+      "total_issues": 26,
+      "completed_issues": 12,
+      "active_uncompleted": 12,
+      "overdue_issues_count": 3,
+      "overdue_issues": [
+        {
+          "code": "QTKDDAO-26",
+          "title": "Báo cáo dự giảng hàng tuần",
+          "project_key": "QTKDDAO",
+          "project_name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
+          "assignee": "Nguyễn Thị Như Quỳnh",
+          "dueDate": "2026-08-28",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Nguyễn Thị Như Quỳnh",
+            "group": "Khối QTKD",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        },
+        {
+          "code": "QTKDDAO-27",
+          "title": "Báo cáo dự giảng hàng tuần",
+          "project_key": "QTKDDAO",
+          "project_name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
+          "assignee": "Lê Thị Bảo Yến",
+          "dueDate": "2026-08-28",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Lê Thị Bảo Yến",
+            "group": "Khối QTKD",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        },
+        {
+          "code": "QTKDDAO-25",
+          "title": "Báo cáo dự giảng hàng tuần",
+          "project_key": "QTKDDAO",
+          "project_name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
+          "assignee": "Triệu Thị Thanh Tâm",
+          "dueDate": "2026-08-28",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Triệu Thị Thanh Tâm",
+            "group": "Khối QTKD",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Trợ giảng",
+            "rank": "2"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "3 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "PTITSAN3",
+      "name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Giáp Thị Minh Hằng",
+      "total_issues": 45,
+      "completed_issues": 45,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDHANH",
+      "name": "[QTKDS] Hành trình trải nghiệm sinh viên",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Lê Nhựt Mi",
+      "total_issues": 18,
+      "completed_issues": 18,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDRA",
+      "name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Lê Nhựt Mi",
+      "total_issues": 34,
+      "completed_issues": 34,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDQUY",
+      "name": "[QTKDS] Quy trình sản xuất học liệu video",
+      "status": "COMPLETED",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Hậu",
+      "total_issues": 6,
+      "completed_issues": 6,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDSX",
+      "name": "[QTKD] SX Tài nguyên học tập K26",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Lê Thành Ngọc",
+      "total_issues": 10,
+      "completed_issues": 1,
+      "active_uncompleted": 9,
+      "overdue_issues_count": 1,
+      "overdue_issues": [
+        {
+          "code": "QTKDSX-2",
+          "title": "[SSK101] SXND bản draft",
+          "project_key": "QTKDSX",
+          "project_name": "[QTKD] SX Tài nguyên học tập K26",
+          "assignee": "Lê Thành Ngọc",
+          "dueDate": "2026-08-28",
+          "state": "Cần làm",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Lê Thành Ngọc",
+            "group": "Khối QTKD",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "1 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "QTKDSXTN",
+      "name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Kim Oanh",
+      "total_issues": 5,
+      "completed_issues": 0,
+      "active_uncompleted": 5,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDDIEU",
+      "name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Hậu",
+      "total_issues": 5,
+      "completed_issues": 4,
+      "active_uncompleted": 1,
+      "overdue_issues_count": 1,
+      "overdue_issues": [
+        {
+          "code": "QTKDDIEU-5",
+          "title": "Biên bản họp + Bản KPI mới (final)",
+          "project_key": "QTKDDIEU",
+          "project_name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
+          "assignee": "Lê Nhựt Mi",
+          "dueDate": "2026-08-27",
+          "state": "Chờ duyệt",
+          "is_overdue": true,
+          "staff_info": {
+            "name": "Lê Nhựt Mi",
+            "group": "Khối QTKD",
+            "campus": "HN",
+            "campus_name": "Hà Nội (Ngọc Trục)",
+            "role": "Giảng viên",
+            "rank": "3"
+          }
+        }
+      ],
+      "is_delayed": true,
+      "delay_reasons": [
+        "1 công việc quá hạn deadline (<= 31/08/2026)"
+      ]
+    },
+    {
+      "key": "PTITJPN",
+      "name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Lê Thị Đỏ",
+      "total_issues": 4,
+      "completed_issues": 2,
+      "active_uncompleted": 2,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "QTKDVERI",
+      "name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Hoàng Thị Kim Oanh",
+      "total_issues": 5,
+      "completed_issues": 5,
+      "active_uncompleted": 0,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    },
+    {
+      "key": "PTITORIE",
+      "name": "[PTIT-JPN] Orientation Week 2026",
+      "status": "ACTIVE",
+      "health": "ON_TRACK",
+      "pic": "Giáp Thị Minh Hằng",
+      "total_issues": 2,
+      "completed_issues": 0,
+      "active_uncompleted": 2,
+      "overdue_issues_count": 0,
+      "overdue_issues": [],
+      "is_delayed": false,
+      "delay_reasons": []
+    }
+  ],
+  "total_overdue_issues_august": 104,
+  "overdue_issues": [
+    {
+      "code": "KS25GIAN-23",
+      "title": "giảng dạy thực hành",
+      "project_key": "KS25GIAN",
+      "project_name": "[HN-KS25-CNTT] giảng dạy",
+      "assignee": "Phạm Ngọc Kiên",
+      "dueDate": "2026-07-14",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Ngọc Kiên",
+        "group": "Khối CNTT",
+        "campus": "HN-NT",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "QLDTXAY2-1",
+      "title": "Xây dựng cổng hành chính dịch vụ trên trang SV",
+      "project_key": "QLDTXAY2",
+      "project_name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
+      "assignee": "Trần Thị Mỹ Phước",
+      "dueDate": "2026-08-31",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Trần Thị Mỹ Phước",
+        "group": "Khối QLCLĐT",
+        "campus": "HCM",
+        "campus_name": "Hồ Chí Minh",
+        "role": "Giáo vụ",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "QLDTXAY2-2",
+      "title": "Xây dựng cổng hành chính dịch vụ trên trang PH",
+      "project_key": "QLDTXAY2",
+      "project_name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
+      "assignee": "Trần Thị Mỹ Phước",
+      "dueDate": "2026-08-31",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Trần Thị Mỹ Phước",
+        "group": "Khối QLCLĐT",
+        "campus": "HCM",
+        "campus_name": "Hồ Chí Minh",
+        "role": "Giáo vụ",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "QLDTXAY2-3",
+      "title": "Phát triển thêm tính năng cho trang QLĐT",
+      "project_key": "QLDTXAY2",
+      "project_name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
+      "assignee": "Trần Thị Mỹ Phước",
+      "dueDate": "2026-08-31",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Trần Thị Mỹ Phước",
+        "group": "Khối QLCLĐT",
+        "campus": "HCM",
+        "campus_name": "Hồ Chí Minh",
+        "role": "Giáo vụ",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "QLDTXAY3-7",
+      "title": "XÂY DỰNG QUY TRÌNH KHẢO THÍ DÀI HẠN LMS AI",
+      "project_key": "QLDTXAY3",
+      "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+      "assignee": null,
+      "dueDate": "2026-08-15",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": null
+    },
+    {
+      "code": "QLDTXAY3-4",
+      "title": "TRÌNH KÝ QUY ĐỊNH KHẢO THÍ DÀI HẠN LMS AI",
+      "project_key": "QLDTXAY3",
+      "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+      "assignee": null,
+      "dueDate": "2026-08-28",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": null
+    },
+    {
+      "code": "QLDTXAY3-8",
+      "title": "XÂY DỰNG QUY TRÌNH KHẢO THÍ NGẮN HẠN LMS AI",
+      "project_key": "QLDTXAY3",
+      "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+      "assignee": null,
+      "dueDate": "2026-08-15",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": null
+    },
+    {
+      "code": "QLDTXAY3-9",
+      "title": "XÂY DỰNG QUY TRÌNH KHẢO THÍ NGOẠI NGỮ ĐỐI TÁC K24 25 LMS AI",
+      "project_key": "QLDTXAY3",
+      "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+      "assignee": null,
+      "dueDate": "2026-08-15",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": null
+    },
+    {
+      "code": "QLDTXAY3-5",
+      "title": "TRÌNH KÝ QUY ĐỊNH KHẢO THÍ NGẮN HẠN LMS AI",
+      "project_key": "QLDTXAY3",
+      "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+      "assignee": null,
+      "dueDate": "2026-08-28",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": null
+    },
+    {
+      "code": "QLDTXAY3-6",
+      "title": "TRÌNH KÝ QUY ĐỊNH KHẢO THÍ NGOẠI NGỮ ĐỐI TÁC K24 25 LMS AI",
+      "project_key": "QLDTXAY3",
+      "project_name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
+      "assignee": null,
+      "dueDate": "2026-08-28",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": null
+    },
+    {
+      "code": "PTITSAN-2",
+      "title": "[S01] Quay video bài giảng + câu hỏi popup — Session 01",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Nguyễn Bá Minh Đạo",
+      "dueDate": "2026-07-18",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Bá Minh Đạo",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Leader",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "PTITSAN-5",
+      "title": "[S02] Làm slides + Quay video bài giảng — Session 02",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Nguyễn Bá Minh Đạo",
+      "dueDate": "2026-07-25",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Bá Minh Đạo",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Leader",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "PTITSAN-6",
+      "title": "[S02] Câu hỏi popup theo video — Session 02",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Nguyễn Bá Minh Đạo",
+      "dueDate": "2026-07-25",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Bá Minh Đạo",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Leader",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "PTITSAN-10",
+      "title": "[S04] Làm slides + Quay video bài giảng — Session 04",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Nguyễn Bá Minh Đạo",
+      "dueDate": "2026-08-08",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Bá Minh Đạo",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Leader",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "PTITSAN-11",
+      "title": "[S04] Câu hỏi popup theo video — Session 04",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Nguyễn Bá Minh Đạo",
+      "dueDate": "2026-08-08",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Bá Minh Đạo",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Leader",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "PTITSAN-12",
+      "title": "[S04] Mindmap + Quizz đầu/cuối giờ — Session 04",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-08-08",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "PTITSAN-13",
+      "title": "[S04] Bài tập thực hành + Bài đọc + BTTHHOP — Session 04",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-08-08",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "PTITSAN-14",
+      "title": "[S05] 5 bài tập tổng hợp kiến thức — Session 05",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-08-15",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "PTITSAN-15",
+      "title": "[S06] 5 bài tập tổng hợp kiến thức — Session 06",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-08-15",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "PTITSAN-16",
+      "title": "[S07] Làm slides + Quay video bài giảng — Session 07",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Nguyễn Bá Minh Đạo",
+      "dueDate": "2026-08-22",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Bá Minh Đạo",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Leader",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "PTITSAN-17",
+      "title": "[S07] Câu hỏi popup theo video — Session 07",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Nguyễn Bá Minh Đạo",
+      "dueDate": "2026-08-22",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Bá Minh Đạo",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Leader",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "PTITSAN-18",
+      "title": "[S07] Mindmap + Quizz đầu/cuối giờ — Session 07",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-08-22",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "PTITSAN-19",
+      "title": "[S07] Bài tập thực hành + Bài đọc + BTTHHOP — Session 07",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-08-22",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "PTITSAN-20",
+      "title": "[S08] 5 bài tập tổng hợp kiến thức — Session 08",
+      "project_key": "PTITSAN",
+      "project_name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-08-29",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "TRIEKHAI-3",
+      "title": "[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT1",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Nguyễn Công Hưởng",
+      "dueDate": "2026-07-07",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Công Hưởng",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "TRIEKHAI-8",
+      "title": "[Báo cáo ngày 06/07] Tiến độ CNTT4",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-9",
+      "title": "[Báo cáo ngày 07/07] Tiến độ CNTT4",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-07",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-2",
+      "title": "[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT4",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-07-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "TRIEKHAI-1",
+      "title": "[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT4",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-5",
+      "title": "[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT2",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-07-08",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "TRIEKHAI-4",
+      "title": "[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT2",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-08",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-7",
+      "title": "[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT3",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-07-09",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "TRIEKHAI-6",
+      "title": "[Buổi 1] Triển khai hướng dẫn DA K24 — CNTT3",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-09",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-18",
+      "title": "Hỗ trợ SV làm dự án — CNTT4",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-07-10",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "TRIEKHAI-24",
+      "title": "Hỗ trợ SV làm dự án — CNTT3",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-07-10",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "TRIEKHAI-22",
+      "title": "Hỗ trợ SV làm dự án — CNTT2",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Mai Xuân Chinh",
+      "dueDate": "2026-07-10",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Mai Xuân Chinh",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "TRIEKHAI-10",
+      "title": "[Báo cáo ngày 07/07] Tiến độ CNTT1",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Nguyễn Công Hưởng",
+      "dueDate": "2026-07-07",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Công Hưởng",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "TRIEKHAI-11",
+      "title": "[Báo cáo ngày 08/07] Tiến độ CNTT4 + CNTT2",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-08",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-12",
+      "title": "[Báo cáo ngày 08/07] Tiến độ CNTT1",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Nguyễn Công Hưởng",
+      "dueDate": "2026-07-08",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Công Hưởng",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "TRIEKHAI-13",
+      "title": "[Báo cáo ngày 09/07] Tiến độ CNTT4 + CNTT2 + CNTT3",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-09",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-14",
+      "title": "[Báo cáo ngày 09/07] Tiến độ CNTT1",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Nguyễn Công Hưởng",
+      "dueDate": "2026-07-09",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Công Hưởng",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "TRIEKHAI-15",
+      "title": "[Báo cáo tuần] Kết quả triển khai CNTT2 + CNTT3 + CNTT4",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-10",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-16",
+      "title": "[Báo cáo tuần] Kết quả triển khai CNTT1",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Nguyễn Công Hưởng",
+      "dueDate": "2026-07-10",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Công Hưởng",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "TRIEKHAI-17",
+      "title": "Kiểm tra tiến độ + Chăm sóc SV — CNTT4",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-10",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-19",
+      "title": "Kiểm tra tiến độ + Chăm sóc SV — CNTT1",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Nguyễn Công Hưởng",
+      "dueDate": "2026-07-10",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Công Hưởng",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "TRIEKHAI-20",
+      "title": "Hỗ trợ SV làm dự án — CNTT1",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Nguyễn Công Hưởng",
+      "dueDate": "2026-07-10",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Công Hưởng",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "TRIEKHAI-21",
+      "title": "Kiểm tra tiến độ + Chăm sóc SV — CNTT2",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-10",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "TRIEKHAI-23",
+      "title": "Kiểm tra tiến độ + Chăm sóc SV — CNTT3",
+      "project_key": "TRIEKHAI",
+      "project_name": "Triển khai môn Dự án K24",
+      "assignee": "Bùi Thanh Hải",
+      "dueDate": "2026-07-10",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Bùi Thanh Hải",
+        "group": "Khối CNTT",
+        "campus": "HN-HPC",
+        "campus_name": "Hà Nội (HPC)",
+        "role": "Giảng viên",
+        "rank": "5"
+      }
+    },
+    {
+      "code": "REXPCHUO2-1",
+      "title": "Sản xuất học liệu môn Học tập chủ động",
+      "project_key": "REXPCHUO2",
+      "project_name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT",
+      "assignee": "Ngô Quang Huấn",
+      "dueDate": "2026-08-30",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Ngô Quang Huấn",
+        "group": "Khối Ngoại ngữ & KNM",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "REXPCHUO2-4",
+      "title": "Sản xuất học liệu môn Quản trị mục tiêu",
+      "project_key": "REXPCHUO2",
+      "project_name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT",
+      "assignee": "Ngô Quang Huấn",
+      "dueDate": "2026-08-30",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Ngô Quang Huấn",
+        "group": "Khối Ngoại ngữ & KNM",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "REXPCHUO2-6",
+      "title": "Sản xuất học liệu môn Thực tập doanh nghiệp",
+      "project_key": "REXPCHUO2",
+      "project_name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT",
+      "assignee": "Ngô Quang Huấn",
+      "dueDate": "2026-08-31",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Ngô Quang Huấn",
+        "group": "Khối Ngoại ngữ & KNM",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "REXPCHUO3-5",
+      "title": "Sản xuất học liệu môn Chinh phục nhà tuyển dụng",
+      "project_key": "REXPCHUO3",
+      "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+      "assignee": "Ngô Quang Huấn",
+      "dueDate": "2026-07-31",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Ngô Quang Huấn",
+        "group": "Khối Ngoại ngữ & KNM",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "REXPCHUO3-1",
+      "title": "Sản xuất học liệu môn Học tập chủ động",
+      "project_key": "REXPCHUO3",
+      "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+      "assignee": "Ngô Quang Huấn",
+      "dueDate": "2026-08-31",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Ngô Quang Huấn",
+        "group": "Khối Ngoại ngữ & KNM",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "REXPCHUO3-2",
+      "title": "Sản xuất học liệu môn Làm việc nhóm",
+      "project_key": "REXPCHUO3",
+      "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+      "assignee": "Ngô Quang Huấn",
+      "dueDate": "2026-08-31",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Ngô Quang Huấn",
+        "group": "Khối Ngoại ngữ & KNM",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "REXPCHUO3-4",
+      "title": "Sản xuất học liệu môn Lên kế hoạch phát triển bản thân",
+      "project_key": "REXPCHUO3",
+      "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+      "assignee": "Ngô Quang Huấn",
+      "dueDate": "2026-08-31",
+      "state": "Đang làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Ngô Quang Huấn",
+        "group": "Khối Ngoại ngữ & KNM",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "REXPCHUO3-6",
+      "title": "Sản xuất học liệu môn Networking",
+      "project_key": "REXPCHUO3",
+      "project_name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS",
+      "assignee": "Ngô Quang Huấn",
+      "dueDate": "2026-08-31",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Ngô Quang Huấn",
+        "group": "Khối Ngoại ngữ & KNM",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Tiếng Anh/KNM)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "KS26MON-287",
+      "title": "S23: Đề thi cuối môn",
+      "project_key": "KS26MON",
+      "project_name": "[KS26]_IT101_Nhập môn CNTT",
+      "assignee": "Phạm Ngọc Kiên",
+      "dueDate": "2026-08-07",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Ngọc Kiên",
+        "group": "Khối CNTT",
+        "campus": "HN-NT",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS26NANG-125",
+      "title": "S08 - L02: Quiz",
+      "project_key": "KS26NANG",
+      "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+      "assignee": "Lâm Tùng Dương",
+      "dueDate": "2026-08-07",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Lâm Tùng Dương",
+        "group": "Khối CNTT",
+        "campus": "HN-NT",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "KS26NANG-129",
+      "title": "S08 - L03: Bài đọc HTML",
+      "project_key": "KS26NANG",
+      "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+      "assignee": "Lâm Tùng Dương",
+      "dueDate": "2026-08-07",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Lâm Tùng Dương",
+        "group": "Khối CNTT",
+        "campus": "HN-NT",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "KS26NANG-131",
+      "title": "S08 - L03: Quiz",
+      "project_key": "KS26NANG",
+      "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+      "assignee": "Lâm Tùng Dương",
+      "dueDate": "2026-08-07",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Lâm Tùng Dương",
+        "group": "Khối CNTT",
+        "campus": "HN-NT",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "KS26NANG-133",
+      "title": "S08: Mindmap",
+      "project_key": "KS26NANG",
+      "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+      "assignee": "Lâm Tùng Dương",
+      "dueDate": "2026-08-07",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Lâm Tùng Dương",
+        "group": "Khối CNTT",
+        "campus": "HN-NT",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "KS26NANG-134",
+      "title": "S08: Quiz cuối giờ",
+      "project_key": "KS26NANG",
+      "project_name": "[KS26]_IT102_Kỹ năng prompting với AI",
+      "assignee": "Lâm Tùng Dương",
+      "dueDate": "2026-08-07",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Lâm Tùng Dương",
+        "group": "Khối CNTT",
+        "campus": "HN-NT",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "KS242-107",
+      "title": "S12: Quiz cuối giờ",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-04",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-109",
+      "title": "S13: Bài tập tổng hợp (5 bài)",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-04",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-112",
+      "title": "S12 - L03: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-04",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-113",
+      "title": "S12: Quiz đầu giờ",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-04",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-126",
+      "title": "S16 - L01: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-127",
+      "title": "S16 - L01: Quiz",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-128",
+      "title": "S16 - L02: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-129",
+      "title": "S16 - L02: Quiz",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-130",
+      "title": "S16 - L03: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-131",
+      "title": "S16 - L03: Quiz",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-132",
+      "title": "S16 - L04: Quiz",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-133",
+      "title": "S16: Quiz đầu giờ",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-134",
+      "title": "S16: Quiz cuối giờ",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-135",
+      "title": "S16: Mindmap",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-06",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-86",
+      "title": "S10 - L01: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-137",
+      "title": "S18: Đề kiểm tra 45'",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-07",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-87",
+      "title": "S10 - L01: Quiz",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-138",
+      "title": "S18: SRS Mini Project",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-07",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-88",
+      "title": "S10 - L02: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-89",
+      "title": "S10 - L02: Quiz",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-90",
+      "title": "S10 - L03: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-91",
+      "title": "S10 - L03: Quiz",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-92",
+      "title": "S10 - L04: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-93",
+      "title": "S10 - L04: Quiz",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-94",
+      "title": "S10 - L05: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-95",
+      "title": "S10 - L05: Quiz",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-96",
+      "title": "S10: Quiz đầu giờ",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-97",
+      "title": "S10: Quiz cuối giờ",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-99",
+      "title": "S11: Bài tập tổng hợp (5 bài)",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-03",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-114",
+      "title": "S09: Đề thi thực hành (đề 2-6)",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-07-31",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-115",
+      "title": "S14 - L01: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-05",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-117",
+      "title": "S14 - L02: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-05",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-119",
+      "title": "S14 - L03: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-05",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-121",
+      "title": "S14 - L04: Bài đọc + Câu hỏi bài đọc",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-05",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-125",
+      "title": "S15: Bài tập tổng hợp (5 bài)",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Nguyễn Đức Minh",
+      "dueDate": "2026-08-05",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Đức Minh",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng thử việc",
+        "rank": "N/A"
+      }
+    },
+    {
+      "code": "KS242-110",
+      "title": "S20: 100 câu trắc nghiệm",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-10",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "KS242-111",
+      "title": "S20: Đề thi thực hành (đề 1 - mẫu)",
+      "project_key": "KS242",
+      "project_name": "[KS24]_IT212_Microservice_v2",
+      "assignee": "Phạm Viết Hùng",
+      "dueDate": "2026-08-10",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Phạm Viết Hùng",
+        "group": "Khối CNTT",
+        "campus": "HCM",
+        "campus_name": "Cơ sở Hồ Chí Minh",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "QTKDDAO-26",
+      "title": "Báo cáo dự giảng hàng tuần",
+      "project_key": "QTKDDAO",
+      "project_name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
+      "assignee": "Nguyễn Thị Như Quỳnh",
+      "dueDate": "2026-08-28",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Nguyễn Thị Như Quỳnh",
+        "group": "Khối QTKD",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "QTKDDAO-27",
+      "title": "Báo cáo dự giảng hàng tuần",
+      "project_key": "QTKDDAO",
+      "project_name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
+      "assignee": "Lê Thị Bảo Yến",
+      "dueDate": "2026-08-28",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Lê Thị Bảo Yến",
+        "group": "Khối QTKD",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "QTKDDAO-25",
+      "title": "Báo cáo dự giảng hàng tuần",
+      "project_key": "QTKDDAO",
+      "project_name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
+      "assignee": "Triệu Thị Thanh Tâm",
+      "dueDate": "2026-08-28",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Triệu Thị Thanh Tâm",
+        "group": "Khối QTKD",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Trợ giảng",
+        "rank": "2"
+      }
+    },
+    {
+      "code": "QTKDSX-2",
+      "title": "[SSK101] SXND bản draft",
+      "project_key": "QTKDSX",
+      "project_name": "[QTKD] SX Tài nguyên học tập K26",
+      "assignee": "Lê Thành Ngọc",
+      "dueDate": "2026-08-28",
+      "state": "Cần làm",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Lê Thành Ngọc",
+        "group": "Khối QTKD",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    },
+    {
+      "code": "QTKDDIEU-5",
+      "title": "Biên bản họp + Bản KPI mới (final)",
+      "project_key": "QTKDDIEU",
+      "project_name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
+      "assignee": "Lê Nhựt Mi",
+      "dueDate": "2026-08-27",
+      "state": "Chờ duyệt",
+      "is_overdue": true,
+      "staff_info": {
+        "name": "Lê Nhựt Mi",
+        "group": "Khối QTKD",
+        "campus": "HN",
+        "campus_name": "Hà Nội (Ngọc Trục)",
+        "role": "Giảng viên",
+        "rank": "3"
+      }
+    }
+  ]
+}

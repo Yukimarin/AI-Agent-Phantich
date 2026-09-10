@@ -35,7 +35,8 @@ WEEKS_CONFIG = [
     ("W31", "Tuần 31 (27-31/07)", ["2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31"]),
     ("W32", "Tuần 32 (03-07/08)", ["2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07"]),
     ("W33", "Tuần 33 (10-14/08)", ["2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14"]),
-    ("W34", "Tuần 34 (17-21/08)", ["2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21"])
+    ("W34", "Tuần 34 (17-21/08)", ["2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21"]),
+    ("W35", "Tuần 35 (24-28/08)", ["2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28"])
 ]
 
 ALL_DATES = []
@@ -159,10 +160,10 @@ def main():
                         "day_tasks": day_tasks_list
                     }
 
-    # 3. Tính toán thời điểm hiện tại trừ 1 ngày làm mốc giới hạn báo cáo (Vấn đề 2)
-    # Lấy ngày hiện tại thực tế trừ đi 1 ngày.
-    today_str = (datetime.date.today() - datetime.timedelta(days=1)).isoformat()
-    print(f"📅 Thời gian giới hạn ghi nhận báo cáo (hết ngày hôm qua): {today_str}")
+    # 3. Tính toán thời điểm mốc giới hạn báo cáo
+    # Toàn công ty nghỉ lễ 31/08 - 02/09 -> Mốc chốt kiểm toán tuần 24-28/08 là ngày 28/08/2026
+    today_str = "2026-08-28"
+    print(f"📅 Thời gian giới hạn ghi nhận báo cáo (chốt ngày): {today_str}")
         
     wload_active = defaultdict(int)
     wload_overdue = defaultdict(int)

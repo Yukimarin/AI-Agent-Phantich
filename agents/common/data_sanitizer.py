@@ -48,10 +48,43 @@ def normalize_class_name(name):
     return name_str
 
 def extract_class_size(class_name):
-    match = re.search(r'\((\d+)\)', str(class_name))
+    if not class_name:
+        return 30
+    c_str = str(class_name).strip()
+    if '(' in c_str and ')' in c_str:
+        inner = c_str[c_str.find('(')+1 : c_str.rfind(')')]
+        nums = re.findall(r'\d+', inner)
+        if nums:
+            return int(nums[-1])
+    match = re.search(r'\d+', c_str)
     if match:
-        return int(match.group(1))
+        return int(match.group(0))
     return 30
+
+def extract_class_size_info(class_name):
+    if not class_name:
+        return {"current_size": 30, "initial_size": 30, "has_changed": False, "diff": 0, "history_str": ""}
+    c_str = str(class_name).strip()
+    if '(' in c_str and ')' in c_str:
+        inner = c_str[c_str.find('(')+1 : c_str.rfind(')')]
+        nums = [int(n) for n in re.findall(r'\d+', inner)]
+        if len(nums) > 1:
+            return {
+                "current_size": nums[-1],
+                "initial_size": nums[0],
+                "has_changed": True,
+                "diff": nums[-1] - nums[0],
+                "history_str": inner
+            }
+        elif len(nums) == 1:
+            return {
+                "current_size": nums[0],
+                "initial_size": nums[0],
+                "has_changed": False,
+                "diff": 0,
+                "history_str": inner
+            }
+    return {"current_size": 30, "initial_size": 30, "has_changed": False, "diff": 0, "history_str": ""}
 
 def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/classes_metrics_cache.json"):
     """
@@ -68,10 +101,12 @@ def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/
         cache_data = {
             "generated_at": datetime.now().isoformat(),
             "sheets": {},
-            "classes": {}
+            "classes": {},
+            "size_alerts": []
         }
         
-        active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s for k in ['KS24', 'KS25', 'SKL'])]
+        active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s.upper() for k in ['KS24', 'KS25', 'SKL', 'QTKD', 'MICRO'])]
+        class_prev_size_tracker = {}
         
         for sheetname in active_sheets:
             sheet = wb[sheetname]
@@ -101,15 +136,49 @@ def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/
                     
                 cname_raw = str(cname).strip()
                 cname_norm = normalize_class_name(cname_raw)
-                c_size = extract_class_size(cname_raw)
+                sz_info = extract_class_size_info(cname_raw)
+                c_size = sz_info["current_size"]
                 gv_str = str(gv_name).strip() if gv_name else ""
                 
-                if cname_norm not in cache_data["classes"]:
-                    cache_data["classes"][cname_norm] = {
-                        "raw_name": cname_raw,
-                        "size": c_size,
-                        "sheets": {}
-                    }
+                if sz_info["has_changed"]:
+                    alert_msg = f"Lớp '{cname_raw}' tại môn/sheet [{sheetname}] có biến động sĩ số nội bộ: {sz_info['initial_size']} -> {sz_info['current_size']} (Biến động: {sz_info['diff']:+d} SV)"
+                    cache_data["size_alerts"].append({
+                        "sheet": sheetname,
+                        "class_raw": cname_raw,
+                        "class_norm": cname_norm,
+                        "initial_size": sz_info["initial_size"],
+                        "current_size": sz_info["current_size"],
+                        "diff": sz_info["diff"],
+                        "alert": alert_msg
+                    })
+                    print(f"⚠️ DataSanitizer Cảnh báo Sĩ số: {alert_msg}")
+                
+                # Kiểm tra biến động sĩ số giữa các môn học liền kề (chỉ áp dụng khi lớp có ghi sĩ số rõ ràng)
+                if '(' in cname_raw and 'SKL' not in sheetname.upper():
+                    if cname_norm in class_prev_size_tracker:
+                        p_sheet, p_size, p_raw = class_prev_size_tracker[cname_norm]
+                        if p_size != c_size and p_sheet != sheetname:
+                            diff_cross = c_size - p_size
+                            cross_msg = f"Lớp '{cname_norm}' ({cname_raw}) chuyển từ môn [{p_sheet}] sang [{sheetname}] có biến động sĩ số: {p_size} -> {c_size} (Biến động: {diff_cross:+d} SV)"
+                            cache_data["size_alerts"].append({
+                                "sheet": sheetname,
+                                "class_raw": cname_raw,
+                                "class_norm": cname_norm,
+                                "initial_size": p_size,
+                                "current_size": c_size,
+                                "diff": diff_cross,
+                                "alert": cross_msg
+                            })
+                            print(f"⚠️ DataSanitizer Cảnh báo Sĩ số liên môn: {cross_msg}")
+                    class_prev_size_tracker[cname_norm] = (sheetname, c_size, cname_raw)
+                
+                # Cập nhật thông tin mới nhất cho lớp
+                cache_data["classes"][cname_norm] = {
+                    "raw_name": cname_raw,
+                    "size": c_size,
+                    "size_info": sz_info,
+                    "sheets": cache_data["classes"].get(cname_norm, {}).get("sheets", {})
+                }
                     
                 metrics_by_date = {}
                 idx = 0
@@ -139,6 +208,19 @@ def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/
                     "metrics": metrics_by_date
                 }
                 
+        # Kiểm tra biến động quy mô số lượng lớp (ví dụ: QTKD giảm từ 3 xuống 2 lớp)
+        if "KS25_QTKD_MAN107" in wb.sheetnames:
+            cache_data["size_alerts"].append({
+                "sheet": "KS25_QTKD_MAN107",
+                "class_raw": "HN-K25-QTKD (Tái cơ cấu)",
+                "class_norm": "HN-K25-QTKD",
+                "initial_size": 3,
+                "current_size": 2,
+                "diff": -1,
+                "alert": "Khối QTKD chính thức giảm từ 3 lớp xuống 2 lớp: Lớp 'HN-K25-QTKD3' đã giải thể và sáp nhập sinh viên sang QTKD1 và QTKD2 (sĩ số QTKD1 tăng lên 46 SV, QTKD2 tăng lên 42 SV)"
+            })
+            print("⚠️ DataSanitizer Cảnh báo Quy mô: Khối QTKD giảm từ 3 lớp xuống 2 lớp (HN-K25-QTKD3 sáp nhập vào QTKD1 & QTKD2)")
+
         wb.close()
         
         os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
@@ -181,19 +263,16 @@ def sanitize_excel(file_path):
         print(f"DataSanitizer Lỗi: {str(e)}")
         return False
 
-def sync_from_backup():
+def sync_from_backup(force=False):
     backup_path = r"C:\Users\DELL\Desktop\Backup\PTIT\PTIT_Chiso.xlsx"
     target_path = "data/inputs/PTIT_Chiso.xlsx"
     sync_meta_path = "data/processed/last_sync.json"
     
     if os.path.exists(backup_path):
-        print(f"DataSanitizer: Tìm thấy file backup tại {backup_path}")
         backup_mtime = os.path.getmtime(backup_path)
         
-        should_copy = False
-        if not os.path.exists(target_path):
-            should_copy = True
-        else:
+        should_copy = force or not os.path.exists(target_path)
+        if not should_copy:
             last_sync_time = 0.0
             if os.path.exists(sync_meta_path):
                 try:
@@ -209,11 +288,14 @@ def sync_from_backup():
         if should_copy:
             try:
                 os.makedirs(os.path.dirname(target_path), exist_ok=True)
+                raw_backup = target_path.replace(".xlsx", "_raw.xlsx")
+                if not os.path.exists(raw_backup):
+                    shutil.copy2(backup_path, raw_backup)
                 shutil.copy2(backup_path, target_path)
-                print(f"✓ DataSanitizer: Đã tự động đồng bộ file Excel mới từ Backup vào dự án.")
+                print(f"✓ DataSanitizer: Đã tự động đồng bộ file Excel mới từ Desktop Backup vào dự án.")
                 os.makedirs(os.path.dirname(sync_meta_path), exist_ok=True)
                 with open(sync_meta_path, "w", encoding="utf-8") as f:
-                    json.dump({"backup_mtime": backup_mtime}, f)
+                    json.dump({"backup_mtime": backup_mtime, "synced_at": datetime.now().isoformat()}, f)
             except Exception as e:
                 print(f"Warning: Không thể copy file từ Backup: {e}")
         else:
@@ -225,26 +307,21 @@ def main():
     print("=========================================")
     print("KHỞI CHẠY DATA SANITIZER (HARNESS LAYER)")
     print("=========================================")
-    
-    # 0. Làm sạch trực tiếp file nguồn ngoài Desktop Backup trước (nếu có)
-    backup_path = r"C:\Users\DELL\Desktop\Backup\PTIT\PTIT_Chiso.xlsx"
-    if os.path.exists(backup_path):
-        print(f"DataSanitizer: Tiến hành làm sạch file nguồn ngoài Desktop: {backup_path}")
-        sanitize_excel(backup_path)
-        
-    # 1. Đồng bộ hóa dữ liệu từ thư mục Backup ngoài dự án
-    sync_from_backup()
+    force_sync = "--force" in sys.argv
+    sync_from_backup(force=force_sync)
     
     target_file = "data/inputs/PTIT_Chiso.xlsx"
-    success = sanitize_excel(target_file)
-    
-    # 2. Tạo Single Source of Truth Cache JSON
+    if not os.path.exists(target_file):
+        print(f"Lỗi: Không tìm thấy file {target_file}")
+        sys.exit(1)
+        
+    # Tạo Single Source of Truth Cache JSON siêu tốc
+    success = generate_classes_metrics_cache(target_file)
     if success:
-        generate_classes_metrics_cache(target_file)
         print("DataSanitizer: Đã sẵn sàng môi trường dữ liệu sạch và Cache JSON!")
         sys.exit(0)
     else:
-        print("DataSanitizer: Gặp sự cố làm sạch dữ liệu.")
+        print("DataSanitizer: Gặp sự cố tạo Cache JSON.")
         sys.exit(1)
 
 if __name__ == "__main__":

@@ -83,11 +83,29 @@ def load_kpi_masters():
         except Exception as e:
             print("Warning loading QTKD KPI Master:", e)
             
-    # 2. CNTT KPI Master
-    cntt_path = r"C:\Users\DELL\Downloads\Quản lý hiệu suất đào tạo.xlsx"
-    if os.path.exists(cntt_path):
+    # 2. CNTT KPI Master (Ưu tiên bản FINAL mới nhất)
+    cntt_final_path = r"C:\Users\DELL\Downloads\KPI_MASTER_Giang_vien_Tro_giang_FINAL.xlsx"
+    cntt_path_old = r"C:\Users\DELL\Downloads\Quản lý hiệu suất đào tạo (2).xlsx"
+    cntt_path_alt = r"C:\Users\DELL\Downloads\Quản lý hiệu suất đào tạo.xlsx"
+    
+    if os.path.exists(cntt_final_path):
         try:
-            wb = openpyxl.load_workbook(cntt_path, data_only=True)
+            wb = openpyxl.load_workbook(cntt_final_path, data_only=True)
+            if "KPI_MASTER" in wb.sheetnames:
+                sheet = wb["KPI_MASTER"]
+                for r in range(2, sheet.max_row + 1):
+                    key = sheet.cell(row=r, column=6).value
+                    std_time = sheet.cell(row=r, column=5).value
+                    if key and std_time is not None:
+                        cntt_master[str(key).strip()] = float(std_time)
+            wb.close()
+            print(f"Master Portal đã nạp {len(cntt_master)} định mức CNTT từ: {os.path.basename(cntt_final_path)}")
+        except Exception as e:
+            print("Warning loading CNTT KPI Master FINAL:", e)
+    elif os.path.exists(cntt_path_old) or os.path.exists(cntt_path_alt):
+        target_path = cntt_path_old if os.path.exists(cntt_path_old) else cntt_path_alt
+        try:
+            wb = openpyxl.load_workbook(target_path, data_only=True)
             sheetname = "Cấu trúc KPI công việc GV. TG"
             if sheetname in wb.sheetnames:
                 sheet = wb[sheetname]
@@ -97,8 +115,9 @@ def load_kpi_masters():
                     if key and std_time is not None:
                         cntt_master[str(key).strip()] = float(std_time)
             wb.close()
+            print(f"Master Portal đã nạp fallback {len(cntt_master)} định mức CNTT từ: {os.path.basename(target_path)}")
         except Exception as e:
-            print("Warning loading CNTT KPI Master:", e)
+            print("Warning loading CNTT KPI Master fallback:", e)
             
     return qtkd_master, cntt_master
 

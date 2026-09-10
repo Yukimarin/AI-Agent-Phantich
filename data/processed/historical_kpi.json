@@ -2577,5 +2577,184 @@
         }
       }
     }
+  },
+  "2026-09-01": {
+    "Trần Thị Mỹ Phước": {
+      "execution_faults": {
+        "QLDTXAY2 - [QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI": {
+          "count": 3,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Nguyễn Bá Minh Đạo": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 7,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Mai Xuân Chinh": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 7,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Ngô Quang Huấn": {
+      "execution_faults": {
+        "REXPCHUO2 - [RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT": {
+          "count": 3,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        },
+        "REXPCHUO3 - [RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS": {
+          "count": 5,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lương Quốc Tuấn": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 1,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Trịnh Quốc Hai": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS26NANG - [KS26]_IT102_Kỹ năng prompting với AI": {
+          "count": 5,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Phạm Tuấn Bình": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 37,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lê Nhựt Mi": {
+      "execution_faults": {},
+      "review_faults": {
+        "QTKDDAO - [QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ": {
+          "count": 3,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lê Thành Ngọc": {
+      "execution_faults": {
+        "QTKDSX - [QTKD] SX Tài nguyên học tập K26": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Hoàng Thị Hậu": {
+      "execution_faults": {},
+      "review_faults": {
+        "QTKDDIEU - [QTKDS] Điều chỉnh KPI Master chi tiết": {
+          "count": 1,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    }
+  },
+  "2026-08-28": {
+    "Nguyễn Bá Minh Đạo": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 7,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Mai Xuân Chinh": {
+      "execution_faults": {
+        "PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action": {
+          "count": 6,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Ngô Quang Huấn": {
+      "execution_faults": {
+        "REXPCHUO3 - [RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Lương Quốc Tuấn": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS26MON - [KS26]_IT101_Nhập môn CNTT": {
+          "count": 1,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Trịnh Quốc Hai": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS26NANG - [KS26]_IT102_Kỹ năng prompting với AI": {
+          "count": 5,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Phạm Tuấn Bình": {
+      "execution_faults": {},
+      "review_faults": {
+        "KS242 - [KS24]_IT212_Microservice_v2": {
+          "count": 37,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lê Nhựt Mi": {
+      "execution_faults": {},
+      "review_faults": {
+        "QTKDDAO - [QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ": {
+          "count": 3,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    },
+    "Lê Thành Ngọc": {
+      "execution_faults": {
+        "QTKDSX - [QTKD] SX Tài nguyên học tập K26": {
+          "count": 1,
+          "type": "Thi công chậm (Cần làm/Đang làm)"
+        }
+      },
+      "review_faults": {}
+    },
+    "Hoàng Thị Hậu": {
+      "execution_faults": {},
+      "review_faults": {
+        "QTKDDIEU - [QTKDS] Điều chỉnh KPI Master chi tiết": {
+          "count": 1,
+          "type": "Chậm duyệt bài (Chờ duyệt)"
+        }
+      }
+    }
   }
 }

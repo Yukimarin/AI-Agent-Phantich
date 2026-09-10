@@ -3,511 +3,291 @@
     "KS24": {
       "cv": [
         {
-          "class_name": "HCM-KS24-CNTT1",
-          "course_name": "Java Web Service",
-          "size": 51,
-          "v_class": 3.7367777777777778,
-          "mult_env": 1.0,
-          "pred_old": 70.47242126508598,
-          "actual_pass": 86.27450980392157,
-          "err": 15.80208853883559
+          "class_name": "HN-K24-CNTT1",
+          "course_name": "[IT-213] AI Integration in Action",
+          "size": 36,
+          "v_class": 8.567222222222222,
+          "mult_env": 0.9946638888888889,
+          "pred_old": 50.61849219373327,
+          "actual_pass": 72.22222222222221,
+          "err": 21.603730028488947
         },
         {
-          "class_name": "HCM-KS24-CNTT2",
-          "course_name": "Java Web Service",
-          "size": 27,
-          "v_class": 0.0,
+          "class_name": "HN-K24-CNTT2",
+          "course_name": "[IT-213] AI Integration in Action",
+          "size": 39,
+          "v_class": 7.051666666666667,
           "mult_env": 1.0,
-          "pred_old": 67.31899487179487,
-          "actual_pass": 81.48148148148148,
-          "err": 14.16248660968661
+          "pred_old": 53.597176943589744,
+          "actual_pass": 71.7948717948718,
+          "err": 18.19769485128205
         },
         {
-          "class_name": "HCM-KS24-CNTT3",
-          "course_name": "Java Web Service",
-          "size": 12,
-          "v_class": 0.0,
+          "class_name": "HN-K24-CNTT4",
+          "course_name": "[IT-213] AI Integration in Action",
+          "size": 32,
+          "v_class": 3.6333333333333333,
           "mult_env": 1.0,
-          "pred_old": 67.95572923076922,
-          "actual_pass": 91.66666666666666,
-          "err": 23.710937435897435
+          "pred_old": 53.97657526366898,
+          "actual_pass": 37.5,
+          "err": 16.476575263668977
         },
         {
-          "class_name": "HN-KS24-CNTT1",
-          "course_name": "Java Web Service",
+          "class_name": "HCM-K24-CNTT1",
+          "course_name": "[IT-213] AI Integration in Action",
+          "size": 44,
+          "v_class": 1.8944444444444446,
+          "mult_env": 1.0,
+          "pred_old": 55.11586147621296,
+          "actual_pass": 25.0,
+          "err": 30.115861476212963
+        },
+        {
+          "class_name": "HN-K24-CNTT3",
+          "course_name": "[IT-213] AI Integration in Action",
           "size": 42,
-          "v_class": 12.206111111111113,
-          "mult_env": 0.9764694444444444,
-          "pred_old": 66.33427967087587,
-          "actual_pass": 85.71428571428571,
-          "err": 19.380006043409836
-        },
-        {
-          "class_name": "HN-KS24-CNTT2",
-          "course_name": "Java Web Service",
-          "size": 40,
-          "v_class": 7.051944444444444,
-          "mult_env": 1.0,
-          "pred_old": 71.00244625887181,
-          "actual_pass": 97.5,
-          "err": 26.497553741128186
-        },
-        {
-          "class_name": "HN-KS24-CNTT3",
-          "course_name": "Java Web Service",
-          "size": 48,
-          "v_class": 25.26527777777778,
-          "mult_env": 0.9111736111111111,
-          "pred_old": 58.95178928866267,
-          "actual_pass": 81.25,
-          "err": 22.298210711337333
-        },
-        {
-          "class_name": "HN-KS24-CNTT4",
-          "course_name": "Java Web Service",
-          "size": 38,
-          "v_class": 10.5375,
-          "mult_env": 0.9848125,
-          "pred_old": 67.64984849531037,
-          "actual_pass": 84.21052631578947,
-          "err": 16.5606778204791
-        },
-        {
-          "class_name": "HN-KS24-CNTT5",
-          "course_name": "Java Web Service",
-          "size": 29,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 65.78459755968169,
-          "actual_pass": 37.93103448275862,
-          "err": 27.853563076923066
-        },
-        {
-          "class_name": "HN-KS24-CNTT6",
-          "course_name": "Java Web Service",
-          "size": 81,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 63.46772284900289,
-          "actual_pass": 61.72839506172839,
-          "err": 1.7393277872744974
+          "v_class": 16.13611111111111,
+          "mult_env": 0.9568194444444444,
+          "pred_old": 39.33062561573066,
+          "actual_pass": 28.57142857142857,
+          "err": 10.759197044302091
         }
       ],
       "curr": [
         {
-          "class_name": "HCM-KS24-CNTT1",
-          "course_name": "AI Application",
-          "size": 44,
-          "v_class": 1.8944444444444446,
+          "class_name": "HN-K24-CNTT1",
+          "course_name": "[IT-214] Microservices System Design",
+          "size": 35,
+          "v_class": 7.487222222222222,
           "mult_env": 1.0,
-          "pred_old": 59.20306625641023,
-          "pred_new": 59.20306625641023,
-          "actual_pass": 9.090909090909092
+          "pred_old": 61.02094306822832,
+          "pred_new": 58.49156017490747,
+          "actual_pass": 0.0
         },
         {
-          "class_name": "HCM-KS24-CNTT2",
-          "course_name": "AI Application",
-          "size": 34,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 63.41259855203618,
-          "pred_new": 63.41259855203618,
-          "actual_pass": 73.52941176470588
-        },
-        {
-          "class_name": "HCM-KS24-CNTT3",
-          "course_name": "AI Application",
-          "size": 12,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 67.95572923076922,
-          "pred_new": 67.95572923076922,
-          "actual_pass": 91.66666666666666
-        },
-        {
-          "class_name": "HN-KS24-CNTT1",
-          "course_name": "AI Application",
-          "size": 38,
-          "v_class": 8.567222222222222,
-          "mult_env": 0.9946638888888889,
-          "pred_old": 67.96702782407591,
-          "pred_new": 67.96702782407591,
-          "actual_pass": 92.10526315789474
-        },
-        {
-          "class_name": "HN-KS24-CNTT2",
-          "course_name": "AI Application",
+          "class_name": "HN-K24-CNTT2",
+          "course_name": "[IT-214] Microservices System Design",
           "size": 39,
-          "v_class": 7.051666666666667,
+          "v_class": 1.8801111111111108,
           "mult_env": 1.0,
-          "pred_old": 57.96913685207101,
-          "pred_new": 57.96913685207101,
-          "actual_pass": 5.128205128205128
+          "pred_old": 64.89281529079399,
+          "pred_new": 64.89281529079399,
+          "actual_pass": 0.0
         },
         {
-          "class_name": "HN-KS24-CNTT3",
-          "course_name": "AI Application",
+          "class_name": "HN-K24-CNTT4",
+          "course_name": "[IT-214] Microservices System Design",
+          "size": 32,
+          "v_class": 3.402888888888889,
+          "mult_env": 1.0,
+          "pred_old": 64.21490008273794,
+          "pred_new": 64.21490008273794,
+          "actual_pass": 0.0
+        },
+        {
+          "class_name": "HCM-K24-CNTT1",
+          "course_name": "[IT-214] Microservices System Design",
           "size": 43,
-          "v_class": 16.13611111111111,
-          "mult_env": 0.9568194444444444,
-          "pred_old": 51.61390027356009,
-          "pred_new": 0.0,
-          "actual_pass": 16.27906976744186
+          "v_class": 1.68,
+          "mult_env": 1.0,
+          "pred_old": 64.52178736848822,
+          "pred_new": 64.52178736848822,
+          "actual_pass": 0.0
         },
         {
-          "class_name": "HN-KS24-CNTT4",
-          "course_name": "AI Application",
-          "size": 33,
-          "v_class": 3.6333333333333333,
+          "class_name": "HN-K24-CNTT3",
+          "course_name": "[IT-214] Microservices System Design",
+          "size": 42,
+          "v_class": 6.7586666666666675,
           "mult_env": 1.0,
-          "pred_old": 60.07124474517485,
-          "pred_new": 60.07124474517485,
-          "actual_pass": 30.303030303030305
-        },
-        {
-          "class_name": "HN-KS24-CNTT5",
-          "course_name": "AI Application",
-          "size": 61,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 63.48637486578995,
-          "pred_new": 63.48637486578995,
-          "actual_pass": 42.62295081967213
-        },
-        {
-          "class_name": "HN-KS24-CNTT6",
-          "course_name": "AI Application",
-          "size": 37,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 65.6289057796258,
-          "pred_new": 65.6289057796258,
-          "actual_pass": 48.64864864864865
+          "pred_old": 60.79927090898148,
+          "pred_new": 55.910880298186775,
+          "actual_pass": 0.0
         }
       ]
     },
     "KS25": {
       "cv": [
         {
-          "class_name": "HCM-KS25-CNTT1",
-          "course_name": "Python",
-          "size": 41,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 73.58572878048784,
-          "actual_pass": 100.0,
-          "err": 26.41427121951216
-        },
-        {
-          "class_name": "HCM-KS25-CNTT2",
-          "course_name": "Python",
-          "size": 40,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 73.19359000000001,
-          "actual_pass": 100.0,
-          "err": 26.806409999999985
-        },
-        {
-          "class_name": "HCM-KS25-CNTT3",
-          "course_name": "Python",
+          "class_name": "HN-K25-CNTT5",
+          "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 42,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 72.79020285714287,
-          "actual_pass": 92.85714285714286,
-          "err": 20.06693999999999
+          "v_class": 9.34455314009662,
+          "mult_env": 0.9907772342995169,
+          "pred_old": 55.51871705084516,
+          "actual_pass": 33.33333333333333,
+          "err": 22.185383717511833
         },
         {
-          "class_name": "HCM-KS25-CNTT4",
-          "course_name": "Python",
-          "size": 44,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 72.0801704545455,
-          "actual_pass": 93.18181818181817,
-          "err": 21.101647727272677
-        },
-        {
-          "class_name": "HCM-KS25-CNTT5_HK2",
-          "course_name": "Python",
-          "size": 39,
-          "v_class": 8.80419631093544,
-          "mult_env": 0.9934790184453228,
-          "pred_old": 72.79370843228355,
-          "actual_pass": 100.0,
-          "err": 27.20629156771645
-        },
-        {
-          "class_name": "HCM-KS25-CNTT6_HK2",
-          "course_name": "Python",
-          "size": 41,
-          "v_class": 7.118498023715415,
-          "mult_env": 1.0,
-          "pred_old": 72.63010977525502,
-          "actual_pass": 92.6829268292683,
-          "err": 20.052817054013275
-        },
-        {
-          "class_name": "HCM-KS25-CNTT7_HK2",
-          "course_name": "Python",
+          "class_name": "HN-K25-CNTT4",
+          "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 42,
-          "v_class": 13.889453227931488,
-          "mult_env": 0.9680527338603425,
-          "pred_old": 67.80257074640821,
-          "actual_pass": 76.19047619047619,
-          "err": 8.387905444067982
+          "v_class": 9.999764492753622,
+          "mult_env": 0.9875011775362319,
+          "pred_old": 57.50179001399639,
+          "actual_pass": 30.952380952380953,
+          "err": 26.54940906161544
         },
         {
-          "class_name": "HCM-KS25-CNTT8_HK2",
-          "course_name": "Python",
-          "size": 38,
-          "v_class": 39.46669960474308,
-          "mult_env": 0.9,
-          "pred_old": 52.385118687990456,
-          "actual_pass": 44.73684210526316,
-          "err": 7.6482765827272985
-        },
-        {
-          "class_name": "HN-KS25-CNTT1",
-          "course_name": "Python",
-          "size": 44,
-          "v_class": 20.00102108036891,
-          "mult_env": 0.9374948945981554,
-          "pred_old": 62.85546083717516,
-          "actual_pass": 72.72727272727273,
-          "err": 9.871811890097575
-        },
-        {
-          "class_name": "HN-KS25-CNTT2",
-          "course_name": "Python",
-          "size": 43,
-          "v_class": 17.200553359683795,
-          "mult_env": 0.951497233201581,
-          "pred_old": 66.13001655665846,
-          "actual_pass": 83.72093023255815,
-          "err": 17.590913675899685
-        },
-        {
-          "class_name": "HN-KS25-CNTT3",
-          "course_name": "Python",
-          "size": 40,
-          "v_class": 15.295461133069828,
-          "mult_env": 0.9610226943346508,
-          "pred_old": 67.23451910019831,
-          "actual_pass": 77.5,
-          "err": 10.265480899801688
-        },
-        {
-          "class_name": "HN-KS25-CNTT4",
-          "course_name": "Python",
-          "size": 44,
-          "v_class": 17.87443346508564,
-          "mult_env": 0.9481278326745718,
-          "pred_old": 64.57911502640606,
-          "actual_pass": 77.27272727272727,
-          "err": 12.693612246321209
-        },
-        {
-          "class_name": "HN-KS25-CNTT5",
-          "course_name": "Python",
-          "size": 44,
-          "v_class": 19.02689723320158,
-          "mult_env": 0.9423655138339921,
-          "pred_old": 65.91570601967734,
-          "actual_pass": 81.81818181818183,
-          "err": 15.902475798504483
-        },
-        {
-          "class_name": "HN-KS25-CNTT6",
-          "course_name": "Python",
-          "size": 34,
-          "v_class": 14.938418972332016,
-          "mult_env": 0.9628079051383399,
-          "pred_old": 67.23529292314694,
-          "actual_pass": 85.29411764705883,
-          "err": 18.058824723911883
-        },
-        {
-          "class_name": "HN-KS25-CNTT7",
-          "course_name": "Python",
+          "class_name": "HN-K25-CNTT3",
+          "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
           "size": 37,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 70.39608756756756,
-          "actual_pass": 89.1891891891892,
-          "err": 18.79310162162163
+          "v_class": 15.166231884057972,
+          "mult_env": 0.9616688405797101,
+          "pred_old": 45.70091508460897,
+          "actual_pass": 29.72972972972973,
+          "err": 15.971185354879243
         },
         {
-          "class_name": "HN-KS25-CNTT8_HL",
-          "course_name": "Python",
-          "size": 24,
-          "v_class": 13.504,
-          "mult_env": 0.96998,
-          "pred_old": 67.96069026373198,
-          "actual_pass": 87.5,
-          "err": 19.539309736268024
+          "class_name": "HN-K25-CNTT2",
+          "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+          "size": 43,
+          "v_class": 13.579951690821256,
+          "mult_env": 0.9696002415458937,
+          "pred_old": 55.221900471735566,
+          "actual_pass": 32.55813953488372,
+          "err": 22.663760936851844
+        },
+        {
+          "class_name": "HN-K25-CNTT1",
+          "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+          "size": 42,
+          "v_class": 13.956968599033816,
+          "mult_env": 0.9677151570048309,
+          "pred_old": 51.46287910293778,
+          "actual_pass": 45.23809523809524,
+          "err": 6.224783864842536
+        },
+        {
+          "class_name": "HCM-K25-CNTT5",
+          "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+          "size": 39,
+          "v_class": 8.45072463768116,
+          "mult_env": 0.9952463768115942,
+          "pred_old": 61.496731125478114,
+          "actual_pass": 56.41025641025641,
+          "err": 5.086474715221705
+        },
+        {
+          "class_name": "HCM-K25-CNTT6",
+          "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+          "size": 40,
+          "v_class": 7.845712560386474,
+          "mult_env": 0.9982714371980677,
+          "pred_old": 60.596830846240195,
+          "actual_pass": 42.5,
+          "err": 18.096830846240195
+        },
+        {
+          "class_name": "HCM-K25-CNTT7",
+          "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+          "size": 42,
+          "v_class": 10.111340579710145,
+          "mult_env": 0.9869432971014492,
+          "pred_old": 50.43212051724837,
+          "actual_pass": 38.095238095238095,
+          "err": 12.336882422010277
+        },
+        {
+          "class_name": "HCM-K25-CNTT8",
+          "course_name": "[IT-215] Phát triển dịch vụ Web với FastAPI",
+          "size": 38,
+          "v_class": 34.681437198067634,
+          "mult_env": 0.9,
+          "pred_old": 34.77045418609116,
+          "actual_pass": 7.894736842105263,
+          "err": 26.875717343985894
         }
       ],
       "curr": [
         {
-          "class_name": "HCM-KS25-CNTT1",
-          "course_name": "Python Web",
-          "size": 41,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 70.5862111819887,
-          "pred_new": 70.5862111819887,
-          "actual_pass": 100.0
-        },
-        {
-          "class_name": "HCM-KS25-CNTT2",
-          "course_name": "Python Web",
-          "size": 40,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 70.22423692307689,
-          "pred_new": 70.22423692307689,
-          "actual_pass": 100.0
-        },
-        {
-          "class_name": "HCM-KS25-CNTT3",
-          "course_name": "Python Web",
+          "class_name": "HN-K25-CNTT5",
+          "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 42,
-          "v_class": 0.0,
+          "v_class": 1.6266666666666667,
           "mult_env": 1.0,
-          "pred_old": 69.85187956043953,
-          "pred_new": 69.85187956043953,
-          "actual_pass": 92.85714285714286
-        },
-        {
-          "class_name": "HCM-KS25-CNTT4",
-          "course_name": "Python Web",
-          "size": 44,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 69.19646503496503,
-          "pred_new": 69.19646503496503,
-          "actual_pass": 93.18181818181817
-        },
-        {
-          "class_name": "HCM-KS25-CNTT5_HK2",
-          "course_name": "Python Web",
-          "size": 39,
-          "v_class": 8.80419631093544,
-          "mult_env": 0.9934790184453228,
-          "pred_old": 64.01977429057278,
-          "pred_new": 64.01977429057278,
+          "pred_old": 68.48744960000006,
+          "pred_new": 68.48744960000006,
           "actual_pass": 0.0
         },
         {
-          "class_name": "HCM-KS25-CNTT6_HK2",
-          "course_name": "Python Web",
-          "size": 40,
-          "v_class": 7.118498023715415,
-          "mult_env": 1.0,
-          "pred_old": 64.26528684307688,
-          "pred_new": 64.26528684307688,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HCM-KS25-CNTT7_HK2",
-          "course_name": "Python Web",
+          "class_name": "HN-K25-CNTT4",
+          "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 42,
-          "v_class": 13.889453227931488,
-          "mult_env": 0.9680527338603425,
-          "pred_old": 60.92004785823414,
-          "pred_new": 60.92004785823414,
+          "v_class": 1.315,
+          "mult_env": 1.0,
+          "pred_old": 68.48744960000006,
+          "pred_new": 68.48744960000006,
           "actual_pass": 0.0
         },
         {
-          "class_name": "HCM-KS25-CNTT8_HK2",
-          "course_name": "Python Web",
-          "size": 38,
-          "v_class": 39.46669960474308,
-          "mult_env": 0.9,
-          "pred_old": 46.36307647384616,
-          "pred_new": 0.0,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HN-KS25-CNTT1",
-          "course_name": "Python Web",
-          "size": 42,
-          "v_class": 20.00102108036891,
-          "mult_env": 0.9374948945981554,
-          "pred_old": 55.53018674417415,
-          "pred_new": 55.53018674417415,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HN-KS25-CNTT2",
-          "course_name": "Python Web",
+          "class_name": "HN-K25-CNTT3",
+          "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 43,
-          "v_class": 17.200553359683795,
-          "mult_env": 0.951497233201581,
-          "pred_old": 58.36383953199962,
-          "pred_new": 58.36383953199962,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HN-KS25-CNTT3",
-          "course_name": "Python Web",
-          "size": 37,
-          "v_class": 15.295461133069828,
-          "mult_env": 0.9610226943346508,
-          "pred_old": 59.68705145977084,
-          "pred_new": 59.68705145977084,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HN-KS25-CNTT4",
-          "course_name": "Python Web",
-          "size": 42,
-          "v_class": 17.87443346508564,
-          "mult_env": 0.9481278326745718,
-          "pred_old": 57.28104091662923,
-          "pred_new": 57.28104091662923,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HN-KS25-CNTT5",
-          "course_name": "Python Web",
-          "size": 42,
-          "v_class": 19.02689723320158,
-          "mult_env": 0.9423655138339921,
-          "pred_old": 57.70153061609771,
-          "pred_new": 57.70153061609771,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HN-KS25-CNTT6",
-          "course_name": "Python Web",
-          "size": 33,
-          "v_class": 14.938418972332016,
-          "mult_env": 0.9628079051383399,
-          "pred_old": 59.13057710206157,
-          "pred_new": 59.13057710206157,
-          "actual_pass": 0.0
-        },
-        {
-          "class_name": "HN-KS25-CNTT7",
-          "course_name": "Python Web",
-          "size": 37,
-          "v_class": 0.0,
+          "v_class": 2.7133333333333334,
           "mult_env": 1.0,
-          "pred_old": 67.64192698544699,
-          "pred_new": 67.64192698544699,
-          "actual_pass": 89.1891891891892
+          "pred_old": 65.23275627162792,
+          "pred_new": 65.23275627162792,
+          "actual_pass": 0.0
         },
         {
-          "class_name": "HN-KS25-CNTT8_HL",
-          "course_name": "Python Web",
-          "size": 22,
-          "v_class": 13.504,
-          "mult_env": 0.96998,
-          "pred_old": 59.40742696577946,
-          "pred_new": 59.40742696577946,
+          "class_name": "HN-K25-CNTT2",
+          "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+          "size": 43,
+          "v_class": 1.6266666666666667,
+          "mult_env": 1.0,
+          "pred_old": 68.48744960000008,
+          "pred_new": 68.48744960000008,
+          "actual_pass": 0.0
+        },
+        {
+          "class_name": "HN-K25-CNTT1",
+          "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+          "size": 40,
+          "v_class": 6.585000000000001,
+          "mult_env": 1.0,
+          "pred_old": 65.53462422399998,
+          "pred_new": 65.53462422399998,
+          "actual_pass": 0.0
+        },
+        {
+          "class_name": "HCM-K25-CNTT5",
+          "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+          "size": 40,
+          "v_class": 1.0102222222222224,
+          "mult_env": 1.0,
+          "pred_old": 66.11331646307684,
+          "pred_new": 66.11331646307684,
+          "actual_pass": 0.0
+        },
+        {
+          "class_name": "HCM-K25-CNTT6",
+          "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+          "size": 40,
+          "v_class": 1.326111111111111,
+          "mult_env": 1.0,
+          "pred_old": 66.34446230896,
+          "pred_new": 66.34446230896,
+          "actual_pass": 0.0
+        },
+        {
+          "class_name": "HCM-K25-CNTT7",
+          "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+          "size": 39,
+          "v_class": 5.026,
+          "mult_env": 1.0,
+          "pred_old": 57.951725866266955,
+          "pred_new": 57.951725866266955,
+          "actual_pass": 0.0
+        },
+        {
+          "class_name": "HCM-K25-CNTT8",
+          "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+          "size": 36,
+          "v_class": 14.628555555555556,
+          "mult_env": 0.9643572222222222,
+          "pred_old": 47.55445398909812,
+          "pred_new": 33.60624570518592,
           "actual_pass": 0.0
         }
       ]
@@ -515,66 +295,46 @@
     "QTKD": {
       "cv": [
         {
-          "class_name": "HN-K25-QTKD1",
-          "course_name": "DTB201",
-          "size": 37,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 69.26859027027027,
-          "actual_pass": 86.48648648648648,
-          "err": 17.217896216216218
-        },
-        {
           "class_name": "HN-K25-QTKD2",
-          "course_name": "DTB201",
+          "course_name": "[BA201] Phân tích nghiệp vụ kinh doanh",
           "size": 40,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 70.97144500000002,
+          "v_class": 7.507878787878788,
+          "mult_env": 0.987460606060606,
+          "pred_old": 71.38406411031201,
           "actual_pass": 90.0,
-          "err": 19.028554999999983
+          "err": 18.61593588968799
         },
         {
-          "class_name": "HN-K25-QTKD3",
-          "course_name": "DTB201",
-          "size": 28,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 70.1162885714286,
-          "actual_pass": 92.85714285714286,
-          "err": 22.740854285714263
+          "class_name": "HN-K25-QTKD1",
+          "course_name": "[BA201] Phân tích nghiệp vụ kinh doanh",
+          "size": 33,
+          "v_class": 14.057363636363638,
+          "mult_env": 0.9547131818181818,
+          "pred_old": 65.32581550693872,
+          "actual_pass": 87.87878787878788,
+          "err": 22.55297237184915
         }
       ],
       "curr": [
         {
-          "class_name": "HN-K25-QTKD1",
-          "course_name": "PRJ302",
-          "size": 37,
-          "v_class": 0.0,
-          "mult_env": 1.0,
-          "pred_old": 76.20390832432432,
-          "pred_new": 76.20390832432432,
-          "actual_pass": 86.48648648648648
-        },
-        {
           "class_name": "HN-K25-QTKD2",
-          "course_name": "PRJ302",
+          "course_name": "[MAN107] Quản trị chiến lược doanh nghiệp",
           "size": 40,
-          "v_class": 0.0,
+          "v_class": 4.760000000000001,
           "mult_env": 1.0,
-          "pred_old": 78.247334,
-          "pred_new": 78.247334,
-          "actual_pass": 90.0
+          "pred_old": 71.06757421090911,
+          "pred_new": 71.06757421090911,
+          "actual_pass": 0.0
         },
         {
-          "class_name": "HN-K25-QTKD3",
-          "course_name": "PRJ302",
-          "size": 28,
-          "v_class": 0.0,
+          "class_name": "HN-K25-QTKD1",
+          "course_name": "[MAN107] Quản trị chiến lược doanh nghiệp",
+          "size": 33,
+          "v_class": 1.5694444444444444,
           "mult_env": 1.0,
-          "pred_old": 77.22114628571431,
-          "pred_new": 77.22114628571431,
-          "actual_pass": 92.85714285714286
+          "pred_old": 72.00673641696969,
+          "pred_new": 72.00673641696969,
+          "actual_pass": 0.0
         }
       ]
     }
@@ -582,5517 +342,568 @@
   "care_list": [
     {
       "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 580,
-      "full_name": "Bùi Xuân Huy Đức",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.00558933333334,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 45.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 582,
-      "full_name": "Cao Tất Thành",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.9%)"
-      ],
-      "p_final": 59.86546625641026,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 45.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 584,
-      "full_name": "Dương Gia Huy",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.2858354871795,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 585,
-      "full_name": "Dương Phúc Thịnh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 588,
-      "full_name": "Huỳnh La Tiến Lộc",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.7%)"
-      ],
-      "p_final": 58.74448164102564,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 41.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 591,
-      "full_name": "Hồ Quốc Khải",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 592,
-      "full_name": "Lu Nhựt Đình",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.0%)"
-      ],
-      "p_final": 59.0247277948718,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 593,
-      "full_name": "Lâm Gia Huy",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.4%)"
-      ],
-      "p_final": 59.44509702564105,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 594,
-      "full_name": "Lê Hữu Nhật Hào",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.2%)"
-      ],
-      "p_final": 59.16485087179488,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 595,
-      "full_name": "Lê Phú Thịnh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.2858354871795,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 603,
-      "full_name": "Nguyễn Hoàng Minh Nhật",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.7%)"
-      ],
-      "p_final": 59.72534317948719,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 44.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 604,
-      "full_name": "Nguyễn Lê Vũ",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.6%)"
-      ],
-      "p_final": 58.604358564102576,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 605,
-      "full_name": "Nguyễn Quang Anh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.3%)"
-      ],
-      "p_final": 59.304973948717965,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 609,
-      "full_name": "Nguyễn Tuấn Nhựt",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.3%)"
-      ],
-      "p_final": 59.304973948717965,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 610,
-      "full_name": "Nguyễn Tá Thọ",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 613,
-      "full_name": "Nguyễn Văn Toàn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 614,
-      "full_name": "Nguyễn Đại Phát",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 615,
-      "full_name": "Phan Lê Duy Thịnh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 616,
-      "full_name": "Phan Trung Kiên",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 618,
-      "full_name": "Phan Văn Đạt",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 620,
-      "full_name": "Phạm Công Thành",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.6%)"
-      ],
-      "p_final": 58.604358564102576,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 621,
-      "full_name": "Phạm Huỳnh Tiến Đạt",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.6%)"
-      ],
-      "p_final": 59.58522010256411,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 44.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 622,
-      "full_name": "Phạm Quang Huy",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (55.7%)"
-      ],
-      "p_final": 55.66177394871795,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 30.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 625,
-      "full_name": "Trần Hoàng Duy",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.3%)"
-      ],
-      "p_final": 59.304973948717965,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 626,
-      "full_name": "Trần Hoàng Thanh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 628,
-      "full_name": "Trần Minh Đức",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 631,
-      "full_name": "Trần Võ Hữu Tài",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.4%)"
-      ],
-      "p_final": 59.44509702564105,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 632,
-      "full_name": "Trần Đức Anh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.3%)"
-      ],
-      "p_final": 59.304973948717965,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 635,
-      "full_name": "Võ Thanh Khang",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.2%)"
-      ],
-      "p_final": 59.16485087179488,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 637,
-      "full_name": "Vũ Đăng Nguyên",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.2858354871795,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 639,
-      "full_name": "Đoàn Nhật Cường",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.6%)"
-      ],
-      "p_final": 58.604358564102576,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 640,
-      "full_name": "Đào Trọng Trí",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 60.2858354871795,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 671,
-      "full_name": "Bùi Tuấn Giang",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.4%)"
-      ],
-      "p_final": 59.44509702564105,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 676,
-      "full_name": "Hoàng Đình Tùng",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.6%)"
-      ],
-      "p_final": 58.604358564102576,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 680,
-      "full_name": "Mai Sơn Việt",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.6%)"
-      ],
-      "p_final": 58.604358564102576,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.5,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 684,
-      "full_name": "Nguyễn Trọng Đăng Dương",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 686,
-      "full_name": "Phạm Thanh Phong",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 687,
-      "full_name": "Trần Hữu Trung Phong",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.3%)"
-      ],
-      "p_final": 59.304973948717965,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 690,
-      "full_name": "Trương Công Quý",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.5%)"
-      ],
-      "p_final": 58.464235487179494,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 691,
-      "full_name": "Võ Nguyễn Quốc Đạt",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.3%)"
-      ],
-      "p_final": 59.304973948717965,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 2.2733333333333334,
-      "hw": 98.295,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 602,
-      "full_name": "Nguyễn Hoàng Hiệu",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (53.1%)"
-      ],
-      "p_final": 53.10523076923077,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 26.666666666666668,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 608,
-      "full_name": "Nguyễn Trần Minh Tuấn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (50.8%)"
-      ],
-      "p_final": 50.76984615384615,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 18.333333333333332,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 633,
-      "full_name": "Võ Chí Đức",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (53.1%)"
-      ],
-      "p_final": 53.10523076923077,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 26.666666666666668,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 634,
-      "full_name": "Võ Duy Nguyễn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (52.3%)"
-      ],
-      "p_final": 52.287846153846154,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 23.75,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 643,
-      "full_name": "Đỗ Đình Long",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (51.5%)"
-      ],
-      "p_final": 51.454892307692305,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 20.77777777777778,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 692,
-      "full_name": "Võ Thanh Nguyên",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.4%)"
-      ],
-      "p_final": 58.39876923076923,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 45.55555555555556,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 718,
-      "full_name": "Nguyễn Gia Huy",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.8%)"
-      ],
-      "p_final": 58.772430769230766,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.888888888888886,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HCM-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 978,
-      "full_name": "Hồ Công Thành Trung",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (53.6%)"
-      ],
-      "p_final": 53.572307692307696,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 28.333333333333332,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT4",
-      "course_name": "Python Web",
-      "student_id": 1481,
-      "full_name": "Nguyễn Trần Đình Luân",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.0%)"
-      ],
-      "p_final": 58.01888,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 44.2,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT4",
-      "course_name": "Python Web",
-      "student_id": 597,
-      "full_name": "Mai Quý Bình",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.3%)"
-      ],
-      "p_final": 57.30892307692308,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 41.666666666666664,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT4",
-      "course_name": "Python Web",
-      "student_id": 617,
-      "full_name": "Phan Trần Gia Khánh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (55.4%)"
-      ],
-      "p_final": 55.44061538461538,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 35.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1282,
-      "full_name": "Bùi Gia Anh",
+      "class_name": "HN-K24-CNTT1",
+      "course_name": "[IT-214] Microservices System Design",
+      "student_id": 152,
+      "full_name": "Nguyễn Nhật Minh",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
+        "Vắng chuyên cần > 20% (24.9%)"
       ],
-      "p_final": 46.36307647384616,
+      "p_final": 29.009263989457107,
       "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
+      "is_excellent": true,
+      "prior_hack": 96.0,
+      "hack": null,
+      "att": 24.88888888888889,
+      "hw": 88.87663360352724,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-K24-CNTT1",
+      "course_name": "[IT-214] Microservices System Design",
+      "student_id": 205,
+      "full_name": "Nguyễn Sỹ Trung",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (24.9%)"
+      ],
+      "p_final": 29.960606533952145,
+      "is_failed_new": true,
+      "is_excellent": true,
+      "prior_hack": 95.0,
+      "hack": null,
+      "att": 24.88888888888889,
+      "hw": 99.33269061582033,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-K24-CNTT1",
+      "course_name": "[IT-214] Microservices System Design",
+      "student_id": 288,
+      "full_name": "Nguyễn Văn Tùng",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (24.9%)"
+      ],
+      "p_final": 29.558530742820764,
+      "is_failed_new": true,
+      "is_excellent": true,
+      "prior_hack": 86.0,
+      "hack": null,
+      "att": 24.88888888888889,
+      "hw": 94.10461244332849,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-K24-CNTT1",
+      "course_name": "[IT-214] Microservices System Design",
+      "student_id": 203,
+      "full_name": "Trần Quang Hiệp",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực môn trước yếu (30.6%)"
+      ],
+      "p_final": 30.64443603543412,
+      "is_failed_new": false,
+      "is_excellent": true,
+      "prior_hack": 90.0,
+      "hack": null,
+      "att": 12.444444444444445,
+      "hw": 88.87663360352724,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-K24-CNTT4",
+      "course_name": "[IT-214] Microservices System Design",
+      "student_id": 96,
+      "full_name": "Nguyễn Thị Phương",
+      "risk_level": "YELLOW",
+      "reasons": [
+        "Học lực môn trước yếu (31.2%)"
+      ],
+      "p_final": 31.18424985666207,
+      "is_failed_new": false,
+      "is_excellent": true,
+      "prior_hack": 82.0,
+      "hack": null,
+      "att": 10.683733333333333,
+      "hw": 99.47833333333334,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
     },
     {
       "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1303,
-      "full_name": "Nguyễn Thiện Tân",
-      "risk_level": "RED",
+      "class_name": "HCM-K25-CNTT5",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 1476,
+      "full_name": "Hoàng Minh Quân",
+      "risk_level": "YELLOW",
       "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
+        "Học lực môn trước yếu (29.9%)"
       ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
+      "p_final": 29.913202467386263,
+      "is_failed_new": false,
+      "is_excellent": true,
+      "prior_hack": 75.0,
+      "hack": null,
+      "att": 13.376508593135151,
+      "hw": 90.22556390977444,
+      "el": 1.0,
       "rp": 100.0,
       "anomalies": []
     },
     {
       "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1327,
-      "full_name": "Lê Chí Vỹ",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1353,
-      "full_name": "Lê Phúc Duy",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1404,
-      "full_name": "Nguyễn Khắc Tiến",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1468,
-      "full_name": "Bạch Chí Lân",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1483,
-      "full_name": "Trần Văn Gia Khang",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1486,
-      "full_name": "Trần Bảo Trân",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1512,
-      "full_name": "Trần Phạm Minh Cường",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1527,
-      "full_name": "Trần Anh Tuấn",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1565,
-      "full_name": "Hà Ngọc Hoàng Tân",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1572,
-      "full_name": "Nguyễn Vĩnh Thành",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1590,
-      "full_name": "Nguyễn Hoàng Đức Huy",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1597,
-      "full_name": "Phạm Minh Tài",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1631,
-      "full_name": "Đặng Trần Anh Khoa",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1634,
-      "full_name": "Nguyễn Văn Hoàng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1645,
-      "full_name": "Nguyễn Hoàng Thiên Phúc",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1665,
-      "full_name": "Trần Đình Đạt",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 1690,
-      "full_name": "Nguyễn Khánh Tùng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 586,
-      "full_name": "Dương Trung Dũng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
       "student_id": 587,
       "full_name": "Hoàng Công Dũng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
+        "Vắng chuyên cần > 20% (21.5%)"
       ],
-      "p_final": 46.36307647384616,
+      "p_final": 56.59110786612922,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
+      "hack": null,
+      "att": 21.502297809327626,
+      "hw": 100.0,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
     },
     {
       "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
       "student_id": 589,
       "full_name": "Huỳnh Nguyễn Thành Đạt",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
+        "Vắng chuyên cần > 20% (21.5%)"
       ],
-      "p_final": 46.36307647384616,
+      "p_final": 45.60255175945798,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
+      "hack": null,
+      "att": 21.502297809327626,
+      "hw": 100.0,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
     },
     {
       "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 599,
-      "full_name": "Nguyễn Bá Hòa",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 601,
-      "full_name": "Nguyễn Gia Huy 2",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 611,
-      "full_name": "Nguyễn Việt Hoàng Anh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 617,
-      "full_name": "Phan Trần Gia Khánh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 619,
-      "full_name": "Phan Đình Nghị",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 627,
-      "full_name": "Trần Minh Ân",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 629,
-      "full_name": "Trần Quang Thiện",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 633,
-      "full_name": "Võ Chí Đức",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 636,
-      "full_name": "Vũ Trần Anh Hoàng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 642,
-      "full_name": "Đỗ Tiến Phúc",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 643,
-      "full_name": "Đỗ Đình Long",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 644,
-      "full_name": "Đỗ Hoàng Sơn",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 681,
-      "full_name": "Nguyễn Anh Dũng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 683,
-      "full_name": "Nguyễn Minh Khôi",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
-      "student_id": 692,
-      "full_name": "Võ Thanh Nguyên",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
-      ],
-      "p_final": 46.36307647384616,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K25",
-      "class_name": "HCM-KS25-CNTT8_HK2",
-      "course_name": "Python Web",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
       "student_id": 718,
       "full_name": "Nguyễn Gia Huy",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (52.2%)"
+        "Vắng chuyên cần > 20% (32.3%)"
       ],
-      "p_final": 46.36307647384616,
+      "p_final": 56.66048577048784,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": null,
-      "hack": 0.0,
-      "att": 52.15227272727273,
-      "hw": 80.8913043478261,
+      "hack": null,
+      "att": 32.25341284787409,
+      "hw": 100.0,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
     },
     {
-      "batch": "QTKD K25",
-      "class_name": "HN-K25-QTKD1",
-      "course_name": "PRJ302",
-      "student_id": 1704,
-      "full_name": "Nguyễn Bảo Châu",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 63.5168,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "QTKD K25",
-      "class_name": "HN-K25-QTKD1",
-      "course_name": "PRJ302",
-      "student_id": 1805,
-      "full_name": "Nguyễn Thu Thảo",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 63.5168,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "QTKD K25",
-      "class_name": "HN-K25-QTKD2",
-      "course_name": "PRJ302",
-      "student_id": 1728,
-      "full_name": "Nguyễn Phương Thảo 3",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (54.4%)"
-      ],
-      "p_final": 54.40879999999999,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 15.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "QTKD K25",
-      "class_name": "HN-K25-QTKD2",
-      "course_name": "PRJ302",
-      "student_id": 1753,
-      "full_name": "Trần Võ Huy Thành",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 63.5168,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "QTKD K25",
-      "class_name": "HN-K25-QTKD2",
-      "course_name": "PRJ302",
-      "student_id": 1762,
-      "full_name": "Nguyễn Văn Việt",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 64.4276,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "QTKD K25",
-      "class_name": "HN-K25-QTKD2",
-      "course_name": "PRJ302",
-      "student_id": 1780,
-      "full_name": "Nguyễn Phương Linh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 63.5168,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "QTKD K25",
-      "class_name": "HN-K25-QTKD3",
-      "course_name": "PRJ302",
-      "student_id": 1718,
-      "full_name": "Lê Nam Phong",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (56.4%)"
-      ],
-      "p_final": 56.41256,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 20.5,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 102,
-      "full_name": "Quách Văn Sơn Bách",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 103,
-      "full_name": "Đinh Trọng An",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 114,
-      "full_name": "Trần Đăng Việt",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 115,
-      "full_name": "Lê Tiến Đức",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 120,
-      "full_name": "Mai Duy Anh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 124,
-      "full_name": "Hoàng Văn Chung",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 93.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 131,
-      "full_name": "Tống Trần Huy Hoàng",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 133,
-      "full_name": "Hoàng Văn Lương",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 152,
-      "full_name": "Nguyễn Nhật Minh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 158,
-      "full_name": "Mai Văn Huy",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 68.12598369356355,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 85.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 180,
-      "full_name": "Phạm Viết Quân",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 192,
-      "full_name": "Đặng Quốc Toàn",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 68.12598369356355,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 85.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 203,
-      "full_name": "Trần Quang Hiệp",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 205,
-      "full_name": "Nguyễn Sỹ Trung",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 213,
-      "full_name": "Nguyễn Mạnh Thắng",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 93.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 214,
-      "full_name": "Vũ Nguyễn Hoàng Dương",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 68.4047344227943,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 86.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 240,
-      "full_name": "Phùng Văn Vượng",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 68.4047344227943,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 86.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 242,
-      "full_name": "Lê Duy Minh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 68.4047344227943,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 86.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 246,
-      "full_name": "Trần Trí Dương",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 247,
-      "full_name": "La Thế Phong",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 249,
-      "full_name": "Lê Xuân Ánh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 262,
-      "full_name": "Nguyễn Đăng Quang",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 263,
-      "full_name": "Nguyễn Thạc Hưng",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 68.12598369356355,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 85.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 278,
-      "full_name": "Phạm Phương Anh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.51973733971738,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 90.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 288,
-      "full_name": "Nguyễn Văn Tùng",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 292,
-      "full_name": "Lê Phú Toàn",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 96.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 304,
-      "full_name": "Hoàng Cương Cát",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 68.4047344227943,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 86.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 392,
-      "full_name": "Nguyễn Hoàng Phúc",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 398,
-      "full_name": "Nguyễn Quang Vinh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 68.12598369356355,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 85.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 401,
-      "full_name": "Lê Phương Linh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 405,
-      "full_name": "Nguyễn Mạnh Hùng",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 67.84723296433278,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 84.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 411,
-      "full_name": "Đinh Đình Thành",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 66.73223004740969,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 80.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 82,
-      "full_name": "Nguyễn Sơn Minh",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 93.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 86,
-      "full_name": "Đỗ Minh Tuyến",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 69.77314709356354,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 100.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT1",
-      "course_name": "AI Application",
-      "student_id": 89,
-      "full_name": "Trần Hữu Nhật",
-      "risk_level": "GREEN",
-      "reasons": [],
-      "p_final": 68.12598369356355,
-      "is_failed_new": false,
-      "is_excellent": true,
-      "prior_hack": null,
-      "hack": 85.0,
-      "att": 19.44666666666667,
-      "hw": 97.915,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "discipline_paradox"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 106,
-      "full_name": "Ngô Trung Chiến",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.8%)"
-      ],
-      "p_final": 58.75238892307693,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 45.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 111,
-      "full_name": "Đào Trường Sơn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.8%)"
-      ],
-      "p_final": 58.75238892307693,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 45.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 117,
-      "full_name": "An Hải Dũng",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.2%)"
-      ],
-      "p_final": 58.19189661538462,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 119,
-      "full_name": "Nguyễn Đình Sơn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.051773538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 129,
-      "full_name": "Triệu Quốc Bình",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.051773538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 134,
-      "full_name": "Nguyễn Quang Huy 7",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 139,
-      "full_name": "Nguyễn Văn Kiên",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 148,
-      "full_name": "Phạm Minh Tuấn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.8%)"
-      ],
-      "p_final": 57.77152738461538,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 41.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 150,
-      "full_name": "Hồ Hiểu Thanh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 157,
-      "full_name": "Vũ Đức Huy Hoàng",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.8%)"
-      ],
-      "p_final": 58.75238892307693,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 45.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 159,
-      "full_name": "Nguyễn Đăng Dương",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 167,
-      "full_name": "Tô Anh Tuấn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.8%)"
-      ],
-      "p_final": 57.77152738461538,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 41.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 170,
-      "full_name": "Đỗ Trí Công",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.8%)"
-      ],
-      "p_final": 57.77152738461538,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 41.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 172,
-      "full_name": "Nguyễn Đức Anh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 188,
-      "full_name": "Lê Nhật Linh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.2%)"
-      ],
-      "p_final": 58.19189661538462,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 195,
-      "full_name": "Bùi Thái Sơn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 202,
-      "full_name": "Cao Chí Thiện",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.051773538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 211,
-      "full_name": "Phạm Việt An",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 216,
-      "full_name": "Nguyễn Huy Hoàn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.5%)"
-      ],
-      "p_final": 59.45300430769231,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 47.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 220,
-      "full_name": "Hoàng Minh Quang",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.051773538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 225,
-      "full_name": "Nguyễn Thị Yến",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 230,
-      "full_name": "Nguyễn Công Gia Huy",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 235,
-      "full_name": "Vũ Đình Kiên",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 241,
-      "full_name": "Nguyễn Việt Trung",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 243,
-      "full_name": "Phan Thuận Thành",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.051773538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 268,
-      "full_name": "Phùng Quang Tiến",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.8%)"
-      ],
-      "p_final": 58.75238892307693,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 45.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 280,
-      "full_name": "Nguyễn Tiến Lộc",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 282,
-      "full_name": "Đỗ Đức Mạnh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.051773538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 314,
-      "full_name": "Phạm Tiến Hưng",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 390,
-      "full_name": "Phạm Hương Quỳnh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 399,
-      "full_name": "Đặng Thanh Bình",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.051773538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 414,
-      "full_name": "Trần Thị Thu Trang",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 68,
-      "full_name": "Đỗ Tiến Đạt",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.2%)"
-      ],
-      "p_final": 58.19189661538462,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 71,
-      "full_name": "Đinh Quang Huy",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.2%)"
-      ],
-      "p_final": 58.19189661538462,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 85,
-      "full_name": "Lê Đức Anh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.2%)"
-      ],
-      "p_final": 58.19189661538462,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 97,
-      "full_name": "Đỗ Hoàng Anh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.8%)"
-      ],
-      "p_final": 57.77152738461538,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 41.5,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT2",
-      "course_name": "AI Application",
-      "student_id": 98,
-      "full_name": "Nguyễn Dương Phương Trang",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.4%)"
-      ],
-      "p_final": 57.35115815384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 5.13,
-      "hw": 93.59,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 112,
-      "full_name": "Nguyễn Hải Đăng 2",
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 692,
+      "full_name": "Võ Thanh Nguyên",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
+        "Vắng chuyên cần > 20% (21.5%)"
       ],
-      "p_final": 55.696084862471736,
+      "p_final": 58.50038086897367,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": null,
-      "hack": 0.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
+      "hack": null,
+      "att": 21.502297809327626,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 627,
+      "full_name": "Trần Minh Ân",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (21.5%)"
+      ],
+      "p_final": 45.60255175945798,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 21.502297809327626,
+      "hw": 100.0,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 642,
+      "full_name": "Đỗ Tiến Phúc",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (43.0%)"
+      ],
+      "p_final": 20.643830115351815,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 43.00455046383212,
+      "hw": 90.03132667617687,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 681,
+      "full_name": "Nguyễn Anh Dũng",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (43.0%)"
+      ],
+      "p_final": 25.119813020656807,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 43.00455046383212,
+      "hw": 90.03132667617687,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 636,
+      "full_name": "Vũ Trần Anh Hoàng",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (32.3%)"
+      ],
+      "p_final": 42.64041824783347,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 32.25341284787409,
+      "hw": 90.03132667617687,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 643,
+      "full_name": "Đỗ Đình Long",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (43.0%)"
+      ],
+      "p_final": 20.643830115351815,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 43.00455046383212,
+      "hw": 90.03132667617687,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 1645,
+      "full_name": "Nguyễn Hoàng Thiên Phúc",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (43.0%)"
+      ],
+      "p_final": 20.643830115351815,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 43.00455046383212,
+      "hw": 90.03132667617687,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 1327,
+      "full_name": "Lê Chí Vỹ",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (21.5%)"
+      ],
+      "p_final": 22.62028531626233,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 21.502297809327626,
+      "hw": 100.0,
+      "el": 1.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 1282,
+      "full_name": "Bùi Gia Anh",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (43.0%)"
+      ],
+      "p_final": 20.643830115351815,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 43.00455046383212,
+      "hw": 90.03132667617687,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 1634,
+      "full_name": "Nguyễn Văn Hoàng",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (21.5%)"
+      ],
+      "p_final": 22.62028531626233,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 21.502297809327626,
+      "hw": 100.0,
+      "el": 1.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 1597,
+      "full_name": "Phạm Minh Tài",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (21.5%)"
+      ],
+      "p_final": 22.62028531626233,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 21.502297809327626,
+      "hw": 100.0,
+      "el": 1.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT8",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 1690,
+      "full_name": "Nguyễn Khánh Tùng",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (37.6%)"
+      ],
+      "p_final": 20.982012517647586,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 37.629094542910956,
+      "hw": 90.03132667617687,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
     },
     {
       "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 122,
-      "full_name": "Trương Hà Cẩm Linh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 137,
-      "full_name": "Đặng Khánh An",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 151,
-      "full_name": "Tạ Xuân Chiến",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 51.22394112650712,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 162,
-      "full_name": "Bùi Văn Phương",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 173,
-      "full_name": "Đỗ Gia Hưng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 185,
-      "full_name": "Trần Khánh An",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 55.696084862471736,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 194,
-      "full_name": "Trần An Ninh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 53.36910088035328,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 50.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 208,
-      "full_name": "Hoàng Nguyên Đức",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 209,
-      "full_name": "Nguyễn Trần Bảo Khánh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 218,
-      "full_name": "Hoàng Trung Dũng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 221,
-      "full_name": "Vi Trung Quý",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 222,
-      "full_name": "Hà Quang Huy",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 223,
-      "full_name": "Trần Anh Dũng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 51.49208609573789,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
+      "class_name": "HN-K24-CNTT3",
+      "course_name": "[IT-214] Microservices System Design",
       "student_id": 226,
       "full_name": "Hoàng Thiên Sơn",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
+        "Vắng chuyên cần > 20% (25.1%)"
       ],
-      "p_final": 50.68765118804558,
+      "p_final": 59.794185339388584,
       "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 227,
-      "full_name": "Đỗ Hồng Kỳ",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 236,
-      "full_name": "Đoàn Việt Anh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.82172367266097,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.5,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 238,
-      "full_name": "Lê Thanh Tùng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 51.49208609573789,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 239,
-      "full_name": "Nguyễn Ngọc Thanh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 244,
-      "full_name": "Nguyễn Trường An",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 53.36910088035328,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 50.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
+      "is_excellent": true,
+      "prior_hack": 76.0,
+      "hack": null,
+      "att": 25.10973134328358,
+      "hw": 98.81,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
     },
     {
       "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 250,
-      "full_name": "Đặng Văn Thắng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 53.36910088035328,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 50.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 252,
-      "full_name": "Lê Thành Long",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 254,
-      "full_name": "Hồ Khánh Linh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 51.49208609573789,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 267,
-      "full_name": "Nguyễn Minh Duy",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 273,
-      "full_name": "Nguyễn Tiến Thành",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 52.43059348804559,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 285,
-      "full_name": "Nguyễn Văn Hiếu",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 298,
-      "full_name": "Lê Hoàng Xuân Vinh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 53.36910088035328,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 50.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 303,
-      "full_name": "Nguyễn Thế Kiên",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 308,
-      "full_name": "Đỗ Chung Hiếu",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 402,
-      "full_name": "Bàng Trọng Tú",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 53.36910088035328,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 50.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 415,
-      "full_name": "Nguyễn Quyết Thắng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 53.1009559111225,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 49.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
+      "class_name": "HN-K24-CNTT3",
+      "course_name": "[IT-214] Microservices System Design",
       "student_id": 416,
       "full_name": "Nguyễn Hoàng Nhật",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
+        "Vắng chuyên cần > 20% (25.1%)"
       ],
-      "p_final": 48.676563918814814,
+      "p_final": 27.447735428314978,
       "is_failed_new": true,
       "is_excellent": false,
-      "prior_hack": null,
-      "hack": 32.5,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 723,
-      "full_name": "Phan Phước Anh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 55.696084862471736,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 0.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
+      "prior_hack": 0.0,
+      "hack": null,
+      "att": 25.10973134328358,
+      "hw": 98.81,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
     },
     {
       "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 75,
-      "full_name": "Lê Trung Đông",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 53.36910088035328,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 50.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 88,
-      "full_name": "Nguyễn Quang Huy 8",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 53.36910088035328,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 50.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": []
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 887,
-      "full_name": "Nguyễn Minh Hoàng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 889,
-      "full_name": "Nguyễn Thanh Tùng 3",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 51.49208609573789,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 901,
-      "full_name": "Trần Thị Khánh Huyền",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
+      "class_name": "HN-K24-CNTT3",
+      "course_name": "[IT-214] Microservices System Design",
       "student_id": 902,
       "full_name": "Trịnh Khắc Hưng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
+        "Vắng chuyên cần > 20% (25.1%)"
       ],
-      "p_final": 50.68765118804558,
+      "p_final": 29.897092669694292,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
+      "hack": null,
+      "att": 25.10973134328358,
+      "hw": 98.81,
       "el": 0.0,
       "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
+      "anomalies": []
     },
     {
       "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 910,
-      "full_name": "Đặng Tô Ngọc Dũng",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 92,
-      "full_name": "Nguyễn Duy Mạnh",
-      "risk_level": "RED",
-      "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
-      ],
-      "p_final": 50.68765118804558,
-      "is_failed_new": true,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
+      "class_name": "HN-K24-CNTT3",
+      "course_name": "[IT-214] Microservices System Design",
       "student_id": 933,
       "full_name": "Ngô Quang Anh",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
+        "Vắng chuyên cần > 20% (20.9%)"
       ],
-      "p_final": 50.68765118804558,
+      "p_final": 60.398952352938764,
       "is_failed_new": true,
       "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
+      "prior_hack": 61.0,
+      "hack": null,
+      "att": 20.92477611940299,
+      "hw": 98.81,
       "el": 0.0,
       "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
+      "anomalies": []
     },
     {
       "batch": "K24",
-      "class_name": "HN-KS24-CNTT3",
-      "course_name": "AI Application",
-      "student_id": 99,
-      "full_name": "Đỗ Thảo Minh",
+      "class_name": "HN-K24-CNTT3",
+      "course_name": "[IT-214] Microservices System Design",
+      "student_id": 185,
+      "full_name": "Trần Khánh An",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (31.7%)"
+        "Vắng chuyên cần > 20% (33.5%)"
       ],
-      "p_final": 50.68765118804558,
+      "p_final": 27.77443986304067,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": null,
-      "hack": 40.0,
-      "att": 31.743333333333336,
-      "hw": 90.475,
+      "hack": null,
+      "att": 33.47964179104478,
+      "hw": 98.81,
       "el": 0.0,
       "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 110,
-      "full_name": "Đỗ Đức Cương",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (60.0%)"
-      ],
-      "p_final": 59.95696615384617,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 138,
-      "full_name": "Nguyễn Trí Thắng",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (60.0%)"
-      ],
-      "p_final": 59.95696615384617,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 144,
-      "full_name": "Hoàng Thái Minh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.13536615384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 145,
-      "full_name": "Vũ Việt Tiến",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.0%)"
-      ],
-      "p_final": 58.97610461538463,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 149,
-      "full_name": "Phạm Ngọc Linh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.0%)"
-      ],
-      "p_final": 58.97610461538463,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 163,
-      "full_name": "Trần Ngọc Linh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.0%)"
-      ],
-      "p_final": 58.97610461538463,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 164,
-      "full_name": "Phạm Quốc Lộc",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.8%)"
-      ],
-      "p_final": 58.835981538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 171,
-      "full_name": "Phạm Nhật Tân",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.8%)"
-      ],
-      "p_final": 58.835981538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 186,
-      "full_name": "Trần Quang Duy",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.0%)"
-      ],
-      "p_final": 58.97610461538463,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 217,
-      "full_name": "Nguyễn Văn Ánh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (60.0%)"
-      ],
-      "p_final": 59.95696615384617,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 233,
-      "full_name": "Nguyễn Tuấn Minh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (60.0%)"
-      ],
-      "p_final": 59.95696615384617,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 248,
-      "full_name": "Đặng Văn Luyện",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.13536615384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 261,
-      "full_name": "Lê Bá Duy",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.7%)"
-      ],
-      "p_final": 59.67672,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 45.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 265,
-      "full_name": "Vũ Thu Trang",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (60.0%)"
-      ],
-      "p_final": 59.95696615384617,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 266,
-      "full_name": "Nguyễn Tiến Minh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.13536615384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 73,
-      "full_name": "Đào Quang Huy",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.0%)"
-      ],
-      "p_final": 58.97610461538463,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 81,
-      "full_name": "Đoàn Trung Nguyên",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (60.0%)"
-      ],
-      "p_final": 59.95696615384617,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 84,
-      "full_name": "Nguyễn Doanh Tuấn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.0%)"
-      ],
-      "p_final": 58.97610461538463,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 898,
-      "full_name": "Ngô Thị Hoài Phương",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.8%)"
-      ],
-      "p_final": 58.835981538461546,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 42.5,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 91,
-      "full_name": "Phạm Thị Hồng Nhung",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.0%)"
-      ],
-      "p_final": 58.97610461538463,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT4",
-      "course_name": "AI Application",
-      "student_id": 96,
-      "full_name": "Nguyễn Thị Phương",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.1%)"
-      ],
-      "p_final": 58.13536615384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.0,
-      "att": 3.1300000000000003,
-      "hw": 96.9175,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 101,
-      "full_name": "Trần Văn Thắng",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (55.9%)"
-      ],
-      "p_final": 55.87655384615384,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 36.55555555555556,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 121,
-      "full_name": "Phạm Quốc Khánh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (49.6%)"
-      ],
-      "p_final": 49.55544615384616,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 14.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 125,
-      "full_name": "Nguyễn Anh Tuấn",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.7%)"
-      ],
-      "p_final": 58.71015384615386,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.66666666666667,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 174,
-      "full_name": "Nguyễn Vũ Thành",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (54.2%)"
-      ],
-      "p_final": 54.226215384615394,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 30.666666666666668,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 206,
-      "full_name": "Hoàng Văn Quân",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (59.3%)"
-      ],
-      "p_final": 59.270646153846165,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 48.666666666666664,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 212,
-      "full_name": "Nguyễn Hữu Quang",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.6%)"
-      ],
-      "p_final": 58.61673846153847,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.333333333333336,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 258,
-      "full_name": "Phạm Khánh Linh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (52.5%)"
-      ],
-      "p_final": 52.51804835164836,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 24.571428571428573,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 259,
-      "full_name": "Hoàng Minh Chiến",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (58.7%)"
-      ],
-      "p_final": 58.71015384615386,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 46.66666666666667,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 279,
-      "full_name": "Nguyễn Tùng Dương",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (54.3%)"
-      ],
-      "p_final": 54.31963076923076,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 31.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 311,
-      "full_name": "Đỗ Ngọc Dân",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (55.3%)"
-      ],
-      "p_final": 55.31606153846154,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 34.55555555555556,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT5",
-      "course_name": "AI Application",
-      "student_id": 907,
-      "full_name": "Vũ Xuân Đức",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.8%)"
-      ],
-      "p_final": 57.776,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 43.33333333333333,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K24",
-      "class_name": "HN-KS24-CNTT6",
-      "course_name": "AI Application",
-      "student_id": 105,
-      "full_name": "Nguyễn Quang Minh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (56.3%)"
-      ],
-      "p_final": 56.28135384615385,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 38.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K25",
-      "class_name": "HN-KS25-CNTT7",
-      "course_name": "Python Web",
-      "student_id": 1589,
-      "full_name": "Nguyễn Danh Hiệp",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (57.0%)"
-      ],
-      "p_final": 56.953944615384614,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 40.4,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K25",
-      "class_name": "HN-KS25-CNTT7",
-      "course_name": "Python Web",
-      "student_id": 1676,
-      "full_name": "Vũ Hoàng Anh",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (50.6%)"
-      ],
-      "p_final": 50.62038153846154,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 17.8,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
-    },
-    {
-      "batch": "K25",
-      "class_name": "HN-KS25-CNTT7",
-      "course_name": "Python Web",
-      "student_id": 257,
-      "full_name": "Đỗ Danh Nguyên",
-      "risk_level": "GREEN",
-      "reasons": [
-        "Học lực cần theo dõi (50.7%)"
-      ],
-      "p_final": 50.67643076923078,
-      "is_failed_new": false,
-      "is_excellent": false,
-      "prior_hack": null,
-      "hack": 18.0,
-      "att": 5.0,
-      "hw": 90.0,
-      "el": 0.0,
-      "rp": 100.0,
-      "anomalies": [
-        "passive_learner"
-      ]
+      "anomalies": []
     }
   ],
   "anomalies_summary": {
     "K24": {
       "copy_suspect": 0,
-      "discipline_paradox": 35,
-      "passive_learner": 151,
+      "discipline_paradox": 0,
+      "passive_learner": 0,
       "sudden_drop": 0
     },
     "K25": {
       "copy_suspect": 0,
       "discipline_paradox": 0,
-      "passive_learner": 6,
+      "passive_learner": 0,
       "sudden_drop": 0
     },
     "QTKD": {
       "copy_suspect": 0,
       "discipline_paradox": 0,
-      "passive_learner": 7,
+      "passive_learner": 0,
       "sudden_drop": 0
     }
   }

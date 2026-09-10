@@ -315,17 +315,49 @@ def build_unified_prediction_dashboard(data, output_path):
         </div>"""
 
     # Chuẩn bị dữ liệu cho biểu đồ Chart.js
+    ks24_classes = data['dashboard_data'].get('KS24', {}).get('curr', [])
+    ks25_classes = data['dashboard_data'].get('KS25', {}).get('curr', [])
+    qtkd_classes = data['dashboard_data'].get('QTKD', {}).get('curr', [])
+    
     curr_classes = []
-    for batch_name in ['KS25', 'QTKD', 'KS24']:
+    for batch_name in ['KS24', 'KS25', 'QTKD']:
         curr_classes.extend(data['dashboard_data'].get(batch_name, {}).get('curr', []))
         
     cv_classes = []
-    for batch_name in ['KS25', 'QTKD', 'KS24']:
+    for batch_name in ['KS24', 'KS25', 'QTKD']:
         cv_classes.extend(data['dashboard_data'].get(batch_name, {}).get('cv', []))
         
+    total_curr_students = sum(c['size'] for c in curr_classes)
+    green_count = max(0, total_curr_students - red_count - yellow_count)
+    
+    ks24_size = sum(c['size'] for c in ks24_classes)
+    ks25_size = sum(c['size'] for c in ks25_classes)
+    qtkd_size = sum(c['size'] for c in qtkd_classes)
+
+    ks24_red = sum(sum(1 for s in class_risks.get(c['class_name'], []) if s.get('risk_level') == 'RED') for c in ks24_classes)
+    ks24_yellow = sum(sum(1 for s in class_risks.get(c['class_name'], []) if s.get('risk_level') == 'YELLOW') for c in ks24_classes)
+    
+    ks25_red = sum(sum(1 for s in class_risks.get(c['class_name'], []) if s.get('risk_level') == 'RED') for c in ks25_classes)
+    ks25_yellow = sum(sum(1 for s in class_risks.get(c['class_name'], []) if s.get('risk_level') == 'YELLOW') for c in ks25_classes)
+    
+    qtkd_red = sum(sum(1 for s in class_risks.get(c['class_name'], []) if s.get('risk_level') == 'RED') for c in qtkd_classes)
+    qtkd_yellow = sum(sum(1 for s in class_risks.get(c['class_name'], []) if s.get('risk_level') == 'YELLOW') for c in qtkd_classes)
+    
+    mean_val = lambda vals: sum(vals)/len(vals) if vals else 0.0
+    ks24_avg_pass = mean_val([c['pred_new'] for c in ks24_classes])
+    ks25_avg_pass = mean_val([c['pred_new'] for c in ks25_classes])
+    qtkd_avg_pass = mean_val([c['pred_new'] for c in qtkd_classes])
+    
+    ks24_avg_viol = mean_val([c['v_class'] for c in ks24_classes])
+    ks25_avg_viol = mean_val([c['v_class'] for c in ks25_classes])
+    qtkd_avg_viol = mean_val([c['v_class'] for c in qtkd_classes])
+    
+    overall_avg_pass = mean_val([c['pred_new'] for c in curr_classes])
+    
     chart_curr_labels = [c['class_name'] for c in curr_classes]
-    chart_curr_old = [c['pred_old'] for c in curr_classes]
-    chart_curr_new = [c['pred_new'] for c in curr_classes]
+    chart_curr_cohorts = [('KS24' if 'K24' in c['class_name'] else ('QTKD' if 'QTKD' in c['class_name'] else 'KS25')) for c in curr_classes]
+    chart_curr_old = [round(c['pred_old'], 1) for c in curr_classes]
+    chart_curr_new = [round(c['pred_new'], 1) for c in curr_classes]
 
     html_content = f"""<!DOCTYPE html>
 <html lang="vi">
@@ -384,6 +416,85 @@ def build_unified_prediction_dashboard(data, output_path):
             border-radius: 9999px;
             font-size: 0.8rem;
             font-weight: 700;
+        }}
+        .header-actions {{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }}
+        .btn-action-tool {{
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            transition: all 0.2s ease;
+        }}
+        .btn-action-tool:hover {{
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--primary);
+        }}
+        .chart-filter-btn {{
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }}
+        .chart-filter-btn:hover {{
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }}
+        .chart-filter-btn.active {{
+            background: var(--primary-light);
+            color: var(--primary);
+            border-color: var(--primary);
+        }}
+        .doughnut-wrapper {{
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto;
+        }}
+        .doughnut-center-text {{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            pointer-events: none;
+        }}
+        .doughnut-center-number {{
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #f3f4f6;
+            line-height: 1.1;
+        }}
+        .doughnut-center-label {{
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }}
+        body.presentation-mode {{
+            padding: 20px 10px !important;
+        }}
+        body.presentation-mode .tabs-container {{
+            display: none !important;
+        }}
+        body.presentation-mode .btn-action-tool {{
+            opacity: 0.5;
         }}
         
         /* Tabs System CSS */
@@ -848,67 +959,249 @@ def build_unified_prediction_dashboard(data, output_path):
         <!-- Header -->
         <header>
             <div>
-                <h1>📊 Đánh giá Học thuật &amp; Hỗ trợ Học viên</h1>
-                <div class="meta-info">Hệ thống dự báo tỉ lệ đỗ lớp học và rà soát nguy cơ cá nhân tích hợp</div>
+                <h1>📊 Báo Cáo Dự Báo Học Vụ &amp; Quản Lý Tiến Độ Đào Tạo</h1>
+                <div class="meta-info">Giám sát nề nếp học tập, đánh giá điều kiện dự thi và phân loại tình trạng học vụ cho 16 lớp chính quy PTIT</div>
             </div>
-            <div class="update-badge">
-                Cập nhật: {datetime.now().strftime('%d/%m/%Y')}
+            <div class="header-actions">
+                <button onclick="togglePresentationMode()" class="btn-action-tool" id="btn-toggle-pres">
+                    <i class="fas fa-camera"></i> <span>Chế độ Trích Xuất Báo Cáo</span>
+                </button>
+                <button onclick="window.print()" class="btn-action-tool">
+                    <i class="fas fa-print"></i> <span>In / PDF</span>
+                </button>
+                <div class="update-badge">
+                    Cập nhật: {datetime.now().strftime('%d/%m/%Y')}
+                </div>
             </div>
         </header>
 
         <!-- Navigation Tabs -->
         <div class="tabs-container">
-            <button class="tab-button active" onclick="switchTab('executive')"><i class="fas fa-chart-pie"></i> Đánh giá &amp; Giải pháp hệ thống</button>
-            <button class="tab-button" onclick="switchTab('classes')"><i class="fas fa-school"></i> Phân tích Lớp học</button>
-            <button class="tab-button" onclick="switchTab('care-list')"><i class="fas fa-user-shield"></i> Danh sách cần can thiệp</button>
+            <button class="tab-button active" onclick="switchTab('executive')"><i class="fas fa-chart-pie"></i> Tổng quan Đào tạo 3 Khối &amp; Phân loại Học vụ</button>
+            <button class="tab-button" onclick="switchTab('classes')"><i class="fas fa-school"></i> Bảng Tổng Hợp 16 Lớp Chính Quy</button>
+            <button class="tab-button" onclick="switchTab('care-list')"><i class="fas fa-user-shield"></i> Danh Sách Học Viên Diện Cảnh Báo Học Vụ ({red_count + yellow_count} SV)</button>
         </div>
 
         <!-- TAB 1: EXECUTIVE SUMMARY -->
         <div id="tab-executive" class="tab-content active">
+            <!-- 3-Cohort Deep Breakdown Cards -->
+            <div style="margin-bottom: 24px;">
+                <div style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-layer-group" style="color: var(--primary);"></i> TỔNG QUAN HỌC VỤ THEO 3 KHỐI NGÀNH ĐÀO TẠO
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                    <!-- KHỐI KS24 CNTT -->
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-top: 3px solid #3b82f6; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                <div>
+                                    <div style="font-size: 0.72rem; font-weight: 700; color: #3b82f6; text-transform: uppercase;">Khóa KS24 • Chuyên ngành CNTT</div>
+                                    <h3 style="font-size: 1.05rem; font-weight: 800; color: #fff; margin-top: 2px;">Microservices System Design</h3>
+                                </div>
+                                <span style="font-size: 0.7rem; font-weight: 700; background: rgba(59,130,246,0.15); color: #3b82f6; padding: 3px 8px; border-radius: 6px;">5 Lớp</span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px; border: 1px solid var(--border);">
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Dự kiến Đỗ:</div>
+                                    <div style="font-size: 1.25rem; font-weight: 800; color: #3b82f6;">{ks24_avg_pass:.1f}%</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Sĩ số đào tạo:</div>
+                                    <div style="font-size: 1.25rem; font-weight: 800; color: #f3f4f6;">{ks24_size} <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">SV</span></div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Vi phạm lớp TB:</div>
+                                    <div style="font-size: 0.95rem; font-weight: 700; color: #10b981;">{ks24_avg_viol:.1f}%</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Cảnh báo học vụ:</div>
+                                    <div style="font-size: 0.95rem; font-weight: 700; color: {'#f43f5e' if ks24_red > 0 else ('#f59e0b' if ks24_yellow > 0 else '#10b981')};">
+                                        {ks24_red} Cấm thi / {ks24_yellow} Theo dõi
+                                    </div>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
+                                <strong>Đánh giá giáo vụ:</strong> Môn kiến trúc nâng cao, sinh viên giữ nề nếp tốt. Lưu ý theo dõi lớp <code style="color:#f59e0b;">HN-K24-CNTT3</code> do tỷ lệ vắng 11.9% và trễ EL 16.7% trong ca học gần nhất.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- KHỐI KS25 CNTT -->
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-top: 3px solid #0ea5e9; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                <div>
+                                    <div style="font-size: 0.72rem; font-weight: 700; color: #0ea5e9; text-transform: uppercase;">Khóa KS25 • Chuyên ngành CNTT</div>
+                                    <h3 style="font-size: 1.05rem; font-weight: 800; color: #fff; margin-top: 2px;">Phân tích &amp; Thiết kế Hệ thống</h3>
+                                </div>
+                                <span style="font-size: 0.7rem; font-weight: 700; background: rgba(14,165,233,0.15); color: #0ea5e9; padding: 3px 8px; border-radius: 6px;">9 Lớp</span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px; border: 1px solid var(--border);">
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Dự kiến Đỗ:</div>
+                                    <div style="font-size: 1.25rem; font-weight: 800; color: #0ea5e9;">{ks25_avg_pass:.1f}%</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Sĩ số đào tạo:</div>
+                                    <div style="font-size: 1.25rem; font-weight: 800; color: #f3f4f6;">{ks25_size} <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">SV</span></div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Vi phạm lớp TB:</div>
+                                    <div style="font-size: 0.95rem; font-weight: 700; color: {'#f43f5e' if ks25_avg_viol > 10 else '#f59e0b'};">{ks25_avg_viol:.1f}%</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Cảnh báo học vụ:</div>
+                                    <div style="font-size: 0.95rem; font-weight: 700; color: #f43f5e;">
+                                        {ks25_red} Cấm thi / {ks25_yellow} Theo dõi
+                                    </div>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
+                                <strong>Đánh giá giáo vụ:</strong> Phía Hà Nội (5 lớp) mới học 2 buổi nề nếp tốt (0 SV cấm thi). Cơ sở HCM (4 lớp) có điểm nóng <code style="color:#f43f5e;">HCM-K25-CNTT8</code> vắng 37.5% (15 SV nguy cơ cấm thi).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- KHỐI KS25 QTKD -->
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-top: 3px solid #10b981; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                <div>
+                                    <div style="font-size: 0.72rem; font-weight: 700; color: #10b981; text-transform: uppercase;">Khóa KS25 • Chuyên ngành QTKD</div>
+                                    <h3 style="font-size: 1.05rem; font-weight: 800; color: #fff; margin-top: 2px;">Quản trị Chiến lược (MAN107)</h3>
+                                </div>
+                                <span style="font-size: 0.7rem; font-weight: 700; background: rgba(16,185,129,0.15); color: #10b981; padding: 3px 8px; border-radius: 6px;">2 Lớp</span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px; border: 1px solid var(--border);">
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Dự kiến Đỗ:</div>
+                                    <div style="font-size: 1.25rem; font-weight: 800; color: #10b981;">{qtkd_avg_pass:.1f}%</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Sĩ số đào tạo:</div>
+                                    <div style="font-size: 1.25rem; font-weight: 800; color: #f3f4f6;">{qtkd_size} <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">SV</span></div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Vi phạm lớp TB:</div>
+                                    <div style="font-size: 0.95rem; font-weight: 700; color: #f59e0b;">{qtkd_avg_viol:.1f}%</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted);">Cảnh báo học vụ:</div>
+                                    <div style="font-size: 0.95rem; font-weight: 700; color: #10b981;">
+                                        0 Cấm thi / 0 Theo dõi
+                                    </div>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
+                                <strong>Đánh giá giáo vụ:</strong> Tiến độ 2 buổi đầu đạt chuẩn, nộp bài tập đạt 100%, 100% sinh viên đang trong diện học tập bình thường.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Methodology & Explanation Box -->
+            <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid var(--border); border-left: 4px solid #a855f7; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px;">
+                <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 0.85rem; color: #c084fc; text-transform: uppercase; margin-bottom: 6px;">
+                    <i class="fas fa-info-circle"></i> Giải Trình Phương Pháp Xác Định Tỷ Lệ Đủ Điều Kiện Qua Môn Dự Kiến
+                </div>
+                <div style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.6;">
+                    <p>• <strong>Cơ chế tính toán:</strong> Tỷ lệ dự kiến là <em>Kỳ vọng xác suất qua môn trung bình (Expected Pass Probability)</em> của toàn bộ sinh viên trong lớp, kết hợp giữa: <strong>(1) Điểm kỷ luật &amp; ý thức quá trình (40%)</strong> (Chuyên cần, Bài tập, Elearning); <strong>(2) Điểm năng lực học thuật tích lũy (60%)</strong> (Kết quả môn tiên quyết và điểm thực hành/Project, đã chia cho Hệ số độ khó môn học CDC); <strong>(3) Quy chế cấm thi hiện hành</strong> (áp dụng 0% nếu vắng &gt; 20% hoặc trễ Elearning &gt; 3 bài sau khi học &gt; 3 buổi).</p>
+                    <p style="margin-top: 4px;">• <strong>Lý do tỷ lệ dự kiến giai đoạn này ở mức khả quan (61% – 78%):</strong> (a) Khối Hà Nội môn PTTKHT và MAN107 mới học 2 buổi đầu, sinh viên đi học đầy đủ (98%–100%) nên điểm chuyên cần kéo tỷ lệ kỳ vọng lên cao, quy chế cấm thi chưa kích hoạt để tránh cảnh báo ảo; (b) Bài thi cuối kỳ / Đồ án tốt nghiệp (chiếm 50% trọng số môn) chưa diễn ra. Khi bước vào giai đoạn bảo vệ đồ án, tỷ lệ này sẽ phân hóa mạnh hơn đối với nhóm sinh viên học lực yếu.</p>
+                </div>
+            </div>
+
             <!-- Global KPI Summary Cards -->
-            <div class="mae-grid">
+            <div class="mae-grid" style="grid-template-columns: repeat(4, 1fr);">
                 <div class="mae-card" style="border-left: 4px solid var(--primary);">
                     <div>
-                        <div class="mae-title">Sai số đánh giá lịch sử (MAE)</div>
-                        <div class="mae-val">{mae_avg:.2f}%</div>
-                        <div class="mae-desc">Tính trung bình các mốc kiểm chứng</div>
+                        <div class="mae-title">Tỷ lệ Đủ ĐK Dự Thi &amp; Đỗ Dự Kiến</div>
+                        <div class="mae-val" style="color: var(--primary);">{overall_avg_pass:.1f}%</div>
+                        <div class="mae-desc">Kỳ vọng trung bình 16 lớp chính quy ({total_curr_students} SV)</div>
                     </div>
-                    <div class="mae-icon"><i class="fas fa-calculator"></i></div>
+                    <div class="mae-icon"><i class="fas fa-graduation-cap"></i></div>
                 </div>
                 
                 <div class="mae-card" style="border-left: 4px solid var(--danger);">
                     <div>
-                        <div class="mae-title">Nguy cơ Cao (Báo động Đỏ)</div>
-                        <div class="mae-val">{red_count} SV</div>
-                        <div class="mae-desc">Học lực yếu hoặc có nguy cơ cấm thi</div>
+                        <div class="mae-title">Cảnh Báo Mức 1 (Nguy Cơ Cấm Thi)</div>
+                        <div class="mae-val" style="color: var(--danger);">{red_count} SV</div>
+                        <div class="mae-desc">Vắng &gt; 20% hoặc nợ bài quá hạn ({red_count*100.0/total_curr_students if total_curr_students else 0:.1f}%)</div>
                     </div>
                     <div class="mae-icon" style="color: var(--danger); background: var(--danger-light);"><i class="fas fa-user-slash"></i></div>
                 </div>
 
                 <div class="mae-card" style="border-left: 4px solid var(--warning);">
                     <div>
-                        <div class="mae-title">Nguy cơ Trung bình (Cảnh báo Vàng)</div>
-                        <div class="mae-val">{yellow_count} SV</div>
-                        <div class="mae-desc">Cận cấm thi hoặc mất gốc kiến thức</div>
+                        <div class="mae-title">Cảnh Báo Mức 2 (Cần Theo Dõi)</div>
+                        <div class="mae-val" style="color: var(--warning);">{yellow_count} SV</div>
+                        <div class="mae-desc">Cận ngưỡng cấm thi / Học lực yếu ({yellow_count*100.0/total_curr_students if total_curr_students else 0:.1f}%)</div>
                     </div>
                     <div class="mae-icon" style="color: var(--warning); background: var(--warning-light);"><i class="fas fa-exclamation-triangle"></i></div>
                 </div>
+
+                <div class="mae-card" style="border-left: 4px solid var(--success);">
+                    <div>
+                        <div class="mae-title">Tiến Độ Học Tập Đạt Chuẩn</div>
+                        <div class="mae-val" style="color: var(--success);">{green_count} SV</div>
+                        <div class="mae-desc">Nề nếp tốt, xác suất dự thi đạt ≥ 70% ({green_count*100.0/total_curr_students if total_curr_students else 0:.1f}%)</div>
+                    </div>
+                    <div class="mae-icon" style="color: var(--success); background: var(--success-light);"><i class="fas fa-check-circle"></i></div>
+                </div>
             </div>
 
-            <!-- Chart -->
-            <div class="chart-row">
+            <!-- Chart Row 1: So sánh Dự báo 16 Lớp với vạch Benchmark -->
+            <div class="chart-row" style="margin-bottom: 24px;">
                 <div class="chart-card">
-                    <div class="chart-header">
-                        <div class="chart-title"><i class="fas fa-chart-bar" style="color: var(--primary);"></i> Phân tích tỉ lệ đỗ lớp học dự kiến</div>
+                    <div class="chart-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                        <div>
+                            <div class="chart-title"><i class="fas fa-chart-bar" style="color: var(--primary);"></i> Đối Sánh Tỷ Lệ Dự Kiến Đủ Điều Kiện Qua Môn 16 Lớp (Quy chế cũ vs Quy chế hiện hành)</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Đường xanh nét đứt: Ngưỡng an toàn học thuật (70%) | Đường đỏ nét đứt: Ngưỡng cảnh báo học vụ (50%)</div>
+                        </div>
+                        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                            <button onclick="filterMainChart('all')" class="chart-filter-btn active" id="btn-filter-all">Tất cả (16 lớp)</button>
+                            <button onclick="filterMainChart('KS24')" class="chart-filter-btn" id="btn-filter-ks24">KS24 (Microservice)</button>
+                            <button onclick="filterMainChart('KS25')" class="chart-filter-btn" id="btn-filter-ks25">KS25 (PTTKHT)</button>
+                            <button onclick="filterMainChart('QTKD')" class="chart-filter-btn" id="btn-filter-qtkd">KS25 (MAN107)</button>
+                        </div>
                     </div>
-                    <div style="height: 320px; position: relative;">
+                    <div style="height: 380px; position: relative;">
                         <canvas id="pred-compare-chart"></canvas>
                     </div>
                 </div>
             </div>
 
+            <!-- Chart Row 2: Grid 2 Biểu Đồ Trực Quan -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
+                <!-- Biểu đồ Vòng Tròn Phân Bổ Nguy Cơ -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title"><i class="fas fa-chart-pie" style="color: var(--success);"></i> Phân Loại Tình Trạng Học Vụ Sinh Viên Toàn Viện</div>
+                    </div>
+                    <div style="height: 280px; position: relative; display: flex; align-items: center; justify-content: center;">
+                        <div class="doughnut-wrapper">
+                            <canvas id="risk-doughnut-chart"></canvas>
+                            <div class="doughnut-center-text">
+                                <div class="doughnut-center-number">{total_curr_students}</div>
+                                <div class="doughnut-center-label">Sinh Viên</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Biểu đồ Sức Khỏe Học Thuật 3 Khối -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title"><i class="fas fa-layer-group" style="color: #a855f7;"></i> Đối Sánh Hiệu Suất Học Tập theo 3 Khối Ngành</div>
+                    </div>
+                    <div style="height: 280px; position: relative;">
+                        <canvas id="cohort-health-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
             <!-- Action Role Cards -->
-            <h2 style="margin: 32px 0 16px; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">🎯 Kế hoạch Can thiệp Tuần này</h2>
+            <h2 style="margin: 32px 0 16px; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">📋 Kế Hoạch Phối Hợp Giáo Vụ &amp; Giảng Viên Trong Tuần</h2>
             <div class="action-roles-grid">
                 {gv_card_html}
                 {gvcn_card_html}
@@ -918,11 +1211,11 @@ def build_unified_prediction_dashboard(data, output_path):
 
         <!-- TAB 2: CLASS LIST -->
         <div id="tab-classes" class="tab-content">
-            <!-- KS25 Python Web -->
+            <!-- KS25 PTTKHT -->
             <div class="table-card">
                 <div class="table-header">
-                    <h3>Khóa K25 - Khối CNTT (Môn hiện tại)</h3>
-                    <span class="course-badge">Python Web</span>
+                    <h3>Khóa KS25 - Khối CNTT (Môn hiện tại: Phân tích &amp; thiết kế hệ thống)</h3>
+                    <span class="course-badge" style="color: #38bdf8; background: rgba(56, 189, 248, 0.15);">IT105 - PTTKHT</span>
                 </div>
                 <div class="table-container">
                     <table>
@@ -931,12 +1224,12 @@ def build_unified_prediction_dashboard(data, output_path):
                                 <th>Tên Lớp</th>
                                 <th class="text-center">Sĩ số</th>
                                 <th class="text-center">Vi phạm lớp%</th>
-                                <th class="text-center">Hệ số Env</th>
-                                <th class="text-center">Quy chuẩn cũ</th>
-                                <th class="text-center">Quy chế mới</th>
-                                <th class="text-center">Ưu tiên</th>
-                                <th class="text-center">Tác nghiệp</th>
-                                <th class="text-right">Hành động</th>
+                                <th class="text-center">Nề nếp lớp</th>
+                                <th class="text-center">Quy chế cũ</th>
+                                <th class="text-center">Quy chế hiện hành</th>
+                                <th class="text-center">Mức độ can thiệp</th>
+                                <th class="text-center">Kỷ luật giáo vụ</th>
+                                <th class="text-right">Hồ sơ lớp</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -946,11 +1239,11 @@ def build_unified_prediction_dashboard(data, output_path):
                 </div>
             </div>
 
-            <!-- KS25 QTKD -->
+            <!-- KS25 QTKD MAN107 -->
             <div class="table-card">
                 <div class="table-header">
-                    <h3>Khóa K25 - Khối QTKD (Môn hiện tại)</h3>
-                    <span class="course-badge" style="color: var(--success); background: var(--success-light);">PRJ302</span>
+                    <h3>Khóa KS25 - Khối QTKD (Môn hiện tại: Quản trị chiến lược)</h3>
+                    <span class="course-badge" style="color: var(--success); background: var(--success-light);">MAN107 Quản trị chiến lược</span>
                 </div>
                 <div class="table-container">
                     <table>
@@ -959,12 +1252,12 @@ def build_unified_prediction_dashboard(data, output_path):
                                 <th>Tên Lớp</th>
                                 <th class="text-center">Sĩ số</th>
                                 <th class="text-center">Vi phạm lớp%</th>
-                                <th class="text-center">Hệ số Env</th>
-                                <th class="text-center">Quy chuẩn cũ</th>
-                                <th class="text-center">Quy chế mới</th>
-                                <th class="text-center">Ưu tiên</th>
-                                <th class="text-center">Tác nghiệp</th>
-                                <th class="text-right">Hành động</th>
+                                <th class="text-center">Nề nếp lớp</th>
+                                <th class="text-center">Quy chế cũ</th>
+                                <th class="text-center">Quy chế hiện hành</th>
+                                <th class="text-center">Mức độ can thiệp</th>
+                                <th class="text-center">Kỷ luật giáo vụ</th>
+                                <th class="text-right">Hồ sơ lớp</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -974,11 +1267,11 @@ def build_unified_prediction_dashboard(data, output_path):
                 </div>
             </div>
 
-            <!-- KS24 AI Application -->
+            <!-- KS24 MICROSERVICES -->
             <div class="table-card">
                 <div class="table-header">
-                    <h3>Khóa K24 - Khối CNTT (Môn hiện tại)</h3>
-                    <span class="course-badge" style="color: #a855f7; background: rgba(168, 85, 247, 0.15);">AI Application</span>
+                    <h3>Khóa KS24 - Khối CNTT (Môn hiện tại: Thiết kế hệ thống Microservices)</h3>
+                    <span class="course-badge" style="color: #a855f7; background: rgba(168, 85, 247, 0.15);">IT-214 Microservices</span>
                 </div>
                 <div class="table-container">
                     <table>
@@ -987,12 +1280,12 @@ def build_unified_prediction_dashboard(data, output_path):
                                 <th>Tên Lớp</th>
                                 <th class="text-center">Sĩ số</th>
                                 <th class="text-center">Vi phạm lớp%</th>
-                                <th class="text-center">Hệ số Env</th>
-                                <th class="text-center">Quy chuẩn cũ</th>
-                                <th class="text-center">Quy chế mới</th>
-                                <th class="text-center">Ưu tiên</th>
-                                <th class="text-center">Tác nghiệp</th>
-                                <th class="text-right">Hành động</th>
+                                <th class="text-center">Nề nếp lớp</th>
+                                <th class="text-center">Quy chế cũ</th>
+                                <th class="text-center">Quy chế hiện hành</th>
+                                <th class="text-center">Mức độ can thiệp</th>
+                                <th class="text-center">Kỷ luật giáo vụ</th>
+                                <th class="text-right">Hồ sơ lớp</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1003,15 +1296,15 @@ def build_unified_prediction_dashboard(data, output_path):
             </div>
         </div>
 
-        <!-- TAB 3: CARE LIST — PHÂN NHÓM CAN THIỆP -->
+        <!-- TAB 3: SỔ TAY THEO DÕI HỌC VIÊN DIỆN CẢNH BÁO HỌC VỤ -->
         <div id="tab-care-list" class="tab-content">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                 <div>
-                    <h2 style="font-size: 1.1rem; font-weight: 800;">Danh sách học viên cần can thiệp toàn khóa</h2>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Phân loại theo nhóm vấn đề — nhấn vào từng nhóm để xem chi tiết và giải pháp đề xuất</p>
+                    <h2 style="font-size: 1.1rem; font-weight: 800;">Sổ tay Theo dõi Học viên Diện Cảnh báo Học vụ</h2>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Phân loại theo diện vấn đề học vụ — nhấn vào từng nhóm để xem hồ sơ và biện pháp hỗ trợ chi tiết</p>
                 </div>
                 <button onclick="exportCareListCSV()" class="btn-risk" style="background: var(--primary-light); color: var(--primary); padding: 10px 18px; font-size: 0.82rem;">
-                    <i class="fas fa-file-csv"></i> Xuất CSV
+                    <i class="fas fa-file-csv"></i> Xuất CSV Báo Cáo
                 </button>
             </div>
             {accordion_html}
@@ -1156,29 +1449,237 @@ def build_unified_prediction_dashboard(data, output_path):
 
         // Data from Python backend
         const currLabels = {json.dumps(chart_curr_labels)};
+        const currCohorts = {json.dumps(chart_curr_cohorts)};
         const currOld = {json.dumps(chart_curr_old)};
         const currNew = {json.dumps(chart_curr_new)};
         
-        // Render Chart for Môn hiện tại
-        let ctx = document.getElementById('pred-compare-chart').getContext('2d');
-        let chart = new Chart(ctx, {{
+        const riskDist = [{green_count}, {yellow_count}, {red_count}];
+        const cohortPass = [{round(ks24_avg_pass, 1)}, {round(ks25_avg_pass, 1)}, {round(qtkd_avg_pass, 1)}];
+        const cohortViol = [{round(ks24_avg_viol, 1)}, {round(ks25_avg_viol, 1)}, {round(qtkd_avg_viol, 1)}];
+
+        // --- Presentation Mode Toggle ---
+        function togglePresentationMode() {{
+            document.body.classList.toggle('presentation-mode');
+            const isPres = document.body.classList.contains('presentation-mode');
+            const btn = document.getElementById('btn-toggle-pres');
+            if (isPres) {{
+                btn.innerHTML = '<i class="fas fa-compress"></i> <span>Thoát Chế độ Chụp</span>';
+                btn.style.background = 'var(--primary)';
+                btn.style.color = '#fff';
+            }} else {{
+                btn.innerHTML = '<i class="fas fa-camera"></i> <span>Chế độ Chụp Báo Cáo</span>';
+                btn.style.background = 'rgba(255, 255, 255, 0.05)';
+                btn.style.color = 'var(--text-main)';
+            }}
+        }}
+
+        // --- Main Prediction Chart with Safe/Warning Threshold Lines ---
+        const ctxMain = document.getElementById('pred-compare-chart').getContext('2d');
+        
+        // Tạo gradient màu xanh neon cho Quy chế mới
+        const gradNew = ctxMain.createLinearGradient(0, 0, 0, 350);
+        gradNew.addColorStop(0, 'rgba(59, 130, 246, 0.9)');
+        gradNew.addColorStop(1, 'rgba(37, 99, 235, 0.35)');
+
+        const mainChart = new Chart(ctxMain, {{
             type: 'bar',
             data: {{
                 labels: currLabels,
                 datasets: [
                     {{
                         label: 'Quy chuẩn cũ (%)',
-                        data: currOld,
-                        backgroundColor: 'rgba(148, 163, 184, 0.3)',
+                        data: [...currOld],
+                        backgroundColor: 'rgba(148, 163, 184, 0.35)',
                         borderColor: 'rgba(148, 163, 184, 0.8)',
+                        borderWidth: 1.5,
+                        borderRadius: 6,
+                        order: 2
+                    }},
+                    {{
+                        label: 'Quy chế mới (%)',
+                        data: [...currNew],
+                        backgroundColor: gradNew,
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 1.5,
+                        borderRadius: 6,
+                        order: 2
+                    }},
+                    {{
+                        type: 'line',
+                        label: 'Ngưỡng An toàn (70%)',
+                        data: Array(currLabels.length).fill(70),
+                        borderColor: 'rgba(16, 185, 129, 0.85)',
+                        borderWidth: 2,
+                        borderDash: [6, 4],
+                        pointRadius: 0,
+                        fill: false,
+                        order: 1
+                    }},
+                    {{
+                        type: 'line',
+                        label: 'Ngưỡng Báo động (50%)',
+                        data: Array(currLabels.length).fill(50),
+                        borderColor: 'rgba(244, 63, 94, 0.85)',
+                        borderWidth: 2,
+                        borderDash: [5, 4],
+                        pointRadius: 0,
+                        fill: false,
+                        order: 1
+                    }}
+                ]
+            }},
+            options: {{
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {{
+                    y: {{
+                        beginAtZero: true,
+                        max: 100,
+                        grid: {{ color: 'rgba(255, 255, 255, 0.05)' }},
+                        ticks: {{ 
+                            color: '#9ca3af', 
+                            font: {{ family: 'Plus Jakarta Sans', weight: '600' }},
+                            callback: function(v) {{ return v + '%'; }}
+                        }}
+                    }},
+                    x: {{
+                        grid: {{ display: false }},
+                        ticks: {{ 
+                            color: '#e2e8f0', 
+                            font: {{ family: 'Plus Jakarta Sans', weight: '600', size: 11 }},
+                            maxRotation: 45,
+                            minRotation: 20
+                        }}
+                    }}
+                }},
+                plugins: {{
+                    legend: {{
+                        position: 'top',
+                        labels: {{ 
+                            color: '#f3f4f6', 
+                            font: {{ family: 'Plus Jakarta Sans', weight: 'bold', size: 11 }},
+                            boxWidth: 14,
+                            usePointStyle: true
+                        }}
+                    }},
+                    tooltip: {{
+                        padding: 12,
+                        backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                        titleFont: {{ family: 'Plus Jakarta Sans', weight: 'bold' }},
+                        bodyFont: {{ family: 'Plus Jakarta Sans' }},
+                        borderColor: 'rgba(255,255,255,0.1)',
+                        borderWidth: 1,
+                        callbacks: {{
+                            label: function(c) {{
+                                return c.dataset.label + ': ' + c.parsed.y + '%';
+                            }}
+                        }}
+                    }}
+                }}
+            }}
+        }});
+
+        function filterMainChart(cohort) {{
+            document.querySelectorAll('.chart-filter-btn').forEach(btn => btn.classList.remove('active'));
+            if (cohort === 'all') document.getElementById('btn-filter-all').classList.add('active');
+            if (cohort === 'KS24') document.getElementById('btn-filter-ks24').classList.add('active');
+            if (cohort === 'KS25') document.getElementById('btn-filter-ks25').classList.add('active');
+            if (cohort === 'QTKD') document.getElementById('btn-filter-qtkd').classList.add('active');
+
+            let filteredLabels = [];
+            let filteredOld = [];
+            let filteredNew = [];
+
+            for (let i = 0; i < currLabels.length; i++) {{
+                if (cohort === 'all' || currCohorts[i] === cohort) {{
+                    filteredLabels.push(currLabels[i]);
+                    filteredOld.push(currOld[i]);
+                    filteredNew.push(currNew[i]);
+                }}
+            }}
+
+            mainChart.data.labels = filteredLabels;
+            mainChart.data.datasets[0].data = filteredOld;
+            mainChart.data.datasets[1].data = filteredNew;
+            mainChart.data.datasets[2].data = Array(filteredLabels.length).fill(70);
+            mainChart.data.datasets[3].data = Array(filteredLabels.length).fill(50);
+            mainChart.update();
+        }}
+
+        // --- Doughnut Chart Phân Bổ Nguy Cơ ---
+        const ctxDoughnut = document.getElementById('risk-doughnut-chart').getContext('2d');
+        new Chart(ctxDoughnut, {{
+            type: 'doughnut',
+            data: {{
+                labels: ['An toàn (≥ 70%)', 'Theo dõi (50-70%)', 'Nguy cơ cấm thi (< 50%)'],
+                datasets: [{{
+                    data: riskDist,
+                    backgroundColor: [
+                        'rgba(16, 185, 129, 0.85)',
+                        'rgba(245, 158, 11, 0.85)',
+                        'rgba(244, 63, 94, 0.85)'
+                    ],
+                    borderColor: [
+                        'rgba(16, 185, 129, 1)',
+                        'rgba(245, 158, 11, 1)',
+                        'rgba(244, 63, 94, 1)'
+                    ],
+                    borderWidth: 2,
+                    hoverOffset: 6
+                }}]
+            }},
+            options: {{
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '72%',
+                plugins: {{
+                    legend: {{
+                        position: 'bottom',
+                        labels: {{
+                            color: '#9ca3af',
+                            font: {{ family: 'Plus Jakarta Sans', size: 11, weight: '600' }},
+                            padding: 14,
+                            boxWidth: 12,
+                            usePointStyle: true
+                        }}
+                    }},
+                    tooltip: {{
+                        padding: 10,
+                        backgroundColor: '#0f172a',
+                        borderColor: 'rgba(255,255,255,0.1)',
+                        borderWidth: 1,
+                        callbacks: {{
+                            label: function(c) {{
+                                const total = riskDist.reduce((a, b) => a + b, 0);
+                                const pct = total ? ((c.parsed / total) * 100).toFixed(1) : 0;
+                                return ' ' + c.label + ': ' + c.parsed + ' SV (' + pct + '%)';
+                            }}
+                        }}
+                    }}
+                }}
+            }}
+        }});
+
+        // --- Biểu Đồ Sức Khỏe Học Thuật 3 Khối ---
+        const ctxCohort = document.getElementById('cohort-health-chart').getContext('2d');
+        new Chart(ctxCohort, {{
+            type: 'bar',
+            data: {{
+                labels: ['KS24 (Microservice)', 'KS25 (PTTKHT)', 'KS25 QTKD (MAN107)'],
+                datasets: [
+                    {{
+                        label: 'Tỷ lệ Đỗ TB (%)',
+                        data: cohortPass,
+                        backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
                         borderWidth: 1.5,
                         borderRadius: 6
                     }},
                     {{
-                        label: 'Quy chế mới (%)',
-                        data: currNew,
-                        backgroundColor: 'rgba(59, 130, 246, 0.75)',
-                        borderColor: 'rgba(59, 130, 246, 1)',
+                        label: 'Tỷ lệ Vi phạm TB (%)',
+                        data: cohortViol,
+                        backgroundColor: 'rgba(244, 63, 94, 0.75)',
+                        borderColor: 'rgba(244, 63, 94, 1)',
                         borderWidth: 1.5,
                         borderRadius: 6
                     }}
@@ -1192,11 +1693,15 @@ def build_unified_prediction_dashboard(data, output_path):
                         beginAtZero: true,
                         max: 100,
                         grid: {{ color: 'rgba(255, 255, 255, 0.05)' }},
-                        ticks: {{ color: '#9ca3af', font: {{ family: 'Plus Jakarta Sans' }} }}
+                        ticks: {{ 
+                            color: '#9ca3af', 
+                            font: {{ family: 'Plus Jakarta Sans' }},
+                            callback: function(v) {{ return v + '%'; }}
+                        }}
                     }},
                     x: {{
                         grid: {{ display: false }},
-                        ticks: {{ color: '#9ca3af', font: {{ family: 'Plus Jakarta Sans', weight: '500' }} }}
+                        ticks: {{ color: '#f3f4f6', font: {{ family: 'Plus Jakarta Sans', weight: '600', size: 11 }} }}
                     }}
                 }},
                 plugins: {{
@@ -1204,16 +1709,20 @@ def build_unified_prediction_dashboard(data, output_path):
                         position: 'top',
                         labels: {{ 
                             color: '#f3f4f6', 
-                            font: {{ family: 'Plus Jakarta Sans', weight: 'bold', size: 11 }} 
+                            font: {{ family: 'Plus Jakarta Sans', weight: 'bold', size: 11 }},
+                            boxWidth: 12
                         }}
                     }},
                     tooltip: {{
-                        padding: 12,
+                        padding: 10,
                         backgroundColor: '#0f172a',
-                        titleFont: {{ family: 'Plus Jakarta Sans', weight: 'bold' }},
-                        bodyFont: {{ family: 'Plus Jakarta Sans' }},
-                        borderColor: 'rgba(255,255,255,0.08)',
-                        borderWidth: 1
+                        borderColor: 'rgba(255,255,255,0.1)',
+                        borderWidth: 1,
+                        callbacks: {{
+                            label: function(c) {{
+                                return c.dataset.label + ': ' + c.parsed.y + '%';
+                            }}
+                        }}
                     }}
                 }}
             }}

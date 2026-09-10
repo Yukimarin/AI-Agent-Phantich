@@ -7,12 +7,12 @@ import time
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
-def run_script(name, path, with_deps=None):
+def run_script(name, path, with_deps=None, extra_args=None):
     start_time = time.time()
-    print("=" * 80)
-    print(f"BẮT ĐẦU CHẠY: {name}")
-    print(f"Path: {path}")
-    print("=" * 80)
+    print("=" * 80, flush=True)
+    print(f"BẮT ĐẦU CHẠY: {name}", flush=True)
+    print(f"Path: {path}", flush=True)
+    print("=" * 80, flush=True)
     
     if with_deps:
         cmd = ["uv", "run"]
@@ -21,22 +21,25 @@ def run_script(name, path, with_deps=None):
         cmd.append(path)
     else:
         cmd = [sys.executable, path]
+        
+    if extra_args:
+        cmd.extend(extra_args)
     
     try:
         result = subprocess.run(cmd, check=True, capture_output=True, text=True, encoding='utf-8')
         if result.stdout:
-            print(result.stdout.strip())
+            print(result.stdout.strip(), flush=True)
         elapsed = time.time() - start_time
-        print(f"✓ HOÀN THÀNH: {name} ({elapsed:.2f}s)\n")
+        print(f"✓ HOÀN THÀNH: {name} ({elapsed:.2f}s)\n", flush=True)
         return True
     except subprocess.CalledProcessError as e:
         elapsed = time.time() - start_time
-        print(f"✗ LỖI TẠI: {name} ({elapsed:.2f}s)")
+        print(f"✗ LỖI TẠI: {name} ({elapsed:.2f}s)", flush=True)
         if e.stdout:
-            print(e.stdout)
+            print(e.stdout, flush=True)
         if e.stderr:
-            print(e.stderr)
-        print(f"! FALLBACK: Bỏ qua lỗi tại {name} để hệ thống tiếp tục chạy.\n")
+            print(e.stderr, flush=True)
+        print(f"! FALLBACK: Bỏ qua lỗi tại {name} để hệ thống tiếp tục chạy.\n", flush=True)
         return False
 
 def validate_output(file_path, file_type):
@@ -98,9 +101,12 @@ def ensure_mysql_started():
 def main():
     total_start = time.time()
     run_advanced = "--with-advanced" in sys.argv
+    is_fast = "--fast" in sys.argv or "--quick" in sys.argv
+    fast_args = ["--fast"] if is_fast else []
     
+    mode_str = "CHẾ ĐỘ SIÊU TỐC (FAST PIPELINE < 10s)" if is_fast else "CHẾ ĐỘ TOÀN DIỆN (FULL PIPELINE)"
     print("================================================================================")
-    print("KHỞI CHẠY ĐƯỜNG ỐNG TINH GỌN (CORE PIPELINE & MASTER PORTAL)")
+    print(f"KHỞI CHẠY ĐƯỜNG ỐNG ĐÀO TẠO: {mode_str}")
     print("================================================================================")
     
     # Đảm bảo các thư mục đầu ra tồn tại
@@ -113,7 +119,8 @@ def main():
     run_script(
         "DataSanitizer: Làm sạch dữ liệu & Tạo Single Cache JSON", 
         "agents/common/data_sanitizer.py",
-        with_deps=["openpyxl"]
+        with_deps=["openpyxl"],
+        extra_args=fast_args
     )
 
     # Bước 0.5: Kiểm tra Database
@@ -141,7 +148,8 @@ def main():
     run_script(
         "Agent 4: Nhật ký công việc (Daily Logs Auditor)", 
         "agents/core/agent_4_daily_logs/run.py",
-        with_deps=["openpyxl"]
+        with_deps=["openpyxl"],
+        extra_args=fast_args
     )
     validate_output("data/processed/daily_log_analysis.json", "json")
     validate_output("output/dashboards/core/agent_4_daily_logs.html", "html")

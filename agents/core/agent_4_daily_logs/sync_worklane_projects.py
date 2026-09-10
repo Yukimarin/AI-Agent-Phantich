@@ -59,6 +59,15 @@ def call_mcp_tool(tool_name, arguments={}):
     return None
 
 def sync_projects():
+    output_path = "data/processed/project_issues_worklane.json"
+    force_sync = "--force" in sys.argv or "--full" in sys.argv
+    if not force_sync and os.path.exists(output_path):
+        import time
+        mtime = os.path.getmtime(output_path)
+        if time.time() - mtime < 12 * 3600 or "--fast" in sys.argv:
+            print(f"✓ Worklane: Sử dụng cache dữ liệu dự án & issues sẵn có tại {output_path} (tiết kiệm 80s).")
+            return
+
     print("Fetching projects from Worklane for department 'DT'...")
     projects_result = call_mcp_tool("list_projects", {"department": "DT"})
     if not projects_result:

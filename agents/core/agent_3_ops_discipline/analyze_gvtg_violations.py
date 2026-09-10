@@ -7,7 +7,7 @@ import json
 import socket
 import time
 import subprocess
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -322,80 +322,98 @@ def main():
     cursor.execute("SELECT id, name FROM courses")
     courses_db = cursor.fetchall()
     
-    # 3. Đọc dữ liệu Thời khóa biểu Excel
-    print("Đang đọc dữ liệu thời khóa biểu Excel...")
-    try:
-        wb = openpyxl.load_workbook(tkb_path, data_only=True)
-    except Exception as e:
-        print("Error opening Excel workbook:", str(e))
-        conn.close()
-        sys.exit(1)
-        
+    # 3. Đọc dữ liệu Thời khóa biểu Excel (có Cache JSON tăng tốc)
+    class_col = 'Lớp đào tạo'
+    subject_col = 'Môn học'
+    gv_lt_col = 'Giảng viên LT'
+    gv_th_col = 'Giảng viên TH'
+    date_col = 'Ngày đào tạo'
+    session_col = 'Tiến độ đào tạo'
+    ca_col = 'Ca đào tạo'
+
+    tkb_cache_path = "data/processed/tkb_rows_cache.json"
     rows = []
-    target_tkb_sheets = ['1.1. TKB Hà Nội tổng', '1.2. TKB Hồ Chí Minh tổng']
-    for sheetname in target_tkb_sheets:
-        if sheetname not in wb.sheetnames:
-            continue
-        sheet = wb[sheetname]
-        headers = [str(sheet.cell(row=1, column=c).value).strip() for c in range(1, sheet.max_column + 1)]
-        
-        class_col = 'Lớp đào tạo'
-        subject_col = 'Môn học'
-        gv_lt_col = 'Giảng viên LT'
-        gv_th_col = 'Giảng viên TH'
-        date_col = 'Ngày đào tạo'
-        session_col = 'Tiến độ đào tạo'
-        ca_col = 'Ca đào tạo'
-        
+    use_cache = False
+    if os.path.exists(tkb_cache_path) and os.path.exists(tkb_path):
+        if os.path.getmtime(tkb_cache_path) >= os.path.getmtime(tkb_path):
+            try:
+                with open(tkb_cache_path, "r", encoding="utf-8") as f:
+                    rows = json.load(f)
+                use_cache = True
+                print(f"✓ Sử dụng Cache TKB nhanh ({len(rows)} ca học).")
+            except Exception:
+                use_cache = False
+
+    if not use_cache:
+        print("Đang đọc dữ liệu thời khóa biểu Excel...")
         try:
-            class_idx = headers.index(class_col) + 1
-            subject_idx = headers.index(subject_col) + 1
-            gv_lt_idx = headers.index(gv_lt_col) + 1
-            gv_th_idx = headers.index(gv_th_col) + 1
-            date_idx = headers.index(date_col) + 1
-            session_idx = headers.index(session_col) + 1
-            ca_idx = headers.index(ca_col) + 1
-        except ValueError as e:
-            continue
+            wb = openpyxl.load_workbook(tkb_path, data_only=True)
+        except Exception as e:
+            print("Error opening Excel workbook:", str(e))
+            conn.close()
+            sys.exit(1)
             
-        for r in range(2, sheet.max_row + 1):
-            class_val = sheet.cell(row=r, column=class_idx).value
-            subject_val = sheet.cell(row=r, column=subject_idx).value
-            gv_lt_val = sheet.cell(row=r, column=gv_lt_idx).value
-            gv_th_val = sheet.cell(row=r, column=gv_th_idx).value
-            date_val = sheet.cell(row=r, column=date_idx).value
-            session_val = sheet.cell(row=r, column=session_idx).value
-            ca_val = sheet.cell(row=r, column=ca_idx).value
+        target_tkb_sheets = ['1.1. TKB Hà Nội tổng', '1.2. TKB Hồ Chí Minh tổng']
+        for sheetname in target_tkb_sheets:
+            if sheetname not in wb.sheetnames:
+                continue
+            sheet = wb[sheetname]
+            headers = [str(sheet.cell(row=1, column=c).value).strip() for c in range(1, sheet.max_column + 1)]
             
-            if class_val is None and subject_val is None:
+            try:
+                class_idx = headers.index(class_col) + 1
+                subject_idx = headers.index(subject_col) + 1
+                gv_lt_idx = headers.index(gv_lt_col) + 1
+                gv_th_idx = headers.index(gv_th_col) + 1
+                date_idx = headers.index(date_col) + 1
+                session_idx = headers.index(session_col) + 1
+                ca_idx = headers.index(ca_col) + 1
+            except ValueError as e:
                 continue
                 
-            rows.append({
-                class_col: class_val,
-                subject_col: subject_val,
-                gv_lt_col: gv_lt_val,
-                gv_th_col: gv_th_val,
-                date_col: date_val,
-                session_col: session_val,
-                ca_col: ca_val
-            })
-    wb.close()
+            for r in range(2, sheet.max_row + 1):
+                class_val = sheet.cell(row=r, column=class_idx).value
+                subject_val = sheet.cell(row=r, column=subject_idx).value
+                gv_lt_val = sheet.cell(row=r, column=gv_lt_idx).value
+                gv_th_val = sheet.cell(row=r, column=gv_th_idx).value
+                date_val = sheet.cell(row=r, column=date_idx).value
+                session_val = sheet.cell(row=r, column=session_idx).value
+                ca_val = sheet.cell(row=r, column=ca_idx).value
+                
+                if class_val is None and subject_val is None:
+                    continue
+                    
+                d_str = date_val.strftime('%Y-%m-%d') if isinstance(date_val, (datetime, date)) else str(date_val).split(" ")[0].split("T")[0] if date_val else None
+                rows.append({
+                    class_col: str(class_val) if class_val else None,
+                    subject_col: str(subject_val) if subject_val else None,
+                    gv_lt_col: str(gv_lt_val) if gv_lt_val else None,
+                    gv_th_col: str(gv_th_val) if gv_th_val else None,
+                    date_col: d_str,
+                    session_col: str(session_val) if session_val else None,
+                    ca_col: str(ca_val) if ca_val else None
+                })
+        wb.close()
+        try:
+            os.makedirs(os.path.dirname(tkb_cache_path), exist_ok=True)
+            with open(tkb_cache_path, "w", encoding="utf-8") as f:
+                json.dump(rows, f, ensure_ascii=False)
+        except Exception:
+            pass
     
+    COMPANY_HOLIDAYS = ["2026-08-31", "2026-09-01", "2026-09-02"]
+    today_str = "2026-08-28"  # Chốt kiểm toán tuần 24/08 - 28/08 (loại trừ ngày nghỉ lễ toàn công ty 31/08 - 02/09)
+    now = datetime.strptime("2026-08-28 23:59:59", "%Y-%m-%d %H:%M:%S")
     seen = set()
     unique_rows = []
-    today_str = datetime.now().strftime('%Y-%m-%d')
-    now = datetime.now()
     
     for row in rows:
         raw_date = row[date_col]
-        if isinstance(raw_date, datetime):
+        if isinstance(raw_date, (datetime, date)):
             date_str = raw_date.strftime('%Y-%m-%d')
         elif raw_date:
             try:
-                if isinstance(raw_date, str):
-                    date_str = raw_date.split(" ")[0]
-                else:
-                    date_str = str(raw_date)
+                date_str = str(raw_date).split(" ")[0].split("T")[0]
             except:
                 continue
         else:
@@ -431,6 +449,8 @@ def main():
     # 4. DUYỆT CÁC LỚP QUÉT LỖI QLĐT
     for row in unique_rows:
         date_str = row['parsed_date_str']
+        if date_str in COMPANY_HOLIDAYS or date_str > today_str:
+            continue
         tkb_class = str(row[class_col] or "").strip()
         norm_class = normalize_class_name(tkb_class)
         cid = class_map.get(norm_class) or class_map.get(tkb_class)
@@ -574,6 +594,7 @@ def main():
             m_miss_days = m_stat.get("missing_days", [])
             
             all_miss_days = sorted(list(set(w_miss_days + m_miss_days)))
+            all_miss_days = [d for d in all_miss_days if d <= today_str and d not in COMPANY_HOLIDAYS]
             for m_day in all_miss_days:
                 violations.append({
                     'Date': m_day, 'Class': 'Worklane', 'Session': 'Nhật ký công việc', 'Ca': 'N/A',
@@ -608,7 +629,7 @@ def main():
                 iss_due = iss.get('dueDate')
                 if iss_due:
                     due_date_str = iss_due[:10]
-                    if due_date_str <= today_str:
+                    if due_date_str <= today_str and due_date_str not in COMPANY_HOLIDAYS:
                         assignee = iss.get('assignee') or ""
                         
                         matched_staff = match_instructor(assignee, all_staffs)

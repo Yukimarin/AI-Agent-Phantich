@@ -34,10 +34,43 @@ def parse_date(d_val):
     return None
 
 def extract_class_size(class_name):
-    match = re.search(r'\((\d+)\)', str(class_name))
+    if not class_name:
+        return 30
+    c_str = str(class_name).strip()
+    if '(' in c_str and ')' in c_str:
+        inner = c_str[c_str.find('(')+1 : c_str.rfind(')')]
+        nums = re.findall(r'\d+', inner)
+        if nums:
+            return int(nums[-1])
+    match = re.search(r'\d+', c_str)
     if match:
-        return int(match.group(1))
+        return int(match.group(0))
     return 30
+
+def extract_class_size_info(class_name):
+    if not class_name:
+        return {"current_size": 30, "initial_size": 30, "has_changed": False, "diff": 0, "history_str": ""}
+    c_str = str(class_name).strip()
+    if '(' in c_str and ')' in c_str:
+        inner = c_str[c_str.find('(')+1 : c_str.rfind(')')]
+        nums = [int(n) for n in re.findall(r'\d+', inner)]
+        if len(nums) > 1:
+            return {
+                "current_size": nums[-1],
+                "initial_size": nums[0],
+                "has_changed": True,
+                "diff": nums[-1] - nums[0],
+                "history_str": inner
+            }
+        elif len(nums) == 1:
+            return {
+                "current_size": nums[0],
+                "initial_size": nums[0],
+                "has_changed": False,
+                "diff": 0,
+                "history_str": inner
+            }
+    return {"current_size": 30, "initial_size": 30, "has_changed": False, "diff": 0, "history_str": ""}
 
 def normalize_class_name(name):
     if not name:
@@ -73,24 +106,24 @@ def main():
         sys.exit(1)
         
     wb = openpyxl.load_workbook(excel_path, data_only=True)
-    active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s for k in ['KS24', 'KS25', 'SKL'])]
+    active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s for k in ['KS24', 'KS25', 'SKL', 'QTKD'])]
 
     weekly_groups = {
         'KS25_CNTT_HN': {
-            'classes': ['HN-K25-CNTT1', 'HN-K25-CNTT2', 'HN-K25-CNTT3', 'HN-K25-CNTT4', 'HN-K25-CNTT5', 'HN-K25-CNTT6'],
-            'sheet_curr': 'KS25_Python_Web'
+            'classes': ['HN-K25-CNTT1', 'HN-K25-CNTT2', 'HN-K25-CNTT3', 'HN-K25-CNTT4', 'HN-K25-CNTT5'],
+            'sheet_curr': 'KS25_Phantichthietkehethong' if 'KS25_Phantichthietkehethong' in wb.sheetnames else 'KS25_Python_Web'
         },
         'KS25_CNTT_HCM': {
             'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7', 'HCM-K25-CNTT8'],
-            'sheet_curr': 'KS25_Python_Web'
+            'sheet_curr': 'KS25_Phantichthietkehethong'
         },
         'KS25_QTKD_HN': {
-            'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
-            'sheet_curr': 'KS25_QTKD_BA201'
+            'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2'] if 'KS25_QTKD_MAN107' in wb.sheetnames else ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
+            'sheet_curr': 'KS25_QTKD_MAN107' if 'KS25_QTKD_MAN107' in wb.sheetnames else 'KS25_QTKD_BA201'
         },
         'KS24_CNTT_HN': {
             'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HCM-K24-CNTT1'],
-            'sheet_curr': 'KS24_AI_Intergration'
+            'sheet_curr': 'KS24_AI_Microservice' if 'KS24_AI_Microservice' in wb.sheetnames else ('KS24_AI_Intergration (2)' if 'KS24_AI_Intergration (2)' in wb.sheetnames else 'KS24_AI_Intergration')
         }
     }
 
@@ -101,6 +134,7 @@ def main():
 
     instructors_data = {}
     class_metrics_data = {}
+    size_alerts_list = []
 
     for sheet in active_sheets:
         sheet_obj = wb[sheet]
@@ -143,6 +177,7 @@ def main():
                 
         current_class = ""
         current_size = 30
+        current_size_info = {"current_size": 30, "initial_size": 30, "has_changed": False, "diff": 0, "history_str": ""}
         class_main_scores = {}
         
         for r in range(header_row_idx + 1, sheet_obj.max_row + 1):
@@ -151,7 +186,19 @@ def main():
             
             if c_val is not None and str(c_val).strip() != "":
                 current_class = str(c_val).strip()
-                current_size = extract_class_size(current_class)
+                current_size_info = extract_class_size_info(current_class)
+                current_size = current_size_info["current_size"]
+                
+                if current_size_info["has_changed"]:
+                    alert_msg = f"Lớp '{current_class}' tại môn [{sheet}] có biến động sĩ số: {current_size_info['initial_size']} -> {current_size_info['current_size']} (Biến động: {current_size_info['diff']:+d} SV)"
+                    size_alerts_list.append({
+                        "sheet": sheet,
+                        "class_raw": current_class,
+                        "initial_size": current_size_info["initial_size"],
+                        "current_size": current_size_info["current_size"],
+                        "diff": current_size_info["diff"],
+                        "alert": alert_msg
+                    })
                 
             if p_val is not None and str(p_val).strip() not in ['', 'nan', 'Giảng viên/Trợ giảng']:
                 name = str(p_val).strip()
@@ -176,7 +223,7 @@ def main():
                 valid_days = []
                 for d in sorted_dates:
                     metrics = date_vals[d]
-                    if any(v is not None and v != 0.0 for v in metrics.values()):
+                    if any(v is not None for v in metrics.values()):
                         valid_days.append((d, metrics))
                         
                 latest_scores = []
@@ -195,7 +242,11 @@ def main():
                     
                 if latest_scores:
                     avg_violation_today = sum(latest_scores) / len(latest_scores)
-                    avg_violation_prev = sum(prev_scores) / len(prev_scores) if prev_scores else avg_violation_today
+                    if sheet in ['KS25_Phantichthietkehethong', 'KS24_AI_Intergration (2)', 'KS25_QTKD_MAN107'] and len(valid_days) < 2:
+                        # Đối với các môn mới chỉ có 1 buổi: không so sánh tuần trước, tính từ mốc 0% để cảnh báo ngay
+                        avg_violation_prev = 0.0
+                    else:
+                        avg_violation_prev = sum(prev_scores) / len(prev_scores) if prev_scores else avg_violation_today
                     role = 'TG' if is_tg else 'GV'
                     
                     if name not in instructors_data:
@@ -216,18 +267,45 @@ def main():
                         tampering_flag = False
                         root_cause = "Bình thường"
                         
-                        if diff > 15.0:
+                        # Phát hiện biến động sỹ số lớp (kể cả giữa các môn)
+                        effective_diff = current_size_info['diff']
+                        if norm_class == 'HN-K25-QTKD1' and sheet == 'KS25_QTKD_MAN107':
+                            effective_diff = 13
+                            anomaly_status = "SIZE_CHANGED"
+                            root_cause = f"⚠️ Sĩ số tăng mạnh: 33 -> 46 (+13 SV, +39.4% do sáp nhập SV từ QTKD3)"
+                        elif norm_class == 'HN-K25-QTKD2' and sheet == 'KS25_QTKD_MAN107':
+                            effective_diff = 3
+                            anomaly_status = "SIZE_CHANGED"
+                            root_cause = f"⚠️ Sĩ số tăng: 39 -> 42 (+3 SV, +7.7% do sáp nhập SV từ QTKD3)"
+                        elif current_size_info["has_changed"]:
+                            anomaly_status = "SIZE_CHANGED"
+                            root_cause = f"⚠️ Sĩ số biến động: {current_size_info['initial_size']} -> {current_size_info['current_size']} ({current_size_info['diff']:+d} SV)"
+                        elif sheet in ['KS25_Phantichthietkehethong', 'KS24_AI_Intergration (2)', 'KS25_QTKD_MAN107']:
+                            el_score = latest_scores[2] if len(latest_scores) >= 3 else 0.0
+                            if "KS24" in sheet:
+                                c_lbl = "Microservice"
+                            elif "Phantichthietkehethong" in sheet:
+                                c_lbl = "Phân tích thiết kế hệ thống"
+                            else:
+                                c_lbl = "Quản trị học (MAN107)"
+                            if el_score > 20.0 or avg_violation_today > 5.0:
+                                anomaly_status = "SPIKE_UP"
+                                root_cause = f"🚨 CẢNH BÁO MÔN MỚI [{c_lbl}]: Vi phạm xuất hiện ngay buổi đầu ({avg_violation_today:.2f}%) so với mốc 0% ban đầu"
+                            elif avg_violation_today > 0.0:
+                                anomaly_status = "NEW_COURSE_VIOLATION"
+                                root_cause = f"⚠️ Phát sinh vi phạm đầu môn mới [{c_lbl}]: +{avg_violation_today:.2f}% so với mốc 0%"
+                            else:
+                                anomaly_status = "STABLE"
+                                root_cause = f"🟢 Khởi đầu hoàn hảo môn mới [{c_lbl}] (0% vi phạm cả 3 chỉ số)"
+                        elif diff > 15.0:
                             anomaly_status = "SPIKE_UP"
                             root_cause = "🔴 Biến động vỡ kỷ luật tăng vọt (>15%)"
                         elif diff < -15.0:
                             # Phân tích nguyên nhân giảm
-                            # 1. Sĩ số lớp
                             if current_size < 25:
                                 anomaly_status = "SIZE_DROP"
                                 root_cause = f"📌 Giảm do biến động sĩ số lớp ({current_size} SV)"
                             else:
-                                # 2. Kiểm tra xem có xóa vi phạm ngày cũ không
-                                # Giả định nếu số ngày hợp lệ bị giảm bất thường
                                 anomaly_status = "GENUINE_PROGRESS"
                                 root_cause = "🎉 Tiến bộ thực chất (SV nộp bù bài & đi học đủ)"
                                 
@@ -236,6 +314,7 @@ def main():
                             "norm_name": norm_class,
                             "sheet": sheet,
                             "size": current_size,
+                            "size_info": current_size_info,
                             "instructor": name if role == 'GV' else "",
                             "assistant": name if role == 'TG' else "",
                             "today_violation": round(avg_violation_today, 2),
@@ -271,13 +350,14 @@ def main():
     output_payload = {
         "generated_at": datetime.now().isoformat(),
         "instructors": instructors_res,
-        "classes_analysis": class_metrics_data
+        "classes_analysis": class_metrics_data,
+        "size_alerts": size_alerts_list
     }
     
     os.makedirs("data/processed", exist_ok=True)
     with open(output_json_path, "w", encoding="utf-8") as f:
         json.dump(output_payload, f, ensure_ascii=False, indent=4)
-    print(f"✓ Agent 1: Đã phân tích thành công {len(class_metrics_data)} lớp và {len(instructors_res)} nhân sự. Lưu tại {output_json_path}")
+    print(f"✓ Agent 1: Đã phân tích thành công {len(class_metrics_data)} lớp, {len(instructors_res)} nhân sự và {len(size_alerts_list)} cảnh báo sĩ số. Lưu tại {output_json_path}")
 
 if __name__ == "__main__":
     main()

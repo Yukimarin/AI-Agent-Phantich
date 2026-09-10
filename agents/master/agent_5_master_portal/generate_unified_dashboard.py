@@ -40,24 +40,24 @@ def build_executive_dataset():
             staff_violations_map[name_key].append(v)
 
     active_classes_config = [
-        {"name": "HN-K24-CNTT1", "group_title": "Khối KS24 CNTT (Kỳ IV — AI Integration)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HN", "subject": "KS24_AI_Intergration", "gv": "Nguyễn Công Hưởng", "tg": "Phạm Tuấn Bình"},
-        {"name": "HN-K24-CNTT2", "group_title": "Khối KS24 CNTT (Kỳ IV — AI Integration)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HN", "subject": "KS24_AI_Intergration", "gv": "Bùi Thanh Hải", "tg": "Đinh Thành Nam"},
-        {"name": "HN-K24-CNTT3", "group_title": "Khối KS24 CNTT (Kỳ IV — AI Integration)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HN", "subject": "KS24_AI_Intergration", "gv": "Bùi Thanh Hải", "tg": "Phạm Tuấn Bình"},
-        {"name": "HN-K24-CNTT4", "group_title": "Khối KS24 CNTT (Kỳ IV — AI Integration)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HN", "subject": "KS24_AI_Intergration", "gv": "Bùi Thanh Hải", "tg": "Đinh Thành Nam"},
-        {"name": "HCM-K24-CNTT1", "group_title": "Khối KS24 CNTT (Kỳ IV — AI Integration)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS24_AI_Intergration", "gv": "Nguyễn Bá Minh Đạo", "tg": "Phan Ngọc Tài"},
+        {"name": "HN-K24-CNTT1", "group_title": "Khối KS24 CNTT (Kỳ IV — Microservices)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HN", "subject": "KS24_AI_Intergration (2)", "gv": "Bùi Thanh Hải", "tg": "Phạm Tuấn Bình"},
+        {"name": "HN-K24-CNTT2", "group_title": "Khối KS24 CNTT (Kỳ IV — Microservices)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HN", "subject": "KS24_AI_Intergration (2)", "gv": "Bùi Thanh Hải", "tg": "Đinh Thành Nam"},
+        {"name": "HN-K24-CNTT3", "group_title": "Khối KS24 CNTT (Kỳ IV — Microservices)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HN", "subject": "KS24_AI_Intergration (2)", "gv": "Hồ Xuân Hùng", "tg": "Phạm Tuấn Bình"},
+        {"name": "HN-K24-CNTT4", "group_title": "Khối KS24 CNTT (Kỳ IV — Microservices)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HN", "subject": "KS24_AI_Intergration (2)", "gv": "Bùi Thanh Hải", "tg": "Đinh Thành Nam"},
+        {"name": "HCM-K24-CNTT1", "group_title": "Khối KS24 CNTT (Kỳ IV — Microservices)", "batch": "KS24", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS24_AI_Intergration (2)", "gv": "Nguyễn Bá Minh Đạo", "tg": "Phan Ngọc Tài"},
         
-        {"name": "HN-K25-CNTT1", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Lương Quốc Tuấn", "tg": "Lại Trung Lâm"},
-        {"name": "HN-K25-CNTT2", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Lâm Tùng Dương", "tg": "Lại Trung Lâm"},
-        {"name": "HN-K25-CNTT3", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Nguyễn Quảng An", "tg": "Phạm Ngọc Kiên"},
-        {"name": "HN-K25-CNTT4", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Nguyễn Quảng An", "tg": "Phạm Ngọc Kiên"},
-        {"name": "HN-K25-CNTT5", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Lương Quốc Tuấn", "tg": "Lại Trung Lâm"},
-        {"name": "HN-K25-CNTT6", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Nguyễn Quảng An", "tg": "Phạm Ngọc Kiên"},
-        {"name": "HN-K25-CNTT8", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Trịnh Quốc Hai", "tg": "Đặng Minh Luân"},
+        {"name": "HN-K25-CNTT1", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Chờ bắt đầu môn mới / Kết thúc Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Lương Quốc Tuấn", "tg": "Lại Trung Lâm"},
+        {"name": "HN-K25-CNTT2", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Chờ bắt đầu môn mới / Kết thúc Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Lâm Tùng Dương", "tg": "Lại Trung Lâm"},
+        {"name": "HN-K25-CNTT3", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Chờ bắt đầu môn mới / Kết thúc Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Nguyễn Quảng An", "tg": "Phạm Ngọc Kiên"},
+        {"name": "HN-K25-CNTT4", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Chờ bắt đầu môn mới / Kết thúc Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Nguyễn Quảng An", "tg": "Phạm Ngọc Kiên"},
+        {"name": "HN-K25-CNTT5", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Chờ bắt đầu môn mới / Kết thúc Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Lương Quốc Tuấn", "tg": "Lại Trung Lâm"},
+        {"name": "HN-K25-CNTT6", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Chờ bắt đầu môn mới / Kết thúc Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Nguyễn Quảng An", "tg": "Phạm Ngọc Kiên"},
+        {"name": "HN-K25-CNTT8", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Chờ bắt đầu môn mới / Kết thúc Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HN", "subject": "KS25_Python_Web", "gv": "Trịnh Quốc Hai", "tg": "Đặng Minh Luân"},
         
-        {"name": "HCM-K25-CNTT5", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Python_Web", "gv": "Lê Hà Thanh Sang", "tg": "Lưu Hoàng Xuân Nguyên"},
-        {"name": "HCM-K25-CNTT6", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Python_Web", "gv": "Trần Quốc Tuấn", "tg": "Lưu Hoàng Xuân Nguyên"},
-        {"name": "HCM-K25-CNTT7", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Python_Web", "gv": "Trần Quốc Tuấn", "tg": "Lưu Hoàng Xuân Nguyên"},
-        {"name": "HCM-K25-CNTT8", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Python Web)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Python_Web", "gv": "Lê Hà Thanh Sang", "tg": "Phan Ngọc Tài"},
+        {"name": "HCM-K25-CNTT5", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Phantichthietkehethong", "gv": "Nguyễn Đức Minh", "tg": "Lưu Hoàng Xuân Nguyên"},
+        {"name": "HCM-K25-CNTT6", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Phantichthietkehethong", "gv": "Trần Quốc Tuấn", "tg": "Lưu Hoàng Xuân Nguyên"},
+        {"name": "HCM-K25-CNTT7", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Phantichthietkehethong", "gv": "Nguyễn Đức Minh", "tg": "Lưu Hoàng Xuân Nguyên"},
+        {"name": "HCM-K25-CNTT8", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Phantichthietkehethong", "gv": "Trần Quốc Tuấn", "tg": "Phan Ngọc Tài"},
         
         {"name": "HN-K25-QTKD1", "group_title": "Khối KS25 QTKD (Kỳ II — Business Analysis)", "batch": "KS25", "dept": "Khối QTKD", "campus": "HN", "subject": "KS25_QTKD_BA201", "gv": "Nguyễn Thị Hồng Minh", "tg": "Đặng Quỳnh Trang"},
         {"name": "HN-K25-QTKD2", "group_title": "Khối KS25 QTKD (Kỳ II — Business Analysis)", "batch": "KS25", "dept": "Khối QTKD", "campus": "HN", "subject": "KS25_QTKD_BA201", "gv": "Nguyễn Ngọc Vân Khanh", "tg": "Lê Thành Ngọc"},
@@ -108,14 +108,18 @@ def build_executive_dataset():
         red_sv_count = len([s for s in c_care_list if s.get('risk_level') == 'RED'])
         banned_sv_count = len([s for s in c_care_list if s.get('is_failed_new')])
 
-        if pred_pass < 60.0 or v_class > 20.0 or red_sv_count >= 10:
+        if subj == "KS25_Phantichthietkehethong" and el > 20.0:
+            health = "RED"
+            status_text = "🔴 Báo động Elearning (Môn mới)"
+            action_takeaway = f"🚨 Cảnh báo đầu môn mới: Vi phạm Elearning {el}% (so với mốc 0%). GV {gv_name} & TG {tg_name} chấn chỉnh gấp trước buổi 2!"
+        elif pred_pass < 60.0 or v_class > 20.0 or red_sv_count >= 10:
             health = "RED"
             status_text = "🔴 Báo động Đỏ"
             action_takeaway = f"TG {tg_name} tổ chức phụ đạo gấp; GV {gv_name} tăng cường kiểm tra code thực chiến"
-        elif pred_pass < 80.0 or v_class > 10.0 or len(c_care_list) >= 5:
+        elif pred_pass < 80.0 or v_class > 10.0 or len(c_care_list) >= 5 or (subj == "KS25_Phantichthietkehethong" and el > 5.0):
             health = "YELLOW"
             status_text = "🟡 Cần theo dõi"
-            action_takeaway = f"Theo dõi sát {len(c_care_list)} sinh viên Care List, đôn đốc nộp bài tập"
+            action_takeaway = f"Đôn đốc sinh viên hoàn thành Elearning đầu môn mới ({el}%), kiểm soát nề nếp buổi 2"
         else:
             health = "GREEN"
             status_text = "🟢 Ổn định"

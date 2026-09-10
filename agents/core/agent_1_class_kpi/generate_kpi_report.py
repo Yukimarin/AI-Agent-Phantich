@@ -12,9 +12,17 @@ if sys.stdout.encoding != 'utf-8':
 
 class_sizes = {}
 def extract_class_size(class_name):
-    match = re.search(r'\((\d+)\)', str(class_name))
+    if not class_name:
+        return 30
+    c_str = str(class_name).strip()
+    if '(' in c_str and ')' in c_str:
+        inner = c_str[c_str.find('(')+1 : c_str.rfind(')')]
+        nums = re.findall(r'\d+', inner)
+        if nums:
+            return int(nums[-1])
+    match = re.search(r'\d+', c_str)
     if match:
-        return int(match.group(1))
+        return int(match.group(0))
     return 30
 
 excel_path = 'data/inputs/PTIT_Chiso.xlsx'
@@ -196,30 +204,34 @@ print(f"Tuần đối chiếu: {start_prev.strftime('%d/%m')} - {end_prev.strfti
 
 weekly_groups = {
     'KS25_CNTT_HN': {
-        'classes': ['HN-K25-CNTT1', 'HN-K25-CNTT2', 'HN-K25-CNTT3', 'HN-K25-CNTT4', 'HN-K25-CNTT5', 'HN-K25-CNTT6'],
-        'sheet_curr': 'KS25_Python_Web',
+        'classes': ['HN-K25-CNTT1', 'HN-K25-CNTT2', 'HN-K25-CNTT3', 'HN-K25-CNTT4', 'HN-K25-CNTT5'],
+        'sheet_curr': 'KS25_Phantichthietkehethong' if 'KS25_Phantichthietkehethong' in wb.sheetnames else 'KS25_Python_Web',
         'sheet_prev': 'KS25_Python_Web',
-        'label': 'Khóa KS25 CNTT Hà Nội (Python Web)'
+        'is_new_course': True,
+        'label': 'Khóa KS25 CNTT Hà Nội (Kỳ II — Phân tích thiết kế hệ thống — Bắt đầu học 09/09)'
     },
     'KS25_CNTT_HCM': {
         'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7', 'HCM-K25-CNTT8'],
-        'sheet_curr': 'KS25_Python_Web',
-        'sheet_prev': 'KS25_Python_Web',
-        'label': 'Khóa KS25 CNTT TP. HCM (Python Web)'
+        'sheet_curr': 'KS25_Phantichthietkehethong',
+        'sheet_prev': None,
+        'is_new_course': True,
+        'label': 'Khóa KS25 CNTT TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)'
     },
     'KS25_QTKD_HN': {
-        'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
-        'sheet_curr': 'KS25_QTKD_BA201',
-        'sheet_prev': 'KS25_QTKD_PRJ302',
-        'label': 'Khóa KS25 QTKD Hà Nội (BA201 / PRJ302)'
+        'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2'] if 'KS25_QTKD_MAN107' in wb.sheetnames else ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
+        'sheet_curr': 'KS25_QTKD_MAN107' if 'KS25_QTKD_MAN107' in wb.sheetnames else 'KS25_QTKD_BA201',
+        'sheet_prev': 'KS25_QTKD_BA201' if 'KS25_QTKD_MAN107' in wb.sheetnames else 'KS25_QTKD_PRJ302',
+        'is_new_course': True if 'KS25_QTKD_MAN107' in wb.sheetnames else False,
+        'label': 'Khóa KS25 QTKD Hà Nội (Kỳ II — MAN107 Quản trị học / Tái cơ cấu từ 3 xuống 2 lớp)'
     },
     # Sau khi gộp lớp: HN-K24-CNTT5 và HCM-K24-CNTT2 đã giải thể.
     # HCM-K24-CNTT1 được chuyển vào cùng bảng cơ sở HN để quản lý thống nhất.
     'KS24_CNTT_HN': {
         'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HCM-K24-CNTT1'],
-        'sheet_curr': 'KS24_AI_Intergration',
-        'sheet_prev': 'KS24_AI',
-        'label': 'Khóa KS24 CNTT (AI Integration / AI) — Hà Nội & HCM-CNTT1'
+        'sheet_curr': 'KS24_AI_Microservice' if 'KS24_AI_Microservice' in wb.sheetnames else ('KS24_AI_Intergration (2)' if 'KS24_AI_Intergration (2)' in wb.sheetnames else 'KS24_AI_Intergration'),
+        'sheet_prev': 'KS24_AI_Intergration',
+        'is_new_course': True if 'KS24_AI_Microservice' in wb.sheetnames else False,
+        'label': 'Khóa KS24 CNTT (Kỳ IV — Microservices) — Hà Nội & HCM-CNTT1'
     }
 }
 
@@ -292,18 +304,14 @@ def get_weekly_metrics(sheetname, classes_target, start_date, end_date):
                     except ValueError:
                         pass
             
-            # Lọc bỏ các ngày trống (tất cả chỉ số vắng/nợ/vi phạm bằng 0 hoặc None)
+            # Lọc bỏ các ngày trống (tất cả chỉ số vắng/nợ/vi phạm bằng None)
             active_dates_vals = defaultdict(list)
             for d, metrics in date_metrics.items():
-                is_empty_day = True
-                for val in metrics.values():
-                    if val is not None and val != 0.0:
-                        is_empty_day = False
-                        break
-                
+                is_empty_day = not any(val is not None for val in metrics.values())
                 if not is_empty_day:
                     for val4, val in metrics.items():
-                        active_dates_vals[val4].append(val)
+                        if val is not None:
+                            active_dates_vals[val4].append(val)
             
             averages = {}
             for metric in ['Chuyên cần', 'Bài tập', 'Elearning']:
@@ -450,9 +458,20 @@ for gkey, ginfo in weekly_groups.items():
     classes = ginfo['classes']
     curr_data = {}
     prev_data = {}
+    is_new_course = ginfo.get('is_new_course', False)
     
     for cls in classes:
         curr_metrics, prev_metrics = get_class_latest_and_prev_metrics(wb, ginfo['sheet_curr'], cls, max_date, timelines)
+        if is_new_course:
+            subject_dates = timelines.get(cls, {}).get(ginfo['sheet_curr'], [])
+            valid_dates = [d for d in subject_dates if d <= max_date]
+            if len(valid_dates) < 2:
+                # Đối với môn mới chỉ có 1 buổi, không so sánh với môn cũ. Tính lại từ mốc 0% để cảnh báo ngay
+                prev_metrics = {
+                    'teacher': curr_metrics['teacher'] if curr_metrics else 'N/A',
+                    'tg': curr_metrics['tg'] if curr_metrics else 'N/A',
+                    'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}
+                }
         if curr_metrics:
             curr_data[cls] = curr_metrics
             if prev_metrics:
@@ -705,9 +724,9 @@ trends_data = {
 }
 cohort_sheets = {
     # KS24_HN: gộp cả HCM-K24-CNTT1 vào cùng nhóm HN để phản ánh cấu trúc lớp mới sau khi gộp
-    'KS24_HN': ['KS24-JavaAdvance', 'KS24_JavaWeb', 'KS24_JWS', 'KS24_AI', 'KS24_AI_Intergration'],
+    'KS24_HN': ['KS24-JavaAdvance', 'KS24_JavaWeb', 'KS24_JWS', 'KS24_AI', 'KS24_AI_Intergration', 'KS24_AI_Intergration (2)'],
     'HN': ['KS25_Javascript', 'KS25_Database', 'KS25_Python', 'KS25_Python_Web'],
-    'HCM': ['KS25_Javascript', 'KS25_Database', 'KS25_Python', 'KS25_Python_Web'],
+    'HCM': ['KS25_Javascript', 'KS25_Database', 'KS25_Python', 'KS25_Python_Web', 'KS25_Phantichthietkehethong'],
     'QTKD': ['KS25_QTKD_M103', 'KS25_QTKD_M104', 'KS25_QTKD_DTB201', 'KS25_QTKD_DTB202', 'KS25_QTKD_PRJ302', 'KS25_QTKD_BA201']
 }
 for cohort, sheets in cohort_sheets.items():
@@ -794,6 +813,12 @@ markdown_content = f"""# BÁO CÁO THỐNG KÊ CHỈ SỐ VI PHẠM HÀNG NGÀY 
 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 12px 20px; border-radius: 8px; display: inline-block; font-weight: 600; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);">
   <i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Báo cáo Ngày: {max_date.strftime('%d/%m/%Y')}
 </div>
+
+> [!NOTE]
+> **THÔNG BÁO TÁI CƠ CẤU KHỐI QTKD (Từ 08/09/2026):**
+> - **Số lượng lớp:** Khối QTKD chính thức bước vào môn học mới `MAN107` (Quản trị học), **giảm quy mô từ 3 lớp xuống 2 lớp** (lớp `HN-K25-QTKD3` đã giải thể và sáp nhập sinh viên).
+> - **Sĩ số tăng lên:** Lớp **HN-K25-QTKD1** tăng từ **33 ➔ 46 SV (+13 SV, +39.4%)**; Lớp **HN-K25-QTKD2** tăng từ **39 ➔ 42 SV (+3 SV, +7.7%)**.
+> - **Giảng viên phụ trách:** Cô **Đặng Quỳnh Trang** đảm nhận giảng dạy cả 2 lớp môn MAN107.
 """
 
 markdown_content += "\n"
@@ -870,7 +895,10 @@ def generate_cohort_section(cohort_id, weekly_stats_group):
             issues.append(f"Tỷ lệ nợ bài tập có xu hướng tăng (+{bt_diff_overall:.2f}%).")
 
     if el_violated:
-        if el_diff_overall > 1.5 and curr_el > 10.0:
+        if cohort_id == 'HCM-KS25-CNTT':
+            el_cntt8 = weekly_stats_group['curr'].get('HCM-K25-CNTT8', {}).get('metrics', {}).get('Elearning', 0.0)
+            issues.append(f"🚨 <b>CẢNH BÁO MÔN MỚI:</b> Môn Phân tích thiết kế hệ thống xuất hiện vi phạm Elearning ({curr_el:.2f}%), biến động {el_diff_overall:+.2f}% so với buổi trước (Đặc biệt lớp HCM-K25-CNTT8 vi phạm Elearning lên đến {el_cntt8:.2f}%).")
+        elif el_diff_overall > 1.5 and curr_el > 10.0:
             issues.append(f"Tỷ lệ vi phạm Elearning ở mức nghiêm trọng ({curr_el:.2f}%) và tăng nhanh (+{el_diff_overall:.2f}%) so với hôm qua.")
         elif curr_el > 10.0:
             issues.append(f"Tỷ lệ vi phạm Elearning duy trì ở mức cao nghiêm trọng ({curr_el:.2f}%).")
@@ -962,9 +990,33 @@ def generate_cohort_section(cohort_id, weekly_stats_group):
 </div>
 """
     
+    qtkd_box = ""
+    if 'QTKD' in cohort_id:
+        qtkd_box = """
+<div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-left: 4px solid #f59e0b; border-radius: 10px; padding: 14px 18px; margin: 14px 0;">
+    <div style="color: #fcd34d; font-weight: 700; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">
+        📢 Biến động Quy mô & Tái cơ cấu Lớp Khối QTKD (Môn MAN107)
+    </div>
+    <ul style="margin: 0; padding-left: 18px; color: #e2e8f0; font-size: 0.88rem; line-height: 1.65;">
+        <li><b>Thay đổi số lượng lớp:</b> Giảm từ <b>3 lớp xuống 2 lớp</b> (lớp <code>HN-K25-QTKD3</code> đã giải thể và sáp nhập sinh viên sang 2 lớp QTKD1 và QTKD2).</li>
+        <li><b>Biến động sĩ số tăng lên:</b>
+            <ul>
+                <li>Lớp <b>HN-K25-QTKD1(46)</b>: Sĩ số tăng mạnh từ <b>33 ➔ 46 SV (+13 SV, +39.4%)</b> do tiếp nhận SV từ QTKD3.</li>
+                <li>Lớp <b>HN-K25-QTKD2(42)</b>: Sĩ số tăng từ <b>39 ➔ 42 SV (+3 SV, +7.7%)</b> do tiếp nhận SV từ QTKD3.</li>
+                <li>Tổng sĩ số 2 lớp hiện tại: <b>88 SV</b> (so với 98 SV ở môn BA201 trước đó, giảm ròng 10 SV).</li>
+            </ul>
+        </li>
+        <li><b>Giảng viên phụ trách:</b> Giảng viên <b>Đặng Quỳnh Trang</b> giảng dạy toàn bộ 2 lớp môn MAN107.</li>
+        <li><b>Kỷ luật ngày mở đầu môn học (08/09/2026):</b> Khởi đầu rất tích cực với <b>100% sinh viên đi học đầy đủ</b> (Chuyên cần vắng: <b>0.00%</b> cả 2 lớp); Nợ bài tập: <b>0.00%</b>; Vi phạm Elearning: QTKD1 là <b>2.17%</b> (1/46 SV), QTKD2 là <b>9.52%</b> (4/42 SV).</li>
+    </ul>
+</div>
+"""
+
     html = f"""
 ---
 ### Khóa {cohort_id}
+
+{qtkd_box}
 
 {ai_insights}
 

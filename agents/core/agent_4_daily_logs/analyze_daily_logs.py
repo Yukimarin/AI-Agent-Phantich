@@ -70,6 +70,8 @@ LEAVE_DAYS = {
     "trần minh cường": ["2026-08-14"]
 }
 
+COMPANY_HOLIDAYS = ["2026-08-31", "2026-09-01", "2026-09-02"]
+
 special_mappings = {
     "lưu xuân hoàng nguyên": "lưu hoàng xuân nguyên",
     "xuân nguyên": "lưu hoàng xuân nguyên"
@@ -211,11 +213,29 @@ def load_kpi_masters():
         except Exception as e:
             print("Warning loading QTKD KPI Master:", e)
             
-    # 2. CNTT KPI Master
-    cntt_path = r"C:\Users\DELL\Downloads\Quản lý hiệu suất đào tạo.xlsx"
-    if os.path.exists(cntt_path):
+    # 2. CNTT KPI Master (Ưu tiên bản FINAL mới nhất)
+    cntt_final_path = r"C:\Users\DELL\Downloads\KPI_MASTER_Giang_vien_Tro_giang_FINAL.xlsx"
+    cntt_path_old = r"C:\Users\DELL\Downloads\Quản lý hiệu suất đào tạo (2).xlsx"
+    cntt_path_alt = r"C:\Users\DELL\Downloads\Quản lý hiệu suất đào tạo.xlsx"
+    
+    if os.path.exists(cntt_final_path):
         try:
-            wb = openpyxl.load_workbook(cntt_path, data_only=True)
+            wb = openpyxl.load_workbook(cntt_final_path, data_only=True)
+            if "KPI_MASTER" in wb.sheetnames:
+                sheet = wb["KPI_MASTER"]
+                for r in range(2, sheet.max_row + 1):
+                    key = sheet.cell(row=r, column=6).value
+                    std_time = sheet.cell(row=r, column=5).value
+                    if key and std_time is not None:
+                        cntt_master[str(key).strip()] = float(std_time)
+            wb.close()
+            print(f"Agent 4 đã nạp {len(cntt_master)} định mức CNTT từ: {os.path.basename(cntt_final_path)}")
+        except Exception as e:
+            print("Warning loading CNTT KPI Master FINAL:", e)
+    elif os.path.exists(cntt_path_old) or os.path.exists(cntt_path_alt):
+        target_path = cntt_path_old if os.path.exists(cntt_path_old) else cntt_path_alt
+        try:
+            wb = openpyxl.load_workbook(target_path, data_only=True)
             sheetname = "Cấu trúc KPI công việc GV. TG"
             if sheetname in wb.sheetnames:
                 sheet = wb[sheetname]
@@ -225,8 +245,9 @@ def load_kpi_masters():
                     if key and std_time is not None:
                         cntt_master[str(key).strip()] = float(std_time)
             wb.close()
+            print(f"Agent 4 đã nạp fallback {len(cntt_master)} định mức CNTT từ: {os.path.basename(target_path)}")
         except Exception as e:
-            print("Warning loading CNTT KPI Master:", e)
+            print("Warning loading CNTT KPI Master fallback:", e)
             
     return qtkd_master, cntt_master
 
@@ -243,11 +264,13 @@ def match_kpi_standard_time(group, name, role, rank, task_title, kpi_master_qtkd
         rank_val = 3
         
     matched_task_type = None
-    if any(k in title_norm for k in ["giảng dạy", "lên lớp", "dạy lý thuyết", "triển khai buổi học"]):
+    if "review" in title_norm:
+        matched_task_type = "Review"
+    elif any(k in title_norm for k in ["giảng dạy", "lên lớp", "dạy lý thuyết", "triển khai buổi học"]):
         matched_task_type = "Giảng dạy lý thuyết - Buổi học" if role_norm == "giảng viên" else "Triển khai buổi thực hành - Buổi"
-    elif any(k in title_norm for k in ["chuẩn bị", "soạn slide", "soạn bài", "soạn giáo án"]):
-        matched_task_type = "Chuẩn bị giảng dạy - Buổi học" if role_norm == "giảng viên" else "Chuẩn bị buổi thực hành - Buổi"
-    elif "mindmap" in title_norm or "bản đồ tư duy" in title_norm:
+    elif any(k in title_norm for k in ["chuẩn bị giảng dạy", "soạn giáo án", "chuẩn bị bài", "chuẩn bị lên lớp"]):
+        matched_task_type = "Chuẩn bị giảng dạy" if role_norm == "giảng viên" else "Chuẩn bị buổi thực hành - Buổi"
+    elif is_qtkd and ("mindmap" in title_norm or "bản đồ tư duy" in title_norm):
         matched_task_type = "Làm mindmap bài học - Session"
     elif any(k in title_norm for k in ["support", "hỗ trợ", "fix bug", "sửa lỗi", "hướng dẫn"]):
         matched_task_type = "Báo cáo hỗ trợ SV.HV" if not is_qtkd else "Hỗ trợ học viên"
@@ -263,40 +286,50 @@ def match_kpi_standard_time(group, name, role, rank, task_title, kpi_master_qtkd
     if matched_task_type:
         for key, std_time in kpi_db.items():
             key_norm = key.lower()
-            if is_qtkd:
-                role_part = "giảng viên" if "giảng" in key_norm else "trợ giảng"
-                rank_part = re.search(r'-(\d+)-', key_norm)
-                rank_num = int(rank_part.group(1)) if rank_part else 3
-                task_part = key_norm.split('-')[-1]
-                if role_part == role_norm and rank_num == rank_val and (matched_task_type.lower() in key_norm or task_part in title_norm):
-                    return std_time, matched_task_type, False
-            else:
-                role_part = "giảng viên" if "giảng" in key_norm else "trợ giảng"
-                rank_part = re.search(r'-(\d+)$', key_norm)
-                rank_num = int(rank_part.group(1)) if rank_part else 3
-                task_part = key_norm.split('-')[0]
-                if role_part == role_norm and rank_num == rank_val and (matched_task_type.lower() in key_norm or task_part in title_norm):
+            role_part = "giảng viên" if "giảng" in key_norm else "trợ giảng"
+            rank_part = re.search(r'-(\d+)', key_norm)
+            rank_num = int(rank_part.group(1)) if rank_part else 3
+            if role_part == role_norm and rank_num == rank_val:
+                if matched_task_type.lower() in key_norm or any(part in title_norm for part in key_norm.split('-') if len(part) > 3):
                     return std_time, matched_task_type, False
 
     for key, std_time in kpi_db.items():
         key_norm = key.lower()
         if role_norm in key_norm and f"-{rank_val}" in key_norm:
-            task_name = key_norm.split('-')[0] if not is_qtkd else key_norm.split('-')[-1]
-            if task_name in title_norm or title_norm in task_name:
-                return std_time, key.split('-')[0] if not is_qtkd else key.split('-')[-1], False
+            for part in key_norm.split('-'):
+                if len(part) > 3 and (part in title_norm or title_norm in part):
+                    return std_time, part, False
                 
     return 30.0, "Đầu việc tự do/chưa định mức", True
 
 def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_master_cntt, target_dates, worklane_projects=None):
     if worklane_projects is None:
         worklane_projects = []
+        
+    # Pre-index worklane issues by assignee for instant O(1) lookup
+    user_issues_map = {}
+    if worklane_projects:
+        for proj in (worklane_projects.values() if isinstance(worklane_projects, dict) else worklane_projects):
+            issues_dict = proj.get('issues', {}) if isinstance(proj, dict) else {}
+            issues_list = issues_dict.get('issues', [])
+            for iss in issues_list:
+                iss_state = str(iss.get('state', '')).lower().strip()
+                if iss_state in ['hủy', 'huy', 'cancel', 'cancelled']:
+                    continue
+                iss_assignee_raw = iss.get('assignee', '')
+                if iss_assignee_raw:
+                    assignee_norm = normalize_vietnamese_name(iss_assignee_raw)
+                    if assignee_norm not in user_issues_map:
+                        user_issues_map[assignee_norm] = []
+                    user_issues_map[assignee_norm].append(iss)
+
     analysis = {}
     
     for group, members in results.items():
         for m, m_data in members.items():
             norm_name = normalize_name(m)
-            # Lọc bỏ ngày nghỉ phép khỏi danh sách ngày cần báo cáo
-            personal_leave = LEAVE_DAYS.get(norm_name, [])
+            # Lọc bỏ ngày nghỉ phép và ngày nghỉ lễ công ty khỏi danh sách ngày cần báo cáo
+            personal_leave = LEAVE_DAYS.get(norm_name, []) + COMPANY_HOLIDAYS
             effective_target_dates = [d for d in target_dates if d not in personal_leave]
             personal_total_days = len(effective_target_dates)
             
@@ -317,6 +350,14 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
             time_score = 100.0
             time_violations = []
             warning_flags = []
+            
+            norm_m_clean = normalize_vietnamese_name(m)
+            user_candidate_issues = user_issues_map.get(norm_m_clean, [])
+            if not user_candidate_issues:
+                for k, v in user_issues_map.items():
+                    if k in norm_m_clean or norm_m_clean in k:
+                        user_candidate_issues = v
+                        break
             
             for d in target_dates:
                 r = m_data["reports"][d]
@@ -350,40 +391,18 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
 
                         if t.get("done") is True or str(t.get("percent")) == "100":
                             is_verified = True
-                            if is_wildcard and worklane_projects:
-                                # This might be a project task since it's not in KPI master
-                                # Let's see if we can find it in worklane projects assigned to this person
+                            if is_wildcard and user_candidate_issues:
                                 found_in_wl = False
                                 is_done_in_wl = False
-                                wl_issue_name = ""
                                 t_title_norm = t_title.lower()
                                 
-                                for proj in (worklane_projects.values() if isinstance(worklane_projects, dict) else worklane_projects):
-                                    # proj might be dict with 'issues', 'project_info'
-                                    issues_dict = proj.get('issues', {}) if isinstance(proj, dict) else {}
-                                    issues_list = issues_dict.get('issues', [])
-                                    
-                                    for iss in issues_list:
-                                        iss_state = str(iss.get('state', '')).lower().strip()
-                                        if iss_state in ['hủy', 'huy', 'cancel', 'cancelled']:
-                                            continue
-                                            
-                                        iss_title = iss.get('title', '').lower()
-                                        iss_assignee_raw = iss.get('assignee', '')
-                                        
-                                        # Check if assigned to this person and title matches using normalized names
-                                        assignee_norm = normalize_vietnamese_name(iss_assignee_raw)
-                                        norm_m = normalize_vietnamese_name(m)
-                                        
-                                        if (norm_m in assignee_norm or assignee_norm in norm_m):
-                                            if (t_title_norm in iss_title or iss_title in t_title_norm or t_title_norm == iss_title):
-                                                found_in_wl = True
-                                                wl_issue_name = iss.get('title', '')
-                                                state = iss.get('state', '').upper()
-                                                if state in ['DONE', 'COMPLETED', 'HOÀN THÀNH']:
-                                                    is_done_in_wl = True
-                                                break
-                                    if found_in_wl:
+                                for iss in user_candidate_issues:
+                                    iss_title = iss.get('title', '').lower()
+                                    if (t_title_norm in iss_title or iss_title in t_title_norm or t_title_norm == iss_title):
+                                        found_in_wl = True
+                                        state = iss.get('state', '').upper()
+                                        if state in ['DONE', 'COMPLETED', 'HOÀN THÀNH']:
+                                            is_done_in_wl = True
                                         break
                                 
                                 if found_in_wl and not is_done_in_wl:
@@ -465,54 +484,44 @@ def calculate_summary_stats(stats_dict):
 
 
 def main():
-    from datetime import datetime, timedelta
+    from datetime import datetime, timedelta, date
     print("Agent 4: Bắt đầu fetch dữ liệu báo cáo ngày từ Worklane PM...")
     
-    # Tính toán ngày động
-    today = datetime.now().date()
-    yesterday = today - timedelta(days=1)
+    # 1. Cấu hình ngày kiểm toán và kỳ nghỉ lễ công ty
+    # Toàn công ty nghỉ lễ 31/08 - 02/09 -> Ngày làm việc gần nhất chốt kiểm toán là 28/08/2026
+    yesterday_str = "2026-08-28"
     
-    # Nếu ngày hôm trước là cuối tuần, điều chỉnh về Thứ Sáu gần nhất để kiểm toán báo cáo
-    adjusted_yesterday = yesterday
-    if yesterday.weekday() == 5: # Thứ 7
-        adjusted_yesterday = yesterday - timedelta(days=1)
-    elif yesterday.weekday() == 6: # Chủ nhật
-        adjusted_yesterday = yesterday - timedelta(days=2)
-        
-    yesterday_str = adjusted_yesterday.strftime("%Y-%m-%d")
+    # Tuần làm việc kiểm toán: từ 24/08 đến hết 28/08
+    dates_weekly = ["2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28"]
     
-    # Tính danh sách ngày làm việc tuần hiện tại (dựa trên ngày hôm qua để luôn tính đúng chu kỳ tuần báo cáo)
-    start_of_week = yesterday - timedelta(days=yesterday.weekday())
-    dates_weekly = []
-    curr = start_of_week
-    while curr <= yesterday:
-        if curr.weekday() < 5: # Chỉ lấy Thứ 2 - Thứ 6
-            dates_weekly.append(curr.strftime("%Y-%m-%d"))
-        curr += timedelta(days=1)
-        
-    # Tính danh sách ngày làm việc tháng 7 hiện tại (01/07 đến hôm qua)
+    # Danh sách toàn bộ ngày làm việc trong kỳ (01/07/2026 đến 28/08/2026, loại trừ T7/CN và ngày nghỉ lễ)
     dates_all = []
-    curr = datetime(today.year, 7, 1).date()
-    while curr <= yesterday:
-        if curr.weekday() < 5:
-            dates_all.append(curr.strftime("%Y-%m-%d"))
+    curr = date(2026, 7, 1)
+    end_date = date(2026, 8, 28)
+    while curr <= end_date:
+        curr_str = curr.strftime("%Y-%m-%d")
+        if curr.weekday() < 5 and curr_str not in COMPANY_HOLIDAYS:
+            dates_all.append(curr_str)
         curr += timedelta(days=1)
         
-    # Trường hợp chạy test hoặc chưa có ngày nào trong tuần/tháng, ít nhất phải có ngày hôm qua
-    if not dates_weekly and adjusted_yesterday.strftime("%Y-%m-%d") not in dates_weekly:
-        # Nếu hôm nay là Thứ Hai, tuần mới chưa có ngày nào trước đó, dates_weekly có thể rỗng.
-        pass
-    if not dates_all:
-        dates_all = [yesterday_str]
-
-    print(f"  Thời gian kiểm toán báo cáo: hôm qua ({yesterday_str})")
-    print(f"  Danh sách ngày tuần: {dates_weekly}")
-    print(f"  Danh sách ngày tháng: {dates_all}")
+    print(f"  Thời gian kiểm toán báo cáo: chốt ngày ({yesterday_str})")
+    print(f"  Danh sách ngày tuần (24/08 - 28/08): {dates_weekly}")
+    print(f"  Tổng số ngày làm việc trong kỳ: {len(dates_all)} ngày (01/07 - 28/08)")
     
     print("  Đang nạp thông tin nhân sự và định mức KPI Master từ Excel...")
     staff_profiles = load_staff_profiles()
     kpi_master_qtkd, kpi_master_cntt = load_kpi_masters()
     
+    # Load cache nếu có để tối ưu thời gian fetch
+    raw_cache_path = "data/processed/daily_reports_raw_cache.json"
+    raw_cache = {}
+    if os.path.exists(raw_cache_path):
+        try:
+            with open(raw_cache_path, "r", encoding="utf-8") as f:
+                raw_cache = json.load(f)
+        except Exception:
+            raw_cache = {}
+
     results = {}
     for group, members in target_groups.items():
         results[group] = {}
@@ -523,37 +532,57 @@ def main():
             }
 
     # Fetch daily reports cho các ngày
+    cache_updated = False
     for d in dates_all:
-        print(f"  Tải dữ liệu ngày {d}...")
-        res = call_mcp_tool("list_daily_reports", {"date": d, "department": "DT"})
-        if res and "result" in res:
-            try:
-                inner_str = res["result"]["content"][0].get("text", "")
-                inner_json = json.loads(inner_str)
-                reports = inner_json.get("reports", [])
-                for r in reports:
-                    user_name = r.get("user")
-                    norm_user = normalize_name(user_name)
-                    found = False
-                    for group, members in target_groups.items():
-                        for m in members:
-                            if normalize_name(m) == norm_user:
-                                results[group][m]["reports"][d] = r
-                                found = True
-                                break
-                        if found:
-                            break
-            except Exception as e:
-                print(f"  Error parsing data for day {d}:", e)
+        reports = []
+        if d in raw_cache:
+            reports = raw_cache[d]
+        else:
+            print(f"  Tải dữ liệu ngày {d} từ Worklane API...")
+            res = call_mcp_tool("list_daily_reports", {"date": d, "department": "DT"})
+            if res and "result" in res:
+                try:
+                    inner_str = res["result"]["content"][0].get("text", "")
+                    inner_json = json.loads(inner_str)
+                    reports = inner_json.get("reports", [])
+                    raw_cache[d] = reports
+                    cache_updated = True
+                except Exception as e:
+                    print(f"  Error parsing data for day {d}:", e)
+            elif isinstance(res, dict) and "reports" in res:
+                reports = res.get("reports", [])
+                raw_cache[d] = reports
+                cache_updated = True
 
-    # Phát hiện nhân sự không báo cáo ngày hôm trước
+        for r in reports:
+            user_name = r.get("user")
+            norm_user = normalize_name(user_name)
+            found = False
+            for group, members in target_groups.items():
+                for m in members:
+                    if normalize_name(m) == norm_user:
+                        results[group][m]["reports"][d] = r
+                        found = True
+                        break
+                if found:
+                    break
+
+    if cache_updated:
+        os.makedirs(os.path.dirname(raw_cache_path), exist_ok=True)
+        try:
+            with open(raw_cache_path, "w", encoding="utf-8") as f:
+                json.dump(raw_cache, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            print("  Warning: Failed to save raw daily cache:", e)
+
+    # Phát hiện nhân sự không báo cáo ngày chốt kiểm toán (28/08/2026)
     missing_yesterday = []
     if yesterday_str in dates_all:
         for group, members in results.items():
             for m, m_data in members.items():
                 norm_name = normalize_name(m)
-                # Bỏ qua nếu ngày hôm qua là ngày nghỉ phép của nhân sự này
-                if yesterday_str in LEAVE_DAYS.get(norm_name, []):
+                # Bỏ qua nếu là ngày nghỉ phép hoặc nghỉ lễ
+                if yesterday_str in LEAVE_DAYS.get(norm_name, []) or yesterday_str in COMPANY_HOLIDAYS:
                     continue
                 if m_data["reports"].get(yesterday_str) is None:
                     profile = staff_profiles.get(norm_name, {"role": "Giảng viên", "rank": "3"})

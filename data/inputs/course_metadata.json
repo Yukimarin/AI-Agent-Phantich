@@ -27,6 +27,30 @@
     "[PRJ302] Dự án kinh doanh số 2": {
       "difficulty_coefficient": 1.0,
       "notes": "Tự động gán và lưu bởi hệ thống"
+    },
+    "Phân tích thiết kế hệ thống": {
+      "difficulty_coefficient": 1.25,
+      "notes": "Môn học chuyên ngành thiết kế hệ thống và giải pháp"
+    },
+    "[IT105-K25] Phân tích & thiết kế hệ thống": {
+      "difficulty_coefficient": 1.25,
+      "notes": "Môn học chuyên ngành thiết kế hệ thống và giải pháp"
+    },
+    "Phát triển Hệ thống Microservices với Spring Boot": {
+      "difficulty_coefficient": 1.45,
+      "notes": "Môn học chuyên sâu kiến trúc phân tán Microservices"
+    },
+    "Microservice (KS24)": {
+      "difficulty_coefficient": 1.45,
+      "notes": "Môn học chuyên sâu kiến trúc phân tán Microservices"
+    },
+    "[IT-214] Microservices System Design": {
+      "difficulty_coefficient": 1.45,
+      "notes": "Môn học chuyên sâu kiến trúc phân tán Microservices"
+    },
+    "[MAN107] Quản trị chiến lược doanh nghiệp": {
+      "difficulty_coefficient": 1.10,
+      "notes": "Môn học quản trị chiến lược ngành QTKD"
     }
   },
   "default_difficulty": 1.2,

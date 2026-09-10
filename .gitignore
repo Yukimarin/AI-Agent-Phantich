@@ -18,3 +18,5 @@ __pycache__/
 # Gemini/Antigravity artifacts & logs
 .gemini/
 scratch/
+logs/
+data/processed/watcher.pid

@@ -2,16 +2,16 @@
 
 > [!NOTE]
 > - **Người yêu cầu**: Thầy Nguyễn Duy Quang (Giám đốc đào tạo)
-> - **Ngày kiểm toán**: 2026-08-25
+> - **Ngày kiểm toán**: 2026-08-28
 > - **Mục tiêu**: Báo cáo tổng thể nguồn lực và dự án.
 
 ---
 
 ## I. Tổng quan Dự án & Nguồn lực Bộ phận QLĐT
 
-- **Ngày kiểm toán gần nhất**: 2026-08-25
-- **Tổng số dự án vận hành**: 41 dự án
-- **Dự án đang chạy**: 30 dự án
+- **Ngày kiểm toán gần nhất**: 2026-08-28
+- **Tổng số dự án vận hành**: 42 dự án
+- **Dự án đang chạy**: 31 dự án
 - **Dự án đã hoàn thành**: 11 dự án
 
 ---
@@ -29,6 +29,7 @@
 | **KS25TICH - [KS25]_IT303_Phân tích thiết kế hệ thống** | Lê Hà Thanh Sang | Lưu Hoàng Xuân Nguyên, Lương Quốc Tuấn, Nguyễn Ngọc Sơn, Phan Ngọc Tài | ACTIVE | ON_TRACK |
 | **KS26MON - [KS26]_IT101_Nhập môn CNTT** | Lương Quốc Tuấn | Lại Trung Lâm, Phạm Ngọc Kiên | ACTIVE | ON_TRACK |
 | **KS26NANG - [KS26]_IT102_Kỹ năng prompting với AI** | Trịnh Quốc Hai | Lâm Tùng Dương, Nguyễn Quảng An | ACTIVE | ON_TRACK |
+| **PTITJPN - 🇯🇵 [PTIT-JPN] JPN Talent 01 Project** | Lê Thị Đỏ | Giáp Thị Minh Hằng | ACTIVE | ON_TRACK |
 | **PTITQUAN - 🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật** | Giáp Thị Minh Hằng | Lê Thị Đỏ | ACTIVE | ON_TRACK |
 | **PTITSAN - [PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action** | Hồ Xuân Hùng | Mai Xuân Chinh, Nguyễn Bá Minh Đạo, Nguyễn Công Hưởng, Đinh Thành Nam | ACTIVE | ON_TRACK |
 | **PTITSAN2 - [PTIT-K24] Sản xuất tài nguyên môn Microservice in Action** | Hồ Xuân Hùng | Nguyễn Công Hưởng, Phạm Tuấn Bình, Đinh Thành Nam | ACTIVE | ON_TRACK |
@@ -51,7 +52,7 @@
 | **QTKDSO - QTKD - Các công việc khác** | Hoàng Thị Kim Oanh | Lê Nhựt Mi, Lê Thị Bảo Yến, Nguyễn Thị Như Quỳnh | COMPLETED | ON_TRACK |
 | **QTKDSX - [QTKD] SX Tài nguyên học tập K26** | Lê Thành Ngọc | Hoàng Thị Kim Oanh | ACTIVE | ON_TRACK |
 | **QTKDSXTN - [QTKDS] SXTN K25 - Điều chỉnh MAN107** | Hoàng Thị Kim Oanh | Nguyễn Thị Hồng Minh, Đặng Quỳnh Trang | ACTIVE | ON_TRACK |
-| **QTKDSXTN2 - [QTKDS] K26 - Verify học liệu KN học tập chủ động và phát triển bản thân** | Hoàng Thị Hậu | - | ACTIVE | ON_TRACK |
+| **QTKDVERI - [QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1** | Hoàng Thị Kim Oanh | Hoàng Thị Hậu, Lê Nhựt Mi, Nguyễn Ngọc Vân Khanh, Đặng Quỳnh Trang | ACTIVE | ON_TRACK |
 | **RASOAT - [QTKD số] Rà soát, điều chỉnh CTĐT K25, 26** | Hoàng Thị Kim Oanh | Lê Thành Ngọc, Đặng Quỳnh Trang | COMPLETED | ON_TRACK |
 | **REKHAO - 🔵 [RE] ENGLISH EXAMINATION** | Lò Thị Ngọc Anh | Bùi Thị Xuân Mai, Hoàng Phương Thảo, Nguyễn Huyền Trang | ACTIVE | ON_TRACK |
 | **REXPCHUO - 🔵 [RE x PREP/JAXTINA] CHƯƠNG TRÌNH TIẾNG ANH K24 & K25** | Lò Thị Ngọc Anh | Bùi Thị Xuân Mai, Hoàng Phương Thảo | ACTIVE | ON_TRACK |

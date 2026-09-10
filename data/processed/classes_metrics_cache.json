@@ -1,10 +1,17 @@
 {
-  "generated_at": "2026-08-27T23:28:08.434649",
+  "generated_at": "2026-09-10T21:19:08.251914",
   "sheets": {},
   "classes": {
     "HN-K24-CNTT1": {
       "raw_name": "HN-K24-CNTT1",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS24-JavaAdvance": {
           "instructor": "Bùi Thanh Hải",
@@ -175,9 +182,44 @@
               "el": 13.89
             },
             "2026-08-26": {
-              "cc": 6.0,
+              "cc": 27.78,
+              "bt": 19.44,
+              "el": 16.67
+            },
+            "2026-08-27": {
+              "cc": 5.0,
+              "bt": 4.0,
+              "el": 0.0
+            }
+          }
+        },
+        "KS24_AI_Microservice": {
+          "instructor": "Bùi Thanh Hải",
+          "metrics": {
+            "2026-09-04": {
+              "cc": 0.0,
               "bt": 0.0,
-              "el": 1.0
+              "el": 20.0
+            },
+            "2026-09-07": {
+              "cc": 11.43,
+              "bt": 0.0,
+              "el": 20.0
+            },
+            "2026-09-08": {
+              "cc": 8.57,
+              "bt": 5.71,
+              "el": 20.0
+            },
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 3.23,
+              "el": 19.35
+            },
+            "2026-09-10": {
+              "cc": 0.0,
+              "bt": 3.13,
+              "el": 19.35
             }
           }
         },
@@ -206,6 +248,13 @@
     "HN-K24-CNTT2": {
       "raw_name": "HN-K24-CNTT2",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS24-JavaAdvance": {
           "instructor": "Hồ Xuân Hùng",
@@ -376,9 +425,44 @@
               "el": 17.95
             },
             "2026-08-26": {
+              "cc": 5.13,
+              "bt": 2.56,
+              "el": 15.38
+            },
+            "2026-08-27": {
+              "cc": 5.0,
+              "bt": 1.0,
+              "el": 0.0
+            }
+          }
+        },
+        "KS24_AI_Microservice": {
+          "instructor": "Bùi Thanh Hải",
+          "metrics": {
+            "2026-09-04": {
               "cc": 0.0,
               "bt": 0.0,
-              "el": 0.0
+              "el": 2.56
+            },
+            "2026-09-07": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 5.13
+            },
+            "2026-09-08": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 5.13
+            },
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 5.13
+            },
+            "2026-09-10": {
+              "cc": 2.56,
+              "bt": 7.69,
+              "el": 5.13
             }
           }
         },
@@ -407,6 +491,13 @@
     "HN-K24-CNTT3": {
       "raw_name": "HN-K24-CNTT3",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS24-JavaAdvance": {
           "instructor": "Phạm Tuấn Bình",
@@ -577,9 +668,44 @@
               "el": 41.46
             },
             "2026-08-26": {
-              "cc": 11.0,
+              "cc": 26.83,
+              "bt": 26.83,
+              "el": 39.02
+            },
+            "2026-08-27": {
+              "cc": 17.0,
+              "bt": 16.0,
+              "el": 0.0
+            }
+          }
+        },
+        "KS24_AI_Microservice": {
+          "instructor": "Hồ Xuân Hùng",
+          "metrics": {
+            "2026-09-04": {
+              "cc": 0.0,
               "bt": 0.0,
-              "el": 2.0
+              "el": 12.2
+            },
+            "2026-09-07": {
+              "cc": 2.44,
+              "bt": 0.0,
+              "el": 14.63
+            },
+            "2026-09-08": {
+              "cc": 9.52,
+              "bt": 0.0,
+              "el": 14.29
+            },
+            "2026-09-09": {
+              "cc": 9.52,
+              "bt": 0.0,
+              "el": 16.67
+            },
+            "2026-09-10": {
+              "cc": 11.9,
+              "bt": 7.14,
+              "el": 16.67
             }
           }
         },
@@ -608,6 +734,13 @@
     "HN-K24-CNTT4": {
       "raw_name": "HN-K24-CNTT4",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS24-JavaAdvance": {
           "instructor": "Bùi Thanh Hải",
@@ -778,9 +911,44 @@
               "el": 18.75
             },
             "2026-08-26": {
-              "cc": 1.0,
+              "cc": 3.13,
               "bt": 0.0,
+              "el": 18.75
+            },
+            "2026-08-27": {
+              "cc": 8.0,
+              "bt": 1.0,
               "el": 0.0
+            }
+          }
+        },
+        "KS24_AI_Microservice": {
+          "instructor": "Bùi Thanh Hải",
+          "metrics": {
+            "2026-09-04": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 6.25
+            },
+            "2026-09-07": {
+              "cc": 3.13,
+              "bt": 0.0,
+              "el": 12.5
+            },
+            "2026-09-08": {
+              "cc": 3.13,
+              "bt": 3.13,
+              "el": 12.5
+            },
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 9.68
+            },
+            "2026-09-10": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 9.68
             }
           }
         },
@@ -807,8 +975,15 @@
       }
     },
     "HN-K24-CNTT5": {
-      "raw_name": "HN-K24-CNTT5",
-      "size": 30,
+      "raw_name": "HN-K24-CNTT5(29-19)",
+      "size": 19,
+      "size_info": {
+        "current_size": 19,
+        "initial_size": 29,
+        "has_changed": true,
+        "diff": -10,
+        "history_str": "29-19"
+      },
       "sheets": {
         "KS24-JavaAdvance": {
           "instructor": "Phạm Tuấn Bình",
@@ -893,8 +1068,15 @@
       }
     },
     "HCM-K24-CNTT1": {
-      "raw_name": "HCM-K24-CNTT1",
-      "size": 30,
+      "raw_name": "HCM-K24-CNTT1(43)",
+      "size": 43,
+      "size_info": {
+        "current_size": 43,
+        "initial_size": 43,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": "43"
+      },
       "sheets": {
         "KS24-JavaAdvance": {
           "instructor": "Nguyễn Thanh Bình Phước",
@@ -1075,9 +1257,44 @@
               "el": 6.98
             },
             "2026-08-26": {
-              "cc": 4.0,
-              "bt": 0.0,
+              "cc": 23.26,
+              "bt": 11.63,
+              "el": 6.98
+            },
+            "2026-08-27": {
+              "cc": 5.0,
+              "bt": 4.0,
               "el": 0.0
+            }
+          }
+        },
+        "KS24_AI_Microservice": {
+          "instructor": "Nguyễn Bá Minh Đạo",
+          "metrics": {
+            "2026-09-04": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.65
+            },
+            "2026-09-07": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.65
+            },
+            "2026-09-08": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 6.98
+            },
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 6.98
+            },
+            "2026-09-10": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 6.98
             }
           }
         }
@@ -1086,6 +1303,13 @@
     "HCM-K24-CNTT2": {
       "raw_name": "HCM-K24-CNTT2",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS24-JavaAdvance": {
           "instructor": "Nguyễn Bá Minh Đạo",
@@ -1157,6 +1381,13 @@
     "HN-K25-CNTT1": {
       "raw_name": "HN-K25-CNTT1",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Trịnh Quốc Hai",
@@ -1518,6 +1749,21 @@
             }
           }
         },
+        "KS25_Phantichthietkehethong": {
+          "instructor": "Nguyễn Quảng An",
+          "metrics": {
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 20.0
+            },
+            "2026-09-10": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 19.51
+            }
+          }
+        },
         "SKL_KS24": {
           "instructor": "Nguyễn Thị Hồng Minh",
           "metrics": {
@@ -1543,6 +1789,13 @@
     "HN-K25-CNTT2": {
       "raw_name": "HN-K25-CNTT2",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Nguyễn Quảng An",
@@ -1904,6 +2157,21 @@
             }
           }
         },
+        "KS25_Phantichthietkehethong": {
+          "instructor": "Nguyễn Quảng An",
+          "metrics": {
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.88
+            },
+            "2026-09-10": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.88
+            }
+          }
+        },
         "SKL_KS24": {
           "instructor": "Nguyễn Thị Hồng Minh",
           "metrics": {
@@ -1929,6 +2197,13 @@
     "HN-K25-CNTT3": {
       "raw_name": "HN-K25-CNTT3",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Lương Quốc Tuấn",
@@ -2290,6 +2565,21 @@
             }
           }
         },
+        "KS25_Phantichthietkehethong": {
+          "instructor": "Phạm Tuấn Bình",
+          "metrics": {
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 11.63
+            },
+            "2026-09-10": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.65
+            }
+          }
+        },
         "SKL_KS24": {
           "instructor": "Nguyễn Thị Hồng Minh",
           "metrics": {
@@ -2315,6 +2605,13 @@
     "HN-K25-CNTT4": {
       "raw_name": "HN-K25-CNTT4",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Ngọ Văn Quý",
@@ -2676,6 +2973,21 @@
             }
           }
         },
+        "KS25_Phantichthietkehethong": {
+          "instructor": "Phạm Tuấn Bình",
+          "metrics": {
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 5.26
+            },
+            "2026-09-10": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 2.63
+            }
+          }
+        },
         "SKL_KS24": {
           "instructor": "Hoàng Thị Hậu",
           "metrics": {
@@ -2701,6 +3013,13 @@
     "HN-K25-CNTT5": {
       "raw_name": "HN-K25-CNTT5",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Trịnh Quốc Hai",
@@ -3062,6 +3381,21 @@
             }
           }
         },
+        "KS25_Phantichthietkehethong": {
+          "instructor": "Nguyễn Quảng An",
+          "metrics": {
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.88
+            },
+            "2026-09-10": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.88
+            }
+          }
+        },
         "SKL_KS24": {
           "instructor": "Hoàng Thị Hậu",
           "metrics": {
@@ -3087,6 +3421,13 @@
     "HN-K25-CNTT6": {
       "raw_name": "HN-K25-CNTT6",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Nguyễn Quảng An",
@@ -3473,6 +3814,13 @@
     "HN-K25-CNTT7": {
       "raw_name": "HN-K25-CNTT7",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Ngọ Văn Quý",
@@ -3534,6 +3882,13 @@
     "HCM-K25-CNTT1": {
       "raw_name": "HCM-K25-CNTT1",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Trần Quốc Tuấn",
@@ -3609,6 +3964,13 @@
     "HCM-K25-CNTT2": {
       "raw_name": "HCM-K25-CNTT2",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Lê Hà Thanh Sang",
@@ -3684,6 +4046,13 @@
     "HCM-K25-CNTT3": {
       "raw_name": "HCM-K25-CNTT3",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Nguyễn Bá Minh Đạo",
@@ -3759,6 +4128,13 @@
     "HCM-K25-CNTT4": {
       "raw_name": "HCM-K25-CNTT4",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_Javascript": {
           "instructor": "Trần Quốc Tuấn",
@@ -3832,8 +4208,15 @@
       }
     },
     "HN-K25-CNTT8": {
-      "raw_name": "HN-K25-CNTT8-HL(18)",
-      "size": 18,
+      "raw_name": "HN-K25-CNTT8(22)",
+      "size": 22,
+      "size_info": {
+        "current_size": 22,
+        "initial_size": 22,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": "22"
+      },
       "sheets": {
         "KS25_Database": {
           "instructor": "Nguyễn Duy Quang",
@@ -4128,8 +4511,15 @@
       }
     },
     "HCM-K25-CNTT8": {
-      "raw_name": "HCM-K25-CNTT8(39)",
-      "size": 39,
+      "raw_name": "HCM-K25-CNTT8(36-33-32)",
+      "size": 32,
+      "size_info": {
+        "current_size": 32,
+        "initial_size": 36,
+        "has_changed": true,
+        "diff": -4,
+        "history_str": "36-33-32"
+      },
       "sheets": {
         "KS25_Database": {
           "instructor": "Trần Quốc Tuấn",
@@ -4435,12 +4825,49 @@
               "el": 0.0
             }
           }
+        },
+        "KS25_Phantichthietkehethong": {
+          "instructor": "Trần Quốc Tuấn",
+          "metrics": {
+            "2026-09-03": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 24.24
+            },
+            "2026-09-04": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 27.27
+            },
+            "2026-09-07": {
+              "cc": 24.24,
+              "bt": 0.0,
+              "el": 33.33
+            },
+            "2026-09-08": {
+              "cc": 21.88,
+              "bt": 0.0,
+              "el": 31.25
+            },
+            "2026-09-09": {
+              "cc": 37.5,
+              "bt": 15.63,
+              "el": 31.25
+            }
+          }
         }
       }
     },
     "HCM-K25-CNTT5": {
-      "raw_name": "HCM-K25-CNTT5(43-39)",
-      "size": 30,
+      "raw_name": "HCM-K25-CNTT5(39-44)",
+      "size": 44,
+      "size_info": {
+        "current_size": 44,
+        "initial_size": 39,
+        "has_changed": true,
+        "diff": 5,
+        "history_str": "39-44"
+      },
       "sheets": {
         "KS25_Database": {
           "instructor": "Lê Hà Thanh Sang",
@@ -4746,12 +5173,49 @@
               "el": 0.0
             }
           }
+        },
+        "KS25_Phantichthietkehethong": {
+          "instructor": "Nguyễn Đức Minh",
+          "metrics": {
+            "2026-09-03": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 0.0
+            },
+            "2026-09-04": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 0.0
+            },
+            "2026-09-07": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 0.0
+            },
+            "2026-09-08": {
+              "cc": 6.82,
+              "bt": 0.0,
+              "el": 2.27
+            },
+            "2026-09-09": {
+              "cc": 4.55,
+              "bt": 0.0,
+              "el": 2.27
+            }
+          }
         }
       }
     },
     "HCM-K25-CNTT6": {
-      "raw_name": "HCM-K25-CNTT6(47-41)",
-      "size": 30,
+      "raw_name": "HCM-K25-CNTT6(38-37-47)",
+      "size": 47,
+      "size_info": {
+        "current_size": 47,
+        "initial_size": 38,
+        "has_changed": true,
+        "diff": 9,
+        "history_str": "38-37-47"
+      },
       "sheets": {
         "KS25_Database": {
           "instructor": "Trần Quốc Tuấn",
@@ -5057,12 +5521,49 @@
               "el": 0.0
             }
           }
+        },
+        "KS25_Phantichthietkehethong": {
+          "instructor": "Trần Quốc Tuấn",
+          "metrics": {
+            "2026-09-03": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 5.26
+            },
+            "2026-09-04": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 5.26
+            },
+            "2026-09-07": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 2.7
+            },
+            "2026-09-08": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.26
+            },
+            "2026-09-09": {
+              "cc": 0.0,
+              "bt": 2.13,
+              "el": 4.26
+            }
+          }
         }
       }
     },
     "HCM-K25-CNTT7": {
-      "raw_name": "HCM-K25-CNTT7(43-42)",
-      "size": 30,
+      "raw_name": "HCM-K25-CNTT7(39-46)",
+      "size": 46,
+      "size_info": {
+        "current_size": 46,
+        "initial_size": 39,
+        "has_changed": true,
+        "diff": 7,
+        "history_str": "39-46"
+      },
       "sheets": {
         "KS25_Database": {
           "instructor": "Lê Hà Thanh Sang",
@@ -5368,12 +5869,49 @@
               "el": 0.0
             }
           }
+        },
+        "KS25_Phantichthietkehethong": {
+          "instructor": "Nguyễn Đức Minh",
+          "metrics": {
+            "2026-09-03": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 2.56
+            },
+            "2026-09-04": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 7.69
+            },
+            "2026-09-07": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 12.82
+            },
+            "2026-09-08": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 19.57
+            },
+            "2026-09-09": {
+              "cc": 21.74,
+              "bt": 2.17,
+              "el": 19.57
+            }
+          }
         }
       }
     },
     "HN-K25-QTKD1": {
       "raw_name": "HN-K25-QTKD1",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_QTKD_M103": {
           "instructor": "Hoàng Thị Hậu",
@@ -5649,7 +6187,37 @@
               "el": 15.15
             },
             "2026-08-27": {
-              "cc": 3.0,
+              "cc": 30.3,
+              "bt": 9.09,
+              "el": 15.15
+            },
+            "2026-08-28": {
+              "cc": 30.3,
+              "bt": 9.09,
+              "el": 18.18
+            },
+            "2026-09-03": {
+              "cc": 4.0,
+              "bt": 0.0,
+              "el": 0.0
+            }
+          }
+        },
+        "KS25_QTKD_MAN107": {
+          "instructor": "Đặng Quỳnh Trang",
+          "metrics": {
+            "2026-09-08": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 2.17
+            },
+            "2026-09-09": {
+              "cc": 2.17,
+              "bt": 0.0,
+              "el": 2.17
+            },
+            "2026-09-10": {
+              "cc": 8.7,
               "bt": 0.0,
               "el": 0.0
             }
@@ -5715,6 +6283,13 @@
     "HN-K25-QTKD2": {
       "raw_name": "HN-K25-QTKD2",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_QTKD_M103": {
           "instructor": "Hoàng Thị Kim Oanh",
@@ -6000,9 +6575,39 @@
               "el": 10.26
             },
             "2026-08-27": {
-              "cc": 2.0,
+              "cc": 10.26,
+              "bt": 5.13,
+              "el": 10.26
+            },
+            "2026-08-28": {
+              "cc": 12.82,
+              "bt": 5.13,
+              "el": 10.26
+            },
+            "2026-09-03": {
+              "cc": 3.0,
               "bt": 0.0,
               "el": 0.0
+            }
+          }
+        },
+        "KS25_QTKD_MAN107": {
+          "instructor": "Đặng Quỳnh Trang",
+          "metrics": {
+            "2026-09-08": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 9.52
+            },
+            "2026-09-09": {
+              "cc": 9.52,
+              "bt": 0.0,
+              "el": 9.52
+            },
+            "2026-09-10": {
+              "cc": 11.9,
+              "bt": 2.38,
+              "el": 7.14
             }
           }
         },
@@ -6066,6 +6671,13 @@
     "HN-K25-QTKD3": {
       "raw_name": "HN-K25-QTKD3",
       "size": 30,
+      "size_info": {
+        "current_size": 30,
+        "initial_size": 30,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": ""
+      },
       "sheets": {
         "KS25_QTKD_M103": {
           "instructor": "Đặng Quỳnh Trang",
@@ -6354,6 +6966,16 @@
               "cc": 7.69,
               "bt": 0.0,
               "el": 15.38
+            },
+            "2026-08-28": {
+              "cc": 11.54,
+              "bt": 0.0,
+              "el": 23.08
+            },
+            "2026-09-03": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 0.0
             }
           }
         },
@@ -6414,5 +7036,745 @@
         }
       }
     }
-  }
+  },
+  "size_alerts": [
+    {
+      "sheet": "KS24_JavaWeb",
+      "class_raw": "HN-K24-CNTT1(41-39)",
+      "class_norm": "HN-K24-CNTT1",
+      "initial_size": 41,
+      "current_size": 39,
+      "diff": -2,
+      "alert": "Lớp 'HN-K24-CNTT1(41-39)' tại môn/sheet [KS24_JavaWeb] có biến động sĩ số nội bộ: 41 -> 39 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS24_JavaWeb",
+      "class_raw": "HN-K24-CNTT2(40-39)",
+      "class_norm": "HN-K24-CNTT2",
+      "initial_size": 40,
+      "current_size": 39,
+      "diff": -1,
+      "alert": "Lớp 'HN-K24-CNTT2(40-39)' tại môn/sheet [KS24_JavaWeb] có biến động sĩ số nội bộ: 40 -> 39 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS24_JavaWeb",
+      "class_raw": "HN-K24-CNTT3(32-25)",
+      "class_norm": "HN-K24-CNTT3",
+      "initial_size": 32,
+      "current_size": 25,
+      "diff": -7,
+      "alert": "Lớp 'HN-K24-CNTT3(32-25)' tại môn/sheet [KS24_JavaWeb] có biến động sĩ số nội bộ: 32 -> 25 (Biến động: -7 SV)"
+    },
+    {
+      "sheet": "KS24_JavaWeb",
+      "class_raw": "HN-K24-CNTT4(38-34)",
+      "class_norm": "HN-K24-CNTT4",
+      "initial_size": 38,
+      "current_size": 34,
+      "diff": -4,
+      "alert": "Lớp 'HN-K24-CNTT4(38-34)' tại môn/sheet [KS24_JavaWeb] có biến động sĩ số nội bộ: 38 -> 34 (Biến động: -4 SV)"
+    },
+    {
+      "sheet": "KS24_JavaWeb",
+      "class_raw": "HN-K24-CNTT5(29-19)",
+      "class_norm": "HN-K24-CNTT5",
+      "initial_size": 29,
+      "current_size": 19,
+      "diff": -10,
+      "alert": "Lớp 'HN-K24-CNTT5(29-19)' tại môn/sheet [KS24_JavaWeb] có biến động sĩ số nội bộ: 29 -> 19 (Biến động: -10 SV)"
+    },
+    {
+      "sheet": "KS24_JWS",
+      "class_raw": "HN-K24-CNTT1(38)",
+      "class_norm": "HN-K24-CNTT1",
+      "initial_size": 39,
+      "current_size": 38,
+      "diff": -1,
+      "alert": "Lớp 'HN-K24-CNTT1' (HN-K24-CNTT1(38)) chuyển từ môn [KS24_JavaWeb] sang [KS24_JWS] có biến động sĩ số: 39 -> 38 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS24_JWS",
+      "class_raw": "HN-K24-CNTT3(48-43-42)",
+      "class_norm": "HN-K24-CNTT3",
+      "initial_size": 48,
+      "current_size": 42,
+      "diff": -6,
+      "alert": "Lớp 'HN-K24-CNTT3(48-43-42)' tại môn/sheet [KS24_JWS] có biến động sĩ số nội bộ: 48 -> 42 (Biến động: -6 SV)"
+    },
+    {
+      "sheet": "KS24_JWS",
+      "class_raw": "HN-K24-CNTT3(48-43-42)",
+      "class_norm": "HN-K24-CNTT3",
+      "initial_size": 25,
+      "current_size": 42,
+      "diff": 17,
+      "alert": "Lớp 'HN-K24-CNTT3' (HN-K24-CNTT3(48-43-42)) chuyển từ môn [KS24_JavaWeb] sang [KS24_JWS] có biến động sĩ số: 25 -> 42 (Biến động: +17 SV)"
+    },
+    {
+      "sheet": "KS24_AI",
+      "class_raw": "HN-K24-CNTT1(38-36)",
+      "class_norm": "HN-K24-CNTT1",
+      "initial_size": 38,
+      "current_size": 36,
+      "diff": -2,
+      "alert": "Lớp 'HN-K24-CNTT1(38-36)' tại môn/sheet [KS24_AI] có biến động sĩ số nội bộ: 38 -> 36 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS24_AI",
+      "class_raw": "HN-K24-CNTT1(38-36)",
+      "class_norm": "HN-K24-CNTT1",
+      "initial_size": 38,
+      "current_size": 36,
+      "diff": -2,
+      "alert": "Lớp 'HN-K24-CNTT1' (HN-K24-CNTT1(38-36)) chuyển từ môn [KS24_JWS] sang [KS24_AI] có biến động sĩ số: 38 -> 36 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS24_AI",
+      "class_raw": "HN-K24-CNTT4(34-32)",
+      "class_norm": "HN-K24-CNTT4",
+      "initial_size": 34,
+      "current_size": 32,
+      "diff": -2,
+      "alert": "Lớp 'HN-K24-CNTT4(34-32)' tại môn/sheet [KS24_AI] có biến động sĩ số nội bộ: 34 -> 32 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS24_AI",
+      "class_raw": "HN-K24-CNTT4(34-32)",
+      "class_norm": "HN-K24-CNTT4",
+      "initial_size": 34,
+      "current_size": 32,
+      "diff": -2,
+      "alert": "Lớp 'HN-K24-CNTT4' (HN-K24-CNTT4(34-32)) chuyển từ môn [KS24_JWS] sang [KS24_AI] có biến động sĩ số: 34 -> 32 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Intergration",
+      "class_raw": "HN-K24-CNTT1(36-33)",
+      "class_norm": "HN-K24-CNTT1",
+      "initial_size": 36,
+      "current_size": 33,
+      "diff": -3,
+      "alert": "Lớp 'HN-K24-CNTT1(36-33)' tại môn/sheet [KS24_AI_Intergration] có biến động sĩ số nội bộ: 36 -> 33 (Biến động: -3 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Intergration",
+      "class_raw": "HN-K24-CNTT1(36-33)",
+      "class_norm": "HN-K24-CNTT1",
+      "initial_size": 36,
+      "current_size": 33,
+      "diff": -3,
+      "alert": "Lớp 'HN-K24-CNTT1' (HN-K24-CNTT1(36-33)) chuyển từ môn [KS24_AI] sang [KS24_AI_Intergration] có biến động sĩ số: 36 -> 33 (Biến động: -3 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Intergration",
+      "class_raw": "HN-K24-CNTT3(42-41)",
+      "class_norm": "HN-K24-CNTT3",
+      "initial_size": 42,
+      "current_size": 41,
+      "diff": -1,
+      "alert": "Lớp 'HN-K24-CNTT3(42-41)' tại môn/sheet [KS24_AI_Intergration] có biến động sĩ số nội bộ: 42 -> 41 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Intergration",
+      "class_raw": "HN-K24-CNTT3(42-41)",
+      "class_norm": "HN-K24-CNTT3",
+      "initial_size": 42,
+      "current_size": 41,
+      "diff": -1,
+      "alert": "Lớp 'HN-K24-CNTT3' (HN-K24-CNTT3(42-41)) chuyển từ môn [KS24_AI] sang [KS24_AI_Intergration] có biến động sĩ số: 42 -> 41 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Intergration",
+      "class_raw": "HCM-K24-CNTT1(44-43)",
+      "class_norm": "HCM-K24-CNTT1",
+      "initial_size": 44,
+      "current_size": 43,
+      "diff": -1,
+      "alert": "Lớp 'HCM-K24-CNTT1(44-43)' tại môn/sheet [KS24_AI_Intergration] có biến động sĩ số nội bộ: 44 -> 43 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Intergration",
+      "class_raw": "HCM-K24-CNTT1(44-43)",
+      "class_norm": "HCM-K24-CNTT1",
+      "initial_size": 44,
+      "current_size": 43,
+      "diff": -1,
+      "alert": "Lớp 'HCM-K24-CNTT1' (HCM-K24-CNTT1(44-43)) chuyển từ môn [KS24_AI] sang [KS24_AI_Intergration] có biến động sĩ số: 44 -> 43 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Microservice",
+      "class_raw": "HN-K24-CNTT1(35-31)",
+      "class_norm": "HN-K24-CNTT1",
+      "initial_size": 35,
+      "current_size": 31,
+      "diff": -4,
+      "alert": "Lớp 'HN-K24-CNTT1(35-31)' tại môn/sheet [KS24_AI_Microservice] có biến động sĩ số nội bộ: 35 -> 31 (Biến động: -4 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Microservice",
+      "class_raw": "HN-K24-CNTT1(35-31)",
+      "class_norm": "HN-K24-CNTT1",
+      "initial_size": 33,
+      "current_size": 31,
+      "diff": -2,
+      "alert": "Lớp 'HN-K24-CNTT1' (HN-K24-CNTT1(35-31)) chuyển từ môn [KS24_AI_Intergration] sang [KS24_AI_Microservice] có biến động sĩ số: 33 -> 31 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Microservice",
+      "class_raw": "HN-K24-CNTT3(42)",
+      "class_norm": "HN-K24-CNTT3",
+      "initial_size": 41,
+      "current_size": 42,
+      "diff": 1,
+      "alert": "Lớp 'HN-K24-CNTT3' (HN-K24-CNTT3(42)) chuyển từ môn [KS24_AI_Intergration] sang [KS24_AI_Microservice] có biến động sĩ số: 41 -> 42 (Biến động: +1 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Microservice",
+      "class_raw": "HN-K24-CNTT4(32-31)",
+      "class_norm": "HN-K24-CNTT4",
+      "initial_size": 32,
+      "current_size": 31,
+      "diff": -1,
+      "alert": "Lớp 'HN-K24-CNTT4(32-31)' tại môn/sheet [KS24_AI_Microservice] có biến động sĩ số nội bộ: 32 -> 31 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS24_AI_Microservice",
+      "class_raw": "HN-K24-CNTT4(32-31)",
+      "class_norm": "HN-K24-CNTT4",
+      "initial_size": 32,
+      "current_size": 31,
+      "diff": -1,
+      "alert": "Lớp 'HN-K24-CNTT4' (HN-K24-CNTT4(32-31)) chuyển từ môn [KS24_AI_Intergration] sang [KS24_AI_Microservice] có biến động sĩ số: 32 -> 31 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Database",
+      "class_raw": "HN-K25-CNTT1(47-44)",
+      "class_norm": "HN-K25-CNTT1",
+      "initial_size": 47,
+      "current_size": 44,
+      "diff": -3,
+      "alert": "Lớp 'HN-K25-CNTT1(47-44)' tại môn/sheet [KS25_Database] có biến động sĩ số nội bộ: 47 -> 44 (Biến động: -3 SV)"
+    },
+    {
+      "sheet": "KS25_Database",
+      "class_raw": "HN-K25-CNTT3(40-39)",
+      "class_norm": "HN-K25-CNTT3",
+      "initial_size": 40,
+      "current_size": 39,
+      "diff": -1,
+      "alert": "Lớp 'HN-K25-CNTT3(40-39)' tại môn/sheet [KS25_Database] có biến động sĩ số nội bộ: 40 -> 39 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Database",
+      "class_raw": "HN-K25-CNTT4(47-43)",
+      "class_norm": "HN-K25-CNTT4",
+      "initial_size": 47,
+      "current_size": 43,
+      "diff": -4,
+      "alert": "Lớp 'HN-K25-CNTT4(47-43)' tại môn/sheet [KS25_Database] có biến động sĩ số nội bộ: 47 -> 43 (Biến động: -4 SV)"
+    },
+    {
+      "sheet": "KS25_Database",
+      "class_raw": "HN-K25-CNTT6(38-35)",
+      "class_norm": "HN-K25-CNTT6",
+      "initial_size": 38,
+      "current_size": 35,
+      "diff": -3,
+      "alert": "Lớp 'HN-K25-CNTT6(38-35)' tại môn/sheet [KS25_Database] có biến động sĩ số nội bộ: 38 -> 35 (Biến động: -3 SV)"
+    },
+    {
+      "sheet": "KS25_Database",
+      "class_raw": "HCM-K25-CNTT5(43-39)",
+      "class_norm": "HCM-K25-CNTT5",
+      "initial_size": 43,
+      "current_size": 39,
+      "diff": -4,
+      "alert": "Lớp 'HCM-K25-CNTT5(43-39)' tại môn/sheet [KS25_Database] có biến động sĩ số nội bộ: 43 -> 39 (Biến động: -4 SV)"
+    },
+    {
+      "sheet": "KS25_Database",
+      "class_raw": "HCM-K25-CNTT6(47-41)",
+      "class_norm": "HCM-K25-CNTT6",
+      "initial_size": 47,
+      "current_size": 41,
+      "diff": -6,
+      "alert": "Lớp 'HCM-K25-CNTT6(47-41)' tại môn/sheet [KS25_Database] có biến động sĩ số nội bộ: 47 -> 41 (Biến động: -6 SV)"
+    },
+    {
+      "sheet": "KS25_Database",
+      "class_raw": "HCM-K25-CNTT7(43-42)",
+      "class_norm": "HCM-K25-CNTT7",
+      "initial_size": 43,
+      "current_size": 42,
+      "diff": -1,
+      "alert": "Lớp 'HCM-K25-CNTT7(43-42)' tại môn/sheet [KS25_Database] có biến động sĩ số nội bộ: 43 -> 42 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT1(44-42)",
+      "class_norm": "HN-K25-CNTT1",
+      "initial_size": 44,
+      "current_size": 42,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT1(44-42)' tại môn/sheet [KS25_Python] có biến động sĩ số nội bộ: 44 -> 42 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT1(44-42)",
+      "class_norm": "HN-K25-CNTT1",
+      "initial_size": 44,
+      "current_size": 42,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT1' (HN-K25-CNTT1(44-42)) chuyển từ môn [KS25_Database] sang [KS25_Python] có biến động sĩ số: 44 -> 42 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT3(40-39-37)",
+      "class_norm": "HN-K25-CNTT3",
+      "initial_size": 40,
+      "current_size": 37,
+      "diff": -3,
+      "alert": "Lớp 'HN-K25-CNTT3(40-39-37)' tại môn/sheet [KS25_Python] có biến động sĩ số nội bộ: 40 -> 37 (Biến động: -3 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT3(40-39-37)",
+      "class_norm": "HN-K25-CNTT3",
+      "initial_size": 39,
+      "current_size": 37,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT3' (HN-K25-CNTT3(40-39-37)) chuyển từ môn [KS25_Database] sang [KS25_Python] có biến động sĩ số: 39 -> 37 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT4(44-43-42)",
+      "class_norm": "HN-K25-CNTT4",
+      "initial_size": 44,
+      "current_size": 42,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT4(44-43-42)' tại môn/sheet [KS25_Python] có biến động sĩ số nội bộ: 44 -> 42 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT4(44-43-42)",
+      "class_norm": "HN-K25-CNTT4",
+      "initial_size": 43,
+      "current_size": 42,
+      "diff": -1,
+      "alert": "Lớp 'HN-K25-CNTT4' (HN-K25-CNTT4(44-43-42)) chuyển từ môn [KS25_Database] sang [KS25_Python] có biến động sĩ số: 43 -> 42 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT5(43-40-42)",
+      "class_norm": "HN-K25-CNTT5",
+      "initial_size": 43,
+      "current_size": 42,
+      "diff": -1,
+      "alert": "Lớp 'HN-K25-CNTT5(43-40-42)' tại môn/sheet [KS25_Python] có biến động sĩ số nội bộ: 43 -> 42 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT6(35-33)",
+      "class_norm": "HN-K25-CNTT6",
+      "initial_size": 35,
+      "current_size": 33,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT6(35-33)' tại môn/sheet [KS25_Python] có biến động sĩ số nội bộ: 35 -> 33 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT6(35-33)",
+      "class_norm": "HN-K25-CNTT6",
+      "initial_size": 35,
+      "current_size": 33,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT6' (HN-K25-CNTT6(35-33)) chuyển từ môn [KS25_Database] sang [KS25_Python] có biến động sĩ số: 35 -> 33 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT8(23-24)",
+      "class_norm": "HN-K25-CNTT8",
+      "initial_size": 23,
+      "current_size": 24,
+      "diff": 1,
+      "alert": "Lớp 'HN-K25-CNTT8(23-24)' tại môn/sheet [KS25_Python] có biến động sĩ số nội bộ: 23 -> 24 (Biến động: +1 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HN-K25-CNTT8(23-24)",
+      "class_norm": "HN-K25-CNTT8",
+      "initial_size": 18,
+      "current_size": 24,
+      "diff": 6,
+      "alert": "Lớp 'HN-K25-CNTT8' (HN-K25-CNTT8(23-24)) chuyển từ môn [KS25_Database] sang [KS25_Python] có biến động sĩ số: 18 -> 24 (Biến động: +6 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HCM-K25-CNTT8(38)",
+      "class_norm": "HCM-K25-CNTT8",
+      "initial_size": 39,
+      "current_size": 38,
+      "diff": -1,
+      "alert": "Lớp 'HCM-K25-CNTT8' (HCM-K25-CNTT8(38)) chuyển từ môn [KS25_Database] sang [KS25_Python] có biến động sĩ số: 39 -> 38 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HCM-K25-CNTT6(41-40)",
+      "class_norm": "HCM-K25-CNTT6",
+      "initial_size": 41,
+      "current_size": 40,
+      "diff": -1,
+      "alert": "Lớp 'HCM-K25-CNTT6(41-40)' tại môn/sheet [KS25_Python] có biến động sĩ số nội bộ: 41 -> 40 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Python",
+      "class_raw": "HCM-K25-CNTT6(41-40)",
+      "class_norm": "HCM-K25-CNTT6",
+      "initial_size": 41,
+      "current_size": 40,
+      "diff": -1,
+      "alert": "Lớp 'HCM-K25-CNTT6' (HCM-K25-CNTT6(41-40)) chuyển từ môn [KS25_Database] sang [KS25_Python] có biến động sĩ số: 41 -> 40 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HN-K25-CNTT1(40)",
+      "class_norm": "HN-K25-CNTT1",
+      "initial_size": 42,
+      "current_size": 40,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT1' (HN-K25-CNTT1(40)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 42 -> 40 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HN-K25-CNTT2(38)",
+      "class_norm": "HN-K25-CNTT2",
+      "initial_size": 43,
+      "current_size": 38,
+      "diff": -5,
+      "alert": "Lớp 'HN-K25-CNTT2' (HN-K25-CNTT2(38)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 43 -> 38 (Biến động: -5 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HN-K25-CNTT3(35)",
+      "class_norm": "HN-K25-CNTT3",
+      "initial_size": 37,
+      "current_size": 35,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT3' (HN-K25-CNTT3(35)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 37 -> 35 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HN-K25-CNTT4(41-40)",
+      "class_norm": "HN-K25-CNTT4",
+      "initial_size": 41,
+      "current_size": 40,
+      "diff": -1,
+      "alert": "Lớp 'HN-K25-CNTT4(41-40)' tại môn/sheet [KS25_Python_Web] có biến động sĩ số nội bộ: 41 -> 40 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HN-K25-CNTT4(41-40)",
+      "class_norm": "HN-K25-CNTT4",
+      "initial_size": 42,
+      "current_size": 40,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT4' (HN-K25-CNTT4(41-40)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 42 -> 40 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HN-K25-CNTT5(37)",
+      "class_norm": "HN-K25-CNTT5",
+      "initial_size": 42,
+      "current_size": 37,
+      "diff": -5,
+      "alert": "Lớp 'HN-K25-CNTT5' (HN-K25-CNTT5(37)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 42 -> 37 (Biến động: -5 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HN-K25-CNTT6(32-31)",
+      "class_norm": "HN-K25-CNTT6",
+      "initial_size": 32,
+      "current_size": 31,
+      "diff": -1,
+      "alert": "Lớp 'HN-K25-CNTT6(32-31)' tại môn/sheet [KS25_Python_Web] có biến động sĩ số nội bộ: 32 -> 31 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HN-K25-CNTT6(32-31)",
+      "class_norm": "HN-K25-CNTT6",
+      "initial_size": 33,
+      "current_size": 31,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT6' (HN-K25-CNTT6(32-31)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 33 -> 31 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HN-K25-CNTT8(22)",
+      "class_norm": "HN-K25-CNTT8",
+      "initial_size": 24,
+      "current_size": 22,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT8' (HN-K25-CNTT8(22)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 24 -> 22 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HCM-K25-CNTT8(36)",
+      "class_norm": "HCM-K25-CNTT8",
+      "initial_size": 38,
+      "current_size": 36,
+      "diff": -2,
+      "alert": "Lớp 'HCM-K25-CNTT8' (HCM-K25-CNTT8(36)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 38 -> 36 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HCM-K25-CNTT7(40-39)",
+      "class_norm": "HCM-K25-CNTT7",
+      "initial_size": 40,
+      "current_size": 39,
+      "diff": -1,
+      "alert": "Lớp 'HCM-K25-CNTT7(40-39)' tại môn/sheet [KS25_Python_Web] có biến động sĩ số nội bộ: 40 -> 39 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HCM-K25-CNTT7(40-39)",
+      "class_norm": "HCM-K25-CNTT7",
+      "initial_size": 42,
+      "current_size": 39,
+      "diff": -3,
+      "alert": "Lớp 'HCM-K25-CNTT7' (HCM-K25-CNTT7(40-39)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 42 -> 39 (Biến động: -3 SV)"
+    },
+    {
+      "sheet": "KS25_Python_Web",
+      "class_raw": "HCM-K25-CNTT5(37)",
+      "class_norm": "HCM-K25-CNTT5",
+      "initial_size": 39,
+      "current_size": 37,
+      "diff": -2,
+      "alert": "Lớp 'HCM-K25-CNTT5' (HCM-K25-CNTT5(37)) chuyển từ môn [KS25_Python] sang [KS25_Python_Web] có biến động sĩ số: 39 -> 37 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HN-K25-CNTT1(41)",
+      "class_norm": "HN-K25-CNTT1",
+      "initial_size": 40,
+      "current_size": 41,
+      "diff": 1,
+      "alert": "Lớp 'HN-K25-CNTT1' (HN-K25-CNTT1(41)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 40 -> 41 (Biến động: +1 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HN-K25-CNTT2(41)",
+      "class_norm": "HN-K25-CNTT2",
+      "initial_size": 38,
+      "current_size": 41,
+      "diff": 3,
+      "alert": "Lớp 'HN-K25-CNTT2' (HN-K25-CNTT2(41)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 38 -> 41 (Biến động: +3 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HN-K25-CNTT3(43)",
+      "class_norm": "HN-K25-CNTT3",
+      "initial_size": 35,
+      "current_size": 43,
+      "diff": 8,
+      "alert": "Lớp 'HN-K25-CNTT3' (HN-K25-CNTT3(43)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 35 -> 43 (Biến động: +8 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HN-K25-CNTT4(38)",
+      "class_norm": "HN-K25-CNTT4",
+      "initial_size": 40,
+      "current_size": 38,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-CNTT4' (HN-K25-CNTT4(38)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 40 -> 38 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HN-K25-CNTT5(41)",
+      "class_norm": "HN-K25-CNTT5",
+      "initial_size": 37,
+      "current_size": 41,
+      "diff": 4,
+      "alert": "Lớp 'HN-K25-CNTT5' (HN-K25-CNTT5(41)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 37 -> 41 (Biến động: +4 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HCM-K25-CNTT8(36-33-32)",
+      "class_norm": "HCM-K25-CNTT8",
+      "initial_size": 36,
+      "current_size": 32,
+      "diff": -4,
+      "alert": "Lớp 'HCM-K25-CNTT8(36-33-32)' tại môn/sheet [KS25_Phantichthietkehethong] có biến động sĩ số nội bộ: 36 -> 32 (Biến động: -4 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HCM-K25-CNTT8(36-33-32)",
+      "class_norm": "HCM-K25-CNTT8",
+      "initial_size": 36,
+      "current_size": 32,
+      "diff": -4,
+      "alert": "Lớp 'HCM-K25-CNTT8' (HCM-K25-CNTT8(36-33-32)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 36 -> 32 (Biến động: -4 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HCM-K25-CNTT7(39-46)",
+      "class_norm": "HCM-K25-CNTT7",
+      "initial_size": 39,
+      "current_size": 46,
+      "diff": 7,
+      "alert": "Lớp 'HCM-K25-CNTT7(39-46)' tại môn/sheet [KS25_Phantichthietkehethong] có biến động sĩ số nội bộ: 39 -> 46 (Biến động: +7 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HCM-K25-CNTT7(39-46)",
+      "class_norm": "HCM-K25-CNTT7",
+      "initial_size": 39,
+      "current_size": 46,
+      "diff": 7,
+      "alert": "Lớp 'HCM-K25-CNTT7' (HCM-K25-CNTT7(39-46)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 39 -> 46 (Biến động: +7 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HCM-K25-CNTT6(38-37-47)",
+      "class_norm": "HCM-K25-CNTT6",
+      "initial_size": 38,
+      "current_size": 47,
+      "diff": 9,
+      "alert": "Lớp 'HCM-K25-CNTT6(38-37-47)' tại môn/sheet [KS25_Phantichthietkehethong] có biến động sĩ số nội bộ: 38 -> 47 (Biến động: +9 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HCM-K25-CNTT6(38-37-47)",
+      "class_norm": "HCM-K25-CNTT6",
+      "initial_size": 40,
+      "current_size": 47,
+      "diff": 7,
+      "alert": "Lớp 'HCM-K25-CNTT6' (HCM-K25-CNTT6(38-37-47)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 40 -> 47 (Biến động: +7 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HCM-K25-CNTT5(39-44)",
+      "class_norm": "HCM-K25-CNTT5",
+      "initial_size": 39,
+      "current_size": 44,
+      "diff": 5,
+      "alert": "Lớp 'HCM-K25-CNTT5(39-44)' tại môn/sheet [KS25_Phantichthietkehethong] có biến động sĩ số nội bộ: 39 -> 44 (Biến động: +5 SV)"
+    },
+    {
+      "sheet": "KS25_Phantichthietkehethong",
+      "class_raw": "HCM-K25-CNTT5(39-44)",
+      "class_norm": "HCM-K25-CNTT5",
+      "initial_size": 37,
+      "current_size": 44,
+      "diff": 7,
+      "alert": "Lớp 'HCM-K25-CNTT5' (HCM-K25-CNTT5(39-44)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 37 -> 44 (Biến động: +7 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_DTB202",
+      "class_raw": "HN-K25-QTKD1(37-33)",
+      "class_norm": "HN-K25-QTKD1",
+      "initial_size": 37,
+      "current_size": 33,
+      "diff": -4,
+      "alert": "Lớp 'HN-K25-QTKD1(37-33)' tại môn/sheet [KS25_QTKD_DTB202] có biến động sĩ số nội bộ: 37 -> 33 (Biến động: -4 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_DTB202",
+      "class_raw": "HN-K25-QTKD1(37-33)",
+      "class_norm": "HN-K25-QTKD1",
+      "initial_size": 37,
+      "current_size": 33,
+      "diff": -4,
+      "alert": "Lớp 'HN-K25-QTKD1' (HN-K25-QTKD1(37-33)) chuyển từ môn [KS25_QTKD_DTB201] sang [KS25_QTKD_DTB202] có biến động sĩ số: 37 -> 33 (Biến động: -4 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_PRJ302",
+      "class_raw": "HN-K25-QTKD1(21-11-1)",
+      "class_norm": "HN-K25-QTKD1",
+      "initial_size": 21,
+      "current_size": 1,
+      "diff": -20,
+      "alert": "Lớp 'HN-K25-QTKD1(21-11-1)' tại môn/sheet [KS25_QTKD_PRJ302] có biến động sĩ số nội bộ: 21 -> 1 (Biến động: -20 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_PRJ302",
+      "class_raw": "HN-K25-QTKD1(21-11-1)",
+      "class_norm": "HN-K25-QTKD1",
+      "initial_size": 33,
+      "current_size": 1,
+      "diff": -32,
+      "alert": "Lớp 'HN-K25-QTKD1' (HN-K25-QTKD1(21-11-1)) chuyển từ môn [KS25_QTKD_DTB202] sang [KS25_QTKD_PRJ302] có biến động sĩ số: 33 -> 1 (Biến động: -32 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_PRJ302",
+      "class_raw": "HN-K25-QTKD3(26)",
+      "class_norm": "HN-K25-QTKD3",
+      "initial_size": 27,
+      "current_size": 26,
+      "diff": -1,
+      "alert": "Lớp 'HN-K25-QTKD3' (HN-K25-QTKD3(26)) chuyển từ môn [KS25_QTKD_DTB202] sang [KS25_QTKD_PRJ302] có biến động sĩ số: 27 -> 26 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_BA201",
+      "class_raw": "HN-K25-QTKD1(33)",
+      "class_norm": "HN-K25-QTKD1",
+      "initial_size": 1,
+      "current_size": 33,
+      "diff": 32,
+      "alert": "Lớp 'HN-K25-QTKD1' (HN-K25-QTKD1(33)) chuyển từ môn [KS25_QTKD_PRJ302] sang [KS25_QTKD_BA201] có biến động sĩ số: 1 -> 33 (Biến động: +32 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_BA201",
+      "class_raw": "HN-K25-QTKD2(40-39)",
+      "class_norm": "HN-K25-QTKD2",
+      "initial_size": 40,
+      "current_size": 39,
+      "diff": -1,
+      "alert": "Lớp 'HN-K25-QTKD2(40-39)' tại môn/sheet [KS25_QTKD_BA201] có biến động sĩ số nội bộ: 40 -> 39 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_BA201",
+      "class_raw": "HN-K25-QTKD2(40-39)",
+      "class_norm": "HN-K25-QTKD2",
+      "initial_size": 40,
+      "current_size": 39,
+      "diff": -1,
+      "alert": "Lớp 'HN-K25-QTKD2' (HN-K25-QTKD2(40-39)) chuyển từ môn [KS25_QTKD_PRJ302] sang [KS25_QTKD_BA201] có biến động sĩ số: 40 -> 39 (Biến động: -1 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_BA201",
+      "class_raw": "HN-K25-QTKD3(28-26)",
+      "class_norm": "HN-K25-QTKD3",
+      "initial_size": 28,
+      "current_size": 26,
+      "diff": -2,
+      "alert": "Lớp 'HN-K25-QTKD3(28-26)' tại môn/sheet [KS25_QTKD_BA201] có biến động sĩ số nội bộ: 28 -> 26 (Biến động: -2 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_MAN107",
+      "class_raw": "HN-K25-QTKD1(46)",
+      "class_norm": "HN-K25-QTKD1",
+      "initial_size": 33,
+      "current_size": 46,
+      "diff": 13,
+      "alert": "Lớp 'HN-K25-QTKD1' (HN-K25-QTKD1(46)) chuyển từ môn [KS25_QTKD_BA201] sang [KS25_QTKD_MAN107] có biến động sĩ số: 33 -> 46 (Biến động: +13 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_MAN107",
+      "class_raw": "HN-K25-QTKD2(42)",
+      "class_norm": "HN-K25-QTKD2",
+      "initial_size": 39,
+      "current_size": 42,
+      "diff": 3,
+      "alert": "Lớp 'HN-K25-QTKD2' (HN-K25-QTKD2(42)) chuyển từ môn [KS25_QTKD_BA201] sang [KS25_QTKD_MAN107] có biến động sĩ số: 39 -> 42 (Biến động: +3 SV)"
+    },
+    {
+      "sheet": "KS25_QTKD_MAN107",
+      "class_raw": "HN-K25-QTKD (Tái cơ cấu)",
+      "class_norm": "HN-K25-QTKD",
+      "initial_size": 3,
+      "current_size": 2,
+      "diff": -1,
+      "alert": "Khối QTKD chính thức giảm từ 3 lớp xuống 2 lớp: Lớp 'HN-K25-QTKD3' đã giải thể và sáp nhập sinh viên sang QTKD1 và QTKD2 (sĩ số QTKD1 tăng lên 46 SV, QTKD2 tăng lên 42 SV)"
+    }
+  ]
 }

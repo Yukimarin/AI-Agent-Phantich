@@ -56,11 +56,11 @@ def ensure_mysql_started():
         return False
 
 def find_latest_sql_dump():
-    default_path = r"C:\Users\DELL\Downloads\qldt_el-13-08-26.sql"
-    if os.path.exists(default_path):
-        return default_path
-    
-    # Tìm kiếm trong thư mục Downloads
+    # 1. Kiểm tra tham số dòng lệnh nếu người dùng truyền trực tiếp
+    if len(sys.argv) > 1 and os.path.exists(sys.argv[1]):
+        return sys.argv[1]
+
+    # 2. Tìm kiếm file SQL mới nhất trong thư mục Downloads
     downloads_dir = r"C:\Users\DELL\Downloads"
     if os.path.exists(downloads_dir):
         sql_files = [os.path.join(downloads_dir, f) for f in os.listdir(downloads_dir) if f.startswith("qldt_el") and f.endswith(".sql")]
@@ -68,6 +68,10 @@ def find_latest_sql_dump():
             # Lấy file có thời gian sửa đổi mới nhất
             latest_file = max(sql_files, key=os.path.getmtime)
             return latest_file
+
+    default_path = r"C:\Users\DELL\Downloads\qldt_el-09-09-26.sql"
+    if os.path.exists(default_path):
+        return default_path
             
     return None
 
