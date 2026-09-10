@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMO Executive Dashboard V4.1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-main: #0f172a; --bg-card: #1e293b; --bg-elevated: #334155;
+            --text-main: #f8fafc; --text-muted: #94a3b8;
+            --primary: #3b82f6; --success: #10b981; --warning: #f59e0b; --danger: #ef4444; --info: #0ea5e9;
+            --border: rgba(255,255,255,0.08);
+            --font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-family); }
+        body { background: var(--bg-main); color: var(--text-main); padding: 20px; font-size: 14px; }
+        .container { max-width: 1440px; margin: 0 auto; }
+        
+        header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 24px; }
+        h1 { font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        .meta { color: var(--text-muted); font-size: 0.9rem; }
+        select { background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border); padding: 8px 16px; border-radius: 8px; font-weight: 600; outline: none; }
+        
+        .tabs { display: flex; gap: 8px; margin-bottom: 24px; background: var(--bg-card); padding: 6px; border-radius: 12px; border: 1px solid var(--border); width: max-content; }
+        .tab-btn { padding: 10px 24px; background: transparent; border: none; color: var(--text-muted); font-weight: 600; font-size: 0.95rem; cursor: pointer; border-radius: 8px; transition: 0.2s; display: flex; align-items: center; gap: 8px; }
+        .tab-btn:hover:not(.active) { background: var(--border); color: var(--text-main); }
+        .tab-btn.active { background: var(--primary); color: white; }
+        .tab-pane { display: none; animation: fade 0.3s ease; }
+        .tab-pane.active { display: block; }
+        @keyframes fade { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px; }
+        .kpi-card { background: var(--bg-card); border-radius: 12px; padding: 20px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+        .kpi-card::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; }
+        .kpi-card.success::before { background: var(--success); }
+        .kpi-card.danger::before { background: var(--danger); }
+        .kpi-card.warning::before { background: var(--warning); }
+        .kpi-card.primary::before { background: var(--primary); }
+        .kpi-title { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
+        .kpi-val { font-size: 2.2rem; font-weight: 800; display: flex; align-items: baseline; gap: 8px; }
+        .kpi-sub { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+        .panel { background: var(--bg-card); border-radius: 12px; padding: 20px; border: 1px solid var(--border); }
+        .panel-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+        
+        .heatmap-container { display: flex; flex-direction: column; gap: 8px; }
+        .hm-row { display: grid; grid-template-columns: 100px repeat(5, 1fr); gap: 4px; align-items: center; }
+        .hm-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-align: right; padding-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .hm-cell { height: 35px; border-radius: 4px; background: var(--bg-elevated); display: flex; justify-content: center; align-items: center; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.9); transition: 0.2s; cursor: default; }
+        .hm-cell:hover { transform: scale(1.05); }
+        
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+        th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.75rem; background: rgba(0,0,0,0.2); }
+        tr:hover { background: rgba(255,255,255,0.02); }
+        
+        .badge { padding: 4px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 700; display: inline-block; }
+        .bg-success { background: rgba(16,185,129,0.2); color: var(--success); border: 1px solid var(--success); }
+        .bg-danger { background: rgba(239,68,68,0.2); color: var(--danger); border: 1px solid var(--danger); }
+        .bg-warning { background: rgba(245,158,11,0.2); color: var(--warning); border: 1px solid var(--warning); }
+        .bg-info { background: rgba(14,165,233,0.2); color: var(--info); border: 1px solid var(--info); }
+        
+        .chip { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; margin: 2px; border: 1px solid var(--border); }
+        .chip-success { background: rgba(16,185,129,0.1); color: var(--success); border-color: var(--success); }
+        .chip-primary { background: rgba(59,130,246,0.1); color: #60a5fa; border-color: var(--primary); }
+        .chip-danger { background: rgba(239,68,68,0.1); color: var(--danger); border-color: var(--danger); }
+        
+        .gauge-container { position: relative; width: 100%; height: 200px; display: flex; justify-content: center; align-items: flex-end; }
+        .gauge-text { position: absolute; bottom: 10px; text-align: center; }
+        .gauge-val { font-size: 2.5rem; font-weight: 800; color: var(--success); line-height: 1; }
+        
+        .list-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px dashed var(--border); }
+        .list-item:last-child { border-bottom: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1><i class="fas fa-rocket" style="color: var(--primary)"></i> PMO Executive Dashboard V4.1</h1>
+                <div class="meta" id="date-meta">Cập nhật dữ liệu tuần nhất...</div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button id="btn-refresh-data" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid var(--primary); padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 13px;" onclick="fetchLiveDailyLogsData(true)" title="Cập nhật dữ liệu từ file JSON mới nhất">
+                    <i class="fa-solid fa-rotate" id="refresh-icon"></i> Cập nhật dữ liệu
+                </button>
+                <select id="dept-filter" onchange="renderApp()">
+                    <option value="ALL">Tất Cả Các Khối</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('daily')"><i class="fas fa-calendar-check"></i> Kỷ Luật Báo Cáo Hằng Ngày</button>
+            <button class="tab-btn" onclick="switchTab('project')"><i class="fas fa-tasks"></i> Quản Trị Nguồn Lực & Dự Án</button>
+        </div>
+
+        <div id="tab-daily" class="tab-pane active">
+            <div class="kpi-grid" id="daily-kpis"></div>
+
+            <div class="grid-2">
+                <div class="panel">
+                    <div class="panel-title"><i class="fas fa-tachometer-alt"></i> Mức Độ Tuân Thủ (Gauge)</div>
+                    <div class="gauge-container">
+                        <canvas id="gaugeChart"></canvas>
+                        <div class="gauge-text">
+                            <div class="gauge-val" id="gauge-val-text">0%</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted)" id="gauge-sub-text"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><i class="fas fa-fire"></i> Tần Suất Quên Báo Cáo (Heatmap)</div>
+                    <div class="heatmap-container" id="heatmap-content"></div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="panel" style="border-top: 4px solid var(--danger)">
+                    <div class="panel-title" style="color: var(--danger)"><i class="fas fa-thumbs-down"></i> Top Quên / Nộp Trễ (Cần Nhắc Nhở)</div>
+                    <div id="slacker-list"></div>
+                </div>
+
+                <div class="panel" style="border-top: 4px solid var(--success)">
+                    <div class="panel-title" style="color: var(--success)"><i class="fas fa-star"></i> Top Tuân Thủ 100% (Tuyên Dương)</div>
+                    <div id="hero-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-project" class="tab-pane">
+            <div class="kpi-grid" id="project-kpis"></div>
+
+            <div class="panel" style="margin-bottom: 24px;">
+                <div class="panel-title"><i class="fas fa-th"></i> Ma Trận Phân Bổ (Workload Matrix)</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px">
+                    <span style="display:inline-block; margin-right:15px"><span class="chip chip-success" style="padding:2px 8px">Hoàn thành</span></span>
+                    <span style="display:inline-block; margin-right:15px"><span class="chip chip-primary" style="padding:2px 8px">Đang làm đúng hạn</span></span>
+                    <span style="display:inline-block; margin-right:15px"><span class="chip chip-danger" style="padding:2px 8px">Đang làm bị trễ</span></span>
+                </p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 250px">Nhân Sự</th>
+                                <th style="width: 120px; text-align: center">Số lượng DA</th>
+                                <th>Danh Sách Dự Án Đang Được Giao</th>
+                            </tr>
+                        </thead>
+                        <tbody id="workload-table"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="panel" style="margin-bottom: 24px; border-top: 4px solid var(--danger)">
+                <div class="panel-title" style="color: var(--danger)"><i class="fas fa-skull-crossbones"></i> Blacklist: Khai khống tiến độ (Chưa Xác Thực)</div>
+                <div id="blacklist-content"></div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title"><i class="fas fa-medal"></i> Bảng Xếp Hạng & Cảnh Báo Hiệu Suất (Performance Alert)</div>
+                <div class="grid-2">
+                    <div>
+                        <h3 style="color: var(--success); font-size: 1rem; margin-bottom: 12px">🌟 Nhóm Xuất Sắc (High Performance)</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px">Hoàn thành báo cáo đầy đủ, tiến độ DA tốt.</p>
+                        <div id="perf-high"></div>
+                    </div>
+                    <div style="border-left: 1px solid var(--border); padding-left: 20px;">
+                        <h3 style="color: var(--danger); font-size: 1rem; margin-bottom: 12px">⚠️ Nhóm Cảnh Báo (Low Performance / Idle)</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px">Không được giao dự án, hoặc báo cáo công việc cẩu thả.</p>
+                        <div id="perf-low"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const RAW_DATA = {"departments": ["Khối QTKD", "Khối CNTT", "Khối Ngoại ngữ và kỹ năng mềm", "Khối QLCLĐT"], "today_date": "2026-08-28", "personnel": {"Lê Thành Ngọc": {"group": "Khối QTKD", "reported_days": 4, "expected_days": 5, "hours": 32.5, "completion_rate": 100.0, "warning_flags": ["Task 'Họp giao ban nội bộ Khối Đào tạo' chưa định dạng (gán tạm 30 phút)", "Task 'QTKDSX-1 Chốt PMs các môn học kỳ I QTKD K26' chưa định dạng (gán tạm 30 phút)", "Task 'Họp thảo luận nội dung đào tạo môn Digital Marketing' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-26"], "assigned_projects": [{"name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CTĐT, PM Môn học K25, 26", "pic": "Lê Thành Ngọc", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD] SX Tài nguyên học tập K26", "pic": "Lê Thành Ngọc", "health": "OFF_TRACK", "status": "ACTIVE"}]}, "Hoàng Thị Kim Oanh": {"group": "Khối QTKD", "reported_days": 5, "expected_days": 5, "hours": 39.75, "completion_rate": 100.0, "warning_flags": ["Task 'Điền báo cáo, họp Giao ban tuần Khối Đào tạo' chưa định dạng (gán tạm 30 phút)", "Task 'Lập KH tuần, giao việc nhân sự' chưa định dạng (gán tạm 30 phút)", "Task 'Họp/trao đổi công việc: PM K26, Mô hình 1-2-1, công tác CVHT, TG, khung điểm KNM, trao đổi về hiệu suất công việc nhân sự...' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "QTKD - Các công việc khác", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CTĐT, PM Môn học K25, 26", "pic": "Lê Thành Ngọc", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] CỐ VẤN HỌC TẬP", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD] SX Tài nguyên học tập K26", "pic": "Lê Thành Ngọc", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Hoàng Thị Hậu": {"group": "Khối QTKD", "reported_days": 4, "expected_days": 5, "hours": 32.0, "completion_rate": 90.0, "warning_flags": ["Task 'Góp ý chương trình đào tạo kỹ năng bán hàng thực chiến' chưa định dạng (gán tạm 30 phút)", "Task 'Nghiên cứu chương trình đào tạo business development' chưa định dạng (gán tạm 30 phút)", "Task 'Nghiên cứu Môn quản trị chiến lược ss6' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-28"], "assigned_projects": [{"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CTĐT, PM Môn học K25, 26", "pic": "Lê Thành Ngọc", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Quy trình sản xuất học liệu video", "pic": "Hoàng Thị Hậu", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Điều chỉnh KPI Master chi tiết", "pic": "Hoàng Thị Hậu", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn", "pic": "Nguyễn Ngọc Vân Khanh", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Đặng Quỳnh Trang": {"group": "Khối QTKD", "reported_days": 5, "expected_days": 5, "hours": 38.0, "completion_rate": 100.0, "warning_flags": ["Task 'Chấm điểm PRJ302 các nhóm intop và cập nhật điểm' chưa định dạng (gán tạm 30 phút)", "Task 'Xây dựng PM môn Tư duy phân tích (Đã gửi cho Ngọc)' chưa định dạng (gán tạm 30 phút)", "Task 'Nhập điểm thi bổ sung ĐGNL QTKD' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CTĐT, PM Môn học K25, 26", "pic": "Lê Thành Ngọc", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Hành trình trải nghiệm sinh viên", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn", "pic": "Nguyễn Ngọc Vân Khanh", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Lê Nhựt Mi": {"group": "Khối QTKD", "reported_days": 5, "expected_days": 5, "hours": 33.0, "completion_rate": 100.0, "warning_flags": ["Task 'Họp giao ban' chưa định dạng (gán tạm 30 phút)", "Task 'Hoàn thiện và điều chỉnh PM Digital marketing' chưa định dạng (gán tạm 30 phút)", "Task 'Rà soát PM: Kỹ năng bán hàng, Quản trị học' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "QTKD - Các công việc khác", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CTĐT, PM Môn học K25, 26", "pic": "Lê Thành Ngọc", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Hành trình trải nghiệm sinh viên", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Điều chỉnh KPI Master chi tiết", "pic": "Hoàng Thị Hậu", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn", "pic": "Nguyễn Ngọc Vân Khanh", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Lê Thị Bảo Yến": {"group": "Khối QTKD", "reported_days": 5, "expected_days": 5, "hours": 39.0, "completion_rate": 100.0, "warning_flags": ["Task 'Chủ động nghiên cứu thông tin cập nhật tin tức thị trường kinh tế' chưa định dạng (gán tạm 30 phút)", "Task 'Tiếp tục nghiên cứu hệ thống môn học của CTDT sau hiệu chỉnh, tìm hiểu các môn học HK1 K26' chưa định dạng (gán tạm 30 phút)", "Task 'Nghiên cứu môn Quản trị vận hành Doanh nghiệp (Nội dung Session 4,5,6 về Dòng công việc MKT và bán hàng) (2)' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "QTKD - Các công việc khác", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] CỐ VẤN HỌC TẬP", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Hành trình trải nghiệm sinh viên", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn", "pic": "Nguyễn Ngọc Vân Khanh", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Ngọc Vân Khanh": {"group": "Khối QTKD", "reported_days": 5, "expected_days": 5, "hours": 41.75, "completion_rate": 100.0, "warning_flags": ["Task 'Giảng dạy QTKD 2' chưa định dạng (gán tạm 30 phút)", "Task 'Giảng dạy QTKD 3' chưa định dạng (gán tạm 30 phút)", "Task 'Làm việc với CVHT về tình hình sinh viên 2 lớp' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CTĐT, PM Môn học K25, 26", "pic": "Lê Thành Ngọc", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] CỐ VẤN HỌC TẬP", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Hành trình trải nghiệm sinh viên", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn", "pic": "Nguyễn Ngọc Vân Khanh", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Thị Hồng Minh": {"group": "Khối QTKD", "reported_days": 5, "expected_days": 5, "hours": 40.5, "completion_rate": 96.96969696969697, "warning_flags": ["Task 'Trao đổi, thảo luận nội dung giảng dạy vs GV Business Analysis về Session 09' chưa định dạng (gán tạm 30 phút)", "Task 'Trao đổi các vấn đề học tập vs CVHT, TG lớp về tình hình của lớp và báo cáo tình hình lớp' chưa định dạng (gán tạm 30 phút)", "Task 'Giảng dạy Business Analysis - Session 07' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Câu lạc bộ chuyên môn BCC", "pic": "Nguyễn Thị Như Quỳnh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CTĐT, PM Môn học K25, 26", "pic": "Lê Thành Ngọc", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Hành trình trải nghiệm sinh viên", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Quy trình sản xuất học liệu video", "pic": "Hoàng Thị Hậu", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Điều chỉnh KPI Master chi tiết", "pic": "Hoàng Thị Hậu", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn", "pic": "Nguyễn Ngọc Vân Khanh", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Thị Như Quỳnh": {"group": "Khối QTKD", "reported_days": 5, "expected_days": 5, "hours": 39.25, "completion_rate": 100.0, "warning_flags": ["Task 'Tổng kết nhập điểm thi giữa kỳ 2 - QTKD2 & QTKD3' chưa định dạng (gán tạm 30 phút)", "Task 'Nghiên cứu tài liệu chuyên môn - Nguyên lý kinh doanh số' chưa định dạng (gán tạm 30 phút)", "Task 'Thực hiện công tác CVHT gặp mặt trao đổi định kỳ hàng tuần – QTKD1 & QTKD3' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[QTKDS] Câu lạc bộ chuyên môn BCC", "pic": "Nguyễn Thị Như Quỳnh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "QTKD - Các công việc khác", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] CỐ VẤN HỌC TẬP", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Hành trình trải nghiệm sinh viên", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}]}, "Triệu Thị Thanh Tâm": {"group": "Khối QTKD", "reported_days": 5, "expected_days": 5, "hours": 40.0, "completion_rate": 89.65517241379311, "warning_flags": ["Task 'QTKDDAO-8 Kịch bản giảng dạy 1 ca học (2h) - demo' chưa định dạng (gán tạm 30 phút)", "Task 'Xin đến muộn' chưa định dạng (gán tạm 30 phút)", "Task 'Dự giảng lớp QTKD1' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[QTKDS] Câu lạc bộ chuyên môn BCC", "pic": "Nguyễn Thị Như Quỳnh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] CỐ VẤN HỌC TẬP", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Hành trình trải nghiệm sinh viên", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Quy trình sản xuất học liệu video", "pic": "Hoàng Thị Hậu", "health": "ON_TRACK", "status": "COMPLETED"}]}, "Trần Minh Cường": {"group": "Khối CNTT", "reported_days": 0, "expected_days": 5, "hours": 0.0, "completion_rate": 0.0, "warning_flags": [], "miss_days": ["2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28"], "assigned_projects": [{"name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT", "pic": "Nguyễn Thị Tươi", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Hồ Xuân Hùng": {"group": "Khối CNTT", "reported_days": 0, "expected_days": 5, "hours": 0.0, "completion_rate": 0.0, "warning_flags": [], "miss_days": ["2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28"], "assigned_projects": [{"name": "[K24-CNTT] Sản xuất tài nguyên môn IT212 - AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "Triển khai môn Dự án K24", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}]}, "Trịnh Quốc Hai": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 38.0, "completion_rate": 100.0, "warning_flags": ["Task 'giảng dạy session 22 cntt8' chưa định dạng (gán tạm 30 phút)", "Task 'họp giao ban khối đào tạo' chưa định dạng (gán tạm 30 phút)", "Task 'chấm bài tập cntt8 session 20+ 21' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[HN-KS25-CNTT]Sản xuất tài nguyên Python Web", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[HN-KS25-CNTT] giảng dạy", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[KS26]_IT102_Kỹ năng prompting với AI", "pic": "Trịnh Quốc Hai", "health": "OFF_TRACK", "status": "ACTIVE"}]}, "Nguyễn Bá Minh Đạo": {"group": "Khối CNTT", "reported_days": 0, "expected_days": 5, "hours": 0.0, "completion_rate": 0.0, "warning_flags": [], "miss_days": ["2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28"], "assigned_projects": [{"name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT213_AI Intergration_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT209_Devops_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Công Hưởng": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 45.0, "completion_rate": 100.0, "warning_flags": ["Task 'Trông thi hackathon môn AI Integration lớp K24-CNTT4' chưa định dạng (gán tạm 30 phút)", "Task 'Làm 9 đề hackathon PTIT Microservices' chưa định dạng (gán tạm 30 phút)", "Task 'Chấm bài tập lớp JB-IOC-PTHB251027,JB-IOC-PTHB251229  ,JB-IOC-PTHB260316,JB-IOC-PTHB260515' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[K24-CNTT] Sản xuất tài nguyên môn IT212 - AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT213_AI Intergration_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT209_Devops_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT212_Microservice_v2", "pic": "Phạm Tuấn Bình", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Phạm Tuấn Bình": {"group": "Khối CNTT", "reported_days": 4, "expected_days": 5, "hours": 32.0, "completion_rate": 100.0, "warning_flags": ["Task '[Trông thi] - Trông thi Hackathon lớp HN-KS24-CNTT4' chưa định dạng (gán tạm 30 phút)", "Task '[Chấm thi] - Chấm thi hackathon lớp hn-ks24-cntt3' chưa định dạng (gán tạm 30 phút)", "Task '[Họp chuyên môn] - Họp chuyên môn về nội dung phân chia công việc sắp tới' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-28"], "assigned_projects": [{"name": "[K24-CNTT] Sản xuất tài nguyên môn IT212 - AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT212_Microservice_v2", "pic": "Phạm Tuấn Bình", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Mai Xuân Chinh": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 36.5, "completion_rate": 100.0, "warning_flags": ["Task 'Coi thi lớp cntt1' chưa định dạng (gán tạm 30 phút)", "Task 'Check bài tập về nhà 3 lớp' chưa định dạng (gán tạm 30 phút)", "Task 'Chăm sóc sinh viên' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "Triển khai môn Dự án K24", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT213_AI Intergration_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Đinh Thành Nam": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 40.5, "completion_rate": 100.0, "warning_flags": ["Task '[Bàn giao app phụ huynh]' chưa định dạng (gán tạm 30 phút)", "Task '[Chấm bài BRSE] Rà soát lại chấm bài BRSE lớp tháng 6 đầy đủ nhận xét' chưa định dạng (gán tạm 30 phút)", "Task '[Chấm bài TSU] 2 lớp' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[K24-CNTT] Sản xuất tài nguyên môn IT212 - AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT213_AI Intergration_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT209_Devops_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Bùi Thanh Hải": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 36.0, "completion_rate": 100.0, "warning_flags": ["Task 'Giảng dạy HN-K24-CNTT4, AI Intergration In Action - SS10' chưa định dạng (gán tạm 30 phút)", "Task 'Giảng dạy HN-K24-CNTT2, AI Intergration In Action - SS10' chưa định dạng (gán tạm 30 phút)", "Task 'Giảng dạy HN-K24-CNTT3 AI Intergration In Action - SS10' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "Triển khai môn Dự án K24", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT209_Devops_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Quảng An": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 40.0, "completion_rate": 100.0, "warning_flags": ["Task 'Đăng tải học liệu' chưa định dạng (gán tạm 30 phút)", "Task 'Đăng tải học liệu' chưa định dạng (gán tạm 30 phút)", "Task 'Đăng tải học liệu' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[HN-KS25-CNTT] giảng dạy", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[KS26]_IT102_Kỹ năng prompting với AI", "pic": "Trịnh Quốc Hai", "health": "OFF_TRACK", "status": "ACTIVE"}]}, "Lương Quốc Tuấn": {"group": "Khối CNTT", "reported_days": 4, "expected_days": 5, "hours": 33.0, "completion_rate": 100.0, "warning_flags": ["Task 'Quay Video SS18 , SS20' chưa định dạng (gán tạm 30 phút)", "Task 'Dạy , Check Tiến Độ Buổi 4 CNTT 1' chưa định dạng (gán tạm 30 phút)", "Task 'Dạy , Check Tiến Độ Buổi 4 CNTT 5' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-28"], "assigned_projects": [{"name": "[HN-KS25-CNTT] giảng dạy", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[KS26]_IT101_Nhập môn CNTT", "pic": "Lương Quốc Tuấn", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[KS25]_IT303_Phân tích thiết kế hệ thống", "pic": "Lê Hà Thanh Sang", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Lâm Tùng Dương": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 40.75, "completion_rate": 100.0, "warning_flags": ["Task 'Sửa đổi format bài đọc, quiz, câu hỏi tự luận bám sát nội dung bài đọc - theo format mới từ anh Quý' chưa định dạng (gán tạm 30 phút)", "Task 'upload học liệu lên hệ thống' chưa định dạng (gán tạm 30 phút)", "Task 'trả lời tin, phản hồi sinh viên, các thầy' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[HN-KS25-CNTT]Sản xuất tài nguyên Python Web", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS26]_IT102_Kỹ năng prompting với AI", "pic": "Trịnh Quốc Hai", "health": "OFF_TRACK", "status": "ACTIVE"}]}, "Ngọ Văn Quý": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 46.5, "completion_rate": 100.0, "warning_flags": ["Task 'Xây dựng tài nguyên học tập môn Python cơ bản' chưa định dạng (gán tạm 30 phút)", "Task 'Xây dựng PM môn lập trình C, Python và JavaScript' chưa định dạng (gán tạm 30 phút)", "Task 'Chuyển đổi UI khảo thí sang LMS AI' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[HN-KS25-CNTT]Sản xuất tài nguyên Python Web", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Xuân Bách": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 35.75, "completion_rate": 100.0, "warning_flags": ["Task 'Làm báo cáo họp giao ban đào tạo' chưa định dạng (gán tạm 30 phút)", "Task 'Họp giao ban đào tạo' chưa định dạng (gán tạm 30 phút)", "Task 'Họp với CTNN HCM' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": []}, "Lại Trung Lâm": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 46.5, "completion_rate": 100.0, "warning_flags": ["Task 'chấm bài thi  đợt thi bổ sung đánh giá năng lực cntt' chưa định dạng (gán tạm 30 phút)", "Task 'chấm bài record các lớp 1 2 5 bài tập về nhà' chưa định dạng (gán tạm 30 phút)", "Task 'đẩy lên lms môn it101 các bài 1 2 4 6 8 10 bài đọc, quizz, câu hỏi tự luận ( và sửa format)' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[HN-KS25-CNTT] giảng dạy", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[KS26]_IT101_Nhập môn CNTT", "pic": "Lương Quốc Tuấn", "health": "OFF_TRACK", "status": "ACTIVE"}]}, "Phạm Ngọc Kiên": {"group": "Khối CNTT", "reported_days": 3, "expected_days": 5, "hours": 24.0, "completion_rate": 100.0, "warning_flags": ["Task 'Trông thi HN-HS24-CNTT1, báo cáo ca thi' chưa định dạng (gán tạm 30 phút)", "Task 'Upload BTVN môn nhập môn CNTT (ảnh, format chữ ...) lên lms (Hoàn thiện 13 session)' chưa định dạng (gán tạm 30 phút)", "Task 'Call giải đáp sinh viên làm dự án https://prnt.sc/pwwWkNJU0U0_' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-27", "2026-08-28"], "assigned_projects": [{"name": "[HN-KS25-CNTT] giảng dạy", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[KS26]_IT101_Nhập môn CNTT", "pic": "Lương Quốc Tuấn", "health": "OFF_TRACK", "status": "ACTIVE"}]}, "Đặng Minh Luân": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 29.25, "completion_rate": 100.0, "warning_flags": ["Task 'Hỗ trợ giám sát thi kết thúc môn FastAPI HCM-KS25-CNTT6+CNTT7' chưa định dạng (gán tạm 30 phút)", "Task 'Hỗ trợ sinh viên CNTT6 thi vấn đáp online' chưa định dạng (gán tạm 30 phút)", "Task 'Chăm sóc sinh viên CNTT7' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[KS25]_IT304_Agile/Scrum", "pic": "Trần Quốc Tuấn", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Lê Hà Thanh Sang": {"group": "Khối CNTT", "reported_days": 4, "expected_days": 5, "hours": 26.5, "completion_rate": 100.0, "warning_flags": ["Task 'Kiểm tra task lớp HCM-KS25-CNTT5' chưa định dạng (gán tạm 30 phút)", "Task 'Kiểm tra task lớp HCM-KS25-CNTT8' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-28"], "assigned_projects": [{"name": "[KS25]_IT303_Phân tích thiết kế hệ thống", "pic": "Lê Hà Thanh Sang", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Lưu Hoàng Xuân Nguyên": {"group": "Khối CNTT", "reported_days": 4, "expected_days": 5, "hours": 23.25, "completion_rate": 100.0, "warning_flags": ["Task 'Coi thi Hackathon KS24' chưa định dạng (gán tạm 30 phút)", "Task 'Hỗ trợ sinh viên' chưa định dạng (gán tạm 30 phút)", "Task 'Báo cáo ghi nhận các vấn đề đào tạo' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-28"], "assigned_projects": [{"name": "[KS25]_IT304_Agile/Scrum", "pic": "Trần Quốc Tuấn", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS25]_IT303_Phân tích thiết kế hệ thống", "pic": "Lê Hà Thanh Sang", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Đức Minh": {"group": "Khối CNTT", "reported_days": 4, "expected_days": 5, "hours": 18.75, "completion_rate": 100.0, "warning_flags": ["Task 'Hỗ trợ giám sát thi TN + TL lớp KS24 CNTT1' chưa định dạng (gán tạm 30 phút)", "Task 'Chuẩn bị kiến thức session 10 môn AI Integration in Action' chưa định dạng (gán tạm 30 phút)", "Task 'Chuẩn bị kiến thức session 11 môn AI Integration in Action' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-26"], "assigned_projects": [{"name": "[KS24]_IT212_Microservice_v2", "pic": "Phạm Tuấn Bình", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Ngọc Sơn": {"group": "Khối CNTT", "reported_days": 4, "expected_days": 5, "hours": 18.75, "completion_rate": 100.0, "warning_flags": ["Task 'Chăm sóc sinh viên HCM-K24-CNTT1' chưa định dạng (gán tạm 30 phút)", "Task 'Chấm bài lớp HCM-K24-CNTT1 session 10' chưa định dạng (gán tạm 30 phút)", "Task 'Chấm bài lớp HCM-K24-CNTT1 session 11' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-24"], "assigned_projects": [{"name": "[KS25]_IT303_Phân tích thiết kế hệ thống", "pic": "Lê Hà Thanh Sang", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Phạm Viết Hùng": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 35.75, "completion_rate": 100.0, "warning_flags": ["Task 'Họp trao đổi HCM với thầy Bách + Họp riêng thầy Đạo' chưa định dạng (gán tạm 30 phút)", "Task 'Tổng hợp kết quả báo cáo task để thầy Đạo bổ sung kết quả công việc + Gửi giải trình cho thầy Đạo' chưa định dạng (gán tạm 30 phút)", "Task 'Hỗ trợ xử lý lập biên bản thi + Hỗ trợ giám sát và xử lý vấn đề sinh viên lỗi thi' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[KS24]_IT212_Microservice_v2", "pic": "Phạm Tuấn Bình", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Phan Ngọc Tài": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 29.25, "completion_rate": 100.0, "warning_flags": ["Task 'Coi thi Hackathon - AI Integration in Action cho lớp HCM-KS24-CNTT1' chưa định dạng (gán tạm 30 phút)", "Task 'Tổng hợp và báo cáo ca thi' chưa định dạng (gán tạm 30 phút)", "Task 'Hỗ trợ sinh viên' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[KS25]_IT303_Phân tích thiết kế hệ thống", "pic": "Lê Hà Thanh Sang", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Trần Quốc Tuấn": {"group": "Khối CNTT", "reported_days": 5, "expected_days": 5, "hours": 34.75, "completion_rate": 100.0, "warning_flags": ["Task 'Họp trao đổi điểm r point và chỉ số k25 với thầy Bách' chưa định dạng (gán tạm 30 phút)", "Task 'Hỗ trợ sinh viên 2 lớp thêm về dự án, fix bug' chưa định dạng (gán tạm 30 phút)", "Task 'Fill task lên quản lý đào tạo' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[KS25]_IT304_Agile/Scrum", "pic": "Trần Quốc Tuấn", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Giáp Thị Minh Hằng": {"group": "Khối Ngoại ngữ và kỹ năng mềm", "reported_days": 5, "expected_days": 5, "hours": 37.0, "completion_rate": 90.0, "warning_flags": ["Task 'PTITQUAN-33 Giao ban đầu tuần' chưa định dạng (gán tạm 30 phút)", "UNVERIFIED: Task 'PTITQUAN-33 Giao ban đầu tuần' khai báo xong nhưng trên Worklane chưa DONE.", "Task 'PTITQUAN-32 Báo cáo tuần' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT", "pic": "Nguyễn Thị Tươi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project", "pic": "Lê Thị Đỏ", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[PTIT-JPN] Orientation Week 2026", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Lò Thị Ngọc Anh": {"group": "Khối Ngoại ngữ và kỹ năng mềm", "reported_days": 5, "expected_days": 5, "hours": 53.5, "completion_rate": 100.0, "warning_flags": ["Task 'REXPENGL-97 [RE] PHỎNG VẤN, DUYỆT CV VÀ FEEDBACK GVTA/TGTA' chưa định dạng (gán tạm 30 phút)", "Task 'REXPCHUO-67 [RExJAX] ACTION PLAN ĐỐI VỚI VỚI DANH SÁCH SINH VIÊN NGHỈ NHIỀU (24/08)' chưa định dạng (gán tạm 30 phút)", "Task 'REXPENGL-96 [RE] CHỈNH SỬA SLIDE CHƯƠNG TRÌNH ĐÀO TẠO TIẾNG ANH K26 ĐỂ BÁO CÁO BAN GIÁM ĐỐC (24/08)' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26", "pic": "Lò Thị Ngọc Anh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "🔵 [RE] ENGLISH EXAMINATION", "pic": "Lò Thị Ngọc Anh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "🔵 [RE x PREP/JAXTINA] CHƯƠNG TRÌNH TIẾNG ANH K24 & K25", "pic": "Lò Thị Ngọc Anh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT", "pic": "Nguyễn Thị Tươi", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Ngô Quang Huấn": {"group": "Khối Ngoại ngữ và kỹ năng mềm", "reported_days": 0, "expected_days": 5, "hours": 0.0, "completion_rate": 0.0, "warning_flags": [], "miss_days": ["2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28"], "assigned_projects": [{"name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT", "pic": "Ngô Quang Huấn", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS", "pic": "Ngô Quang Huấn", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[RExPTIT] Đánh giá năng lực tổng hợp KNM cho sinh viên CNTT và QTKDS Hà Nội", "pic": "Ngô Quang Huấn", "health": "ON_TRACK", "status": "COMPLETED"}]}, "Lê Thị Đỏ": {"group": "Khối Ngoại ngữ và kỹ năng mềm", "reported_days": 5, "expected_days": 5, "hours": 40.0, "completion_rate": 100.0, "warning_flags": ["Task 'PTITSAN3-44 Tải video từ folder JPN101 lên Youtube ngoại ngữ' chưa định dạng (gán tạm 30 phút)", "Task 'PTITSAN3-45 Chuyển file flashcard sang từng folder tiết tương ứng' chưa định dạng (gán tạm 30 phút)", "Task 'Chuẩn bị slide cho tiết dạy demo tìm hiểu bảng chữ Hiragana' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT", "pic": "Nguyễn Thị Tươi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project", "pic": "Lê Thị Đỏ", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Thị Tươi": {"group": "Khối QLCLĐT", "reported_days": 4, "expected_days": 5, "hours": 31.75, "completion_rate": 50.0, "warning_flags": ["Task 'Xếp TKB lớp BA tháng 8 & cập nhật thông tin dữ liệu' chưa định dạng (gán tạm 30 phút)", "Task 'Rà soát tình trạng SV -> Chốt ds SV thực học' chưa định dạng (gán tạm 30 phút)", "Task 'Lên danh sách SV phải học lại từ HK1-K26' chưa định dạng (gán tạm 30 phút)"], "miss_days": ["2026-08-24"], "assigned_projects": [{"name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT", "pic": "Nguyễn Thị Tươi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Rà soát + tổng hợp kết quả học tập các khóa", "pic": "Nguyễn Thị Tươi", "health": "ON_TRACK", "status": "ACTIVE"}]}, "Nguyễn Huyền Trang": {"group": "Khối QLCLĐT", "reported_days": 5, "expected_days": 5, "hours": 40.0, "completion_rate": 100.0, "warning_flags": ["Task 'Tổng hợp số liệu và Làm báo cáo ĐGNL bổ sung Lần 1' chưa định dạng (gán tạm 30 phút)", "Task 'Viết lại quy chế đào tạo' chưa định dạng (gán tạm 30 phút)", "Task 'Check thi lại ngắn hạn tháng 8, tổng hợp điểm' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "🔵 [RE] ENGLISH EXAMINATION", "pic": "Lò Thị Ngọc Anh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Xây dựng Quy trình khảo thí - New", "pic": "Nguyễn Huyền Trang", "health": "OFF_TRACK", "status": "ACTIVE"}]}, "Trần Thị Mỹ Phước": {"group": "Khối QLCLĐT", "reported_days": 5, "expected_days": 5, "hours": 40.0, "completion_rate": 96.7741935483871, "warning_flags": ["Task 'Điều chỉnh quy định đào tạo, quy định khảo thí, quy định CTSV theo nội dung và cơ cấu mới' chưa định dạng (gán tạm 30 phút)", "Task 'Phối hợp trao đổi các thông tin đầu mối để viết quy định' chưa định dạng (gán tạm 30 phút)", "Task 'Phản hồi các thông tin bộ phận liên quan' chưa định dạng (gán tạm 30 phút)"], "miss_days": [], "assigned_projects": [{"name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI", "pic": "Trần Thị Mỹ Phước", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Soạn thảo bộ Quy định đào tạo (hê PTIT)", "pic": "Trần Thị Mỹ Phước", "health": "ON_TRACK", "status": "ACTIVE"}]}}, "projects": [{"name": "[HN-KS25-CNTT]Sản xuất tài nguyên Python Web", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[K24-CNTT] Sản xuất tài nguyên môn IT212 - AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Câu lạc bộ chuyên môn BCC", "pic": "Nguyễn Thị Như Quỳnh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "QTKD - Các công việc khác", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26", "pic": "Lò Thị Ngọc Anh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "🔵 [RE] ENGLISH EXAMINATION", "pic": "Lò Thị Ngọc Anh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "🔵 [RE x PREP/JAXTINA] CHƯƠNG TRÌNH TIẾNG ANH K24 & K25", "pic": "Lò Thị Ngọc Anh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[HN-KS25-CNTT] giảng dạy", "pic": "Trịnh Quốc Hai", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT", "pic": "Nguyễn Thị Tươi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI", "pic": "Trần Thị Mỹ Phước", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Xây dựng Quy trình khảo thí - New", "pic": "Nguyễn Huyền Trang", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Rà soát + tổng hợp kết quả học tập các khóa", "pic": "Nguyễn Thị Tươi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QLĐT] - Soạn thảo bộ Quy định đào tạo (hê PTIT)", "pic": "Trần Thị Mỹ Phước", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn AI Intergration in Action", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action", "pic": "Hồ Xuân Hùng", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CTĐT, PM Môn học K25, 26", "pic": "Lê Thành Ngọc", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] CÔNG VIỆC CHUNG", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "Triển khai môn Dự án K24", "pic": "Hồ Xuân Hùng", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT", "pic": "Ngô Quang Huấn", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[RExPTIT] Chương trình đào tạo KNM cho K25,26 QTKDS", "pic": "Ngô Quang Huấn", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[RExPTIT] Đánh giá năng lực tổng hợp KNM cho sinh viên CNTT và QTKDS Hà Nội", "pic": "Ngô Quang Huấn", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[KS26]_IT101_Nhập môn CNTT", "pic": "Lương Quốc Tuấn", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[KS25]_IT304_Agile/Scrum", "pic": "Trần Quốc Tuấn", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS26]_IT102_Kỹ năng prompting với AI", "pic": "Trịnh Quốc Hai", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[KS25]_IT303_Phân tích thiết kế hệ thống", "pic": "Lê Hà Thanh Sang", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] CỐ VẤN HỌC TẬP", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT213_AI Intergration_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT209_Devops_v2", "pic": "Nguyễn Bá Minh Đạo", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[KS24]_IT212_Microservice_v2", "pic": "Phạm Tuấn Bình", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Hành trình trải nghiệm sinh viên", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26", "pic": "Lê Nhựt Mi", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Quy trình sản xuất học liệu video", "pic": "Hoàng Thị Hậu", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKD] SX Tài nguyên học tập K26", "pic": "Lê Thành Ngọc", "health": "OFF_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "[QTKDS] Điều chỉnh KPI Master chi tiết", "pic": "Hoàng Thị Hậu", "health": "ON_TRACK", "status": "COMPLETED"}, {"name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project", "pic": "Lê Thị Đỏ", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] VERIFY HỌC LIỆU K26 - học kỳ 1", "pic": "Hoàng Thị Kim Oanh", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[PTIT-JPN] Orientation Week 2026", "pic": "Giáp Thị Minh Hằng", "health": "ON_TRACK", "status": "ACTIVE"}, {"name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn", "pic": "Nguyễn Ngọc Vân Khanh", "health": "ON_TRACK", "status": "ACTIVE"}], "heatmap": {"Khối QTKD": {"2": 0, "3": 0, "4": 1, "5": 0, "6": 1}, "Khối CNTT": {"2": 4, "3": 3, "4": 4, "5": 4, "6": 8}, "Khối Ngoại ngữ và kỹ năng mềm": {"2": 1, "3": 1, "4": 1, "5": 1, "6": 1}, "Khối QLCLĐT": {"2": 1, "3": 0, "4": 0, "5": 0, "6": 0}}};
+        let gaugeChartInstance = null;
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById('tab-' + tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        function initApp() {
+            document.getElementById('date-meta').innerText = `Hôm nay: ${RAW_DATA.today_date}`;
+            const filter = document.getElementById('dept-filter');
+            RAW_DATA.departments.forEach(d => {
+                const opt = document.createElement('option');
+                opt.value = d;
+                opt.innerText = d;
+                filter.appendChild(opt);
+            });
+            renderApp();
+        }
+
+        function renderApp() {
+            const selectedDept = document.getElementById('dept-filter').value;
+            
+            let personnel = Object.entries(RAW_DATA.personnel).map(([k,v]) => ({name: k, ...v}));
+            if (selectedDept !== 'ALL') {
+                personnel = personnel.filter(p => p.group === selectedDept);
+            }
+
+            let totalReported = 0;
+            let totalExpected = 0;
+            let forgottenToday = 0;
+            let totalStaff = personnel.length;
+
+            personnel.forEach(p => {
+                totalReported += p.reported_days;
+                totalExpected += p.expected_days;
+                if (p.miss_days.includes(RAW_DATA.today_date)) {
+                    forgottenToday++;
+                }
+            });
+
+            const complianceRate = totalExpected ? ((totalReported/totalExpected)*100).toFixed(1) : 0;
+
+            document.getElementById('daily-kpis').innerHTML = `
+                <div class="kpi-card ${complianceRate >= 90 ? 'success' : complianceRate >= 70 ? 'warning' : 'danger'}">
+                    <div class="kpi-title">Tỷ Lệ Nộp Đúng Hạn</div>
+                    <div class="kpi-val" style="color: var(--${complianceRate >= 90 ? 'success' : complianceRate >= 70 ? 'warning' : 'danger'})">${complianceRate}%</div>
+                </div>
+                <div class="kpi-card ${forgottenToday > 0 ? 'danger' : 'success'}">
+                    <div class="kpi-title">Quên Báo Cáo Hôm Nay</div>
+                    <div class="kpi-val" style="color: var(--${forgottenToday > 0 ? 'danger' : 'success'})">${forgottenToday} <span class="kpi-sub">Nhân sự</span></div>
+                </div>
+                <div class="kpi-card primary">
+                    <div class="kpi-title">Tổng Nhân Sự Quản Lý</div>
+                    <div class="kpi-val" style="color: var(--text-main)">${totalStaff} <span class="kpi-sub">Người</span></div>
+                </div>
+            `;
+
+            const ctx = document.getElementById('gaugeChart').getContext('2d');
+            if (gaugeChartInstance) gaugeChartInstance.destroy();
+            const color = complianceRate >= 90 ? '#10b981' : complianceRate >= 70 ? '#f59e0b' : '#ef4444';
+            gaugeChartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Tuân Thủ', 'Chưa Tuân Thủ'],
+                    datasets: [{
+                        data: [complianceRate, 100 - complianceRate],
+                        backgroundColor: [color, 'rgba(255,255,255,0.05)'],
+                        borderWidth: 0,
+                        cutout: '80%',
+                        circumference: 180,
+                        rotation: 270
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { enabled: false } } }
+            });
+            document.getElementById('gauge-val-text').innerText = `${complianceRate}%`;
+            document.getElementById('gauge-val-text').style.color = color;
+            document.getElementById('gauge-sub-text').innerText = complianceRate >= 90 ? 'Tuyệt vời' : complianceRate >= 70 ? 'Cần cải thiện' : 'Báo động đỏ';
+
+            let hmHtml = `
+                <div class="hm-row">
+                    <div class="hm-label"></div>
+                    <div class="hm-label" style="text-align: center">Thứ 2</div>
+                    <div class="hm-label" style="text-align: center">Thứ 3</div>
+                    <div class="hm-label" style="text-align: center">Thứ 4</div>
+                    <div class="hm-label" style="text-align: center">Thứ 5</div>
+                    <div class="hm-label" style="text-align: center">Thứ 6</div>
+                </div>
+            `;
+            
+            const deptsToRender = selectedDept === 'ALL' ? RAW_DATA.departments : [selectedDept];
+            let maxMiss = 1;
+            deptsToRender.forEach(d => {
+                Object.values(RAW_DATA.heatmap[d]).forEach(v => { if(v > maxMiss) maxMiss = v; });
+            });
+            
+            deptsToRender.forEach(d => {
+                hmHtml += `<div class="hm-row"><div class="hm-label">${d}</div>`;
+                ['2', '3', '4', '5', '6'].forEach(day => {
+                    const val = RAW_DATA.heatmap[d][day] || 0;
+                    const opacity = val === 0 ? 0 : (0.2 + (val / maxMiss) * 0.8);
+                    hmHtml += `<div class="hm-cell" style="background: rgba(239,68,68,${opacity})">${val}</div>`;
+                });
+                hmHtml += `</div>`;
+            });
+            document.getElementById('heatmap-content').innerHTML = hmHtml;
+
+            let slackers = personnel.filter(p => p.miss_days.length > 0).sort((a,b) => b.miss_days.length - a.miss_days.length).slice(0, 5);
+            let heroes = personnel.filter(p => p.miss_days.length === 0 && p.completion_rate >= 90).sort((a,b) => b.hours - a.hours).slice(0, 5);
+            
+            document.getElementById('slacker-list').innerHTML = slackers.length ? slackers.map(s => `
+                <div class="list-item">
+                    <div><strong>${s.name}</strong> <br><small>${s.group}</small></div>
+                    <div style="text-align: right"><div class="badge bg-danger">Quên ${s.miss_days.length} ngày</div></div>
+                </div>
+            `).join('') : '<div style="padding:10px; color:var(--success)">Không có nhân sự nào quên báo cáo!</div>';
+
+            document.getElementById('hero-list').innerHTML = heroes.length ? heroes.map(h => `
+                <div class="list-item">
+                    <div><strong>${h.name}</strong> <br><small>${h.group}</small></div>
+                    <div style="text-align: right"><div class="badge bg-success">100% Đúng Hạn</div><div style="font-size:0.75rem; color:var(--text-muted)">${h.hours}h làm việc</div></div>
+                </div>
+            `).join('') : '<div style="padding:10px; color:var(--text-muted)">Chưa có dữ liệu xuất sắc</div>';
+
+            // PROJECT TAB
+            let idleStaff = personnel.filter(p => p.assigned_projects.length === 0);
+            
+            let availableStaff = personnel.filter(p => {
+                if (p.assigned_projects.length === 0) return false;
+                let activeCount = p.assigned_projects.filter(proj => proj.status !== 'COMPLETED').length;
+                let doneCount = p.assigned_projects.filter(proj => proj.status === 'COMPLETED').length;
+                return activeCount === 0 && doneCount > 0;
+            });
+
+            let lowPerfStaff = personnel.filter(p => (p.expected_days > 0 && p.reported_days/p.expected_days < 0.5) || p.completion_rate < 50);
+
+            document.getElementById('project-kpis').innerHTML = `
+                <div class="kpi-card success">
+                    <div class="kpi-title">Tổng Dự Án Toàn Công Ty</div>
+                    <div class="kpi-val" style="color: var(--text-main)">${RAW_DATA.projects.length}</div>
+                </div>
+                <div class="kpi-card info">
+                    <div class="kpi-title">Sẵn Sàng Nhận Việc (Available)</div>
+                    <div class="kpi-val" style="color: var(--info)">${availableStaff.length} <span class="kpi-sub">Vừa hoàn thành dự án</span></div>
+                </div>
+                <div class="kpi-card danger">
+                    <div class="kpi-title">Trống Việc / Hiệu Suất Kém</div>
+                    <div class="kpi-val" style="color: var(--danger)">${idleStaff.length + lowPerfStaff.length}</div>
+                </div>
+            `;
+
+            personnel.sort((a,b) => b.assigned_projects.length - a.assigned_projects.length);
+            document.getElementById('workload-table').innerHTML = personnel.map(p => {
+                let activeCount = p.assigned_projects.filter(proj => proj.status !== 'COMPLETED').length;
+                let doneCount = p.assigned_projects.filter(proj => proj.status === 'COMPLETED').length;
+                let delayedCount = p.assigned_projects.filter(proj => proj.status !== 'COMPLETED' && (proj.health === 'OFF_TRACK' || proj.health === 'AT_RISK')).length;
+                let onTrackCount = activeCount - delayedCount;
+                
+                let isIdle = p.assigned_projects.length === 0;
+                let isAvailable = !isIdle && activeCount === 0;
+
+                let rowBg = isIdle ? 'background: rgba(239,68,68,0.1)' : isAvailable ? 'background: rgba(14,165,233,0.05)' : '';
+
+                let total = p.assigned_projects.length;
+                let progBar = '';
+                if (total > 0) {
+                    let wDone = (doneCount/total)*100;
+                    let wTrack = (onTrackCount/total)*100;
+                    let wDelay = (delayedCount/total)*100;
+                    progBar = `
+                    <div style="display:flex; height: 6px; width: 100%; border-radius: 4px; overflow: hidden; margin-top: 5px; background: var(--bg-elevated);" title="${doneCount} Xong | ${onTrackCount} Đang làm | ${delayedCount} Trễ">
+                        ${wDone > 0 ? `<div style="width: ${wDone}%; background: var(--success)"></div>` : ''}
+                        ${wTrack > 0 ? `<div style="width: ${wTrack}%; background: var(--primary)"></div>` : ''}
+                        ${wDelay > 0 ? `<div style="width: ${wDelay}%; background: var(--danger)"></div>` : ''}
+                    </div>`;
+                }
+
+                let projectChips = p.assigned_projects.map(proj => {
+                    let colorClass = 'chip-primary'; 
+                    if (proj.status === 'COMPLETED') colorClass = 'chip-success';
+                    else if (proj.health === 'OFF_TRACK' || proj.health === 'AT_RISK') colorClass = 'chip-danger';
+
+                    let picParts = proj.pic.split(' ');
+                    let shortPic = picParts[picParts.length - 1]; 
+                    
+                    return `<span class="chip ${colorClass}" title="${proj.name}">${proj.name} <strong style="opacity:0.8; margin-left:4px">(👤 ${shortPic})</strong></span>`;
+                }).join('');
+
+                if (isIdle) {
+                    projectChips = '<span style="color: var(--danger); font-weight: 700; font-size: 0.8rem"><i class="fas fa-exclamation-triangle"></i> IDLE: Trống việc dài hạn (Ngồi chơi)</span>';
+                } else if (isAvailable) {
+                    projectChips += '<br><span style="color: var(--info); font-weight: 700; font-size: 0.8rem; display:block; margin-top:8px"><i class="fas fa-check-circle"></i> AVAILABLE: Vừa hoàn thành toàn bộ DA, chờ việc mới</span>';
+                }
+
+                return `
+                <tr style="${rowBg}">
+                    <td><strong>${p.name}</strong><br><small style="color:var(--text-muted)">${p.group}</small></td>
+                    <td style="text-align: center; vertical-align: top;">
+                        <span class="badge bg-${isIdle ? 'danger' : isAvailable ? 'info' : activeCount > 3 ? 'warning' : 'success'}">${p.assigned_projects.length} DA</span>
+                        ${progBar}
+                    </td>
+                    <td>
+                        ${projectChips}
+                    </td>
+                </tr>`;
+            }).join('');
+
+            document.getElementById('perf-high').innerHTML = heroes.filter(h => h.assigned_projects.length > 0).map(h => `
+                <div class="list-item">
+                    <div><strong>${h.name}</strong></div>
+                    <div class="badge bg-success">Chất lượng tốt</div>
+                </div>
+            `).join('') || '<div style="color:var(--text-muted); font-size:0.85rem">Trống</div>';
+
+            let lowHtml = '';
+            lowPerfStaff.forEach(l => {
+                let isFake = l.warning_flags && l.warning_flags.some(w => w.includes('UNVERIFIED'));
+                lowHtml += `<div class="list-item">
+                    <div><strong>${l.name}</strong></div>
+                    <div class="badge bg-danger">Hiệu suất kém</div>
+                    ${isFake ? '<div class="badge bg-danger" style="margin-left:5px">Khai khống</div>' : ''}
+                </div>`;
+            });
+            idleStaff.forEach(i => {
+                if (!lowPerfStaff.find(l => l.name === i.name)) {
+                    let isFake = i.warning_flags && i.warning_flags.some(w => w.includes('UNVERIFIED'));
+                    lowHtml += `<div class="list-item">
+                        <div><strong>${i.name}</strong></div>
+                        <div class="badge bg-danger">Trống việc 100%</div>
+                        ${isFake ? '<div class="badge bg-danger" style="margin-left:5px">Khai khống</div>' : ''}
+                    </div>`;
+                }
+            });
+            availableStaff.forEach(a => {
+                if (!lowPerfStaff.find(l => l.name === a.name)) {
+                    let isFake = a.warning_flags && a.warning_flags.some(w => w.includes('UNVERIFIED'));
+                    lowHtml += `<div class="list-item">
+                        <div><strong>${a.name}</strong></div>
+                        <div class="badge bg-info">Sẵn sàng (Available)</div>
+                        ${isFake ? '<div class="badge bg-danger" style="margin-left:5px">Khai khống</div>' : ''}
+                    </div>`;
+                }
+            });
+            document.getElementById('perf-low').innerHTML = lowHtml || '<div style="color:var(--success); font-size:0.85rem">Không có cảnh báo</div>';
+            
+            // Render Blacklist
+            let blacklistStaff = personnel.filter(p => p.warning_flags && p.warning_flags.some(w => w.includes('UNVERIFIED')));
+            document.getElementById('blacklist-content').innerHTML = blacklistStaff.length ? blacklistStaff.map(s => {
+                let fakeTasks = s.warning_flags.filter(w => w.includes('UNVERIFIED'));
+                let details = fakeTasks.map(f => `<div style="font-size:0.8rem; color:var(--text-muted); margin-top:4px"><i class="fas fa-times-circle" style="color:var(--danger)"></i> ${f.replace('UNVERIFIED: ', '')}</div>`).join('');
+                return `
+                <div class="list-item" style="flex-direction: column; align-items: flex-start;">
+                    <div style="display: flex; justify-content: space-between; width: 100%;">
+                        <div><strong>${s.name}</strong> <small style="color:var(--text-muted)">(${s.group})</small></div>
+                        <div class="badge bg-danger">${fakeTasks.length} Task Chưa Xác Thực</div>
+                    </div>
+                    <div style="margin-top: 8px; width: 100%; padding: 8px; background: rgba(255,255,255,0.02); border-radius: 6px;">
+                        ${details}
+                    </div>
+                </div>
+                `;
+            }).join('') : '<div style="padding:10px; color:var(--success)">Tất cả báo cáo tiến độ dự án đều khớp với hệ thống Worklane.</div>';
+        }
+
+        async function fetchLiveDailyLogsData(showNotification) {
+            const icon = document.getElementById("refresh-icon");
+            if (icon) icon.classList.add("fa-spin");
+            
+            try {
+                const pathsToTry = [
+                    "../../../data/processed/agent4_payload.json",
+                    "../../data/processed/agent4_payload.json",
+                    "/data/processed/agent4_payload.json"
+                ];
+                let fetchedData = null;
+                for (const p of pathsToTry) {
+                    try {
+                        const res = await fetch(p);
+                        if (res.ok) {
+                            fetchedData = await res.json();
+                            break;
+                        }
+                    } catch(e) {}
+                }
+                if (fetchedData) {
+                    RAW_DATA.departments = fetchedData.departments;
+                    RAW_DATA.today_date = fetchedData.today_date;
+                    RAW_DATA.personnel = fetchedData.personnel;
+                    RAW_DATA.projects = fetchedData.projects;
+                    RAW_DATA.heatmap = fetchedData.heatmap;
+                    
+                    initApp();
+                    if (showNotification) alert("Đã cập nhật dữ liệu mới nhất từ Worklane PM thành công!");
+                } else {
+                    if (showNotification) alert("Đang chạy ở chế độ Offline. Dashboard tiếp tục sử dụng dữ liệu đã nhúng sẵn.");
+                }
+            } catch (err) {
+                console.warn("Fetch live data error:", err);
+            } finally {
+                if (icon) icon.classList.remove("fa-spin");
+            }
+        }
+
+        window.onload = initApp;
+    </script>
+</body>
+</html>
