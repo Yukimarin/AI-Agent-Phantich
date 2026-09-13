@@ -352,3 +352,15 @@ Tài liệu này lưu trữ các quyết định thiết kế và quy chuẩn k�
   - Đồng bộ thời gian thực 47 dự án và hơn 1,000 issues từ Worklane API vào data/processed/project_issues_worklane.json.
   - Tải và nạp 197 lượt báo cáo ngày từ ngày 01/09 đến 11/09 vào hệ thống kiểm toán.
   - Tái tính toán tỷ lệ vênh giờ và dôi dư trung bình chuẩn hóa theo 7 ngày công cho 6 Khối và 41 nhân sự tại data/processed/worklane_comparison_t8_t9.json và output/dashboards/audit/worklane_staff_audit.html.
+
+---
+
+## 23. Tinh Gọn Dự Án & Deploy Báo Cáo Kiểm Toán Worklane Lên GitHub Pages (13/09/2026)
+- **Tinh Gọn Dự Án**: Đã dọn dẹp các tệp dump JavaScript lớn tạm thời (>6.5MB) trong `scratch/`, tối ưu hóa repo, xác nhận toàn bộ đường ống `uv run` hoạt động mượt mà dưới 45 giây.
+- **Triển Khai Báo Cáo Trực Tuyến**:
+  - Đã xuất bản `worklane_staff_audit.html` (kỳ 01/09 - 11/09/2026) lên nhánh `gh-pages`: `https://yukimarin.github.io/AI-Agent-Phantich/worklane_staff_audit.html`.
+  - Khởi tạo máy chủ nội bộ trực tiếp cổng 8080: `http://localhost:8080/worklane_staff_audit.html`.
+- **Thống Kê Năng Suất & Hiệu Quả Barem Mới**:
+  - Toàn khối CNTT (22 NS): Khai báo 884.9h đạt 100.6% quỹ 40h/tuần (880h) và 71.8% quỹ 7 ngày công (1,232h).
+  - Tỷ lệ vênh dôi dư toàn viện giảm từ **+93.4%** (T8) xuống **+68.9%** (T9), giảm **-24.5%** nhờ áp dụng Bộ 3 KPI Master. Đặc biệt CNTT HCM giảm mạnh nhất từ +95.8% về +27.1% (giảm -68.7% điểm %).
+
