@@ -1128,35 +1128,35 @@
     },
     "issues": {
       "project": "REXPENGL — 🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26",
-      "count": 117,
+      "count": 122,
       "issues": [
         {
-          "code": "REXPENGL-128",
-          "title": "[ENG105] VERIFY TÀI NGUYÊN UNIT 2",
+          "code": "REXPENGL-133",
+          "title": "[RE] TUYỂN DỤNG GVTA + TGTA (10/09)",
+          "state": "Hoàn thành",
+          "priority": "NONE",
+          "assignee": "Lò Thị Ngọc Anh",
+          "dueDate": "2026-09-10T00:00:00.000Z"
+        },
+        {
+          "code": "REXPENGL-132",
+          "title": "[ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 6",
           "state": "Đang làm",
-          "priority": "HIGH",
+          "priority": "NONE",
+          "assignee": "Lò Thị Ngọc Anh",
+          "dueDate": "2026-09-11T00:00:00.000Z"
+        },
+        {
+          "code": "REXPENGL-131",
+          "title": "[ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 5",
+          "state": "Đang làm",
+          "priority": "NONE",
           "assignee": "Lò Thị Ngọc Anh",
           "dueDate": "2026-09-11T00:00:00.000Z"
         },
         {
           "code": "REXPENGL-126",
           "title": "[RE] ONBOARD TGTA HN (07/09)",
-          "state": "Hoàn thành",
-          "priority": "NONE",
-          "assignee": "Lò Thị Ngọc Anh",
-          "dueDate": "2026-09-07T00:00:00.000Z"
-        },
-        {
-          "code": "REXPENGL-127",
-          "title": "[ENG105] VERIFY TÀI NGUYÊN UNIT 1",
-          "state": "Đang làm",
-          "priority": "HIGH",
-          "assignee": "Lò Thị Ngọc Anh",
-          "dueDate": "2026-09-11T00:00:00.000Z"
-        },
-        {
-          "code": "REXPENGL-125",
-          "title": "[RE] CHỐT LỊCH GIẢNG DẠY K26 CỦA BỘ MÔN TIẾNG ANH (07/09)",
           "state": "Hoàn thành",
           "priority": "NONE",
           "assignee": "Lò Thị Ngọc Anh",
@@ -1171,12 +1171,28 @@
           "dueDate": "2026-08-17T00:00:00.000Z"
         },
         {
+          "code": "REXPENGL-130",
+          "title": "[ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 4",
+          "state": "Đang làm",
+          "priority": "NONE",
+          "assignee": "Lò Thị Ngọc Anh",
+          "dueDate": "2026-09-11T00:00:00.000Z"
+        },
+        {
           "code": "REXPENGL-70",
           "title": "ENG101: CHỈNH SỬA PRE-CLASS SLIDE UNIT 5",
           "state": "Hủy",
           "priority": "NONE",
           "assignee": "Hoàng Phương Thảo",
           "dueDate": "2026-08-17T00:00:00.000Z"
+        },
+        {
+          "code": "REXPENGL-125",
+          "title": "[RE] CHỐT LỊCH GIẢNG DẠY K26 CỦA BỘ MÔN TIẾNG ANH (07/09)",
+          "state": "Hoàn thành",
+          "priority": "NONE",
+          "assignee": "Lò Thị Ngọc Anh",
+          "dueDate": "2026-09-07T00:00:00.000Z"
         },
         {
           "code": "REXPENGL-124",
@@ -1187,6 +1203,14 @@
           "dueDate": "2026-09-07T00:00:00.000Z"
         },
         {
+          "code": "REXPENGL-129",
+          "title": "[ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 3",
+          "state": "Đang làm",
+          "priority": "NONE",
+          "assignee": "Lò Thị Ngọc Anh",
+          "dueDate": "2026-09-11T00:00:00.000Z"
+        },
+        {
           "code": "REXPENGL-71",
           "title": "ENG101: CHỈNH SỬA PRE-CLASS SLIDE UNIT 6",
           "state": "Hủy",
@@ -1195,16 +1219,16 @@
           "dueDate": "2026-08-17T00:00:00.000Z"
         },
         {
-          "code": "REXPENGL-123",
-          "title": "[RE] ĐIỀN KPI MASTER CỦA PHÒNG ĐÀO TẠO NGOẠI NGỮ (07/09)",
-          "state": "Hoàn thành",
-          "priority": "NONE",
+          "code": "REXPENGL-128",
+          "title": "[ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 2",
+          "state": "Đang làm",
+          "priority": "HIGH",
           "assignee": "Lò Thị Ngọc Anh",
-          "dueDate": "2026-09-07T00:00:00.000Z"
+          "dueDate": "2026-09-11T00:00:00.000Z"
         },
         {
-          "code": "REXPENGL-122",
-          "title": "[RE] FEEDBACK PHỎNG VẤN TGTA HCM (07/09)",
+          "code": "REXPENGL-123",
+          "title": "[RE] ĐIỀN KPI MASTER CỦA PHÒNG ĐÀO TẠO NGOẠI NGỮ (07/09)",
           "state": "Hoàn thành",
           "priority": "NONE",
           "assignee": "Lò Thị Ngọc Anh",
@@ -1217,6 +1241,22 @@
           "priority": "NONE",
           "assignee": "Hoàng Phương Thảo",
           "dueDate": "2026-08-17T00:00:00.000Z"
+        },
+        {
+          "code": "REXPENGL-127",
+          "title": "[ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 1",
+          "state": "Đang làm",
+          "priority": "HIGH",
+          "assignee": "Lò Thị Ngọc Anh",
+          "dueDate": "2026-09-11T00:00:00.000Z"
+        },
+        {
+          "code": "REXPENGL-122",
+          "title": "[RE] FEEDBACK PHỎNG VẤN TGTA HCM (07/09)",
+          "state": "Hoàn thành",
+          "priority": "NONE",
+          "assignee": "Lò Thị Ngọc Anh",
+          "dueDate": "2026-09-07T00:00:00.000Z"
         },
         {
           "code": "REXPENGL-121",
@@ -2694,8 +2734,16 @@
     },
     "issues": {
       "project": "REXPCHUO — 🔵 [RE x PREP/JAXTINA] CHƯƠNG TRÌNH TIẾNG ANH K24 & K25",
-      "count": 63,
+      "count": 64,
       "issues": [
+        {
+          "code": "REXPCHUO-76",
+          "title": "[RExJAX] HỌP THỐNG NHẤT TRIỂN KHAI FINAL TEST CÁC LỚP JAХTINA (10/09)",
+          "state": "Hoàn thành",
+          "priority": "NONE",
+          "assignee": "Lò Thị Ngọc Anh",
+          "dueDate": "2026-09-10T00:00:00.000Z"
+        },
         {
           "code": "REXPCHUO-75",
           "title": "[RExJAX] XỬ LÝ PHẢN HỒI CỦA SINH VIÊN QTKD K25 VỀ LỚP TIẾNG ANH TỪ CVHT (04/09)",
@@ -3482,7 +3530,7 @@
           "state": "Đang làm",
           "priority": "HIGH",
           "assignee": "Giáp Thị Minh Hằng",
-          "dueDate": "2026-09-11T00:00:00.000Z"
+          "dueDate": "2026-09-15T00:00:00.000Z"
         },
         {
           "code": "PTITQUAN-49",
@@ -5780,7 +5828,7 @@
         {
           "code": "QTKDCAC-63",
           "title": "Tinh chỉnh bộ tiêu chuẩn học liệu theo cấu trúc LMS AI",
-          "state": "Cần làm",
+          "state": "Chờ duyệt",
           "priority": "HIGH",
           "assignee": "Nguyễn Ngọc Vân Khanh",
           "dueDate": "2026-09-10T00:00:00.000Z"
@@ -5801,16 +5849,8 @@
     },
     "issues": {
       "project": "TRIEKHAI — Triển khai môn Dự án K24",
-      "count": 7,
+      "count": 6,
       "issues": [
-        {
-          "code": "TRIEKHAI-8",
-          "title": "[Báo cáo ngày 06/07] Tiến độ CNTT4",
-          "state": "Chờ duyệt",
-          "priority": "MEDIUM",
-          "assignee": "Bùi Thanh Hải",
-          "dueDate": "2026-07-06T00:00:00.000Z"
-        },
         {
           "code": "TRIEKHAI-2",
           "title": "[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT4",
@@ -18862,17 +18902,9 @@
           "dueDate": "2026-08-24T00:00:00.000Z"
         },
         {
-          "code": "QTKDSX-2",
-          "title": "[SSK101] SXND bản draft",
-          "state": "Cần làm",
-          "priority": "NONE",
-          "assignee": "Lê Thành Ngọc",
-          "dueDate": "2026-08-28T00:00:00.000Z"
-        },
-        {
           "code": "QTKDSX-3",
           "title": "[SSK102] SXND bản draft",
-          "state": "Cần làm",
+          "state": "Đang làm",
           "priority": "NONE",
           "assignee": null,
           "dueDate": null
@@ -18880,15 +18912,23 @@
         {
           "code": "QTKDSX-4",
           "title": "[SSK103] SXND bản draft",
-          "state": "Cần làm",
+          "state": "Chờ duyệt",
           "priority": "NONE",
           "assignee": null,
           "dueDate": null
         },
         {
+          "code": "QTKDSX-2",
+          "title": "[SSK101] SXND bản draft",
+          "state": "Hoàn thành",
+          "priority": "NONE",
+          "assignee": "Lê Thành Ngọc",
+          "dueDate": "2026-09-21T00:00:00.000Z"
+        },
+        {
           "code": "QTKDSX-5",
           "title": "[MAN101] SXND bản draft",
-          "state": "Cần làm",
+          "state": "Chờ duyệt",
           "priority": "NONE",
           "assignee": null,
           "dueDate": null
@@ -19158,6 +19198,14 @@
       "count": 16,
       "issues": [
         {
+          "code": "QTKDVERI-12",
+          "title": "Verify học liệu Quản trị học",
+          "state": "Đang làm",
+          "priority": "HIGH",
+          "assignee": "Nguyễn Ngọc Vân Khanh",
+          "dueDate": "2026-09-18T00:00:00.000Z"
+        },
+        {
           "code": "QTKDVERI-7",
           "title": "Verify học liệu KN học tập chủ động và PTBT",
           "state": "Cần làm",
@@ -19176,10 +19224,18 @@
         {
           "code": "QTKDVERI-16",
           "title": "Chốt PM học phần KN Làm việc nhóm (CNTT)",
-          "state": "Hoàn thành",
+          "state": "Chờ duyệt",
           "priority": "HIGH",
           "assignee": "Hoàng Thị Kim Oanh",
           "dueDate": "2026-09-10T00:00:00.000Z"
+        },
+        {
+          "code": "QTKDVERI-11",
+          "title": "Verify học liệu Quản trị học",
+          "state": "Đang làm",
+          "priority": "HIGH",
+          "assignee": "Hoàng Thị Kim Oanh",
+          "dueDate": "2026-09-18T00:00:00.000Z"
         },
         {
           "code": "QTKDVERI-8",
@@ -19214,20 +19270,20 @@
           "dueDate": "2026-09-14T00:00:00.000Z"
         },
         {
+          "code": "QTKDVERI-10",
+          "title": "Verify học liệu KN Tư duy phân tích",
+          "state": "Đang làm",
+          "priority": "HIGH",
+          "assignee": "Lê Thị Bảo Yến",
+          "dueDate": "2026-09-14T00:00:00.000Z"
+        },
+        {
           "code": "QTKDVERI-4",
           "title": "PM KN bán hàng",
           "state": "Hoàn thành",
           "priority": "HIGH",
           "assignee": "Hoàng Thị Hậu",
           "dueDate": "2026-08-28T00:00:00.000Z"
-        },
-        {
-          "code": "QTKDVERI-10",
-          "title": "Verify học liệu KN Tư duy phân tích",
-          "state": "Đang làm",
-          "priority": "NONE",
-          "assignee": "Lê Thị Bảo Yến",
-          "dueDate": "2026-09-14T00:00:00.000Z"
         },
         {
           "code": "QTKDVERI-3",
@@ -19238,28 +19294,12 @@
           "dueDate": "2026-08-28T00:00:00.000Z"
         },
         {
-          "code": "QTKDVERI-11",
-          "title": "Verify học liệu Quản trị học",
-          "state": "Cần làm",
-          "priority": "HIGH",
-          "assignee": "Hoàng Thị Kim Oanh",
-          "dueDate": "2026-09-18T00:00:00.000Z"
-        },
-        {
           "code": "QTKDVERI-1",
           "title": "PM KN học tập chủ động",
           "state": "Hoàn thành",
           "priority": "HIGH",
           "assignee": "Hoàng Thị Hậu",
           "dueDate": "2026-08-28T00:00:00.000Z"
-        },
-        {
-          "code": "QTKDVERI-12",
-          "title": "Verify học liệu Quản trị học",
-          "state": "Cần làm",
-          "priority": "HIGH",
-          "assignee": "Nguyễn Ngọc Vân Khanh",
-          "dueDate": "2026-09-18T00:00:00.000Z"
         },
         {
           "code": "QTKDVERI-13",
@@ -19343,15 +19383,15 @@
     },
     "issues": {
       "project": "QTKDNGHI2 — [QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
-      "count": 8,
+      "count": 11,
       "issues": [
         {
-          "code": "QTKDNGHI2-1",
+          "code": "QTKDNGHI2-8",
           "title": "Nghiên cứu cập nhật kiến thức chuyên môn",
-          "state": "Đang làm",
+          "state": "Chờ duyệt",
           "priority": "MEDIUM",
-          "assignee": "Hoàng Thị Hậu",
-          "dueDate": "2026-09-11T00:00:00.000Z"
+          "assignee": "Lê Nhựt Mi",
+          "dueDate": "2026-09-12T00:00:00.000Z"
         },
         {
           "code": "QTKDNGHI2-3",
@@ -19362,28 +19402,20 @@
           "dueDate": "2026-09-11T00:00:00.000Z"
         },
         {
-          "code": "QTKDNGHI2-4",
+          "code": "QTKDNGHI2-1",
           "title": "Nghiên cứu cập nhật kiến thức chuyên môn",
           "state": "Đang làm",
           "priority": "MEDIUM",
-          "assignee": "Lê Thị Bảo Yến",
+          "assignee": "Hoàng Thị Hậu",
           "dueDate": "2026-09-11T00:00:00.000Z"
         },
         {
           "code": "QTKDNGHI2-5",
           "title": "Nghiên cứu cập nhật kiến thức chuyên môn",
-          "state": "Đang làm",
+          "state": "Hoàn thành",
           "priority": "MEDIUM",
           "assignee": "Nguyễn Ngọc Vân Khanh",
           "dueDate": "2026-09-11T00:00:00.000Z"
-        },
-        {
-          "code": "QTKDNGHI2-8",
-          "title": "Nghiên cứu cập nhật kiến thức chuyên môn",
-          "state": "Đang làm",
-          "priority": "MEDIUM",
-          "assignee": "Lê Nhựt Mi",
-          "dueDate": "2026-09-12T00:00:00.000Z"
         },
         {
           "code": "QTKDNGHI2-7",
@@ -19396,9 +19428,17 @@
         {
           "code": "QTKDNGHI2-6",
           "title": "Nghiên cứu cập nhật kiến thức chuyên môn",
-          "state": "Cần làm",
+          "state": "Hoàn thành",
           "priority": "MEDIUM",
           "assignee": "Nguyễn Thị Hồng Minh",
+          "dueDate": "2026-09-11T00:00:00.000Z"
+        },
+        {
+          "code": "QTKDNGHI2-4",
+          "title": "Nghiên cứu cập nhật kiến thức chuyên môn",
+          "state": "Hoàn thành",
+          "priority": "MEDIUM",
+          "assignee": "Lê Thị Bảo Yến",
           "dueDate": "2026-09-11T00:00:00.000Z"
         },
         {
@@ -19407,6 +19447,30 @@
           "state": "Cần làm",
           "priority": "MEDIUM",
           "assignee": "Hoàng Thị Hậu",
+          "dueDate": "2026-09-12T00:00:00.000Z"
+        },
+        {
+          "code": "QTKDNGHI2-10",
+          "title": "Nghiên cứu cập nhật kiến thức chuyên môn",
+          "state": "Cần làm",
+          "priority": "MEDIUM",
+          "assignee": "Nguyễn Ngọc Vân Khanh",
+          "dueDate": "2026-09-12T00:00:00.000Z"
+        },
+        {
+          "code": "QTKDNGHI2-11",
+          "title": "Nghiên cứu cập nhật kiến thức chuyên môn",
+          "state": "Cần làm",
+          "priority": "MEDIUM",
+          "assignee": "Nguyễn Thị Hồng Minh",
+          "dueDate": "2026-09-12T00:00:00.000Z"
+        },
+        {
+          "code": "QTKDNGHI2-12",
+          "title": "Nghiên cứu cập nhật kiến thức chuyên môn",
+          "state": "Chờ duyệt",
+          "priority": "MEDIUM",
+          "assignee": "Lê Thị Bảo Yến",
           "dueDate": "2026-09-12T00:00:00.000Z"
         }
       ]

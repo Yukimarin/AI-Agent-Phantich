@@ -18155,7 +18155,7 @@
       "excess_hours": 75.8,
       "excess_tasks_count": 7,
       "free_floating_tasks_count": 32,
-      "unverified_tasks_count": 1,
+      "unverified_tasks_count": 0,
       "excess_tasks": [
         {
           "date": "2026-08-03",
@@ -18628,22 +18628,7 @@
           "reason": "Sản xuất học liệu ngoài Master (Khai 3.0h - Cần nghiệm thu sản phẩm)"
         }
       ],
-      "unverified_tasks": [
-        {
-          "date": "2026-08-03",
-          "title": "QTKDCAC-53 Mentor Khởi nguyên - Vòng 3",
-          "declared_hours": 1.0,
-          "standard_hours": 0.5,
-          "deviation_hours": 0.5,
-          "deviation_pct": 100,
-          "matched_category": "Đầu việc tự do/chưa định mức",
-          "is_wildcard": true,
-          "done": false,
-          "issue_title": "Mentor Khởi nguyên - Vòng 3",
-          "issue_state": "Hủy",
-          "reason": "Daily Log báo hoàn thành nhưng Ticket Worklane đang ở trạng thái HỦY"
-        }
-      ],
+      "unverified_tasks": [],
       "recent_tasks": [
         {
           "date": "2026-08-03",
@@ -24589,7 +24574,7 @@
       "excess_hours": 72.7,
       "excess_tasks_count": 9,
       "free_floating_tasks_count": 51,
-      "unverified_tasks_count": 7,
+      "unverified_tasks_count": 2,
       "excess_tasks": [
         {
           "date": "2026-08-06",
@@ -25315,76 +25300,6 @@
         }
       ],
       "unverified_tasks": [
-        {
-          "date": "2026-08-05",
-          "title": "QTKDCO-11 Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "declared_hours": 2.0,
-          "standard_hours": 0.5,
-          "deviation_hours": 1.5,
-          "deviation_pct": 300,
-          "matched_category": "Đầu việc tự do/chưa định mức",
-          "is_wildcard": true,
-          "done": true,
-          "issue_title": "Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "issue_state": "Hủy",
-          "reason": "Daily Log báo hoàn thành nhưng Ticket Worklane đang ở trạng thái HỦY"
-        },
-        {
-          "date": "2026-08-06",
-          "title": "QTKDCO-11 Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "declared_hours": 2.0,
-          "standard_hours": 0.5,
-          "deviation_hours": 1.5,
-          "deviation_pct": 300,
-          "matched_category": "Đầu việc tự do/chưa định mức",
-          "is_wildcard": true,
-          "done": true,
-          "issue_title": "Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "issue_state": "Hủy",
-          "reason": "Daily Log báo hoàn thành nhưng Ticket Worklane đang ở trạng thái HỦY"
-        },
-        {
-          "date": "2026-08-07",
-          "title": "QTKDCO-11 Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "declared_hours": 1.0,
-          "standard_hours": 0.5,
-          "deviation_hours": 0.5,
-          "deviation_pct": 100,
-          "matched_category": "Đầu việc tự do/chưa định mức",
-          "is_wildcard": true,
-          "done": true,
-          "issue_title": "Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "issue_state": "Hủy",
-          "reason": "Daily Log báo hoàn thành nhưng Ticket Worklane đang ở trạng thái HỦY"
-        },
-        {
-          "date": "2026-08-10",
-          "title": "QTKDCO-12 Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "declared_hours": 1.5,
-          "standard_hours": 0.5,
-          "deviation_hours": 1.0,
-          "deviation_pct": 200,
-          "matched_category": "Đầu việc tự do/chưa định mức",
-          "is_wildcard": true,
-          "done": true,
-          "issue_title": "Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "issue_state": "Hủy",
-          "reason": "Daily Log báo hoàn thành nhưng Ticket Worklane đang ở trạng thái HỦY"
-        },
-        {
-          "date": "2026-08-12",
-          "title": "QTKDCO-12 Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "declared_hours": 2.0,
-          "standard_hours": 0.5,
-          "deviation_hours": 1.5,
-          "deviation_pct": 300,
-          "matched_category": "Đầu việc tự do/chưa định mức",
-          "is_wildcard": true,
-          "done": true,
-          "issue_title": "Báo cáo Chương trình \"Hành trang hè - Tự tin bứt phá\" 2026 (Cô Tâm)",
-          "issue_state": "Hủy",
-          "reason": "Daily Log báo hoàn thành nhưng Ticket Worklane đang ở trạng thái HỦY"
-        },
         {
           "date": "2026-08-24",
           "title": "QTKDDAO-8 Kịch bản giảng dạy 1 ca học (2h) - demo",

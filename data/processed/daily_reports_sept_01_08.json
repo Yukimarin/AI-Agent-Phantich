@@ -6012,5 +6012,4155 @@
       "difficulties": "",
       "plan": ""
     }
+  ],
+  "2026-09-09": [
+    {
+      "user": "Giáp Thị Minh Hằng",
+      "email": "hanggtm@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Check nội dung bài giảng buổi 2 lớp Talent",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "PTITQUAN-52 Chốt đề thi kết thúc môn để bàn giao Khảo thí",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Họp xử lý các vấn đề chỉ số ĐT",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Tạo kahoot quiz văn hóa cho buổi học số 1",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Chuẩn bị khách MKI đến tham quan",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Check nội dung bài giảng buổi 2 lớp Talent (100%, 1h)\n✓ PTITQUAN-52 Chốt đề thi kết thúc môn để bàn giao Khảo thí (100%, 2h)\n✓ Họp xử lý các vấn đề chỉ số ĐT (100%, 1h)\n✓ Tạo kahoot quiz văn hóa cho buổi học số 1 (100%, 2h)\n✓ Chuẩn bị khách MKI đến tham quan (100%, 2h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Phạm Ngọc Kiên",
+      "email": "kienpn@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Chia lại nhóm lớp https://docs.google.com/spreadsheets/d/1hdqlLVJoaOYnUKi8RkQEy1EJuhvo2PaP/edit?gid=945567384#gid=945567384",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Tham gia lớp buổi đầu để làm quen sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Chuẩn bị thêm BTVN cho bộ môn nhập môn theo chỉ đạo của thầy Tuấn https://prnt.sc/E_M4eDFKP7eI",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        },
+        {
+          "title": "Chăm sóc sinh viên nghỉ, không làm elearning https://prnt.sc/iVhwOZNFhRN8",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Chia lại nhóm lớp https://docs.google.com/spreadsheets/d/1hdqlLVJoaOYnUKi8RkQEy1EJuhvo2PaP/edit?gid=945567384#gid=945567384 (100%, 1h)\n✓ Tham gia lớp buổi đầu để làm quen sinh viên (100%, 1h)\n✓ Chuẩn bị thêm BTVN cho bộ môn nhập môn theo chỉ đạo của thầy Tuấn https://prnt.sc/E_M4eDFKP7eI (100%, 4h)\n✓ Chăm sóc sinh viên nghỉ, không làm elearning https://prnt.sc/iVhwOZNFhRN8 (100%, 2h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Bùi Thanh Hải",
+      "email": "haibt@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy HN-K24-CNTT4 Microservices system design - Session 05",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Giảng dạy HN-K24-CNTT1 Microservices system design - Session 05",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Giảng dạy HN-K24-CNTT2 Microservices system design - Session 04",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Giảng dạy HN-K24-CNTT4 Microservices system design - Session 05 (100%, 2h)\n✓ Giảng dạy HN-K24-CNTT1 Microservices system design - Session 05 (100%, 2h)\n✓ Giảng dạy HN-K24-CNTT2 Microservices system design - Session 04 (100%, 2h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 6
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Hoàng Thị Hậu",
+      "email": "hauht@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Xây dựng PM môn học Kỹ năng làm việc nhóm",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Họp chuyên môn",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Nghiên cứu cập nhật kiến thức chuyên môn Kỹ năng học tập chủ động session 1 và session 2",
+          "done": true,
+          "percent": 100,
+          "hours": 3.5
+        }
+      ],
+      "summary": "✓ Xây dựng PM môn học Kỹ năng làm việc nhóm (100%, 3h)\n✓ Họp chuyên môn (100%, 1.5h)\n✓ Nghiên cứu cập nhật kiến thức chuyên môn Kỹ năng học tập chủ động session 1 và session 2 (100%, 3.5h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Đinh Thành Nam",
+      "email": "thanhnamak@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "[Chăm sóc sinh viên]",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[Quản lý lớp]",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[Quay video] Devops Backend IOC",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        }
+      ],
+      "summary": "✓ [Chăm sóc sinh viên] (100%, 2h)\n✓ [Quản lý lớp] (100%, 2h)\n✓ [Quay video] Devops Backend IOC (100%, 4h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Nhựt Mi",
+      "email": "miln@rikkeiedu.org",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Cập nhật kiến thức học phần Kỹ năng mềm: Môn SSK101 Session 3",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Cập nhật kiến thức học phần Kỹ năng mềm: Môn SSK101 Session 4",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Họp chuyên môn",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Cập nhật kiến thức học phần Quản trị: MAN 101 Session 4",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Cập nhật kiến thức học phần Kỹ năng mềm: Môn SSK101 Session 3 (100%, 2h)\n✓ Cập nhật kiến thức học phần Kỹ năng mềm: Môn SSK101 Session 4 (100%, 2h)\n✓ Họp chuyên môn (100%, 1.5h)\n✓ Cập nhật kiến thức học phần Quản trị: MAN 101 Session 4 (100%, 2h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 7.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lại Trung Lâm",
+      "email": "laitrunglamjr@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "chia nhóm+ phân công việc cho các nhóm trưởng + đẩy danh sách lên lark base lớp CNTT5",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "chăm sóc sinh viên nghỉ học + sinh viên hỏi các vấn đề về học lại+ học cùng k26",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "riview slide học liệu môn pttk httt",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Sửa bài đọc + trắc nghiệm môn it101  Trên LMS ( chưa hoàn thiện ạ phải sửa nhiều ạ)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ chia nhóm+ phân công việc cho các nhóm trưởng + đẩy danh sách lên lark base lớp CNTT5 (100%, 2h)\n✓ chăm sóc sinh viên nghỉ học + sinh viên hỏi các vấn đề về học lại+ học cùng k26 (100%, 1.5h)\n✓ riview slide học liệu môn pttk httt (100%, 2.5h)\n✓ Sửa bài đọc + trắc nghiệm môn it101  Trên LMS ( chưa hoàn thiện ạ phải sửa nhiều ạ) (100%, 2h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Phạm Tuấn Bình",
+      "email": "binhpt@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "[Giảng dạy] - Giảng dạy session 01 môn học PTTKHT lớp K25 - CNTT3",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "[Giảng dạy] - Giảng dạy session 01 môn học PTTKHT lớp K25 - CNTT4",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "[Học liệu] - Xây dựng HTML slide deck để giảng dạy",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ [Giảng dạy] - Giảng dạy session 01 môn học PTTKHT lớp K25 - CNTT3 (100%, 3h)\n✓ [Giảng dạy] - Giảng dạy session 01 môn học PTTKHT lớp K25 - CNTT4 (100%, 3h)\n✓ [Học liệu] - Xây dựng HTML slide deck để giảng dạy (100%, 2h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Thị Hồng Minh",
+      "email": "minhnth@rikkeiacademy.net",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Họp chuyên môn team QTKDS",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Chốt PM môn SKL103 Kỹ năng làm việc nhóm",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        },
+        {
+          "title": "Nghiên cứu môn SSK102 Tin học ứng dụng SS02",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        }
+      ],
+      "summary": "✓ Họp chuyên môn team QTKDS (100%, 1.5h)\n✓ Chốt PM môn SKL103 Kỹ năng làm việc nhóm (100%, 4h)\n✓ Nghiên cứu môn SSK102 Tin học ứng dụng SS02 (100%, 2.5h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Công Hưởng",
+      "email": "huongnc@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Chấm bài tập về nhà môn Microservices cho 3 lớp K24 : CNTT1 , CNTT2 , CNTT3",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Chấm bài tập lớp JB-IOC-PTHB251229  ,JB-IOC-PTHB260316,JB-IOC-PTHB260515",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Cố vấn học tập , vào lớp trao đổi với sinh viên của 5 lớp K25",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        }
+      ],
+      "summary": "✓ Chấm bài tập về nhà môn Microservices cho 3 lớp K24 : CNTT1 , CNTT2 , CNTT3 (100%, 3h)\n✓ Chấm bài tập lớp JB-IOC-PTHB251229  ,JB-IOC-PTHB260316,JB-IOC-PTHB260515 (100%, 2h)\n✓ Cố vấn học tập , vào lớp trao đổi với sinh viên của 5 lớp K25 (100%, 3h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Đỗ Hà Khanh",
+      "email": "dohakhanh81204@gmail.com",
+      "department": "Đào tạo",
+      "project": "REXPENGL 🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26",
+      "tasks": [
+        {
+          "title": "[RE] [ENG105] RE-CHECK VÀ CHỈNH SỬA UNIT 1 (09/09)",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        },
+        {
+          "title": "[RE] [ENG105] RE-CHECK VÀ CHỈNH SỬA UNIT 2 (09/09)",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        }
+      ],
+      "summary": "✓ [RE] [ENG105] RE-CHECK VÀ CHỈNH SỬA UNIT 1 (09/09) (100%, 4h)\n✓ [RE] [ENG105] RE-CHECK VÀ CHỈNH SỬA UNIT 2 (09/09) (100%, 4h)",
+      "stats": {
+        "total": 2,
+        "done": 2,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Quảng An",
+      "email": "annq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy CNTT1",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Giảng dạy CNTT2",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Giảng dạy CNTT5",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Review tài nguyên học tập",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Giảng dạy CNTT1 (100%, 2.5h)\n✓ Giảng dạy CNTT2 (100%, 2.5h)\n✓ Giảng dạy CNTT5 (100%, 2.5h)\n✓ Review tài nguyên học tập (100%, 0.5h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Đặng Minh Luân",
+      "email": "luandm@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Tham gia hỗ trợ triển khai lớp thực hành CNTT8 SS6",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Chấm BTVN CNTT8",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Chấm BTVN CNTT6",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Chấm BT nhóm CNTT6",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Chuẩn bị kiến thức SS7 môn phân tích thiết kế hệ thống",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Chăm sóc sinh viên vắng CNTT8",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        }
+      ],
+      "summary": "✓ Tham gia hỗ trợ triển khai lớp thực hành CNTT8 SS6 (100%, 2h)\n✓ Chấm BTVN CNTT8 (100%, 0.75h)\n✓ Chấm BTVN CNTT6 (100%, 1h)\n✓ Chấm BT nhóm CNTT6 (100%, 0.75h)\n✓ Chuẩn bị kiến thức SS7 môn phân tích thiết kế hệ thống (100%, 0.5h)\n✓ Chăm sóc sinh viên vắng CNTT8 (100%, 0.75h)",
+      "stats": {
+        "total": 6,
+        "done": 6,
+        "hours": 5.75
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Ngọc Vân Khanh",
+      "email": "khanhnnv@rikkeieducation.top",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Họp chuyên môn",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Tổng hợp biên bản họp chuyên môn",
+          "done": true,
+          "percent": 100,
+          "hours": 0.25
+        },
+        {
+          "title": "Cập nhật kiến thức học phần công nghệ - SS06 - DA101",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Cập nhật kiến thức học phần công nghệ - SS02 - SKK102",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Cập nhật kiến thực học phần môn KNN - Tư duy phân tích - SS01",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        }
+      ],
+      "summary": "✓ Họp chuyên môn (100%, 1.5h)\n✓ Tổng hợp biên bản họp chuyên môn (100%, 0.25h)\n✓ Cập nhật kiến thức học phần công nghệ - SS06 - DA101 (100%, 3h)\n✓ Cập nhật kiến thức học phần công nghệ - SS02 - SKK102 (100%, 2h)\n✓ Cập nhật kiến thực học phần môn KNN - Tư duy phân tích - SS01 (100%, 1.5h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 8.25
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Triệu Thị Thanh Tâm",
+      "email": "tamttt@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Họp chuyên môn",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Họp triển khai công việc - CVHT và CLB",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Cố vấn học tập - Hỗ trợ sinh viên, sinh hoạt tại 2 lớp QTKD1,2",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Trao đổi cùng Giảng viên về tình hình sinh viên ở lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Học tập bồi dưỡng - Bổ sung kiến thức về Digital Marketing",
+          "done": true,
+          "percent": 100,
+          "hours": 1.25
+        }
+      ],
+      "summary": "✓ Họp chuyên môn (100%, 1.5h)\n✓ Họp triển khai công việc - CVHT và CLB (100%, 1.5h)\n✓ Cố vấn học tập - Hỗ trợ sinh viên, sinh hoạt tại 2 lớp QTKD1,2 (100%, 3h)\n✓ Trao đổi cùng Giảng viên về tình hình sinh viên ở lớp (100%, 0.75h)\n✓ Học tập bồi dưỡng - Bổ sung kiến thức về Digital Marketing (100%, 1.25h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Thị Bảo Yến",
+      "email": "yenltb@rikkeiedu.org",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Nghiên cứu cập nhật kiến thức học phần mới: Tư duy Phân tích (Nội dung, công cụ Session 1)",
+          "done": false,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Họp chuyên môn: Cập nhật các quy định, thay đổi mới về đào tạo, giảng dạy, quy định khác",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Học tập bồi dưỡng: Tìm hiểu tài liệu Quản trị chiến lược (Tóm tắt nội dung Session 4: Môi trường vi mô)",
+          "done": false,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hoàn thiện khung Lesson Plan cho môn Kỹ năng mềm và hoạt động (Lesson plan, đề xuất hoạt động)",
+          "done": false,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Báo cáo kết quả ngày và lên kế hoạch công việc cho ngày tiếp theo",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "• Nghiên cứu cập nhật kiến thức học phần mới: Tư duy Phân tích (Nội dung, công cụ Session 1) (100%, 2.5h)\n✓ Họp chuyên môn: Cập nhật các quy định, thay đổi mới về đào tạo, giảng dạy, quy định khác (100%, 2h)\n• Học tập bồi dưỡng: Tìm hiểu tài liệu Quản trị chiến lược (Tóm tắt nội dung Session 4: Môi trường vi mô) (100%, 1h)\n• Hoàn thiện khung Lesson Plan cho môn Kỹ năng mềm và hoạt động (Lesson plan, đề xuất hoạt động) (100%, 2h)\n✓ Báo cáo kết quả ngày và lên kế hoạch công việc cho ngày tiếp theo (100%, 0.5h)",
+      "stats": {
+        "total": 5,
+        "done": 2,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": "• - Họp triển khai công việc Ms Khanh\n• - Làm việc theo sự phân công của Leader\n• - Nghiên cứu tài liệu Tư duy phân tích"
+    },
+    {
+      "user": "Mai Xuân Chinh",
+      "email": "chinhmai124@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Vào lớp cntt3 k25",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Nghiên cứu app",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        }
+      ],
+      "summary": "✓ Vào lớp cntt3 k25 (100%, 1h)\n✓ Chăm sóc sinh viên (100%, 3h)\n✓ Nghiên cứu app (100%, 4h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Ngọc Sơn",
+      "email": "sonnn@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Hiệu chỉnh học liệu",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Hiệu chỉnh học liệu (100%, 2h)",
+      "stats": {
+        "total": 1,
+        "done": 1,
+        "hours": 2
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Trịnh Quốc Hai",
+      "email": "haitq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "xem tài liệu nhập môn công nghệ thông tin k26",
+          "done": true,
+          "percent": 100,
+          "hours": 8
+        }
+      ],
+      "summary": "✓ xem tài liệu nhập môn công nghệ thông tin k26 (100%, 8h)",
+      "stats": {
+        "total": 1,
+        "done": 1,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Thị Như Quỳnh",
+      "email": "quynhntn@rikkeiacademy.net",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Kiểm tra BTVN - QTKD1 & QTKD2 (SS1)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Báo cáo tổng hợp các vấn đề chậm Elearning - QTKD1 & QTKD2",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Họp triển khai công việc - CVHT và CLB",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Họp chuyên môn & Nghiên cứu tài liệu liên quan trước khi họp",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "CSSV - QTKD1 & QTKD2",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Trao đổi với GV về cách xử lý các trường hợp vi phạm",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Kiểm tra BTVN - QTKD1 & QTKD2 (SS1) (100%, 2h)\n✓ Báo cáo tổng hợp các vấn đề chậm Elearning - QTKD1 & QTKD2 (100%, 0.5h)\n✓ Họp triển khai công việc - CVHT và CLB (100%, 1.5h)\n✓ Họp chuyên môn & Nghiên cứu tài liệu liên quan trước khi họp (100%, 2h)\n✓ CSSV - QTKD1 & QTKD2 (100%, 1.5h)\n✓ Trao đổi với GV về cách xử lý các trường hợp vi phạm (100%, 0.5h)",
+      "stats": {
+        "total": 6,
+        "done": 6,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Phan Ngọc Tài",
+      "email": "taipn@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "HCM-KS25-CNTT5: Chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS25-CNTT7: Chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS24-CNTT1: Chấm bài tập về nhà.",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS24-CNTT1-IT214-Session 3: Chấm bài tập về nhà.",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS24-CNTT1-IT214-Session 4: Chấm bài tập về nhà.",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS24-CNTT1: Chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS25-CNTT5: Kiểm tra hoạt động nhóm",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "HCM-KS25-CNTT7: Kiểm tra hoạt động nhóm",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ HCM-KS25-CNTT5: Chăm sóc sinh viên (100%, 1h)\n✓ HCM-KS25-CNTT7: Chăm sóc sinh viên (100%, 1h)\n✓ HCM-KS24-CNTT1: Chấm bài tập về nhà. (100%, 1h)\n✓ HCM-KS24-CNTT1-IT214-Session 3: Chấm bài tập về nhà. (100%, 1h)\n✓ HCM-KS24-CNTT1-IT214-Session 4: Chấm bài tập về nhà. (100%, 1h)\n✓ HCM-KS24-CNTT1: Chăm sóc sinh viên (100%, 1h)\n✓ HCM-KS25-CNTT5: Kiểm tra hoạt động nhóm (100%, 0.5h)\n✓ HCM-KS25-CNTT7: Kiểm tra hoạt động nhóm (100%, 0.5h)",
+      "stats": {
+        "total": 8,
+        "done": 8,
+        "hours": 7
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lâm Tùng Dương",
+      "email": "duonglt@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Review bài tập ỈT102 - KS26",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Làm việc, Nhận Phản hổi từ Trợ giàng và Làm việc với Cô Trang CTSV - để xóa sinh viên nghỉ học KS24 khỏi lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Vào lớp phổ biến quy định môn mới - CNTT2",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Làm việc với cô Phước về web CVHT",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Phát triển Agent cá nhân",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Review bài tập ỈT102 - KS26 (100%, 1h)\n✓ Làm việc, Nhận Phản hổi từ Trợ giàng và Làm việc với Cô Trang CTSV - để xóa sinh viên nghỉ học KS24 khỏi lớp (100%, 2h)\n✓ Vào lớp phổ biến quy định môn mới - CNTT2 (100%, 1h)\n✓ Làm việc với cô Phước về web CVHT (100%, 1h)\n✓ Phát triển Agent cá nhân (100%, 2h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 7
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Huyền Trang",
+      "email": "trangnh.uliser54@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Soạn thông báo DA và check xác nhận, gửi toàn bộ SV",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Xếp danh sách thi sát hạch K26",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hỗ trợ trả giấy xác nhận SV",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Chỉnh sửa và update quy trình khảo thí ngoại ngữ, cài đặt thông báo tự động phối hợp",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Rà soát và chỉnh sửa Phụ lục khảo thí - Quy định đào tạo",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Trao đổi Khảo thí Backend với thầy Hùng và cô Phước",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Trao đổi CVHT và chốt dsach các lớp k24 HN",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Test file âm thanh, check giảng đường thi, loa tivi phục vụ sát hạch K26",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Soạn thông báo DA và check xác nhận, gửi toàn bộ SV (100%, 0.5h)\n✓ Xếp danh sách thi sát hạch K26 (100%, 1h)\n✓ Hỗ trợ trả giấy xác nhận SV (100%, 1h)\n✓ Chỉnh sửa và update quy trình khảo thí ngoại ngữ, cài đặt thông báo tự động phối hợp (100%, 1h)\n✓ Rà soát và chỉnh sửa Phụ lục khảo thí - Quy định đào tạo (100%, 1.5h)\n✓ Trao đổi Khảo thí Backend với thầy Hùng và cô Phước (100%, 0.75h)\n✓ Trao đổi CVHT và chốt dsach các lớp k24 HN (100%, 1h)\n✓ Test file âm thanh, check giảng đường thi, loa tivi phục vụ sát hạch K26 (100%, 0.5h)",
+      "stats": {
+        "total": 8,
+        "done": 8,
+        "hours": 7.25
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Thị Đỏ",
+      "email": "dolt@rikkeiacademy.cloud",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "PTITJPN-6 Giảng dạy lớp Talent_T4",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "soạn slide giảng dạy",
+          "done": true,
+          "percent": 100,
+          "hours": 3.5
+        },
+        {
+          "title": "chữa bài tập, chuẩn bị giao bài",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        }
+      ],
+      "summary": "✓ PTITJPN-6 Giảng dạy lớp Talent_T4 (100%, 3h)\n✓ soạn slide giảng dạy (100%, 3.5h)\n✓ chữa bài tập, chuẩn bị giao bài (100%)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 6.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Đặng Quỳnh Trang",
+      "email": "trangdq@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy qtkd1 man107",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Giảng dạy qtkd2 man107",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "chuẩn bị giảng dạy session 2 man107",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Hỗ trợ sinh viên về các vấn đề học tập, chỉ số, nhắn tin trao đổi cùng Trợ giảng và CVHT để trao đổi tình hình lớp học",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "họp chuyên môn qtkds",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "upload tài nguyên học tập, kiểm tra tình trạng điểm danh và hoàn thiện điểm danh",
+          "done": true,
+          "percent": 100,
+          "hours": 0.25
+        }
+      ],
+      "summary": "✓ Giảng dạy qtkd1 man107 (100%, 3h)\n✓ Giảng dạy qtkd2 man107 (100%, 3h)\n✓ chuẩn bị giảng dạy session 2 man107 (100%, 0.75h)\n✓ Hỗ trợ sinh viên về các vấn đề học tập, chỉ số, nhắn tin trao đổi cùng Trợ giảng và CVHT để trao đổi tình hình lớp học (100%, 0.5h)\n✓ họp chuyên môn qtkds (100%, 0.5h)\n✓ upload tài nguyên học tập, kiểm tra tình trạng điểm danh và hoàn thiện điểm danh (100%, 0.25h)",
+      "stats": {
+        "total": 6,
+        "done": 6,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Đức Minh",
+      "email": "minhnd@rikkeiacademy.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy lớp K25 CNTT5 session 6: thực hành activities diagram và usecase diagram",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Chuẩn bị kiến thức session 7 môn phân tích thiết kế hệ thống",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        }
+      ],
+      "summary": "✓ Giảng dạy lớp K25 CNTT5 session 6: thực hành activities diagram và usecase diagram (100%, 2h)\n✓ Chuẩn bị kiến thức session 7 môn phân tích thiết kế hệ thống (100%, 0.75h)",
+      "stats": {
+        "total": 2,
+        "done": 2,
+        "hours": 2.75
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Trần Thị Mỹ Phước",
+      "email": "phuocttm@rikkeieducation.id.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Theo dõi, tổng hợp danh sách SV chưa vào nhóm lark và khảo sát đăng ký ngoại ngữ với tư vấn tuyển sinh",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Tân sinh viên K26: Phối hợp với tư vấn tuyển sinh trao đổi về vấn đề sinh viên K26, cập nhật mail, duyệt vào nhóm lark, phối hợp với bên trường phản hồi thông tin về tài khoản sinh viên, soạn và gửi thông báo về ngoại ngữ HCM và HN",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Phản hồi các thông tin với các bộ phận liên quan: QLĐT, CVHT",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Phản hồi thông tin sinh viên, phối hợp với các bộ phận để phản hồi các vấn đề học vụ, học lại",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Phối hợp với cô Trang trao đổi về quy định lớp ngắn hạn + quy định khảo thí dài hạn",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Điều chỉnh quy định đào tạo + phụ lục khảo thí",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Phản hồi 3 PH về tình hình học tập của SV lớp cntt8",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Theo dõi, tổng hợp danh sách SV chưa vào nhóm lark và khảo sát đăng ký ngoại ngữ với tư vấn tuyển sinh (100%, 1h)\n✓ Tân sinh viên K26: Phối hợp với tư vấn tuyển sinh trao đổi về vấn đề sinh viên K26, cập nhật mail, duyệt vào nhóm lark, phối hợp với bên trường phản hồi thông tin về tài khoản sinh viên, soạn và gửi thông báo về ngoại ngữ HCM và HN (100%, 1.5h)\n✓ Phản hồi các thông tin với các bộ phận liên quan: QLĐT, CVHT (100%, 0.5h)\n✓ Phản hồi thông tin sinh viên, phối hợp với các bộ phận để phản hồi các vấn đề học vụ, học lại (100%, 1.5h)\n✓ Phối hợp với cô Trang trao đổi về quy định lớp ngắn hạn + quy định khảo thí dài hạn (100%, 0.5h)\n✓ Điều chỉnh quy định đào tạo + phụ lục khảo thí (100%, 2.5h)\n✓ Phản hồi 3 PH về tình hình học tập của SV lớp cntt8 (100%, 0.5h)",
+      "stats": {
+        "total": 7,
+        "done": 7,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Phạm Viết Hùng",
+      "email": "22.phamviethung.12a12@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Hỗ trợ chăm sóc sinh viên KS24 CNTT 1 + K25 CNTT 5 + 6",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Chấm BTVN 2 buổi của KS24 CNTT1 + Chăm sóc nhắn tin/gọi các sinh viên nghỉ học",
+          "done": true,
+          "percent": 100,
+          "hours": 1.75
+        },
+        {
+          "title": "Kiểm tra và chấm BTVN CNTT5 + Hỗ trợ check CNTT6",
+          "done": true,
+          "percent": 100,
+          "hours": 1.25
+        },
+        {
+          "title": "Kiểm tra danh sách sinh viên chuyển lớp đồng bộ lại điểm danh trên RAIA và QLDT của các lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Trao đổi với chị Tươi về danh sách sinh viên chuyển xuống K26 học lại thiếu sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Trao đổi với sinh viên và xử lý các vấn đề phát sinh",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Hỗ trợ chăm sóc sinh viên KS24 CNTT 1 + K25 CNTT 5 + 6 (100%, 1.5h)\n✓ Chấm BTVN 2 buổi của KS24 CNTT1 + Chăm sóc nhắn tin/gọi các sinh viên nghỉ học (100%, 1.75h)\n✓ Kiểm tra và chấm BTVN CNTT5 + Hỗ trợ check CNTT6 (100%, 1.25h)\n✓ Kiểm tra danh sách sinh viên chuyển lớp đồng bộ lại điểm danh trên RAIA và QLDT của các lớp (100%, 1.5h)\n✓ Trao đổi với chị Tươi về danh sách sinh viên chuyển xuống K26 học lại thiếu sinh viên (100%, 0.5h)\n✓ Trao đổi với sinh viên và xử lý các vấn đề phát sinh (100%, 1h)",
+      "stats": {
+        "total": 6,
+        "done": 6,
+        "hours": 7.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Hoàng Thị Kim Oanh",
+      "email": "oanhhtk@rikkeieducation.top",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Review PM môn học - KN làm việc nhóm",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Họp chuyên môn QTKD - định kỳ",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Tập hợp tài liệu, quy định, quy trình cho cuộc họp chuyên môn",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hỗ trợ sinh viên - Trao đổi với sinh viên xuống khóa (2 SV)",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hỗ trợ sinh viên - Xử lý tình huống SV vi phạm, GV quản lý lớp...",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Cập nhật quy trình, tiêu chuẩn giao việc mới",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Review PM môn học - KN làm việc nhóm (100%, 2h)\n✓ Họp chuyên môn QTKD - định kỳ (100%, 1.5h)\n✓ Tập hợp tài liệu, quy định, quy trình cho cuộc họp chuyên môn (100%, 1h)\n✓ Hỗ trợ sinh viên - Trao đổi với sinh viên xuống khóa (2 SV) (100%, 1h)\n✓ Hỗ trợ sinh viên - Xử lý tình huống SV vi phạm, GV quản lý lớp... (100%, 1h)\n✓ Cập nhật quy trình, tiêu chuẩn giao việc mới (100%, 2h)",
+      "stats": {
+        "total": 6,
+        "done": 6,
+        "hours": 8.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Hà Thanh Sang",
+      "email": "sanglht@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Hỗ trợ giảng dạy lý thuyết lớp HCM-KS25-CNTT7",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Hỗ trợ giảng dạy thực hành lớp HCM-KS25-CNTT7",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 8",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 9",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 10",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 13",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 14",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 15",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 16",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 17",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 18",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Hỗ trợ giảng dạy lý thuyết lớp HCM-KS25-CNTT7 (100%, 2h)\n✓ Hỗ trợ giảng dạy thực hành lớp HCM-KS25-CNTT7 (100%, 2h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 8 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 9 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 10 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 13 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 14 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 15 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 16 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 17 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 18 (100%, 0.5h)",
+      "stats": {
+        "total": 11,
+        "done": 11,
+        "hours": 8.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lò Thị Ngọc Anh",
+      "email": "anhltn1@rikkeiacademy.net",
+      "department": "Đào tạo",
+      "project": "REXPENGL 🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26",
+      "tasks": [
+        {
+          "title": "[RExJAX] LÀM VIỆC VỚI ĐỐI TÁC VỀ KỲ THI FINAL TEST (09/09)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[RE] LÀM VIỆC VỚI HR VỀ TUYỂN DỤNG GVTA + TGTA (09/09)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[RE] HƯỚNG DẪN TGTA - CÔ ĐỖ HÀ KHANH LÀM VIỆC RECHECK TÀI NGUYÊN HỌC TẬP (09/09)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[RE] CHỈNH SỬA PHỤ LỤC KHẢO THÍ THEO ORDER QLĐT (09/09)",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "[RE] [ENG105] QA & VERIFY TÀI NGUYÊN UNIT 1",
+          "done": false,
+          "percent": 90,
+          "hours": 1
+        },
+        {
+          "title": "[RE] [ENG105] QA & VERIFY TÀI NGUYÊN UNIT 2",
+          "done": false,
+          "percent": 90,
+          "hours": 0
+        }
+      ],
+      "summary": "✓ [RExJAX] LÀM VIỆC VỚI ĐỐI TÁC VỀ KỲ THI FINAL TEST (09/09) (100%, 2h)\n✓ [RE] LÀM VIỆC VỚI HR VỀ TUYỂN DỤNG GVTA + TGTA (09/09) (100%, 2h)\n✓ [RE] HƯỚNG DẪN TGTA - CÔ ĐỖ HÀ KHANH LÀM VIỆC RECHECK TÀI NGUYÊN HỌC TẬP (09/09) (100%, 2h)\n✓ [RE] CHỈNH SỬA PHỤ LỤC KHẢO THÍ THEO ORDER QLĐT (09/09) (100%, 1h)\n• [RE] [ENG105] QA & VERIFY TÀI NGUYÊN UNIT 1 (90%, 1h)\n• [RE] [ENG105] QA & VERIFY TÀI NGUYÊN UNIT 2 (90%)",
+      "stats": {
+        "total": 6,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "NHIỀU VIỆC NHƯNG LẠI THIẾU NHÂN SỰ",
+      "plan": ""
+    },
+    {
+      "user": "Ngọ Văn Quý",
+      "email": "quynv@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Báo cáo tiến độ LMS AI và khảo thí",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Phát triển tính năng của khảo thí",
+          "done": true,
+          "percent": 100,
+          "hours": 7
+        },
+        {
+          "title": "Xây dựng UI dự án mobile app phụ huynh và sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        }
+      ],
+      "summary": "✓ Báo cáo tiến độ LMS AI và khảo thí (100%, 1h)\n✓ Phát triển tính năng của khảo thí (100%, 7h)\n✓ Xây dựng UI dự án mobile app phụ huynh và sinh viên (100%, 4h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 12
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Xuân Bách",
+      "email": "bachnx@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Họp v/v các vấn đề cần xử lý trong đào tạo",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Tổng hợp báo cáo tháng 9",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Họp v/v tình hình kỷ luật KS25 - Ngọc Trục",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Báo cáo chỉ số đào tạo",
+          "done": true,
+          "percent": 100,
+          "hours": 1.25
+        },
+        {
+          "title": "Rà soát các vi phạm Elearning của KS24 và KS25- Thầy Đương",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Trao đổi về việc chuyển SV CNTT8 HCM",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Trao đổi về vi phạm của HN-KS24 và gửi mail vi phạm",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Lên kế hoạch về ĐGNL để phân công GV cho KS26",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Họp v/v các vấn đề cần xử lý trong đào tạo (100%, 1.5h)\n✓ Tổng hợp báo cáo tháng 9 (100%, 0.5h)\n✓ Họp v/v tình hình kỷ luật KS25 - Ngọc Trục (100%, 0.75h)\n✓ Báo cáo chỉ số đào tạo (100%, 1.25h)\n✓ Rà soát các vi phạm Elearning của KS24 và KS25- Thầy Đương (100%, 0.75h)\n✓ Trao đổi về việc chuyển SV CNTT8 HCM (100%, 0.5h)\n✓ Trao đổi về vi phạm của HN-KS24 và gửi mail vi phạm (100%, 0.5h)\n✓ Lên kế hoạch về ĐGNL để phân công GV cho KS26 (100%, 0.5h)",
+      "stats": {
+        "total": 8,
+        "done": 8,
+        "hours": 6.25
+      },
+      "difficulties": "",
+      "plan": ""
+    }
+  ],
+  "2026-09-10": [
+    {
+      "user": "Lương Quốc Tuấn",
+      "email": "tuanlq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Quay video + Edit buổi đầu môn nhập môn công nghệ thông tin (Video Định Hướng môn học)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Verify bài đọc ss 1, 2, 3, 4 ,5 môn nhập môn công nghệ thông tin (Đã nhận xét và feedback cho thầy Lâm)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Verify quiz lession (kiến thức , độ ngắn dài), Verify Bài Tập về nhà 3 session đầu (Đã nhận xét và feedback cho Thầy Kiên để thầy Kiên sửa)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Verify lại video SS1,SS2, SS4 môn nhập môn công nghệ thông tin K26",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Quay video + Edit buổi đầu môn nhập môn công nghệ thông tin (Video Định Hướng môn học) (100%, 2h)\n✓ Verify bài đọc ss 1, 2, 3, 4 ,5 môn nhập môn công nghệ thông tin (Đã nhận xét và feedback cho thầy Lâm) (100%, 2h)\n✓ Verify quiz lession (kiến thức , độ ngắn dài), Verify Bài Tập về nhà 3 session đầu (Đã nhận xét và feedback cho Thầy Kiên để thầy Kiên sửa) (100%, 2h)\n✓ Verify lại video SS1,SS2, SS4 môn nhập môn công nghệ thông tin K26 (100%, 2h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Triệu Thị Thanh Tâm",
+      "email": "tamttt@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Soạn biên bản bầu lại lớp trưởng",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Cố vấn học tập lớp QTKD1,2",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Trao đổi cùng GV/TG về tình hình lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Trao đổi cùng CTSV về biên bản cam kết, học vụ",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Học tập bồi dưỡng - Bổ sung kiến thức về Digital Marketing",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Soạn biên bản bầu lại lớp trưởng (100%, 1h)\n✓ Cố vấn học tập lớp QTKD1,2 (100%, 3h)\n✓ Trao đổi cùng GV/TG về tình hình lớp (100%, 1h)\n✓ Trao đổi cùng CTSV về biên bản cam kết, học vụ (100%, 1h)\n✓ Học tập bồi dưỡng - Bổ sung kiến thức về Digital Marketing (100%, 2h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Bùi Thanh Hải",
+      "email": "haibt@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy HN-K24-CNTT4 Microservices system design - Session 06",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Giảng dạy HN-K24-CNTT1 Microservices system design - Session 06",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Giảng dạy HN-K24-CNTT2 Microservices system design - Session 05+Session06",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        }
+      ],
+      "summary": "✓ Giảng dạy HN-K24-CNTT4 Microservices system design - Session 06 (100%, 2h)\n✓ Giảng dạy HN-K24-CNTT1 Microservices system design - Session 06 (100%, 2h)\n✓ Giảng dạy HN-K24-CNTT2 Microservices system design - Session 05+Session06 (100%, 4h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Trần Quốc Tuấn",
+      "email": "tuantq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy lớp CNTT6",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Chuẩn bị kiến thức",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Xử lý các vấn đề điểm danh, tỉ lệ sau khi gom nhóm",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Giảng dạy lớp CNTT6 (100%, 2h)\n✓ Chuẩn bị kiến thức (100%, 1h)\n✓ Xử lý các vấn đề điểm danh, tỉ lệ sau khi gom nhóm (100%, 1h)\n✓ Chăm sóc sinh viên (100%, 1h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Phạm Tuấn Bình",
+      "email": "binhpt@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "[Dạy Học] - Chuẩn bị bài giảng Session 02 môn học PTTKHT",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "[Dạy Học] - Giảng dạy lý thuyết Session 02 môn PTTKHT lớp K25 - CNTT3",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[Dạy Học] - Giảng dạy lý thuyết Session 02 môn PTTKHT lớp K25 - CNTT4",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[Học liệu] - Chuẩn bị slide giảng dạy kiến thức Chuyển đổi từ mindmap sang html slide deck",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        }
+      ],
+      "summary": "✓ [Dạy Học] - Chuẩn bị bài giảng Session 02 môn học PTTKHT (100%, 1h)\n✓ [Dạy Học] - Giảng dạy lý thuyết Session 02 môn PTTKHT lớp K25 - CNTT3 (100%, 2h)\n✓ [Dạy Học] - Giảng dạy lý thuyết Session 02 môn PTTKHT lớp K25 - CNTT4 (100%, 2h)\n✓ [Học liệu] - Chuẩn bị slide giảng dạy kiến thức Chuyển đổi từ mindmap sang html slide deck (100%, 3h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Công Hưởng",
+      "email": "huongnc@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Chấm bài tập môn Microservices 3 lớp K24 : CNTT1 , CNTT2 , CNTT4",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "chấm bài tập JB-IOC-PTHB251125 ,JB-IOC-PTHB260310,JB-IOC-PTHB260407,JB-IOC-PTHB260706",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "CVHT , chăm sóc sinh viên K24 ,K25",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        }
+      ],
+      "summary": "✓ Chấm bài tập môn Microservices 3 lớp K24 : CNTT1 , CNTT2 , CNTT4 (100%, 3h)\n✓ chấm bài tập JB-IOC-PTHB251125 ,JB-IOC-PTHB260310,JB-IOC-PTHB260407,JB-IOC-PTHB260706 (100%, 2h)\n✓ CVHT , chăm sóc sinh viên K24 ,K25 (100%, 3h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Đỗ Hà Khanh",
+      "email": "dohakhanh81204@gmail.com",
+      "department": "Đào tạo",
+      "project": "REXPENGL 🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26",
+      "tasks": [
+        {
+          "title": "Chỉnh sửa học liệu Unit 1&2 theo comment",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "[RE] [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN UNIT 3",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "[RE] [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN UNIT 6",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "[RE] [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN UNIT 4",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[RE] [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN UNIT 5",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Chỉnh sửa học liệu Unit 1&2 theo comment (100%, 1h)\n✓ [RE] [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN UNIT 3 (100%, 1.5h)\n✓ [RE] [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN UNIT 6 (100%, 1.5h)\n✓ [RE] [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN UNIT 4 (100%, 2h)\n✓ [RE] [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN UNIT 5 (100%, 2h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Hoàng Thị Hậu",
+      "email": "hauht@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Cập nhật kiến thức chuyên môn SS3 +4 môn kỹ năng HT chủ động",
+          "done": true,
+          "percent": 100,
+          "hours": 6.75
+        },
+        {
+          "title": "Ra đề 1 thi thực hành Kỹ năng HT chủ động và PT bản thân",
+          "done": true,
+          "percent": 100,
+          "hours": 1.25
+        }
+      ],
+      "summary": "✓ Cập nhật kiến thức chuyên môn SS3 +4 môn kỹ năng HT chủ động (100%, 6.75h)\n✓ Ra đề 1 thi thực hành Kỹ năng HT chủ động và PT bản thân (100%, 1.25h)",
+      "stats": {
+        "total": 2,
+        "done": 2,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Ngọc Sơn",
+      "email": "sonnn@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Hiệu chỉnh học liệu PTTK",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        }
+      ],
+      "summary": "✓ Hiệu chỉnh học liệu PTTK (100%, 1.5h)",
+      "stats": {
+        "total": 1,
+        "done": 1,
+        "hours": 1.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Phan Ngọc Tài",
+      "email": "taipn@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "HCM-KS25-CNTT5: Chấm bài tập về nhà.",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS25-CNTT7-IT105-Session6: Chấm bài tập về nhà.",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS25-CNTT5: Chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS25-CNTT7: Chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS24-CNTT1: Chấm bài tập về nhà.",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "HCM-KS25-CNTT7-IT105-Session5: Chấm bài tập về nhà.",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hỗ trợ điều chỉnh học liệu môn Phân tích thiết kế hệ thống",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ HCM-KS25-CNTT5: Chấm bài tập về nhà. (100%, 1h)\n✓ HCM-KS25-CNTT7-IT105-Session6: Chấm bài tập về nhà. (100%, 1h)\n✓ HCM-KS25-CNTT5: Chăm sóc sinh viên (100%, 1h)\n✓ HCM-KS25-CNTT7: Chăm sóc sinh viên (100%, 1h)\n✓ HCM-KS24-CNTT1: Chấm bài tập về nhà. (100%, 1h)\n✓ HCM-KS25-CNTT7-IT105-Session5: Chấm bài tập về nhà. (100%, 1h)\n✓ Hỗ trợ điều chỉnh học liệu môn Phân tích thiết kế hệ thống (100%, 1h)",
+      "stats": {
+        "total": 7,
+        "done": 7,
+        "hours": 7
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Trần Thị Mỹ Phước",
+      "email": "phuocttm@rikkeieducation.id.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Lọc lại DSSV K26, check các bên với trường hợp rút cọc SV và tổng hợp lại danh sách gửi anh Dương ngày 10.10",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Điều chỉnh nội dung phụ lục khảo thí phần ngoại ngữ",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Xác nhận lại danh sách Ban cán sự lớp các lớp HCM, HN và điều chỉnh lại web về thông tin GV, TG, CVHT, Ban cán sự lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Phản hồi các thông tin phát sinh",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Phản hồi thông tin SV/PH",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Kiểm tra, phối hơp và phản hồi về giảng đường HCM",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Xử lí việc nội bộ HCM",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Soạn thông báo về lịch thi sát hạch ngoại ngữ K26",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Lọc lại DSSV K26, check các bên với trường hợp rút cọc SV và tổng hợp lại danh sách gửi anh Dương ngày 10.10 (100%, 1h)\n✓ Điều chỉnh nội dung phụ lục khảo thí phần ngoại ngữ (100%, 3h)\n✓ Xác nhận lại danh sách Ban cán sự lớp các lớp HCM, HN và điều chỉnh lại web về thông tin GV, TG, CVHT, Ban cán sự lớp (100%, 1h)\n✓ Phản hồi các thông tin phát sinh (100%, 0.5h)\n✓ Phản hồi thông tin SV/PH (100%, 1h)\n✓ Kiểm tra, phối hơp và phản hồi về giảng đường HCM (100%, 0.5h)\n✓ Xử lí việc nội bộ HCM (100%, 0.5h)\n✓ Soạn thông báo về lịch thi sát hạch ngoại ngữ K26 (100%, 0.5h)",
+      "stats": {
+        "total": 8,
+        "done": 8,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Thị Hồng Minh",
+      "email": "minhnth@rikkeiacademy.net",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Nghiên cứu môn SSK102 Tin học ứng dụng SS04",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Lên lesson plan môn SKL102 Kỹ năng làm việc nhóm",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Nghiên cứu môn  SKK101 Kỹ năng làm việc nhóm  SS01",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        }
+      ],
+      "summary": "✓ Nghiên cứu môn SSK102 Tin học ứng dụng SS04 (100%, 2.5h)\n✓ Lên lesson plan môn SKL102 Kỹ năng làm việc nhóm (100%, 2.5h)\n✓ Nghiên cứu môn  SKK101 Kỹ năng làm việc nhóm  SS01 (100%, 3h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Đặng Quỳnh Trang",
+      "email": "trangdq@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy QTKDS môn MAN107 - SS03 lớp QTKD1,2",
+          "done": true,
+          "percent": 100,
+          "hours": 6
+        },
+        {
+          "title": "Chuẩn bị giảng dạy QTKDS SS03 - MAN107",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Hỗ trợ sinh viên về các vấn đề học tập, chỉ số, nhắn tin trao đổi cùng Trợ giảng và CVHT để trao đổi tình hình lớp học",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Upload tài nguyên học tập, kiểm tra tình trạng điểm danh và hoàn thiện điểm danh",
+          "done": true,
+          "percent": 100,
+          "hours": 0.25
+        },
+        {
+          "title": "Cập nhật thông tin, phân chia nhóm, liên hệ giải quyết vấn đề chỉ số học tập của sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Giảng dạy QTKDS môn MAN107 - SS03 lớp QTKD1,2 (100%, 6h)\n✓ Chuẩn bị giảng dạy QTKDS SS03 - MAN107 (100%, 0.75h)\n✓ Hỗ trợ sinh viên về các vấn đề học tập, chỉ số, nhắn tin trao đổi cùng Trợ giảng và CVHT để trao đổi tình hình lớp học (100%, 0.5h)\n✓ Upload tài nguyên học tập, kiểm tra tình trạng điểm danh và hoàn thiện điểm danh (100%, 0.25h)\n✓ Cập nhật thông tin, phân chia nhóm, liên hệ giải quyết vấn đề chỉ số học tập của sinh viên (100%, 0.5h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Thị Như Quỳnh",
+      "email": "quynhntn@rikkeiacademy.net",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Kiểm tra BTVN - QTKD1 & QTKD2 (SS2)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "CSSV - QTKD1 & QTKD2",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Dự giảng môn MAN107 - QTKD2 (ca 3)",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Nghiên cứu Session 3 - MAN107",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Trao đổi và Báo cáo với GV về các trường hợp vi phạm của SV lớp QTKD1 & QTKD2",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Kiểm tra BTVN - QTKD1 & QTKD2 (SS2) (100%, 2h)\n✓ CSSV - QTKD1 & QTKD2 (100%, 1h)\n✓ Dự giảng môn MAN107 - QTKD2 (ca 3) (100%, 3h)\n✓ Nghiên cứu Session 3 - MAN107 (100%, 1.5h)\n✓ Trao đổi và Báo cáo với GV về các trường hợp vi phạm của SV lớp QTKD1 & QTKD2 (100%, 0.5h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Nhựt Mi",
+      "email": "miln@rikkeiedu.org",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Cập nhật kiến thức quản trị: MAN 101 - SESSION 5",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Cập nhật kiến thức quản trị: MAN 101 - SESSION 8",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Cập nhật kiến thức quản trị: MAN 101 - SESSION 9",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Cập nhật kiến thức quản trị: MAN 101 - SESSION 10",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        }
+      ],
+      "summary": "✓ Cập nhật kiến thức quản trị: MAN 101 - SESSION 5 (100%, 2h)\n✓ Cập nhật kiến thức quản trị: MAN 101 - SESSION 8 (100%, 2h)\n✓ Cập nhật kiến thức quản trị: MAN 101 - SESSION 9 (100%, 2h)\n✓ Cập nhật kiến thức quản trị: MAN 101 - SESSION 10 (100%, 1.5h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 7.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Thị Bảo Yến",
+      "email": "yenltb@rikkeiedu.org",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Học tập bồi dưỡng: Tìm hiểu tài liệu về Nội dung môn Quản trị chiến lược (Tóm tắt nội dung Sesson 6: Mô hình phân tích năng lực nội tại doanh nghiệp)",
+          "done": false,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Họp triển khai công việc: Chuẩn bị nội dung và Họp trao đổi công việc Ms Khanh (PM môn Tư duy phân tích, trao đổi nội dung)",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Cập nhật kiến thức học phần Kỹ năng mềm: Tư duy phân tích Session 2",
+          "done": false,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Review học liệu bài đọc: Bài đọc Lesson 1 (Session 1) - Tư duy phân tích",
+          "done": false,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc: Bài đọc Lesson 2 (Session 1) - Tư duy phân tích",
+          "done": false,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Hoàn thiện khung Lesson Plan, kịch bản cho Session 1 cho môn Tư duy phân tích và hoạt động sau trao đổi",
+          "done": false,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Báo cáo kết quả ngày và lên kế hoạch công việc cho ngày tiếp theo",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "• Học tập bồi dưỡng: Tìm hiểu tài liệu về Nội dung môn Quản trị chiến lược (Tóm tắt nội dung Sesson 6: Mô hình phân tích năng lực nội tại doanh nghiệp) (100%, 1h)\n✓ Họp triển khai công việc: Chuẩn bị nội dung và Họp trao đổi công việc Ms Khanh (PM môn Tư duy phân tích, trao đổi nội dung) (100%, 0.5h)\n• Cập nhật kiến thức học phần Kỹ năng mềm: Tư duy phân tích Session 2 (100%, 2.5h)\n• Review học liệu bài đọc: Bài đọc Lesson 1 (Session 1) - Tư duy phân tích (100%, 0.5h)\n• Review học liệu bài đọc: Bài đọc Lesson 2 (Session 1) - Tư duy phân tích (100%, 0.5h)\n• Hoàn thiện khung Lesson Plan, kịch bản cho Session 1 cho môn Tư duy phân tích và hoạt động sau trao đổi (100%, 2h)\n✓ Báo cáo kết quả ngày và lên kế hoạch công việc cho ngày tiếp theo (100%, 0.5h)",
+      "stats": {
+        "total": 7,
+        "done": 2,
+        "hours": 7.5
+      },
+      "difficulties": "",
+      "plan": "• - Verify học liệu bài đọc Session 2,3,4 Môn tư duy phân tích\n• - Nghiên cứu tài liệu môn KNM\n• - Làm việc theo sự phân công của Leader"
+    },
+    {
+      "user": "Phạm Ngọc Kiên",
+      "email": "kienpn@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Hỗ trợ sinh viên làm bài tập + Chuẩn bị bài tập trước khi vào hỗ trợ",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Review môn phân tích và thiết kế hệ thống https://docs.google.com/document/d/1lUKUZwvBEsbvfvmuTBw_y2LOO5pMnsbMga_MmGcwuv4/edit?tab=t.0 và https://docs.google.com/document/d/1YsfaiBqC1W8Nj3dpbA3jAtkDim-DgKNbTk-2NONrN7c/edit?tab=t.0",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Bổ sung thêm BTVN môn nhập môn theo yêu cầu của leader (Bổ sung thêm mỗi bài 6 bài nữa)",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        }
+      ],
+      "summary": "✓ Hỗ trợ sinh viên làm bài tập + Chuẩn bị bài tập trước khi vào hỗ trợ (100%, 2h)\n✓ Review môn phân tích và thiết kế hệ thống https://docs.google.com/document/d/1lUKUZwvBEsbvfvmuTBw_y2LOO5pMnsbMga_MmGcwuv4/edit?tab=t.0 và https://docs.google.com/document/d/1YsfaiBqC1W8Nj3dpbA3jAtkDim-DgKNbTk-2NONrN7c/edit?tab=t.0 (100%, 3h)\n✓ Bổ sung thêm BTVN môn nhập môn theo yêu cầu của leader (Bổ sung thêm mỗi bài 6 bài nữa) (100%, 3h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Trịnh Quốc Hai",
+      "email": "haitq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "xem tài liệu k26 môn Nhập môn công nghệ thông tin, chỉnh sửa, góp ý",
+          "done": true,
+          "percent": 100,
+          "hours": 8
+        }
+      ],
+      "summary": "✓ xem tài liệu k26 môn Nhập môn công nghệ thông tin, chỉnh sửa, góp ý (100%, 8h)",
+      "stats": {
+        "total": 1,
+        "done": 1,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lại Trung Lâm",
+      "email": "laitrunglamjr@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "chăm sóc sinh viên lớp CNTT5 + Chia học lực",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "sửa lại bài đọc của môn IT101 theo phản hồi của thầy Tuấn bài ss1,2,4,6,8,10",
+          "done": true,
+          "percent": 100,
+          "hours": 6
+        }
+      ],
+      "summary": "✓ chăm sóc sinh viên lớp CNTT5 + Chia học lực (100%, 2h)\n✓ sửa lại bài đọc của môn IT101 theo phản hồi của thầy Tuấn bài ss1,2,4,6,8,10 (100%, 6h)",
+      "stats": {
+        "total": 2,
+        "done": 2,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Quảng An",
+      "email": "annq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy CNTT1",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Giảng dạy CNTT2",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Giảng dạy CNTT5",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Review tài nguyên học tập",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Giảng dạy CNTT1 (100%, 2.5h)\n✓ Giảng dạy CNTT2 (100%, 2.5h)\n✓ Giảng dạy CNTT5 (100%, 2.5h)\n✓ Review tài nguyên học tập (100%, 0.5h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Mai Xuân Chinh",
+      "email": "chinhmai124@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Review học liệu",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        },
+        {
+          "title": "Check bài tập, video, chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        }
+      ],
+      "summary": "✓ Review học liệu (100%, 4h)\n✓ Check bài tập, video, chăm sóc sinh viên (100%, 3h)",
+      "stats": {
+        "total": 2,
+        "done": 2,
+        "hours": 7
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lâm Tùng Dương",
+      "email": "duonglt@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Vào lớp triển khai Cố Vấn Học tập lớp CNTT1-CNTT2 KS24",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Giảng dạy tiết bài tập lớp CNTT1-CNTT2 KS25",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Chăm sóc sinh viên lớp CNTT1-CNTT2 KS25",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "trao đổi với Giảng viên Nguyễn Quảng An về lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Phân loại yêu cầu bài tập sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Tiếp nhận thông tin sinh viên feedback và báo cáo trên hệ thống CVHT",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Phản hồi, trả lời tin nhắn",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        }
+      ],
+      "summary": "✓ Vào lớp triển khai Cố Vấn Học tập lớp CNTT1-CNTT2 KS24 (100%, 1h)\n✓ Giảng dạy tiết bài tập lớp CNTT1-CNTT2 KS25 (100%, 2h)\n✓ Chăm sóc sinh viên lớp CNTT1-CNTT2 KS25 (100%, 1h)\n✓ trao đổi với Giảng viên Nguyễn Quảng An về lớp (100%, 0.75h)\n✓ Phân loại yêu cầu bài tập sinh viên (100%, 1h)\n✓ Tiếp nhận thông tin sinh viên feedback và báo cáo trên hệ thống CVHT (100%, 0.5h)\n✓ Phản hồi, trả lời tin nhắn (100%, 0.75h)",
+      "stats": {
+        "total": 7,
+        "done": 7,
+        "hours": 7
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Huyền Trang",
+      "email": "trangnh.uliser54@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Họp trao đổi Jaxtina",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Check danh sách đủ điều kiện lớp tiếng Anh HCM và phân công sắp xếp ca thi",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Chốt danh sách và xếp thi lớp ngắn hạn TSU-PTON-JV260327",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Chốt danh sách đánh giá sát hạch K26, và gửi hướng dẫn thi + quản trị rui ro cho CBCT",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Review Quản lý khảo thí trên LMS AI cùng thầy Cường, thầy Quý",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Xử lý sĩ số các lớp K24 25 CNTT ở QLĐT",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Làm báo cáo công việc tuần 2 tháng 9",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Cập nhật quy trình khảo thí LMS AI",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Họp trao đổi Jaxtina (100%, 1h)\n✓ Check danh sách đủ điều kiện lớp tiếng Anh HCM và phân công sắp xếp ca thi (100%, 1.5h)\n✓ Chốt danh sách và xếp thi lớp ngắn hạn TSU-PTON-JV260327 (100%, 0.5h)\n✓ Chốt danh sách đánh giá sát hạch K26, và gửi hướng dẫn thi + quản trị rui ro cho CBCT (100%, 1.5h)\n✓ Review Quản lý khảo thí trên LMS AI cùng thầy Cường, thầy Quý (100%, 0.5h)\n✓ Xử lý sĩ số các lớp K24 25 CNTT ở QLĐT (100%, 0.75h)\n✓ Làm báo cáo công việc tuần 2 tháng 9 (100%, 1h)\n✓ Cập nhật quy trình khảo thí LMS AI (100%, 1h)",
+      "stats": {
+        "total": 8,
+        "done": 8,
+        "hours": 7.75
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Đặng Minh Luân",
+      "email": "luandm@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Chấm BTVN CNTT6",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Chấm sóc sinh viên vắng CNTT6",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Chuẩn bị kiến thức SS8 môn phân tích thiết kế hệ thống",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hiệu chỉnh học liệu Agile Scrum",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Chấm BT nhóm CNTT6",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        }
+      ],
+      "summary": "✓ Chấm BTVN CNTT6 (100%, 0.5h)\n✓ Chấm sóc sinh viên vắng CNTT6 (100%, 1h)\n✓ Chuẩn bị kiến thức SS8 môn phân tích thiết kế hệ thống (100%, 1h)\n✓ Hiệu chỉnh học liệu Agile Scrum (100%, 0.75h)\n✓ Chấm BT nhóm CNTT6 (100%, 0.75h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 4
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Phạm Viết Hùng",
+      "email": "22.phamviethung.12a12@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Trao đổi với thầy Dương và Cô Tươi về sinh viên Minh Trí bảo lưu học lại, chỉnh danh sách lớp và qldt",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Trao đổi với sinh viên về việc học lại K26",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hỗ Trợ kiểm tra lại bài tập sinh viên 2 lớp K25 + 1 lớp K24",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Chăm sóc sinh viên nghỉ học không phép tìm hiểu lý do",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Rà soát lại danh sách chuyển lớp và điều chỉnh lại thông tin sinh viên bị chuyển sau 3 ngày học",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Xử lý các vấn đề phát sinh HCM",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Trao đổi với thầy Dương và Cô Tươi về sinh viên Minh Trí bảo lưu học lại, chỉnh danh sách lớp và qldt (100%, 1h)\n✓ Trao đổi với sinh viên về việc học lại K26 (100%, 1h)\n✓ Hỗ Trợ kiểm tra lại bài tập sinh viên 2 lớp K25 + 1 lớp K24 (100%, 2h)\n✓ Chăm sóc sinh viên nghỉ học không phép tìm hiểu lý do (100%, 1h)\n✓ Rà soát lại danh sách chuyển lớp và điều chỉnh lại thông tin sinh viên bị chuyển sau 3 ngày học (100%, 1h)\n✓ Xử lý các vấn đề phát sinh HCM (100%, 2h)",
+      "stats": {
+        "total": 6,
+        "done": 6,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Ngọc Vân Khanh",
+      "email": "khanhnnv@rikkeieducation.top",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Tinh chỉnh tiêu chuẩn BTTH",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Tinh chỉnh tiêu chuẩn BTVN",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Trao đổi, thảo luận về môn Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu SS01 môn Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Review học liệu môn MAN101",
+          "done": true,
+          "percent": 100,
+          "hours": 1.75
+        },
+        {
+          "title": "Nghiên cứu khung Lesson Plan mới để ứng dụng vào môn KN (Tư duy phân tích)",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        }
+      ],
+      "summary": "✓ Tinh chỉnh tiêu chuẩn BTTH (100%, 2h)\n✓ Tinh chỉnh tiêu chuẩn BTVN (100%, 2h)\n✓ Trao đổi, thảo luận về môn Tư duy phân tích (100%, 0.5h)\n✓ Review học liệu SS01 môn Tư duy phân tích (100%, 1h)\n✓ Review học liệu môn MAN101 (100%, 1.75h)\n✓ Nghiên cứu khung Lesson Plan mới để ứng dụng vào môn KN (Tư duy phân tích) (100%, 0.75h)",
+      "stats": {
+        "total": 6,
+        "done": 6,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Xuân Bách",
+      "email": "bachnx@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Xử lý và báo cáo chỉ số đào tạo",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Làm việc với các lớp KS25-CNTT3",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Làm việc với các lớp KS25-CNTT1",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Họp về tình hình kỷ luật sinh viên KS25",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Lấy dữ liệu dự đoán tỷ lệ qua môn các lớp PTIT",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Rà soát và xử lý xóa vi phạm các lớp KS25",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Trao đổi về Worklane - Thầy Luận, Thầy Cường",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Phối hợp triển khai quy trình verify tài nguyên",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Xử lý và báo cáo chỉ số đào tạo (100%, 1.5h)\n✓ Làm việc với các lớp KS25-CNTT3 (100%, 0.5h)\n✓ Làm việc với các lớp KS25-CNTT1 (100%, 0.5h)\n✓ Họp về tình hình kỷ luật sinh viên KS25 (100%, 0.75h)\n✓ Lấy dữ liệu dự đoán tỷ lệ qua môn các lớp PTIT (100%, 1h)\n✓ Rà soát và xử lý xóa vi phạm các lớp KS25 (100%, 0.5h)\n✓ Trao đổi về Worklane - Thầy Luận, Thầy Cường (100%, 0.5h)\n✓ Phối hợp triển khai quy trình verify tài nguyên (100%, 0.5h)",
+      "stats": {
+        "total": 8,
+        "done": 8,
+        "hours": 5.75
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Đức Minh",
+      "email": "minhnd@rikkeiacademy.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy lớp K25 CNTT7",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Giảng dạy lớp K25 CNTT5",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Chuẩn bị kiến thức session 8 thực hành",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Chăm sóc sinh viên nghỉ học nhiều lần K25 CNTT7",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Chăm sóc sinh viên nghỉ học nhiều lần K25 CNTT5",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Giảng dạy lớp K25 CNTT7 (100%, 2h)\n✓ Giảng dạy lớp K25 CNTT5 (100%, 2h)\n✓ Chuẩn bị kiến thức session 8 thực hành (100%, 0.75h)\n✓ Chăm sóc sinh viên nghỉ học nhiều lần K25 CNTT7 (100%, 0.5h)\n✓ Chăm sóc sinh viên nghỉ học nhiều lần K25 CNTT5 (100%, 0.5h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 5.75
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Ngọ Văn Quý",
+      "email": "quynv@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Xây dựng UI app phụ huynh",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Xây dựng API cho app phụ huynh",
+          "done": true,
+          "percent": 100,
+          "hours": 5
+        },
+        {
+          "title": "Phát triển dự án Khảo thí (viết API và ghép chức năng quản lý tài khoản giảng viên và sinh viên)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Xây dựng 3 video bài giảng cho bên marketing",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        }
+      ],
+      "summary": "✓ Xây dựng UI app phụ huynh (100%, 3h)\n✓ Xây dựng API cho app phụ huynh (100%, 5h)\n✓ Phát triển dự án Khảo thí (viết API và ghép chức năng quản lý tài khoản giảng viên và sinh viên) (100%, 2h)\n✓ Xây dựng 3 video bài giảng cho bên marketing (100%, 3h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 13
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Thị Đỏ",
+      "email": "dolt@rikkeiacademy.cloud",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "soạn slide bài giảng",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        },
+        {
+          "title": "buổi chiều xin nghỉ phép",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        }
+      ],
+      "summary": "✓ soạn slide bài giảng (100%, 4h)\n✓ buổi chiều xin nghỉ phép (100%)",
+      "stats": {
+        "total": 2,
+        "done": 2,
+        "hours": 4
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Hoàng Thị Kim Oanh",
+      "email": "oanhhtk@rikkeieducation.top",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Tinh chỉnh tiêu chuẩn học liệu - bài đọc",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Review học liệu bài đọc - MAN101 = SS01 - Lesson 01",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc - MAN101 - SS01 - Lesson 02",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc - MAN101 - SS02 - Lesson 01",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc - MAN101 - SS02 - Lesson 02",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc - MAN101 - SS04 - Lesson 01",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc - MAN101 - SS04 - Lesson 02",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Hỗ trợ sinh viên - Làm việc trực tiếp với 4 SV vi phạm chỉ số đào tạo (báo động), 1 SV (vấn đề tâm lý)",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hỗ trợ GV, TG lớp MAN101 - biện pháp tổ chức lớp, quản lý sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Tinh chỉnh học liệu BTVN LMS AI",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Hỗ trợ công tác cố vấn học tập các lớp K25",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Tinh chỉnh tiêu chuẩn học liệu - bài đọc (100%, 2h)\n✓ Review học liệu bài đọc - MAN101 = SS01 - Lesson 01 (100%, 0.5h)\n✓ Review học liệu bài đọc - MAN101 - SS01 - Lesson 02 (100%, 0.5h)\n✓ Review học liệu bài đọc - MAN101 - SS02 - Lesson 01 (100%, 0.5h)\n✓ Review học liệu bài đọc - MAN101 - SS02 - Lesson 02 (100%, 0.5h)\n✓ Review học liệu bài đọc - MAN101 - SS04 - Lesson 01 (100%, 0.5h)\n✓ Review học liệu bài đọc - MAN101 - SS04 - Lesson 02 (100%, 0.5h)\n✓ Hỗ trợ sinh viên - Làm việc trực tiếp với 4 SV vi phạm chỉ số đào tạo (báo động), 1 SV (vấn đề tâm lý) (100%, 1h)\n✓ Hỗ trợ GV, TG lớp MAN101 - biện pháp tổ chức lớp, quản lý sinh viên (100%, 0.5h)\n✓ Tinh chỉnh học liệu BTVN LMS AI (100%, 0.75h)\n✓ Hỗ trợ công tác cố vấn học tập các lớp K25 (100%, 1h)",
+      "stats": {
+        "total": 11,
+        "done": 11,
+        "hours": 8.25
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lưu Hoàng Xuân Nguyên",
+      "email": "nguyenlxh@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Quản lý chỉ số đào tạo",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Ghi nhận vấn đề và Hỗ trợ sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "điều chỉnh và ghi nhận tỷ lệ chuyên cần, bài tập các lớp CNTT sau khi chia lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 1.25
+        },
+        {
+          "title": "Báo cáo chỉ số đào tạo",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Hỗ Trợ sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "rà soát danh sách SLSV thực học từng lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Quản lý chỉ số đào tạo (100%, 1h)\n✓ Ghi nhận vấn đề và Hỗ trợ sinh viên (100%, 0.5h)\n✓ điều chỉnh và ghi nhận tỷ lệ chuyên cần, bài tập các lớp CNTT sau khi chia lớp (100%, 1.25h)\n✓ Báo cáo chỉ số đào tạo (100%, 0.75h)\n✓ Hỗ Trợ sinh viên (100%, 1h)\n✓ rà soát danh sách SLSV thực học từng lớp (100%, 1h)",
+      "stats": {
+        "total": 6,
+        "done": 6,
+        "hours": 5.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Hà Thanh Sang",
+      "email": "sanglht@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 04",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 05",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu môn Phân tích và thiết kế hệ thống Session 03",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 04 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 05 (100%, 0.5h)\n✓ Review học liệu môn Phân tích và thiết kế hệ thống Session 03 (100%, 0.5h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 1.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lò Thị Ngọc Anh",
+      "email": "anhltn1@rikkeiacademy.net",
+      "department": "Đào tạo",
+      "project": "REXPENGL 🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26",
+      "tasks": [
+        {
+          "title": "REXPENGL-132 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 6",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        },
+        {
+          "title": "REXPENGL-131 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 5",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        },
+        {
+          "title": "REXPENGL-130 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 4",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        },
+        {
+          "title": "REXPENGL-129 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 3",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        },
+        {
+          "title": "REXPENGL-128 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 2",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        },
+        {
+          "title": "REXPENGL-127 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 1",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        },
+        {
+          "title": "REXPCHUO-76 [RExJAX] HỌP THỐNG NHẤT TRIỂN KHAI FINAL TEST CÁC LỚP JAХTINA (10/09)",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        },
+        {
+          "title": "REXPENGL-133 [RE] TUYỂN DỤNG GVTA + TGTA (10/09)",
+          "done": true,
+          "percent": 100,
+          "hours": 0
+        }
+      ],
+      "summary": "✓ REXPENGL-132 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 6 (100%)\n✓ REXPENGL-131 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 5 (100%)\n✓ REXPENGL-130 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 4 (100%)\n✓ REXPENGL-129 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 3 (100%)\n✓ REXPENGL-128 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 2 (100%)\n✓ REXPENGL-127 [ENG105] RECHECK -> QA -> VERIFY TÀI NGUYÊN HỌC TẬP UNIT 1 (100%)\n✓ REXPCHUO-76 [RExJAX] HỌP THỐNG NHẤT TRIỂN KHAI FINAL TEST CÁC LỚP JAХTINA (10/09) (100%)\n✓ REXPENGL-133 [RE] TUYỂN DỤNG GVTA + TGTA (10/09) (100%)",
+      "stats": {
+        "total": 8,
+        "done": 8,
+        "hours": 0
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Giáp Thị Minh Hằng",
+      "email": "hanggtm@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "nghỉ phép",
+          "done": true,
+          "percent": 100,
+          "hours": 8
+        }
+      ],
+      "summary": "✓ nghỉ phép (100%, 8h)",
+      "stats": {
+        "total": 1,
+        "done": 1,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    }
+  ],
+  "2026-09-11": [
+    {
+      "user": "Giáp Thị Minh Hằng",
+      "email": "hanggtm@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Chăm sóc SV - Huỳnh Anh Tuấn (nộp chứng chỉ JLPT miễn học tiếng Nhật)",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Chăm sóc SV - Vũ Văn Hiếu (nguyện vọng chuyển đổi ngoại ngữ từ TN -> TA)",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Làm việc với CTSV về những case chuyển ngoại ngữ và nộp chứng chỉ",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Họp phân chia TKB 2026",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review QUY TRÌNH PHÊ DUYỆT CHUYỂN BỘ MÔN NGOẠI NGỮ",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "PTITQUAN-48 Danh sách sinh viên đủ điều kiện thi hết giai đoạn N4 https://docs.google.com/spreadsheets/d/1opO5YM93Guz1X6xTpLRjcV0t__UZXeURFIrvit52Hqc/edit?gid=156319642#gid=156319642",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Làm việc với RIKI về trang khảo thí hết môn N4",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Chăm sóc SV - Huỳnh Anh Tuấn (nộp chứng chỉ JLPT miễn học tiếng Nhật) (100%, 0.5h)\n✓ Chăm sóc SV - Vũ Văn Hiếu (nguyện vọng chuyển đổi ngoại ngữ từ TN -> TA) (100%, 0.5h)\n✓ Làm việc với CTSV về những case chuyển ngoại ngữ và nộp chứng chỉ (100%, 1h)\n✓ Họp phân chia TKB 2026 (100%, 0.5h)\n✓ Review QUY TRÌNH PHÊ DUYỆT CHUYỂN BỘ MÔN NGOẠI NGỮ (100%, 1.5h)\n✓ PTITQUAN-48 Danh sách sinh viên đủ điều kiện thi hết giai đoạn N4 https://docs.google.com/spreadsheets/d/1opO5YM93Guz1X6xTpLRjcV0t__UZXeURFIrvit52Hqc/edit?gid=156319642#gid=156319642 (100%, 2h)\n✓ Làm việc với RIKI về trang khảo thí hết môn N4 (100%, 2h)",
+      "stats": {
+        "total": 7,
+        "done": 7,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Đặng Quỳnh Trang",
+      "email": "trangdq@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy QTKDS môn MAN107 - SS04 lớp QTKD1,2",
+          "done": true,
+          "percent": 100,
+          "hours": 6
+        },
+        {
+          "title": "Chuẩn bị giảng dạy QTKDS SS04 - MAN107",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Hỗ trợ sinh viên về các vấn đề học tập, chỉ số, nhắn tin trao đổi cùng Trợ giảng và CVHT để trao đổi tình hình lớp học",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Upload tài nguyên học tập, kiểm tra tình trạng điểm danh và hoàn thiện điểm danh",
+          "done": true,
+          "percent": 100,
+          "hours": 0.25
+        },
+        {
+          "title": "Cập nhật thông tin, phân chia nhóm, liên hệ giải quyết vấn đề chỉ số học tập của sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Giảng dạy QTKDS môn MAN107 - SS04 lớp QTKD1,2 (100%, 6h)\n✓ Chuẩn bị giảng dạy QTKDS SS04 - MAN107 (100%, 0.75h)\n✓ Hỗ trợ sinh viên về các vấn đề học tập, chỉ số, nhắn tin trao đổi cùng Trợ giảng và CVHT để trao đổi tình hình lớp học (100%, 0.5h)\n✓ Upload tài nguyên học tập, kiểm tra tình trạng điểm danh và hoàn thiện điểm danh (100%, 0.25h)\n✓ Cập nhật thông tin, phân chia nhóm, liên hệ giải quyết vấn đề chỉ số học tập của sinh viên (100%, 0.5h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Ngọc Vân Khanh",
+      "email": "khanhnnv@rikkeieducation.top",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Verify học liệu môn Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Nghiên cứu SS10 - DA101",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Định hướng thiết kế BTTH môn KNM (Tư duy phân tích) theo hướng game hóa",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Cập nhật trao đổi thông tin về quy định, quy chế mới",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Verify học liệu môn Tư duy phân tích (100%, 3h)\n✓ Nghiên cứu SS10 - DA101 (100%, 3h)\n✓ Định hướng thiết kế BTTH môn KNM (Tư duy phân tích) theo hướng game hóa (100%, 1.5h)\n✓ Cập nhật trao đổi thông tin về quy định, quy chế mới (100%, 0.5h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Nhựt Mi",
+      "email": "miln@rikkeiedu.org",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Viết báo cáo nghiên cứu, cập nhật kiến thức chuyên môn",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Nghiên cứu học phần Quản trị: SEL101 - SESSION 1",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Nghiên cứu học phần Quản trị: SEL101 - SESSION 2",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Nghiên cứu học phần Quản trị: SEL101 - SESSION",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Viết báo cáo nghiên cứu, cập nhật kiến thức chuyên môn (100%, 1h)\n✓ Nghiên cứu học phần Quản trị: SEL101 - SESSION 1 (100%, 2h)\n✓ Nghiên cứu học phần Quản trị: SEL101 - SESSION 2 (100%, 2h)\n✓ Nghiên cứu học phần Quản trị: SEL101 - SESSION (100%, 2h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 7
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Trần Quốc Tuấn",
+      "email": "tuantq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy lớp CNTT6",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Chuẩn bị bài",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Duyệt học liệu môn PTTKHT",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Giảng dạy lớp CNTT6 (100%, 2h)\n✓ Chăm sóc sinh viên (100%, 1h)\n✓ Chuẩn bị bài (100%, 1h)\n✓ Duyệt học liệu môn PTTKHT (100%, 1h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Phạm Tuấn Bình",
+      "email": "binhpt@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "[Giảng dạy] - Chuẩn bị bài học session 03 môn học phân tích thiết kế hệ thống",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "[Giảng dạy] - Triển khai giảng dạy sinh viên K25 - CNTT3 - Session 03 môn PTTKHT",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[Giảng dạy] - Triển khai giảng dạy sinh viên K25 - CNTT4 - Session 03 môn PTTKHT",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[Học liệu] - Review học liệu môn PTTKHT",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        }
+      ],
+      "summary": "✓ [Giảng dạy] - Chuẩn bị bài học session 03 môn học phân tích thiết kế hệ thống (100%, 1h)\n✓ [Giảng dạy] - Triển khai giảng dạy sinh viên K25 - CNTT3 - Session 03 môn PTTKHT (100%, 2h)\n✓ [Giảng dạy] - Triển khai giảng dạy sinh viên K25 - CNTT4 - Session 03 môn PTTKHT (100%, 2h)\n✓ [Học liệu] - Review học liệu môn PTTKHT (100%, 3h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Bùi Thanh Hải",
+      "email": "haibt@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy HN-K24-CNTT4 Microservices system design - Session 07",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Giảng dạy HN-K24-CNTT1 Microservices system design - Session 07+Session08",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        },
+        {
+          "title": "Giảng dạy HN-K24-CNTT2 Microservices system design - Session 07",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Giảng dạy HN-K24-CNTT4 Microservices system design - Session 07 (100%, 2h)\n✓ Giảng dạy HN-K24-CNTT1 Microservices system design - Session 07+Session08 (100%, 4h)\n✓ Giảng dạy HN-K24-CNTT2 Microservices system design - Session 07 (100%, 2h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Thị Hồng Minh",
+      "email": "minhnth@rikkeiacademy.net",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Cập nhật quy định mới về khung giờ học, khảo thí, KNM",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Nghiên cứu môn SSK102 Tin học ứng dụng SS06",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "QTKDNGHI2-6 Nghiên cứu cập nhật kiến thức chuyên môn",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Nghiên cứu môn SKK101 Kỹ năng làm việc nhóm SS02",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        }
+      ],
+      "summary": "✓ Cập nhật quy định mới về khung giờ học, khảo thí, KNM (100%, 0.5h)\n✓ Nghiên cứu môn SSK102 Tin học ứng dụng SS06 (100%, 2.5h)\n✓ QTKDNGHI2-6 Nghiên cứu cập nhật kiến thức chuyên môn (100%, 2.5h)\n✓ Nghiên cứu môn SKK101 Kỹ năng làm việc nhóm SS02 (100%, 2.5h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Triệu Thị Thanh Tâm",
+      "email": "tamttt@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Cố vấn học tập - lớp QTKD1,2",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Cập nhật trao đổi quy chế, quy định mới",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Trao đổi cùng GV/TG về tình hình 2 lớp QTKD1,2",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hỗ trợ câu lạc bộ sinh viên - Trao đổi cùng BCN về hoạt động CLB trong tháng 9",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Phổ biến cho BCS lớp QTKD1 về cách báo cáo với CVHT trên web",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Thực hiện rà soát lại danh sách sinh viên sau khi chia lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Gặp mặt và trao đổi cùng sinh viên vi phạm để kí cam kết",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        }
+      ],
+      "summary": "✓ Cố vấn học tập - lớp QTKD1,2 (100%, 3h)\n✓ Cập nhật trao đổi quy chế, quy định mới (100%, 0.5h)\n✓ Trao đổi cùng GV/TG về tình hình 2 lớp QTKD1,2 (100%, 1h)\n✓ Hỗ trợ câu lạc bộ sinh viên - Trao đổi cùng BCN về hoạt động CLB trong tháng 9 (100%, 1h)\n✓ Phổ biến cho BCS lớp QTKD1 về cách báo cáo với CVHT trên web (100%, 0.75h)\n✓ Thực hiện rà soát lại danh sách sinh viên sau khi chia lớp (100%, 1h)\n✓ Gặp mặt và trao đổi cùng sinh viên vi phạm để kí cam kết (100%, 0.75h)",
+      "stats": {
+        "total": 7,
+        "done": 7,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Hoàng Thị Hậu",
+      "email": "hauht@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Cập nhật quy trình, quy định",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Nghiên cứu thiết kế lesson plan 4 session môn Kỹ năng HT chủ động và phát triển bản thân",
+          "done": true,
+          "percent": 100,
+          "hours": 4.5
+        },
+        {
+          "title": "Tiếp nhận bàn giao kỹ năng mềm từ thầy Huấn",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        }
+      ],
+      "summary": "✓ Cập nhật quy trình, quy định (100%, 0.5h)\n✓ Nghiên cứu thiết kế lesson plan 4 session môn Kỹ năng HT chủ động và phát triển bản thân (100%, 4.5h)\n✓ Tiếp nhận bàn giao kỹ năng mềm từ thầy Huấn (100%, 3h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Thành Ngọc",
+      "email": "ngoclt@rikkei.edu.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Hoàn thiện bài đọc session 1 SSK103 - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hoàn thiện bài đọc session 2 SSK103 - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hoàn thiện bài đọc session 3 SSK103 - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hoàn thiện bài đọc session 4 SSK103 - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Xây dựng bài đọc session 1 SSK101 - Kỹ năng học tập chủ động",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Xây dựng bài đọc session 2 SSK101 - Kỹ năng học tập chủ động",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Xây dựng bài đọc session 3 SSK101 - Kỹ năng học tập chủ động",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Xây dựng bài đọc session 4 SSK101 - Kỹ năng học tập chủ động",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Hoàn thiện bài đọc session 1 SSK103 - Tư duy phân tích (100%, 1h)\n✓ Hoàn thiện bài đọc session 2 SSK103 - Tư duy phân tích (100%, 1h)\n✓ Hoàn thiện bài đọc session 3 SSK103 - Tư duy phân tích (100%, 1h)\n✓ Hoàn thiện bài đọc session 4 SSK103 - Tư duy phân tích (100%, 1h)\n✓ Xây dựng bài đọc session 1 SSK101 - Kỹ năng học tập chủ động (100%, 1h)\n✓ Xây dựng bài đọc session 2 SSK101 - Kỹ năng học tập chủ động (100%, 1h)\n✓ Xây dựng bài đọc session 3 SSK101 - Kỹ năng học tập chủ động (100%, 1h)\n✓ Xây dựng bài đọc session 4 SSK101 - Kỹ năng học tập chủ động (100%, 1h)",
+      "stats": {
+        "total": 8,
+        "done": 8,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lê Thị Bảo Yến",
+      "email": "yenltb@rikkeiedu.org",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Học tập bồi dưỡng: Tìm hiểu tài liệu về Nội dung môn Quản trị chiến lược (Tóm tắt nội dung Session 8: Hệ thống chiến lược trong doanh nghiệp)",
+          "done": false,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Cập nhật kiến thức học phần mới Kỹ năng mềm: Tư duy phân tích Session 3,4",
+          "done": false,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Review học liệu bài đọc: Bài đọc Lesson 1 (Session 2) - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc: Bài đọc Lesson 2 (Session 2) - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc: Bài đọc Lesson 1 (Session 3) - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc: Bài đọc Lesson 2 (Session 3) - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc: Bài đọc Lesson 1 (Session 4) - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Review học liệu bài đọc: Bài đọc Lesson 2 (Session 4) - Tư duy phân tích",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Hoàn thiện khung Lesson Plan, kịch bản, slide cho môn Tư duy phân tích chuẩn bị giảng thử",
+          "done": false,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Báo cáo kết quả ngày và lên kế hoạch công việc cho tuần tiếp theo",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "• Học tập bồi dưỡng: Tìm hiểu tài liệu về Nội dung môn Quản trị chiến lược (Tóm tắt nội dung Session 8: Hệ thống chiến lược trong doanh nghiệp) (100%, 1h)\n• Cập nhật kiến thức học phần mới Kỹ năng mềm: Tư duy phân tích Session 3,4 (100%, 2.5h)\n✓ Review học liệu bài đọc: Bài đọc Lesson 1 (Session 2) - Tư duy phân tích (100%, 0.5h)\n✓ Review học liệu bài đọc: Bài đọc Lesson 2 (Session 2) - Tư duy phân tích (100%, 0.5h)\n✓ Review học liệu bài đọc: Bài đọc Lesson 1 (Session 3) - Tư duy phân tích (100%, 0.5h)\n✓ Review học liệu bài đọc: Bài đọc Lesson 2 (Session 3) - Tư duy phân tích (100%, 0.5h)\n✓ Review học liệu bài đọc: Bài đọc Lesson 1 (Session 4) - Tư duy phân tích (100%, 0.5h)\n✓ Review học liệu bài đọc: Bài đọc Lesson 2 (Session 4) - Tư duy phân tích (100%, 0.5h)\n• Hoàn thiện khung Lesson Plan, kịch bản, slide cho môn Tư duy phân tích chuẩn bị giảng thử (100%, 1h)\n✓ Báo cáo kết quả ngày và lên kế hoạch công việc cho tuần tiếp theo (100%, 0.5h)",
+      "stats": {
+        "total": 10,
+        "done": 7,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Thị Như Quỳnh",
+      "email": "quynhntn@rikkeiacademy.net",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Kiểm tra BTVN - QTKD1 & QTKD2 (SS3)",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "CSSV - QTKD1 & QTKD2",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Cập nhật, trao đổi quy chế, quy định mới",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Trao đổi với CVHT & GV về tình hình 2 lớp QTKD1 & QTKD2",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hỗ trợ câu lạc bộ sinh viên - Trao đổi với BCN về kế hoạch hoạt động CLB trong tháng 9",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Nghiên cứu SS4 - MAN107",
+          "done": true,
+          "percent": 100,
+          "hours": 1.25
+        }
+      ],
+      "summary": "✓ Kiểm tra BTVN - QTKD1 & QTKD2 (SS3) (100%, 2h)\n✓ CSSV - QTKD1 & QTKD2 (100%, 2h)\n✓ Cập nhật, trao đổi quy chế, quy định mới (100%, 0.5h)\n✓ Trao đổi với CVHT & GV về tình hình 2 lớp QTKD1 & QTKD2 (100%, 1h)\n✓ Hỗ trợ câu lạc bộ sinh viên - Trao đổi với BCN về kế hoạch hoạt động CLB trong tháng 9 (100%, 1h)\n✓ Nghiên cứu SS4 - MAN107 (100%, 1.25h)",
+      "stats": {
+        "total": 6,
+        "done": 6,
+        "hours": 7.75
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Mai Xuân Chinh",
+      "email": "chinhmai124@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Check bài tập CNTT3-K25",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Họp Cùng leader",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Review học liệu",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Check báo cáo họp nhóm sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Check bài tập CNTT3-K25 (100%, 1h)\n✓ Chăm sóc sinh viên (100%, 1h)\n✓ Họp Cùng leader (100%, 2h)\n✓ Review học liệu (100%, 2h)\n✓ Check báo cáo họp nhóm sinh viên (100%, 1h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 7
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Đinh Thành Nam",
+      "email": "thanhnamak@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "[Chấm bài tập và chăm sóc sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "[Quay video] https://www.youtube.com/watch?v=Pdf7WH3rXB0",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "[Họp]",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "[Làm slide] https://docs.google.com/presentation/d/1wCfttroYJb8QFzFX85qs8zLLfyJijP87XFV_9z2x7pA/edit?slide=id.p1#slide=id.p1",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ [Chấm bài tập và chăm sóc sinh viên (100%, 2h)\n✓ [Quay video] https://www.youtube.com/watch?v=Pdf7WH3rXB0 (100%, 3h)\n✓ [Họp] (100%, 1h)\n✓ [Làm slide] https://docs.google.com/presentation/d/1wCfttroYJb8QFzFX85qs8zLLfyJijP87XFV_9z2x7pA/edit?slide=id.p1#slide=id.p1 (100%, 2h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Trần Thị Mỹ Phước",
+      "email": "phuocttm@rikkeieducation.id.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Hoàn thiện văn bản word phụ lục khảo thí để ban hành",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Điều chỉnh phần kahro thí CBCT và CBGS",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Tạo tài khoản CVHT cho cán bộ lớp",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Phối hợp với TVV xử lý và phản hồi về các trường hợp SV",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Phản hồi các thông tin phát sinh",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Phản hồi các thông itn SV",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Hightlight các văn bản quy định",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Hoàn thiện văn bản word phụ lục khảo thí để ban hành (100%, 2.5h)\n✓ Điều chỉnh phần kahro thí CBCT và CBGS (100%, 0.5h)\n✓ Tạo tài khoản CVHT cho cán bộ lớp (100%, 1h)\n✓ Phối hợp với TVV xử lý và phản hồi về các trường hợp SV (100%, 1h)\n✓ Phản hồi các thông tin phát sinh (100%, 1h)\n✓ Phản hồi các thông itn SV (100%, 1h)\n✓ Hightlight các văn bản quy định (100%, 1h)",
+      "stats": {
+        "total": 7,
+        "done": 7,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Phạm Ngọc Kiên",
+      "email": "kienpn@rikkeiedu.io.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Duyệt tài liệu K25 phân tích thiết kế",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        },
+        {
+          "title": "Vào lớp hỗ trợ sinh viên làm bài tập 1h + chuẩn bị kiến thức trước khi vào",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Bổ sung thêm BTVN cho môn nhập môn công nghệ thông tin k26",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        }
+      ],
+      "summary": "✓ Duyệt tài liệu K25 phân tích thiết kế (100%, 4h)\n✓ Vào lớp hỗ trợ sinh viên làm bài tập 1h + chuẩn bị kiến thức trước khi vào (100%, 2h)\n✓ Bổ sung thêm BTVN cho môn nhập môn công nghệ thông tin k26 (100%, 2h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Thị Tươi",
+      "email": "tuoint@rikkei.edu.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Họp chốt KH giảng dạy",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Review công việc của team",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Cập nhật kế hoạch giảng dạy",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Cập nhật TKB",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Tiếp nhận và xử lý các vấn đề phát sinh",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        }
+      ],
+      "summary": "✓ Họp chốt KH giảng dạy (100%, 1.5h)\n✓ Review công việc của team (100%, 1h)\n✓ Cập nhật kế hoạch giảng dạy (100%, 2h)\n✓ Cập nhật TKB (100%, 1.5h)\n✓ Tiếp nhận và xử lý các vấn đề phát sinh (100%, 1.5h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 7.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lại Trung Lâm",
+      "email": "laitrunglamjr@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "dạy lớp cntt5 tiết thực hành ( 1 tiếng) + chuẩn bị bài trước khi lên lớp hướng dẫn bạn làm",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "chăm sóc sinh viên lớp cntt5 + chấm bài + chấm record+ đôn đốc các bạn",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "feedback học liệu môn pttk ss5 67  toàn bọ phần quizz",
+          "done": true,
+          "percent": 100,
+          "hours": 4
+        }
+      ],
+      "summary": "✓ dạy lớp cntt5 tiết thực hành ( 1 tiếng) + chuẩn bị bài trước khi lên lớp hướng dẫn bạn làm (100%, 2.5h)\n✓ chăm sóc sinh viên lớp cntt5 + chấm bài + chấm record+ đôn đốc các bạn (100%, 1.5h)\n✓ feedback học liệu môn pttk ss5 67  toàn bọ phần quizz (100%, 4h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Trịnh Quốc Hai",
+      "email": "haitq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "review học liệu nhập môn CNTT",
+          "done": true,
+          "percent": 100,
+          "hours": 8
+        }
+      ],
+      "summary": "✓ review học liệu nhập môn CNTT (100%, 8h)",
+      "stats": {
+        "total": 1,
+        "done": 1,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lương Quốc Tuấn",
+      "email": "tuanlq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Review Bài đọc , Video SS7,9 môn phân tích thiết kế hệ thống",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Add Thêm các câu hỏi pop up do hệ thống bị reset nên mất phải add lại môn nhập môn công nghệ thông tin",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Reivew quiz cuối giờ ss1,ss2 đã feedback cho thầy Lâm",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Review mindmap SS5,7,9 môn phân tích thiết kế hệ thống",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Review bài tập về nhà ss3,4,5 môn nhập môn công nghệ thông tin",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        }
+      ],
+      "summary": "✓ Review Bài đọc , Video SS7,9 môn phân tích thiết kế hệ thống (100%, 3h)\n✓ Add Thêm các câu hỏi pop up do hệ thống bị reset nên mất phải add lại môn nhập môn công nghệ thông tin (100%, 2h)\n✓ Reivew quiz cuối giờ ss1,ss2 đã feedback cho thầy Lâm (100%, 1h)\n✓ Review mindmap SS5,7,9 môn phân tích thiết kế hệ thống (100%, 1h)\n✓ Review bài tập về nhà ss3,4,5 môn nhập môn công nghệ thông tin (100%, 1h)",
+      "stats": {
+        "total": 5,
+        "done": 5,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Lâm Tùng Dương",
+      "email": "duonglt@rikkeieducation.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Kiểm tra bài tập về nhà 2 lớp CNTT1-CNTT2",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Vào lớp triển khai cố vấn học tập 2 lớp CNTT3-CNTT4 KS24",
+          "done": true,
+          "percent": 100,
+          "hours": 1.25
+        },
+        {
+          "title": "Kiểm tra Hoạt động nhóm 2 lớp CNTT1-CNTT2",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        },
+        {
+          "title": "Review học liệu môn IT105-KS25",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Trả lời, phản hồi tin nhắn",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Chăm sóc sinh viên CNTT1-CNTT2",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Làm việc với thầy Hưởng,CTSV về các bạn nghỉ học",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Kiểm tra bài tập về nhà 2 lớp CNTT1-CNTT2 (100%, 2h)\n✓ Vào lớp triển khai cố vấn học tập 2 lớp CNTT3-CNTT4 KS24 (100%, 1.25h)\n✓ Kiểm tra Hoạt động nhóm 2 lớp CNTT1-CNTT2 (100%, 0.75h)\n✓ Review học liệu môn IT105-KS25 (100%, 1.5h)\n✓ Trả lời, phản hồi tin nhắn (100%, 0.5h)\n✓ Chăm sóc sinh viên CNTT1-CNTT2 (100%, 1h)\n✓ Làm việc với thầy Hưởng,CTSV về các bạn nghỉ học (100%, 0.5h)",
+      "stats": {
+        "total": 7,
+        "done": 7,
+        "hours": 7.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Quảng An",
+      "email": "annq@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy CNTT1",
+          "done": true,
+          "percent": 100,
+          "hours": 3
+        },
+        {
+          "title": "Giảng dạy CNTT2",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        },
+        {
+          "title": "Giảng dạy CNTT5",
+          "done": true,
+          "percent": 100,
+          "hours": 2.5
+        }
+      ],
+      "summary": "✓ Giảng dạy CNTT1 (100%, 3h)\n✓ Giảng dạy CNTT2 (100%, 2.5h)\n✓ Giảng dạy CNTT5 (100%, 2.5h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 8
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Huyền Trang",
+      "email": "trangnh.uliser54@gmail.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Họp ban QLĐT - A Quang",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Viết mail đề xuất Khảo thí LMS",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Chuẩn bị sát hạch K26",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Set gửi thông báo WS DA",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        },
+        {
+          "title": "Hỗ trợ trả giấy xác nhận sinh viên",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Trao đổi CVHT, liên hệ SV + chỉnh danh sách CNTT",
+          "done": true,
+          "percent": 100,
+          "hours": 1
+        },
+        {
+          "title": "Tổng hợp báo cáo tuần",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        }
+      ],
+      "summary": "✓ Họp ban QLĐT - A Quang (100%, 1.5h)\n✓ Viết mail đề xuất Khảo thí LMS (100%, 1h)\n✓ Chuẩn bị sát hạch K26 (100%, 1h)\n✓ Set gửi thông báo WS DA (100%, 0.5h)\n✓ Hỗ trợ trả giấy xác nhận sinh viên (100%, 1h)\n✓ Trao đổi CVHT, liên hệ SV + chỉnh danh sách CNTT (100%, 1h)\n✓ Tổng hợp báo cáo tuần (100%, 1.5h)",
+      "stats": {
+        "total": 7,
+        "done": 7,
+        "hours": 7.5
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Đức Minh",
+      "email": "minhnd@rikkeiacademy.vn",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Giảng dạy lớp K25 CNTT7",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Giảng dạy lớp K25 CNTT5",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Chuẩn bị kiến thức session 9 môn PTTKHT",
+          "done": true,
+          "percent": 100,
+          "hours": 0.75
+        }
+      ],
+      "summary": "✓ Giảng dạy lớp K25 CNTT7 (100%, 2h)\n✓ Giảng dạy lớp K25 CNTT5 (100%, 2h)\n✓ Chuẩn bị kiến thức session 9 môn PTTKHT (100%, 0.75h)",
+      "stats": {
+        "total": 3,
+        "done": 3,
+        "hours": 4.75
+      },
+      "difficulties": "",
+      "plan": ""
+    },
+    {
+      "user": "Nguyễn Xuân Bách",
+      "email": "bachnx@rikkeiacademy.com",
+      "department": "Đào tạo",
+      "project": null,
+      "tasks": [
+        {
+          "title": "Họp TKB, Khảo thí của ban QLĐT",
+          "done": true,
+          "percent": 100,
+          "hours": 2
+        },
+        {
+          "title": "Báo cáo chỉ số đào tạo",
+          "done": true,
+          "percent": 100,
+          "hours": 1.25
+        },
+        {
+          "title": "Xử lý các vi phạm đào tạo",
+          "done": true,
+          "percent": 100,
+          "hours": 1.5
+        },
+        {
+          "title": "Trao đổi về công tác up tài liệu học lại lên hệ thống",
+          "done": true,
+          "percent": 100,
+          "hours": 0.5
+        }
+      ],
+      "summary": "✓ Họp TKB, Khảo thí của ban QLĐT (100%, 2h)\n✓ Báo cáo chỉ số đào tạo (100%, 1.25h)\n✓ Xử lý các vi phạm đào tạo (100%, 1.5h)\n✓ Trao đổi về công tác up tài liệu học lại lên hệ thống (100%, 0.5h)",
+      "stats": {
+        "total": 4,
+        "done": 4,
+        "hours": 5.25
+      },
+      "difficulties": "",
+      "plan": ""
+    }
   ]
 }

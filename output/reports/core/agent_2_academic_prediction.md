@@ -1,6 +1,6 @@
 # BÁO CÁO DỰ BÁO HỌC THUẬT & KIỂM CHỨNG SAI SỐ KHOÁ K24, K25 & QTKD
 
-*Báo cáo được lập tự động ngày 10/09/2026 tích hợp chỉ số Ý thức lớp (Peer Pressure Multiplier).*
+*Báo cáo được lập tự động ngày 11/09/2026 tích hợp chỉ số Ý thức lớp (Peer Pressure Multiplier).*
 
 ## 📌 TÓM TẮT ĐÁNH GIÁ SAI SỐ KIỂM CHỨNG (MAE)
 - **Khóa K24 (Kiểm chứng qua môn AI Integration)**: MAE = **19.43%**
@@ -40,32 +40,32 @@
 
 | Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Dự báo (Quy chế mới)% |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| HN-K24-CNTT1 | 35 | 7.5% | 1.00 | **61.0%** | **58.5%** |
-| HN-K24-CNTT2 | 39 | 1.9% | 1.00 | **64.9%** | **64.9%** |
-| HN-K24-CNTT4 | 32 | 3.4% | 1.00 | **64.2%** | **64.2%** |
-| HCM-K24-CNTT1 | 43 | 1.7% | 1.00 | **64.5%** | **64.5%** |
-| HN-K24-CNTT3 | 42 | 6.8% | 1.00 | **60.8%** | **55.9%** |
+| HN-K24-CNTT1 | 35 | 7.6% | 1.00 | **61.0%** | **58.4%** |
+| HN-K24-CNTT2 | 39 | 2.1% | 1.00 | **64.8%** | **64.8%** |
+| HN-K24-CNTT4 | 32 | 3.5% | 1.00 | **64.2%** | **64.2%** |
+| HCM-K24-CNTT1 | 43 | 2.0% | 1.00 | **64.4%** | **64.4%** |
+| HN-K24-CNTT3 | 42 | 7.5% | 1.00 | **60.5%** | **54.3%** |
 
 ### 🔹 Khóa K25 - Môn Phân tích & thiết kế hệ thống (Hiện tại)
 
 | Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Dự báo (Quy chế mới)% |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | HN-K25-CNTT5 | 42 | 1.6% | 1.00 | **68.5%** | **68.5%** |
-| HN-K25-CNTT4 | 42 | 1.3% | 1.00 | **68.5%** | **68.5%** |
-| HN-K25-CNTT3 | 43 | 2.7% | 1.00 | **65.2%** | **65.2%** |
-| HN-K25-CNTT2 | 43 | 1.6% | 1.00 | **68.5%** | **68.5%** |
-| HN-K25-CNTT1 | 40 | 6.6% | 1.00 | **65.5%** | **65.5%** |
-| HCM-K25-CNTT5 | 40 | 1.0% | 1.00 | **66.1%** | **66.1%** |
-| HCM-K25-CNTT6 | 40 | 1.3% | 1.00 | **66.3%** | **66.3%** |
-| HCM-K25-CNTT7 | 39 | 5.0% | 1.00 | **58.0%** | **58.0%** |
+| HN-K25-CNTT4 | 42 | 1.2% | 1.00 | **68.5%** | **68.5%** |
+| HN-K25-CNTT3 | 43 | 2.6% | 1.00 | **65.1%** | **65.1%** |
+| HN-K25-CNTT2 | 43 | 2.2% | 1.00 | **68.1%** | **68.1%** |
+| HN-K25-CNTT1 | 40 | 7.9% | 1.00 | **64.8%** | **64.8%** |
+| HCM-K25-CNTT5 | 40 | 1.2% | 1.00 | **66.1%** | **66.1%** |
+| HCM-K25-CNTT6 | 40 | 2.0% | 1.00 | **66.0%** | **66.0%** |
+| HCM-K25-CNTT7 | 39 | 6.3% | 1.00 | **57.6%** | **57.6%** |
 | HCM-K25-CNTT8 | 36 | 14.6% | 0.96 | **47.6%** | **33.6%** |
 
 ### 🔹 Khóa KS25 QTKD - Môn Quản trị chiến lược MAN107 (Hiện tại)
 
 | Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Dự báo (Quy chế mới)% |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| HN-K25-QTKD2 | 40 | 4.8% | 1.00 | **71.1%** | **71.1%** |
-| HN-K25-QTKD1 | 33 | 1.6% | 1.00 | **72.0%** | **72.0%** |
+| HN-K25-QTKD2 | 40 | 6.0% | 1.00 | **70.1%** | **70.1%** |
+| HN-K25-QTKD1 | 33 | 2.5% | 1.00 | **71.4%** | **71.4%** |
 
 
 ---
@@ -79,14 +79,15 @@
 
 | Khóa | Lớp | Học viên | XS đỗ% | Chuyên cần (vắng)% | Bài tập (nợ)% | Elearning (vi phạm) | Lý do chính |
 | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| K24 | HN-K24-CNTT1 | **Nguyễn Nhật Minh** ⚡ 96đ | **0.0% (Cấm thi)** | 24.9% | 11.1% | 0 bài | Vắng chuyên cần > 20% (24.9%) |
-| K24 | HN-K24-CNTT1 | **Nguyễn Văn Tùng** ⚡ 86đ | **0.0% (Cấm thi)** | 24.9% | 5.9% | 0 bài | Vắng chuyên cần > 20% (24.9%) |
-| K24 | HN-K24-CNTT1 | **Nguyễn Sỹ Trung** ⚡ 95đ | **0.0% (Cấm thi)** | 24.9% | 0.7% | 0 bài | Vắng chuyên cần > 20% (24.9%) |
-| K24 | HN-K24-CNTT3 | **Nguyễn Hoàng Nhật** | **0.0% (Cấm thi)** | 25.1% | 1.2% | 0 bài | Vắng chuyên cần > 20% (25.1%) |
-| K24 | HN-K24-CNTT3 | **Trần Khánh An** | **0.0% (Cấm thi)** | 33.5% | 1.2% | 0 bài | Vắng chuyên cần > 20% (33.5%) |
-| K24 | HN-K24-CNTT3 | **Trịnh Khắc Hưng** | **0.0% (Cấm thi)** | 25.1% | 1.2% | 0 bài | Vắng chuyên cần > 20% (25.1%) |
-| K24 | HN-K24-CNTT3 | **Hoàng Thiên Sơn** ⚡ 76đ | **0.0% (Cấm thi)** | 25.1% | 1.2% | 0 bài | Vắng chuyên cần > 20% (25.1%) |
-| K24 | HN-K24-CNTT3 | **Ngô Quang Anh** | **0.0% (Cấm thi)** | 20.9% | 1.2% | 0 bài | Vắng chuyên cần > 20% (20.9%) |
+| K24 | HN-K24-CNTT1 | **Nguyễn Nhật Minh** ⚡ 96đ | **0.0% (Cấm thi)** | 24.1% | 11.3% | 0 bài | Vắng chuyên cần > 20% (24.1%) |
+| K24 | HN-K24-CNTT1 | **Nguyễn Văn Tùng** ⚡ 86đ | **0.0% (Cấm thi)** | 24.1% | 6.1% | 0 bài | Vắng chuyên cần > 20% (24.1%) |
+| K24 | HN-K24-CNTT1 | **Nguyễn Sỹ Trung** ⚡ 95đ | **0.0% (Cấm thi)** | 24.1% | 0.8% | 0 bài | Vắng chuyên cần > 20% (24.1%) |
+| K24 | HN-K24-CNTT3 | **Nguyễn Hoàng Nhật** | **0.0% (Cấm thi)** | 30.1% | 1.7% | 0 bài | Vắng chuyên cần > 20% (30.1%) |
+| K24 | HN-K24-CNTT3 | **Trần Khánh An** | **0.0% (Cấm thi)** | 40.1% | 1.7% | 0 bài | Vắng chuyên cần > 20% (40.1%) |
+| K24 | HN-K24-CNTT3 | **Trịnh Khắc Hưng** | **0.0% (Cấm thi)** | 30.1% | 1.7% | 0 bài | Vắng chuyên cần > 20% (30.1%) |
+| K24 | HN-K24-CNTT3 | **Hoàng Thiên Sơn** ⚡ 76đ | **0.0% (Cấm thi)** | 30.1% | 1.7% | 0 bài | Vắng chuyên cần > 20% (30.1%) |
+| K24 | HN-K24-CNTT3 | **Ngô Quang Anh** | **0.0% (Cấm thi)** | 25.1% | 1.7% | 0 bài | Vắng chuyên cần > 20% (25.1%) |
+| K24 | HN-K24-CNTT3 | **Nguyễn Trần Bảo Khánh** ⚡ 93đ | **0.0% (Cấm thi)** | 20.1% | 1.7% | 0 bài | Vắng chuyên cần > 20% (20.1%) |
 | K25 | HCM-K25-CNTT8 | **Đỗ Tiến Phúc** | **0.0% (Cấm thi)** | 43.0% | 10.0% | 0 bài | Vắng chuyên cần > 20% (43.0%) |
 | K25 | HCM-K25-CNTT8 | **Đỗ Đình Long** | **0.0% (Cấm thi)** | 43.0% | 10.0% | 0 bài | Vắng chuyên cần > 20% (43.0%) |
 | K25 | HCM-K25-CNTT8 | **Nguyễn Hoàng Thiên Phúc** | **0.0% (Cấm thi)** | 43.0% | 10.0% | 0 bài | Vắng chuyên cần > 20% (43.0%) |
@@ -107,6 +108,6 @@
 
 | Khóa | Lớp | Học viên | XS đỗ% | Chuyên cần (vắng)% | Bài tập (nợ)% | Elearning (vi phạm) | Dấu hiệu báo động |
 | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| K24 | HN-K24-CNTT1 | **Trần Quang Hiệp** | **30.6%** | 12.4% | 11.1% | 0 bài | Học lực môn trước yếu (30.6%) |
-| K24 | HN-K24-CNTT4 | **Nguyễn Thị Phương** | **31.2%** | 10.7% | 0.5% | 0 bài | Học lực môn trước yếu (31.2%) |
+| K24 | HN-K24-CNTT1 | **Trần Quang Hiệp** | **30.6%** | 12.0% | 11.3% | 0 bài | Học lực môn trước yếu (30.6%) |
+| K24 | HN-K24-CNTT4 | **Nguyễn Thị Phương** | **31.3%** | 8.9% | 0.9% | 0 bài | Học lực môn trước yếu (31.3%) |
 | K25 | HCM-K25-CNTT5 | **Hoàng Minh Quân** | **29.9%** | 13.4% | 9.8% | 1 bài | Học lực môn trước yếu (29.9%) |

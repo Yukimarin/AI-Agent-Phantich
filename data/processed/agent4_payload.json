@@ -37,7 +37,7 @@
         {
           "name": "[QTKD] SX Tài nguyên học tập K26",
           "pic": "Lê Thành Ngọc",
-          "health": "OFF_TRACK",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         }
       ]
@@ -112,7 +112,7 @@
         {
           "name": "[QTKD] SX Tài nguyên học tập K26",
           "pic": "Lê Thành Ngọc",
-          "health": "OFF_TRACK",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         },
         {
@@ -1029,12 +1029,6 @@
           "status": "COMPLETED"
         },
         {
-          "name": "Triển khai môn Dự án K24",
-          "pic": "Hồ Xuân Hùng",
-          "health": "OFF_TRACK",
-          "status": "ACTIVE"
-        },
-        {
           "name": "[KS24]_IT209_Devops_v2",
           "pic": "Nguyễn Bá Minh Đạo",
           "health": "ON_TRACK",
@@ -1902,7 +1896,7 @@
     {
       "name": "[QTKD] SX Tài nguyên học tập K26",
       "pic": "Lê Thành Ngọc",
-      "health": "OFF_TRACK",
+      "health": "ON_TRACK",
       "status": "ACTIVE"
     },
     {

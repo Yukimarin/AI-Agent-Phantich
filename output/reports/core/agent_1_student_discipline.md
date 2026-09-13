@@ -1,7 +1,7 @@
 # BÁO CÁO THỐNG KÊ CHỈ SỐ VI PHẠM HÀNG NGÀY & NĂNG LỰC QUẢN TRỊ LỚP CỦA GV/TG
 
 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 12px 20px; border-radius: 8px; display: inline-block; font-weight: 600; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);">
-  <i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Báo cáo Ngày: 10/09/2026
+  <i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Báo cáo Ngày: 11/09/2026
 </div>
 
 > [!NOTE]
@@ -24,7 +24,7 @@
     </div>
     <div style="background:rgba(239,68,68,0.12);border-left:4px solid #ef4444;padding:10px 14px;border-radius:6px;margin-bottom:10px;">
         <div style="color:#fca5a5;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;">🚨 2 vấn đề phát hiện hôm nay</div>
-        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><li>Tỷ lệ nợ bài tập có xu hướng tăng (+2.54%).</li><li>Tỷ lệ vi phạm Elearning duy trì ở mức cao nghiêm trọng (10.94%).</li></ul>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><li>Tỷ lệ vắng mặt chuyên cần có xu hướng tăng nhanh (+2.47%).</li><li>Tỷ lệ vi phạm Elearning duy trì ở mức cao nghiêm trọng (10.58%).</li></ul>
     </div>
     <div style="background:rgba(245,158,11,0.08);border-left:4px solid #f59e0b;padding:11px 15px;border-radius:6px;margin-bottom:10px;">
         <div style="color:#fcd34d;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">👨‍🏫 Giảng Viên Lớp &mdash; Thực hiện 24&ndash;48h</div>
@@ -41,11 +41,11 @@
 
 | Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu hướng |
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| **HN-K24-CNTT1** | Bùi Thanh Hải | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 3.13% <span style='color:#10b981; font-weight:600;'>(▼ -0.10%)</span> | 19.35% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
-| **HN-K24-CNTT2** | Bùi Thanh Hải | N/A | 2.56% <span style='color:#ef4444; font-weight:600;'>(▲ +2.56%)</span> | 7.69% <span style='color:#ef4444; font-weight:600;'>(▲ +7.69%)</span> | 5.13% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
-| **HN-K24-CNTT3** | Hồ Xuân Hùng | N/A | 11.90% <span style='color:#ef4444; font-weight:600;'>(▲ +2.38%)</span> | 7.14% <span style='color:#ef4444; font-weight:600;'>(▲ +7.14%)</span> | 16.67% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
-| **HN-K24-CNTT4** | Bùi Thanh Hải | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 9.68% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
-| **HCM-K24-CNTT1** | Nguyễn Bá Minh Đạo | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 6.98% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
+| **HN-K24-CNTT1** | Bùi Thanh Hải | N/A | 3.23% <span style='color:#ef4444; font-weight:600;'>(▲ +3.23%)</span> | 3.23% <span style='color:#ef4444; font-weight:600;'>(▲ +0.10%)</span> | 19.35% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HN-K24-CNTT2** | Bùi Thanh Hải | N/A | 2.56% <span style='color:#64748b;'>(--)</span> | 2.56% <span style='color:#10b981; font-weight:600;'>(▼ -5.13%)</span> | 5.13% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
+| **HN-K24-CNTT3** | Hồ Xuân Hùng | N/A | 14.63% <span style='color:#ef4444; font-weight:600;'>(▲ +2.73%)</span> | 4.88% <span style='color:#10b981; font-weight:600;'>(▼ -2.26%)</span> | 14.63% <span style='color:#10b981; font-weight:600;'>(▼ -2.04%)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HN-K24-CNTT4** | Bùi Thanh Hải | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 3.23% <span style='color:#ef4444; font-weight:600;'>(▲ +3.23%)</span> | 9.68% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HCM-K24-CNTT1** | Nguyễn Bá Minh Đạo | N/A | 4.65% <span style='color:#ef4444; font-weight:600;'>(▲ +4.65%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 6.98% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
 
 </div>
 
@@ -55,9 +55,23 @@
 
 
 
-<div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:13px 17px;margin:16px 0;display:flex;align-items:center;gap:11px;">
-    <span style="font-size:1.35rem;">✅</span>
-    <div><strong style="color:#6ee7b7;">Kỷ luật ổn định:</strong> Khóa HN-KS25-CNTT không có chỉ số vi phạm nào tăng đột biến hôm nay. Không cần can thiệp khẩn cấp.</div>
+<div style="background:rgba(15,23,42,0.7);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px 20px;margin:16px 0;backdrop-filter:blur(10px);">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+        <span style="font-size:1.1rem;">📌</span>
+        <span style="font-weight:700;font-size:0.93rem;color:#e2e8f0;">Kế hoạch Hành động Khắc phục Vi phạm Gia tăng</span>
+    </div>
+    <div style="background:rgba(239,68,68,0.12);border-left:4px solid #ef4444;padding:10px 14px;border-radius:6px;margin-bottom:10px;">
+        <div style="color:#fca5a5;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;">🚨 1 vấn đề phát hiện hôm nay</div>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><li>Tỷ lệ vắng mặt chuyên cần có xu hướng tăng nhanh (+3.88%).</li></ul>
+    </div>
+    <div style="background:rgba(245,158,11,0.08);border-left:4px solid #f59e0b;padding:11px 15px;border-radius:6px;margin-bottom:10px;">
+        <div style="color:#fcd34d;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">👨‍🏫 Giảng Viên Lớp &mdash; Thực hiện 24&ndash;48h</div>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.65;"><li style='margin-bottom:5px;'>Gửi tin nhắn cảnh cáo Zalo cá nhân cho từng sinh viên vắng mặt ngay sau khi kết thúc ca học.</li><li style='margin-bottom:5px;'>Yêu cầu SV vắng nộp giải trình bằng văn bản trong 24h và áp dụng trừ điểm chuyên cần trực tiếp nếu không phép.</li><li style='margin-bottom:5px;'>Báo cáo khẩn danh sách SV vắng liên tiếp 2 buổi cho Cố vấn học tập (CVHT) trước 12h ngày hôm sau để can thiệp nóng.</li></ul>
+    </div>
+    <div style="background:rgba(59,130,246,0.08);border-left:4px solid #3b82f6;padding:11px 15px;border-radius:6px;">
+        <div style="color:#93c5fd;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">🧑‍💼 Cố Vấn Học Tập &mdash; Thực hiện trong hôm nay</div>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.65;"><li style='margin-bottom:5px;'>Thực hiện cuộc gọi khẩn cấp (Hotline) trực tiếp cho phụ huynh/người giám hộ để cảnh báo tình trạng vắng học.</li><li style='margin-bottom:5px;'>Triệu tập cuộc gặp 3 bên bắt buộc (GV - CVHT - SV) đối với các trường hợp vắng từ 3 buổi để ký cam kết học tập.</li><li style='margin-bottom:5px;'>Kích hoạt quy trình xem xét cấm thi cuối kỳ sớm đối với sinh viên có tỷ lệ chuyên cần môn học dưới 80%.</li></ul>
+    </div>
 </div>
 
 
@@ -65,10 +79,10 @@
 
 | Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu hướng |
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| **HN-K25-CNTT1** | Nguyễn Quảng An | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 19.51% <span style='color:#10b981; font-weight:600;'>(▼ -0.49%)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
-| **HN-K25-CNTT2** | Nguyễn Quảng An | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 4.88% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
-| **HN-K25-CNTT3** | Phạm Tuấn Bình | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 4.65% <span style='color:#10b981; font-weight:600;'>(▼ -6.98%)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
-| **HN-K25-CNTT4** | Phạm Tuấn Bình | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 2.63% <span style='color:#10b981; font-weight:600;'>(▼ -2.63%)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
+| **HN-K25-CNTT1** | Nguyễn Quảng An | N/A | 12.20% <span style='color:#ef4444; font-weight:600;'>(▲ +12.20%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 19.51% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HN-K25-CNTT2** | Nguyễn Quảng An | N/A | 4.88% <span style='color:#ef4444; font-weight:600;'>(▲ +4.88%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 4.88% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HN-K25-CNTT3** | Phạm Tuấn Bình | N/A | 2.33% <span style='color:#ef4444; font-weight:600;'>(▲ +2.33%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 4.65% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HN-K25-CNTT4** | Phạm Tuấn Bình | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 2.63% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
 | **HN-K25-CNTT5** | Nguyễn Quảng An | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 4.88% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
 
 </div>
@@ -86,7 +100,7 @@
     </div>
     <div style="background:rgba(239,68,68,0.12);border-left:4px solid #ef4444;padding:10px 14px;border-radius:6px;margin-bottom:10px;">
         <div style="color:#fca5a5;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;">🚨 3 vấn đề phát hiện hôm nay</div>
-        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><li>Tỷ lệ vắng mặt chuyên cần ở mức nguy hiểm (14.20%) và tăng nhanh (+8.28%) so với hôm qua.</li><li>Tỷ lệ nợ bài tập có xu hướng tăng (+4.14%).</li><li>🚨 <b>CẢNH BÁO MÔN MỚI:</b> Môn Phân tích thiết kế hệ thống xuất hiện vi phạm Elearning (13.02%), biến động +0.00% so với buổi trước (Đặc biệt lớp HCM-K25-CNTT8 vi phạm Elearning lên đến 31.25%).</li></ul>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><li>Tỷ lệ vắng mặt chuyên cần ở mức nguy hiểm (14.91%) và tăng nhanh (+3.51%) so với hôm qua.</li><li>Tỷ lệ nợ bài tập có xu hướng tăng (+3.83%).</li><li>🚨 <b>CẢNH BÁO MÔN MỚI:</b> Môn Phân tích thiết kế hệ thống xuất hiện vi phạm Elearning (13.66%), biến động +0.49% so với buổi trước (Đặc biệt lớp HCM-K25-CNTT8 vi phạm Elearning lên đến 31.25%).</li></ul>
     </div>
     <div style="background:rgba(245,158,11,0.08);border-left:4px solid #f59e0b;padding:11px 15px;border-radius:6px;margin-bottom:10px;">
         <div style="color:#fcd34d;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">👨‍🏫 Giảng Viên Lớp &mdash; Thực hiện 24&ndash;48h</div>
@@ -103,9 +117,9 @@
 
 | Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu hướng |
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| **HCM-K25-CNTT5** | Nguyễn Đức Minh | N/A | 4.55% <span style='color:#10b981; font-weight:600;'>(▼ -2.27%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 2.27% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-success'>✅ Ổn định</span> |
-| **HCM-K25-CNTT6** | Trần Quốc Tuấn | N/A | 0.00% <span style='color:#64748b;'>(--)</span> | 2.13% <span style='color:#ef4444; font-weight:600;'>(▲ +2.13%)</span> | 4.26% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
-| **HCM-K25-CNTT7** | Nguyễn Đức Minh | N/A | 21.74% <span style='color:#ef4444; font-weight:600;'>(▲ +21.74%)</span> | 2.17% <span style='color:#ef4444; font-weight:600;'>(▲ +2.17%)</span> | 19.57% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HCM-K25-CNTT5** | Nguyễn Đức Minh | N/A | 2.27% <span style='color:#10b981; font-weight:600;'>(▼ -2.28%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 4.55% <span style='color:#ef4444; font-weight:600;'>(▲ +2.28%)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HCM-K25-CNTT6** | Trần Quốc Tuấn | N/A | 9.52% <span style='color:#ef4444; font-weight:600;'>(▲ +9.52%)</span> | 2.38% <span style='color:#ef4444; font-weight:600;'>(▲ +0.25%)</span> | 4.76% <span style='color:#ef4444; font-weight:600;'>(▲ +0.50%)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HCM-K25-CNTT7** | Nguyễn Đức Minh | N/A | 16.28% <span style='color:#10b981; font-weight:600;'>(▼ -5.46%)</span> | 4.65% <span style='color:#ef4444; font-weight:600;'>(▲ +2.48%)</span> | 18.60% <span style='color:#10b981; font-weight:600;'>(▼ -0.97%)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
 | **HCM-K25-CNTT8** | Trần Quốc Tuấn | N/A | 37.50% <span style='color:#ef4444; font-weight:600;'>(▲ +15.62%)</span> | 15.63% <span style='color:#ef4444; font-weight:600;'>(▲ +15.63%)</span> | 31.25% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
 
 </div>
@@ -140,16 +154,16 @@
         <span style="font-weight:700;font-size:0.93rem;color:#e2e8f0;">Kế hoạch Hành động Khắc phục Vi phạm Gia tăng</span>
     </div>
     <div style="background:rgba(239,68,68,0.12);border-left:4px solid #ef4444;padding:10px 14px;border-radius:6px;margin-bottom:10px;">
-        <div style="color:#fca5a5;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;">🚨 1 vấn đề phát hiện hôm nay</div>
-        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><li>Tỷ lệ vắng mặt chuyên cần ở mức nguy hiểm (10.30%) và tăng nhanh (+4.46%) so với hôm qua.</li></ul>
+        <div style="color:#fca5a5;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;">🚨 2 vấn đề phát hiện hôm nay</div>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.6;"><li>Tỷ lệ vắng mặt chuyên cần ở mức nguy hiểm (14.76%) và tăng nhanh (+4.46%) so với hôm qua.</li><li>Tỷ lệ vi phạm Elearning có xu hướng gia tăng (+2.38%).</li></ul>
     </div>
     <div style="background:rgba(245,158,11,0.08);border-left:4px solid #f59e0b;padding:11px 15px;border-radius:6px;margin-bottom:10px;">
         <div style="color:#fcd34d;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">👨‍🏫 Giảng Viên Lớp &mdash; Thực hiện 24&ndash;48h</div>
-        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.65;"><li style='margin-bottom:5px;'>Gửi tin nhắn cảnh cáo Zalo cá nhân cho từng sinh viên vắng mặt ngay sau khi kết thúc ca học.</li><li style='margin-bottom:5px;'>Yêu cầu SV vắng nộp giải trình bằng văn bản trong 24h và áp dụng trừ điểm chuyên cần trực tiếp nếu không phép.</li><li style='margin-bottom:5px;'>Báo cáo khẩn danh sách SV vắng liên tiếp 2 buổi cho Cố vấn học tập (CVHT) trước 12h ngày hôm sau để can thiệp nóng.</li></ul>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.65;"><li style='margin-bottom:5px;'>Kiểm soát nghiêm đầu giờ: Điểm danh và kiểm tra nhanh 5 phút đầu buổi dựa trên nội dung Elearning; từ chối cho SV vào lớp nếu chưa hoàn thành lý thuyết Elearning.</li><li style='margin-bottom:5px;'>Kèm cặp trực tiếp tại lớp: Dành 15-20 phút cuối ca học trực tiếp kèm cặp nhóm sinh viên chưa nộp bài hoàn thành các bài tập trọng tâm.</li><li style='margin-bottom:5px;'>Cảnh báo & Báo cáo nóng: Gửi tin nhắn Zalo cá nhân cho SV vắng/nợ ngay sau ca học và báo cáo danh sách SV vắng liên tiếp 2 buổi cho CVHT trước 12h ngày hôm sau.</li></ul>
     </div>
     <div style="background:rgba(59,130,246,0.08);border-left:4px solid #3b82f6;padding:11px 15px;border-radius:6px;">
         <div style="color:#93c5fd;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">🧑‍💼 Cố Vấn Học Tập &mdash; Thực hiện trong hôm nay</div>
-        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.65;"><li style='margin-bottom:5px;'>Thực hiện cuộc gọi khẩn cấp (Hotline) trực tiếp cho phụ huynh/người giám hộ để cảnh báo tình trạng vắng học.</li><li style='margin-bottom:5px;'>Triệu tập cuộc gặp 3 bên bắt buộc (GV - CVHT - SV) đối với các trường hợp vắng từ 3 buổi để ký cam kết học tập.</li><li style='margin-bottom:5px;'>Kích hoạt quy trình xem xét cấm thi cuối kỳ sớm đối với sinh viên có tỷ lệ chuyên cần môn học dưới 80%.</li></ul>
+        <ul style="margin:0;padding-left:18px;color:#e2e8f0;font-size:0.88rem;line-height:1.65;"><li style='margin-bottom:5px;'>Hotline khẩn cấp: Thực hiện cuộc gọi Hotline trực tiếp cho phụ huynh/người giám hộ báo cáo tình trạng vắng học và nợ bài của sinh viên trong vòng 24h.</li><li style='margin-bottom:5px;'>Triệu tập 3 bên: Triệu tập cuộc gặp trực tiếp bắt buộc (GV - CVHT - SV) đối với các trường hợp vi phạm từ 3 buổi trở lên để ký biên bản cam kết học tập.</li><li style='margin-bottom:5px;'>Kiểm toán điều kiện học vụ: Rà soát lập danh sách SV có tỷ lệ chuyên cần < 80% hoặc Elearning < 50% để đưa vào diện xem xét cấm thi cuối kỳ sớm.</li></ul>
     </div>
 </div>
 
@@ -158,8 +172,8 @@
 
 | Tên Lớp | Giảng viên | Trợ giảng | Chuyên cần | Bài tập | Elearning | Xu hướng |
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| **HN-K25-QTKD1** | Đặng Quỳnh Trang | N/A | 8.70% <span style='color:#ef4444; font-weight:600;'>(▲ +6.53%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#10b981; font-weight:600;'>(▼ -2.17%)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
-| **HN-K25-QTKD2** | Đặng Quỳnh Trang | N/A | 11.90% <span style='color:#ef4444; font-weight:600;'>(▲ +2.38%)</span> | 2.38% <span style='color:#ef4444; font-weight:600;'>(▲ +2.38%)</span> | 7.14% <span style='color:#10b981; font-weight:600;'>(▼ -2.38%)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HN-K25-QTKD1** | Đặng Quỳnh Trang | N/A | 15.22% <span style='color:#ef4444; font-weight:600;'>(▲ +6.52%)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | 0.00% <span style='color:#64748b;'>(--)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
+| **HN-K25-QTKD2** | Đặng Quỳnh Trang | N/A | 14.29% <span style='color:#ef4444; font-weight:600;'>(▲ +2.39%)</span> | 4.76% <span style='color:#ef4444; font-weight:600;'>(▲ +2.38%)</span> | 11.90% <span style='color:#ef4444; font-weight:600;'>(▲ +4.76%)</span> | <span class='badge badge-danger'>🚨 Tăng</span> |
 
 </div>
 
@@ -178,10 +192,10 @@
 
 | Hạng | Họ và Tên | Tổng số lớp đã dạy | Chỉ số CMI tích lũy | Phân loại |
 | :---: | :--- | :---: | :---: | :--- |
-| 1 | **Nguyễn Đức Minh** | 2 lớp | **+16.36%** | Rescuers (Giải cứu xuất sắc) |
-| 2 | **Đặng Quỳnh Trang** | 3 lớp | **+16.04%** | Rescuers (Giải cứu xuất sắc) |
+| 1 | **Nguyễn Đức Minh** | 2 lớp | **+15.64%** | Rescuers (Giải cứu xuất sắc) |
+| 2 | **Đặng Quỳnh Trang** | 3 lớp | **+15.36%** | Rescuers (Giải cứu xuất sắc) |
 | 3 | **Lương Quốc Tuấn** | 4 lớp | **+13.96%** | Rescuers (Giải cứu xuất sắc) |
-| 4 | **Nguyễn Bá Minh Đạo** | 3 lớp | **+13.91%** | Rescuers (Giải cứu xuất sắc) |
+| 4 | **Nguyễn Bá Minh Đạo** | 3 lớp | **+13.85%** | Rescuers (Giải cứu xuất sắc) |
 | 5 | **Ngô Quang Huấn** | 7 lớp | **+13.84%** | Rescuers (Giải cứu xuất sắc) |
 
 ### 🏆 Bảng xếp hạng Top 5 Trợ giảng xuất sắc (Trợ giảng phụ trách)
@@ -204,7 +218,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Đức Minh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 2 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT5)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 2 Lớp (HCM-K25-CNTT5, HCM-K25-CNTT7)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -225,7 +239,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Thế Kiên</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT4, HN-K25-CNTT3, HN-K25-CNTT6)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT6, HN-K25-CNTT4, HN-K25-CNTT3)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -246,7 +260,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lương Quốc Tuấn</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT1, HN-K25-CNTT5, HN-K25-CNTT2, HN-K25-CNTT3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT5, HN-K25-CNTT1, HN-K25-CNTT3, HN-K25-CNTT2)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -267,7 +281,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Bá Minh Đạo</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HCM-K24-CNTT2, HCM-K25-CNTT3, HCM-K24-CNTT1)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HCM-K25-CNTT3, HCM-K24-CNTT2, HCM-K24-CNTT1)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -288,7 +302,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Quảng An</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 6 Lớp (HN-K25-CNTT4, HN-K25-CNTT2, HN-K25-CNTT1, HN-K25-CNTT5, HN-K25-CNTT3, HN-K25-CNTT6)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 6 Lớp (HN-K25-CNTT4, HN-K25-CNTT5, HN-K25-CNTT2, HN-K25-CNTT1, HN-K25-CNTT3, HN-K25-CNTT6)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -309,7 +323,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Trần Quốc Tuấn</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT6, HCM-K25-CNTT8, HCM-K25-CNTT1, HCM-K25-CNTT4)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT6, HCM-K25-CNTT1, HCM-K25-CNTT4, HCM-K25-CNTT8)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -330,7 +344,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Tuấn Bình</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 6 Lớp (HN-K24-CNTT4, HN-K25-CNTT4, HN-K24-CNTT1, HN-K24-CNTT5, HN-K24-CNTT3, HN-K25-CNTT3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 6 Lớp (HN-K24-CNTT3, HN-K25-CNTT4, HN-K24-CNTT5, HN-K24-CNTT4, HN-K25-CNTT3, HN-K24-CNTT1)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -351,7 +365,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lại Trung Lâm</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT2, HN-K25-CNTT5, HN-K25-CNTT1)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT1, HN-K25-CNTT5, HN-K25-CNTT2)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -372,7 +386,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Viết Hùng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT8, HCM-K25-CNTT2, HCM-K25-CNTT5, HCM-K25-CNTT3, HCM-K24-CNTT1)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HCM-K25-CNTT3, HCM-K25-CNTT7, HCM-K25-CNTT5, HCM-K24-CNTT1, HCM-K25-CNTT2, HCM-K25-CNTT8)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -435,7 +449,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Phạm Ngọc Kiên</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT4, HN-K25-CNTT3, HN-K25-CNTT6)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT6, HN-K25-CNTT4, HN-K25-CNTT3)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -456,7 +470,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Bùi Thanh Hải</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT2, HN-K24-CNTT1, HN-K24-CNTT3, HN-K24-CNTT4)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT3, HN-K24-CNTT4, HN-K24-CNTT2, HN-K24-CNTT1)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -477,7 +491,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Mai Xuân Chinh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 4 Lớp (HN-K24-CNTT5, HN-K24-CNTT4, HN-K24-CNTT3, HN-K24-CNTT2)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 4 Lớp (HN-K24-CNTT4, HN-K24-CNTT5, HN-K24-CNTT3, HN-K24-CNTT2)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -498,7 +512,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Trịnh Quốc Hai</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-CNTT1, HN-K25-CNTT8, HN-K25-CNTT5)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-CNTT8, HN-K25-CNTT1, HN-K25-CNTT5)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -519,7 +533,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lưu Hoàng Xuân Nguyên</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 5 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT6, HCM-K25-CNTT5, HCM-K25-CNTT8, HCM-K25-CNTT1)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 5 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT6, HCM-K25-CNTT1, HCM-K25-CNTT5, HCM-K25-CNTT8)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -582,7 +596,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hồ Xuân Hùng</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT2, HN-K24-CNTT1, HN-K24-CNTT3, HN-K24-CNTT5)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K24-CNTT3, HN-K24-CNTT2, HN-K24-CNTT5, HN-K24-CNTT1)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -603,7 +617,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lê Hà Thanh Sang</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HCM-K25-CNTT7, HCM-K25-CNTT5, HCM-K25-CNTT2, HCM-K25-CNTT8)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HCM-K25-CNTT5, HCM-K25-CNTT7, HCM-K25-CNTT2, HCM-K25-CNTT8)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -666,7 +680,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Xuân Thức</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT2, HN-K25-CNTT3, HN-K25-CNTT6)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 3 Lớp (HN-K25-CNTT6, HN-K25-CNTT3, HN-K25-CNTT2)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -687,7 +701,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Ngọ Văn Quý</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT4, HN-K25-CNTT7, HN-K25-CNTT3, HN-K25-CNTT6)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 4 Lớp (HN-K25-CNTT6, HN-K25-CNTT7, HN-K25-CNTT4, HN-K25-CNTT3)</div>
 </div>
 <div style="background: #ef444420; color: #ef4444; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-exclamation-triangle"></i> Cần Hỗ Trợ (Needs Support)
@@ -712,7 +726,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Đặng Quỳnh Trang</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-QTKD1, HN-K25-QTKD3, HN-K25-QTKD2)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 3 Lớp (HN-K25-QTKD1, HN-K25-QTKD2, HN-K25-QTKD3)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -733,7 +747,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Ngô Quang Huấn</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 7 Lớp (HN-K24-CNTT4, HN-K24-CNTT2, HN-K24-CNTT1, HN-K25-QTKD3, HN-K25-QTKD2, HN-K25-QTKD1, HN-K24-CNTT3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 7 Lớp (HN-K25-QTKD1, HN-K24-CNTT2, HN-K24-CNTT3, HN-K25-QTKD3, HN-K25-QTKD2, HN-K24-CNTT4, HN-K24-CNTT1)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -754,7 +768,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Lâm Tùng Dương</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HN-K25-CNTT4, HN-K25-CNTT2, HN-K25-QTKD3, HN-K25-QTKD2, HN-K25-QTKD1, HN-K25-CNTT7)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: TG - 6 Lớp (HN-K25-QTKD1, HN-K25-CNTT4, HN-K25-CNTT2, HN-K25-CNTT7, HN-K25-QTKD2, HN-K25-QTKD3)</div>
 </div>
 <div style="background: #10b98120; color: #10b981; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-star"></i> Rescuers (Giải cứu xuất sắc)
@@ -775,7 +789,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Hoàng Thị Hậu</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-CNTT4, HN-K25-QTKD3, HN-K25-QTKD1, HN-K25-CNTT5, HN-K25-CNTT6)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-QTKD1, HN-K25-CNTT4, HN-K25-CNTT5, HN-K25-QTKD3, HN-K25-CNTT6)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)
@@ -838,7 +852,7 @@
 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px; margin-bottom: 12px;">
 <div>
 <h4 style="margin: 0; color: #f8fafc; font-size: 1.1rem;">Nguyễn Thị Hồng Minh</h4>
-<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-CNTT2, HN-K25-QTKD2, HN-K25-QTKD1, HN-K25-CNTT1, HN-K25-CNTT3)</div>
+<div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Vai trò: GV - 5 Lớp (HN-K25-QTKD1, HN-K25-CNTT2, HN-K25-CNTT1, HN-K25-QTKD2, HN-K25-CNTT3)</div>
 </div>
 <div style="background: #3b82f620; color: #3b82f6; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
 <i class="fas fa-check-circle"></i> Duy trì (Maintainers)

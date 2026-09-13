@@ -303,36 +303,52 @@ Tài liệu này lưu trữ các quyết định thiết kế và quy chuẩn k�
     - KS24 CNTT: Current Course `[IT-214] Microservices System Design` (ID: 216), Verification Course `[IT-213] AI Integration in Action` (ID: 220), CDC = 1.45.
     - KS25 CNTT: Current Course `[IT105-K25] Phân tích & thiết kế hệ thống` (ID: 224), Verification Course `[IT-215] Python Web` (ID: 217), CDC = 1.25.
     - KS25 QTKD: Current Course `[MAN107] Quản trị chiến lược doanh nghiệp` (ID: 213), Verification Course `[BA201] Phân tích nghiệp vụ` (ID: 222), CDC = 1.10.
-308: 
-309: ---
-310: 
-311: ## 20. Chốt Chặn 16 Lớp PTIT Chính Quy & Nâng Cấp Presentation Mode Cho Agent 2
-312: - **Khắc Phục Dứt Điểm Lỗi Lấy Toàn Bộ Lớp Trong DB**:
-313:   - **Nguyên nhân**: Trong `agents/core/agent_2_academic_pred/run.py`, logic cũ quét bảng `qldt_el.classes` bằng regex `KS24|KS25` lỏng lẻo, vô tình kéo theo các lớp tiếng Nhật (`HN-JPN-...`), tiếng Anh (`HN-ENG-...`), các lớp đình chỉ hoặc giải thể.
-314:   - **Quy chuẩn chốt chặn**: Agent 2 bắt buộc phải đọc trực tiếp danh sách 16 lớp chính quy từ `data/processed/agent1_output.json` (`active_a1_map`). Chỉ duyệt đúng 16 lớp PTIT hiện tại đang học (5 lớp KS24, 9 lớp KS25 CNTT, 2 lớp KS25 QTKD). 100% lớp rác, ngoại ngữ, đình chỉ bị loại bỏ ngay từ đầu pipeline.
-315: - **Nâng Cấp Giao Diện Báo Cáo Trực Quan Cho Giám Đốc (Presentation Mode)**:
-316:   - Bổ sung nút **"Chế độ Chụp Báo Cáo"** (`togglePresentationMode`): Khi kích hoạt, thanh điều hướng tab được ẩn đi, bố cục trang được co gọn chuẩn tỷ lệ 16:9 để chụp màn hình đưa vào slide báo cáo không bị vướng navigation.
-317:   - **3 Biểu đồ Chart.js Chuẩn SaaS Executive**:
-318:     1. `pred-compare-chart`: Biểu đồ cột kép so sánh Quy chuẩn cũ vs Quy chế mới cho 16 lớp, tích hợp 2 đường mốc chuẩn nét đứt (Xanh 70% An toàn, Đỏ 50% Báo động) và bộ 4 nút lọc khối lớp nhanh (`Tất cả`, `KS24`, `KS25`, `QTKD`).
-319:     2. `risk-doughnut-chart`: Biểu đồ donut 3 màu tương phản cao (Xanh - Vàng - Đỏ) kèm tâm số hiển thị tổng sĩ số sinh viên toàn viện.
-321:   - Đã kiểm toán tự động bằng Visual QA qua `browser_subagent`: 0 lỗi JavaScript, giao diện sắc nét, biểu đồ phản hồi tức thì.
-322: 
-323: ---
-324: 
-325: ## 21. Chuẩn Hóa Thuật Ngữ Đào Tạo Chính Quy & Tách Biệt 3 Khối Đào Tạo (Agent 2)
-326: - **Chuẩn Hóa Ngôn Từ Quản Lý Đào Tạo (Loại Bỏ Hoàn Toàn AI-Like Terms)**:
-327:   - *Nguy cơ Cao (Báo động Đỏ)* ➔ **Cảnh Báo Mức 1 (Nguy Cơ Cấm Thi)**.
-328:   - *Cảnh báo Vàng (Theo dõi)* ➔ **Cảnh Báo Mức 2 (Học Lực Cần Theo Dõi / Cận Ngưỡng)**.
-329:   - *An toàn & Đạt chuẩn* ➔ **Tiến Độ Học Tập Đạt Chuẩn**.
-330:   - *Care List / Can thiệp* ➔ **Sổ Tay Theo Dõi Học Viên Diện Cảnh Báo Học Vụ / Biện Pháp Hỗ Trợ**.
-331:   - *Quy chuẩn cũ vs Quy chế mới* ➔ **Quy Chế Cũ vs Quy Chế Hiện Hành**.
-332:   - *Hệ số phạt môi trường Peer Pressure / Hệ số Env* ➔ **Hệ Số Nề Nếp Lớp Học**.
-333:   - *Chế độ Chụp Báo Cáo* ➔ **Chế Độ Trích Xuất Báo Cáo**.
-334: - **Phân Tách Rạch Ròi Overview Theo 3 Khối Ngành Đào Tạo**:
-335:   - Bổ sung cụm 3 thẻ chuyên sâu (3-Cohort Breakdown Cards) ngay đầu Tab 1:
-336:     1. **Khóa KS24 CNTT** (Môn Microservices - 5 lớp): Sĩ số, Tỷ lệ dự kiến đỗ, Tỷ lệ vi phạm lớp, Cảnh báo học vụ, Đánh giá giáo vụ.
-337:     2. **Khóa KS25 CNTT** (Môn PTTKHT - 9 lớp): Phân tích phân hóa rõ rệt giữa cơ sở Hà Nội (5 lớp mới học 2 buổi) và cơ sở HCM (4 lớp, điểm nóng `HCM-K25-CNTT8` vắng 37.5%).
-338:     3. **Khóa KS25 QTKD** (Môn MAN107 - 2 lớp): 100% học viên an toàn, nề nếp đạt chuẩn.
-339: - **Minh Bạch Hóa Phương Pháp Luận Xác Định Tỷ Lệ Dự Kiến Qua Môn**:
-340:   - Tích hợp Hộp Giải trình Giáo vụ: Tỷ lệ dự kiến là **Kỳ vọng xác suất qua môn trung bình ($E[Pass]$)** kết hợp Điểm kỷ luật quá trình (40%), Năng lực học thuật tích lũy (60% - chia CDC độ khó) và Chốt chặn cấm thi quy chế.
-341:   - Giải trình rõ lý do con số giai đoạn này ở mức khả quan (61% – 78%): Các lớp Hà Nội mới học 2 buổi đầu nên chuyên cần cao kéo điểm kỳ vọng lên; Bài thi cuối kỳ / Đồ án tốt nghiệp (50% trọng số) chưa diễn ra.
+
+---
+
+## 20. Chốt Chặn 16 Lớp PTIT Chính Quy & Nâng Cấp Presentation Mode Cho Agent 2
+- **Khắc Phục Dứt Điểm Lỗi Lấy Toàn Bộ Lớp Trong DB**:
+- **Nguyên nhân**: Trong `agents/core/agent_2_academic_pred/run.py`, logic cũ quét bảng `qldt_el.classes` bằng regex `KS24|KS25` lỏng lẻo, vô tình kéo theo các lớp tiếng Nhật (`HN-JPN-...`), tiếng Anh (`HN-ENG-...`), các lớp đình chỉ hoặc giải thể.
+- **Quy chuẩn chốt chặn**: Agent 2 bắt buộc phải đọc trực tiếp danh sách 16 lớp chính quy từ `data/processed/agent1_output.json` (`active_a1_map`). Chỉ duyệt đúng 16 lớp PTIT hiện tại đang học (5 lớp KS24, 9 lớp KS25 CNTT, 2 lớp KS25 QTKD). 100% lớp rác, ngoại ngữ, đình chỉ bị loại bỏ ngay từ đầu pipeline.
+- **Nâng Cấp Giao Diện Báo Cáo Trực Quan Cho Giám Đốc (Presentation Mode)**:
+- Bổ sung nút **"Chế độ Chụp Báo Cáo"** (`togglePresentationMode`): Khi kích hoạt, thanh điều hướng tab được ẩn đi, bố cục trang được co gọn chuẩn tỷ lệ 16:9 để chụp màn hình đưa vào slide báo cáo không bị vướng navigation.
+- **3 Biểu đồ Chart.js Chuẩn SaaS Executive**:
+1. `pred-compare-chart`: Biểu đồ cột kép so sánh Quy chuẩn cũ vs Quy chế mới cho 16 lớp, tích hợp 2 đường mốc chuẩn nét đứt (Xanh 70% An toàn, Đỏ 50% Báo động) và bộ 4 nút lọc khối lớp nhanh (`Tất cả`, `KS24`, `KS25`, `QTKD`).
+2. `risk-doughnut-chart`: Biểu đồ donut 3 màu tương phản cao (Xanh - Vàng - Đỏ) kèm tâm số hiển thị tổng sĩ số sinh viên toàn viện.
+- Đã kiểm toán tự động bằng Visual QA qua `browser_subagent`: 0 lỗi JavaScript, giao diện sắc nét, biểu đồ phản hồi tức thì.
+
+---
+
+## 21. Chuẩn Hóa Thuật Ngữ Đào Tạo Chính Quy & Tách Biệt 3 Khối Đào Tạo (Agent 2)
+- **Chuẩn Hóa Ngôn Từ Quản Lý Đào Tạo (Loại Bỏ Hoàn Toàn AI-Like Terms)**:
+- *Nguy cơ Cao (Báo động Đỏ)* ➔ **Cảnh Báo Mức 1 (Nguy Cơ Cấm Thi)**.
+- *Cảnh báo Vàng (Theo dõi)* ➔ **Cảnh Báo Mức 2 (Học Lực Cần Theo Dõi / Cận Ngưỡng)**.
+- *An toàn & Đạt chuẩn* ➔ **Tiến Độ Học Tập Đạt Chuẩn**.
+- *Care List / Can thiệp* ➔ **Sổ Tay Theo Dõi Học Viên Diện Cảnh Báo Học Vụ / Biện Pháp Hỗ Trợ**.
+- *Quy chuẩn cũ vs Quy chế mới* ➔ **Quy Chế Cũ vs Quy Chế Hiện Hành**.
+- *Hệ số phạt môi trường Peer Pressure / Hệ số Env* ➔ **Hệ Số Nề Nếp Lớp Học**.
+- *Chế độ Chụp Báo Cáo* ➔ **Chế Độ Trích Xuất Báo Cáo**.
+- **Phân Tách Rạch Ròi Overview Theo 3 Khối Ngành Đào Tạo**:
+- Bổ sung cụm 3 thẻ chuyên sâu (3-Cohort Breakdown Cards) ngay đầu Tab 1:
+1. **Khóa KS24 CNTT** (Môn Microservices - 5 lớp): Sĩ số, Tỷ lệ dự kiến đỗ, Tỷ lệ vi phạm lớp, Cảnh báo học vụ, Đánh giá giáo vụ.
+2. **Khóa KS25 CNTT** (Môn PTTKHT - 9 lớp): Phân tích phân hóa rõ rệt giữa cơ sở Hà Nội (5 lớp mới học 2 buổi) và cơ sở HCM (4 lớp, điểm nóng `HCM-K25-CNTT8` vắng 37.5%).
+3. **Khóa KS25 QTKD** (Môn MAN107 - 2 lớp): 100% học viên an toàn, nề nếp đạt chuẩn.
+- **Minh Bạch Hóa Phương Pháp Luận Xác Định Tỷ Lệ Dự Kiến Qua Môn**:
+- Tích hợp Hộp Giải trình Giáo vụ: Tỷ lệ dự kiến là **Kỳ vọng xác suất qua môn trung bình ($E[Pass]$)** kết hợp Điểm kỷ luật quá trình (40%), Năng lực học thuật tích lũy (60% - chia CDC độ khó) và Chốt chặn cấm thi quy chế.
+- Giải trình rõ lý do con số giai đoạn này ở mức khả quan (61% – 78%): Các lớp Hà Nội mới học 2 buổi đầu nên chuyên cần cao kéo điểm kỳ vọng lên; Bài thi cuối kỳ / Đồ án tốt nghiệp (50% trọng số) chưa diễn ra.
+
+---
+
+## 22. Cập Nhật Dữ Liệu Ngày 11/09/2026, Đồng Bộ Báo Cáo Worklane & Điều Chuyển Lớp HCM
+- **Cập Nhật Dữ Liệu Học Thuật 11/09/2026 (PTIT_Chiso.xlsx)**:
+  - KS24_AI_Microservice: Cập nhật ngày 11/09 cho 5 lớp (HN-K24-CNTT1 CC 3.23%, BT 3.23%, EL 19.35%; HN-K24-CNTT2 CC 2.56%, BT 2.56%, EL 5.13%; HN-K24-CNTT3 CC 14.63%, BT 4.88%, EL 14.63%; HN-K24-CNTT4 BT 3.23%, EL 9.68%; HCM-K24-CNTT1 CC 4.65%, EL 6.98%).
+  - KS25_Phantichthietkehethong:
+    - Hà Nội: Cập nhật ca học ngày 11/09 (HN-K25-CNTT1 CC 12.2%, EL 19.51%; HN-K25-CNTT2 CC 4.88%, EL 4.88%; HN-K25-CNTT3 CC 2.33%, EL 4.65%; HN-K25-CNTT4 EL 2.63%; HN-K25-CNTT5 EL 4.88%).
+    - TP. HCM: Ghi nhận biến động chuyển sinh viên từ HCM-K25-CNTT8 sang các lớp khác (HCM-K25-CNTT5 tăng từ 39 ➔ 44 SV; HCM-K25-CNTT7 đạt 43 SV; HCM-K25-CNTT6 đạt 42 SV; HCM-K25-CNTT8 dừng ca học 11/09 để xử lý chuyển lớp).
+  - KS25_QTKD_MAN107: Ghi nhận ngày 11/09 (HN-K25-QTKD1 vắng CC 15.22%; HN-K25-QTKD2 CC 14.29%, BT 4.76%, EL 11.9%).
+- **Bổ Sung Báo Cáo Ngày 09/09 Trên Worklane**:
+  - Đã nộp thành công 8 công việc (tổng 6.25h, 100% hoàn thành) cho nhân sự Nguyễn Xuân Bách (achnx@rikkeiacademy.com) phòng Đào tạo (DT).
+- **Mở Rộng Kỳ Kiểm Toán Worklane Sang Mốc 7 Ngày Làm Việc (01/09 - 11/09/2026)**:
+  - Đồng bộ thời gian thực 47 dự án và hơn 1,000 issues từ Worklane API vào data/processed/project_issues_worklane.json.
+  - Tải và nạp 197 lượt báo cáo ngày từ ngày 01/09 đến 11/09 vào hệ thống kiểm toán.
+  - Tái tính toán tỷ lệ vênh giờ và dôi dư trung bình chuẩn hóa theo 7 ngày công cho 6 Khối và 41 nhân sự tại data/processed/worklane_comparison_t8_t9.json và output/dashboards/audit/worklane_staff_audit.html.

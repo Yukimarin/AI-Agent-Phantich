@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T21:19:08.251914",
+  "generated_at": "2026-09-11T20:47:07.559766",
   "sheets": {},
   "classes": {
     "HN-K24-CNTT1": {
@@ -219,6 +219,11 @@
             "2026-09-10": {
               "cc": 0.0,
               "bt": 3.13,
+              "el": 19.35
+            },
+            "2026-09-11": {
+              "cc": 3.23,
+              "bt": 3.23,
               "el": 19.35
             }
           }
@@ -463,6 +468,11 @@
               "cc": 2.56,
               "bt": 7.69,
               "el": 5.13
+            },
+            "2026-09-11": {
+              "cc": 2.56,
+              "bt": 2.56,
+              "el": 5.13
             }
           }
         },
@@ -706,6 +716,11 @@
               "cc": 11.9,
               "bt": 7.14,
               "el": 16.67
+            },
+            "2026-09-11": {
+              "cc": 14.63,
+              "bt": 4.88,
+              "el": 14.63
             }
           }
         },
@@ -948,6 +963,11 @@
             "2026-09-10": {
               "cc": 0.0,
               "bt": 0.0,
+              "el": 9.68
+            },
+            "2026-09-11": {
+              "cc": 0.0,
+              "bt": 3.23,
               "el": 9.68
             }
           }
@@ -1293,6 +1313,11 @@
             },
             "2026-09-10": {
               "cc": 0.0,
+              "bt": 0.0,
+              "el": 6.98
+            },
+            "2026-09-11": {
+              "cc": 4.65,
               "bt": 0.0,
               "el": 6.98
             }
@@ -1761,6 +1786,11 @@
               "cc": 0.0,
               "bt": 0.0,
               "el": 19.51
+            },
+            "2026-09-11": {
+              "cc": 12.2,
+              "bt": 0.0,
+              "el": 19.51
             }
           }
         },
@@ -2167,6 +2197,11 @@
             },
             "2026-09-10": {
               "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.88
+            },
+            "2026-09-11": {
+              "cc": 4.88,
               "bt": 0.0,
               "el": 4.88
             }
@@ -2577,6 +2612,11 @@
               "cc": 0.0,
               "bt": 0.0,
               "el": 4.65
+            },
+            "2026-09-11": {
+              "cc": 2.33,
+              "bt": 0.0,
+              "el": 4.65
             }
           }
         },
@@ -2985,6 +3025,11 @@
               "cc": 0.0,
               "bt": 0.0,
               "el": 2.63
+            },
+            "2026-09-11": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 2.63
             }
           }
         },
@@ -3390,6 +3435,11 @@
               "el": 4.88
             },
             "2026-09-10": {
+              "cc": 0.0,
+              "bt": 0.0,
+              "el": 4.88
+            },
+            "2026-09-11": {
               "cc": 0.0,
               "bt": 0.0,
               "el": 4.88
@@ -5201,20 +5251,25 @@
               "cc": 4.55,
               "bt": 0.0,
               "el": 2.27
+            },
+            "2026-09-11": {
+              "cc": 2.27,
+              "bt": 0.0,
+              "el": 4.55
             }
           }
         }
       }
     },
     "HCM-K25-CNTT6": {
-      "raw_name": "HCM-K25-CNTT6(38-37-47)",
-      "size": 47,
+      "raw_name": "HCM-K25-CNTT6(42)",
+      "size": 42,
       "size_info": {
-        "current_size": 47,
-        "initial_size": 38,
-        "has_changed": true,
-        "diff": 9,
-        "history_str": "38-37-47"
+        "current_size": 42,
+        "initial_size": 42,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": "42"
       },
       "sheets": {
         "KS25_Database": {
@@ -5549,20 +5604,25 @@
               "cc": 0.0,
               "bt": 2.13,
               "el": 4.26
+            },
+            "2026-09-11": {
+              "cc": 9.52,
+              "bt": 2.38,
+              "el": 4.76
             }
           }
         }
       }
     },
     "HCM-K25-CNTT7": {
-      "raw_name": "HCM-K25-CNTT7(39-46)",
-      "size": 46,
+      "raw_name": "HCM-K25-CNTT7(43)",
+      "size": 43,
       "size_info": {
-        "current_size": 46,
-        "initial_size": 39,
-        "has_changed": true,
-        "diff": 7,
-        "history_str": "39-46"
+        "current_size": 43,
+        "initial_size": 43,
+        "has_changed": false,
+        "diff": 0,
+        "history_str": "43"
       },
       "sheets": {
         "KS25_Database": {
@@ -5897,6 +5957,11 @@
               "cc": 21.74,
               "bt": 2.17,
               "el": 19.57
+            },
+            "2026-09-11": {
+              "cc": 16.28,
+              "bt": 4.65,
+              "el": 18.6
             }
           }
         }
@@ -6218,6 +6283,11 @@
             },
             "2026-09-10": {
               "cc": 8.7,
+              "bt": 0.0,
+              "el": 0.0
+            },
+            "2026-09-11": {
+              "cc": 15.22,
               "bt": 0.0,
               "el": 0.0
             }
@@ -6608,6 +6678,11 @@
               "cc": 11.9,
               "bt": 2.38,
               "el": 7.14
+            },
+            "2026-09-11": {
+              "cc": 14.29,
+              "bt": 4.76,
+              "el": 11.9
             }
           }
         },
@@ -7616,39 +7691,21 @@
     },
     {
       "sheet": "KS25_Phantichthietkehethong",
-      "class_raw": "HCM-K25-CNTT7(39-46)",
+      "class_raw": "HCM-K25-CNTT7(43)",
       "class_norm": "HCM-K25-CNTT7",
       "initial_size": 39,
-      "current_size": 46,
-      "diff": 7,
-      "alert": "Lớp 'HCM-K25-CNTT7(39-46)' tại môn/sheet [KS25_Phantichthietkehethong] có biến động sĩ số nội bộ: 39 -> 46 (Biến động: +7 SV)"
+      "current_size": 43,
+      "diff": 4,
+      "alert": "Lớp 'HCM-K25-CNTT7' (HCM-K25-CNTT7(43)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 39 -> 43 (Biến động: +4 SV)"
     },
     {
       "sheet": "KS25_Phantichthietkehethong",
-      "class_raw": "HCM-K25-CNTT7(39-46)",
-      "class_norm": "HCM-K25-CNTT7",
-      "initial_size": 39,
-      "current_size": 46,
-      "diff": 7,
-      "alert": "Lớp 'HCM-K25-CNTT7' (HCM-K25-CNTT7(39-46)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 39 -> 46 (Biến động: +7 SV)"
-    },
-    {
-      "sheet": "KS25_Phantichthietkehethong",
-      "class_raw": "HCM-K25-CNTT6(38-37-47)",
-      "class_norm": "HCM-K25-CNTT6",
-      "initial_size": 38,
-      "current_size": 47,
-      "diff": 9,
-      "alert": "Lớp 'HCM-K25-CNTT6(38-37-47)' tại môn/sheet [KS25_Phantichthietkehethong] có biến động sĩ số nội bộ: 38 -> 47 (Biến động: +9 SV)"
-    },
-    {
-      "sheet": "KS25_Phantichthietkehethong",
-      "class_raw": "HCM-K25-CNTT6(38-37-47)",
+      "class_raw": "HCM-K25-CNTT6(42)",
       "class_norm": "HCM-K25-CNTT6",
       "initial_size": 40,
-      "current_size": 47,
-      "diff": 7,
-      "alert": "Lớp 'HCM-K25-CNTT6' (HCM-K25-CNTT6(38-37-47)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 40 -> 47 (Biến động: +7 SV)"
+      "current_size": 42,
+      "diff": 2,
+      "alert": "Lớp 'HCM-K25-CNTT6' (HCM-K25-CNTT6(42)) chuyển từ môn [KS25_Python_Web] sang [KS25_Phantichthietkehethong] có biến động sĩ số: 40 -> 42 (Biến động: +2 SV)"
     },
     {
       "sheet": "KS25_Phantichthietkehethong",

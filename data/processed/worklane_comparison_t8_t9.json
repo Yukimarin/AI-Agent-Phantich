@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "So Sánh Hiệu Suất & Giờ Công Worklane: Tháng 08/2026 vs Kỳ 01/09 - 08/09/2026",
+    "title": "So Sánh Hiệu Suất & Giờ Công Worklane: Tháng 08/2026 vs Kỳ 01/09 - 11/09/2026",
     "groups_count": 6,
     "total_staff": 41
   },
@@ -20,18 +20,18 @@
         "compliance_rate": 83.1
       },
       "september": {
-        "days": 4,
-        "declared_hours": 361.2,
-        "standard_hours": 126.9,
-        "excess_hours": 234.3,
-        "excess_pct": 184.6,
-        "excess_per_day_staff": 4.51,
-        "compliance_rate": 86.5
+        "days": 7,
+        "declared_hours": 619.8,
+        "standard_hours": 245.3,
+        "excess_hours": 374.5,
+        "excess_pct": 152.7,
+        "excess_per_day_staff": 4.12,
+        "compliance_rate": 84.6
       },
       "delta": {
-        "excess_pct_change": 24.3,
-        "excess_per_day_change": 0.44,
-        "status": "TĂNG DÔI DƯ"
+        "excess_pct_change": -7.6,
+        "excess_per_day_change": 0.05,
+        "status": "CẢI THIỆN"
       }
     },
     {
@@ -49,17 +49,17 @@
         "compliance_rate": 94.4
       },
       "september": {
-        "days": 4,
-        "declared_hours": 281.9,
-        "standard_hours": 176.7,
-        "excess_hours": 105.2,
-        "excess_pct": 59.5,
-        "excess_per_day_staff": 2.92,
-        "compliance_rate": 100.0
+        "days": 7,
+        "declared_hours": 488.2,
+        "standard_hours": 326.2,
+        "excess_hours": 169.1,
+        "excess_pct": 49.7,
+        "excess_per_day_staff": 2.68,
+        "compliance_rate": 98.4
       },
       "delta": {
-        "excess_pct_change": -0.4,
-        "excess_per_day_change": 0.18,
+        "excess_pct_change": -10.2,
+        "excess_per_day_change": -0.06,
         "status": "CẢI THIỆN"
       }
     },
@@ -78,17 +78,17 @@
         "compliance_rate": 82.5
       },
       "september": {
-        "days": 4,
-        "declared_hours": 99.5,
-        "standard_hours": 89.8,
-        "excess_hours": 10.0,
-        "excess_pct": 10.8,
-        "excess_per_day_staff": 0.62,
-        "compliance_rate": 75.0
+        "days": 7,
+        "declared_hours": 142.0,
+        "standard_hours": 122.3,
+        "excess_hours": 22.3,
+        "excess_pct": 16.1,
+        "excess_per_day_staff": 0.8,
+        "compliance_rate": 71.4
       },
       "delta": {
-        "excess_pct_change": -9.5,
-        "excess_per_day_change": -0.54,
+        "excess_pct_change": -4.2,
+        "excess_per_day_change": -0.36,
         "status": "CẢI THIỆN"
       }
     },
@@ -107,17 +107,17 @@
         "compliance_rate": 96.1
       },
       "september": {
-        "days": 4,
-        "declared_hours": 109.8,
-        "standard_hours": 70.1,
-        "excess_hours": 39.6,
-        "excess_pct": 56.6,
-        "excess_per_day_staff": 2.48,
-        "compliance_rate": 87.5
+        "days": 7,
+        "declared_hours": 181.0,
+        "standard_hours": 120.5,
+        "excess_hours": 60.5,
+        "excess_pct": 50.2,
+        "excess_per_day_staff": 2.16,
+        "compliance_rate": 85.7
       },
       "delta": {
-        "excess_pct_change": -31.0,
-        "excess_per_day_change": -1.06,
+        "excess_pct_change": -37.4,
+        "excess_per_day_change": -1.38,
         "status": "CẢI THIỆN"
       }
     },
@@ -136,17 +136,17 @@
         "compliance_rate": 79.4
       },
       "september": {
-        "days": 4,
-        "declared_hours": 183.5,
-        "standard_hours": 133.6,
-        "excess_hours": 54.2,
-        "excess_pct": 37.4,
-        "excess_per_day_staff": 1.51,
-        "compliance_rate": 83.3
+        "days": 7,
+        "declared_hours": 265.1,
+        "standard_hours": 208.6,
+        "excess_hours": 60.7,
+        "excess_pct": 27.1,
+        "excess_per_day_staff": 0.96,
+        "compliance_rate": 73.0
       },
       "delta": {
-        "excess_pct_change": -58.4,
-        "excess_per_day_change": -1.29,
+        "excess_pct_change": -68.7,
+        "excess_per_day_change": -1.84,
         "status": "CẢI THIỆN"
       }
     },
@@ -165,17 +165,17 @@
         "compliance_rate": 30.0
       },
       "september": {
-        "days": 4,
-        "declared_hours": 32.0,
-        "standard_hours": 6.9,
-        "excess_hours": 25.1,
-        "excess_pct": 363.8,
-        "excess_per_day_staff": 3.14,
-        "compliance_rate": 50.0
+        "days": 7,
+        "declared_hours": 40.0,
+        "standard_hours": 12.9,
+        "excess_hours": 27.1,
+        "excess_pct": 210.1,
+        "excess_per_day_staff": 1.94,
+        "compliance_rate": 35.7
       },
       "delta": {
-        "excess_pct_change": 235.2,
-        "excess_per_day_change": 1.79,
+        "excess_pct_change": 81.5,
+        "excess_per_day_change": 0.59,
         "status": "TĂNG DÔI DƯ"
       }
     }

@@ -92,7 +92,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div class="flex items-center bg-slate-800/90 p-1 rounded-xl border border-slate-700/80 shadow-inner">
                 <button id="btnPeriodSept" onclick="switchPeriod('sept_01_08')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center space-x-1.5 bg-indigo-600 text-white shadow-sm">
                     <i class="fa-solid fa-bolt text-amber-300"></i>
-                    <span>Kỳ 01/09 - 08/09/2026 (Mới)</span>
+                    <span>Kỳ 01/09 - 11/09/2026 (Mới)</span>
                 </button>
                 <button id="btnPeriodAug" onclick="switchPeriod('august')" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
                     <i class="fa-regular fa-calendar text-slate-400"></i>
@@ -102,7 +102,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             <div class="bg-slate-800/80 border border-slate-700/80 rounded-lg px-3 py-1.5 flex items-center space-x-2 text-slate-300">
                 <i class="fa-regular fa-calendar text-indigo-400"></i>
-                <span id="lblPeriodDates">Kỳ 01/09 - 08/09/2026 (4 ngày làm việc)</span>
+                <span id="lblPeriodDates">Kỳ 01/09 - 11/09/2026 (7 ngày làm việc)</span>
             </div>
             <button onclick="window.print()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-700 transition flex items-center space-x-1.5">
                 <i class="fa-solid fa-print"></i>
