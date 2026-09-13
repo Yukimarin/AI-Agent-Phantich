@@ -5,6 +5,17 @@ Tài liệu này lưu trữ các quyết định thiết kế và quy chuẩn k�
 
 ---
 
+## 1. Quy chuẩn Ma Trận Công Suất & Hiệu Suất Khối (Executive Capacity & Efficiency UI)
+- **Tư duy thiết kế cho Lãnh đạo (Screenshot-ready)**:
+  - Bảng báo cáo năng lực khối phải dễ nhìn, chữ và số to rõ, độ tương phản cao trên nền dark theme.
+  - Loại bỏ các cột dư thừa/gây rối nhận thức như `% Đạt / tuần` vs `% Đạt / kỳ`.
+  - Giữ 1 tỷ lệ công suất duy nhất, tường minh: **Tỷ lệ đạt công suất (%)** = `(Tổng giờ làm thực tế / Tổng giờ tiêu chuẩn) × 100%`.
+  - Hiển thị công thức trực quan ngay trong ô dữ liệu: `[Số NS] × 40h = [Tổng giờ tiêu chuẩn]` (VD: `13 × 40h = 520.0h`).
+  - Đi kèm thanh tiến độ phân màu trực quan (Xanh lá: Đạt chuẩn ~85-115%, Vàng: Vượt tải >115%, Xanh dương: Dư tải <85%).
+  - Dòng tổng hợp đặc biệt: `Toàn Khối CNTT (22 NS)` và `Toàn Trung Tâm (41 NS)` nổi bật ở chân bảng.
+
+---
+
 ## 2. Công Thức & Quy Chuẩn Dự Báo Học Thuật (Agent 2: AcademicPredictor)
 - **Căn nguyên Bug Dự Báo Thấp ở KS24 (`HN-K24-CNTT2`, `HN-K24-CNTT4`, `HCM-K24-CNTT1`)**: 
   - Trong quá trình học dở (In-progress), học viên chưa nộp Đồ án tốt nghiệp cuối kỳ (điểm Project đang là null/0).
