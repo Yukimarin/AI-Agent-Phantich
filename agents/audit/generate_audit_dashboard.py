@@ -220,73 +220,106 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
 
         <!-- 1.5 MA TRẬN CÔNG SUẤT & HIỆU SUẤT 6 KHỐI ĐÀO TẠO (COLLAPSIBLE CAPACITY MATRIX) -->
-        <div id="capacityMatrixCard" class="bg-slate-900/80 border border-slate-800/90 hover:border-indigo-500/40 rounded-2xl p-5 shadow-lg space-y-4 transition-all duration-300">
-            <div class="flex flex-wrap items-center justify-between gap-3">
+        <div id="capacityMatrixCard" class="bg-slate-900/90 border border-slate-800/90 hover:border-indigo-500/40 rounded-2xl p-6 shadow-xl space-y-5 transition-all duration-300">
+            <!-- Header with Title and Toggle Button -->
+            <div class="flex flex-wrap items-center justify-between gap-4">
                 <div class="flex items-center space-x-3 cursor-pointer select-none" onclick="toggleCapacityMatrix()">
-                    <div class="w-9 h-9 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
-                        <i class="fa-solid fa-gauge-high text-base"></i>
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 shadow-sm">
+                        <i class="fa-solid fa-gauge-high text-lg"></i>
                     </div>
                     <div>
-                        <div class="flex items-center space-x-2">
-                            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">
-                                Ma Trận Công Suất & Hiệu Suất 6 Khối Đào Tạo
+                        <div class="flex items-center space-x-2.5">
+                            <h3 class="text-sm font-black uppercase tracking-wide text-white">
+                                Bảng Thống Kê Công Suất & Hiệu Suất 6 Khối Đào Tạo
                             </h3>
-                            <span id="badgeMatrixPeriod" class="px-2 py-0.5 text-[10px] font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded-md">Kỳ 01/09 - 11/09 (7 ngày)</span>
+                            <span id="badgeMatrixPeriod" class="px-2.5 py-0.5 text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 rounded-md">Kỳ 01/09 - 11/09 (7 ngày)</span>
                         </div>
-                        <p class="text-[11px] text-slate-400">Quỹ giờ chuẩn 40h/tuần • Giờ khai báo thực tế • Tỷ lệ đạt công suất • Chuẩn Master</p>
+                        <p class="text-xs text-slate-400 mt-0.5">Tiêu chuẩn: <strong class="text-slate-200 font-semibold">Số Nhân Sự × 40h/tuần</strong> • Đối chiếu với tổng giờ làm thực tế trên Worklane</p>
                     </div>
                 </div>
 
-                <!-- Quick Summary Stats & Toggle Button -->
-                <div class="flex items-center space-x-3 text-xs">
-                    <!-- Quick Summary Badges (Collapsed View) -->
-                    <div class="hidden sm:flex items-center space-x-2">
-                        <div class="bg-slate-800/90 border border-slate-700/80 rounded-lg px-2.5 py-1 flex items-center space-x-1.5">
-                            <span class="text-slate-400 text-[11px]">Toàn Viện (41 NS):</span>
-                            <span id="quickTotalPct" class="font-bold text-emerald-400">105.9%</span>
-                            <span class="text-[10px] text-slate-400">(40h/tuần)</span>
-                        </div>
-                        <div class="bg-slate-800/90 border border-slate-700/80 rounded-lg px-2.5 py-1 flex items-center space-x-1.5">
-                            <span class="text-slate-400 text-[11px]">Toàn CNTT (22 NS):</span>
-                            <span id="quickCnttPct" class="font-bold text-indigo-300">100.6%</span>
-                            <span class="text-[10px] text-slate-400">(40h/tuần)</span>
-                        </div>
-                    </div>
+                <button id="btnToggleCapacity" onclick="toggleCapacityMatrix()" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl border border-slate-700 hover:border-indigo-500/50 transition font-bold text-xs flex items-center space-x-2 shadow-sm">
+                    <i id="iconToggleCapacity" class="fa-solid fa-chevron-up text-xs transition-transform duration-200"></i>
+                    <span id="lblToggleCapacity">Thu Gọn Bảng</span>
+                </button>
+            </div>
 
-                    <button id="btnToggleCapacity" onclick="toggleCapacityMatrix()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-700 hover:border-indigo-500/50 transition font-medium text-xs flex items-center space-x-1.5 shadow-sm">
-                        <i id="iconToggleCapacity" class="fa-solid fa-chevron-down text-[11px] transition-transform duration-200"></i>
-                        <span id="lblToggleCapacity">Xem Chi Tiết 6 Khối</span>
-                    </button>
+            <!-- Executive 3-Card Summary Strip (Screenshot-Ready for Leadership) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+                <!-- Hero 1: Toàn Viện -->
+                <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden shadow-inner">
+                    <div class="flex items-center justify-between text-xs text-slate-400 font-bold uppercase tracking-wider">
+                        <span>TOÀN TRUNG TÂM (41 NS)</span>
+                        <i class="fa-solid fa-building-columns text-emerald-400 text-sm"></i>
+                    </div>
+                    <div class="flex items-baseline gap-2.5 my-2">
+                        <span id="heroTotalPct" class="text-3xl font-black text-emerald-400 tracking-tight">105.9%</span>
+                        <span class="text-xs font-bold text-emerald-300/80 px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/20 rounded-md">Vừa vặn trần</span>
+                    </div>
+                    <div class="text-xs text-slate-400 flex items-center justify-between border-t border-slate-800/80 pt-2">
+                        <span>Tiêu chuẩn: <strong id="heroTotalStd" class="text-slate-200 font-mono font-bold">1,640.0h</strong></span>
+                        <span>Làm thực tế: <strong id="heroTotalDec" class="text-white font-mono font-extrabold">1,736.1h</strong></span>
+                    </div>
+                </div>
+
+                <!-- Hero 2: Khối CNTT -->
+                <div class="bg-slate-950/80 border border-indigo-500/30 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden shadow-inner">
+                    <div class="flex items-center justify-between text-xs text-indigo-300 font-bold uppercase tracking-wider">
+                        <span>TOÀN KHỐI CNTT (22 NS)</span>
+                        <i class="fa-solid fa-laptop-code text-indigo-400 text-sm"></i>
+                    </div>
+                    <div class="flex items-baseline gap-2.5 my-2">
+                        <span id="heroCnttPct" class="text-3xl font-black text-indigo-400 tracking-tight">100.6%</span>
+                        <span class="text-xs font-bold text-indigo-300/90 px-2 py-0.5 bg-indigo-500/15 border border-indigo-500/30 rounded-md">Hoàn hảo</span>
+                    </div>
+                    <div class="text-xs text-slate-400 flex items-center justify-between border-t border-slate-800/80 pt-2">
+                        <span>Tiêu chuẩn: <strong id="heroCnttStd" class="text-slate-200 font-mono font-bold">880.0h</strong></span>
+                        <span>Làm thực tế: <strong id="heroCnttDec" class="text-white font-mono font-extrabold">884.9h</strong></span>
+                    </div>
+                </div>
+
+                <!-- Hero 3: Hiệu Suất Thực Chất -->
+                <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden shadow-inner">
+                    <div class="flex items-center justify-between text-xs text-slate-400 font-bold uppercase tracking-wider">
+                        <span>HIỆU SUẤT THỰC CHẤT (MASTER)</span>
+                        <i class="fa-solid fa-award text-amber-400 text-sm"></i>
+                    </div>
+                    <div class="flex items-baseline gap-2.5 my-2">
+                        <span id="heroMasterEff" class="text-3xl font-black text-amber-400 tracking-tight">59.7%</span>
+                        <span class="text-xs font-bold text-rose-400 px-2 py-0.5 bg-rose-500/10 border border-rose-500/20 rounded-md">Dôi dư +714.2h</span>
+                    </div>
+                    <div class="text-xs text-slate-400 flex items-center justify-between border-t border-slate-800/80 pt-2">
+                        <span>Chuẩn Master: <strong id="heroMasterStd" class="text-slate-200 font-mono font-bold">1,035.8h</strong></span>
+                        <span>Cần rà soát: <strong class="text-amber-300 font-bold">17 NS</strong></span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Expandable Table Container (Hidden by default or toggled) -->
-            <div id="capacityTableContainer" class="hidden pt-2 border-t border-slate-800/80 transition-all duration-300">
-                <div class="overflow-x-auto rounded-xl border border-slate-800">
-                    <table class="w-full text-left text-xs">
-                        <thead class="bg-slate-850 text-slate-400 uppercase text-[10px] tracking-wider border-b border-slate-800 font-semibold">
+            <!-- Expandable Table Container (Visible by default) -->
+            <div id="capacityTableContainer" class="pt-2 border-t border-slate-800/90 transition-all duration-300">
+                <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/60 shadow-inner">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-slate-850 text-slate-200 uppercase text-xs tracking-wider border-b border-slate-700/80 font-bold">
                             <tr>
-                                <th class="py-3 px-3.5">Khối Đào Tạo / Leader</th>
-                                <th class="py-3 px-2 text-center">Quy Mô</th>
-                                <th class="py-3 px-3 text-right">Định Mức Tuần (40h/NS)</th>
-                                <th class="py-3 px-4 text-left">Khai Báo Thực Tế</th>
-                                <th class="py-3 px-3 text-center">% Đạt / Tuần (40h)</th>
-                                <th id="thPeriodCap" class="py-3 px-3 text-right">Định Mức Kỳ (7 ngày)</th>
-                                <th id="thPeriodPct" class="py-3 px-3 text-center">% Đạt / Kỳ</th>
-                                <th class="py-3 px-3 text-right">Chuẩn KPI Master (Hiệu Suất)</th>
+                                <th class="py-4 px-4">Khối Đào Tạo & Leader</th>
+                                <th class="py-4 px-4 text-center">Tổng Giờ Tiêu Chuẩn<br><span class="text-[11px] font-normal text-slate-400 font-mono">(Số NS × 40h/tuần)</span></th>
+                                <th class="py-4 px-4 text-center">Tổng Giờ Làm Thực Tế<br><span class="text-[11px] font-normal text-slate-400">(Khai báo Worklane)</span></th>
+                                <th class="py-4 px-4 text-center min-w-[210px]">Tỷ Lệ Đạt Công Suất (%)<br><span class="text-[11px] font-normal text-slate-400">(Thực tế / Tiêu chuẩn)</span></th>
+                                <th class="py-4 px-4 text-center">Chuẩn KPI Master<br><span class="text-[11px] font-normal text-slate-400">(Hiệu suất thực chất)</span></th>
+                                <th class="py-4 px-4 text-center">Dôi Dư Phát Sinh<br><span class="text-[11px] font-normal text-slate-400">(Vượt so với barem)</span></th>
                             </tr>
                         </thead>
-                        <tbody id="capacityMatrixTbody" class="divide-y divide-slate-800/60 font-normal">
+                        <tbody id="capacityMatrixTbody" class="divide-y divide-slate-800/70 font-normal">
                             <!-- Dynamic Content Rendered by JS -->
                         </tbody>
                     </table>
                 </div>
 
                 <!-- Footer Note -->
-                <div class="flex flex-wrap items-center justify-between text-[11px] text-slate-400 pt-3 px-1">
+                <div class="flex flex-wrap items-center justify-between text-xs text-slate-400 pt-3 px-1">
                     <div class="flex items-center space-x-2">
-                        <i class="fa-solid fa-circle-info text-indigo-400"></i>
-                        <span><strong>Công thức:</strong> Định mức tuần = Số NS × 40h | % Đạt / Tuần = (Giờ Khai Báo / Định Mức Tuần) × 100%.</span>
+                        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                        <span><strong>Quy chuẩn tính toán:</strong> Định mức khối = Số nhân sự × 40h/tuần. Tỷ lệ đạt (%) = (Tổng giờ làm / Tổng giờ tiêu chuẩn) × 100%.</span>
                     </div>
                     <div class="text-slate-400">
                         <span>Hiệu suất thực chất = (Giờ Chuẩn Master / Giờ Khai Báo) × 100%.</span>
@@ -548,7 +581,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         const auditData = __JSON_EMBEDDED__;
         const comparisonData = __COMPARISON_JSON__;
         const capacityMatrixData = __CAPACITY_MATRIX_JSON__;
-        let isCapacityExpanded = false;
 
         let currentPeriod = "sept_01_08";
         let currentData = (auditData.periods && auditData.periods[currentPeriod]) ? auditData.periods[currentPeriod] : auditData;
@@ -1410,6 +1442,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }
 
         // Chức năng Toggle & Render Ma Trận Công Suất & Hiệu Suất 6 Khối
+        let isCapacityExpanded = true;
+
         function toggleCapacityMatrix() {
             isCapacityExpanded = !isCapacityExpanded;
             const container = document.getElementById("capacityTableContainer");
@@ -1418,12 +1452,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             if (isCapacityExpanded) {
                 container.classList.remove("hidden");
-                icon.className = "fa-solid fa-chevron-up text-[11px] transition-transform duration-200";
-                lbl.textContent = "Thu Gọn Ma Trận";
+                icon.className = "fa-solid fa-chevron-up text-xs transition-transform duration-200";
+                lbl.textContent = "Thu Gọn Bảng";
             } else {
                 container.classList.add("hidden");
-                icon.className = "fa-solid fa-chevron-down text-[11px] transition-transform duration-200";
-                lbl.textContent = "Xem Chi Tiết 6 Khối";
+                icon.className = "fa-solid fa-chevron-down text-xs transition-transform duration-200";
+                lbl.textContent = "Xem Bảng Chi Tiết 6 Khối";
             }
         }
 
@@ -1432,62 +1466,90 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const periodData = capacityMatrixData[periodKey === 'sept_01_08' ? 'september' : 'august'];
             if (!periodData) return;
 
-            // Cập nhật nhãn kỳ và tiêu đề cột
+            // Cập nhật nhãn kỳ
             const badgePeriod = document.getElementById("badgeMatrixPeriod");
             if (badgePeriod) badgePeriod.textContent = periodData.period_name;
-            const thCap = document.getElementById("thPeriodCap");
-            if (thCap) thCap.textContent = `Định Mức Kỳ (${periodData.days} ngày)`;
-            const thPct = document.getElementById("thPeriodPct");
-            if (thPct) thPct.textContent = `% Đạt / ${periodData.days} ngày`;
 
-            // Cập nhật 2 Badge thu gọn nhanh
-            const qTotal = document.getElementById("quickTotalPct");
-            if (qTotal) qTotal.textContent = periodData.total_summary.pct_40h + "%";
-            const qCntt = document.getElementById("quickCnttPct");
-            if (qCntt) qCntt.textContent = periodData.cntt_summary.pct_40h + "%";
+            // Cập nhật 3 Hero Cards Tổng Quan
+            const heroTotPct = document.getElementById("heroTotalPct");
+            if (heroTotPct) heroTotPct.textContent = periodData.total_summary.pct_40h.toFixed(1) + "%";
+            const heroTotStd = document.getElementById("heroTotalStd");
+            if (heroTotStd) heroTotStd.textContent = periodData.total_summary.cap_40h.toFixed(1) + "h";
+            const heroTotDec = document.getElementById("heroTotalDec");
+            if (heroTotDec) heroTotDec.textContent = periodData.total_summary.declared_hours.toFixed(1) + "h";
 
-            // Render dữ liệu bảng
+            const heroCnttPct = document.getElementById("heroCnttPct");
+            if (heroCnttPct) heroCnttPct.textContent = periodData.cntt_summary.pct_40h.toFixed(1) + "%";
+            const heroCnttStd = document.getElementById("heroCnttStd");
+            if (heroCnttStd) heroCnttStd.textContent = periodData.cntt_summary.cap_40h.toFixed(1) + "h";
+            const heroCnttDec = document.getElementById("heroCnttDec");
+            if (heroCnttDec) heroCnttDec.textContent = periodData.cntt_summary.declared_hours.toFixed(1) + "h";
+
+            const heroMaster = document.getElementById("heroMasterEff");
+            if (heroMaster) heroMaster.textContent = periodData.total_summary.real_efficiency.toFixed(1) + "%";
+            const heroMasterStd = document.getElementById("heroMasterStd");
+            if (heroMasterStd) heroMasterStd.textContent = periodData.total_summary.standard_master.toFixed(1) + "h";
+
+            // Render dữ liệu bảng 6 Khối
             const tbody = document.getElementById("capacityMatrixTbody");
             if (!tbody) return;
 
             let html = '';
 
-            // 6 Khối Đào tạo
             (periodData.rows || []).forEach(r => {
-                let badgePctClass = 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
+                let statusBadge = '';
+                let textPctColor = 'text-emerald-400';
+                let barColor = 'bg-emerald-400';
+                
                 if (r.pct_40h > 115) {
-                    badgePctClass = 'bg-amber-500/15 text-amber-300 border-amber-500/30';
-                } else if (r.pct_40h < 80) {
-                    badgePctClass = 'bg-slate-700/50 text-slate-300 border-slate-600/30';
+                    textPctColor = 'text-amber-400';
+                    barColor = 'bg-amber-400';
+                    statusBadge = `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold border bg-amber-500/15 text-amber-300 border-amber-500/30">⚠️ Vượt tải (+${(r.pct_40h - 100).toFixed(1)}%)</span>`;
+                } else if (r.pct_40h < 85) {
+                    textPctColor = 'text-blue-400';
+                    barColor = 'bg-blue-400';
+                    statusBadge = `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold border bg-blue-500/15 text-blue-300 border-blue-500/30">🔵 Dư tải (${r.pct_40h.toFixed(1)}%)</span>`;
+                } else {
+                    textPctColor = 'text-emerald-400';
+                    barColor = 'bg-emerald-400';
+                    statusBadge = `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold border bg-emerald-500/15 text-emerald-300 border-emerald-500/30">🟢 Đạt chuẩn</span>`;
                 }
 
                 const progressWidth = Math.min(100, Math.round(r.pct_40h));
-                const barColor = r.pct_40h > 115 ? 'bg-amber-400' : (r.pct_40h < 80 ? 'bg-slate-400' : 'bg-emerald-400');
 
                 html += `
-                    <tr class="hover:bg-slate-800/40 transition">
-                        <td class="py-2.5 px-3.5">
-                            <div class="font-semibold text-slate-200">${r.group}</div>
-                            <div class="text-[11px] text-slate-400">Leader: <span class="text-indigo-300 font-medium">${r.leader}</span></div>
-                        </td>
-                        <td class="py-2.5 px-2 text-center text-slate-300 font-medium">${r.staff_count} NS</td>
-                        <td class="py-2.5 px-3 text-right font-mono text-slate-300">${r.cap_40h.toFixed(1)}h</td>
-                        <td class="py-2.5 px-4">
-                            <div class="flex items-center justify-between text-xs mb-1">
-                                <span class="font-mono font-bold text-white">${r.declared_hours.toFixed(1)}h</span>
-                            </div>
-                            <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
-                                <div class="${barColor} h-1.5 rounded-full" style="width: ${progressWidth}%"></div>
+                    <tr class="hover:bg-slate-800/50 transition">
+                        <td class="py-4 px-4">
+                            <div class="text-sm font-bold text-white mb-0.5">${r.group}</div>
+                            <div class="text-xs text-slate-400 flex items-center gap-2">
+                                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-semibold text-[11px] border border-slate-700/60">${r.staff_count} NS</span>
+                                <span>Leader: <strong class="text-indigo-300">${r.leader}</strong></span>
                             </div>
                         </td>
-                        <td class="py-2.5 px-3 text-center">
-                            <span class="px-2 py-0.5 rounded-full text-xs font-bold border ${badgePctClass}">${r.pct_40h.toFixed(1)}%</span>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-sm font-bold text-slate-200">
+                                <span class="text-slate-400 text-xs">${r.staff_count} × 40h =</span> <span class="text-indigo-300 text-base font-extrabold">${r.cap_40h.toFixed(1)}h</span>
+                            </div>
                         </td>
-                        <td class="py-2.5 px-3 text-right font-mono text-slate-300">${r.cap_period.toFixed(1)}h</td>
-                        <td class="py-2.5 px-3 text-center font-mono text-slate-300 font-semibold">${r.pct_period.toFixed(1)}%</td>
-                        <td class="py-2.5 px-3 text-right">
-                            <div class="font-mono text-slate-200">${r.standard_master.toFixed(1)}h</div>
-                            <div class="text-[10px] text-slate-400 font-mono">Hiệu suất: <strong class="text-indigo-300">${r.real_efficiency.toFixed(1)}%</strong></div>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-base font-black text-white">${r.declared_hours.toFixed(1)}h</div>
+                        </td>
+                        <td class="py-4 px-4">
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <span class="text-base font-black ${textPctColor}">${r.pct_40h.toFixed(1)}%</span>
+                                ${statusBadge}
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden border border-slate-700/50">
+                                <div class="${barColor} h-2.5 rounded-full" style="width: ${progressWidth}%"></div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-sm font-bold text-slate-200">${r.standard_master.toFixed(1)}h</div>
+                            <div class="text-xs text-indigo-300 font-mono font-semibold mt-0.5">Hiệu suất: <strong>${r.real_efficiency.toFixed(1)}%</strong></div>
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-sm font-bold text-rose-400">+${r.excess_hours.toFixed(1)}h</div>
+                            <div class="text-xs text-rose-300 font-mono font-semibold mt-0.5">(+${r.excess_pct.toFixed(1)}%)</div>
                         </td>
                     </tr>
                 `;
@@ -1497,29 +1559,35 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const cntt = periodData.cntt_summary;
             if (cntt) {
                 html += `
-                    <tr class="bg-indigo-950/40 border-t-2 border-indigo-500/40 hover:bg-indigo-950/60 transition">
-                        <td class="py-3 px-3.5">
-                            <div class="font-bold text-indigo-200">${cntt.group}</div>
-                            <div class="text-[11px] text-indigo-300/80">Leader: ${cntt.leader}</div>
+                    <tr class="bg-indigo-950/60 border-t-2 border-indigo-500/50 hover:bg-indigo-950/80 transition">
+                        <td class="py-4 px-4">
+                            <div class="text-sm font-black text-indigo-200 uppercase tracking-wide">${cntt.group}</div>
+                            <div class="text-xs text-indigo-300/80 mt-0.5">Leader: <strong>${cntt.leader}</strong></div>
                         </td>
-                        <td class="py-3 px-2 text-center text-indigo-200 font-bold">${cntt.staff_count} NS</td>
-                        <td class="py-3 px-3 text-right font-mono font-bold text-indigo-200">${cntt.cap_40h.toFixed(1)}h</td>
-                        <td class="py-3 px-4">
-                            <div class="flex items-center justify-between text-xs mb-1">
-                                <span class="font-mono font-bold text-white">${cntt.declared_hours.toFixed(1)}h</span>
-                            </div>
-                            <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
-                                <div class="bg-indigo-400 h-1.5 rounded-full" style="width: ${Math.min(100, Math.round(cntt.pct_40h))}%"></div>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-sm font-bold text-indigo-200">
+                                <span class="text-indigo-300/70 text-xs">22 × 40h =</span> <span class="text-indigo-200 text-base font-black">${cntt.cap_40h.toFixed(1)}h</span>
                             </div>
                         </td>
-                        <td class="py-3 px-3 text-center">
-                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold border bg-indigo-500/20 text-indigo-300 border-indigo-500/40">${cntt.pct_40h.toFixed(1)}%</span>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-base font-black text-white">${cntt.declared_hours.toFixed(1)}h</div>
                         </td>
-                        <td class="py-3 px-3 text-right font-mono font-bold text-indigo-200">${cntt.cap_period.toFixed(1)}h</td>
-                        <td class="py-3 px-3 text-center font-mono font-bold text-indigo-200">${cntt.pct_period.toFixed(1)}%</td>
-                        <td class="py-3 px-3 text-right">
-                            <div class="font-mono text-indigo-200">${cntt.standard_master.toFixed(1)}h</div>
-                            <div class="text-[10px] text-indigo-300 font-mono">Hiệu suất: <strong>${cntt.real_efficiency.toFixed(1)}%</strong></div>
+                        <td class="py-4 px-4">
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <span class="text-base font-black text-indigo-300">${cntt.pct_40h.toFixed(1)}%</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold border bg-indigo-500/20 text-indigo-300 border-indigo-500/40">🟢 Hoàn hảo</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden border border-indigo-500/30">
+                                <div class="bg-indigo-400 h-2.5 rounded-full" style="width: ${Math.min(100, Math.round(cntt.pct_40h))}%"></div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-sm font-bold text-indigo-200">${cntt.standard_master.toFixed(1)}h</div>
+                            <div class="text-xs text-indigo-300 font-mono font-semibold mt-0.5">Hiệu suất: <strong>${cntt.real_efficiency.toFixed(1)}%</strong></div>
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-sm font-bold text-rose-400">+${cntt.excess_hours.toFixed(1)}h</div>
+                            <div class="text-xs text-rose-300 font-mono font-semibold mt-0.5">(+${cntt.excess_pct.toFixed(1)}%)</div>
                         </td>
                     </tr>
                 `;
@@ -1529,29 +1597,35 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const tot = periodData.total_summary;
             if (tot) {
                 html += `
-                    <tr class="bg-slate-800/90 border-t-2 border-slate-700 hover:bg-slate-800 transition">
-                        <td class="py-3 px-3.5">
-                            <div class="font-bold text-white tracking-wide">${tot.group}</div>
-                            <div class="text-[11px] text-slate-400">Chỉ đạo: ${tot.leader}</div>
+                    <tr class="bg-slate-850 border-t-2 border-slate-600 hover:bg-slate-800 transition">
+                        <td class="py-4 px-4">
+                            <div class="text-sm font-black text-white uppercase tracking-wider">${tot.group}</div>
+                            <div class="text-xs text-slate-400 mt-0.5">Chỉ đạo: <strong>${tot.leader}</strong></div>
                         </td>
-                        <td class="py-3 px-2 text-center text-white font-bold">${tot.staff_count} NS</td>
-                        <td class="py-3 px-3 text-right font-mono font-bold text-white">${tot.cap_40h.toFixed(1)}h</td>
-                        <td class="py-3 px-4">
-                            <div class="flex items-center justify-between text-xs mb-1">
-                                <span class="font-mono font-bold text-white">${tot.declared_hours.toFixed(1)}h</span>
-                            </div>
-                            <div class="w-full bg-slate-700 rounded-full h-1.5 overflow-hidden">
-                                <div class="bg-emerald-400 h-1.5 rounded-full" style="width: ${Math.min(100, Math.round(tot.pct_40h))}%"></div>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-sm font-bold text-white">
+                                <span class="text-slate-400 text-xs">41 × 40h =</span> <span class="text-emerald-400 text-base font-black">${tot.cap_40h.toFixed(1)}h</span>
                             </div>
                         </td>
-                        <td class="py-3 px-3 text-center">
-                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold border bg-emerald-500/20 text-emerald-300 border-emerald-500/40">${tot.pct_40h.toFixed(1)}%</span>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-base font-black text-white">${tot.declared_hours.toFixed(1)}h</div>
                         </td>
-                        <td class="py-3 px-3 text-right font-mono font-bold text-white">${tot.cap_period.toFixed(1)}h</td>
-                        <td class="py-3 px-3 text-center font-mono font-bold text-white">${tot.pct_period.toFixed(1)}%</td>
-                        <td class="py-3 px-3 text-right">
-                            <div class="font-mono text-white">${tot.standard_master.toFixed(1)}h</div>
-                            <div class="text-[10px] text-slate-300 font-mono">Hiệu suất: <strong>${tot.real_efficiency.toFixed(1)}%</strong></div>
+                        <td class="py-4 px-4">
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <span class="text-base font-black text-emerald-400">${tot.pct_40h.toFixed(1)}%</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold border bg-emerald-500/20 text-emerald-300 border-emerald-500/40">🟢 Vừa vặn trần</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2.5 overflow-hidden border border-slate-600">
+                                <div class="bg-emerald-400 h-2.5 rounded-full" style="width: ${Math.min(100, Math.round(tot.pct_40h))}%"></div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-sm font-bold text-white">${tot.standard_master.toFixed(1)}h</div>
+                            <div class="text-xs text-emerald-300 font-mono font-semibold mt-0.5">Hiệu suất: <strong>${tot.real_efficiency.toFixed(1)}%</strong></div>
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="font-mono text-sm font-bold text-rose-400">+${tot.excess_hours.toFixed(1)}h</div>
+                            <div class="text-xs text-rose-300 font-mono font-semibold mt-0.5">(+${tot.excess_pct.toFixed(1)}%)</div>
                         </td>
                     </tr>
                 `;
