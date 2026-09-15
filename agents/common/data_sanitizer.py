@@ -112,9 +112,8 @@ def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/
             sheet = wb[sheetname]
             row3 = list(sheet.iter_rows(min_row=3, max_row=3, values_only=True))[0]
             
-            # Map cột ngày học
+            # Map cột ngày học (mỗi ngày có 3 cột CC, BT, EL)
             dates_list = []
-            current_date = None
             for c_idx in range(3, len(row3)):
                 col_letter = get_column_letter(c_idx + 1)
                 dim = sheet.column_dimensions.get(col_letter)
@@ -122,9 +121,9 @@ def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/
                     continue
                 val3 = row3[c_idx]
                 if val3:
-                    current_date = parse_date(val3)
-                if current_date:
-                    dates_list.append((c_idx, current_date))
+                    parsed_d = parse_date(val3)
+                    if parsed_d:
+                        dates_list.append((c_idx, parsed_d))
                     
             # Đọc từng dòng lớp học
             for r in range(5, sheet.max_row + 1):
@@ -181,9 +180,7 @@ def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/
                 }
                     
                 metrics_by_date = {}
-                idx = 0
-                while idx < len(dates_list):
-                    c_idx, d_str = dates_list[idx]
+                for c_idx, d_str in dates_list:
                     # CC, BT, EL là 3 cột liên tiếp
                     cc_val = sheet.cell(row=r, column=c_idx + 1).value
                     bt_val = sheet.cell(row=r, column=c_idx + 2).value if (c_idx + 1 < len(row3)) else None
@@ -201,7 +198,6 @@ def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/
                             }
                         except (ValueError, TypeError):
                             pass
-                    idx += 3
                     
                 cache_data["classes"][cname_norm]["sheets"][sheetname] = {
                     "instructor": gv_str,

@@ -375,3 +375,56 @@ Tài liệu này lưu trữ các quyết định thiết kế và quy chuẩn k�
   - Toàn khối CNTT (22 NS): Khai báo 884.9h đạt 100.6% quỹ 40h/tuần (880h) và 71.8% quỹ 7 ngày công (1,232h).
   - Tỷ lệ vênh dôi dư toàn viện giảm từ **+93.4%** (T8) xuống **+68.9%** (T9), giảm **-24.5%** nhờ áp dụng Bộ 3 KPI Master. Đặc biệt CNTT HCM giảm mạnh nhất từ +95.8% về +27.1% (giảm -68.7% điểm %).
 
+---
+
+## 24. Cập Nhật Dữ Liệu Ngày 14/09/2026 & Fix Triệt Để Bug Cột Rác Excel
+- **Cập Nhật Dữ Liệu Ngày 14/09/2026 (PTIT_Chiso.xlsx)**:
+  - **Khóa KS24 Microservice**:
+    - `HN-K24-CNTT1(35-31)`: Nợ bài tập tăng đột biến lên **22.58%** (▲ +19.35%), chuyên cần 3.23%, Elearning 19.35%.
+    - `HN-K24-CNTT3(42-39)`: Sĩ số giảm còn **39 SV**. Kỷ luật chuyển biến tích cực cả 3 mặt: Chuyên cần vắng giảm còn **10.26%** (▼ -4.37%), nợ BT **2.56%** (▼ -2.32%), Elearning **12.82%** (▼ -1.81%).
+    - `HN-K24-CNTT4(32-31)`: CC 3.23%, nợ BT 0.00%, Elearning 9.68%.
+    - `HCM-K24-CNTT1(43)`: CC 4.65%, nợ BT 2.33%, Elearning 6.98%.
+  - **Khóa KS25 CNTT (Phân tích thiết kế hệ thống)**:
+    - *Hà Nội (5 lớp)*: 100% 5 lớp giữ vững kỷ luật (CC vắng 0.00% - 10.26%, BT nợ 0.00%, EL 2.38% - 15.38%). Lớp `HN-K25-CNTT1(41-39)` giảm vi phạm Elearning từ 19.51% xuống 15.38%.
+    - *TP. HCM (4 lớp)*: Lớp `HCM-K25-CNTT5(39-44)` tăng vi phạm Elearning lên **13.64%** (▲ +9.09%). Lớp `HCM-K25-CNTT8(36-33-32)` vắng CC 37.5%, EL 31.25% (báo động đỏ).
+  - **Khóa KS25 QTKD (MAN107)**:
+    - Ghi nhận vắng chuyên cần tăng vọt tại ca học ngày 14/09: `HN-K25-QTKD1(46)` vắng **21.74%** (▲ +6.52%); `HN-K25-QTKD2(42)` vắng **30.95%** (▲ +16.66%), nợ BT 7.14%, EL 11.90%. Cần kích hoạt ngay kịch bản chăm sóc SV vắng học.
+- **Phát Hiện & Sửa Lỗi Cột Dư Thừa Không Tiêu Đề Trong Excel**:
+  - *Nguyên nhân*: Sheet `KS25_Phantichthietkehethong` xuất hiện cell lẻ tại cột 28 (hàng 5 giá trị 5) nhưng hàng 3 (ngày) và hàng 4 (chỉ số) đều trống. Thuật toán cũ giữ lại `current_date` từ cột 25-27 khiến cột 28 bị nhận nhầm làm chỉ số ngày 14/09 và ghi đè số liệu `cc: 5.0%`.
+  - *Giải pháp triệt để*:
+    - `data_sanitizer.py`: Map trực tiếp danh sách `dates_list` theo vị trí cột có parse ngày hợp lệ ở Dòng 3, duyệt trực tiếp `(c_idx, parsed_date)` với 3 cột liên tiếp CC (`c+1`), BT (`c+2`), EL (`c+3`).
+    - `calculate_kpi_json.py`: Thêm chốt chặn chỉ thu nạp cột chỉ số khi tiêu đề tại Dòng 4 nằm trong `['Chuyên cần', 'Bài tập', 'Elearning']`.
+- **Đồng Bộ Hoàn Tất**:
+  - Toàn bộ đường ống Fast Pipeline (`run_pipeline.py --fast`) đã cập nhật thành công trong 96.58s.
+  - Các báo cáo Markdown (`data/report_kpi_gv_tg.md`, `output/reports/core/*.md`) và Master Dashboard HTML (`output/dashboards/core/*.html`) đã phản ánh 100% dữ liệu mới nhất.
+
+## 25. Hệ Thống Đánh Giá & Xếp Hạng Nhân Sự Theo Từng Đợt (Cập nhật 15/09/2026)
+- **Nguồn chân lý & Công cụ tạo tự động**:
+  - Script sinh dashboard: `agents/audit/generate_evaluation_dashboard.py`.
+  - File dashboard độc lập: `danh_gia_nhan_su.html` (root) và `output/dashboards/audit/danh_gia_nhan_su_truc_quan.html`.
+  - File dữ liệu JSON đa kỳ chuẩn hóa: `data/processed/staff_evaluation_master.json`.
+- **Quy tắc Nghiệp vụ Mới về Task Quá Hạn (Chốt ngày 15/09/2026)**:
+  - **Lỗi task trễ hạn CHỈ tính cho nhân sự nếu nhân sự trễ hạn (trạng thái "Cần làm" / "Đang làm")**.
+  - **Nếu task đang ở trạng thái "Chờ duyệt" (nhân sự đã làm xong, PIC/Leader chưa nghiệm thu) thì HOÀN TOÀN MIỄN TRỪ LỖI cho nhân sự**.
+  - Áp dụng thực tế:
+    - *Mai Xuân Chinh*: 6 task dự án `TRIEKHAI` đang Chờ duyệt -> Miễn trừ; chỉ tính 10 task quá hạn thuộc `PTITSAN` (Cần làm).
+    - *Phạm Ngọc Kiên*: 1 task `KS26MON-287` Chờ duyệt -> Miễn trừ; chỉ tính 1 task quá hạn `KS25GIAN-23`.
+    - *Đinh Thành Nam*: 1 task `PTITSAN-22` Chờ duyệt -> Miễn trừ; chỉ tính 1 task quá hạn `PTITSAN2-19`.
+- **Vi Phạm Đào Tạo & Khảo Thí Của Mai Xuân Chinh (Tổng cộng 4 vi phạm)**:
+  1. `22/08/2026`: Vi phạm quy chế khảo thí — Cán bộ coi thi tự ý đổi lịch coi thi.
+  2. `09/09/2026`: Vi phạm Quy định đào tạo — Vi phạm quy định ra BTVN trong 2 môn AI với các lớp KS24 (giao bài sai quy chuẩn).
+  3. `20/08/2026`: Lỗi `QLDT-EX-LATE` — Chậm trễ chấm BTVN lớp HN-K24-CNTT3 (Lần 1).
+  4. `21/08/2026`: Lỗi `QLDT-EX-LATE` — Chậm trễ chấm BTVN lớp HN-K24-CNTT3 (Lần 2 liên tiếp).
+- **Bảng Xếp Hạng 4 Trợ Giảng 30 Ngày Gần Nhất (16/08 - 15/09/2026)**:
+  1. **Lại Trung Lâm** (99.6đ - A+ Xuất sắc): 18/18 log (100%), 0 ticket trễ, 0 vi phạm quy chế.
+  2. **Phạm Ngọc Kiên** (82.6đ - B Khá): 16/18 log (88.9%), 1 ticket quá hạn thực sự (1 task chờ duyệt miễn trừ), 3 vi phạm.
+  3. **Đinh Thành Nam** (78.2đ - B Cần lưu ý): 14/18 log (77.8% - yếu nhất), 1 ticket quá hạn thực sự (1 task chờ duyệt miễn trừ), 5 vi phạm, lệch JD (41.5% giờ làm dev tool).
+  4. **Mai Xuân Chinh** (70.0đ - C Cần chấn chỉnh): 18/18 log (100%), 10 ticket quá hạn thực tế (6 task chờ duyệt miễn trừ), 4 vi phạm quy chế nghiêm trọng.
+- **Sửa Lỗi Giao Diện UI/UX**:
+  - Thay cơ chế format f-string bằng placeholder replace `__JSON_PAYLOAD__` để khắc phục lỗi `json_payload is not defined`.
+  - Tăng chiều cao biểu đồ lên `h-80`, chuyển chú thích lên trên `position: 'top'` với padding để tránh đè chữ.
+  - Sửa lỗi chính tả tiêu đề Mục IV: `IV. BẢNG TỔNG HỢP TOÀN VIỆN`.
+  - Bọc bảng 41 nhân sự bằng container cuộn ngang và `min-w-[1050px]` để chống vỡ/ép khung trên màn hình nhỏ.
+
+
+

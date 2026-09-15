@@ -19,4 +19,7 @@ __pycache__/
 .gemini/
 scratch/
 logs/
+*.log
 data/processed/watcher.pid
+data/processed/*.log
+

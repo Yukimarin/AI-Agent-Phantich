@@ -173,7 +173,8 @@ def main():
                     current_date = parsed_d
             if current_date and c_idx < len(row4):
                 metric_name = str(row4[c_idx] or "").strip()
-                columns_by_date[current_date].append((c_idx + 1, metric_name))
+                if metric_name in ['Chuyên cần', 'Bài tập', 'Elearning']:
+                    columns_by_date[current_date].append((c_idx + 1, metric_name))
                 
         current_class = ""
         current_size = 30

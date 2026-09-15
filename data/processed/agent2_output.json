@@ -58,50 +58,50 @@
           "class_name": "HN-K24-CNTT1",
           "course_name": "[IT-214] Microservices System Design",
           "size": 35,
-          "v_class": 7.640555555555557,
-          "mult_env": 0.9992972222222222,
-          "pred_old": 60.96088925541539,
-          "pred_new": 58.42964461719008,
+          "v_class": 9.136222222222223,
+          "mult_env": 0.9918188888888889,
+          "pred_old": 59.75170215463849,
+          "pred_new": 57.320348825872266,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-K24-CNTT2",
           "course_name": "[IT-214] Microservices System Design",
           "size": 39,
-          "v_class": 2.115873015873016,
+          "v_class": 2.6486666666666667,
           "mult_env": 1.0,
-          "pred_old": 64.81025815629154,
-          "pred_new": 64.81025815629154,
+          "pred_old": 64.58955649024226,
+          "pred_new": 64.58955649024226,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-K24-CNTT4",
           "course_name": "[IT-214] Microservices System Design",
           "size": 32,
-          "v_class": 3.5215873015873016,
+          "v_class": 3.988222222222222,
           "mult_env": 1.0,
-          "pred_old": 64.1717290268506,
-          "pred_new": 64.1717290268506,
+          "pred_old": 64.03756416571035,
+          "pred_new": 64.03756416571035,
           "actual_pass": 0.0
         },
         {
           "class_name": "HCM-K24-CNTT1",
           "course_name": "[IT-214] Microservices System Design",
           "size": 43,
-          "v_class": 2.0307142857142857,
+          "v_class": 2.558888888888889,
           "mult_env": 1.0,
-          "pred_old": 64.40979227883302,
-          "pred_new": 64.40979227883302,
+          "pred_old": 64.22491275932637,
+          "pred_new": 64.22491275932637,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-K24-CNTT3",
           "course_name": "[IT-214] Microservices System Design",
           "size": 42,
-          "v_class": 7.481984126984127,
-          "mult_env": 1.0,
-          "pred_old": 60.54499412489496,
-          "pred_new": 54.27362693135107,
+          "v_class": 8.117777777777777,
+          "mult_env": 0.9969111111111111,
+          "pred_old": 59.953036144633245,
+          "pred_new": 53.876431090882164,
           "actual_pass": 0.0
         }
       ]
@@ -214,7 +214,7 @@
           "class_name": "HN-K25-CNTT4",
           "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 42,
-          "v_class": 1.1688888888888889,
+          "v_class": 1.0958333333333332,
           "mult_env": 1.0,
           "pred_old": 68.48744960000006,
           "pred_new": 68.48744960000006,
@@ -224,60 +224,60 @@
           "class_name": "HN-K25-CNTT3",
           "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 43,
-          "v_class": 2.5844444444444443,
+          "v_class": 2.1366666666666667,
           "mult_env": 1.0,
-          "pred_old": 65.11651827546793,
-          "pred_new": 65.11651827546793,
+          "pred_old": 65.14557777450791,
+          "pred_new": 65.14557777450791,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-K25-CNTT2",
           "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 43,
-          "v_class": 2.168888888888889,
+          "v_class": 2.44,
           "mult_env": 1.0,
-          "pred_old": 68.14197787306664,
-          "pred_new": 68.14197787306664,
+          "pred_old": 67.96924200959997,
+          "pred_new": 67.96924200959997,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-K25-CNTT1",
           "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 40,
-          "v_class": 7.913333333333334,
-          "mult_env": 0.9979333333333333,
-          "pred_old": 64.79780554287797,
-          "pred_new": 64.79780554287797,
+          "v_class": 8.071666666666667,
+          "mult_env": 0.9971416666666667,
+          "pred_old": 64.51761447083253,
+          "pred_new": 64.51761447083253,
           "actual_pass": 0.0
         },
         {
           "class_name": "HCM-K25-CNTT5",
           "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 40,
-          "v_class": 1.1906349206349207,
+          "v_class": 1.70375,
           "mult_env": 1.0,
-          "pred_old": 66.11341127197781,
-          "pred_new": 66.11341127197781,
+          "pred_old": 66.1138853164827,
+          "pred_new": 66.1138853164827,
           "actual_pass": 0.0
         },
         {
           "class_name": "HCM-K25-CNTT6",
           "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 40,
-          "v_class": 2.0055555555555555,
+          "v_class": 2.1956547619047617,
           "mult_env": 1.0,
-          "pred_old": 66.04998064527122,
-          "pred_new": 66.04998064527122,
+          "pred_old": 65.942900861771,
+          "pred_new": 65.942900861771,
           "actual_pass": 0.0
         },
         {
           "class_name": "HCM-K25-CNTT7",
           "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
           "size": 39,
-          "v_class": 6.2850793650793655,
+          "v_class": 7.205714285714286,
           "mult_env": 1.0,
-          "pred_old": 57.56623497752144,
-          "pred_new": 57.56623497752144,
+          "pred_old": 57.28693904540332,
+          "pred_new": 54.902154604120845,
           "actual_pass": 0.0
         },
         {
@@ -320,20 +320,20 @@
           "class_name": "HN-K25-QTKD2",
           "course_name": "[MAN107] Quản trị chiến lược doanh nghiệp",
           "size": 40,
-          "v_class": 5.9905,
-          "mult_env": 0.9950475,
-          "pred_old": 70.09772100743567,
-          "pred_new": 70.09772100743567,
+          "v_class": 8.014000000000001,
+          "mult_env": 0.98493,
+          "pred_old": 68.17131448837425,
+          "pred_new": 68.17131448837425,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-K25-QTKD1",
           "course_name": "[MAN107] Quản trị chiến lược doanh nghiệp",
           "size": 33,
-          "v_class": 2.4635000000000002,
+          "v_class": 3.4297777777777774,
           "mult_env": 1.0,
-          "pred_old": 71.36524255272727,
-          "pred_new": 71.36524255272727,
+          "pred_old": 70.69181228799998,
+          "pred_new": 70.69181228799998,
           "actual_pass": 0.0
         }
       ]
@@ -348,18 +348,39 @@
       "full_name": "Nguyễn Nhật Minh",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (24.1%)"
+        "Vắng chuyên cần > 20% (32.9%)"
       ],
-      "p_final": 29.032180172766733,
+      "p_final": 27.887797037497972,
       "is_failed_new": true,
       "is_excellent": true,
       "prior_hack": 96.0,
       "hack": null,
-      "att": 24.09037037037037,
-      "hw": 88.71877025447894,
+      "att": 32.928,
+      "hw": 85.46324359660865,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
+    },
+    {
+      "batch": "K24",
+      "class_name": "HN-K24-CNTT1",
+      "course_name": "[IT-214] Microservices System Design",
+      "student_id": 114,
+      "full_name": "Trần Đăng Việt",
+      "risk_level": "GREEN",
+      "reasons": [],
+      "p_final": 62.86989598762171,
+      "is_failed_new": false,
+      "is_excellent": true,
+      "prior_hack": 93.0,
+      "hack": null,
+      "att": 16.464,
+      "hw": 95.5177259871992,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": [
+        "sudden_drop"
+      ]
     },
     {
       "batch": "K24",
@@ -369,15 +390,15 @@
       "full_name": "Nguyễn Sỹ Trung",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (24.1%)"
+        "Vắng chuyên cần > 20% (32.9%)"
       ],
-      "p_final": 29.981165540578157,
+      "p_final": 28.795118260087385,
       "is_failed_new": true,
       "is_excellent": true,
       "prior_hack": 95.0,
       "hack": null,
-      "att": 24.09037037037037,
-      "hw": 99.15625513919613,
+      "att": 32.928,
+      "hw": 95.5177259871992,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -390,15 +411,15 @@
       "full_name": "Nguyễn Văn Tùng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (24.1%)"
+        "Vắng chuyên cần > 20% (32.9%)"
       ],
-      "p_final": 29.580216624540746,
+      "p_final": 28.414451209232627,
       "is_failed_new": true,
       "is_excellent": true,
       "prior_hack": 86.0,
       "hack": null,
-      "att": 24.09037037037037,
-      "hw": 93.93746311870999,
+      "att": 32.928,
+      "hw": 90.49043703304095,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -409,17 +430,17 @@
       "course_name": "[IT-214] Microservices System Design",
       "student_id": 203,
       "full_name": "Trần Quang Hiệp",
-      "risk_level": "YELLOW",
+      "risk_level": "RED",
       "reasons": [
-        "Học lực môn trước yếu (30.6%)"
+        "Xác suất đỗ quá thấp (29.8%) kèm vi phạm KL"
       ],
-      "p_final": 30.637374893731973,
+      "p_final": 29.797648068999223,
       "is_failed_new": false,
       "is_excellent": true,
       "prior_hack": 90.0,
       "hack": null,
-      "att": 12.045185185185185,
-      "hw": 88.71877025447894,
+      "att": 16.464,
+      "hw": 85.46324359660865,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -432,15 +453,15 @@
       "full_name": "Nguyễn Thị Phương",
       "risk_level": "YELLOW",
       "reasons": [
-        "Học lực môn trước yếu (31.3%)"
+        "Học lực môn trước yếu (30.7%)"
       ],
-      "p_final": 31.27770606807225,
+      "p_final": 30.7369621654069,
       "is_failed_new": false,
       "is_excellent": true,
       "prior_hack": 82.0,
       "hack": null,
-      "att": 8.90311111111111,
-      "hw": 99.09142857142857,
+      "att": 16.196266666666666,
+      "hw": 98.94,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -455,14 +476,56 @@
       "reasons": [
         "Học lực môn trước yếu (29.9%)"
       ],
-      "p_final": 29.91350344894729,
+      "p_final": 29.91500835675239,
       "is_failed_new": false,
       "is_excellent": true,
       "prior_hack": 75.0,
       "hack": null,
-      "att": 13.372587013365836,
+      "att": 13.352979114519258,
       "hw": 90.22556390977444,
       "el": 1.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT7",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 1532,
+      "full_name": "Trần Đức Ngọc",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (22.8%)"
+      ],
+      "p_final": 46.089710349690336,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 22.83235813131238,
+      "hw": 93.87865199228791,
+      "el": 0.0,
+      "rp": 100.0,
+      "anomalies": []
+    },
+    {
+      "batch": "K25",
+      "class_name": "HCM-K25-CNTT7",
+      "course_name": "[IT105-K25] Phân tích & thiết kế hệ thống",
+      "student_id": 1517,
+      "full_name": "Hồ Hữu Hoài Nam",
+      "risk_level": "RED",
+      "reasons": [
+        "Vắng chuyên cần > 20% (22.8%)"
+      ],
+      "p_final": 46.916882860325835,
+      "is_failed_new": true,
+      "is_excellent": false,
+      "prior_hack": null,
+      "hack": null,
+      "att": 22.83235813131238,
+      "hw": 98.81963367609255,
+      "el": 0.0,
       "rp": 100.0,
       "anomalies": []
     },
@@ -789,15 +852,15 @@
       "full_name": "Nguyễn Trần Bảo Khánh",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (20.1%)"
+        "Vắng chuyên cần > 20% (24.4%)"
       ],
-      "p_final": 60.94263618282185,
+      "p_final": 59.993516643507576,
       "is_failed_new": true,
       "is_excellent": true,
       "prior_hack": 93.0,
       "hack": null,
-      "att": 20.063880597014926,
-      "hw": 98.28285714285714,
+      "att": 24.44776119402985,
+      "hw": 97.57,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -810,15 +873,15 @@
       "full_name": "Hoàng Thiên Sơn",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (30.1%)"
+        "Vắng chuyên cần > 20% (36.7%)"
       ],
-      "p_final": 58.9777225658584,
+      "p_final": 57.71889401403133,
       "is_failed_new": true,
       "is_excellent": true,
       "prior_hack": 76.0,
       "hack": null,
-      "att": 30.095820895522387,
-      "hw": 98.28285714285714,
+      "att": 36.67164179104477,
+      "hw": 97.57,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -831,15 +894,15 @@
       "full_name": "Nguyễn Hoàng Nhật",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (30.1%)"
+        "Vắng chuyên cần > 20% (36.7%)"
       ],
-      "p_final": 27.03950404154989,
+      "p_final": 24.904458345461645,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": 0.0,
       "hack": null,
-      "att": 30.095820895522387,
-      "hw": 98.28285714285714,
+      "att": 36.67164179104477,
+      "hw": 97.57,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -852,15 +915,15 @@
       "full_name": "Trịnh Khắc Hưng",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (30.1%)"
+        "Vắng chuyên cần > 20% (36.7%)"
       ],
-      "p_final": 29.4888612829292,
+      "p_final": 28.859447007015664,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": null,
       "hack": null,
-      "att": 30.095820895522387,
-      "hw": 98.28285714285714,
+      "att": 36.67164179104477,
+      "hw": 97.57,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -873,15 +936,15 @@
       "full_name": "Ngô Quang Anh",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (25.1%)"
+        "Vắng chuyên cần > 20% (30.6%)"
       ],
-      "p_final": 59.702579374340125,
+      "p_final": 58.59940102654723,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": 61.0,
       "hack": null,
-      "att": 25.079850746268658,
-      "hw": 98.28285714285714,
+      "att": 30.559701492537314,
+      "hw": 97.57,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -894,15 +957,15 @@
       "full_name": "Trần Khánh An",
       "risk_level": "RED",
       "reasons": [
-        "Vắng chuyên cần > 20% (40.1%)"
+        "Vắng chuyên cần > 20% (48.9%)"
       ],
-      "p_final": 27.246118681344022,
+      "p_final": 25.141695220982513,
       "is_failed_new": true,
       "is_excellent": false,
       "prior_hack": null,
       "hack": null,
-      "att": 40.12776119402985,
-      "hw": 98.28285714285714,
+      "att": 48.8955223880597,
+      "hw": 97.57,
       "el": 0.0,
       "rp": 100.0,
       "anomalies": []
@@ -913,7 +976,7 @@
       "copy_suspect": 0,
       "discipline_paradox": 0,
       "passive_learner": 0,
-      "sudden_drop": 0
+      "sudden_drop": 1
     },
     "K25": {
       "copy_suspect": 0,
