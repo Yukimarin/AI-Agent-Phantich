@@ -3702,7 +3702,7 @@
               "ops_score": 5.0
             },
             "grade": "B",
-            "grade_label": "Hạng 2 - Khá (Cần cải thiện nề nếp)",
+            "grade_label": "Hạng 3 - Khá (Cần cải thiện nề nếp)",
             "badge_color": "blue",
             "daily_logs": [
               {
@@ -6438,7 +6438,7 @@
               "ops_score": 3.0
             },
             "grade": "B",
-            "grade_label": "Hạng 3 - Cần Lưu Ý (Kỷ luật log yếu nhất)",
+            "grade_label": "Hạng 4 - Cần Lưu Ý (Kỷ luật log yếu nhất & Lệch JD)",
             "badge_color": "amber",
             "daily_logs": [
               {
@@ -6914,79 +6914,8 @@
             "total_issues": 159,
             "done_issues": 138,
             "open_issues": 21,
-            "overdue_issues": [
-              {
-                "code": "PTITSAN-12",
-                "title": "[S04] Mindmap + Quizz đầu/cuối giờ — Session 04",
-                "due": "2026-08-08",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              },
-              {
-                "code": "PTITSAN-13",
-                "title": "[S04] Bài tập thực hành + Bài đọc + BTTHHOP — Session 04",
-                "due": "2026-08-08",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              },
-              {
-                "code": "PTITSAN-14",
-                "title": "[S05] 5 bài tập tổng hợp kiến thức — Session 05",
-                "due": "2026-08-15",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              },
-              {
-                "code": "PTITSAN-15",
-                "title": "[S06] 5 bài tập tổng hợp kiến thức — Session 06",
-                "due": "2026-08-15",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              },
-              {
-                "code": "PTITSAN-18",
-                "title": "[S07] Mindmap + Quizz đầu/cuối giờ — Session 07",
-                "due": "2026-08-22",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              },
-              {
-                "code": "PTITSAN-19",
-                "title": "[S07] Bài tập thực hành + Bài đọc + BTTHHOP — Session 07",
-                "due": "2026-08-22",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              },
-              {
-                "code": "PTITSAN-20",
-                "title": "[S08] 5 bài tập tổng hợp kiến thức — Session 08",
-                "due": "2026-08-29",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              },
-              {
-                "code": "PTITSAN-21",
-                "title": "[S09] 100 câu hỏi trắc nghiệm + Đề 1,2 thực hành — Session 09",
-                "due": "2026-09-05",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              },
-              {
-                "code": "PTITSAN-26",
-                "title": "[S10] Mindmap + Quizz đầu/cuối giờ — Session 10",
-                "due": "2026-09-12",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              },
-              {
-                "code": "PTITSAN-27",
-                "title": "[S10] Bài tập thực hành + Bài đọc + BTTHHOP — Session 10",
-                "due": "2026-09-12",
-                "state": "Cần làm",
-                "project": "PTITSAN"
-              }
-            ],
-            "overdue_issues_count": 10,
+            "overdue_issues": [],
+            "overdue_issues_count": 0,
             "ops_violations": [
               {
                 "Date": "2026-08-20",
@@ -7033,12 +6962,12 @@
             "scores": {
               "log_score": 35.0,
               "task_score": 25.0,
-              "issue_score": 10.0,
+              "issue_score": 25.0,
               "ops_score": 0.0
             },
-            "grade": "C",
-            "grade_label": "Hạng 4 - Cần Chấn Chỉnh (Vi phạm quy chế đào tạo & ticket trễ)",
-            "badge_color": "rose",
+            "grade": "B",
+            "grade_label": "Hạng 2 - Khá (Nề nếp log tốt, cần chấn chỉnh vi phạm quy chế)",
+            "badge_color": "blue",
             "daily_logs": [
               {
                 "date": "2026-08-17",
@@ -7602,7 +7531,7 @@
                 "plan": ""
               }
             ],
-            "total_score": 70.0
+            "total_score": 85.0
           },
           "hoàng thị kim oanh": {
             "name": "Hoàng Thị Kim Oanh",
@@ -28520,8 +28449,8 @@
       "campus": "Cơ sở Hà Nội - Ngọc Trục",
       "group": "Khối CNTT Hà Nội",
       "leader": "Hồ Xuân Hùng",
-      "rank_order": 2,
-      "rank_title": "Hạng 2 - Khá (Cần cải thiện nề nếp)",
+      "rank_order": 3,
+      "rank_title": "Hạng 3 - Khá (Cần cải thiện nề nếp)",
       "badge_color": "blue",
       "grade": "B",
       "total_score": 82.6,
@@ -28644,8 +28573,8 @@
       "campus": "Cơ sở Hà Nội - HPC",
       "group": "Khối CNTT Hà Nội",
       "leader": "Hồ Xuân Hùng",
-      "rank_order": 3,
-      "rank_title": "Hạng 3 - Cần Lưu Ý (Kỷ luật log yếu nhất)",
+      "rank_order": 4,
+      "rank_title": "Hạng 4 - Cần Lưu Ý (Kỷ luật log yếu nhất & Lệch JD)",
       "badge_color": "amber",
       "grade": "B",
       "total_score": 78.2,
@@ -28789,18 +28718,18 @@
       "campus": "Cơ sở Hà Nội - HPC",
       "group": "Khối CNTT Hà Nội",
       "leader": "Hồ Xuân Hùng",
-      "rank_order": 4,
-      "rank_title": "Hạng 4 - Cần Chấn Chỉnh (Vi phạm quy chế đào tạo & ticket trễ)",
-      "badge_color": "rose",
-      "grade": "C",
-      "total_score": 70.0,
+      "rank_order": 2,
+      "rank_title": "Hạng 2 - Khá (Nề nếp log tốt, cần chấn chỉnh vi phạm quy chế)",
+      "badge_color": "blue",
+      "grade": "B",
+      "total_score": 85.0,
       "scores": {
         "log_score": 35.0,
         "task_score": 25.0,
-        "issue_score": 10.0,
+        "issue_score": 25.0,
         "ops_score": 0.0
       },
-      "overview": "Duy trì tỷ lệ nộp báo cáo ngày 100% (18/18 ngày) và 100% task tự khai báo hoàn thành. Tuy nhiên, nhân sự mắc 4 vi phạm quy chế đào tạo & khảo thí rất nghiêm trọng (2 lần chậm chấm BTVN, 1 vi phạm tự ý đổi lịch coi thi 22/08, 1 vi phạm quy định ra BTVN 2 môn AI ngày 09/09) và có 10 tickets quá hạn deadline đang ở trạng thái 'Cần làm'. Riêng 6 tickets dự án TRIEKHAI đang ở trạng thái 'Chờ duyệt' đã được miễn trừ theo quy chế mới.",
+      "overview": "Đạt tỷ lệ nộp báo cáo ngày 100% (18/18 ngày) và 100% task tự khai báo hoàn thành. Trong kỳ đánh giá (16/08 - 15/09), Thầy Chinh không phát sinh ticket quá hạn (10 ticket học liệu cũ có hạn 12/08 trước kỳ đánh giá đã được bóc tách loại bỏ, 6 ticket dự án TRIEKHAI đang Chờ duyệt được miễn trừ theo quy chế). Tuy nhiên, nhân sự mắc 4 vi phạm quy chế đào tạo & khảo thí rất nghiêm trọng (2 lần chậm chấm BTVN, 1 vi phạm tự ý đổi lịch coi thi 22/08, 1 vi phạm quy định ra BTVN 2 môn AI ngày 09/09), bị trừ toàn bộ 15 điểm kỷ luật tác nghiệp.",
       "log_stats": {
         "reported": 18,
         "expected": 18,
@@ -28860,86 +28789,15 @@
         "done": 138,
         "done_rate": 86.8,
         "open": 21,
-        "overdue": 10,
-        "overdue_rate": 6.3,
+        "overdue": 0,
+        "overdue_rate": 0.0,
         "projects": [
           "PTITSAN",
           "TRIEKHAI",
           "KS24INTE",
           "PTITTRIE"
         ],
-        "overdue_list": [
-          {
-            "code": "PTITSAN-12",
-            "title": "[S04] Mindmap + Quizz đầu/cuối giờ — Session 04",
-            "due": "2026-08-08",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          },
-          {
-            "code": "PTITSAN-13",
-            "title": "[S04] Bài tập thực hành + Bài đọc + BTTHHOP — Session 04",
-            "due": "2026-08-08",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          },
-          {
-            "code": "PTITSAN-14",
-            "title": "[S05] 5 bài tập tổng hợp kiến thức — Session 05",
-            "due": "2026-08-15",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          },
-          {
-            "code": "PTITSAN-15",
-            "title": "[S06] 5 bài tập tổng hợp kiến thức — Session 06",
-            "due": "2026-08-15",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          },
-          {
-            "code": "PTITSAN-18",
-            "title": "[S07] Mindmap + Quizz đầu/cuối giờ — Session 07",
-            "due": "2026-08-22",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          },
-          {
-            "code": "PTITSAN-19",
-            "title": "[S07] Bài tập thực hành + Bài đọc + BTTHHOP — Session 07",
-            "due": "2026-08-22",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          },
-          {
-            "code": "PTITSAN-20",
-            "title": "[S08] 5 bài tập tổng hợp kiến thức — Session 08",
-            "due": "2026-08-29",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          },
-          {
-            "code": "PTITSAN-21",
-            "title": "[S09] 100 câu hỏi trắc nghiệm + Đề 1,2 thực hành — Session 09",
-            "due": "2026-09-05",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          },
-          {
-            "code": "PTITSAN-26",
-            "title": "[S10] Mindmap + Quizz đầu/cuối giờ — Session 10",
-            "due": "2026-09-12",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          },
-          {
-            "code": "PTITSAN-27",
-            "title": "[S10] Bài tập thực hành + Bài đọc + BTTHHOP — Session 10",
-            "due": "2026-09-12",
-            "state": "Cần làm",
-            "project": "PTITSAN"
-          }
-        ],
+        "overdue_list": [],
         "pending_approval_list": [
           {
             "code": "TRIEKHAI-2",
@@ -29010,7 +28868,7 @@
           }
         ]
       },
-      "recommendation": "Yêu cầu Giám đốc Đào tạo và Leader Hồ Xuân Hùng lập biên bản kỷ luật đối với 4 vi phạm quy chế của Thầy Chinh. Đồng thời chốt deadline dứt điểm để hoàn thành 10 tickets học liệu Session 4-10 đang quá hạn (Cần làm) trên Worklane."
+      "recommendation": "Yêu cầu Giám đốc Đào tạo và Leader Hồ Xuân Hùng lập biên bản nhắc nhở đối với 4 vi phạm quy chế đào tạo & khảo thí của Thầy Chinh. Về tiến độ ticket, nhân sự không có ticket quá hạn trong kỳ đánh giá 16/08 - 15/09 (10 ticket học liệu cũ có hạn 12/08 đã được loại bỏ; 6 ticket TRIEKHAI đang chờ duyệt)."
     }
   }
 }

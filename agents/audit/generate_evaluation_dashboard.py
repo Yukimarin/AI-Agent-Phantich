@@ -86,8 +86,8 @@ tas_analysis = {
         "campus": "Cơ sở Hà Nội - Ngọc Trục",
         "group": "Khối CNTT Hà Nội",
         "leader": "Hồ Xuân Hùng",
-        "rank_order": 2,
-        "rank_title": "Hạng 2 - Khá (Cần cải thiện nề nếp)",
+        "rank_order": 3,
+        "rank_title": "Hạng 3 - Khá (Cần cải thiện nề nếp)",
         "badge_color": "blue",
         "grade": "B",
         "total_score": 82.6,
@@ -152,8 +152,8 @@ tas_analysis = {
         "campus": "Cơ sở Hà Nội - HPC",
         "group": "Khối CNTT Hà Nội",
         "leader": "Hồ Xuân Hùng",
-        "rank_order": 3,
-        "rank_title": "Hạng 3 - Cần Lưu Ý (Kỷ luật log yếu nhất)",
+        "rank_order": 4,
+        "rank_title": "Hạng 4 - Cần Lưu Ý (Kỷ luật log yếu nhất & Lệch JD)",
         "badge_color": "amber",
         "grade": "B",
         "total_score": 78.2,
@@ -221,18 +221,18 @@ tas_analysis = {
         "campus": "Cơ sở Hà Nội - HPC",
         "group": "Khối CNTT Hà Nội",
         "leader": "Hồ Xuân Hùng",
-        "rank_order": 4,
-        "rank_title": "Hạng 4 - Cần Chấn Chỉnh (Vi phạm quy chế đào tạo & ticket trễ)",
-        "badge_color": "rose",
-        "grade": "C",
-        "total_score": 70.0,
+        "rank_order": 2,
+        "rank_title": "Hạng 2 - Khá (Nề nếp log tốt, cần chấn chỉnh vi phạm quy chế)",
+        "badge_color": "blue",
+        "grade": "B",
+        "total_score": 85.0,
         "scores": {
             "log_score": 35.0,
             "task_score": 25.0,
-            "issue_score": 10.0,
+            "issue_score": 25.0,
             "ops_score": 0.0
         },
-        "overview": "Duy trì tỷ lệ nộp báo cáo ngày 100% (18/18 ngày) và 100% task tự khai báo hoàn thành. Tuy nhiên, nhân sự mắc 4 vi phạm quy chế đào tạo & khảo thí rất nghiêm trọng (2 lần chậm chấm BTVN, 1 vi phạm tự ý đổi lịch coi thi 22/08, 1 vi phạm quy định ra BTVN 2 môn AI ngày 09/09) và có 10 tickets quá hạn deadline đang ở trạng thái 'Cần làm'. Riêng 6 tickets dự án TRIEKHAI đang ở trạng thái 'Chờ duyệt' đã được miễn trừ theo quy chế mới.",
+        "overview": "Đạt tỷ lệ nộp báo cáo ngày 100% (18/18 ngày) và 100% task tự khai báo hoàn thành. Trong kỳ đánh giá (16/08 - 15/09), Thầy Chinh không phát sinh ticket quá hạn (10 ticket học liệu cũ có hạn 12/08 trước kỳ đánh giá đã được bóc tách loại bỏ, 6 ticket dự án TRIEKHAI đang Chờ duyệt được miễn trừ theo quy chế). Tuy nhiên, nhân sự mắc 4 vi phạm quy chế đào tạo & khảo thí rất nghiêm trọng (2 lần chậm chấm BTVN, 1 vi phạm tự ý đổi lịch coi thi 22/08, 1 vi phạm quy định ra BTVN 2 môn AI ngày 09/09), bị trừ toàn bộ 15 điểm kỷ luật tác nghiệp.",
         "log_stats": {
             "reported": 18,
             "expected": 18,
@@ -260,21 +260,10 @@ tas_analysis = {
             "done": 138,
             "done_rate": 86.8,
             "open": 21,
-            "overdue": 10,
-            "overdue_rate": 6.3,
+            "overdue": 0,
+            "overdue_rate": 0.0,
             "projects": ["PTITSAN", "TRIEKHAI", "KS24INTE", "PTITTRIE"],
-            "overdue_list": [
-                {"code": "PTITSAN-12", "title": "[S04] Mindmap + Quizz đầu/cuối giờ — Session 04", "due": "2026-08-08", "state": "Cần làm", "project": "PTITSAN"},
-                {"code": "PTITSAN-13", "title": "[S04] Bài tập thực hành + Bài đọc + BTTHHOP — Session 04", "due": "2026-08-08", "state": "Cần làm", "project": "PTITSAN"},
-                {"code": "PTITSAN-14", "title": "[S05] 5 bài tập tổng hợp kiến thức — Session 05", "due": "2026-08-15", "state": "Cần làm", "project": "PTITSAN"},
-                {"code": "PTITSAN-15", "title": "[S06] 5 bài tập tổng hợp kiến thức — Session 06", "due": "2026-08-15", "state": "Cần làm", "project": "PTITSAN"},
-                {"code": "PTITSAN-18", "title": "[S07] Mindmap + Quizz đầu/cuối giờ — Session 07", "due": "2026-08-22", "state": "Cần làm", "project": "PTITSAN"},
-                {"code": "PTITSAN-19", "title": "[S07] Bài tập thực hành + Bài đọc + BTTHHOP — Session 07", "due": "2026-08-22", "state": "Cần làm", "project": "PTITSAN"},
-                {"code": "PTITSAN-20", "title": "[S08] 5 bài tập tổng hợp kiến thức — Session 08", "due": "2026-08-29", "state": "Cần làm", "project": "PTITSAN"},
-                {"code": "PTITSAN-21", "title": "[S09] 100 câu hỏi trắc nghiệm + Đề 1,2 thực hành — Session 09", "due": "2026-09-05", "state": "Cần làm", "project": "PTITSAN"},
-                {"code": "PTITSAN-26", "title": "[S10] Mindmap + Quizz đầu/cuối giờ — Session 10", "due": "2026-09-12", "state": "Cần làm", "project": "PTITSAN"},
-                {"code": "PTITSAN-27", "title": "[S10] Bài tập thực hành + Bài đọc + BTTHHOP — Session 10", "due": "2026-09-12", "state": "Cần làm", "project": "PTITSAN"}
-            ],
+            "overdue_list": [],
             "pending_approval_list": [
                 {"code": "TRIEKHAI-2", "title": "[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT4", "due": "2026-07-06", "state": "Chờ duyệt (PIC chưa duyệt - Không tính lỗi nhân sự)", "project": "TRIEKHAI"},
                 {"code": "TRIEKHAI-5", "title": "[Buổi 1] Hỗ trợ triển khai DA K24 — CNTT2", "due": "2026-07-08", "state": "Chờ duyệt (PIC chưa duyệt - Không tính lỗi nhân sự)", "project": "TRIEKHAI"},
@@ -293,7 +282,7 @@ tas_analysis = {
                 {"type": "Lỗi Tác Nghiệp Đào Tạo", "date": "2026-08-21", "desc": "Lớp HN-K24-CNTT3: Lỗi QLDT-EX-LATE — Chậm trễ chấm BTVN cho sinh viên (Lần 2 liên tiếp)"}
             ]
         },
-        "recommendation": "Yêu cầu Giám đốc Đào tạo và Leader Hồ Xuân Hùng lập biên bản kỷ luật đối với 4 vi phạm quy chế của Thầy Chinh. Đồng thời chốt deadline dứt điểm để hoàn thành 10 tickets học liệu Session 4-10 đang quá hạn (Cần làm) trên Worklane."
+        "recommendation": "Yêu cầu Giám đốc Đào tạo và Leader Hồ Xuân Hùng lập biên bản nhắc nhở đối với 4 vi phạm quy chế đào tạo & khảo thí của Thầy Chinh. Về tiến độ ticket, nhân sự không có ticket quá hạn trong kỳ đánh giá 16/08 - 15/09 (10 ticket học liệu cũ có hạn 12/08 đã được loại bỏ; 6 ticket TRIEKHAI đang chờ duyệt)."
     }
 }
 
@@ -483,7 +472,7 @@ html_template = """<!DOCTYPE html>
                 </div>
                 <div class="h-8 w-px bg-slate-800"></div>
                 <div class="text-right">
-                    <div class="text-2xl font-black text-rose-400">12</div>
+                    <div class="text-2xl font-black text-rose-400">2</div>
                     <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Ticket Quá Hạn (Cần làm)</div>
                 </div>
             </div>
@@ -537,7 +526,7 @@ html_template = """<!DOCTYPE html>
             <div class="lg:col-span-2 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-sm space-y-3">
                 <div class="flex items-center justify-between">
                     <h3 class="text-sm font-bold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-chart-column text-indigo-400"></i> Cơ Cấu Phân Bổ Thời Gian Thực Tế 4 Thầy Trợ Giảng (Giờ)
+                        <i class="fa-solid fa-chart-column text-indigo-400"></i> Cơ Cấu Phân Bổ Thời Gian Thực Tế 4 Thầy TrỢ Giảng (Giờ)
                     </h3>
                     <span class="text-xs text-slate-400">30 ngày gần nhất (16/08 - 15/09/2026)</span>
                 </div>
@@ -578,14 +567,14 @@ html_template = """<!DOCTYPE html>
                 <button onclick="selectTATab('lại trung lâm')" id="tab-btn-lam" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-indigo-600 text-white shadow-md">
                     <i class="fa-solid fa-award text-emerald-300"></i> 1. Lại Trung Lâm (A+ • 99.6đ)
                 </button>
+                <button onclick="selectTATab('mai xuân chinh')" id="tab-btn-chinh" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700">
+                    <i class="fa-solid fa-circle-check text-blue-400"></i> 2. Mai Xuân Chinh (B • 85.0đ)
+                </button>
                 <button onclick="selectTATab('phạm ngọc kiên')" id="tab-btn-kien" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700">
-                    <i class="fa-solid fa-circle-check text-blue-400"></i> 2. Phạm Ngọc Kiên (B • 82.6đ)
+                    <i class="fa-solid fa-circle-check text-blue-400"></i> 3. Phạm Ngọc Kiên (B • 82.6đ)
                 </button>
                 <button onclick="selectTATab('đinh thành nam')" id="tab-btn-nam" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700">
-                    <i class="fa-solid fa-calendar-xmark text-amber-400"></i> 3. Đinh Thành Nam (B • 78.2đ)
-                </button>
-                <button onclick="selectTATab('mai xuân chinh')" id="tab-btn-chinh" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700">
-                    <i class="fa-solid fa-triangle-exclamation text-rose-400"></i> 4. Mai Xuân Chinh (C • 70.0đ)
+                    <i class="fa-solid fa-calendar-xmark text-amber-400"></i> 4. Đinh Thành Nam (B • 78.2đ)
                 </button>
             </div>
 
@@ -828,7 +817,7 @@ html_template = """<!DOCTYPE html>
             const tbody = document.getElementById('matrixTableBody');
             tbody.innerHTML = '';
 
-            const tasOrder = ['lại trung lâm', 'phạm ngọc kiên', 'đinh thành nam', 'mai xuân chinh'];
+            const tasOrder = ['lại trung lâm', 'mai xuân chinh', 'phạm ngọc kiên', 'đinh thành nam'];
             tasOrder.forEach((k, idx) => {
                 const s = TAS_DATA[k];
                 if (!s) return;
@@ -845,15 +834,15 @@ html_template = """<!DOCTYPE html>
                 // Structured evaluation label & note
                 let evalLabel = 'Xuất sắc (Gương mẫu)';
                 let evalNote = '100% log • 0 ticket trễ • 0 vi phạm';
-                if (k === 'phạm ngọc kiên') {
+                if (k === 'mai xuân chinh') {
+                    evalLabel = 'Khá (Nề nếp log 100%)';
+                    evalNote = '0 ticket trễ trong kỳ • 4 vi phạm quy chế (cần chấn chỉnh)';
+                } else if (k === 'phạm ngọc kiên') {
                     evalLabel = 'Khá (Cần lưu ý log)';
                     evalNote = 'Quên 2 log • 1 ticket trễ (1 task miễn trừ)';
                 } else if (k === 'đinh thành nam') {
                     evalLabel = 'Cần lưu ý (Log yếu & Lệch JD)';
                     evalNote = 'Log 77.8% • Lệch JD (41.5% dev tool)';
-                } else if (k === 'mai xuân chinh') {
-                    evalLabel = 'Cần chấn chỉnh (Vi phạm quy chế)';
-                    evalNote = '4 vi phạm • 10 ticket trễ (6 task miễn trừ)';
                 }
 
                 const tr = document.createElement('tr');
@@ -1119,18 +1108,20 @@ html_template = """<!DOCTYPE html>
             const ctxTime = document.getElementById('timeBreakdownChart').getContext('2d');
             const tasOrder = ['Lại Trung Lâm', 'Phạm Ngọc Kiên', 'Đinh Thành Nam', 'Mai Xuân Chinh'];
             
+            const chartTasOrder = ['Lại Trung Lâm', 'Mai Xuân Chinh', 'Phạm Ngọc Kiên', 'Đinh Thành Nam'];
+            
             timeBreakdownChartInstance = new Chart(ctxTime, {
                 type: 'bar',
                 data: {
-                    labels: tasOrder,
+                    labels: chartTasOrder,
                     datasets: [
-                        { label: 'Chấm BTVN', data: [22.8, 45.0, 8.5, 35.0], backgroundColor: '#10b981' },
-                        { label: 'Học liệu & Nghiên cứu môn', data: [12.5, 0.0, 17.0, 44.0], backgroundColor: '#f59e0b' },
-                        { label: 'Phát triển Dev Tool / App', data: [13.5, 0.0, 47.5, 28.0], backgroundColor: '#6366f1' },
-                        { label: 'Chăm sóc Học viên', data: [13.0, 9.0, 11.0, 12.5], backgroundColor: '#06b6d4' },
-                        { label: 'Trợ giảng lên lớp', data: [6.2, 16.0, 0.0, 0.0], backgroundColor: '#3b82f6' },
-                        { label: 'Họp chuyên môn', data: [9.5, 3.0, 2.5, 4.0], backgroundColor: '#8b5cf6' },
-                        { label: 'Hỗ trợ chung', data: [80.8, 72.0, 28.0, 23.0], backgroundColor: '#64748b' }
+                        { label: 'Chấm BTVN', data: [22.8, 35.0, 45.0, 8.5], backgroundColor: '#10b981' },
+                        { label: 'Học liệu & Nghiên cứu môn', data: [12.5, 44.0, 0.0, 17.0], backgroundColor: '#f59e0b' },
+                        { label: 'Phát triển Dev Tool / App', data: [13.5, 28.0, 0.0, 47.5], backgroundColor: '#6366f1' },
+                        { label: 'Chăm sóc Học viên', data: [13.0, 12.5, 9.0, 11.0], backgroundColor: '#06b6d4' },
+                        { label: 'Trợ giảng lên lớp', data: [6.2, 0.0, 16.0, 0.0], backgroundColor: '#3b82f6' },
+                        { label: 'Họp chuyên môn', data: [9.5, 4.0, 3.0, 2.5], backgroundColor: '#8b5cf6' },
+                        { label: 'Hỗ trợ chung', data: [80.8, 23.0, 72.0, 28.0], backgroundColor: '#64748b' }
                     ]
                 },
                 options: {
@@ -1157,10 +1148,10 @@ html_template = """<!DOCTYPE html>
             violationsBarChartInstance = new Chart(ctxViolations, {
                 type: 'bar',
                 data: {
-                    labels: tasOrder,
+                    labels: chartTasOrder,
                     datasets: [
-                        { label: 'Ticket Quá hạn (Cần làm)', data: [0, 1, 1, 10], backgroundColor: '#f43f5e', borderRadius: 4 },
-                        { label: 'Vi phạm Quy chế / Quên Log', data: [0, 2, 4, 4], backgroundColor: '#fbbf24', borderRadius: 4 }
+                        { label: 'Ticket Quá hạn (Cần làm)', data: [0, 0, 1, 1], backgroundColor: '#f43f5e', borderRadius: 4 },
+                        { label: 'Vi phạm Quy chế / Quên Log', data: [0, 4, 3, 5], backgroundColor: '#fbbf24', borderRadius: 4 }
                     ]
                 },
                 options: {
