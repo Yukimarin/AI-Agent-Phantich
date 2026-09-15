@@ -407,7 +407,7 @@ Tài liệu này lưu trữ các quyết định thiết kế và quy chuẩn k�
   - **Lỗi task trễ hạn CHỈ tính cho nhân sự nếu nhân sự trễ hạn (trạng thái "Cần làm" / "Đang làm")**.
   - **Nếu task đang ở trạng thái "Chờ duyệt" (nhân sự đã làm xong, PIC/Leader chưa nghiệm thu) thì HOÀN TOÀN MIỄN TRỪ LỖI cho nhân sự**.
   - Áp dụng thực tế:
-    - *Mai Xuân Chinh*: 6 task dự án `TRIEKHAI` đang Chờ duyệt -> Miễn trừ; chỉ tính 10 task quá hạn thuộc `PTITSAN` (Cần làm).
+    - *Mai Xuân Chinh*: 10 ticket học liệu `PTITSAN` có hạn chót 12/08 (nằm trước mốc bắt đầu kỳ đánh giá 16/08) đã được xóa bỏ khỏi kỳ tính; 6 task dự án `TRIEKHAI` đang Chờ duyệt -> Miễn trừ. Kết quả: **0 ticket quá hạn trong kỳ**.
     - *Phạm Ngọc Kiên*: 1 task `KS26MON-287` Chờ duyệt -> Miễn trừ; chỉ tính 1 task quá hạn `KS25GIAN-23`.
     - *Đinh Thành Nam*: 1 task `PTITSAN-22` Chờ duyệt -> Miễn trừ; chỉ tính 1 task quá hạn `PTITSAN2-19`.
 - **Vi Phạm Đào Tạo & Khảo Thí Của Mai Xuân Chinh (Tổng cộng 4 vi phạm)**:
@@ -415,11 +415,11 @@ Tài liệu này lưu trữ các quyết định thiết kế và quy chuẩn k�
   2. `09/09/2026`: Vi phạm Quy định đào tạo — Vi phạm quy định ra BTVN trong 2 môn AI với các lớp KS24 (giao bài sai quy chuẩn).
   3. `20/08/2026`: Lỗi `QLDT-EX-LATE` — Chậm trễ chấm BTVN lớp HN-K24-CNTT3 (Lần 1).
   4. `21/08/2026`: Lỗi `QLDT-EX-LATE` — Chậm trễ chấm BTVN lớp HN-K24-CNTT3 (Lần 2 liên tiếp).
-- **Bảng Xếp Hạng 4 Trợ Giảng 30 Ngày Gần Nhất (16/08 - 15/09/2026)**:
+- **Bảng Xếp Hạng 4 Trợ Giảng 30 Ngày Gần Nhất (16/08 - 15/09/2026 - Cập nhật sau khi xóa 10 ticket trước 16/08)**:
   1. **Lại Trung Lâm** (99.6đ - A+ Xuất sắc): 18/18 log (100%), 0 ticket trễ, 0 vi phạm quy chế.
-  2. **Phạm Ngọc Kiên** (82.6đ - B Khá): 16/18 log (88.9%), 1 ticket quá hạn thực sự (1 task chờ duyệt miễn trừ), 3 vi phạm.
-  3. **Đinh Thành Nam** (78.2đ - B Cần lưu ý): 14/18 log (77.8% - yếu nhất), 1 ticket quá hạn thực sự (1 task chờ duyệt miễn trừ), 5 vi phạm, lệch JD (41.5% giờ làm dev tool).
-  4. **Mai Xuân Chinh** (70.0đ - C Cần chấn chỉnh): 18/18 log (100%), 10 ticket quá hạn thực tế (6 task chờ duyệt miễn trừ), 4 vi phạm quy chế nghiêm trọng.
+  2. **Mai Xuân Chinh** (85.0đ - B Khá): 18/18 log (100%), 0 ticket quá hạn trong kỳ (10 ticket cũ hạn 12/08 đã xóa, 6 task chờ duyệt miễn trừ), bị trừ 15đ vì 4 vi phạm quy chế nghiêm trọng.
+  3. **Phạm Ngọc Kiên** (82.6đ - B Khá): 16/18 log (88.9%), 1 ticket quá hạn thực sự (1 task chờ duyệt miễn trừ), 3 vi phạm.
+  4. **Đinh Thành Nam** (78.2đ - B Cần lưu ý): 14/18 log (77.8% - yếu nhất), 1 ticket quá hạn thực sự (1 task chờ duyệt miễn trừ), 5 vi phạm, lệch JD (41.5% giờ làm dev tool).
 - **Sửa Lỗi Giao Diện UI/UX**:
   - Thay cơ chế format f-string bằng placeholder replace `__JSON_PAYLOAD__` để khắc phục lỗi `json_payload is not defined`.
   - Tăng chiều cao biểu đồ lên `h-80`, chuyển chú thích lên trên `position: 'top'` với padding để tránh đè chữ.

@@ -320,20 +320,20 @@
           "class_name": "HN-K25-QTKD2",
           "course_name": "[MAN107] Quản trị chiến lược doanh nghiệp",
           "size": 40,
-          "v_class": 8.014000000000001,
-          "mult_env": 0.98493,
-          "pred_old": 68.17131448837425,
-          "pred_new": 68.17131448837425,
+          "v_class": 9.389444444444445,
+          "mult_env": 0.9780527777777778,
+          "pred_old": 66.87985270057348,
+          "pred_new": 66.87985270057348,
           "actual_pass": 0.0
         },
         {
           "class_name": "HN-K25-QTKD1",
           "course_name": "[MAN107] Quản trị chiến lược doanh nghiệp",
           "size": 33,
-          "v_class": 3.4297777777777774,
+          "v_class": 4.79611111111111,
           "mult_env": 1.0,
-          "pred_old": 70.69181228799998,
-          "pred_new": 70.69181228799998,
+          "pred_old": 69.76196886787876,
+          "pred_new": 69.76196886787876,
           "actual_pass": 0.0
         }
       ]

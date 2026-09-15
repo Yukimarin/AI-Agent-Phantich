@@ -1,13 +1,13 @@
 {
-    "generated_at": "2026-09-14T22:49:51.500136",
+    "generated_at": "2026-09-15T15:58:19.808310",
     "instructors": {
         "Bùi Thanh Hải": {
             "name": "Bùi Thanh Hải",
             "role": "GV",
             "classes": [
-                "HN-K24-CNTT1(35-31) (KS24_AI_Microservice)",
+                "HN-K24-CNTT2(39) (KS24_AI_Microservice)",
                 "HN-K24-CNTT4(32-31) (KS24_AI_Microservice)",
-                "HN-K24-CNTT2(39) (KS24_AI_Microservice)"
+                "HN-K24-CNTT1(35-31) (KS24_AI_Microservice)"
             ],
             "avg_violation_rate": 7.59,
             "student_discipline_score": 92.4
@@ -34,9 +34,9 @@
             "name": "Nguyễn Quảng An",
             "role": "GV",
             "classes": [
+                "HN-K25-CNTT1(41-39) (KS25_Phantichthietkehethong)",
                 "HN-K25-CNTT2(41) (KS25_Phantichthietkehethong)",
-                "HN-K25-CNTT5(41) (KS25_Phantichthietkehethong)",
-                "HN-K25-CNTT1(41-39) (KS25_Phantichthietkehethong)"
+                "HN-K25-CNTT5(41) (KS25_Phantichthietkehethong)"
             ],
             "avg_violation_rate": 4.48,
             "student_discipline_score": 95.5
@@ -45,8 +45,8 @@
             "name": "Nguyễn Đức Minh",
             "role": "GV",
             "classes": [
-                "HCM-K25-CNTT7(43) (KS25_Phantichthietkehethong)",
-                "HCM-K25-CNTT5(39-44) (KS25_Phantichthietkehethong)"
+                "HCM-K25-CNTT5(39-44) (KS25_Phantichthietkehethong)",
+                "HCM-K25-CNTT7(43) (KS25_Phantichthietkehethong)"
             ],
             "avg_violation_rate": 9.24,
             "student_discipline_score": 90.8
@@ -75,11 +75,11 @@
             "name": "Đặng Quỳnh Trang",
             "role": "GV",
             "classes": [
-                "HN-K25-QTKD2(42) (KS25_QTKD_MAN107)",
-                "HN-K25-QTKD1(46) (KS25_QTKD_MAN107)"
+                "HN-K25-QTKD1(46) (KS25_QTKD_MAN107)",
+                "HN-K25-QTKD2(42) (KS25_QTKD_MAN107)"
             ],
-            "avg_violation_rate": 11.96,
-            "student_discipline_score": 88.0
+            "avg_violation_rate": 14.13,
+            "student_discipline_score": 85.9
         }
     },
     "classes_analysis": {
@@ -391,9 +391,9 @@
             },
             "instructor": "Đặng Quỳnh Trang",
             "assistant": "",
-            "today_violation": 7.25,
-            "prev_violation": 5.07,
-            "diff": 2.17,
+            "today_violation": 11.59,
+            "prev_violation": 7.25,
+            "diff": 4.35,
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
             "root_cause": "⚠️ Sĩ số tăng mạnh: 33 -> 46 (+13 SV, +39.4% do sáp nhập SV từ QTKD3)"
@@ -413,8 +413,8 @@
             "instructor": "Đặng Quỳnh Trang",
             "assistant": "",
             "today_violation": 16.66,
-            "prev_violation": 10.32,
-            "diff": 6.35,
+            "prev_violation": 16.66,
+            "diff": 0.0,
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
             "root_cause": "⚠️ Sĩ số tăng: 39 -> 42 (+3 SV, +7.7% do sáp nhập SV từ QTKD3)"

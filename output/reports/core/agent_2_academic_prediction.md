@@ -1,6 +1,6 @@
 # BÁO CÁO DỰ BÁO HỌC THUẬT & KIỂM CHỨNG SAI SỐ KHOÁ K24, K25 & QTKD
 
-*Báo cáo được lập tự động ngày 14/09/2026 tích hợp chỉ số Ý thức lớp (Peer Pressure Multiplier).*
+*Báo cáo được lập tự động ngày 15/09/2026 tích hợp chỉ số Ý thức lớp (Peer Pressure Multiplier).*
 
 ## 📌 TÓM TẮT ĐÁNH GIÁ SAI SỐ KIỂM CHỨNG (MAE)
 - **Khóa K24 (Kiểm chứng qua môn AI Integration)**: MAE = **19.43%**
@@ -64,8 +64,8 @@
 
 | Tên Lớp | Sĩ số | Vi phạm lớp% | Hệ số Env | Dự báo (Luật cũ)% | Dự báo (Quy chế mới)% |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| HN-K25-QTKD2 | 40 | 8.0% | 0.98 | **68.2%** | **68.2%** |
-| HN-K25-QTKD1 | 33 | 3.4% | 1.00 | **70.7%** | **70.7%** |
+| HN-K25-QTKD2 | 40 | 9.4% | 0.98 | **66.9%** | **66.9%** |
+| HN-K25-QTKD1 | 33 | 4.8% | 1.00 | **69.8%** | **69.8%** |
 
 
 ---
