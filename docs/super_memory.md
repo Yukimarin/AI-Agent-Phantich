@@ -424,7 +424,10 @@ Tài liệu này lưu trữ các quyết định thiết kế và quy chuẩn k�
   - Thay cơ chế format f-string bằng placeholder replace `__JSON_PAYLOAD__` để khắc phục lỗi `json_payload is not defined`.
   - Tăng chiều cao biểu đồ lên `h-80`, chuyển chú thích lên trên `position: 'top'` với padding để tránh đè chữ.
   - Sửa lỗi chính tả tiêu đề Mục IV: `IV. BẢNG TỔNG HỢP TOÀN VIỆN`.
-  - Bọc bảng 41 nhân sự bằng container cuộn ngang và `min-w-[1050px]` để chống vỡ/ép khung trên màn hình nhỏ.
-
-
-
+- **Triển Khai Trực Tuyến (Live GitHub Pages)**:
+  - Báo cáo Đánh giá Nhân sự Trực quan (Multi-Period): `https://yukimarin.github.io/AI-Agent-Phantich/danh_gia_nhan_su_truc_quan.html`
+  - Báo cáo Kiểm toán Nhân sự Worklane (Capacity Matrix): `https://yukimarin.github.io/AI-Agent-Phantich/worklane_staff_audit.html`
+- **Tinh Gọn Dự Án**:
+  - Dọn sạch các file rác *.log, *.pyc phát sinh cục bộ.
+  - Bổ sung quy tắc bỏ qua logs (*.log, data/processed/*.log) vào `.gitignore`.
+  - Đồng bộ toàn bộ mã nguồn lên nhánh `main` và xuất bản lên nhánh `gh-pages`.
