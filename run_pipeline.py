@@ -126,42 +126,64 @@ def main():
     # Bước 0.5: Kiểm tra Database
     ensure_mysql_started()
 
-    # Bước 1: Agent 1 - Kỷ luật học viên
-    run_script(
-        "Agent 1: Kỷ luật học viên (Class KPI)", 
-        "agents/core/agent_1_class_kpi/run.py",
-        with_deps=["openpyxl", "numpy", "markdown"]
-    )
-    validate_output("data/processed/agent1_output.json", "json")
-    validate_output("output/dashboards/core/agent_1_student_discipline.html", "html")
-    
-    # Bước 2: Agent 2 - Dự báo học vụ
-    run_script(
-        "Agent 2: Dự báo học vụ (Academic Predictor)", 
-        "agents/core/agent_2_academic_pred/run.py",
-        with_deps=["mysql-connector-python", "openpyxl", "numpy"]
-    )
-    validate_output("data/processed/agent2_output.json", "json")
-    validate_output("output/dashboards/core/agent_2_academic_prediction.html", "html")
-    
-    # Bước 3: Agent 4 - Nhật ký công việc & Sync Worklane
-    run_script(
-        "Agent 4: Nhật ký công việc (Daily Logs Auditor)", 
-        "agents/core/agent_4_daily_logs/run.py",
-        with_deps=["openpyxl"],
-        extra_args=fast_args
-    )
-    validate_output("data/processed/daily_log_analysis.json", "json")
-    validate_output("output/dashboards/core/agent_4_daily_logs.html", "html")
-    
-    # Bước 4: Agent 3 - Kỷ luật tác nghiệp GV/TG (Phụ thuộc Agent 4)
-    run_script(
-        "Agent 3: Kỷ luật tác nghiệp GV/TG (Ops Discipline)", 
-        "agents/core/agent_3_ops_discipline/run.py",
-        with_deps=["mysql-connector-python", "openpyxl"]
-    )
-    validate_output("data/processed/agent3_output.json", "json")
-    validate_output("output/dashboards/core/agent_3_ops_discipline.html", "html")
+    # [TỐI ƯU SONG SONG HÓA]: Phân chia thành 2 luồng xử lý độc lập
+    # Nhánh A (Học thuật): Agent 1 -> Agent 2 (phụ thuộc agent1_output.json)
+    # Nhánh B (Tác nghiệp): Agent 4 -> Agent 3 (phụ thuộc daily_log_analysis.json)
+    from concurrent.futures import ThreadPoolExecutor
+
+    def run_branch_academic():
+        print("\n[NHÁNH A] Bắt đầu xử lý Kỷ luật SV & Dự báo học thuật...")
+        # Bước 1: Agent 1 - Kỷ luật học viên
+        run_script(
+            "Agent 1: Kỷ luật học viên (Class KPI)", 
+            "agents/core/agent_1_class_kpi/run.py",
+            with_deps=["openpyxl", "numpy", "markdown"]
+        )
+        validate_output("data/processed/agent1_output.json", "json")
+        validate_output("output/dashboards/core/agent_1_student_discipline.html", "html")
+        
+        # Bước 2: Agent 2 - Dự báo học vụ
+        run_script(
+            "Agent 2: Dự báo học vụ (Academic Predictor)", 
+            "agents/core/agent_2_academic_pred/run.py",
+            with_deps=["mysql-connector-python", "openpyxl", "numpy"]
+        )
+        validate_output("data/processed/agent2_output.json", "json")
+        validate_output("output/dashboards/core/agent_2_academic_prediction.html", "html")
+        print("[NHÁNH A] ✓ Hoàn thành toàn bộ Kỷ luật SV & Dự báo học thuật!")
+        return True
+
+    def run_branch_operations():
+        print("\n[NHÁNH B] Bắt đầu xử lý Nhật ký công việc & Kỷ luật tác nghiệp...")
+        # Bước 3: Agent 4 - Nhật ký công việc & Sync Worklane
+        run_script(
+            "Agent 4: Nhật ký công việc (Daily Logs Auditor)", 
+            "agents/core/agent_4_daily_logs/run.py",
+            with_deps=["openpyxl"],
+            extra_args=fast_args
+        )
+        validate_output("data/processed/daily_log_analysis.json", "json")
+        validate_output("output/dashboards/core/agent_4_daily_logs.html", "html")
+        
+        # Bước 4: Agent 3 - Kỷ luật tác nghiệp GV/TG (Phụ thuộc Agent 4)
+        run_script(
+            "Agent 3: Kỷ luật tác nghiệp GV/TG (Ops Discipline)", 
+            "agents/core/agent_3_ops_discipline/run.py",
+            with_deps=["mysql-connector-python", "openpyxl"]
+        )
+        validate_output("data/processed/agent3_output.json", "json")
+        validate_output("output/dashboards/core/agent_3_ops_discipline.html", "html")
+        print("[NHÁNH B] ✓ Hoàn thành toàn bộ Nhật ký công việc & Kỷ luật tác nghiệp!")
+        return True
+
+    print("\n" + "=" * 80)
+    print("🚀 KHỞI CHẠY ĐỒNG THỜI 2 NHÁNH ĐỘC LẬP: HỌC THUẬT // TÁC NGHIỆP...")
+    print("=" * 80)
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        f_acad = executor.submit(run_branch_academic)
+        f_ops = executor.submit(run_branch_operations)
+        f_acad.result()
+        f_ops.result()
     
     # Báo cáo Nâng cao (Tùy chọn khi truyền --with-advanced)
     if run_advanced:

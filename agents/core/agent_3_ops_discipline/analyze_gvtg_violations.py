@@ -8,6 +8,7 @@ import socket
 import time
 import subprocess
 from datetime import datetime, timedelta, date
+from collections import defaultdict
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -322,6 +323,34 @@ def main():
     cursor.execute("SELECT id, name FROM courses")
     courses_db = cursor.fetchall()
     
+    # [TỐI ƯU SIÊU TỐC]: Pre-fetch toàn bộ sessions, documents, homework, exercise vào RAM
+    # Triệt tiêu hàng ngàn câu lệnh SELECT đơn lẻ lặp đi lặp lại trong vòng lặp ca học TKB
+    print("Agent 3: Pre-fetching dữ liệu Sessions, Documents, Homework, Exercise từ MySQL...")
+    cursor.execute("SELECT id, course_id, position, name FROM sessions")
+    sessions_db_all = cursor.fetchall()
+    course_sessions_cache = defaultdict(dict)
+    for s in sessions_db_all:
+        course_sessions_cache[s['course_id']][s['position']] = {'id': s['id'], 'name': s['name']}
+        
+    cursor.execute("SELECT class_id, session_id, created_at FROM documents")
+    docs_db_all = cursor.fetchall()
+    docs_cache = defaultdict(list)
+    for d in docs_db_all:
+        docs_cache[(d['class_id'], d['session_id'])].append(d)
+        
+    cursor.execute("SELECT id, session_id FROM homework")
+    hw_db_all = cursor.fetchall()
+    hw_cache = defaultdict(list)
+    for h in hw_db_all:
+        hw_cache[h['session_id']].append(h)
+        
+    cursor.execute("SELECT class_id, homework_id, updated_at FROM exercise")
+    ex_db_all = cursor.fetchall()
+    ex_cache = defaultdict(list)
+    for e in ex_db_all:
+        ex_cache[(e['class_id'], e['homework_id'])].append(e)
+    print(f"✓ Đã nạp RAM: {len(sessions_db_all)} sessions, {len(docs_db_all)} docs, {len(hw_db_all)} homeworks, {len(ex_db_all)} exercises.")
+    
     # 3. Đọc dữ liệu Thời khóa biểu Excel (có Cache JSON tăng tốc)
     class_col = 'Lớp đào tạo'
     subject_col = 'Môn học'
@@ -504,8 +533,7 @@ def main():
         # ─────────────────────────────────────────────────────────────
         # TIÊU CHÍ 2.2a: Tài nguyên học tập (document)
         # ─────────────────────────────────────────────────────────────
-        cursor.execute("SELECT created_at FROM documents WHERE class_id = %s AND session_id = %s", (cid, sess_id))
-        docs = cursor.fetchall()
+        docs = docs_cache.get((cid, sess_id), [])
         
         if not docs:
             violations.append({
@@ -531,8 +559,7 @@ def main():
         # ─────────────────────────────────────────────────────────────
         # TIÊU CHÍ 2.2b: Cập nhật trạng thái BTVN (exercise)
         # ─────────────────────────────────────────────────────────────
-        cursor.execute("SELECT id FROM homework WHERE session_id = %s", (sess_id,))
-        hws = cursor.fetchall()
+        hws = hw_cache.get(sess_id, [])
         
         if not hws:
             violations.append({
@@ -545,8 +572,7 @@ def main():
             })
         else:
             hw_id = hws[0]['id']
-            cursor.execute("SELECT updated_at FROM exercise WHERE class_id = %s AND homework_id = %s", (cid, hw_id))
-            exercises = cursor.fetchall()
+            exercises = ex_cache.get((cid, hw_id), [])
             
             if not exercises:
                 violations.append({

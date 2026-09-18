@@ -917,10 +917,10 @@
       "reported_days": 5,
       "missing_days": [],
       "total_tasks": 30,
-      "completed_tasks": 27,
-      "completion_rate": 90.0,
+      "completed_tasks": 29,
+      "completion_rate": 96.66666666666667,
       "time_score": 90.0,
-      "work_score": 94.0,
+      "work_score": 96.7,
       "declared_hours": 37.0,
       "time_violations": [
         "25/08: Task 'Làm việc với nhân sự tiếng Nhật về kỳ review sau thử việc' khai báo 1.0h so với định mức tiêu chuẩn 0.4h",
@@ -928,12 +928,10 @@
       ],
       "warning_flags": [
         "Task 'PTITQUAN-33 Giao ban đầu tuần' chưa định dạng (gán tạm 30 phút)",
-        "UNVERIFIED: Task 'PTITQUAN-33 Giao ban đầu tuần' khai báo xong nhưng trên Worklane chưa DONE.",
-        "Task 'PTITQUAN-32 Báo cáo tuần' chưa định dạng (gán tạm 30 phút)"
+        "Task 'PTITQUAN-32 Báo cáo tuần' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Dịch cuộc họp về Gambaru cho anh Lâm' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": [
-        "PTITQUAN-33 Giao ban đầu tuần (UNVERIFIED)",
-        "PTITQUAN-32 Báo cáo tuần (UNVERIFIED)",
         "Ra đề thi nói cuối kỳ (0%)"
       ]
     },
@@ -1884,10 +1882,10 @@
         "2026-07-23"
       ],
       "total_tasks": 201,
-      "completed_tasks": 192,
-      "completion_rate": 95.52238805970148,
+      "completed_tasks": 200,
+      "completion_rate": 99.50248756218906,
       "time_score": 0.0,
-      "work_score": 75.4,
+      "work_score": 77.0,
       "declared_hours": 316.0,
       "time_violations": [
         "30/07: Task 'Review tiến độ sinh viên CNTT2 giai đoạn hè' khai báo 1.0h so với định mức tiêu chuẩn 0.4h",
@@ -1900,9 +1898,7 @@
         "Task 'Làm checkpoint' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": [
-        "Sản xuất session 14 (25%)",
-        "KS26NANG-133 S08: Mindmap (UNVERIFIED)",
-        "KS26NANG-125 S08 - L02: Quiz (UNVERIFIED)"
+        "Sản xuất session 14 (25%)"
       ]
     },
     "ngọ văn quý": {
@@ -2327,10 +2323,10 @@
         "2026-08-20"
       ],
       "total_tasks": 196,
-      "completed_tasks": 181,
-      "completion_rate": 92.3469387755102,
+      "completed_tasks": 192,
+      "completion_rate": 97.95918367346938,
       "time_score": 70.0,
-      "work_score": 89.1,
+      "work_score": 91.3,
       "declared_hours": 329.75,
       "time_violations": [
         "10/07: Task 'Review phiếu dự giờ các lớp tiếng Nhật KS24, KS25 của cô Lê Thị Đỏ' khai báo 2.5h so với định mức tiêu chuẩn 0.4h",
@@ -2344,8 +2340,8 @@
       ],
       "uncompleted_tasks": [
         "Review khảo thí bộ môn tiếng Anh (0%)",
-        "Nộp báo cáo tuần (UNVERIFIED)",
-        "Họp sản xuất tài nguyên học tập (0%)"
+        "Họp sản xuất tài nguyên học tập (0%)",
+        "nghi om (0%)"
       ]
     },
     "lò thị ngọc anh": {

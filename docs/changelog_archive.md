@@ -3,6 +3,21 @@
 Tài liệu này lưu trữ chi tiết toàn bộ nhật ký các phiên làm việc từ tháng 08/2026 trở về trước nhằm giải phóng dung lượng ngữ cảnh cho Super Memory.
 
 ---
+## 📋 Nhật ký Phiên Làm Việc — 17/09/2026 (20:40 → 20:48)
+### Các việc đã hoàn thành
+1. **Đồng bộ hóa dữ liệu mới từ `C:\Users\DELL\Desktop\Backup\PTIT\PTIT_Chiso.xlsx`**:
+   - Phát hiện dữ liệu cập nhật mới cho ngày học **17/09/2026** tại Sheet `KS25_QTKD_MAN107` (Quản trị học - Khối QTKD).
+   - Tự động sao chép sang `data/inputs/PTIT_Chiso.xlsx` và tái tạo cache Single Source of Truth `data/processed/classes_metrics_cache.json` qua `DataSanitizer`.
+2. **Khai phá & Phân tích số liệu mới ngày 17/09/2026**:
+   - Lớp `HN-K25-QTKD1(46)`: Ghi nhận tỷ lệ vắng chuyên cần tăng đột biến lên **56.52%** (▲ +19.56%), nợ bài tập **4.35%**, Elearning **0.00%** (Phát cảnh báo đỏ 🚨 Tăng).
+   - Lớp `HN-K25-QTKD2(42)`: Duy trì ổn định với chuyên cần vắng **16.67%**, nợ bài tập **7.14%**, Elearning **16.67%** (✅ Ổn định).
+3. **Thực thi Full Pipeline và Cập nhật toàn bộ Báo cáo & Dashboard**:
+   - Cập nhật báo cáo KPI tổng thể: [report_kpi_gv_tg.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/data/report_kpi_gv_tg.md).
+   - Cập nhật báo cáo chi tiết kỷ luật học viên: [agent_1_student_discipline.md](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/reports/core/agent_1_student_discipline.md) & Dashboard HTML.
+   - Cập nhật Executive Dashboard Master Portal: [agent_5_master_portal.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/dashboards/core/agent_5_master_portal.html).
+   - Cập nhật Director Cockpit & QLĐT Monthly Report.
+
+---
 ## 📋 Nhật ký Phiên Làm Việc — 27/08/2026 (08:05 → 08:35)
 ### Các việc đã hoàn thành
 1. **Tái cấu trúc Master Portal SPA (`agent_5_master_portal.html`)**:

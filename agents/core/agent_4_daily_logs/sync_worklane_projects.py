@@ -90,17 +90,17 @@ def sync_projects():
         print("Failed to fetch projects or projects list is empty.")
         return
 
-    print(f"Found {len(projects_list)} projects. Fetching issues for each project...")
+    print(f"Found {len(projects_list)} projects. Fetching issues concurrently with 8 workers...")
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    
     project_issues_data = {}
-
-    for idx, proj in enumerate(projects_list):
+    
+    def fetch_single_project_issues(proj):
         key = proj.get("key")
         name = proj.get("name")
         status = proj.get("status")
         health = proj.get("health", "ON_TRACK")
         pic = proj.get("pic")
-
-        print(f"[{idx+1}/{len(projects_list)}] Fetching issues for project {key} ({name})...")
         
         issues_result = call_mcp_tool("list_issues", {"project": key})
         issues_list = []
@@ -109,9 +109,7 @@ def sync_projects():
         elif isinstance(issues_result, dict) and "issues" in issues_result:
             issues_list = issues_result["issues"]
             
-        print(f" -> Found {len(issues_list)} issues.")
-
-        project_issues_data[key] = {
+        proj_entry = {
             "project_info": {
                 "key": key,
                 "slug": proj.get("slug"),
@@ -126,9 +124,8 @@ def sync_projects():
                 "issues": []
             }
         }
-
         for issue in issues_list:
-            project_issues_data[key]["issues"]["issues"].append({
+            proj_entry["issues"]["issues"].append({
                 "code": issue.get("code"),
                 "title": issue.get("title"),
                 "state": issue.get("state"),
@@ -136,6 +133,17 @@ def sync_projects():
                 "assignee": issue.get("assignee"),
                 "dueDate": issue.get("dueDate")
             })
+        return key, proj_entry
+
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        future_to_proj = {executor.submit(fetch_single_project_issues, p): p for p in projects_list}
+        for future in as_completed(future_to_proj):
+            try:
+                k, entry = future.result()
+                project_issues_data[k] = entry
+                print(f"✓ Project {k}: {entry['issues']['count']} issues synced.")
+            except Exception as exc:
+                print(f"✗ Project fetch generated exception: {exc}")
 
     output_path = "data/processed/project_issues_worklane.json"
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

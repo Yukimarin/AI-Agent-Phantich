@@ -47,13 +47,14 @@ WORKDAYS_AUG = [
 ]
 
 WORKDAYS_SEPT = [
-    "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11"
+    "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14"
 ]
 
 ALL_DATES_SEPT = [
     "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04",
     "2026-09-05", "2026-09-06", "2026-09-07", "2026-09-08",
-    "2026-09-09", "2026-09-10", "2026-09-11"
+    "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-12",
+    "2026-09-13", "2026-09-14"
 ]
 
 EXACT_STAFF_ROSTER = {
@@ -470,8 +471,8 @@ def audit_period_data(period_name="sept_01_08"):
         cache_path = r"data/processed/daily_reports_sept_01_08.json"
         effective_workdays = WORKDAYS_SEPT
         all_dates_to_scan = ALL_DATES_SEPT
-        period_title = "Kỳ 01/09 - 11/09/2026 (7 ngày làm việc)"
-        audit_date_str = "2026-09-11"
+        period_title = "Kỳ 01/09 - 14/09/2026 (8 ngày làm việc)"
+        audit_date_str = "2026-09-14"
         excess_hours_threshold = 10.0
         free_tasks_threshold = 3
     else:

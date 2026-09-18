@@ -721,24 +721,40 @@ def predict_class_pass_rate(cursor, cid, co_id, class_course_seq, excel_data, cn
             shack_val = (0.50 * p_hw_curr + 0.30 * p_att_curr + 0.20 * P_prereq) * 0.82
             p_hack = max(0.0, min(100.0, shack_val))
             
+        # Hiệu chuẩn thực nghiệm từ môn thực hành FastAPI KS25:
+        # Nếu nợ bài tập quá trình > 20% (hw_val < 80%), sinh viên bị đứt gãy năng lực thực hành nghiêm trọng
+        if hw_val < 60.0:
+            p_hack = p_hack * 0.20
+        elif hw_val < 80.0:
+            p_hack = p_hack * 0.50
+            
         # 4. Xác suất Học tập Thực Chiến (P_learning)
         P_learning = 0.40 * (P_prereq / 100.0) + 0.60 * (p_hack / 100.0)
         P_learning = min(1.0, max(0.0, P_learning))
         
-        # Áp dụng Hệ số Độ khó Môn học (CDC Thực Tế)
+        # Áp dụng Hệ số Độ khó Môn học (CDC Thực Tế - Đã hiệu chuẩn sau môn FastAPI KS25)
         cdc_val = get_course_difficulty_combined(cursor, co_id, coname)
         if 'python web' in coname.lower() or 'fastapi' in coname.lower():
-            cdc_val = max(cdc_val, 1.22)
+            cdc_val = max(cdc_val, 1.80)
+        elif 'microservice' in coname.lower():
+            cdc_val = max(cdc_val, 1.65)
+        elif 'phân tích thiết kế' in coname.lower() or 'thiết kế hệ thống' in coname.lower() or 'pttkht' in coname.lower():
+            cdc_val = max(cdc_val, 1.45)
         elif 'ai' in coname.lower() or 'intergration' in coname.lower():
-            cdc_val = max(cdc_val, 1.30)
-        elif 'ba201' in coname.lower() or 'business' in coname.lower():
-            cdc_val = max(cdc_val, 1.10)
+            cdc_val = max(cdc_val, 1.50)
+        elif 'ba201' in coname.lower() or 'business' in coname.lower() or 'qtkd' in coname.lower():
+            cdc_val = max(cdc_val, 1.15)
             
         P_learning_adj = P_learning / cdc_val
         
         # 5. Xác suất Đỗ Tổng Hợp của Cá Nhân (P_eligible)
         p_eligible = (P_learning_adj * 0.60 + (discipline_val / 100.0) * 0.40) * 0.92
         p_eligible = p_eligible * penalty_abs * penalty_hw * penalty_resumption
+        
+        # Áp dụng Homework Cliff (Nợ bài tập > 20% kéo sụt xác suất đồ án cuối kỳ)
+        if hw_val < 80.0:
+            p_eligible = p_eligible * max(0.15, (hw_val / 80.0) ** 2)
+            
         p_eligible = min(100.0, max(0.0, p_eligible * 100.0))
         
         if is_soft_skill:

@@ -15,7 +15,7 @@
 | **Số nhiệm vụ đã hoàn thành** | 426 đầu việc | Đạt sản lượng hoàn thành tốt |
 | **Tỷ lệ hoàn thành công việc** | **95.95%** | Đạt yêu cầu của BGĐ (>80%) |
 | **Tổng số giờ làm việc tích lũy** | 606.50 giờ | Trung bình tốt |
-| **Điểm tuân thủ báo cáo (Bình quân)** | **91.9/100** | Mức độ tuân thủ tốt |
+| **Điểm tuân thủ báo cáo (Bình quân)** | **85.7/100** | Mức độ tuân thủ tốt |
 
 ### Phân bổ giờ làm việc theo nhóm nghiệp vụ chuyên môn:
 - **Hành chính & Hỗ trợ SV**: 149.8 giờ
@@ -30,10 +30,10 @@
 
 | Họ và tên | Vai trò | Số ngày báo cáo | Tổng số task | Tỷ lệ hoàn thành | Tổng số giờ | Điểm Báo cáo (Work Score) | Đề xuất HSNX (NS) | Xếp loại |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Nguyễn Huyền Trang** | Giáo vụ | 19 ngày | 124 | 100.0% | 155.8h | 95.3 | **1.10** | Tốt |
-| **Nguyễn Thị Tươi** | Leader QLCLĐT | 17 ngày | 89 | 80.9% | 136.8h | 80.3 | **0.75** | Cần cải thiện |
-| **Nguyễn Xuân Bách** | Giáo vụ / Giảng viên | 20 ngày | 99 | 100.0% | 154.0h | 95.3 | **1.05** | Khá tốt |
-| **Trần Thị Mỹ Phước** | Giáo vụ | 20 ngày | 132 | 99.2% | 160.0h | 96.8 | **1.15** | Xuất sắc |
+| **Nguyễn Huyền Trang** | Giáo vụ | 19 ngày | 124 | 100.0% | 155.8h | 84.3 | **1.10** | Tốt |
+| **Nguyễn Thị Tươi** | Leader QLCLĐT | 17 ngày | 89 | 80.9% | 136.8h | 66.3 | **0.75** | Cần cải thiện |
+| **Nguyễn Xuân Bách** | Giáo vụ / Giảng viên | 20 ngày | 99 | 100.0% | 154.0h | 92.3 | **1.05** | Khá tốt |
+| **Trần Thị Mỹ Phước** | Giáo vụ | 20 ngày | 132 | 99.2% | 160.0h | 99.8 | **1.15** | Xuất sắc |
 
 ---
 

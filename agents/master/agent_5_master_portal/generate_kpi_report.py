@@ -408,7 +408,7 @@ for log_name, log_info in daily_log_data.items():
 # Calculate scores and write report
 actual_instructors = []
 for name, data in sorted(instructors_data.items()):
-    classes_list = list(data['Classes'])
+    classes_list = sorted(list(data['Classes']))
     classes_str = ", ".join(classes_list)
     avg_violation = sum(data['ViolationRates']) / len(data['ViolationRates']) if data['ViolationRates'] else 0.0
     
