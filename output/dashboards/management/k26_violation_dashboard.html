@@ -133,7 +133,11 @@
         <div class="tab" onclick="switchTab('severity')"><i class="fa-solid fa-layer-group"></i> Phân nhóm vi phạm</div>
         <div class="tab" onclick="switchTab('comparison')"><i class="fa-solid fa-right-left"></i> So sánh SSK101 vs Hiện tại</div>
         <div class="tab" onclick="switchTab('repeat')"><i class="fa-solid fa-rotate"></i> Lặp lại vi phạm (0 SV)</div>
-        <div class="tab" onclick="switchTab('absent')"><i class="fa-solid fa-user-xmark"></i> Không đi học (4 SV)</div>
+        <div class="tab" onclick="switchTab('absent')"><i class="fa-solid fa-user-xmark"></i> Không đi học (4 SV)
+            <div class="tab" onclick="switchTab('predict')"><i class="fa-solid fa-chart-line"></i> Dự báo & Đánh giá</div>
+            <div class="tab" onclick="switchTab('solution')"><i class="fa-solid fa-lightbulb"></i> Giải pháp & Xử lý</div>
+        </div>
+
     </div>
 
     <!-- Tab 1: Overview -->
@@ -228,6 +232,182 @@
         </div>
     </div>
 </div>
+
+
+    <!-- Tab 5: Dự báo & Hành vi -->
+    <div class="tab-panel" id="panel-predict">
+        <div class="table-container">
+            <h3><i class="fa-solid fa-scale-unbalanced"></i> Đánh giá Hành vi Kép: Kỷ luật Có mặt (CC) và Kỷ luật Học thuật (EL/BT)</h3>
+            <table>
+                <thead>
+                    <tr><th>Lớp</th><th>Vi Phạm Chuyên Cần (CC)</th><th>Vi Phạm Elearning/BTVN</th><th>Nhận Xét & Đánh Giá</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="class-col">HCM-KS26-CNTT1</td>
+                        <td><span class="badge badge-success">RẤT THẤP</span><br><span style="font-size:0.8rem; color:#64748b">Đi học đầy đủ</span></td>
+                        <td><span class="badge badge-danger">CỰC KỲ CAO</span><br><span style="font-size:0.8rem; color:#64748b">95.7% SSK101, 54.3% IT108</span></td>
+                        <td style="font-size:0.9rem"><strong>Lệch pha:</strong> SV có mặt trên lớp nhưng không làm bài. Vấn đề cốt lõi ở thao tác kỹ thuật và thiết bị (laptop).</td>
+                    </tr>
+                    <tr>
+                        <td class="class-col">HN-KS26-QTKD3</td>
+                        <td><span class="badge badge-danger">RẤT CAO</span><br><span style="font-size:0.8rem; color:#64748b">29.5% SSK101, 29.5% SSK102</span></td>
+                        <td><span class="badge badge-warning">TRUNG BÌNH CAO</span><br><span style="font-size:0.8rem; color:#64748b">18-20% môn mới</span></td>
+                        <td style="font-size:0.9rem"><strong>Khủng hoảng Kép:</strong> Vừa lười đi học, vừa lười làm bài. Rủi ro trượt môn cao nhất toàn khóa.</td>
+                    </tr>
+                    <tr>
+                        <td class="class-col">HN-KS26-CNTT1</td>
+                        <td><span class="badge badge-warning">CAO</span><br><span style="font-size:0.8rem; color:#64748b">20.9% SSK101, 7.0% SKL01</span></td>
+                        <td><span class="badge badge-warning">CAO</span><br><span style="font-size:0.8rem; color:#64748b">27.9% nợ BT SSK101</span></td>
+                        <td style="font-size:0.9rem">Tình trạng lười học đồng đều ở cả 2 mặt. Cần theo dõi sát.</td>
+                    </tr>
+                    <tr>
+                        <td class="class-col">HCM-KS26-QTKD1</td>
+                        <td><span class="badge badge-success">TỐT</span><br><span style="font-size:0.8rem; color:#64748b">Về 0% ở môn mới</span></td>
+                        <td><span class="badge badge-success">TỐT</span><br><span style="font-size:0.8rem; color:#64748b">Về 0% ở môn mới</span></td>
+                        <td style="font-size:0.9rem">Lớp học chuẩn mực, bắt nhịp hoàn toàn với hệ thống K26.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container" style="margin-top: 2rem;">
+            <h3><i class="fa-solid fa-crystal-ball"></i> Dự báo Rủi ro Cấm thi (Academic Predictor)</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">Môn mới chưa đủ >3 buổi để cấm thi cứng. AI phân tích dựa trên động lượng vi phạm lặp lại (Peer Pressure).</p>
+            <table>
+                <thead>
+                    <tr><th>Lớp</th><th>Môn Đang Học</th><th>Áp lực Môi trường (Peer Pressure)</th><th>Tỷ lệ Trượt Dự báo</th><th>Cấp độ Cảnh báo</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(244,63,94,0.05)">
+                        <td class="class-col">HN-KS26-QTKD3</td>
+                        <td>SSK102</td>
+                        <td><strong>Rất Xấu</strong> (Nhiều SV lôi kéo, 13 SV nghỉ liên tục)</td>
+                        <td style="font-weight:bold; color:#e11d48">~30%</td>
+                        <td><span class="badge badge-danger">Báo động Đỏ</span></td>
+                    </tr>
+                    <tr style="background: rgba(245,158,11,0.05)">
+                        <td class="class-col">HCM-KS26-CNTT1</td>
+                        <td>IT108-K26</td>
+                        <td><strong>Đáng Lo</strong> (Hiệu ứng đám đông không nộp EL - 54%)</td>
+                        <td style="font-weight:bold; color:#d97706">~25%</td>
+                        <td><span class="badge badge-warning">Rủi ro Kỹ thuật</span></td>
+                    </tr>
+                    <tr>
+                        <td class="class-col">HN-KS26-QTKD1</td>
+                        <td>SSK102</td>
+                        <td><strong>Xấu</strong> (Tỷ lệ CC vẫn >11%)</td>
+                        <td style="font-weight:bold; color:#d97706">~15%</td>
+                        <td><span class="badge badge-warning">Theo dõi sát</span></td>
+                    </tr>
+                    <tr>
+                        <td class="class-col">HN-KS26-CNTT2</td>
+                        <td>Môn Khác</td>
+                        <td><strong>Tích cực</strong></td>
+                        <td style="font-weight:bold; color:#10b981">< 5%</td>
+                        <td><span class="badge badge-success">An toàn</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Tab 6: Nguyên nhân & Giải pháp -->
+    <div class="tab-panel" id="panel-solution">
+        <div class="table-container">
+            <h3><i class="fa-solid fa-list-check"></i> Đề xuất Giải pháp Xử lý Tổng thể K26</h3>
+            <table>
+                <thead>
+                    <tr><th>Nhóm Đối Tượng / Lớp</th><th>Nguyên Nhân Ghi Nhận (Feedback)</th><th>Giải Pháp Đề Xuất (Action Items)</th><th>Phối hợp</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nhóm Nghỉ SSK101 cao (80-100%)</strong></td>
+                        <td style="font-size:0.9rem">Lịch cá nhân trùng; thiếu thông tin quy chế; chưa quen app/LMS.</td>
+                        <td style="font-size:0.9rem">
+                            <ul style="margin:0; padding-left:20px">
+                                <li>GVCN họp nhóm nhỏ (3-5 SV) nhắc nhở.</li>
+                                <li>Ký cam kết mục tiêu: CC môn mới phải < 10%.</li>
+                            </ul>
+                        </td>
+                        <td>GVCN, Cố vấn HT</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HCM-KS26-CNTT1, CNTT2</strong><br><span style="font-size:0.8rem; color:#64748b">Lỗi EL/BTVN cực cao</span></td>
+                        <td style="font-size:0.9rem">Thiếu thiết bị (laptop) trong tuần đầu; Không biết thao tác nộp bài lên AI.</td>
+                        <td style="font-size:0.9rem">
+                            <ul style="margin:0; padding-left:20px">
+                                <li>Cấp quyền sử dụng phòng máy/mượn laptop.</li>
+                                <li>Tổ chức lại 1 buổi hướng dẫn thao tác LMS AI.</li>
+                            </ul>
+                        </td>
+                        <td>GV IT108, Trợ giảng</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HN-KS26-QTKD3</strong><br><span style="font-size:0.8rem; color:#64748b">Lỗi Chuyên cần kéo dài</span></td>
+                        <td style="font-size:0.9rem">Thói quen nghỉ lặp lại sang môn mới. Hành vi có tính "lây lan".</td>
+                        <td style="font-size:0.9rem">
+                            <ul style="margin:0; padding-left:20px">
+                                <li>Gọi điện cảnh báo cấm thi trực tiếp cho 13 SV.</li>
+                                <li>GV trên lớp siết chặt điểm danh đầu giờ.</li>
+                            </ul>
+                        </td>
+                        <td>GV SSK102, QLĐT</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nhóm Vi phạm Nhẹ (<40%)</strong></td>
+                        <td style="font-size:0.9rem">Quên lịch, vào trễ, nộp bài sát giờ hệ thống đóng.</td>
+                        <td style="font-size:0.9rem">
+                            <ul style="margin:0; padding-left:20px">
+                                <li>Gửi Email/Tin nhắn tự động nhắc nhở.</li>
+                                <li>Nhắc nhở chung trên group Zalo của lớp.</li>
+                            </ul>
+                        </td>
+                        <td>Hệ thống, Trợ giảng</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container" style="margin-top: 2rem;">
+            <h3 style="color: #e11d48"><i class="fa-solid fa-triangle-exclamation"></i> Danh sách Đặc biệt: KS25 Học lại (Nghỉ 100%)</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">Nhóm này không thuộc lỗi hệ thống của tân sinh viên K26. Đề xuất gửi trực tiếp Trưởng phòng QTKD (Cô Oanh) để xử lý dứt điểm.</p>
+            <table>
+                <thead>
+                    <tr><th>Lớp</th><th>Họ tên</th><th>Trạng thái KS26</th><th>Giải Pháp Đề Xuất</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="class-col">HN-KS26-QTKD1</td>
+                        <td>Mai Hoàng Việt</td>
+                        <td>Nghỉ 100% (Cả SSK101 & Môn mới)</td>
+                        <td rowspan="4" style="font-size:0.9rem">
+                            <ul style="margin:0; padding-left:20px">
+                                <li>Gửi thẳng danh sách cho Phòng QLĐT (Cô Oanh).</li>
+                                <li>Buổi gặp 1-1 xác minh tình trạng tiếp tục học hay bảo lưu.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="class-col">HN-KS26-QTKD2</td>
+                        <td>Nguyễn Nhật Vy</td>
+                        <td>Nghỉ 100% (Cả SSK101 & Môn mới)</td>
+                    </tr>
+                    <tr>
+                        <td class="class-col">HN-KS26-QTKD2</td>
+                        <td>Trần Vức Hoàng</td>
+                        <td>Nghỉ 100% (Cả SSK101 & Môn mới)</td>
+                    </tr>
+                    <tr>
+                        <td class="class-col">HCM-KS26-QTKD1</td>
+                        <td>Nguyễn Công Trực</td>
+                        <td>Nghỉ 100% (Cả SSK101 & Môn mới)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 
 <script>
 // DATA
