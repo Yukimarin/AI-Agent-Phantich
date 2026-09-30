@@ -1,0 +1,315 @@
+{
+  "m1_baseline": {
+    "total": 374,
+    "cc_count": 87,
+    "cc_rate": 23.3,
+    "hw_count": 103,
+    "hw_rate": 27.5,
+    "el_count": 191,
+    "el_rate": 51.1
+  },
+  "courses_stats": [
+    {
+      "code": "IT108-K26",
+      "name": "Nhập Môn Công Nghệ Thông Tin",
+      "total": 244,
+      "cc_count": 24,
+      "cc_rate": 9.8,
+      "delta_cc": -13.5,
+      "hw_count": 0,
+      "hw_rate": 0.0,
+      "delta_hw": -27.5,
+      "el_count": 21,
+      "el_rate": 8.6,
+      "delta_el": -42.5
+    },
+    {
+      "code": "SKL01",
+      "name": "Kỹ năng làm việc nhóm",
+      "total": 215,
+      "cc_count": 3,
+      "cc_rate": 1.4,
+      "delta_cc": -21.9,
+      "hw_count": 0,
+      "hw_rate": 0.0,
+      "delta_hw": -27.5,
+      "el_count": 9,
+      "el_rate": 4.2,
+      "delta_el": -46.9
+    },
+    {
+      "code": "ENG105-K26",
+      "name": "Basic Speaking (Tiếng Anh)",
+      "total": 327,
+      "cc_count": 42,
+      "cc_rate": 12.8,
+      "delta_cc": -10.5,
+      "hw_count": 0,
+      "hw_rate": 0.0,
+      "delta_hw": -27.5,
+      "el_count": 6,
+      "el_rate": 1.8,
+      "delta_el": -49.3
+    },
+    {
+      "code": "SSK103",
+      "name": "Tư duy phân tích (QTKD)",
+      "total": 109,
+      "cc_count": 11,
+      "cc_rate": 10.1,
+      "delta_cc": -13.2,
+      "hw_count": 0,
+      "hw_rate": 0.0,
+      "delta_hw": -27.5,
+      "el_count": 12,
+      "el_rate": 11.0,
+      "delta_el": -40.1
+    },
+    {
+      "code": "SSK102",
+      "name": "Tin học ứng dụng (QTKD)",
+      "total": 65,
+      "cc_count": 13,
+      "cc_rate": 20.0,
+      "delta_cc": -3.3,
+      "hw_count": 0,
+      "hw_rate": 0.0,
+      "delta_hw": -27.5,
+      "el_count": 8,
+      "el_rate": 12.3,
+      "delta_el": -38.8
+    }
+  ],
+  "unimproved_students": [
+    {
+      "class": "HN-K26-CNTT2",
+      "code": "B26DTCN143",
+      "name": "Dương Gia Khiêm",
+      "m1_desc": "CC: 20% | BT: Nợ | EL: 0%",
+      "problems": "Vắng CC: SKL01 (1 buổi); Chậm EL: SKL01 (chậm 1 bài)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-CNTT2",
+      "code": "B26DTCN103",
+      "name": "Nguyễn Hồng Quân 2",
+      "m1_desc": "CC: 0% | BT: Nợ | EL: 0%",
+      "problems": "Vắng CC: ENG105-K26 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-CNTT2",
+      "code": "B26DTCN159",
+      "name": "Nguyễn Đức Tài 3",
+      "m1_desc": "CC: 0% | BT: Nợ | EL: 0%",
+      "problems": "Vắng CC: ENG105-K26 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-CNTT2",
+      "code": "B26DTCN087",
+      "name": "Ngô Hoàng Huy",
+      "m1_desc": "CC: 0% | BT: Nợ | EL: 0%",
+      "problems": "Vắng CC: IT108-K26 (1 buổi), ENG105-K26 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-CNTT3",
+      "code": "B26DTCN131",
+      "name": "Mai Đức Hiển",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 0%",
+      "problems": "Vắng CC: ENG105-K26 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-CNTT3",
+      "code": "B26DTCN100",
+      "name": "Nguyễn Đăng Minh Nhật",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 0%",
+      "problems": "Vắng CC: IT108-K26 (2 buổi), ENG105-K26 (2 buổi); Chậm EL: IT108-K26 (chậm 1 bài), ENG105-K26 (chậm 1 bài)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-CNTT3",
+      "code": "B26DTCN151",
+      "name": "Trần Xuân Nhật",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 0%",
+      "problems": "Chậm EL: IT108-K26 (chậm 1 bài)",
+      "solution": "Gặp 3p giữa giờ hướng dẫn lại cách mở bài Elearning, đặt lịch nhắc nộp bài trước 22h",
+      "pic": "CVHT lớp + IT LMS",
+      "deadline": "Trước buổi tới"
+    },
+    {
+      "class": "HN-K26-QTKD1",
+      "code": "B26DTQT113",
+      "name": "Hà Yến Vy",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 0%",
+      "problems": "Vắng CC: ENG105-K26 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-QTKD1",
+      "code": "B26DTQT075",
+      "name": "Nguyễn Công Cảnh",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 0%",
+      "problems": "Vắng CC: SSK103 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-QTKD1",
+      "code": "B26DTQT043",
+      "name": "Nguyễn Duy Hùng",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 0%",
+      "problems": "Chậm EL: SSK103 (chậm 1 bài)",
+      "solution": "Gặp 3p giữa giờ hướng dẫn lại cách mở bài Elearning, đặt lịch nhắc nộp bài trước 22h",
+      "pic": "CVHT lớp + IT LMS",
+      "deadline": "Trước buổi tới"
+    },
+    {
+      "class": "HN-K26-QTKD1",
+      "code": "B26DTQT083",
+      "name": "Ngô Hoàng Hải",
+      "m1_desc": "CC: 40% | BT: Đủ | EL: 50%",
+      "problems": "Chậm EL: ENG105-K26 (chậm 1 bài), SSK103 (chậm 1 bài)",
+      "solution": "Gặp 3p giữa giờ hướng dẫn lại cách mở bài Elearning, đặt lịch nhắc nộp bài trước 22h",
+      "pic": "CVHT lớp + IT LMS",
+      "deadline": "Trước buổi tới"
+    },
+    {
+      "class": "HN-K26-QTKD2",
+      "code": "B26DTQT022",
+      "name": "Đặng Bá An",
+      "m1_desc": "CC: 40% | BT: Đủ | EL: 75%",
+      "problems": "Vắng CC: ENG105-K26 (1 buổi)",
+      "solution": "Gặp riêng 5p cuối giờ tại lớp, lập biên bản cam kết, gọi điện phụ huynh thông báo nguy cơ cấm thi",
+      "pic": "Quản lý ĐT + CVHT",
+      "deadline": "Trong 48h"
+    },
+    {
+      "class": "HN-K26-QTKD2",
+      "code": "B26DTQT102",
+      "name": "Đặng Duy Sim",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 75%",
+      "problems": "Vắng CC: ENG105-K26 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-QTKD2",
+      "code": "RE26435",
+      "name": "Đặng Trần Tiệp 2",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 75%",
+      "problems": "Vắng CC: ENG105-K26 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-K26-QTKD2",
+      "code": "RE26437",
+      "name": "Đỗ An Khang",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 0%",
+      "problems": "Vắng CC: ENG105-K26 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-KS26-CNTT1",
+      "code": "B26DTCN085",
+      "name": "Diêm Quang Huy",
+      "m1_desc": "CC: 20% | BT: Nợ | EL: 75%",
+      "problems": "Chậm EL: SKL01 (chậm 1 bài)",
+      "solution": "Gặp 3p giữa giờ hướng dẫn lại cách mở bài Elearning, đặt lịch nhắc nộp bài trước 22h",
+      "pic": "CVHT lớp + IT LMS",
+      "deadline": "Trước buổi tới"
+    },
+    {
+      "class": "HN-KS26-CNTT1",
+      "code": "B26DTCN111",
+      "name": "Lê Quang Trường",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 50%",
+      "problems": "Vắng CC: IT108-K26 (1 buổi), SKL01 (1 buổi)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-KS26-CNTT1",
+      "code": "B26DTCN127",
+      "name": "Mai Quốc Đạt",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 20%",
+      "problems": "Chậm EL: SKL01 (chậm 1 bài)",
+      "solution": "Gặp 3p giữa giờ hướng dẫn lại cách mở bài Elearning, đặt lịch nhắc nộp bài trước 22h",
+      "pic": "CVHT lớp + IT LMS",
+      "deadline": "Trước buổi tới"
+    },
+    {
+      "class": "HN-KS26-CNTT1",
+      "code": "B26DTCN074",
+      "name": "Mai Việt Dũng",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 25%",
+      "problems": "Chậm EL: SKL01 (chậm 1 bài)",
+      "solution": "Gặp 3p giữa giờ hướng dẫn lại cách mở bài Elearning, đặt lịch nhắc nộp bài trước 22h",
+      "pic": "CVHT lớp + IT LMS",
+      "deadline": "Trước buổi tới"
+    },
+    {
+      "class": "HN-KS26-CNTT1",
+      "code": "B26DTCN100",
+      "name": "Nguyễn Đăng Minh Nhật",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 100%",
+      "problems": "Vắng CC: IT108-K26 (2 buổi), ENG105-K26 (2 buổi); Chậm EL: IT108-K26 (chậm 1 bài), ENG105-K26 (chậm 1 bài)",
+      "solution": "Gặp 3p đầu giờ, tìm hiểu lý do vắng (ốm, trùng ca, việc riêng), đôn đốc đi học đủ",
+      "pic": "CVHT lớp",
+      "deadline": "Tuần này"
+    },
+    {
+      "class": "HN-KS26-CNTT1",
+      "code": "B26DTCN153",
+      "name": "Trần Đình Phú",
+      "m1_desc": "CC: 80% | BT: Đủ | EL: 50%",
+      "problems": "Chậm EL: IT108-K26 (chậm 1 bài)",
+      "solution": "Gặp 3p giữa giờ hướng dẫn lại cách mở bài Elearning, đặt lịch nhắc nộp bài trước 22h",
+      "pic": "CVHT lớp + IT LMS",
+      "deadline": "Trước buổi tới"
+    },
+    {
+      "class": "HN-KS26-CNTT1",
+      "code": "B26DTCN108",
+      "name": "Trần Đức Thiện 2",
+      "m1_desc": "CC: 0% | BT: Đủ | EL: 25%",
+      "problems": "Chậm EL: SKL01 (chậm 1 bài)",
+      "solution": "Gặp 3p giữa giờ hướng dẫn lại cách mở bài Elearning, đặt lịch nhắc nộp bài trước 22h",
+      "pic": "CVHT lớp + IT LMS",
+      "deadline": "Trước buổi tới"
+    },
+    {
+      "class": "HN-KS26-CNTT1",
+      "code": "B26DTCN079",
+      "name": "Đỗ Phạm Gia Hiếu",
+      "m1_desc": "CC: 60% | BT: Nợ | EL: 100%",
+      "problems": "Vắng CC: IT108-K26 (1 buổi), SKL01 (1 buổi); Chậm EL: IT108-K26 (chậm 1 bài), SKL01 (chậm 1 bài)",
+      "solution": "Gặp riêng 5p cuối giờ tại lớp, lập biên bản cam kết, gọi điện phụ huynh thông báo nguy cơ cấm thi",
+      "pic": "Quản lý ĐT + CVHT",
+      "deadline": "Trong 48h"
+    }
+  ]
+}
