@@ -1,0 +1,5860 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân tích Vi phạm SV K26 — SSK101 vs Các Môn Hiện Tại</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <style>
+        :root {
+            --bg-primary: #0f172a; --bg-secondary: #1e293b; --bg-card: #1e293b;
+            --text-primary: #f1f5f9; --text-secondary: #94a3b8; --text-muted: #64748b;
+            --accent-blue: #3b82f6; --accent-emerald: #10b981; --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e; --accent-purple: #a855f7; --accent-orange: #f97316;
+            --border-color: rgba(148, 163, 184, 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); min-height: 100vh; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+        
+        /* Header */
+        .header { background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #1a1a2e 100%); border-radius: 20px; padding: 32px; margin-bottom: 24px; border: 1px solid var(--border-color); position: relative; overflow: hidden; }
+        .header::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%); }
+        .header h1 { font-size: 1.75rem; font-weight: 800; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .header .subtitle { color: var(--text-secondary); margin-top: 8px; font-size: 0.9rem; }
+        
+        /* Stats cards */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .stat-card { background: var(--bg-card); border-radius: 16px; padding: 20px; border: 1px solid var(--border-color); transition: all 0.3s; }
+        .stat-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        .stat-card .label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+        .stat-card .value { font-size: 2rem; font-weight: 800; margin-top: 4px; }
+        .stat-card .detail { font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; }
+        
+        /* Tabs */
+        .tabs { display: flex; gap: 4px; background: var(--bg-secondary); border-radius: 12px; padding: 4px; margin-bottom: 24px; overflow-x: auto; }
+        .tab { padding: 10px 20px; border-radius: 10px; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); white-space: nowrap; transition: all 0.2s; }
+        .tab:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+        .tab.active { background: var(--accent-blue); color: white; }
+        
+        /* Tab panels */
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        
+        /* Tables */
+        .table-container { background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border-color); overflow: hidden; margin-bottom: 24px; }
+        .table-container h3 { padding: 16px 20px; font-size: 1rem; color: var(--text-primary); border-bottom: 1px solid var(--border-color); }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th { background: rgba(30, 41, 59, 0.8); color: var(--text-secondary); font-weight: 600; padding: 12px 16px; text-align: center; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; position: sticky; top: 0; }
+        td { padding: 10px 16px; border-bottom: 1px solid var(--border-color); text-align: center; }
+        tr:hover { background: rgba(59, 130, 246, 0.05); }
+        
+        /* Badges */
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; }
+        .badge-danger { background: rgba(244,63,94,0.15); color: #fb7185; border: 1px solid rgba(244,63,94,0.3); }
+        .badge-warning { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+        .badge-success { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+        .badge-info { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+        
+        /* Charts */
+        .chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+        .chart-card { background: var(--bg-card); border-radius: 16px; padding: 20px; border: 1px solid var(--border-color); }
+        .chart-card h3 { font-size: 0.95rem; margin-bottom: 16px; color: var(--text-primary); }
+        
+        /* Severity bars */
+        .severity-bar { display: flex; border-radius: 8px; overflow: hidden; height: 28px; margin: 8px 0; }
+        .severity-bar div { display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: white; min-width: 30px; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .chart-row { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            table { font-size: 0.75rem; }
+        }
+        
+        /* Name column left-align */
+        td.name-col { text-align: left; font-weight: 500; }
+        td.class-col { text-align: left; font-weight: 600; color: var(--accent-blue); }
+    
+        .text-safe { color: #94a3b8; }
+        .text-warn { color: #d97706; font-weight: 600; }
+        .text-danger { color: #e11d48; font-weight: 700; }
+        .text-divider { color: #cbd5e1; margin: 0 4px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h1><i class="fa-solid fa-chart-line"></i> Phân tích Vi phạm Sinh viên K26</h1>
+        <div class="subtitle">
+            <i class="fa-solid fa-book"></i> Môn SSK101 (Kỹ năng học tập chủ động) → So sánh các môn hiện tại &bull; 
+            <i class="fa-solid fa-calendar"></i> Dữ liệu: 30/09/2026 &bull;
+            <i class="fa-solid fa-user-graduate"></i> 371 sinh viên • 9 lớp
+        </div>
+    </div>
+
+    <!-- Summary Stats -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="label">Tổng SV phân tích</div>
+            <div class="value" style="color: var(--accent-blue)">371</div>
+            <div class="detail">9 lớp K26</div>
+        </div>
+        <div class="stat-card">
+            <div class="label">SV vi phạm SSK101 (≥20%)</div>
+            <div class="value" style="color: var(--accent-amber)">206</div>
+            <div class="detail">55.5% toàn khóa</div>
+        </div>
+        <div class="stat-card">
+            <div class="label">SV lặp lại vi phạm</div>
+            <div class="value" style="color: var(--accent-rose)">0</div>
+            <div class="detail">0% — CC: 0 • EL: 0</div>
+        </div>
+        <div class="stat-card">
+            <div class="label">Không đi học buổi nào</div>
+            <div class="value" style="color: var(--accent-rose)">4</div>
+            <div class="detail">100% vắng SSK101</div>
+        </div>
+        <div class="stat-card">
+            <div class="label">Lớp cần ưu tiên</div>
+            <div class="value" style="color: var(--accent-orange); font-size:1.1rem">QTKD3</div>
+            <div class="detail">CC SSK102 = 29.55%</div>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab('overview')"><i class="fa-solid fa-chart-pie"></i> Tổng quan</div>
+        <div class="tab" onclick="switchTab('severity')"><i class="fa-solid fa-layer-group"></i> Phân nhóm vi phạm</div>
+        <div class="tab" onclick="switchTab('comparison')"><i class="fa-solid fa-right-left"></i> So sánh SSK101 vs Hiện tại</div>
+        <div class="tab" onclick="switchTab('repeat')"><i class="fa-solid fa-rotate"></i> Lặp lại vi phạm (0 SV)</div>
+        <div class="tab" onclick="switchTab('absent')"><i class="fa-solid fa-user-xmark"></i> Không đi học (4 SV)</div>
+    </div>
+
+    <!-- Tab 1: Overview -->
+    <div class="tab-panel active" id="panel-overview">
+        <div class="chart-row">
+            <div class="chart-card">
+                <h3><i class="fa-solid fa-chart-bar"></i> Phân bố vi phạm SSK101 theo lớp</h3>
+                <canvas id="chart-class-severity" height="300"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3><i class="fa-solid fa-chart-doughnut"></i> Tổng hợp nhóm vi phạm toàn khóa</h3>
+                <canvas id="chart-severity-pie" height="300"></canvas>
+            </div>
+        </div>
+        <div class="chart-row">
+            <div class="chart-card" style="grid-column: span 2;">
+                <h3><i class="fa-solid fa-arrow-trend-down"></i> So sánh CC%: SSK101 → Các môn hiện tại</h3>
+                <canvas id="chart-comparison" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 2: Severity Groups -->
+    <div class="tab-panel" id="panel-severity">
+        <div class="table-container">
+            <h3><i class="fa-solid fa-layer-group"></i> Phân nhóm sinh viên theo mức vi phạm SSK101</h3>
+            <div style="max-height: 600px; overflow-y: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lớp</th><th>Sĩ số</th><th>20-40%</th><th>40-60%</th><th>60-80%</th><th>80-100%</th><th>Tổng ≥20%</th><th>Tỷ lệ</th>
+                    </tr>
+                </thead>
+                <tbody id="severity-table-body"></tbody>
+            </table>
+            </div>
+        </div>
+        <div class="table-container">
+            <h3><i class="fa-solid fa-users"></i> Nhóm 80-100% — Cần gặp trực tiếp (16 SV)</h3>
+            <div style="max-height: 500px; overflow-y: auto;">
+            <table>
+                <thead><tr><th>Lớp</th><th>Họ tên</th><th>Tỷ lệ vắng</th><th>EL chậm</th><th>Trạng thái môn mới</th></tr></thead>
+                <tbody id="critical-students"></tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 3: Comparison -->
+    <div class="tab-panel" id="panel-comparison">
+        <div class="table-container">
+            <h3><i class="fa-solid fa-right-left"></i> So sánh Toàn diện (CC / BT / EL): SSK101 vs Các môn hiện tại</h3>
+            <table>
+                <thead>
+                    <tr><th>Lớp</th><th style="min-width: 160px;">SSK101 <br><span style="font-size:0.75rem; font-weight:normal; color:#64748b">(CC | BT | EL)</span></th><th style="min-width: 160px;" id="col-course-1">Môn 1</th><th style="min-width: 160px;" id="col-course-2">Môn 2</th><th style="min-width: 160px;" id="col-course-3">Môn 3</th><th>Xu hướng (CC)</th></tr>
+                </thead>
+                <tbody id="comparison-table-body"></tbody>
+            </table>
+        </div>
+        <div class="table-container">
+            <h3><i class="fa-solid fa-bolt"></i> Elearning — Vấn đề mới nổi</h3>
+            <table>
+                <thead><tr><th>Lớp</th><th>Môn</th><th>EL vi phạm %</th><th>Số SV</th><th>Mức độ</th></tr></thead>
+                <tbody id="el-issues-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Tab 4: Repeat Offenders -->
+    <div class="tab-panel" id="panel-repeat">
+        <div class="table-container">
+            <h3><i class="fa-solid fa-rotate"></i> 0 SV lặp lại vi phạm từ SSK101 sang môn mới</h3>
+            <div style="max-height: 700px; overflow-y: auto;">
+            <table>
+                <thead>
+                    <tr><th>#</th><th>Lớp</th><th>Họ tên</th><th>SSK101 Vắng</th><th>VP SSK101</th><th>VP lặp lại</th><th>Môn mới</th><th>Phân loại</th></tr>
+                </thead>
+                <tbody id="repeat-table-body"></tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 5: Never Attended -->
+    <div class="tab-panel" id="panel-absent">
+        <div class="table-container">
+            <h3><i class="fa-solid fa-user-xmark"></i> 4 SV không tham gia bất kỳ buổi học nào trong SSK101</h3>
+            <table>
+                <thead><tr><th>#</th><th>Lớp</th><th>Họ tên</th><th>SSK101 Vắng</th><th>Tình trạng môn hiện tại</th><th>Hành động</th></tr></thead>
+                <tbody id="absent-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+// DATA
+const DATA = {
+  "ssk101_by_class": {
+    "HN-KS26-CNTT1": {
+      "className": "HN-KS26-CNTT1",
+      "courseClassId": "6aae5ce07d22545796a8f5f4",
+      "totalStudents": 43,
+      "violations": {
+        "cc": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcfc",
+            "name": "Nguyễn Tiến Duy 2",
+            "rate": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd00",
+            "name": "Đỗ Phạm Gia Hiếu",
+            "rate": 80
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0c",
+            "name": "Diêm Quang Huy",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd30",
+            "name": "Trần Đức Long 2",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd48",
+            "name": "Nguyễn Đăng Minh Nhật",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd69",
+            "name": "Nguyễn Gia Thịnh",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1d",
+            "name": "Hồ Văn Khang",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd35",
+            "name": "Lê Hồng Minh 2",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4c",
+            "name": "Trần Đình Phú",
+            "rate": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5a",
+            "name": "Hoàng Ngọc Sơn 2",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bdaa",
+            "name": "Phạm Gia Bảo 3",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda8",
+            "name": "Trần Bình An",
+            "rate": 80
+          }
+        ],
+        "bt": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf8",
+            "name": "Đặng Bá Chung",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd85",
+            "name": "Phạm Quốc Đạt",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcfe",
+            "name": "Mai Việt Dũng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcfc",
+            "name": "Nguyễn Tiến Duy 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd00",
+            "name": "Đỗ Phạm Gia Hiếu",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd06",
+            "name": "Trần Mạnh Hoa",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd08",
+            "name": "Nguyễn Đăng Hoàng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0c",
+            "name": "Diêm Quang Huy",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0f",
+            "name": "Đường Gia Huy",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd23",
+            "name": "Nguyễn Duy Khánh 5",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd28",
+            "name": "Ngô Nguyễn Anh Kiệt",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd30",
+            "name": "Trần Đức Long 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd38",
+            "name": "Nguyễn Đặng Hoàng Minh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd36",
+            "name": "Nguyễn Vương Anh Minh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd51",
+            "name": "Lê Trọng Quang",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd68",
+            "name": "Lê Minh Thảo",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5c",
+            "name": "Trần Đức Thiện 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd69",
+            "name": "Nguyễn Gia Thịnh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6e",
+            "name": "Hoàng Văn Trái",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd70",
+            "name": "Lê Quang Trường",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcec",
+            "name": "Trần Tuấn Anh 4",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf3",
+            "name": "Nguyễn Bùi Gia Bảo",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf9",
+            "name": "Nguyễn Xuân Cường",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd84",
+            "name": "Mai Quốc Đạt",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd19",
+            "name": "Tô Mạnh Hào",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd15",
+            "name": "Đặng Minh Huyền",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1d",
+            "name": "Hồ Văn Khang",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd2b",
+            "name": "Vũ Quốc Linh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3c",
+            "name": "Hà Duy Mạnh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd35",
+            "name": "Lê Hồng Minh 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4c",
+            "name": "Trần Đình Phú",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5f",
+            "name": "Trần Thiện Thuật",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd7b",
+            "name": "Phạm Quang Vinh 4",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bdad",
+            "name": "Mai Huy Hoàng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bdaa",
+            "name": "Phạm Gia Bảo 3",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda8",
+            "name": "Trần Bình An",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda6",
+            "name": "Nguyễn Hồng Vũ",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda2",
+            "name": "Lê Quang Hào",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9e",
+            "name": "Đặng Quang Anh",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9d",
+            "name": "Mai Ngọc Đức Hải",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd97",
+            "name": "Nguyễn Thị Ngọc Ánh 2",
+            "done": 3,
+            "total": 4
+          }
+        ],
+        "el": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcfc",
+            "name": "Nguyễn Tiến Duy 2",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd00",
+            "name": "Đỗ Phạm Gia Hiếu",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd06",
+            "name": "Trần Mạnh Hoa",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd08",
+            "name": "Nguyễn Đăng Hoàng",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0c",
+            "name": "Diêm Quang Huy",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0f",
+            "name": "Đường Gia Huy",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd23",
+            "name": "Nguyễn Duy Khánh 5",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd28",
+            "name": "Ngô Nguyễn Anh Kiệt",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd30",
+            "name": "Trần Đức Long 2",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd51",
+            "name": "Lê Trọng Quang",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd70",
+            "name": "Lê Quang Trường",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcec",
+            "name": "Trần Tuấn Anh 4",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf3",
+            "name": "Nguyễn Bùi Gia Bảo",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1d",
+            "name": "Hồ Văn Khang",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd35",
+            "name": "Lê Hồng Minh 2",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4c",
+            "name": "Trần Đình Phú",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5f",
+            "name": "Trần Thiện Thuật",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bdaa",
+            "name": "Phạm Gia Bảo 3",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda8",
+            "name": "Trần Bình An",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda6",
+            "name": "Nguyễn Hồng Vũ",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda2",
+            "name": "Lê Quang Hào",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9e",
+            "name": "Đặng Quang Anh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9d",
+            "name": "Mai Ngọc Đức Hải",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd97",
+            "name": "Nguyễn Thị Ngọc Ánh 2",
+            "late": 1
+          }
+        ]
+      },
+      "severityGroups": {
+        "20-40%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd06",
+            "name": "Trần Mạnh Hoa",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd08",
+            "name": "Nguyễn Đăng Hoàng",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0f",
+            "name": "Đường Gia Huy",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd23",
+            "name": "Nguyễn Duy Khánh 5",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd28",
+            "name": "Ngô Nguyễn Anh Kiệt",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd30",
+            "name": "Trần Đức Long 2",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd48",
+            "name": "Nguyễn Đăng Minh Nhật",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd51",
+            "name": "Lê Trọng Quang",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd69",
+            "name": "Nguyễn Gia Thịnh",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd70",
+            "name": "Lê Quang Trường",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcec",
+            "name": "Trần Tuấn Anh 4",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1d",
+            "name": "Hồ Văn Khang",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd35",
+            "name": "Lê Hồng Minh 2",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5a",
+            "name": "Hoàng Ngọc Sơn 2",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bdaa",
+            "name": "Phạm Gia Bảo 3",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda6",
+            "name": "Nguyễn Hồng Vũ",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda2",
+            "name": "Lê Quang Hào",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9e",
+            "name": "Đặng Quang Anh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9d",
+            "name": "Mai Ngọc Đức Hải",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd97",
+            "name": "Nguyễn Thị Ngọc Ánh 2",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          }
+        ],
+        "40-60%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcfc",
+            "name": "Nguyễn Tiến Duy 2",
+            "absRate": 40,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0c",
+            "name": "Diêm Quang Huy",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf3",
+            "name": "Nguyễn Bùi Gia Bảo",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4c",
+            "name": "Trần Đình Phú",
+            "absRate": 40,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5f",
+            "name": "Trần Thiện Thuật",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          }
+        ],
+        "60-80%": [],
+        "80-100%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd00",
+            "name": "Đỗ Phạm Gia Hiếu",
+            "absRate": 80,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 80
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda8",
+            "name": "Trần Bình An",
+            "absRate": 80,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 80
+          }
+        ]
+      },
+      "neverAttended": [],
+      "classMetrics": {
+        "ccViolationPct": 27.91,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      }
+    },
+    "HN-KS26-CNTT2": {
+      "className": "HN-KS26-CNTT2",
+      "courseClassId": "6aae5d0b7d22545796a8f75f",
+      "totalStudents": 42,
+      "violations": {
+        "cc": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd01",
+            "name": "Đặng Đình Hiếu",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3e",
+            "name": "Nguyễn Thành Nam 8",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1f",
+            "name": "Dương Gia Khiêm",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6d",
+            "name": "Trần Minh Tiến 2",
+            "rate": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9b",
+            "name": "Nguyễn Hoàng Trí Nhân",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8c",
+            "name": "Hà Gia Thái",
+            "rate": 20
+          }
+        ],
+        "bt": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd29",
+            "name": "Phạm Vũ Tuấn Kiệt",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd38",
+            "name": "Nguyễn Đặng Hoàng Minh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd86",
+            "name": "Đặng Quang Hưng",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1f",
+            "name": "Dương Gia Khiêm",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd60",
+            "name": "Đỗ Duy Thành",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6d",
+            "name": "Trần Minh Tiến 2",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8c",
+            "name": "Hà Gia Thái",
+            "done": 1,
+            "total": 4
+          }
+        ],
+        "el": []
+      },
+      "severityGroups": {
+        "20-40%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd01",
+            "name": "Đặng Đình Hiếu",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3e",
+            "name": "Nguyễn Thành Nam 8",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1f",
+            "name": "Dương Gia Khiêm",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9b",
+            "name": "Nguyễn Hoàng Trí Nhân",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8c",
+            "name": "Hà Gia Thái",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          }
+        ],
+        "40-60%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6d",
+            "name": "Trần Minh Tiến 2",
+            "absRate": 40,
+            "elLate": 0,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 40
+          }
+        ],
+        "60-80%": [],
+        "80-100%": []
+      },
+      "neverAttended": [],
+      "classMetrics": {
+        "ccViolationPct": 14.29,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      }
+    },
+    "HN-KS26-CNTT3": {
+      "className": "HN-KS26-CNTT3",
+      "courseClassId": "6aae5cb97d22545796a8f48a",
+      "totalStudents": 41,
+      "violations": {
+        "cc": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bce9",
+            "name": "Nguyễn Hải Anh 3",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd11",
+            "name": "Bùi Quang Huy 2",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1c",
+            "name": "Nguyễn Trường Khang",
+            "rate": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd52",
+            "name": "Trần Minh Quân",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcee",
+            "name": "Phạm Nhật Anh",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda5",
+            "name": "Trần Đức Tài",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd96",
+            "name": "Nguyễn Tiến Dũng 11",
+            "rate": 20
+          }
+        ],
+        "bt": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bce9",
+            "name": "Nguyễn Hải Anh 3",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd11",
+            "name": "Bùi Quang Huy 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd78",
+            "name": "Vũ Nam Tùng",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcff",
+            "name": "Nguyễn Việt Dũng 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd12",
+            "name": "Nguyễn Thế Huy",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd24",
+            "name": "Tạ Đình Nam Khánh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6ab770292fbc7e0fab3f5ff5",
+            "name": "Phạm Ngọc Linh",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd98",
+            "name": "Hoàng Xuân Nam",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd93",
+            "name": "Nguyễn Thuận Phát",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8f",
+            "name": "Phạm Viết Toàn",
+            "done": 2,
+            "total": 4
+          }
+        ],
+        "el": []
+      },
+      "severityGroups": {
+        "20-40%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bce9",
+            "name": "Nguyễn Hải Anh 3",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd11",
+            "name": "Bùi Quang Huy 2",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd52",
+            "name": "Trần Minh Quân",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcee",
+            "name": "Phạm Nhật Anh",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda5",
+            "name": "Trần Đức Tài",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd96",
+            "name": "Nguyễn Tiến Dũng 11",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          }
+        ],
+        "40-60%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1c",
+            "name": "Nguyễn Trường Khang",
+            "absRate": 40,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          }
+        ],
+        "60-80%": [],
+        "80-100%": []
+      },
+      "neverAttended": [],
+      "classMetrics": {
+        "ccViolationPct": 17.07,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      }
+    },
+    "HCM-KS26-CNTT1": {
+      "className": "HCM-KS26-CNTT1",
+      "courseClassId": "6aae9e767d22545796a9d89e",
+      "totalStudents": 46,
+      "violations": {
+        "cc": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd53",
+            "name": "Võ Trung Quân",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd07",
+            "name": "Dương Ngọc Hoàn",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd27",
+            "name": "Cao Trần Tuấn Kiệt",
+            "rate": 60
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd89",
+            "name": "Võ Trần Tháp",
+            "rate": 20
+          },
+          {
+            "id": "6ab08e89d2575492aec023f1",
+            "name": "Lê Minh",
+            "rate": 60
+          },
+          {
+            "id": "6ab08ea2d2575492aec029c2",
+            "name": "Bạch Chí Lân",
+            "rate": 60
+          },
+          {
+            "id": "6ab08eb8d2575492aec02f46",
+            "name": "Đặng Trần Anh Khoa",
+            "rate": 60
+          },
+          {
+            "id": "6ab08eced2575492aec02fa6",
+            "name": "Phan Huy Hưng",
+            "rate": 20
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512350",
+            "name": "Trần Văn Gia Khang",
+            "rate": 20
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234f",
+            "name": "Nguyễn Gia Huy 2",
+            "rate": 80
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234e",
+            "name": "Lê Phúc Duy",
+            "rate": 80
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234d",
+            "name": "Bùi Gia Anh",
+            "rate": 80
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bdab",
+            "name": "Trần Tiến Đạt 3",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd99",
+            "name": "Khưu Nhật Tân",
+            "rate": 20
+          }
+        ],
+        "bt": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcfb",
+            "name": "Đoàn Bảo Duy",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0a",
+            "name": "Bùi Minh Hoàng 2",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd16",
+            "name": "Trần Thị Ngọc Huyền",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd21",
+            "name": "Võ Phan Đăng Khoa",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd26",
+            "name": "Đỗ Nguyễn Trung Kiên",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd2a",
+            "name": "Nguyễn Trần Đan Linh",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd88",
+            "name": "Dương Công Quốc",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bce6",
+            "name": "Trịnh Mỹ An",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd7f",
+            "name": "Trần Hoàng Ân",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf5",
+            "name": "Hồ Gia Bảo",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd02",
+            "name": "Nguyễn Minh Hiếu 11",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd07",
+            "name": "Dương Ngọc Hoàn",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd13",
+            "name": "Trần Thái Huy",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd10",
+            "name": "Vũ Lê Huy",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd22",
+            "name": "Phạm Đăng Khoa",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd27",
+            "name": "Cao Trần Tuấn Kiệt",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3a",
+            "name": "Phạm Bình Minh 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd40",
+            "name": "Lâm Hữu Nghị",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd55",
+            "name": "Lê Hoàng Quân",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd89",
+            "name": "Võ Trần Tháp",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6f",
+            "name": "Trần Thị Diễm Trâm",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8a",
+            "name": "Võ Quốc Vinh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6ab08e89d2575492aec023f1",
+            "name": "Lê Minh",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6ab08ea2d2575492aec029c2",
+            "name": "Bạch Chí Lân",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6ab08eb8d2575492aec02f46",
+            "name": "Đặng Trần Anh Khoa",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6ab08eced2575492aec02fa6",
+            "name": "Phan Huy Hưng",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6ab08eebd2575492aec03365",
+            "name": "Phan Gia Hiển",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512350",
+            "name": "Trần Văn Gia Khang",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234f",
+            "name": "Nguyễn Gia Huy 2",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234e",
+            "name": "Lê Phúc Duy",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234d",
+            "name": "Bùi Gia Anh",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bdab",
+            "name": "Trần Tiến Đạt 3",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda9",
+            "name": "Lê Tuấn Kiệt 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda4",
+            "name": "Trịnh Phú Thịnh",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9c",
+            "name": "Huỳnh Kế Minh Quân",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd95",
+            "name": "Văn Hữu Luân",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8e",
+            "name": "Nguyễn Thị Hồng Huệ",
+            "done": 0,
+            "total": 4
+          }
+        ],
+        "el": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd81",
+            "name": "Phạm Thành Đạo",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcfb",
+            "name": "Đoàn Bảo Duy",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd17",
+            "name": "Nguyễn Duy Minh Hà",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0a",
+            "name": "Bùi Minh Hoàng 2",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0e",
+            "name": "Nguyễn Bảo Huy",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd16",
+            "name": "Trần Thị Ngọc Huyền",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd21",
+            "name": "Võ Phan Đăng Khoa",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd26",
+            "name": "Đỗ Nguyễn Trung Kiên",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd2a",
+            "name": "Nguyễn Trần Đan Linh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd41",
+            "name": "Nguyễn Đình Nguyên",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd53",
+            "name": "Võ Trung Quân",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd88",
+            "name": "Dương Công Quốc",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bce6",
+            "name": "Trịnh Mỹ An",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd7f",
+            "name": "Trần Hoàng Ân",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf5",
+            "name": "Hồ Gia Bảo",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8b",
+            "name": "Trần Kim Đức",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd02",
+            "name": "Nguyễn Minh Hiếu 11",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd07",
+            "name": "Dương Ngọc Hoàn",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd13",
+            "name": "Trần Thái Huy",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd10",
+            "name": "Vũ Lê Huy",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd22",
+            "name": "Phạm Đăng Khoa",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd27",
+            "name": "Cao Trần Tuấn Kiệt",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3a",
+            "name": "Phạm Bình Minh 2",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd40",
+            "name": "Lâm Hữu Nghị",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd55",
+            "name": "Lê Hoàng Quân",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd89",
+            "name": "Võ Trần Tháp",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6f",
+            "name": "Trần Thị Diễm Trâm",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8a",
+            "name": "Võ Quốc Vinh",
+            "late": 1
+          },
+          {
+            "id": "6ab08e10d2575492aec00dee",
+            "name": "Nguyễn Trần Đình Luân",
+            "late": 1
+          },
+          {
+            "id": "6ab08e89d2575492aec023f1",
+            "name": "Lê Minh",
+            "late": 2
+          },
+          {
+            "id": "6ab08ea2d2575492aec029c2",
+            "name": "Bạch Chí Lân",
+            "late": 2
+          },
+          {
+            "id": "6ab08eb8d2575492aec02f46",
+            "name": "Đặng Trần Anh Khoa",
+            "late": 2
+          },
+          {
+            "id": "6ab08eced2575492aec02fa6",
+            "name": "Phan Huy Hưng",
+            "late": 2
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512350",
+            "name": "Trần Văn Gia Khang",
+            "late": 1
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234f",
+            "name": "Nguyễn Gia Huy 2",
+            "late": 1
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234e",
+            "name": "Lê Phúc Duy",
+            "late": 2
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234d",
+            "name": "Bùi Gia Anh",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bdab",
+            "name": "Trần Tiến Đạt 3",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda4",
+            "name": "Trịnh Phú Thịnh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9c",
+            "name": "Huỳnh Kế Minh Quân",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd99",
+            "name": "Khưu Nhật Tân",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd95",
+            "name": "Văn Hữu Luân",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd91",
+            "name": "Nguyễn Ngọc Duy Anh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8e",
+            "name": "Nguyễn Thị Hồng Huệ",
+            "late": 1
+          }
+        ]
+      },
+      "severityGroups": {
+        "20-40%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcfb",
+            "name": "Đoàn Bảo Duy",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd17",
+            "name": "Nguyễn Duy Minh Hà",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0e",
+            "name": "Nguyễn Bảo Huy",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd16",
+            "name": "Trần Thị Ngọc Huyền",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd21",
+            "name": "Võ Phan Đăng Khoa",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd2a",
+            "name": "Nguyễn Trần Đan Linh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd88",
+            "name": "Dương Công Quốc",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd7f",
+            "name": "Trần Hoàng Ân",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf5",
+            "name": "Hồ Gia Bảo",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd02",
+            "name": "Nguyễn Minh Hiếu 11",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd07",
+            "name": "Dương Ngọc Hoàn",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd22",
+            "name": "Phạm Đăng Khoa",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3a",
+            "name": "Phạm Bình Minh 2",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd40",
+            "name": "Lâm Hữu Nghị",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd55",
+            "name": "Lê Hoàng Quân",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6f",
+            "name": "Trần Thị Diễm Trâm",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8a",
+            "name": "Võ Quốc Vinh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6ab08e10d2575492aec00dee",
+            "name": "Nguyễn Trần Đình Luân",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512350",
+            "name": "Trần Văn Gia Khang",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bdab",
+            "name": "Trần Tiến Đạt 3",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bda4",
+            "name": "Trịnh Phú Thịnh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd99",
+            "name": "Khưu Nhật Tân",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd95",
+            "name": "Văn Hữu Luân",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd91",
+            "name": "Nguyễn Ngọc Duy Anh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8e",
+            "name": "Nguyễn Thị Hồng Huệ",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 20
+          }
+        ],
+        "40-60%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd81",
+            "name": "Phạm Thành Đạo",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd0a",
+            "name": "Bùi Minh Hoàng 2",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd26",
+            "name": "Đỗ Nguyễn Trung Kiên",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd41",
+            "name": "Nguyễn Đình Nguyên",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd53",
+            "name": "Võ Trung Quân",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bce6",
+            "name": "Trịnh Mỹ An",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd8b",
+            "name": "Trần Kim Đức",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd13",
+            "name": "Trần Thái Huy",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd10",
+            "name": "Vũ Lê Huy",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd89",
+            "name": "Võ Trần Tháp",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6ab08eced2575492aec02fa6",
+            "name": "Phan Huy Hưng",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9c",
+            "name": "Huỳnh Kế Minh Quân",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          }
+        ],
+        "60-80%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd27",
+            "name": "Cao Trần Tuấn Kiệt",
+            "absRate": 60,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6ab08e89d2575492aec023f1",
+            "name": "Lê Minh",
+            "absRate": 60,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6ab08ea2d2575492aec029c2",
+            "name": "Bạch Chí Lân",
+            "absRate": 60,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6ab08eb8d2575492aec02f46",
+            "name": "Đặng Trần Anh Khoa",
+            "absRate": 60,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          }
+        ],
+        "80-100%": [
+          {
+            "id": "6aaa6c0bf7b0358fde51234f",
+            "name": "Nguyễn Gia Huy 2",
+            "absRate": 80,
+            "elLate": 1,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 80
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234e",
+            "name": "Lê Phúc Duy",
+            "absRate": 80,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 80
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde51234d",
+            "name": "Bùi Gia Anh",
+            "absRate": 80,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 80
+          }
+        ]
+      },
+      "neverAttended": [],
+      "classMetrics": {
+        "ccViolationPct": 30.43,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      }
+    },
+    "HCM-KS26-CNTT2": {
+      "className": "HCM-KS26-CNTT2",
+      "courseClassId": "6aae9ef97d22545796a9db6c",
+      "totalStudents": 45,
+      "violations": {
+        "cc": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4e",
+            "name": "Phạm Hồng Phúc",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd72",
+            "name": "Phạm Gia Anh Tuân",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd82",
+            "name": "Thi Thành Đạt",
+            "rate": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3b",
+            "name": "Nguyễn Đức Nhật Minh",
+            "rate": 20
+          },
+          {
+            "id": "6ab08f37d2575492aec03e29",
+            "name": "Hồ Anh Hào",
+            "rate": 20
+          },
+          {
+            "id": "6ab08f63d2575492aec042f0",
+            "name": "Hoàng Long 2",
+            "rate": 80
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512354",
+            "name": "Nguyễn Khánh Tùng",
+            "rate": 20
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512353",
+            "name": "Nguyễn Thiện Tân",
+            "rate": 40
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512352",
+            "name": "Trần Bảo Trân",
+            "rate": 20
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512351",
+            "name": "Trần Quốc Khánh 2",
+            "rate": 40
+          }
+        ],
+        "bt": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1b",
+            "name": "Trần Nguyễn Kha",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd31",
+            "name": "Trịnh Nguyễn Vương Lâm",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd45",
+            "name": "Lê Trọng Nhân",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4b",
+            "name": "Nguyễn Thành Phát",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4e",
+            "name": "Phạm Hồng Phúc",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6b",
+            "name": "Nguyễn Thành Thịnh",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5d",
+            "name": "Nguyễn Thị Kiều Thu",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd72",
+            "name": "Phạm Gia Anh Tuân",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd82",
+            "name": "Thi Thành Đạt",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd20",
+            "name": "Bùi Tấn Khiêm",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd2c",
+            "name": "Phạm Tuấn Linh 2",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd34",
+            "name": "Trần Đình Lộc",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3b",
+            "name": "Nguyễn Đức Nhật Minh",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd46",
+            "name": "Nguyễn Trọng Nhân 8",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4f",
+            "name": "Vũ Như Hoàng Phương",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6ab08f21d2575492aec03d8f",
+            "name": "Phan Nguyễn Gia Bảo",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6ab08f37d2575492aec03e29",
+            "name": "Hồ Anh Hào",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6ab08f63d2575492aec042f0",
+            "name": "Hoàng Long 2",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512354",
+            "name": "Nguyễn Khánh Tùng",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512353",
+            "name": "Nguyễn Thiện Tân",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512351",
+            "name": "Trần Quốc Khánh 2",
+            "done": 0,
+            "total": 4
+          }
+        ],
+        "el": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bce7",
+            "name": "Nguyễn Vũ Quốc Anh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf0",
+            "name": "Hà Gia Bách",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf4",
+            "name": "Lê Gia Bảo",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1b",
+            "name": "Trần Nguyễn Kha",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd31",
+            "name": "Trịnh Nguyễn Vương Lâm",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3d",
+            "name": "Lê Ngô Hoàng Mạnh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd39",
+            "name": "Bùi Hoàng Minh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd45",
+            "name": "Lê Trọng Nhân",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd44",
+            "name": "Nguyễn Trọng Nhân 7",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4b",
+            "name": "Nguyễn Thành Phát",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4e",
+            "name": "Phạm Hồng Phúc",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd57",
+            "name": "Nguyễn Minh Quân 12",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd63",
+            "name": "Lê Hoàng Thái",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd67",
+            "name": "Lê Hồ Thanh Thảo",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6b",
+            "name": "Nguyễn Thành Thịnh",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6a",
+            "name": "Võ Xuân Thịnh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5d",
+            "name": "Nguyễn Thị Kiều Thu",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd64",
+            "name": "Võ Thị Thanh Thùy",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd72",
+            "name": "Phạm Gia Anh Tuân",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd7c",
+            "name": "Nguyễn Phước Lê Vinh",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd82",
+            "name": "Thi Thành Đạt",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd20",
+            "name": "Bùi Tấn Khiêm",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1e",
+            "name": "Lê Hoàng Anh Khiêm",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd2c",
+            "name": "Phạm Tuấn Linh 2",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd34",
+            "name": "Trần Đình Lộc",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3b",
+            "name": "Nguyễn Đức Nhật Minh",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3f",
+            "name": "Huỳnh Gia Nghiêm",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd46",
+            "name": "Nguyễn Trọng Nhân 8",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd47",
+            "name": "Phan Hồng Nhân",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4f",
+            "name": "Vũ Như Hoàng Phương",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd56",
+            "name": "Lê Quốc Minh Quân",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd75",
+            "name": "Đoàn Nguyễn Minh Tâm",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5b",
+            "name": "Huỳnh Chí Thiện",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd66",
+            "name": "Lương Thanh Thư",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5e",
+            "name": "Võ Hoàng Thuận",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6c",
+            "name": "Đặng Văn Thức",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd71",
+            "name": "Đoàn Hữu Trọng",
+            "late": 2
+          },
+          {
+            "id": "6ab08f21d2575492aec03d8f",
+            "name": "Phan Nguyễn Gia Bảo",
+            "late": 1
+          },
+          {
+            "id": "6ab08f63d2575492aec042f0",
+            "name": "Hoàng Long 2",
+            "late": 3
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512353",
+            "name": "Nguyễn Thiện Tân",
+            "late": 3
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512351",
+            "name": "Trần Quốc Khánh 2",
+            "late": 3
+          }
+        ]
+      },
+      "severityGroups": {
+        "20-40%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bce7",
+            "name": "Nguyễn Vũ Quốc Anh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf0",
+            "name": "Hà Gia Bách",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3d",
+            "name": "Lê Ngô Hoàng Mạnh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd39",
+            "name": "Bùi Hoàng Minh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd44",
+            "name": "Nguyễn Trọng Nhân 7",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4b",
+            "name": "Nguyễn Thành Phát",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd63",
+            "name": "Lê Hoàng Thái",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd67",
+            "name": "Lê Hồ Thanh Thảo",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6a",
+            "name": "Võ Xuân Thịnh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd64",
+            "name": "Võ Thị Thanh Thùy",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd20",
+            "name": "Bùi Tấn Khiêm",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1e",
+            "name": "Lê Hoàng Anh Khiêm",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd34",
+            "name": "Trần Đình Lộc",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4f",
+            "name": "Vũ Như Hoàng Phương",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd75",
+            "name": "Đoàn Nguyễn Minh Tâm",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd66",
+            "name": "Lương Thanh Thư",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5e",
+            "name": "Võ Hoàng Thuận",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6c",
+            "name": "Đặng Văn Thức",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6ab08f21d2575492aec03d8f",
+            "name": "Phan Nguyễn Gia Bảo",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6ab08f37d2575492aec03e29",
+            "name": "Hồ Anh Hào",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512354",
+            "name": "Nguyễn Khánh Tùng",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512352",
+            "name": "Trần Bảo Trân",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 20
+          }
+        ],
+        "40-60%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bcf4",
+            "name": "Lê Gia Bảo",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd31",
+            "name": "Trịnh Nguyễn Vương Lâm",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd45",
+            "name": "Lê Trọng Nhân",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd57",
+            "name": "Nguyễn Minh Quân 12",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd72",
+            "name": "Phạm Gia Anh Tuân",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd7c",
+            "name": "Nguyễn Phước Lê Vinh",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd2c",
+            "name": "Phạm Tuấn Linh 2",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3b",
+            "name": "Nguyễn Đức Nhật Minh",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd3f",
+            "name": "Huỳnh Gia Nghiêm",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd46",
+            "name": "Nguyễn Trọng Nhân 8",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd47",
+            "name": "Phan Hồng Nhân",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd56",
+            "name": "Lê Quốc Minh Quân",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5b",
+            "name": "Huỳnh Chí Thiện",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd71",
+            "name": "Đoàn Hữu Trọng",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 4,
+            "hwTotal": 4,
+            "maxViolation": 40
+          }
+        ],
+        "60-80%": [
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd1b",
+            "name": "Trần Nguyễn Kha",
+            "absRate": 0,
+            "elLate": 3,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd4e",
+            "name": "Phạm Hồng Phúc",
+            "absRate": 20,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd6b",
+            "name": "Nguyễn Thành Thịnh",
+            "absRate": 0,
+            "elLate": 3,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd5d",
+            "name": "Nguyễn Thị Kiều Thu",
+            "absRate": 0,
+            "elLate": 3,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd82",
+            "name": "Thi Thành Đạt",
+            "absRate": 40,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512353",
+            "name": "Nguyễn Thiện Tân",
+            "absRate": 40,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aaa6c0bf7b0358fde512351",
+            "name": "Trần Quốc Khánh 2",
+            "absRate": 40,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          }
+        ],
+        "80-100%": [
+          {
+            "id": "6ab08f63d2575492aec042f0",
+            "name": "Hoàng Long 2",
+            "absRate": 80,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 80
+          }
+        ]
+      },
+      "neverAttended": [],
+      "classMetrics": {
+        "ccViolationPct": 22.22,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      }
+    },
+    "HN-KS26-QTKD1": {
+      "className": "HN-KS26-QTKD1",
+      "courseClassId": "6aae5e917d22545796a8fb61",
+      "totalStudents": 44,
+      "violations": {
+        "cc": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fd",
+            "name": "Lê Minh Anh 3",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c114",
+            "name": "Nguyễn Gia Hân",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15a",
+            "name": "Nguyễn Duy Hùng",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c122",
+            "name": "Thân Hoàng Linh",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c133",
+            "name": "Trịnh Anh Quân",
+            "rate": 20
+          },
+          {
+            "id": "6aae50fc7d22545796a8dbdb",
+            "name": "Trần Anh Vũ",
+            "rate": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e9",
+            "name": "Mai Hoàng Việt",
+            "rate": 100
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e8",
+            "name": "Lưu Anh Tuấn",
+            "rate": 80
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e6",
+            "name": "Đặng Gia Hưng",
+            "rate": 80
+          }
+        ],
+        "bt": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fd",
+            "name": "Lê Minh Anh 3",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c101",
+            "name": "Đỗ Quỳnh Chi",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c114",
+            "name": "Nguyễn Gia Hân",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c11a",
+            "name": "Phạm Bích Hảo",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c110",
+            "name": "Triệu Kim Hoàng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15a",
+            "name": "Nguyễn Duy Hùng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c112",
+            "name": "Đào Quốc Huy",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c11c",
+            "name": "Nguyễn Danh Khoa",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c11f",
+            "name": "Nguyễn Bảo Ngọc Lan",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c121",
+            "name": "Luyện Hoài Linh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c122",
+            "name": "Thân Hoàng Linh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c125",
+            "name": "Lê Đại Lộc",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c127",
+            "name": "Nguyễn Quang Lộc",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12b",
+            "name": "Nguyễn Đình Mạnh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13a",
+            "name": "Đào Phương Thảo",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fc",
+            "name": "Nguyễn Lan Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c104",
+            "name": "Nguyễn Công Cảnh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c108",
+            "name": "Nguyễn Thùy Dương 6",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c109",
+            "name": "Cao Thị Hương Giang",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c119",
+            "name": "Ngô Hoàng Hải",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c115",
+            "name": "Trần Đức Hùng",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c117",
+            "name": "Nguyễn Gia Hưng 2",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c124",
+            "name": "Mai Đức Lâm",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c126",
+            "name": "Từ Văn Lộc",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12f",
+            "name": "Lê Đại Phúc",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c131",
+            "name": "Bùi Hà Phương",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c133",
+            "name": "Trịnh Anh Quân",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c139",
+            "name": "Đoàn Phương Thảo",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c143",
+            "name": "Nguyễn Anh Tuấn 9",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c145",
+            "name": "Võ Thanh Tùng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14a",
+            "name": "Hà Yến Vy",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aae50fc7d22545796a8dbdb",
+            "name": "Trần Anh Vũ",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e9",
+            "name": "Mai Hoàng Việt",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e8",
+            "name": "Lưu Anh Tuấn",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e7",
+            "name": "Lê Nam Phong",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e6",
+            "name": "Đặng Gia Hưng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e5",
+            "name": "Nguyễn Bảo Châu",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16b",
+            "name": "Cáp Văn Mạnh Duy",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c169",
+            "name": "Đoàn Phương Nam",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c166",
+            "name": "Trần Công Sơn",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c161",
+            "name": "Nguyễn Phan Mỹ Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c160",
+            "name": "Tăng Đình Đạt",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15b",
+            "name": "Chu Thị Quỳnh Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0c2bd4a73a68ce4bd9a",
+            "name": "Doãn Ngọc Thủy Tiên",
+            "done": 3,
+            "total": 4
+          }
+        ],
+        "el": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c114",
+            "name": "Nguyễn Gia Hân",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15a",
+            "name": "Nguyễn Duy Hùng",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c112",
+            "name": "Đào Quốc Huy",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c121",
+            "name": "Luyện Hoài Linh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c122",
+            "name": "Thân Hoàng Linh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c104",
+            "name": "Nguyễn Công Cảnh",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c119",
+            "name": "Ngô Hoàng Hải",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c115",
+            "name": "Trần Đức Hùng",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c117",
+            "name": "Nguyễn Gia Hưng 2",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c139",
+            "name": "Đoàn Phương Thảo",
+            "late": 1
+          },
+          {
+            "id": "6aae50fc7d22545796a8dbdb",
+            "name": "Trần Anh Vũ",
+            "late": 2
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e9",
+            "name": "Mai Hoàng Việt",
+            "late": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c166",
+            "name": "Trần Công Sơn",
+            "late": 1
+          }
+        ]
+      },
+      "severityGroups": {
+        "20-40%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fd",
+            "name": "Lê Minh Anh 3",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c114",
+            "name": "Nguyễn Gia Hân",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c121",
+            "name": "Luyện Hoài Linh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c122",
+            "name": "Thân Hoàng Linh",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c119",
+            "name": "Ngô Hoàng Hải",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c115",
+            "name": "Trần Đức Hùng",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c117",
+            "name": "Nguyễn Gia Hưng 2",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c133",
+            "name": "Trịnh Anh Quân",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c139",
+            "name": "Đoàn Phương Thảo",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c166",
+            "name": "Trần Công Sơn",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          }
+        ],
+        "40-60%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15a",
+            "name": "Nguyễn Duy Hùng",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c112",
+            "name": "Đào Quốc Huy",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c104",
+            "name": "Nguyễn Công Cảnh",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aae50fc7d22545796a8dbdb",
+            "name": "Trần Anh Vũ",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 40
+          }
+        ],
+        "60-80%": [],
+        "80-100%": [
+          {
+            "id": "6aaa6bf7f7b0358fde5122e9",
+            "name": "Mai Hoàng Việt",
+            "absRate": 100,
+            "elLate": 4,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 100
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e8",
+            "name": "Lưu Anh Tuấn",
+            "absRate": 80,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 80
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122e6",
+            "name": "Đặng Gia Hưng",
+            "absRate": 80,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 80
+          }
+        ]
+      },
+      "neverAttended": [
+        {
+          "id": "6aaa6bf7f7b0358fde5122e9",
+          "name": "Mai Hoàng Việt"
+        }
+      ],
+      "classMetrics": {
+        "ccViolationPct": 20.45,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      }
+    },
+    "HN-KS26-QTKD2": {
+      "className": "HN-KS26-QTKD2",
+      "courseClassId": "6aae5f0c7d22545796a8fcf5",
+      "totalStudents": 45,
+      "violations": {
+        "cc": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f2",
+            "name": "Đặng Bá An",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c154",
+            "name": "Phạm Trung Minh Đức",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c141",
+            "name": "Lê Thành Trung",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c135",
+            "name": "Đặng Duy Sim",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13b",
+            "name": "Đàm Lê Phương Thảo",
+            "rate": 20
+          },
+          {
+            "id": "6aae4eb07d22545796a8d54c",
+            "name": "Đỗ An Khang",
+            "rate": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ef",
+            "name": "Nguyễn Nhật Vy",
+            "rate": 100
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ed",
+            "name": "Trần Vũ Hoàng",
+            "rate": 100
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ec",
+            "name": "Nguyễn Minh Hiếu 7",
+            "rate": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122eb",
+            "name": "Nguyễn Hoàng Bách 3",
+            "rate": 20
+          }
+        ],
+        "bt": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f2",
+            "name": "Đặng Bá An",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c154",
+            "name": "Phạm Trung Minh Đức",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c107",
+            "name": "Phạm Thị Mỹ Duyên",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c11b",
+            "name": "Nguyễn Thị Minh Hằng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10a",
+            "name": "Đỗ Thị Hiên",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c113",
+            "name": "Nguyễn Gia Huy 6",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c129",
+            "name": "Nguyễn Thị Trà Mi",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c132",
+            "name": "Phạm Thị Minh Phương 2",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c130",
+            "name": "Vũ Hà Phương",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c134",
+            "name": "Mai Thế Bảo Quân",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c136",
+            "name": "Lê Ngọc Sơn",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13e",
+            "name": "Khổng Minh Tiến",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c141",
+            "name": "Lê Thành Trung",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f8",
+            "name": "Phạm Thị Hoài Anh",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f3",
+            "name": "Trần Hoàng Diệu Anh",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c152",
+            "name": "Nguyễn Tiến Đạt 11",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c105",
+            "name": "Đinh Thị Huyền Diệu",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c155",
+            "name": "Nguyễn Minh Đức 15",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10b",
+            "name": "Nguyễn Xuân Hiến",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10d",
+            "name": "Đào Minh Hiếu 2",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c11d",
+            "name": "Phan Công Minh Khôi",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c120",
+            "name": "Lê Ngô Khánh Linh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c123",
+            "name": "Nguyễn Khánh Ly 2",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12a",
+            "name": "Trần Quang Minh 7",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c135",
+            "name": "Đặng Duy Sim",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c138",
+            "name": "Hoàng Ngọc Thạch",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13b",
+            "name": "Đàm Lê Phương Thảo",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c142",
+            "name": "Đinh Thị Thanh Trúc",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c140",
+            "name": "Lê Thành Trung 2",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aae4df97d22545796a8d4ba",
+            "name": "Đặng Trần Tiệp 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aae4e8d7d22545796a8d521",
+            "name": "Phạm Anh Quân",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aae4eb07d22545796a8d54c",
+            "name": "Đỗ An Khang",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6abb6e90e2793edd633b410b",
+            "name": "Đỗ Quang Anh 4",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ef",
+            "name": "Nguyễn Nhật Vy",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ee",
+            "name": "Phan Viết Khánh",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ed",
+            "name": "Trần Vũ Hoàng",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ec",
+            "name": "Nguyễn Minh Hiếu 7",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122eb",
+            "name": "Nguyễn Hoàng Bách 3",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16e",
+            "name": "Nguyễn Đức Đạt 4",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16c",
+            "name": "Nguyễn Lê Thiên Thư",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c168",
+            "name": "Vương Yến Nhi",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c167",
+            "name": "Đoàn Đình Đông",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c164",
+            "name": "Nguyễn Đức Duy 2",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c163",
+            "name": "Nguyễn Viết Hải An",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c162",
+            "name": "Đào Hương Giang",
+            "done": 3,
+            "total": 4
+          }
+        ],
+        "el": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f2",
+            "name": "Đặng Bá An",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c154",
+            "name": "Phạm Trung Minh Đức",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c11b",
+            "name": "Nguyễn Thị Minh Hằng",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c113",
+            "name": "Nguyễn Gia Huy 6",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c132",
+            "name": "Phạm Thị Minh Phương 2",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c130",
+            "name": "Vũ Hà Phương",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c134",
+            "name": "Mai Thế Bảo Quân",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c136",
+            "name": "Lê Ngọc Sơn",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13e",
+            "name": "Khổng Minh Tiến",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c141",
+            "name": "Lê Thành Trung",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f8",
+            "name": "Phạm Thị Hoài Anh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c152",
+            "name": "Nguyễn Tiến Đạt 11",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c105",
+            "name": "Đinh Thị Huyền Diệu",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c155",
+            "name": "Nguyễn Minh Đức 15",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c123",
+            "name": "Nguyễn Khánh Ly 2",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c135",
+            "name": "Đặng Duy Sim",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c138",
+            "name": "Hoàng Ngọc Thạch",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13b",
+            "name": "Đàm Lê Phương Thảo",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c140",
+            "name": "Lê Thành Trung 2",
+            "late": 2
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ef",
+            "name": "Nguyễn Nhật Vy",
+            "late": 3
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ed",
+            "name": "Trần Vũ Hoàng",
+            "late": 3
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122eb",
+            "name": "Nguyễn Hoàng Bách 3",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16c",
+            "name": "Nguyễn Lê Thiên Thư",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c168",
+            "name": "Vương Yến Nhi",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c164",
+            "name": "Nguyễn Đức Duy 2",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c163",
+            "name": "Nguyễn Viết Hải An",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c162",
+            "name": "Đào Hương Giang",
+            "late": 1
+          }
+        ]
+      },
+      "severityGroups": {
+        "20-40%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c154",
+            "name": "Phạm Trung Minh Đức",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c11b",
+            "name": "Nguyễn Thị Minh Hằng",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c113",
+            "name": "Nguyễn Gia Huy 6",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c130",
+            "name": "Vũ Hà Phương",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13e",
+            "name": "Khổng Minh Tiến",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c141",
+            "name": "Lê Thành Trung",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f8",
+            "name": "Phạm Thị Hoài Anh",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c138",
+            "name": "Hoàng Ngọc Thạch",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aae4eb07d22545796a8d54c",
+            "name": "Đỗ An Khang",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ec",
+            "name": "Nguyễn Minh Hiếu 7",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122eb",
+            "name": "Nguyễn Hoàng Bách 3",
+            "absRate": 20,
+            "elLate": 1,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c168",
+            "name": "Vương Yến Nhi",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c164",
+            "name": "Nguyễn Đức Duy 2",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c163",
+            "name": "Nguyễn Viết Hải An",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c162",
+            "name": "Đào Hương Giang",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          }
+        ],
+        "40-60%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c132",
+            "name": "Phạm Thị Minh Phương 2",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c134",
+            "name": "Mai Thế Bảo Quân",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c136",
+            "name": "Lê Ngọc Sơn",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c152",
+            "name": "Nguyễn Tiến Đạt 11",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c105",
+            "name": "Đinh Thị Huyền Diệu",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c155",
+            "name": "Nguyễn Minh Đức 15",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c123",
+            "name": "Nguyễn Khánh Ly 2",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c135",
+            "name": "Đặng Duy Sim",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13b",
+            "name": "Đàm Lê Phương Thảo",
+            "absRate": 20,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c140",
+            "name": "Lê Thành Trung 2",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16c",
+            "name": "Nguyễn Lê Thiên Thư",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 40
+          }
+        ],
+        "60-80%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f2",
+            "name": "Đặng Bá An",
+            "absRate": 20,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          }
+        ],
+        "80-100%": [
+          {
+            "id": "6aaa6bf7f7b0358fde5122ef",
+            "name": "Nguyễn Nhật Vy",
+            "absRate": 100,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 100
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ed",
+            "name": "Trần Vũ Hoàng",
+            "absRate": 100,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 100
+          }
+        ]
+      },
+      "neverAttended": [
+        {
+          "id": "6aaa6bf7f7b0358fde5122ef",
+          "name": "Nguyễn Nhật Vy"
+        },
+        {
+          "id": "6aaa6bf7f7b0358fde5122ed",
+          "name": "Trần Vũ Hoàng"
+        }
+      ],
+      "classMetrics": {
+        "ccViolationPct": 22.22,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      }
+    },
+    "HN-KS26-QTKD3": {
+      "className": "HN-KS26-QTKD3",
+      "courseClassId": "6aae60497d22545796a8ffa4",
+      "totalStudents": 44,
+      "violations": {
+        "cc": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f4",
+            "name": "Hoàng Phương Anh",
+            "rate": 80
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c151",
+            "name": "Nguyễn Tiến Đạt",
+            "rate": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c153",
+            "name": "Phạm Minh Đức 8",
+            "rate": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12d",
+            "name": "Phan Minh Nguyệt",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c137",
+            "name": "Vương Thị Thơ",
+            "rate": 60
+          },
+          {
+            "id": "6aae4b857d22545796a8cea4",
+            "name": "Lâm Quang Trọng",
+            "rate": 60
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f4",
+            "name": "Đặng Trần Quang",
+            "rate": 80
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f3",
+            "name": "Vũ Thị Bảo Ngọc",
+            "rate": 80
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f1",
+            "name": "Đỗ Viết Hào",
+            "rate": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f0",
+            "name": "Trịnh Bảo Châu",
+            "rate": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ea",
+            "name": "Lê Thị Thanh Vân",
+            "rate": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16d",
+            "name": "Nguyễn Trung Hiếu",
+            "rate": 60
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16a",
+            "name": "Nguyễn Minh Hằng",
+            "rate": 20
+          }
+        ],
+        "bt": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f1",
+            "name": "Nguyễn Vân An",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0ff",
+            "name": "Đỗ Tiến Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f4",
+            "name": "Hoàng Phương Anh",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f5",
+            "name": "Lâm Thị Lan Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c102",
+            "name": "Phạm Hữu Chinh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c150",
+            "name": "Lê Nguyễn Hải Đăng",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c151",
+            "name": "Nguyễn Tiến Đạt",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c153",
+            "name": "Phạm Minh Đức 8",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c158",
+            "name": "Vũ Anh Đức 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10c",
+            "name": "Lê Đức Hiếu 3",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10e",
+            "name": "Nguyễn Dương Đức Hiếu",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13c",
+            "name": "Đinh Phương Thảo",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c144",
+            "name": "Vũ Thị Tình",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13f",
+            "name": "Bùi Tạ Quỳnh Trang",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14c",
+            "name": "Lê Danh Võ",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c149",
+            "name": "Nguyễn Hà Vy",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14f",
+            "name": "Hà Thị Như Ý",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fe",
+            "name": "Nguyễn Hải Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f6",
+            "name": "Ninh Thị Phương Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f7",
+            "name": "Từ Hải Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c100",
+            "name": "Đoàn Ngọc Bảo",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c157",
+            "name": "Đỗ Minh Đức",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c156",
+            "name": "Vũ Minh Đức",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c116",
+            "name": "Trung Thành Hưng",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c111",
+            "name": "Đỗ Nhật Huy",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c128",
+            "name": "Đặng Thị Tuyết Mai",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12c",
+            "name": "Lương Thị Như Mỹ",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12d",
+            "name": "Phan Minh Nguyệt",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c137",
+            "name": "Vương Thị Thơ",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14b",
+            "name": "Nguyễn Thị Khánh Vân",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14d",
+            "name": "Triệu Quang Vũ",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14e",
+            "name": "Nguyễn Hải Yến",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aae4b607d22545796a8ce7e",
+            "name": "Nguyễn Thị Yến Linh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aae4b857d22545796a8cea4",
+            "name": "Lâm Quang Trọng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aae4ba57d22545796a8cefc",
+            "name": "Nguyễn Phúc Tấn",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f4",
+            "name": "Đặng Trần Quang",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f3",
+            "name": "Vũ Thị Bảo Ngọc",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f2",
+            "name": "Đỗ Thùy Linh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f1",
+            "name": "Đỗ Viết Hào",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f0",
+            "name": "Trịnh Bảo Châu",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ea",
+            "name": "Lê Thị Thanh Vân",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16d",
+            "name": "Nguyễn Trung Hiếu",
+            "done": 2,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16a",
+            "name": "Nguyễn Minh Hằng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15d",
+            "name": "Phạm Thái Dương",
+            "done": 3,
+            "total": 4
+          }
+        ],
+        "el": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0ff",
+            "name": "Đỗ Tiến Anh",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f4",
+            "name": "Hoàng Phương Anh",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c151",
+            "name": "Nguyễn Tiến Đạt",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10c",
+            "name": "Lê Đức Hiếu 3",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10e",
+            "name": "Nguyễn Dương Đức Hiếu",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c144",
+            "name": "Vũ Thị Tình",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13f",
+            "name": "Bùi Tạ Quỳnh Trang",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14c",
+            "name": "Lê Danh Võ",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fe",
+            "name": "Nguyễn Hải Anh",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c157",
+            "name": "Đỗ Minh Đức",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c137",
+            "name": "Vương Thị Thơ",
+            "late": 2
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14d",
+            "name": "Triệu Quang Vũ",
+            "late": 1
+          },
+          {
+            "id": "6aae4b857d22545796a8cea4",
+            "name": "Lâm Quang Trọng",
+            "late": 1
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f4",
+            "name": "Đặng Trần Quang",
+            "late": 3
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f3",
+            "name": "Vũ Thị Bảo Ngọc",
+            "late": 3
+          }
+        ]
+      },
+      "severityGroups": {
+        "20-40%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10c",
+            "name": "Lê Đức Hiếu 3",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10e",
+            "name": "Nguyễn Dương Đức Hiếu",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c144",
+            "name": "Vũ Thị Tình",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14c",
+            "name": "Lê Danh Võ",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12d",
+            "name": "Phan Minh Nguyệt",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c14d",
+            "name": "Triệu Quang Vũ",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f1",
+            "name": "Đỗ Viết Hào",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f0",
+            "name": "Trịnh Bảo Châu",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122ea",
+            "name": "Lê Thị Thanh Vân",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16a",
+            "name": "Nguyễn Minh Hằng",
+            "absRate": 20,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          }
+        ],
+        "40-60%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0ff",
+            "name": "Đỗ Tiến Anh",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c153",
+            "name": "Phạm Minh Đức 8",
+            "absRate": 40,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13f",
+            "name": "Bùi Tạ Quỳnh Trang",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fe",
+            "name": "Nguyễn Hải Anh",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c157",
+            "name": "Đỗ Minh Đức",
+            "absRate": 0,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 40
+          }
+        ],
+        "60-80%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c151",
+            "name": "Nguyễn Tiến Đạt",
+            "absRate": 40,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c137",
+            "name": "Vương Thị Thơ",
+            "absRate": 60,
+            "elLate": 2,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aae4b857d22545796a8cea4",
+            "name": "Lâm Quang Trọng",
+            "absRate": 60,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16d",
+            "name": "Nguyễn Trung Hiếu",
+            "absRate": 60,
+            "elLate": 0,
+            "hwDone": 2,
+            "hwTotal": 4,
+            "maxViolation": 60
+          }
+        ],
+        "80-100%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f4",
+            "name": "Hoàng Phương Anh",
+            "absRate": 80,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 80
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f4",
+            "name": "Đặng Trần Quang",
+            "absRate": 80,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 80
+          },
+          {
+            "id": "6aaa6bf7f7b0358fde5122f3",
+            "name": "Vũ Thị Bảo Ngọc",
+            "absRate": 80,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 80
+          }
+        ]
+      },
+      "neverAttended": [],
+      "classMetrics": {
+        "ccViolationPct": 29.55,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      }
+    },
+    "HCM-KS26-QTKD1": {
+      "className": "HCM-KS26-QTKD1",
+      "courseClassId": "6aae5dcc7d22545796a8f920",
+      "totalStudents": 23,
+      "violations": {
+        "cc": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fa",
+            "name": "Nguyễn Ngọc Lan Anh",
+            "rate": 60
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c147",
+            "name": "Nguyễn Tường Vi",
+            "rate": 80
+          },
+          {
+            "id": "6aae49da7d22545796a8c264",
+            "name": "Nguyễn Hoàng Thiên Phúc",
+            "rate": 60
+          },
+          {
+            "id": "6aae4a0e7d22545796a8c2a7",
+            "name": "Nguyễn Công Trứ",
+            "rate": 100
+          }
+        ],
+        "bt": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f0",
+            "name": "Nguyễn Thúy An",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fb",
+            "name": "Đào Thị Quỳnh Anh 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fa",
+            "name": "Nguyễn Ngọc Lan Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f9",
+            "name": "Nhâm Đức Anh",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c103",
+            "name": "Nguyễn Nhựt Cường",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c106",
+            "name": "Nguyễn Kiều Duyên",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c159",
+            "name": "Trịnh Gia Hân",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c10f",
+            "name": "Nguyễn Thượng Hoàng",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c118",
+            "name": "Nguyễn Thị Thu Hường",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c11e",
+            "name": "Nguyễn Đức Nguyên Khôi",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12e",
+            "name": "Phạm Nguyễn Yến Nhi",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c13d",
+            "name": "Nguyễn Thị Triều Tiên",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c146",
+            "name": "Nguyễn Đức Tuấn Tú",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c147",
+            "name": "Nguyễn Tường Vi",
+            "done": 1,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c148",
+            "name": "Nguyễn Tường Vy",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aae49da7d22545796a8c264",
+            "name": "Nguyễn Hoàng Thiên Phúc",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aae4a0e7d22545796a8c2a7",
+            "name": "Nguyễn Công Trứ",
+            "done": 0,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c170",
+            "name": "Trương Anh Khoa",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c16f",
+            "name": "Lê Hoàng Lâm",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c165",
+            "name": "Trần Gia Bảo 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15f",
+            "name": "Nguyễn Hữu Nam 2",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15e",
+            "name": "Nguyễn Quốc Học",
+            "done": 3,
+            "total": 4
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15c",
+            "name": "Huỳnh Nhật Bình",
+            "done": 3,
+            "total": 4
+          }
+        ],
+        "el": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f0",
+            "name": "Nguyễn Thúy An",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fa",
+            "name": "Nguyễn Ngọc Lan Anh",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c118",
+            "name": "Nguyễn Thị Thu Hường",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12e",
+            "name": "Phạm Nguyễn Yến Nhi",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c147",
+            "name": "Nguyễn Tường Vi",
+            "late": 3
+          },
+          {
+            "id": "6aae4a0e7d22545796a8c2a7",
+            "name": "Nguyễn Công Trứ",
+            "late": 3
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c170",
+            "name": "Trương Anh Khoa",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15f",
+            "name": "Nguyễn Hữu Nam 2",
+            "late": 1
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15e",
+            "name": "Nguyễn Quốc Học",
+            "late": 1
+          }
+        ]
+      },
+      "severityGroups": {
+        "20-40%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0f0",
+            "name": "Nguyễn Thúy An",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c118",
+            "name": "Nguyễn Thị Thu Hường",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c12e",
+            "name": "Phạm Nguyễn Yến Nhi",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c170",
+            "name": "Trương Anh Khoa",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15f",
+            "name": "Nguyễn Hữu Nam 2",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          },
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c15e",
+            "name": "Nguyễn Quốc Học",
+            "absRate": 0,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 20
+          }
+        ],
+        "40-60%": [],
+        "60-80%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c0fa",
+            "name": "Nguyễn Ngọc Lan Anh",
+            "absRate": 60,
+            "elLate": 1,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 60
+          },
+          {
+            "id": "6aae49da7d22545796a8c264",
+            "name": "Nguyễn Hoàng Thiên Phúc",
+            "absRate": 60,
+            "elLate": 0,
+            "hwDone": 3,
+            "hwTotal": 4,
+            "maxViolation": 60
+          }
+        ],
+        "80-100%": [
+          {
+            "id": "6aa9f0f2bd4a73a68ce4c147",
+            "name": "Nguyễn Tường Vi",
+            "absRate": 80,
+            "elLate": 3,
+            "hwDone": 1,
+            "hwTotal": 4,
+            "maxViolation": 80
+          },
+          {
+            "id": "6aae4a0e7d22545796a8c2a7",
+            "name": "Nguyễn Công Trứ",
+            "absRate": 100,
+            "elLate": 3,
+            "hwDone": 0,
+            "hwTotal": 4,
+            "maxViolation": 100
+          }
+        ]
+      },
+      "neverAttended": [
+        {
+          "id": "6aae4a0e7d22545796a8c2a7",
+          "name": "Nguyễn Công Trứ"
+        }
+      ],
+      "classMetrics": {
+        "ccViolationPct": 17.39,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      }
+    }
+  },
+  "never_attended": [
+    {
+      "className": "HN-KS26-QTKD1",
+      "id": "6aaa6bf7f7b0358fde5122e9",
+      "name": "Mai Hoàng Việt",
+      "absRate": 100
+    },
+    {
+      "className": "HN-KS26-QTKD2",
+      "id": "6aaa6bf7f7b0358fde5122ef",
+      "name": "Nguyễn Nhật Vy",
+      "absRate": 100
+    },
+    {
+      "className": "HN-KS26-QTKD2",
+      "id": "6aaa6bf7f7b0358fde5122ed",
+      "name": "Trần Vũ Hoàng",
+      "absRate": 100
+    },
+    {
+      "className": "HCM-KS26-QTKD1",
+      "id": "6aae4a0e7d22545796a8c2a7",
+      "name": "Nguyễn Công Trứ",
+      "absRate": 100
+    }
+  ],
+  "class_comparison": {
+    "HN-KS26-CNTT1": {
+      "ssk101": {
+        "ccViolationPct": 20.9,
+        "btViolationPct": 27.9,
+        "elViolationPct": 93
+      },
+      "currentCourses": {
+        "SKL01": {
+          "totalStudents": 43,
+          "ccViolationPct": 6.98,
+          "elViolationPct": 20.93,
+          "btViolationPct": 0
+        },
+        "IT108-K26": {
+          "totalStudents": 43,
+          "ccViolationPct": 0,
+          "elViolationPct": 9.3,
+          "btViolationPct": 0
+        },
+        "JPN105-K26": {
+          "totalStudents": 43,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "Orientation": {
+          "totalStudents": 43,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        }
+      }
+    },
+    "HN-KS26-CNTT2": {
+      "ssk101": {
+        "ccViolationPct": 14,
+        "btViolationPct": 100,
+        "elViolationPct": 2.3
+      },
+      "currentCourses": {
+        "SKL01": {
+          "totalStudents": 40,
+          "ccViolationPct": 2.5,
+          "elViolationPct": 5,
+          "btViolationPct": 0
+        },
+        "ENG105-K26": {
+          "totalStudents": 40,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "IT108-K26": {
+          "totalStudents": 40,
+          "ccViolationPct": 0,
+          "elViolationPct": 2.5,
+          "btViolationPct": 0
+        },
+        "Orientation": {
+          "totalStudents": 40,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        }
+      }
+    },
+    "HN-KS26-CNTT3": {
+      "ssk101": {
+        "ccViolationPct": 17.1,
+        "btViolationPct": 0,
+        "elViolationPct": 0
+      },
+      "currentCourses": {
+        "ENG105-K26": {
+          "totalStudents": 41,
+          "ccViolationPct": 0,
+          "elViolationPct": 2.44,
+          "btViolationPct": 0
+        },
+        "SKL01": {
+          "totalStudents": 41,
+          "ccViolationPct": 2.44,
+          "elViolationPct": 4.88,
+          "btViolationPct": 0
+        },
+        "IT108-K26": {
+          "totalStudents": 41,
+          "ccViolationPct": 0,
+          "elViolationPct": 2.44,
+          "btViolationPct": 0
+        },
+        "Orientation": {
+          "totalStudents": 41,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        }
+      }
+    },
+    "HCM-KS26-CNTT1": {
+      "ssk101": {
+        "ccViolationPct": 31.9,
+        "btViolationPct": 51.1,
+        "elViolationPct": 95.7
+      },
+      "currentCourses": {
+        "SKL01": {
+          "totalStudents": 46,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "ENG105-K26": {
+          "totalStudents": 46,
+          "ccViolationPct": 0,
+          "elViolationPct": 17.39,
+          "btViolationPct": 0
+        },
+        "IT108-K26": {
+          "totalStudents": 46,
+          "ccViolationPct": 0,
+          "elViolationPct": 54.35,
+          "btViolationPct": 0
+        },
+        "Orientation": {
+          "totalStudents": 46,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        }
+      }
+    },
+    "HCM-KS26-CNTT2": {
+      "ssk101": {
+        "ccViolationPct": 20,
+        "btViolationPct": 40,
+        "elViolationPct": 91.1
+      },
+      "currentCourses": {
+        "ENG105-K26": {
+          "totalStudents": 45,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "SKL01": {
+          "totalStudents": 45,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "IT108-K26": {
+          "totalStudents": 45,
+          "ccViolationPct": 0,
+          "elViolationPct": 28.89,
+          "btViolationPct": 0
+        },
+        "Orientation": {
+          "totalStudents": 45,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        }
+      }
+    },
+    "HN-KS26-QTKD1": {
+      "ssk101": {
+        "ccViolationPct": 31.8,
+        "btViolationPct": 0,
+        "elViolationPct": 29.5
+      },
+      "currentCourses": {
+        "ENG105-K26": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 9.09,
+          "btViolationPct": 0
+        },
+        "PRJ101": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "AI101": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "DA101": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "MKT101": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "SEL101": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "MAN101": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "SSK103": {
+          "totalStudents": 44,
+          "ccViolationPct": 9.09,
+          "elViolationPct": 6.82,
+          "btViolationPct": 2.8
+        },
+        "SSK102": {
+          "totalStudents": 44,
+          "ccViolationPct": 11.36,
+          "elViolationPct": 6.82,
+          "btViolationPct": 7.7
+        },
+        "Orientation": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        }
+      }
+    },
+    "HN-KS26-QTKD2": {
+      "ssk101": {
+        "ccViolationPct": 22.7,
+        "btViolationPct": 0,
+        "elViolationPct": 61.4
+      },
+      "currentCourses": {
+        "SSK103": {
+          "totalStudents": 45,
+          "ccViolationPct": 6.67,
+          "elViolationPct": 8.89,
+          "btViolationPct": 2.8
+        },
+        "SSK102": {
+          "totalStudents": 45,
+          "ccViolationPct": 6.67,
+          "elViolationPct": 20,
+          "btViolationPct": 7.7
+        },
+        "ENG105-K26": {
+          "totalStudents": 45,
+          "ccViolationPct": 0,
+          "elViolationPct": 20,
+          "btViolationPct": 0
+        },
+        "Orientation": {
+          "totalStudents": 45,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        }
+      }
+    },
+    "HN-KS26-QTKD3": {
+      "ssk101": {
+        "ccViolationPct": 29.5,
+        "btViolationPct": 11.4,
+        "elViolationPct": 34.1
+      },
+      "currentCourses": {
+        "ENG105-K26": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 6.82,
+          "btViolationPct": 0
+        },
+        "SSK103": {
+          "totalStudents": 44,
+          "ccViolationPct": 15.91,
+          "elViolationPct": 20.45,
+          "btViolationPct": 2.8
+        },
+        "SSK102": {
+          "totalStudents": 44,
+          "ccViolationPct": 29.55,
+          "elViolationPct": 18.18,
+          "btViolationPct": 7.7
+        },
+        "Orientation": {
+          "totalStudents": 44,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        }
+      }
+    },
+    "HCM-KS26-QTKD1": {
+      "ssk101": {
+        "ccViolationPct": 17.4,
+        "btViolationPct": 4.3,
+        "elViolationPct": 39.1
+      },
+      "currentCourses": {
+        "ENG105-K26": {
+          "totalStudents": 21,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        },
+        "SSK103": {
+          "totalStudents": 21,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 2.8
+        },
+        "SSK102": {
+          "totalStudents": 21,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 7.7
+        },
+        "Orientation": {
+          "totalStudents": 21,
+          "ccViolationPct": 0,
+          "elViolationPct": 0,
+          "btViolationPct": 0
+        }
+      }
+    }
+  },
+  "repeat_offenders": [],
+  "summary": {
+    "totalStudents": 371,
+    "neverAttended": 4,
+    "repeatOffenders": 77
+  }
+};
+
+function switchTab(name) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    event.target.closest('.tab').classList.add('active');
+    document.getElementById('panel-' + name).classList.add('active');
+}
+
+function pctBadge(val) {
+    if (val >= 20) return `<span class="badge badge-danger">${val.toFixed(1)}%</span>`;
+    if (val >= 10) return `<span class="badge badge-warning">${val.toFixed(1)}%</span>`;
+    if (val > 0) return `<span class="badge badge-info">${val.toFixed(1)}%</span>`;
+    return `<span class="badge badge-success">0.00%</span>`;
+}
+
+// Populate severity table
+const classOrder = ['HN-KS26-CNTT1','HN-KS26-CNTT2','HN-KS26-CNTT3','HCM-KS26-CNTT1','HCM-KS26-CNTT2',
+                    'HN-KS26-QTKD1','HN-KS26-QTKD2','HN-KS26-QTKD3','HCM-KS26-QTKD1'];
+
+let severityHTML = '';
+classOrder.forEach(cls => {
+    const d = DATA.ssk101_by_class[cls];
+    if (!d) return;
+    const sg = d.severityGroups;
+    const g = [sg['20-40%']?.length||0, sg['40-60%']?.length||0, sg['60-80%']?.length||0, sg['80-100%']?.length||0];
+    const total = g.reduce((a,b)=>a+b, 0);
+    const pct = (total/d.totalStudents*100).toFixed(1);
+    severityHTML += `<tr>
+        <td class="class-col">${cls}</td><td>${d.totalStudents}</td>
+        <td>${g[0] || '-'}</td><td>${g[1] || '-'}</td><td style="color:${g[2]>0?'#fb7185':'inherit'}">${g[2] || '-'}</td>
+        <td style="color:${g[3]>0?'#fb7185':'inherit'};font-weight:700">${g[3] || '-'}</td>
+        <td style="font-weight:700">${total}</td><td>${pctBadge(parseFloat(pct))}</td>
+    </tr>`;
+});
+document.getElementById('severity-table-body').innerHTML = severityHTML;
+
+// Critical students (80-100%)
+let critHTML = '';
+classOrder.forEach(cls => {
+    const d = DATA.ssk101_by_class[cls];
+    if (!d) return;
+    (d.severityGroups['80-100%'] || []).forEach(st => {
+        const repeat = DATA.repeat_offenders.find(r => r.name === st.name && r.className === cls);
+        const currentStatus = repeat ? repeat.currentCourseViolations.map(cv => `${cv.course}:${cv.violations.join('+')}`).join(', ') : '—';
+        critHTML += `<tr style="background:rgba(244,63,94,0.05)">
+            <td class="class-col">${cls}</td><td class="name-col">${st.name}</td>
+            <td><span class="badge badge-danger">${st.absRate.toFixed(0)}%</span></td>
+            <td>${st.elLate || 0} bài</td><td style="font-size:0.8rem">${currentStatus}</td>
+        </tr>`;
+    });
+});
+document.getElementById('critical-students').innerHTML = critHTML;
+
+// Comparison table
+let compHTML = '';
+classOrder.forEach(cls => {
+    const comp = DATA.class_comparison[cls];
+    if (!comp) return;
+    const ssk = comp.ssk101 || {ccViolationPct:0, btViolationPct:0, elViolationPct:0};
+    const getLevelClass = (v) => v >= 20 ? 'text-danger' : v >= 10 ? 'text-warn' : 'text-safe';
+    const renderStats = (stat) => {
+        const cc = stat.ccViolationPct || 0;
+        const bt = stat.btViolationPct || 0;
+        const el = stat.elViolationPct || 0;
+        return `<span class="${getLevelClass(cc)}">CC:${cc.toFixed(1)}%</span> ` +
+               `<span class="text-divider">|</span> ` +
+               `<span class="${getLevelClass(bt)}">BT:${bt.toFixed(1)}%</span> ` +
+               `<span class="text-divider">|</span> ` +
+               `<span class="${getLevelClass(el)}">EL:${el.toFixed(1)}%</span>`;
+    };
+    const courses = Object.entries(comp.currentCourses).filter(([k]) => k !== 'Orientation');
+    const courseCells = courses.slice(0, 3).map(([name, v]) => `<td>${name} <br><div style="font-size:0.8rem; margin-top:4px;">${renderStats(v)}</div></td>`).join('');
+    const trend = courses.every(([_,v]) => (v.ccViolationPct || 0) < ssk.ccViolationPct) ? '<span class="badge badge-success">↓ Cải thiện</span>' :
+                  courses.some(([_,v]) => (v.ccViolationPct || 0) >= ssk.ccViolationPct) ? '<span class="badge badge-danger">⚠️ Chưa cải thiện</span>' : '<span class="badge badge-info">→ Ổn định</span>';
+    compHTML += `<tr>
+        <td class="class-col">${cls}</td>
+        <td>SSK101 <br><div style="font-size:0.8rem; margin-top:4px;">${renderStats(ssk)}</div></td>
+        ${courseCells}
+        <td>${trend}</td>
+    </tr>`;
+});
+document.getElementById('comparison-table-body').innerHTML = compHTML;
+
+// EL issues
+let elHTML = '';
+classOrder.forEach(cls => {
+    const comp = DATA.class_comparison[cls];
+    if (!comp) return;
+    Object.entries(comp.currentCourses).forEach(([course, v]) => {
+        if (v.elViolationPct >= 10) {
+            const svCount = Math.round(v.totalStudents * v.elViolationPct / 100);
+            const level = v.elViolationPct >= 40 ? '<span class="badge badge-danger">🚨 Rất cao</span>' : v.elViolationPct >= 20 ? '<span class="badge badge-warning">⚠️ Cao</span>' : '<span class="badge badge-info">Lưu ý</span>';
+            elHTML += `<tr><td class="class-col">${cls}</td><td>${course}</td><td>${pctBadge(v.elViolationPct)}</td><td>${svCount} SV</td><td>${level}</td></tr>`;
+        }
+    });
+});
+document.getElementById('el-issues-body').innerHTML = elHTML;
+
+// Repeat offenders table
+let repeatHTML = '';
+DATA.repeat_offenders.forEach((r, i) => {
+    const category = r.ssk101AbsenceRate >= 100 ? '<span class="badge badge-danger">⛔ Không đi học</span>' :
+                     r.ssk101AbsenceRate >= 80 ? '<span class="badge badge-danger">🔴 Rất cao</span>' :
+                     r.ssk101AbsenceRate >= 60 ? '<span class="badge badge-warning">🟠 Cao</span>' :
+                     r.ssk101AbsenceRate >= 40 ? '<span class="badge badge-warning">🟡 TB</span>' : '<span class="badge badge-info">🟢 Nhẹ</span>';
+    const currentDetail = r.currentCourseViolations.map(cv => `${cv.course}:${cv.violations.join('+')}`).join(', ');
+    const bg = r.ssk101AbsenceRate >= 80 ? 'rgba(244,63,94,0.05)' : r.ssk101AbsenceRate >= 60 ? 'rgba(245,158,11,0.05)' : 'transparent';
+    repeatHTML += `<tr style="background:${bg}">
+        <td>${i+1}</td><td class="class-col">${r.className}</td><td class="name-col">${r.name}</td>
+        <td>${pctBadge(r.ssk101AbsenceRate)}</td><td>${r.ssk101Violations.join(', ')}</td>
+        <td>${r.repeatTypes.join(', ')}</td><td style="font-size:0.8rem">${currentDetail}</td><td>${category}</td>
+    </tr>`;
+});
+document.getElementById('repeat-table-body').innerHTML = repeatHTML;
+
+// Never attended
+let absentHTML = '';
+DATA.never_attended.forEach((na, i) => {
+    const repeat = DATA.repeat_offenders.find(r => r.name === na.name && r.className === na.className);
+    const currentStatus = repeat ? repeat.currentCourseViolations.map(cv => `${cv.course}:${cv.violations.join('+')}`).join(', ') : 'Cần xác minh';
+    absentHTML += `<tr style="background:rgba(244,63,94,0.08)">
+        <td>${i+1}</td><td class="class-col">${na.className}</td><td class="name-col">${na.name}</td>
+        <td><span class="badge badge-danger">100%</span></td><td style="font-size:0.8rem">${currentStatus}</td>
+        <td><span class="badge badge-danger">Gặp trực tiếp</span></td>
+    </tr>`;
+});
+document.getElementById('absent-table-body').innerHTML = absentHTML;
+
+// Charts
+// Chart 1: Stacked bar - class severity
+const ctx1 = document.getElementById('chart-class-severity').getContext('2d');
+new Chart(ctx1, {
+    type: 'bar',
+    plugins: [ChartDataLabels],
+    data: {
+        labels: classOrder.map(c => c.replace('HN-KS26-','HN-').replace('HCM-KS26-','HCM-')),
+        datasets: [
+            { label: '80-100%', data: classOrder.map(c => DATA.ssk101_by_class[c]?.severityGroups['80-100%']?.length || 0), backgroundColor: '#f43f5e' },
+            { label: '60-80%', data: classOrder.map(c => DATA.ssk101_by_class[c]?.severityGroups['60-80%']?.length || 0), backgroundColor: '#f97316' },
+            { label: '40-60%', data: classOrder.map(c => DATA.ssk101_by_class[c]?.severityGroups['40-60%']?.length || 0), backgroundColor: '#f59e0b' },
+            { label: '20-40%', data: classOrder.map(c => DATA.ssk101_by_class[c]?.severityGroups['20-40%']?.length || 0), backgroundColor: '#10b981' },
+        ]
+    },
+    options: {
+        responsive: true, 
+        plugins: { 
+            legend: { labels: { color: '#94a3b8' } },
+            datalabels: {
+                color: '#ffffff',
+                font: { weight: 'bold', size: 11 },
+                formatter: function(value) { return value > 0 ? value : ''; }
+            }
+        },
+        scales: { x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { display: false } }, y: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(148,163,184,0.1)' } } }
+    }
+});
+
+// Chart 2: Doughnut - overall severity
+const ctx2 = document.getElementById('chart-severity-pie').getContext('2d');
+new Chart(ctx2, {
+    type: 'doughnut',
+    plugins: [ChartDataLabels],
+    data: {
+        labels: ['Dưới 20%', '20-40%', '40-60%', '60-80%', '80-100%'],
+        datasets: [{
+            data: [165, 119, 53, 18, 16],
+            backgroundColor: ['#10b981', '#3b82f6', '#f59e0b', '#f97316', '#f43f5e'],
+            borderColor: 'transparent', borderWidth: 2
+        }]
+    },
+    options: { 
+        responsive: true, 
+        plugins: { 
+            legend: { position: 'bottom', labels: { color: '#94a3b8', padding: 12 } },
+            datalabels: {
+                color: '#ffffff',
+                font: { weight: 'bold', size: 14 },
+                formatter: function(value) { return value > 0 ? value : ''; }
+            }
+        } 
+    }
+});
+
+// Chart 3: Line - comparison SSK101 vs current
+const ctx3 = document.getElementById('chart-comparison').getContext('2d');
+const ssk101CC = classOrder.map(c => DATA.class_comparison[c]?.ssk101?.ccViolationPct || 0);
+const currentBestCC = classOrder.map(c => {
+    const comp = DATA.class_comparison[c];
+    if (!comp) return 0;
+    const vals = Object.entries(comp.currentCourses).filter(([k]) => k !== 'Orientation').map(([_,v]) => v.ccViolationPct);
+    return vals.length > 0 ? Math.max(...vals) : 0;
+});
+new Chart(ctx3, {
+    type: 'bar',
+    data: {
+        labels: classOrder.map(c => c.replace('HN-KS26-','HN-').replace('HCM-KS26-','HCM-')),
+        datasets: [
+            { label: 'SSK101 CC%', data: ssk101CC, backgroundColor: 'rgba(244,63,94,0.6)', borderColor: '#f43f5e', borderWidth: 1 },
+            { label: 'Môn hiện tại CC% (cao nhất)', data: currentBestCC, backgroundColor: 'rgba(16,185,129,0.6)', borderColor: '#10b981', borderWidth: 1 },
+        ]
+    },
+    options: {
+        responsive: true, plugins: { legend: { labels: { color: '#94a3b8' } } },
+        scales: { x: { ticks: { color: '#94a3b8' }, grid: { display: false } }, y: { ticks: { color: '#94a3b8', callback: v => v+'%' }, grid: { color: 'rgba(148,163,184,0.1)' } } }
+    }
+});
+</script>
+</body>
+</html>
