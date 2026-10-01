@@ -47,14 +47,16 @@ WORKDAYS_AUG = [
 ]
 
 WORKDAYS_SEPT = [
-    "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14"
+    "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14",
+    "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25"
 ]
 
 ALL_DATES_SEPT = [
     "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04",
-    "2026-09-05", "2026-09-06", "2026-09-07", "2026-09-08",
-    "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-12",
-    "2026-09-13", "2026-09-14"
+    "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11",
+    "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18",
+    "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25",
+    "2026-09-28", "2026-09-29", "2026-09-30"
 ]
 
 EXACT_STAFF_ROSTER = {
@@ -90,6 +92,9 @@ EXACT_STAFF_ROSTER = {
     "lò thị ngọc anh": {"name": "Lò Thị Ngọc Anh", "role": "Giảng viên", "rank": 5, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng"},
     "lê thị đỏ": {"name": "Lê Thị Đỏ", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng"},
     "ngô quang huấn": {"name": "Ngô Quang Huấn", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng"},
+    "đỗ hà khanh": {"name": "Đỗ Hà Khanh", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-08"},
+    "huỳnh thị kim khánh": {"name": "Huỳnh Thị Kim Khánh", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-15"},
+    "nguyễn hồng nhung": {"name": "Nguyễn Hồng Nhung", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-18"},
 
     # 4. Khối QLCLĐT Hà Nội - Leader: Nguyễn Thị Tươi (Rank 4)
     "nguyễn thị tươi": {"name": "Nguyễn Thị Tươi", "role": "Leader", "rank": 4, "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Nguyễn Thị Tươi"},
@@ -103,9 +108,9 @@ EXACT_STAFF_ROSTER = {
     "lưu hoàng xuân nguyên": {"name": "Lưu Hoàng Xuân Nguyên", "role": "Trợ giảng", "rank": 2, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo"},
     "phạm viết hùng": {"name": "Phạm Viết Hùng", "role": "Trợ giảng", "rank": 2, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo"},
     "trần quốc tuấn": {"name": "Trần Quốc Tuấn", "role": "Giảng viên", "rank": 3, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo"},
-    "đặng minh luân": {"name": "Đặng Minh Luân", "role": "Trợ giảng thử việc", "rank": 1, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo"},
+    "đặng minh luân": {"name": "Đặng Minh Luân", "role": "Trợ giảng thử việc", "rank": 1, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo", "end_date": "2026-09-14"},
     "nguyễn đức minh": {"name": "Nguyễn Đức Minh", "role": "Giảng viên", "rank": 4, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo"},
-    "nguyễn ngọc sơn": {"name": "Nguyễn Ngọc Sơn", "role": "Trợ giảng thử việc", "rank": 1, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo"},
+    "nguyễn ngọc sơn": {"name": "Nguyễn Ngọc Sơn", "role": "Trợ giảng thử việc", "rank": 1, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo", "end_date": "2026-09-14"},
     "phan ngọc tài": {"name": "Phan Ngọc Tài", "role": "Trợ giảng thử việc", "rank": 1, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo"},
 
     # 6. LMS AI - Leader: Trần Minh Cường (Rank 5)
@@ -462,19 +467,35 @@ def match_kpi_standard(group, role, rank, title, qtkd_items, cntt_items, nn_stan
     # Task tự do chưa định mức
     return 0.5, "Đầu việc tự do/chưa định mức", True
 
-def audit_period_data(period_name="sept_01_08"):
+def audit_period_data(period_name="week_14_18"):
     staff_db = load_staff_database()
     qtkd_master, cntt_master = load_kpi_masters_v2()
     nn_standards, nn_mappings = load_foreign_lang_kpi_master()
     
-    if period_name == "sept_01_08":
+    if period_name == "week_14_18":
+        cache_path = r"data/processed/daily_reports_sept_01_08.json"
+        effective_workdays = ["2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25"]
+        all_dates_to_scan = ["2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25"]
+        period_title = "Tuần 21/09 - 25/09/2026 (5 ngày - Hiệu suất 40h/tuần)"
+        audit_date_str = "2026-09-25"
+        excess_hours_threshold = 8.0
+        free_tasks_threshold = 3
+    elif period_name == "sept_01_08":
         cache_path = r"data/processed/daily_reports_sept_01_08.json"
         effective_workdays = WORKDAYS_SEPT
+        all_dates_to_scan = WORKDAYS_SEPT
+        period_title = "Kỳ 01/09 - 25/09/2026 (17 ngày làm việc)"
+        audit_date_str = "2026-09-25"
+        excess_hours_threshold = 15.0
+        free_tasks_threshold = 4
+    elif period_name == "sept_full":
+        cache_path = r"data/processed/daily_reports_raw_cache.json"
+        effective_workdays = ALL_DATES_SEPT
         all_dates_to_scan = ALL_DATES_SEPT
-        period_title = "Kỳ 01/09 - 14/09/2026 (8 ngày làm việc)"
-        audit_date_str = "2026-09-14"
-        excess_hours_threshold = 10.0
-        free_tasks_threshold = 3
+        period_title = "Tháng 09/2026 (22 ngày làm việc)"
+        audit_date_str = "2026-09-30"
+        excess_hours_threshold = 25.0
+        free_tasks_threshold = 5
     else:
         cache_path = r"data/processed/daily_reports_raw_cache.json"
         effective_workdays = WORKDAYS_AUG
@@ -504,6 +525,11 @@ def audit_period_data(period_name="sept_01_08"):
     results = {}
 
     for norm_name, s_info in staff_db.items():
+        if period_name in ["week_14_18", "sept_01_08"] and s_info.get("end_date") and s_info.get("end_date") < "2026-09-15":
+            continue # Bỏ nhân sự ra khỏi danh sách từ ngày 15/09 theo yêu cầu
+        if period_name == "august" and s_info.get("start_date") and s_info.get("start_date") > "2026-08-31":
+            continue # Chưa vào làm trong tháng 8
+
         name = s_info["name"]
         group = s_info["group"]
         role = s_info["role"]
@@ -512,6 +538,8 @@ def audit_period_data(period_name="sept_01_08"):
         
         personal_leaves = LEAVE_DAYS_AUG.get(norm_name, []) if period_name == "august" else []
         staff_effective_days = [d for d in effective_workdays if d not in personal_leaves]
+        if s_info.get("start_date"):
+            staff_effective_days = [d for d in staff_effective_days if d >= s_info["start_date"]]
         expected_days_count = len(staff_effective_days)
         
         reported_days_count = 0
@@ -620,28 +648,63 @@ def audit_period_data(period_name="sept_01_08"):
         compliance_rate = round((reported_days_count / expected_days_count * 100), 1) if expected_days_count > 0 else 0.0
         excess_hours = round(max(0.0, total_declared_hours - total_standard_hours), 1)
         
+        reported_days_count = min(reported_days_count, expected_days_count)
+        compliance_rate = round((reported_days_count / expected_days_count * 100), 1) if expected_days_count > 0 else 0.0
+        excess_hours = round(max(0.0, total_declared_hours - total_standard_hours), 1)
+        
+        expected_hours_target = expected_days_count * 8.0
+        is_under_target = total_declared_hours < expected_hours_target
+        deficit_hours = round(max(0.0, expected_hours_target - total_declared_hours), 1)
+        
         core_excess = [t for t in excess_tasks if any(k in t['title'].lower() for k in ["giảng dạy", "chuẩn bị", "soạn", "chấm", "lên lớp", "buổi", "review", "duyệt"])]
         
-        if reported_days_count == 0:
-            rec_cat = "CHƯA NỘP BÁO CÁO"
-            rec_label = "Bỏ trống báo cáo (0%)"
-            badge_class = "badge-danger"
-            action_note = f"Thiếu trọn vẹn {expected_days_count}/{expected_days_count} ngày báo cáo trên Worklane. Đề xuất Leader trực tiếp nhắc nhở và trừ điểm kỷ luật tác nghiệp."
-        elif len(core_excess) >= (2 if period_name == "sept_01_08" else 3) and rank >= 2:
-            rec_cat = "CẦN RÀ SOÁT RANK"
-            rec_label = f"Cần rà soát hạ Rank ({len(core_excess)} task nghiệp vụ vượt chuẩn)"
-            badge_class = "badge-warning"
-            action_note = f"Đang hưởng chế độ Rank {rank} nhưng có {len(core_excess)} task nghiệp vụ cốt lõi làm chậm hơn từ 1.5x - 3x định mức chuẩn. Đề xuất Leader phỏng vấn chuyên môn, nếu không cải thiện thì rà soát Rank."
-        elif len(free_floating_tasks) >= free_tasks_threshold or excess_hours >= excess_hours_threshold:
-            rec_cat = "CẢNH BÁO BÙ GIỜ"
-            rec_label = f"Khai bù giờ (Dôi dư +{excess_hours}h nghi vấn)"
-            badge_class = "badge-danger"
-            action_note = f"Có {len(free_floating_tasks)} task tự do và tổng cộng dôi dư {excess_hours}h so với định mức KPI Master. Đề xuất chỉ nghiệm thu theo barem chuẩn, cắt giảm giờ công ảo."
+        if period_name == "week_14_18":
+            if reported_days_count == 0:
+                rec_cat = "CHƯA NỘP BÁO CÁO"
+                rec_label = f"Bỏ trống báo cáo (0/{expected_days_count} ngày)"
+                badge_class = "badge-danger"
+                action_note = f"Thiếu trọn vẹn {expected_days_count}/{expected_days_count} ngày báo cáo tuần qua trên Worklane (0.0h/{expected_hours_target}h). Đề xuất Leader trực tiếp nhắc nhở và trừ điểm kỷ luật tác nghiệp."
+            elif is_under_target:
+                rec_cat = "THIẾU GIỜ 40H"
+                rec_label = f"Chưa đạt 40h/tuần (Thiếu -{deficit_hours}h)"
+                badge_class = "badge-danger"
+                action_note = f"Khai báo {round(total_declared_hours, 1)}h/{expected_hours_target}h (đạt {round(total_declared_hours/expected_hours_target*100, 1)}%). Còn thiếu {deficit_hours}h trong tuần qua cần giải trình hoặc bù giờ."
+            elif len(core_excess) >= 2 and rank >= 2:
+                rec_cat = "CẦN RÀ SOÁT RANK"
+                rec_label = f"Cần rà soát hạ Rank ({len(core_excess)} task vượt chuẩn)"
+                badge_class = "badge-warning"
+                action_note = f"Đạt định mức {round(total_declared_hours, 1)}h/40h nhưng có {len(core_excess)} task nghiệp vụ làm chậm hơn 1.5x - 3x barem chuẩn. Đề xuất Leader phỏng vấn chuyên môn."
+            elif len(free_floating_tasks) >= free_tasks_threshold or excess_hours >= excess_hours_threshold:
+                rec_cat = "CẢNH BÁO BÙ GIỜ"
+                rec_label = f"Khai bù giờ (Dôi dư +{excess_hours}h nghi vấn)"
+                badge_class = "badge-danger"
+                action_note = f"Đạt định mức {round(total_declared_hours, 1)}h/40h nhưng có {len(free_floating_tasks)} task ngoài barem và dôi dư +{excess_hours}h so với chuẩn Master. Cần nghiệm thu sản phẩm thực tế."
+            else:
+                rec_cat = "CHUẨN MỰC"
+                rec_label = f"Đạt chuẩn ({round(total_declared_hours, 1)}h/{expected_hours_target}h)"
+                badge_class = "badge-success"
+                action_note = "Khai báo bám sát định mức KPI Master, hoàn thành đủ định mức tuần và tuân thủ kỷ luật báo cáo tốt."
         else:
-            rec_cat = "CHUẨN MỰC"
-            rec_label = "Khai báo chuẩn mực & Đúng hạn"
-            badge_class = "badge-success"
-            action_note = "Khai báo bám sát định mức KPI Master, giờ công thực chất và tuân thủ kỷ luật báo cáo tốt."
+            if reported_days_count == 0:
+                rec_cat = "CHƯA NỘP BÁO CÁO"
+                rec_label = "Bỏ trống báo cáo (0%)"
+                badge_class = "badge-danger"
+                action_note = f"Thiếu trọn vẹn {expected_days_count}/{expected_days_count} ngày báo cáo trên Worklane. Đề xuất Leader trực tiếp nhắc nhở và trừ điểm kỷ luật tác nghiệp."
+            elif len(core_excess) >= (2 if period_name == "sept_01_08" else 3) and rank >= 2:
+                rec_cat = "CẦN RÀ SOÁT RANK"
+                rec_label = f"Cần rà soát hạ Rank ({len(core_excess)} task nghiệp vụ vượt chuẩn)"
+                badge_class = "badge-warning"
+                action_note = f"Đang hưởng chế độ Rank {rank} nhưng có {len(core_excess)} task nghiệp vụ cốt lõi làm chậm hơn từ 1.5x - 3x định mức chuẩn. Đề xuất Leader phỏng vấn chuyên môn, nếu không cải thiện thì rà soát Rank."
+            elif len(free_floating_tasks) >= free_tasks_threshold or excess_hours >= excess_hours_threshold:
+                rec_cat = "CẢNH BÁO BÙ GIỜ"
+                rec_label = f"Khai bù giờ (Dôi dư +{excess_hours}h nghi vấn)"
+                badge_class = "badge-danger"
+                action_note = f"Có {len(free_floating_tasks)} task tự do và tổng cộng dôi dư {excess_hours}h so với định mức KPI Master. Đề xuất chỉ nghiệm thu theo barem chuẩn, cắt giảm giờ công ảo."
+            else:
+                rec_cat = "CHUẨN MỰC"
+                rec_label = "Khai báo chuẩn mực & Đúng hạn"
+                badge_class = "badge-success"
+                action_note = "Khai báo bám sát định mức KPI Master, giờ công thực chất và tuân thủ kỷ luật báo cáo tốt."
             
         results[norm_name] = {
             "name": name,
@@ -653,6 +716,11 @@ def audit_period_data(period_name="sept_01_08"):
             "expected_days": expected_days_count,
             "reported_days": reported_days_count,
             "compliance_rate": compliance_rate,
+            "expected_hours": expected_hours_target,
+            "target_hours": expected_hours_target,
+            "pct_target": round((total_declared_hours / expected_hours_target * 100), 1) if expected_hours_target > 0 else 0.0,
+            "is_under_target": is_under_target,
+            "deficit_hours": deficit_hours,
             "total_declared_hours": round(total_declared_hours, 1),
             "total_standard_hours": round(total_standard_hours, 1),
             "excess_hours": excess_hours,
@@ -679,7 +747,9 @@ def audit_period_data(period_name="sept_01_08"):
     count_review_rank = len([s for s in results.values() if s["recommendation_category"] == "CẦN RÀ SOÁT RANK"])
     count_deduct_hours = len([s for s in results.values() if s["recommendation_category"] == "CẢNH BÁO BÙ GIỜ"])
     count_missing = len([s for s in results.values() if s["recommendation_category"] == "CHƯA NỘP BÁO CÁO"])
+    count_under_40h = len([s for s in results.values() if s.get("is_under_target", False)])
     count_compliant = len([s for s in results.values() if s["recommendation_category"] == "CHUẨN MỰC"])
+    count_free_tasks_staff = len([s for s in results.values() if s.get("free_floating_tasks_count", 0) > 0])
     
     output_payload = {
         "period_key": period_name,
@@ -695,6 +765,8 @@ def audit_period_data(period_name="sept_01_08"):
             "count_review_rank": count_review_rank,
             "count_deduct_hours": count_deduct_hours,
             "count_missing": count_missing,
+            "count_under_40h": count_under_40h,
+            "count_free_tasks_staff": count_free_tasks_staff,
             "count_compliant": count_compliant
         },
         "staff_details": results
@@ -702,28 +774,44 @@ def audit_period_data(period_name="sept_01_08"):
     return output_payload
 
 def audit_all_staff_v2():
-    print("=== BẮT ĐẦU KIỂM TOÁN HIỆU SUẤT WORKLANE HAI KỲ ===")
+    print("=== BẮT ĐẦU KIỂM TOÁN HIỆU SUẤT WORKLANE BA KỲ ===")
     
-    # 1. Kiểm toán Kỳ Mới: 01/09 - 08/09/2026
+    # 1. Kiểm toán Kỳ Tuần qua: 14/09 - 18/09/2026 (Hiệu suất 40h/tuần - MỚI NHẤT)
+    payload_week = audit_period_data("week_14_18")
+    week_file = r"data/processed/worklane_audit_week_14_18.json"
+    with open(week_file, "w", encoding="utf-8") as f:
+        json.dump(payload_week, f, indent=2, ensure_ascii=False)
+    print(f"✓ Đã xuất kiểm toán Tuần 14/09 - 18/09/2026 vào: {week_file}")
+
+    # 2. Kiểm toán Kỳ Lũy kế Tháng 9: 01/09 - 18/09/2026
     payload_sept = audit_period_data("sept_01_08")
     sept_file = r"data/processed/worklane_audit_sept_01_08.json"
     with open(sept_file, "w", encoding="utf-8") as f:
         json.dump(payload_sept, f, indent=2, ensure_ascii=False)
-    print(f"✓ Đã xuất kiểm toán Kỳ 01/09 - 08/09/2026 vào: {sept_file}")
+    print(f"✓ Đã xuất kiểm toán Lũy kế Tháng 9 (01/09 - 18/09/2026) vào: {sept_file}")
 
-    # 2. Kiểm toán Kỳ Lịch sử: Tháng 08/2026
+    # 3. Kiểm toán Kỳ Lịch sử: Tháng 08/2026
     payload_aug = audit_period_data("august")
     aug_file = r"data/processed/worklane_audit_august.json"
     with open(aug_file, "w", encoding="utf-8") as f:
         json.dump(payload_aug, f, indent=2, ensure_ascii=False)
     print(f"✓ Đã xuất kiểm toán Tháng 08/2026 vào: {aug_file}")
 
-    # 3. Xuất file tổng hợp tương thích (Combined Detailed)
-    # Mặc định summary và staff_details là kỳ mới nhất (sept_01_08)
+    # 3.5 Kiểm toán Cả Tháng 9: Tháng 09/2026
+    payload_sept_full = audit_period_data("sept_full")
+    sept_full_file = r"data/processed/worklane_audit_sept_full.json"
+    with open(sept_full_file, "w", encoding="utf-8") as f:
+        json.dump(payload_sept_full, f, indent=2, ensure_ascii=False)
+    print(f"✓ Đã xuất kiểm toán Tháng 09/2026 vào: {sept_full_file}")
+
+    # 4. Xuất file tổng hợp tương thích (Combined Detailed)
+    # Mặc định summary và staff_details là kỳ Tuần qua (week_14_18) để đo hiệu suất tuần!
     combined_payload = {
-        **payload_sept,
+        **payload_week,
         "periods": {
+            "week_14_18": payload_week,
             "sept_01_08": payload_sept,
+            "sept_full": payload_sept_full,
             "august": payload_aug
         }
     }
@@ -731,17 +819,19 @@ def audit_all_staff_v2():
     out_file = r"data/processed/worklane_audit_detailed.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(combined_payload, f, indent=2, ensure_ascii=False)
-    print(f"✓ Đã cập nhật worklane_audit_detailed.json đa kỳ.")
+    print(f"✓ Đã cập nhật worklane_audit_detailed.json bốn kỳ (Mặc định: Tuần 14/09 - 18/09/2026).")
 
-    print("\n--- TỔNG KẾT KỲ MỚI 01/09 - 08/09/2026 ---")
-    s = payload_sept['summary']
+    print("\n--- TỔNG KẾT KỲ TUẦN QUA 14/09 - 18/09/2026 (40H/TUẦN) ---")
+    s = payload_week['summary']
     print(f"- Tổng nhân sự: {s['total_staff']}")
     print(f"- Tỷ lệ nộp báo cáo: {s['overall_compliance_rate']}%")
     print(f"- Tổng giờ khai báo: {s['total_declared_hours']}h | Chuẩn Master: {s['total_standard_hours']}h | Dôi dư: +{s['total_excess_hours']}h")
+    print(f"- Chưa đạt 40h/tuần: {s['count_under_40h']} nhân sự")
+    print(f"- Bỏ trống báo cáo (0/5 ngày): {s['count_missing']} nhân sự")
     print(f"- Cần rà soát Rank: {s['count_review_rank']} nhân sự")
     print(f"- Cảnh báo bù giờ: {s['count_deduct_hours']} nhân sự")
-    print(f"- Bỏ trống báo cáo: {s['count_missing']} nhân sự")
-    print(f"- Chuẩn mực: {s['count_compliant']} nhân sự")
+    print(f"- Chuẩn mực (đạt >= 40h): {s['count_compliant']} nhân sự")
+    print(f"- Số nhân sự có task ngoài Master: {s['count_free_tasks_staff']} nhân sự")
 
 if __name__ == "__main__":
     audit_all_staff_v2()

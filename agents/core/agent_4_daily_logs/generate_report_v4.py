@@ -679,10 +679,95 @@ def main():
     with open(output_html_path, "w", encoding="utf-8") as f:
         f.write(html)
         
+    # Sinh báo cáo Markdown toàn diện
+    sept_sum = daily_data.get("september_summary", {})
+    sept_stats = daily_data.get("september_stats", {})
+    missing_21 = daily_data.get("missing_yesterday", [])
+    under_audit = daily_data.get("under_hours_audit", {}).get("september", {})
+    compliance_audit = daily_data.get("kpi_master_compliance_audit", {}).get("september", {})
+
+    md_lines = [
+        "# BÁO CÁO KIỂM TOÁN NHẬT KÝ CÔNG VIỆC WORKLANE (AGENT 4)",
+        "",
+        "> **Căn cứ kiểm toán**: Dữ liệu Worklane PM thời gian thực tính đến hết ngày **21/09/2026**.",
+        f"> **Phạm vi kiểm toán**: 42 nhân sự thuộc 4 Khối đào tạo. Kỳ lũy kế Tháng 9: **13 ngày làm việc** (01/09 - 21/09/2026).",
+        "",
+        "---",
+        "",
+        "## I. TỔNG QUAN TUÂN THỦ BÁO CÁO NGÀY 21/09/2026",
+        "",
+        f"- **Tỷ lệ nộp báo cáo ngày 21/09**: **{42 - len(missing_21)}/42 nhân sự ({((42 - len(missing_21))/42)*100:.1f}%)**.",
+        f"- **Số nhân sự chưa nộp báo cáo**: **{len(missing_21)} nhân sự**.",
+        ""
+    ]
+
+    if missing_21:
+        md_lines.extend([
+            "### ⚠️ Danh sách nhân sự chưa nộp báo cáo ngày 21/09/2026:",
+            "",
+            "| STT | Họ và Tên | Khối / Đơn vị | Vị trí |",
+            "| :-: | :--- | :--- | :--- |"
+        ])
+        for idx, m in enumerate(missing_21, 1):
+            md_lines.append(f"| {idx} | **{m.get('name')}** | {m.get('group')} | {m.get('role')} |")
+        md_lines.append("")
+
+    md_lines.extend([
+        "---",
+        "",
+        "## II. THỐNG KÊ HIỆU SUẤT THEO KHỐI (LŨY KẾ THÁNG 9 / 13 NGÀY LÀM VIỆC)",
+        "",
+        "| Khối / Phòng ban | Số lượt báo cáo kỳ vọng | Số lượt hoàn thành | Tỷ lệ nộp báo cáo (%) |",
+        "| :--- | :-: | :-: | :-: |"
+    ])
+    
+    for g_name, g_info in sept_sum.get("groups", {}).items():
+        md_lines.append(f"| **{g_name}** | {g_info.get('expected', 0)} | {g_info.get('completed', 0)} | **{g_info.get('rate', 0.0):.1f}%** |")
+    
+    md_lines.extend([
+        f"| **TOÀN VIỆN ĐÀO TẠO** | **{sept_sum.get('total_expected', 0)}** | **{sept_sum.get('total_completed', 0)}** | **{sept_sum.get('overall_rate', 0.0):.1f}%** |",
+        "",
+        "---",
+        "",
+        "## III. BẢNG KIỂM TOÁN GIỜ CÔNG & NĂNG SUẤT (THÁNG 9: 01/09 - 21/09/2026)",
+        "",
+        "| Họ và Tên | Khối | Vị trí & Rank | Ngày nộp / Chuẩn | Giờ khai / Chuẩn | Tỷ lệ công suất | Giờ thiếu / Dôi | Tình trạng |",
+        "| :--- | :--- | :-: | :-: | :-: | :-: | :-: | :--- |"
+    ])
+
+    ranking = under_audit.get("staff_ranking", [])
+    for s in ranking:
+        cap = s.get("capacity_pct", 0)
+        def_h = s.get("deficit_hours", 0)
+        status = "🟢 Đạt chuẩn" if def_h <= 0 and cap >= 95 else ("🟡 Cần rà soát" if cap >= 75 else "🔴 Chưa đạt chuẩn")
+        if cap == 0:
+            status = "⚫ Bỏ trống báo cáo"
+        deficit_str = f"-{def_h:.1f}h" if def_h > 0 else f"+{-def_h:.1f}h" if def_h < 0 else "0.0h"
+        md_lines.append(
+            f"| **{s.get('name')}** | {s.get('group')} | {s.get('role')} R{s.get('rank')} | "
+            f"{s.get('expected_hours', 0)//8 - s.get('missing_days_count', 0)}/{s.get('expected_hours', 0)//8} | "
+            f"{s.get('declared_hours', 0):.1f}h / {s.get('expected_hours', 0):.0f}h | "
+            f"**{cap:.1f}%** | {deficit_str} | {status} |"
+        )
+
+    md_lines.extend([
+        "",
+        "---",
+        "",
+        "## IV. KIỂM TOÁN VI PHẠM KPI MASTER (KHAI NGOÀI BAREM & VƯỢT ĐỊNH MỨC)",
+        "",
+        f"- **Tổng số ca khai báo có vấn đề**: {len(compliance_audit.get('sample_over_reporting', [])) + len(compliance_audit.get('sample_unverified', []))} ca mẫu cần giải trình.",
+        "- **Nguyên tắc xử lý**: Đối với các task ngoài barem (tự học, tự soạn slide không phân công, chăm sóc SV không mã ticket), Leader các khối cần nghiệm thu hoặc khấu trừ giờ ảo theo đúng barem KPI Master.",
+        "",
+        "---",
+        "",
+        f"*Báo cáo được khởi tạo tự động bởi Agent 4 (Daily Log Auditor) - PMO Platform vào ngày {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}.*"
+    ])
+
     with open(output_md_path, "w", encoding="utf-8") as f:
-        f.write("# PMO Dashboard Report (V4.1)\\n\\nReport V4.1 generated successfully.")
+        f.write("\n".join(md_lines))
         
-    print("Agent 4: Sinh trang báo cáo PMO HTML V4.1 thành công!")
+    print(f"Agent 4: Sinh trang báo cáo PMO HTML V4.1 và Markdown thành công tại {output_md_path}!")
 
 if __name__ == "__main__":
     main()

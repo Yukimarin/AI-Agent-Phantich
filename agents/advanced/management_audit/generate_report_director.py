@@ -8,8 +8,10 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 project_issues_path = "data/processed/project_issues_worklane.json"
 daily_log_analysis_path = "data/processed/daily_log_analysis.json"
-output_html_path = "output/dashboards/advanced/director_cockpit.html"
-output_md_path = "output/reports/advanced/director_cockpit.md"
+output_html_path = "output/dashboards/management/director_cockpit.html"
+output_md_path = "output/reports/management/director_cockpit.md"
+os.makedirs("output/dashboards/management", exist_ok=True)
+os.makedirs("output/reports/management", exist_ok=True)
 
 def strip_accents(text):
     import unicodedata

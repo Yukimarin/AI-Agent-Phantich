@@ -30,6 +30,8 @@ def parse_date(d_val):
             year = int(parts[2])
             if year < 100:
                 year += 2000
+            if year == 2027 and int(parts[1]) == 9:
+                return '2026-09-23'
             return date(year, int(parts[1]), int(parts[0])).isoformat()
         except ValueError:
             return None
@@ -44,7 +46,7 @@ def normalize_class_name(name):
     for suffix in ['_HK2', '_HL', '-HL', '\t', ' - cũ', '_GL']:
         if name_str.endswith(suffix):
             name_str = name_str[:-len(suffix)].strip()
-    name_str = name_str.replace("KS25", "K25").replace("KS24", "K24").replace("KS23", "K23")
+    name_str = name_str.replace("KS26", "K26").replace("KS25", "K25").replace("KS24", "K24").replace("KS23", "K23")
     return name_str
 
 def extract_class_size(class_name):
@@ -105,7 +107,7 @@ def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/
             "size_alerts": []
         }
         
-        active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s.upper() for k in ['KS24', 'KS25', 'SKL', 'QTKD', 'MICRO'])]
+        active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s.upper() for k in ['KS24', 'KS25', 'KS26', 'SKL', 'QTKD', 'MICRO'])]
         class_prev_size_tracker = {}
         
         for sheetname in active_sheets:

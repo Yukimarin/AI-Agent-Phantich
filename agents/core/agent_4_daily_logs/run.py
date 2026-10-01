@@ -12,7 +12,7 @@ def main():
     if not (is_fast and os.path.exists(daily_analysis_path)):
         # 1. Chạy sync_worklane_projects.py để đồng bộ dự án từ Worklane
         print("Agent 4: Đồng bộ hóa dự án & tasks từ Worklane PM thời gian thực...")
-        res = subprocess.run([sys.executable, "agents/core/agent_4_daily_logs/sync_worklane_projects.py"] + (["--fast"] if is_fast else []), capture_output=True, text=True, encoding="utf-8")
+        res = subprocess.run([sys.executable, "agents/core/agent_4_daily_logs/sync_worklane_projects.py"] + (["--fast"] if is_fast else []), capture_output=True, text=True, encoding="utf-8", errors="replace")
         if res.stdout:
             print(res.stdout)
         if res.returncode != 0:
@@ -23,7 +23,7 @@ def main():
 
         # 1.5. Chạy analyze_daily_logs.py
         print("Agent 4: Phân tích báo cáo ngày & tiến độ...")
-        res = subprocess.run([sys.executable, "agents/core/agent_4_daily_logs/analyze_daily_logs.py"], capture_output=True, text=True, encoding="utf-8")
+        res = subprocess.run([sys.executable, "agents/core/agent_4_daily_logs/analyze_daily_logs.py"], capture_output=True, text=True, encoding="utf-8", errors="replace")
         if res.stdout:
             print(res.stdout)
         if res.returncode != 0:
@@ -36,7 +36,7 @@ def main():
         
     # 2. Chạy generate_report.py
     print("Agent 4: Sinh trang báo cáo HTML (PMO Dashboard V4)...")
-    res = subprocess.run([sys.executable, "agents/core/agent_4_daily_logs/generate_report_v4.py"], capture_output=True, text=True, encoding="utf-8")
+    res = subprocess.run([sys.executable, "agents/core/agent_4_daily_logs/generate_report_v4.py"], capture_output=True, text=True, encoding="utf-8", errors="replace")
     if res.stdout:
         print(res.stdout)
     if res.returncode != 0:

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import subprocess
 import sys
 import os
@@ -20,7 +21,7 @@ def run_script(name, path, with_deps=None, extra_args=None):
             cmd += ["--with", dep]
         cmd.append(path)
     else:
-        cmd = [sys.executable, path]
+        cmd = ["uv", "run", "python", path]
         
     if extra_args:
         cmd.extend(extra_args)
@@ -46,7 +47,6 @@ def validate_output(file_path, file_type):
     if not os.path.exists(file_path):
         print(f"✗ Cảnh báo: File {file_path} chưa được tạo ra.")
         return False
-    # Kiểm tra nhanh kích thước file để xác nhận tính toàn vẹn
     file_size = os.path.getsize(file_path)
     if file_size == 0:
         print(f"✗ Cảnh báo: File {file_path} bị rỗng (0 bytes).")
@@ -98,24 +98,66 @@ def ensure_mysql_started():
         print(f"✗ Lỗi khởi động MySQL: {e}")
         return False
 
+def sync_to_deploy_web():
+    """Đồng bộ toàn bộ báo cáo vào deploy_web để xem nhanh hoặc deploy"""
+    deploy_dir = "deploy_web"
+    os.makedirs(deploy_dir, exist_ok=True)
+    os.makedirs(os.path.join(deploy_dir, "academic"), exist_ok=True)
+    os.makedirs(os.path.join(deploy_dir, "management"), exist_ok=True)
+    os.makedirs(os.path.join(deploy_dir, "core"), exist_ok=True)
+
+    # Copy core dashboards
+    core_src = "output/dashboards/core"
+    if os.path.exists(core_src):
+        for f in os.listdir(core_src):
+            if f.endswith(".html"):
+                shutil.copy2(os.path.join(core_src, f), os.path.join(deploy_dir, "core", f))
+                shutil.copy2(os.path.join(core_src, f), os.path.join(deploy_dir, f))
+
+    # Copy management dashboards
+    mgmt_src = "output/dashboards/management"
+    if os.path.exists(mgmt_src):
+        for f in os.listdir(mgmt_src):
+            if f.endswith(".html"):
+                shutil.copy2(os.path.join(mgmt_src, f), os.path.join(deploy_dir, "management", f))
+                shutil.copy2(os.path.join(mgmt_src, f), os.path.join(deploy_dir, f))
+
+    # Copy academic dashboards (copy cả thư mục con ks24, ks25, ks26)
+    acad_src = "output/dashboards/academic"
+    if os.path.exists(acad_src):
+        for item in os.listdir(acad_src):
+            s_item = os.path.join(acad_src, item)
+            d_item = os.path.join(deploy_dir, "academic", item)
+            if os.path.isdir(s_item):
+                shutil.copytree(s_item, d_item, dirs_exist_ok=True)
+            elif item.endswith(".html"):
+                shutil.copy2(s_item, d_item)
+
+    # Đặt agent_5_master_portal làm index chính nếu có
+    master_path = os.path.join(core_src, "agent_5_master_portal.html")
+    if os.path.exists(master_path):
+        shutil.copy2(master_path, os.path.join(deploy_dir, "index.html"))
+
+    print("✓ Đã đồng bộ toàn bộ Dashboard vào deploy_web/")
+
 def main():
     total_start = time.time()
-    run_advanced = "--with-advanced" in sys.argv
     is_fast = "--fast" in sys.argv or "--quick" in sys.argv
     fast_args = ["--fast"] if is_fast else []
     
-    mode_str = "CHẾ ĐỘ SIÊU TỐC (FAST PIPELINE < 10s)" if is_fast else "CHẾ ĐỘ TOÀN DIỆN (FULL PIPELINE)"
+    mode_str = "CHẾ ĐỘ SIÊU TỐC (FAST PIPELINE < 15s)" if is_fast else "CHẾ ĐỘ TOÀN DIỆN (FULL PIPELINE)"
     print("================================================================================")
-    print(f"KHỞI CHẠY ĐƯỜNG ỐNG ĐÀO TẠO: {mode_str}")
+    print(f"KHỞI CHẠY ĐƯỜNG ỐNG ĐÀO TẠO PMO: {mode_str}")
     print("================================================================================")
     
-    # Đảm bảo các thư mục đầu ra tồn tại
+    # Đảm bảo cấu trúc thư mục quy hoạch chuẩn
     os.makedirs("output/dashboards/core", exist_ok=True)
-    os.makedirs("output/dashboards/advanced", exist_ok=True)
+    os.makedirs("output/dashboards/management", exist_ok=True)
+    os.makedirs("output/dashboards/academic", exist_ok=True)
     os.makedirs("output/reports/core", exist_ok=True)
-    os.makedirs("output/reports/advanced", exist_ok=True)
+    os.makedirs("output/reports/management", exist_ok=True)
 
-    # Bước 0: DataSanitizer (Harness Layer & Single Source Cache)
+    # Bước 0: DataSanitizer (Làm sạch dữ liệu & Single Source Cache)
     run_script(
         "DataSanitizer: Làm sạch dữ liệu & Tạo Single Cache JSON", 
         "agents/common/data_sanitizer.py",
@@ -126,14 +168,12 @@ def main():
     # Bước 0.5: Kiểm tra Database
     ensure_mysql_started()
 
-    # [TỐI ƯU SONG SONG HÓA]: Phân chia thành 2 luồng xử lý độc lập
-    # Nhánh A (Học thuật): Agent 1 -> Agent 2 (phụ thuộc agent1_output.json)
-    # Nhánh B (Tác nghiệp): Agent 4 -> Agent 3 (phụ thuộc daily_log_analysis.json)
+    # Bước 1 & 2: Chạy song song Nhánh A (Học thuật) và Nhánh B (Tác nghiệp)
     from concurrent.futures import ThreadPoolExecutor
 
     def run_branch_academic():
         print("\n[NHÁNH A] Bắt đầu xử lý Kỷ luật SV & Dự báo học thuật...")
-        # Bước 1: Agent 1 - Kỷ luật học viên
+        # Agent 1 - Kỷ luật học viên
         run_script(
             "Agent 1: Kỷ luật học viên (Class KPI)", 
             "agents/core/agent_1_class_kpi/run.py",
@@ -142,7 +182,7 @@ def main():
         validate_output("data/processed/agent1_output.json", "json")
         validate_output("output/dashboards/core/agent_1_student_discipline.html", "html")
         
-        # Bước 2: Agent 2 - Dự báo học vụ
+        # Agent 2 - Dự báo học vụ
         run_script(
             "Agent 2: Dự báo học vụ (Academic Predictor)", 
             "agents/core/agent_2_academic_pred/run.py",
@@ -155,7 +195,7 @@ def main():
 
     def run_branch_operations():
         print("\n[NHÁNH B] Bắt đầu xử lý Nhật ký công việc & Kỷ luật tác nghiệp...")
-        # Bước 3: Agent 4 - Nhật ký công việc & Sync Worklane
+        # Agent 4 - Nhật ký công việc & Sync Worklane
         run_script(
             "Agent 4: Nhật ký công việc (Daily Logs Auditor)", 
             "agents/core/agent_4_daily_logs/run.py",
@@ -165,7 +205,7 @@ def main():
         validate_output("data/processed/daily_log_analysis.json", "json")
         validate_output("output/dashboards/core/agent_4_daily_logs.html", "html")
         
-        # Bước 4: Agent 3 - Kỷ luật tác nghiệp GV/TG (Phụ thuộc Agent 4)
+        # Agent 3 - Kỷ luật tác nghiệp GV/TG
         run_script(
             "Agent 3: Kỷ luật tác nghiệp GV/TG (Ops Discipline)", 
             "agents/core/agent_3_ops_discipline/run.py",
@@ -184,27 +224,8 @@ def main():
         f_ops = executor.submit(run_branch_operations)
         f_acad.result()
         f_ops.result()
-    
-    # Báo cáo Nâng cao (Tùy chọn khi truyền --with-advanced)
-    if run_advanced:
-        print("\n--- CHẠY BÁO CÁO NÂNG CAO (ON-DEMAND) ---")
-        run_script(
-            "Custom Director Report: Báo cáo Giám đốc Đào tạo",
-            "agents/advanced/management_audit/generate_report_director.py",
-            with_deps=["openpyxl"]
-        )
-        run_script(
-            "Advanced QLDT Report: Báo cáo tháng QLĐT",
-            "agents/advanced/management_audit/generate_qldt_report.py",
-            with_deps=["openpyxl"]
-        )
-        run_script(
-            "HCM Summary Report: Báo cáo tổng hợp nhân sự HCM",
-            "agents/advanced/management_audit/generate_hcm_report.py",
-            with_deps=["openpyxl"]
-        )
 
-    # Bước 5: Master Lead Portal & Báo cáo KPI Markdown
+    # Bước 3: Master Lead Portal & Báo cáo KPI Markdown
     run_script(
         "Agent 5: Biên dịch Executive Dashboard (Master Portal)", 
         "agents/master/agent_5_master_portal/generate_unified_dashboard.py"
@@ -216,10 +237,56 @@ def main():
         "agents/master/agent_5_master_portal/generate_kpi_report.py"
     )
     validate_output("data/report_kpi_gv_tg.md", "markdown")
-    
+
+    # Bước 4: Quản trị & Kiểm toán (Management Dashboards: director_cockpit.html & worklane_staff_audit.html)
+    print("\n" + "=" * 80)
+    print("📊 BIÊN DỊCH BÁO CÁO QUẢN TRỊ & KIỂM TOÁN (MANAGEMENT DASHBOARDS)...")
+    print("=" * 80)
+    run_script(
+        "Management: Báo cáo Giám đốc Đào tạo (Director Cockpit)",
+        "agents/advanced/management_audit/generate_report_director.py",
+        with_deps=["openpyxl"]
+    )
+    validate_output("output/dashboards/management/director_cockpit.html", "html")
+
+    run_script(
+        "Management: Kiểm toán Nhân sự Worklane Đa Kỳ (Staff Audit)",
+        "agents/audit/generate_audit_dashboard.py"
+    )
+    validate_output("output/dashboards/management/worklane_staff_audit.html", "html")
+
+    run_script(
+        "Management: Báo cáo Giao ban Đào tạo Tuần (Weekly Director Report)",
+        "scripts/generate_weekly_director_dashboard.py"
+    )
+    validate_output("output/dashboards/management/weekly_director_report.html", "html")
+
+    # Bước 5: Báo cáo Chuyên sâu Vấn đề Học vụ 3 Khóa (KS24, KS25, KS26)
+    print("\n" + "=" * 80)
+    print("🎓 BIÊN DỊCH BÁO CÁO CHUYÊN SÂU VẤN ĐỀ THEO MÔN (KS24, KS25, KS26)...")
+    print("=" * 80)
+    run_script(
+        "Academic: Báo cáo Chuyên sâu Học vụ KS24, KS25, KS26",
+        "scripts/generate_academic_cohort_dashboards.py"
+    )
+    validate_output("output/dashboards/academic/ks24/it214_microservices_cntt.html", "html")
+    validate_output("output/dashboards/academic/ks25/it105_fastapi_cntt.html", "html")
+    validate_output("output/dashboards/academic/ks25/man107_qtkd.html", "html")
+    validate_output("output/dashboards/academic/ks26/ssk101_cntt.html", "html")
+    validate_output("output/dashboards/academic/ks26/ssk101_qtkd.html", "html")
+    validate_output("output/dashboards/academic/index.html", "html")
+
+    # Bước 6: Tự động đồng bộ vào deploy_web/
+    sync_to_deploy_web()
+
     total_elapsed = time.time() - total_start
     print("=" * 80)
     print(f"✓ ĐƯỜNG ỐNG ĐÃ HOÀN THÀNH TOÀN BỘ TRONG {total_elapsed:.2f} GIÂY!")
+    print("📂 CẤU TRÚC ĐẦU RA CHUẨN HÓA:")
+    print("  - Core Dashboards:       output/dashboards/core/ (Agent 1 - 5)")
+    print("  - Management Dashboards: output/dashboards/management/ (Director Cockpit & Worklane Staff Audit)")
+    print("  - Academic Cohort Issues: output/dashboards/academic/ (KS24, KS25, KS26)")
+    print("  - Web Deploy Portal:     deploy_web/ (Sẵn sàng mở hoặc host web)")
     print("================================================================================")
 
 if __name__ == "__main__":

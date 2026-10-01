@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng Báo Cáo Chuyên Sâu Học Vụ Theo Khóa (KS24, KS25, KS26)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#111622', 900: '#0b0f19', 950: '#06080e' },
+                        indigo: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #06080e; color: #cbd5e1; }
+        .glass-card { background: rgba(15, 20, 31, 0.85); backdrop-filter: blur(12px); border: 1px solid #1e283d; }
+        .glass-card:hover { border-color: #4f46e5; transform: translateY(-2px); transition: all 0.25s ease; }
+    </style>
+</head>
+<body class="min-h-screen antialiased selection:bg-indigo-500 selection:text-white p-6 md:p-12">
+    <div class="max-w-5xl mx-auto space-y-8">
+        <!-- HEADER -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+            <div>
+                <span class="text-xs font-mono font-semibold text-indigo-400 uppercase tracking-widest">HỆ THỐNG ĐÀO TẠO & KHẢO THÍ PMO</span>
+                <h1 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1 flex items-center gap-3">
+                    <i class="fa-solid fa-graduation-cap text-indigo-500"></i>
+                    Báo Cáo Chuyên Sâu Học Vụ Theo Từng Khóa
+                </h1>
+                <p class="text-sm text-slate-400 mt-1">Tổng hợp và phân tích chuyên sâu các điểm nghẽn đào tạo, rào cản khảo thí & điều kiện thi</p>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="../core/agent_5_master_portal.html" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition flex items-center gap-2 shadow-lg shadow-indigo-600/20">
+                    <i class="fa-solid fa-house-laptop"></i> Master Portal
+                </a>
+                <a href="../management/director_cockpit.html" class="bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold px-4 py-2 rounded-lg border border-slate-700 transition flex items-center gap-2">
+                    <i class="fa-solid fa-gauge-high text-amber-400"></i> Cockpit
+                </a>
+                <a href="../management/weekly_director_report.html" class="bg-rose-950/80 hover:bg-rose-900/80 text-rose-300 hover:text-white text-xs font-semibold px-4 py-2 rounded-lg border border-rose-500/40 transition flex items-center gap-2 shadow-lg shadow-rose-900/20">
+                    <i class="fa-solid fa-calendar-check text-rose-400"></i> Báo Cáo Tuần GĐĐT
+                </a>
+            </div>
+        </div>
+
+        <!-- 3 COHORTS GRID -->
+        <div class="space-y-6">
+            <!-- KS24 -->
+            <div>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                    <h2 class="text-base font-bold text-white uppercase tracking-wider font-mono">Khóa KS24 (Kỳ IV Chuyên Ngành)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="ks24/it214_microservices_cntt.html" class="glass-card rounded-xl p-5 block group">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-semibold">Khối CNTT • 5 Lớp</span>
+                                <h3 class="text-base font-bold text-white group-hover:text-indigo-400 transition mt-2">
+                                    [IT-214] Microservices System Design
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                                    Hệ số độ khó môn học CDC 1.45, độ vênh Hackathon thực chiến vs BTVN và phân luồng cứu vãn 69 SV trong Care List.
+                                </p>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-slate-500 group-hover:text-indigo-400 transition transform group-hover:translate-x-1 mt-1"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- KS25 -->
+            <div>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                    <h2 class="text-base font-bold text-white uppercase tracking-wider font-mono">Khóa KS25 (Kỳ II Cơ Sở Ngành)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="ks25/it105_fastapi_cntt.html" class="glass-card rounded-xl p-5 block group">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-semibold">Khối CNTT • 9 Lớp</span>
+                                <h3 class="text-base font-bold text-white group-hover:text-indigo-400 transition mt-2">
+                                    [IT105] FastAPI & Phân Tích Thiết Kế Hệ Thống
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                                    Phễu hao hụt học vụ 420 SV, điểm nghẽn đồ án 5 ngày Construction Site khiến 87 SV bỏ thi, phân luồng cứu vãn 271 SV.
+                                </p>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-slate-500 group-hover:text-indigo-400 transition transform group-hover:translate-x-1 mt-1"></i>
+                        </div>
+                    </a>
+
+                    <a href="ks25/man107_qtkd.html" class="glass-card rounded-xl p-5 block group">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-semibold">Khối QTKD • 2 Lớp</span>
+                                <h3 class="text-base font-bold text-white group-hover:text-amber-400 transition mt-2">
+                                    [MAN107] Quản Trị Chiến Lược Doanh Nghiệp
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                                    Báo động đỏ điểm nghẽn vắng chuyên cần tăng vọt (52.17% & 33.33%), vi phạm Elearning và giải pháp siết kỷ luật CVHT.
+                                </p>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-slate-500 group-hover:text-amber-400 transition transform group-hover:translate-x-1 mt-1"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- KS26 -->
+            <div>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                    <h2 class="text-base font-bold text-white uppercase tracking-wider font-mono">Khóa KS26 (Tân Sinh Viên)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="ks26/ssk101_cntt.html" class="glass-card rounded-xl p-5 block group">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-semibold">Khối CNTT • 6 Lớp</span>
+                                <h3 class="text-base font-bold text-white group-hover:text-emerald-400 transition mt-2">
+                                    [SSK101] Kỹ Năng Học Tập Chủ Động (CNTT)
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                                    Kiểm toán dữ liệu LMS, rào cản nợ BTVN 0-25%, điểm nóng báo động đỏ HCM1 (44.7% trượt) & HN1 (37.2% trượt), danh sách bảo lãnh.
+                                </p>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-slate-500 group-hover:text-emerald-400 transition transform group-hover:translate-x-1 mt-1"></i>
+                        </div>
+                    </a>
+
+                    <a href="ks26/ssk101_qtkd.html" class="glass-card rounded-xl p-5 block group">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-semibold">Khối QTKD • 4 Lớp</span>
+                                <h3 class="text-base font-bold text-white group-hover:text-emerald-400 transition mt-2">
+                                    [SSK101] Kỹ Năng Học Tập Chủ Động (QTKD)
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                                    BTVN đạt >84% nhưng vi phạm chuyên cần 12.7% và Elearning 61.38%, đối chuẩn lớp kiểu mẫu HCM1 và danh sách bảo lãnh.
+                                </p>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-slate-500 group-hover:text-emerald-400 transition transform group-hover:translate-x-1 mt-1"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

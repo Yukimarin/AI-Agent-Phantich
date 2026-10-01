@@ -27,10 +27,10 @@ Khi thực hiện nhiệm vụ, Antigravity sẽ phân chia công việc cho cá
   - **Hệ số độ khó môn học (CDC)**: Kết hợp tự động từ dữ liệu tỷ lệ trượt lịch sử trong DB (nếu có), file cấu hình cấu trúc môn học tại `data/course_metadata.json`, và thuật toán phán đoán Heuristics dựa trên từ khóa tên môn học nếu chưa được cấu hình.
   - **Điểm Kỷ luật môn trước**: Đối với khóa KS25, truy cập trường `total_score` từ bảng `auto_rpoints` của môn học trước. Đối với khóa KS24, truy cập cột `rpoints` trong bảng `final_results` của môn học trước.
   - **Quy tắc chặn cứng cấm thi**: Chỉ áp dụng cấm thi dựa trên kỷ luật của môn hiện tại khi thời lượng môn học đã đạt trên 30% (số buổi học > 3). Nếu số buổi học <= 3, bỏ qua các chốt chặn kỷ luật môn hiện tại để tránh cảnh báo ảo.
-  - **Hiệu chuẩn chỉ số (Calibration)**:
-    - **Chuyên cần**: Scale tỷ lệ vắng theo tỷ lệ vắng lớp trung bình của Excel.
-    - **Bài tập**: DB là tỷ lệ hoàn thành, Excel là tỷ lệ nợ. Cần đảo ngược tỷ lệ nợ Excel thành tỷ lệ hoàn thành (`100.0 - excel_disc['bt']`) trước khi hiệu chuẩn.
-    - **Elearning**: DB là số bài vi phạm tuyệt đối, Excel là tỷ lệ phần trăm vi phạm lớp. Giữ nguyên số bài vi phạm tuyệt đối từ DB để xét cấm thi theo Quy chế mới (không scale theo % của Excel để tránh cấm thi ảo do unit mismatch).
+  - **Hiệu chuẩn chỉ số (Calibration) & Quy chuẩn hiển thị LMS Frontend**:
+    - **Chuyên cần**: Backend lưu `presenceRate` (% đi học). Frontend hiển thị theo hướng vi phạm: **Vi phạm chuyên cần (%)** = `100.0 - presenceRate` (hoặc `absence.rate`). Ví dụ đi đủ 100% thì vi phạm là `0%`.
+    - **Bài tập**: Backend API thường tính `done / total_cả_môn`. Trên Frontend LMS và báo cáo, phải tính theo **số bài tập thực tế đã đến hạn trong tuần** (`current_due_hw`). Với tuần đầu giao 1 bài, SV làm 1 bài (`done >= 1` hoặc `eligible = True`) thì **Vi phạm BTVN = 0%**, chỉ SV chưa nộp (`done = 0`) mới tính nợ bài (**100%**). Tuyệt đối không chia tổng bài cả môn gây phạt ảo 75%.
+    - **Elearning**: Giữ nguyên **số bài vi phạm / chậm tuyệt đối** (ví dụ: `Chậm 1 bài`, `0 bài`) để xét cấm thi theo Quy chế mới, không cào bằng theo tỷ lệ % để tránh cấm thi ảo do unit mismatch.
     - **Đọc dữ liệu Excel**: Tiêu đề các cột CC, BT, EL nằm ở Dòng 4 (dưới ngày học ở Dòng 3). Cần duyệt qua 3 cột liên tiếp (CC, BT, EL) của tất cả các cột ngày học và tính trung bình cộng để ra chỉ số vi phạm thực chất của lớp.
   - **Hệ số phạt môi trường (Peer Pressure)**: Áp dụng hệ số Env $Multiplier_{env}$ khi tỷ lệ vi phạm trung bình của lớp > 10% để điều chỉnh xác suất đỗ của từng cá nhân ($P_{final} = P_{eligible} \times Multiplier_{env}$).
 - **Đầu ra yêu cầu**: Thống kê số lượng sinh viên đạt/trượt và dự đoán hiệu suất học tập của các lớp và cá nhân học viên.

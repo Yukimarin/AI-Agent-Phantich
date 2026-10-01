@@ -193,7 +193,7 @@ def generate_weekly_director_dashboard():
             </div>
 
             <!-- ------------------------------------------------------------- -->
-            <!-- 1. KHÓA KS24 (KỲ IV CHUYÊN NGÀNH)                             -->
+            <!-- 1. KHÓA KS24 (KỲ IV CHUYÊN NGÀNH - MÔN DEVOPS)                 -->
             <!-- ------------------------------------------------------------- -->
             <div class="glass-card rounded-2xl p-6 border border-slate-800 space-y-5">
                 <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-4 border-b border-slate-800 gap-3">
@@ -202,62 +202,62 @@ def generate_weekly_director_dashboard():
                             KHÓA KS24
                         </span>
                         <div>
-                            <h3 class="text-base lg:text-lg font-bold text-white">1. Khóa KS24-CNTT (Hà Nội & HCM-CNTT1) &mdash; Môn Kiến Trúc Microservices</h3>
+                            <h3 class="text-base lg:text-lg font-bold text-white">1. Khóa KS24-CNTT (Hà Nội & HCM-CNTT1) &mdash; Môn DevOps (Khởi động môn mới)</h3>
                             <p class="text-xs text-slate-400">Quy mô: 5 lớp chính quy &bull; 181 sinh viên &bull; GV: Bùi Thanh Hải, Hồ Xuân Hùng, Nguyễn Bá Minh Đạo</p>
                         </div>
                     </div>
-                    <span class="text-xs font-bold px-3 py-1.5 rounded-lg bg-amber-500/10 text-amber-300 border border-amber-500/30">
-                        <i class="fa-solid fa-fire mr-1"></i> Hệ số độ khó môn học CDC = 1.35 (Đồ án Microservices)
+                    <span class="text-xs font-bold px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+                        <i class="fa-solid fa-cloud-arrow-up mr-1"></i> Khởi động môn mới: DevOps & CI/CD Pipeline (Chốt RPoint môn Microservices)
                     </span>
                 </div>
 
                 <!-- Đánh giá chỉ số so với tuần trước -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                        <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Chuyên cần toàn khóa</span>
+                        <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Chuyên cần buổi đầu DevOps</span>
                         <div class="flex items-baseline gap-2 mt-1.5">
-                            <span class="text-2xl font-black text-white">17.57%</span>
-                            <span class="text-xs font-bold text-rose-400">▲ +2.89% (Tăng vắng)</span>
+                            <span class="text-2xl font-black text-emerald-400">0.81% vắng</span>
+                            <span class="text-xs font-bold text-emerald-400">▼ -16.76% (Khởi sắc vượt bậc)</span>
                         </div>
-                        <p class="text-xs text-slate-400 mt-1">Xuất hiện tình trạng sinh viên tự ý nghỉ học để làm đồ án ở nhà.</p>
+                        <p class="text-xs text-slate-400 mt-1">3/4 lớp Hà Nội đạt 100% sinh viên có mặt đầy đủ trong buổi học đầu tiên.</p>
                     </div>
                     <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                        <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Nợ Bài tập / Đồ án</span>
+                        <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Nợ Bài tập</span>
                         <div class="flex items-baseline gap-2 mt-1.5">
-                            <span class="text-2xl font-black text-white">10.45%</span>
-                            <span class="text-xs font-bold text-rose-400">▲ +2.05% (Tăng nợ)</span>
+                            <span class="text-2xl font-black text-emerald-400">0.00%</span>
+                            <span class="text-xs font-bold text-emerald-400">▼ -10.45% (Sạch nợ)</span>
                         </div>
-                        <p class="text-xs text-slate-400 mt-1">Bước vào các tuần kiểm tra Checkpoint đồ án Microservices.</p>
+                        <p class="text-xs text-slate-400 mt-1">Tuần đầu chưa có bài tập đến hạn, toàn bộ 100% sinh viên sạch nợ bài.</p>
                     </div>
                     <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
                         <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Vi phạm Elearning</span>
                         <div class="flex items-baseline gap-2 mt-1.5">
-                            <span class="text-2xl font-black text-white">13.32%</span>
-                            <span class="text-xs font-bold text-slate-400">-- (Duy trì cao)</span>
+                            <span class="text-2xl font-black text-emerald-400">2.89%</span>
+                            <span class="text-xs font-bold text-emerald-400">▼ -10.43% (Giảm mạnh)</span>
                         </div>
-                        <p class="text-xs text-slate-400 mt-1">Hai lớp CNTT1 và CNTT3 vi phạm lý thuyết EL trên 20%.</p>
+                        <p class="text-xs text-slate-400 mt-1">Tỷ lệ hoàn thành nội dung lý thuyết LMS chuẩn bị trước bài học đạt trên 97%.</p>
                     </div>
                 </div>
 
                 <!-- Phân tích Điểm Nóng & Giải Pháp KS24 -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs lg:text-sm">
-                    <div class="bg-rose-950/20 p-4 rounded-xl border border-rose-500/30 space-y-2">
-                        <div class="font-bold text-rose-400 uppercase tracking-wider flex items-center gap-2">
-                            <i class="fa-solid fa-triangle-exclamation"></i> Điểm nóng tại lớp nào & Vấn đề gì?
-                        </div>
-                        <p class="text-slate-200 leading-relaxed">
-                            <strong class="text-white">Lớp HN-K24-CNTT3 (GV Hồ Xuân Hùng)</strong>: Điểm nóng báo động nhất toàn khóa. Tỷ lệ vắng chuyên cần <strong class="text-rose-400">tăng vọt +7.69% lên 33.33%</strong> (1/3 lớp nghỉ học buổi gần nhất); nợ bài tập tăng <strong class="text-rose-400">+5.13% lên 17.95%</strong>; vi phạm Elearning 20.51%.<br>
-                            <strong class="text-white">Lớp HN-K24-CNTT1 (GV Bùi Thanh Hải)</strong>: Nợ bài tập 16.13% và Elearning tới 22.58%. Nhóm 14 SV đang bị nghẽn cấu hình Docker và Kubernetes.
-                        </p>
-                    </div>
                     <div class="bg-emerald-950/20 p-4 rounded-xl border border-emerald-500/30 space-y-2">
                         <div class="font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
-                            <i class="fa-solid fa-lightbulb"></i> Giải pháp điều hành & Hành động cụ thể
+                            <i class="fa-solid fa-circle-check"></i> Đánh giá Nền nếp Môn mới DevOps
+                        </div>
+                        <p class="text-slate-200 leading-relaxed">
+                            <strong class="text-white">Lớp HN-K24-CNTT3 (GV Hồ Xuân Hùng)</strong>: Chuyển biến ngoạn mục nhất toàn khóa! Từ tỷ lệ vắng 33.33% ở cuối môn Microservices, sang buổi 1 DevOps đã đạt <strong class="text-emerald-400">0.00% vắng, 0.00% nợ BT, 0.00% EL</strong> (100% lớp có mặt và hoàn thành lý thuyết).<br>
+                            <strong class="text-white">Lớp HN-K24-CNTT2 & CNTT4 (GV Bùi Thanh Hải)</strong>: Giữ vững nề nếp kỷ luật, 0% vắng chuyên cần, 0% nợ bài tập.
+                        </p>
+                    </div>
+                    <div class="bg-blue-950/20 p-4 rounded-xl border border-blue-500/30 space-y-2">
+                        <div class="font-bold text-blue-400 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb"></i> Giải pháp điều hành & Duy trì đà nề nếp
                         </div>
                         <ul class="text-slate-200 list-disc list-inside space-y-1.5 leading-relaxed">
-                            <li><strong>Workshop kỹ thuật:</strong> Thầy Bùi Thanh Hải tổ chức 1 buổi online 90 phút ngoài giờ hỗ trợ thông đồ án và gỡ lỗi deploy Docker/K8s cho 14 sinh viên vướng mắc.</li>
-                            <li><strong>Chấn chỉnh lớp CNTT3:</strong> Thầy Hồ Xuân Hùng điểm danh nghiêm 5 phút đầu buổi; dành 20 phút cuối ca thông checkpoint đồ án trực tiếp tại lớp.</li>
-                            <li><strong>Cố vấn học tập (CVHT):</strong> Hotline trực tiếp cho phụ huynh sinh viên vắng liên tiếp 2 buổi trong vòng 24h để cam kết chuyên cần.</li>
+                            <li><strong>Khích lệ & Tuyên dương:</strong> Biểu dương ngay trên nhóm Zalo lớp về tinh thần khởi đầu môn mới DevOps đầy năng lượng và chuẩn mực.</li>
+                            <li><strong>Phòng lab thực hành:</strong> Đảm bảo tài nguyên máy chủ ảo và tài khoản Docker Hub / GitHub Actions thông suốt để sinh viên thực hành CI/CD ngay từ tuần đầu.</li>
+                            <li><strong>Cơ sở TP. HCM:</strong> Thầy Nguyễn Bá Minh Đạo chuẩn bị khởi động môn DevOps cho lớp HCM-CNTT1 theo đúng tiến độ kế hoạch.</li>
                         </ul>
                     </div>
                 </div>
@@ -279,44 +279,44 @@ def generate_weekly_director_dashboard():
                             <tr class="hover:bg-slate-800/40">
                                 <td class="py-3.5 px-5 font-bold text-white">HN-K24-CNTT1</td>
                                 <td class="py-3.5 px-5 text-slate-300 font-medium">Bùi Thanh Hải</td>
-                                <td class="py-3.5 px-5 text-center font-bold text-rose-400">16.13% <span class="text-xs text-rose-400 font-semibold">(▲ +3.23%)</span></td>
-                                <td class="py-3.5 px-5 text-center font-bold text-rose-400">16.13% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center font-bold text-rose-400">22.58% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Tăng</span></td>
+                                <td class="py-3.5 px-5 text-center font-bold text-emerald-400">3.23% <span class="text-xs text-emerald-400 font-semibold">(▼ -12.90%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-bold text-emerald-400">0.00% <span class="text-xs text-emerald-400 font-semibold">(▼ -16.13%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">6.45% <span class="text-xs text-emerald-400 font-semibold">(▼ -16.13%)</span></td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-success">✅ Xuất sắc</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/40">
                                 <td class="py-3.5 px-5 font-bold text-white">HN-K24-CNTT2</td>
                                 <td class="py-3.5 px-5 text-slate-300 font-medium">Bùi Thanh Hải</td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">10.26% <span class="text-xs text-rose-400 font-semibold">(▲ +2.57%)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">10.26% <span class="text-xs text-rose-400 font-semibold">(▲ +2.57%)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">7.69% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Tăng</span></td>
+                                <td class="py-3.5 px-5 text-center font-bold text-emerald-400">0.00% <span class="text-xs text-emerald-400 font-semibold">(▼ -10.26%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-bold text-emerald-400">0.00% <span class="text-xs text-emerald-400 font-semibold">(▼ -10.26%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">5.13% <span class="text-xs text-emerald-400 font-semibold">(▼ -2.56%)</span></td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-success">✅ Xuất sắc</span></td>
                             </tr>
-                            <tr class="hover:bg-slate-800/40 bg-rose-950/15">
-                                <td class="py-3.5 px-5 font-extrabold text-rose-300 flex items-center gap-2">
-                                    <i class="fa-solid fa-fire text-rose-500"></i> HN-K24-CNTT3
+                            <tr class="hover:bg-slate-800/40 bg-emerald-950/15">
+                                <td class="py-3.5 px-5 font-extrabold text-emerald-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-star text-emerald-400"></i> HN-K24-CNTT3
                                 </td>
                                 <td class="py-3.5 px-5 text-slate-300 font-medium">Hồ Xuân Hùng</td>
-                                <td class="py-3.5 px-5 text-center font-extrabold text-rose-400">33.33% <span class="text-xs text-rose-400 font-bold">(▲ +7.69%)</span></td>
-                                <td class="py-3.5 px-5 text-center font-extrabold text-rose-400">17.95% <span class="text-xs text-rose-400 font-bold">(▲ +5.13%)</span></td>
-                                <td class="py-3.5 px-5 text-center font-extrabold text-rose-400">20.51% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Tăng</span></td>
+                                <td class="py-3.5 px-5 text-center font-extrabold text-emerald-400">0.00% <span class="text-xs text-emerald-400 font-bold">(▼ -33.33%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-extrabold text-emerald-400">0.00% <span class="text-xs text-emerald-400 font-bold">(▼ -17.95%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-extrabold text-emerald-400">0.00% <span class="text-xs text-emerald-400 font-bold">(▼ -20.51%)</span></td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-success">✅ Sạch 100%</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/40">
                                 <td class="py-3.5 px-5 font-bold text-white">HN-K24-CNTT4</td>
                                 <td class="py-3.5 px-5 text-slate-300 font-medium">Bùi Thanh Hải</td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">12.90% <span class="text-xs text-rose-400 font-semibold">(▲ +3.22%)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-emerald-400">3.23% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">9.68% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Tăng</span></td>
+                                <td class="py-3.5 px-5 text-center font-bold text-emerald-400">0.00% <span class="text-xs text-emerald-400 font-semibold">(▼ -12.90%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-bold text-emerald-400">0.00% <span class="text-xs text-emerald-400 font-semibold">(▼ -3.23%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-bold text-emerald-400">0.00% <span class="text-xs text-emerald-400 font-semibold">(▼ -9.68%)</span></td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-success">✅ Sạch 100%</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/40">
                                 <td class="py-3.5 px-5 font-bold text-white">HCM-K24-CNTT1</td>
                                 <td class="py-3.5 px-5 text-slate-300 font-medium">Nguyễn Bá Minh Đạo</td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">16.28% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">4.65% <span class="text-xs text-rose-400 font-semibold">(▲ +2.32%)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">9.30% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Tăng</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-400">&mdash; <span class="text-xs text-slate-500">(Chuẩn bị vào môn)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-400">&mdash;</td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-400">&mdash;</td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-warning">⏳ Chờ xếp lịch</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -447,31 +447,33 @@ def generate_weekly_director_dashboard():
 
                             <!-- TP. HCM -->
                             <tr class="bg-slate-950/60 text-xs font-bold text-cyan-400 uppercase tracking-wider">
-                                <td colspan="6" class="py-2.5 px-5"><i class="fa-solid fa-layer-group mr-1.5"></i> Cụm Khối CNTT TP. HCM (4 Lớp)</td>
+                                <td colspan="6" class="py-2.5 px-5"><i class="fa-solid fa-layer-group mr-1.5"></i> Cụm Khối CNTT TP. HCM (3 Lớp)</td>
                             </tr>
                             <tr class="hover:bg-slate-800/40">
                                 <td class="py-3.5 px-5 font-bold text-white">HCM-K25-CNTT5</td>
                                 <td class="py-3.5 px-5 text-slate-300 font-medium">Nguyễn Đức Minh</td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">13.64% <span class="text-xs text-rose-400 font-semibold">(▲ +2.28%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">13.64% <span class="text-xs text-slate-400">(--)</span></td>
                                 <td class="py-3.5 px-5 text-center font-semibold text-emerald-400">0.00% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">18.18% <span class="text-xs text-rose-400 font-semibold">(▲ +2.27%)</span></td>
-                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Tăng</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">18.18% <span class="text-xs text-slate-400">(--)</span></td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-warning">🟡 Cảnh báo</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/40">
                                 <td class="py-3.5 px-5 font-bold text-white">HCM-K25-CNTT6</td>
                                 <td class="py-3.5 px-5 text-slate-300 font-medium">Trần Quốc Tuấn</td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">11.63% <span class="text-xs text-emerald-400 font-semibold">(▼ -0.27%)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-emerald-400">0.00% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-emerald-400">6.98% <span class="text-xs text-emerald-400 font-semibold">(▼ -0.16%)</span></td>
-                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-success">✅ Ổn định</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">18.60% <span class="text-xs text-rose-400 font-semibold">(▲ +6.97%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">2.33% <span class="text-xs text-rose-400 font-semibold">(▲ +2.33%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-emerald-400">6.98% <span class="text-xs text-slate-400">(--)</span></td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-warning">🟡 Theo dõi</span></td>
                             </tr>
-                            <tr class="hover:bg-slate-800/40">
-                                <td class="py-3.5 px-5 font-bold text-white">HCM-K25-CNTT7</td>
+                            <tr class="hover:bg-slate-800/40 bg-rose-950/20">
+                                <td class="py-3.5 px-5 font-bold text-rose-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> HCM-K25-CNTT7
+                                </td>
                                 <td class="py-3.5 px-5 text-slate-300 font-medium">Nguyễn Đức Minh</td>
-                                <td class="py-3.5 px-5 text-center font-bold text-rose-400">34.78% <span class="text-xs text-rose-400 font-semibold">(▲ +2.17%)</span></td>
-                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">8.70% <span class="text-xs text-slate-400">(--)</span></td>
+                                <td class="py-3.5 px-5 text-center font-extrabold text-rose-400">36.96% <span class="text-xs text-rose-400 font-bold">(▲ +2.18%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-rose-400">13.84% <span class="text-xs text-rose-400 font-semibold">(▲ +5.14%)</span></td>
                                 <td class="py-3.5 px-5 text-center font-semibold text-rose-400">19.57% <span class="text-xs text-slate-400">(--)</span></td>
-                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Tăng</span></td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Điểm nóng</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -582,17 +584,17 @@ def generate_weekly_director_dashboard():
                     </table>
                 </div>
 
-                <!-- Bảng thống kê Môn mới: BI (Business Intelligence) Khởi động 29/09/2026 -->
+                <!-- Bảng thống kê Môn mới: BI (Business Intelligence) Buổi 2 ngày 30/09/2026 -->
                 <div class="mt-4 pt-4 border-t border-slate-800 space-y-3">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <span class="px-2.5 py-1 rounded-md text-xs font-black bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-mono">MÔN MỚI</span>
                             <h4 class="text-sm font-bold text-white flex items-center gap-1.5">
-                                <i class="fa-solid fa-chart-pie text-emerald-400"></i> Môn Business Intelligence (BI) &mdash; Khởi động ngày 29/09/2026
+                                <i class="fa-solid fa-chart-pie text-emerald-400"></i> Môn Business Intelligence (BI) &mdash; Buổi 2 ngày 30/09/2026
                             </h4>
                         </div>
                         <span class="text-xs text-emerald-400 font-bold bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-500/30">
-                            🎉 100% Chuyên Cần Buổi 1
+                            🎉 Duy trì 100% Chuyên Cần 2 Buổi Liên Tiếp
                         </span>
                     </div>
 
@@ -641,8 +643,8 @@ def generate_weekly_director_dashboard():
                             KHÓA KS26
                         </span>
                         <div>
-                            <h3 class="text-base lg:text-lg font-bold text-white">3. Khóa KS26 Tân Sinh Viên &mdash; Môn SSK101 Kỹ Năng Học Tập Chủ Động</h3>
-                            <p class="text-xs text-slate-400">Quy mô: 10 lớp chính quy &bull; 396 sinh viên (374 SV khảo sát chi tiết) &bull; Tuần học đầu tiên</p>
+                            <h3 class="text-base lg:text-lg font-bold text-white">3.1 Khóa KS26 Tân Sinh Viên &mdash; Môn SSK101 Kỹ Năng Học Tập Chủ Động</h3>
+                            <p class="text-xs text-slate-400">Quy mô: 10 lớp chính quy &bull; 396 sinh viên (374 SV khảo sát chi tiết môn SSK101) &bull; Tuần học đầu tiên</p>
                         </div>
                     </div>
                     <span class="text-xs font-bold px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
@@ -682,7 +684,7 @@ def generate_weekly_director_dashboard():
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs lg:text-sm">
                     <div class="bg-rose-950/20 p-4 rounded-xl border border-rose-500/30 space-y-2">
                         <div class="font-bold text-rose-400 uppercase tracking-wider flex items-center gap-2">
-                            <i class="fa-solid fa-triangle-exclamation"></i> Điểm nóng Khóa KS26
+                            <i class="fa-solid fa-triangle-exclamation"></i> Điểm nóng Khóa KS26 Môn SSK101
                         </div>
                         <p class="text-slate-200 leading-relaxed">
                             <strong class="text-white">Lớp HCM-K26-CNTT1 (GV Nguyễn Bá Minh Đạo)</strong>: Báo động đỏ toàn diện với vi phạm Elearning lên tới <strong class="text-rose-400">95.74%</strong> (tăng vọt +29.78%), nợ bài tập 27.66%, vắng chuyên cần 31.91%.<br>
@@ -703,7 +705,7 @@ def generate_weekly_director_dashboard():
                     </div>
                 </div>
 
-                <!-- Bảng thống kê Agent 1 KS26 (ĐÃ BỎ CỘT TRỢ GIẢNG) -->
+                <!-- Bảng thống kê Agent 1 KS26 (Môn SSK101) -->
                 <div class="overflow-x-auto rounded-xl border border-slate-800">
                     <table class="w-full text-left text-sm">
                         <thead class="bg-slate-900 text-slate-300 uppercase font-bold border-b border-slate-800">
@@ -784,7 +786,30 @@ def generate_weekly_director_dashboard():
                                 <td class="py-3.5 px-5 text-center font-extrabold text-rose-400">31.91% <span class="text-xs text-rose-400 font-bold">(▲ +8.51%)</span></td>
                                 <td class="py-3.5 px-5 text-center font-extrabold text-rose-400">27.66% <span class="text-xs text-rose-400 font-bold">(▲ +10.64%)</span></td>
                                 <td class="py-3.5 px-5 text-center font-black text-rose-500 text-base">95.74% <span class="text-xs text-rose-400 font-bold">(▲ +29.78%)</span></td>
-                                    <!-- ------------------------------------------------------------- -->
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Báo động đỏ</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-rose-950/15">
+                                <td class="py-3.5 px-5 font-bold text-rose-300">HCM-K26-CNTT2</td>
+                                <td class="py-3.5 px-5 text-slate-300 font-medium">Nguyễn Bá Minh Đạo</td>
+                                <td class="py-3.5 px-5 text-center font-bold text-rose-400">22.22% <span class="text-xs text-rose-400 font-semibold">(▲ +4.44%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-emerald-400">0.00% <span class="text-xs text-slate-400">(--)</span></td>
+                                <td class="py-3.5 px-5 text-center font-extrabold text-rose-400">91.11% <span class="text-xs text-slate-400">(--)</span></td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-danger">🚨 Tăng</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-3.5 px-5 font-bold text-white">HCM-K26-QTKD1</td>
+                                <td class="py-3.5 px-5 text-slate-300 font-medium">Lê Nhựt Mi</td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">9.52% <span class="text-xs text-emerald-400 font-semibold">(▼ -4.76%)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-emerald-400">0.00% <span class="text-xs text-slate-400">(--)</span></td>
+                                <td class="py-3.5 px-5 text-center font-semibold text-slate-200">33.33% <span class="text-xs text-slate-400">(--)</span></td>
+                                <td class="py-3.5 px-5 text-center"><span class="px-3 py-1 rounded text-xs font-bold badge-warning">🟡 Cảnh báo</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------- -->
             <!-- 3.2 TIẾN ĐỘ ĐÀO TẠO ĐA MÔN HỌC ĐỒNG THỜI KHÓA KS26 (TỪ 28/09/2026) -->
             <!-- ------------------------------------------------------------- -->
             <div class="glass-card rounded-2xl p-6 border border-slate-800 space-y-6">
@@ -796,31 +821,31 @@ def generate_weekly_director_dashboard():
                         </span>
                         <div>
                             <h3 class="text-base lg:text-lg font-bold text-white">3.2 Tiến Độ Đào Tạo Đa Môn Học Đồng Thời Khóa KS26 (Từ 28/09/2026)</h3>
-                            <p class="text-xs text-slate-400">Quy mô: 10 lớp chính quy (416 SV) &bull; Đào tạo song song 5 môn: Chuyên ngành CNTT, Kỹ năng làm việc nhóm, Tiếng Anh, Tư duy phân tích & Tin học ứng dụng</p>
+                            <p class="text-xs text-slate-400">Quy mô: 10 lớp chính quy (416 SV) &bull; Đào tạo song song 5 môn: Chuyên ngành CNTT, Kỹ năng làm việc nhóm, Tiếng Anh, Tư duy phân tích (SSK103) & Tin học ứng dụng (SSK102)</p>
                         </div>
                     </div>
                     <span class="text-xs font-bold px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
-                        <i class="fa-solid fa-check-double mr-1"></i> Hiệu chuẩn chuẩn hóa theo LMS Frontend (>10% CC & BTVN đến hạn)
+                        <i class="fa-solid fa-check-double mr-1"></i> Hiệu chuẩn chuẩn hóa theo LMS Frontend (&ge;10% CC & BTVN đến hạn)
                     </span>
                 </div>
 
                 <!-- Ghi chú nghiệp vụ tính chỉ số chuẩn hóa -->
                 <div class="bg-indigo-950/20 p-4 rounded-xl border border-indigo-500/30 text-xs space-y-1 text-slate-300 leading-relaxed">
                     <div class="font-bold text-indigo-400 uppercase tracking-wider flex items-center gap-1.5 mb-1">
-                        <i class="fa-solid fa-circle-info"></i> Quy chuẩn tính chỉ số vi phạm theo Frontend LMS:
+                        <i class="fa-solid fa-circle-info"></i> Quy chuẩn 3 chỉ số vi phạm hiển thị theo chuẩn LMS Frontend:
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
                         <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800/80">
-                            <span class="font-bold text-white block mb-0.5">📌 Vi phạm Chuyên cần > 10%:</span>
-                            <span>Tính SV vắng vượt 10% tổng buổi môn. Ở buổi 1 môn 22 buổi (IT108), vắng 1 buổi = 4.5% &le; 10% &rarr; <strong>Tỷ lệ vi phạm CC > 10% là 0.00%</strong>.</span>
+                            <span class="font-bold text-amber-300 block mb-0.5">📌 Tỉ lệ SV nghỉ từ 10%:</span>
+                            <span>Tính tỷ lệ học viên có số buổi vắng &ge; 10% thời lượng môn học (Ví dụ lớp HN-QTKD3 có 9/44 SV vắng &rarr; <strong>20.45%</strong>).</span>
                         </div>
                         <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800/80">
-                            <span class="font-bold text-white block mb-0.5">📌 Vi phạm Bài tập > 10%:</span>
-                            <span>Tính trên số bài tập thực tế đã giao và đến hạn nộp trong tuần. Buổi 1 chưa đến hạn &rarr; <strong>Tỷ lệ vi phạm BTVN > 10% là 0.00%</strong> (không chia cho 21 bài cả môn).</span>
+                            <span class="font-bold text-amber-300 block mb-0.5">📌 Tỉ lệ SV thiếu BTVN từ 10%:</span>
+                            <span>Tính trên số bài tập thực tế đã giao và đến hạn nộp trong tuần (HN-QTKD3 có 3/44 SV chưa nộp bài &rarr; <strong>6.82%</strong>; không chia cho cả môn).</span>
                         </div>
                         <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800/80">
-                            <span class="font-bold text-white block mb-0.5">📌 Elearning:</span>
-                            <span>Tỷ lệ SV nộp muộn hoặc chưa hoàn thành bài lý thuyết trước buổi học (ví dụ: HN1 có 2/43 SV vi phạm &rarr; <strong>4.65%</strong>).</span>
+                            <span class="font-bold text-amber-300 block mb-0.5">📌 Vi phạm không chuẩn bị bài:</span>
+                            <span>Tỷ lệ SV chưa hoàn thành lý thuyết Elearning trước khi lên lớp (HN-QTKD3 có 9/44 SV chậm &rarr; <strong>20.45%</strong>).</span>
                         </div>
                     </div>
                 </div>
@@ -832,44 +857,44 @@ def generate_weekly_director_dashboard():
                             <span>💻 IT108 - CNTT</span>
                             <span class="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-200">6 Lớp</span>
                         </div>
-                        <div class="text-lg font-black text-white">0.00% <span class="text-xs font-normal text-slate-400">CC>10%</span></div>
-                        <p class="text-[11px] text-slate-400 mt-1">EL TB: 7.05% &bull; Điểm nóng HN4 (22.2%)</p>
+                        <div class="text-lg font-black text-white">2.87% <span class="text-xs font-normal text-slate-400">CC&ge;10%</span></div>
+                        <p class="text-[11px] text-slate-400 mt-1">EL TB: 14.5% &bull; Điểm nóng HN4 (44.8%)</p>
                     </div>
 
                     <div class="bg-slate-900/70 p-3.5 rounded-xl border border-cyan-500/30">
                         <div class="flex items-center justify-between text-xs font-bold text-cyan-300 mb-1">
                             <span>🤝 SKL01 - Teamwork</span>
-                            <span class="px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-200">2 Lớp</span>
+                            <span class="px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-200">4 Lớp</span>
                         </div>
-                        <div class="text-lg font-black text-white">3.58% <span class="text-xs font-normal text-slate-400">CC>10%</span></div>
-                        <p class="text-[11px] text-slate-400 mt-1">EL TB: 10.64% &bull; HN1 đôn đốc EL (16.3%)</p>
+                        <div class="text-lg font-black text-white">2.98% <span class="text-xs font-normal text-slate-400">CC&ge;10%</span></div>
+                        <p class="text-[11px] text-slate-400 mt-1">EL TB: 8.7% &bull; HN1 đôn đốc EL (20.9%)</p>
                     </div>
 
                     <div class="bg-slate-900/70 p-3.5 rounded-xl border border-emerald-500/30">
                         <div class="flex items-center justify-between text-xs font-bold text-emerald-300 mb-1">
                             <span>🗣️ ENG105 - Tiếng Anh</span>
-                            <span class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-200">4 Lớp</span>
+                            <span class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-200">7 Lớp</span>
                         </div>
-                        <div class="text-lg font-black text-white">0.00% <span class="text-xs font-normal text-slate-400">CC>10%</span></div>
-                        <p class="text-[11px] text-slate-400 mt-1">HN3 & QTKD3 đạt 0% &bull; HCM-QTKD1 30.4%</p>
+                        <div class="text-lg font-black text-white">0.00% <span class="text-xs font-normal text-slate-400">CC&ge;10%</span></div>
+                        <p class="text-[11px] text-slate-400 mt-1">HN3 & QTKD3 đạt 0% &bull; HCM-CNTT1 EL 17.4%</p>
                     </div>
 
-                    <div class="bg-slate-900/70 p-3.5 rounded-xl border border-amber-500/30">
+                    <div class="bg-slate-900/70 p-3.5 rounded-xl border border-amber-500/30 bg-amber-950/10">
                         <div class="flex items-center justify-between text-xs font-bold text-amber-300 mb-1">
                             <span>📊 SSK103 - Tư duy PT</span>
-                            <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-200">2 Lớp</span>
+                            <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-200 font-bold">Khối QTKD</span>
                         </div>
-                        <div class="text-lg font-black text-white">4.55% <span class="text-xs font-normal text-slate-400">CC>10%</span></div>
-                        <p class="text-[11px] text-slate-400 mt-1">HN-QTKD1: 4 SV vắng &bull; QTKD2 chuẩn bị học</p>
+                        <div class="text-lg font-black text-amber-300">20.45% <span class="text-xs font-normal text-slate-400">(HN-QTKD3)</span></div>
+                        <p class="text-[11px] text-slate-300 mt-1">BTVN thiếu: <strong>6.82%</strong> &bull; KCB bài: <strong>20.45%</strong></p>
                     </div>
 
-                    <div class="bg-slate-900/70 p-3.5 rounded-xl border border-purple-500/30">
+                    <div class="bg-slate-900/70 p-3.5 rounded-xl border border-purple-500/30 bg-purple-950/10">
                         <div class="flex items-center justify-between text-xs font-bold text-purple-300 mb-1">
                             <span>🖥️ SSK102 - Tin học UD</span>
-                            <span class="px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-200">2 Lớp</span>
+                            <span class="px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-200 font-bold">Khối QTKD</span>
                         </div>
-                        <div class="text-lg font-black text-rose-400">13.44% <span class="text-xs font-normal text-slate-400">CC>10%</span></div>
-                        <p class="text-[11px] text-slate-400 mt-1">Điểm nóng HN-QTKD3 vắng 18.2% (8 SV)</p>
+                        <div class="text-lg font-black text-rose-400">15.91% <span class="text-xs font-normal text-slate-400">(HN-QTKD3)</span></div>
+                        <p class="text-[11px] text-slate-300 mt-1">BTVN thiếu: <strong>0.00%</strong> &bull; KCB bài: <strong>18.18%</strong></p>
                     </div>
                 </div>
 
@@ -893,10 +918,10 @@ def generate_weekly_director_dashboard():
                         <span class="text-slate-400 text-[11px] mr-1">Lọc môn:</span>
                         <button type="button" onclick="filterKS26Subject('ALL')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 font-bold" data-subject="ALL">Tất Cả Môn</button>
                         <button type="button" onclick="filterKS26Subject('IT108')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800" data-subject="IT108">💻 IT108 (6)</button>
-                        <button type="button" onclick="filterKS26Subject('SKL01')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800" data-subject="SKL01">🤝 SKL01 (2)</button>
-                        <button type="button" onclick="filterKS26Subject('ENG105')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800" data-subject="ENG105">🗣️ ENG105 (4)</button>
-                        <button type="button" onclick="filterKS26Subject('SSK103')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800" data-subject="SSK103">📊 SSK103 (2)</button>
-                        <button type="button" onclick="filterKS26Subject('SSK102')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800" data-subject="SSK102">🖥️ SSK102 (2)</button>
+                        <button type="button" onclick="filterKS26Subject('SKL01')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800" data-subject="SKL01">🤝 SKL01 (4)</button>
+                        <button type="button" onclick="filterKS26Subject('ENG105')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800" data-subject="ENG105">🗣️ ENG105 (8)</button>
+                        <button type="button" onclick="filterKS26Subject('SSK103')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold" data-subject="SSK103">📊 SSK103 (4)</button>
+                        <button type="button" onclick="filterKS26Subject('SSK102')" class="ks26-sub-filter px-2.5 py-1 rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/40 font-bold" data-subject="SSK102">🖥️ SSK102 (4)</button>
                     </div>
                 </div>
 
@@ -913,7 +938,6 @@ def generate_weekly_director_dashboard():
                             </div>
                             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">Hà Nội &bull; CNTT</span>
                         </div>
-                        <!-- Subject 1 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-indigo-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-indigo-300 flex items-center gap-1.5">
@@ -923,24 +947,19 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-slate-200">4.65%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-slate-200">9.30% (4 SV)</span>
                                 </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">22 buổi &bull; Buổi 1</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Chuẩn mực</span>
                             </div>
                         </div>
-                        <!-- Subject 2 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-cyan-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-cyan-300 flex items-center gap-1.5">
@@ -950,21 +969,17 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
-                                    <span class="font-bold text-slate-200">4.65%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-slate-200">6.98% (3 SV)</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
-                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-slate-200">6.98% (3 SV)</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-amber-400">16.28%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-amber-400">20.93% (9 SV)</span>
                                 </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">Kỹ năng mềm</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-warning text-[10px]">🟡 Đôn đốc EL</span>
                             </div>
                         </div>
                     </div>
@@ -978,7 +993,6 @@ def generate_weekly_director_dashboard():
                             </div>
                             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">Hà Nội &bull; CNTT</span>
                         </div>
-                        <!-- Subject 1 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-indigo-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-indigo-300 flex items-center gap-1.5">
@@ -988,24 +1002,19 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
-                                    <span class="font-bold text-slate-500">--</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
-                                    <span class="font-bold text-slate-500">--</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-slate-500">--</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">2.50% (1 SV)</span>
                                 </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">22 buổi</span>
-                                <span class="px-2 py-0.5 rounded font-bold bg-slate-800 text-slate-400 border border-slate-700 text-[10px]">⏳ Chuẩn bị học</span>
                             </div>
                         </div>
-                        <!-- Subject 2 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-cyan-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-cyan-300 flex items-center gap-1.5">
@@ -1015,21 +1024,39 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
-                                    <span class="font-bold text-slate-200">2.50%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">2.50% (1 SV)</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-emerald-400">5.00%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">5.00% (2 SV)</span>
                                 </div>
                             </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">Kỹ năng mềm</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Khởi đầu tốt</span>
+                        </div>
+                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-emerald-500/20 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-semibold text-emerald-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-comments text-[11px]"></i> Tiếng Anh Giao tiếp (ENG105)
+                                </span>
+                                <span class="text-slate-400 font-medium">GV: Nguyễn Hồng Nhung</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1039,11 +1066,10 @@ def generate_weekly_director_dashboard():
                         <div class="flex items-center justify-between pb-2 border-b border-slate-800/80">
                             <div class="flex items-center gap-2">
                                 <span class="font-bold text-white text-base">HN-KS26-CNTT3</span>
-                                <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono text-xs font-semibold">42 SV</span>
+                                <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono text-xs font-semibold">41 SV</span>
                             </div>
                             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">Hà Nội &bull; CNTT</span>
                         </div>
-                        <!-- Subject 1 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-indigo-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-indigo-300 flex items-center gap-1.5">
@@ -1053,24 +1079,19 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">2.44% (1 SV)</span>
                                 </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">22 buổi &bull; Buổi 1</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Xuất sắc (0%)</span>
                             </div>
                         </div>
-                        <!-- Subject 2 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-emerald-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-emerald-300 flex items-center gap-1.5">
@@ -1080,21 +1101,17 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">2.44% (1 SV)</span>
                                 </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">Ngoại ngữ</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Hoàn hảo (0%)</span>
                             </div>
                         </div>
                     </div>
@@ -1104,11 +1121,10 @@ def generate_weekly_director_dashboard():
                         <div class="flex items-center justify-between pb-2 border-b border-slate-800/80">
                             <div class="flex items-center gap-2">
                                 <span class="font-bold text-white text-base">HN-KS26-CNTT4</span>
-                                <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono text-xs font-semibold">27 SV</span>
+                                <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono text-xs font-semibold">29 SV</span>
                             </div>
                             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">Hà Nội &bull; CNTT</span>
                         </div>
-                        <!-- Subject 1 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-indigo-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-indigo-300 flex items-center gap-1.5">
@@ -1118,21 +1134,21 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
-                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-rose-400">17.24% (5 SV)</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
-                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-rose-400">24.14% (7 SV)</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-extrabold text-rose-400">22.22%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-rose-400">44.83% (13 SV)</span>
                                 </div>
                             </div>
                             <div class="flex justify-between items-center text-[11px] pt-0.5">
                                 <span class="text-slate-400">22 buổi &bull; Buổi 1</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-danger text-[10px]">🚨 Nhắc EL (6 SV)</span>
+                                <span class="px-2 py-0.5 rounded font-bold badge-danger text-[10px]">🚨 Điểm nóng CNTT cần đôn đốc</span>
                             </div>
                         </div>
                     </div>
@@ -1146,7 +1162,6 @@ def generate_weekly_director_dashboard():
                             </div>
                             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">TP. HCM &bull; CNTT</span>
                         </div>
-                        <!-- Subject 1 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-indigo-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-indigo-300 flex items-center gap-1.5">
@@ -1156,21 +1171,61 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-slate-200">6.52%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-rose-400">54.35% (25 SV)</span>
                                 </div>
                             </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">22 buổi &bull; Buổi 1</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Nề nếp tốt</span>
+                        </div>
+                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-cyan-500/20 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-semibold text-cyan-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-users text-[11px]"></i> Kỹ năng làm việc nhóm (SKL01)
+                                </span>
+                                <span class="text-slate-400 font-medium">GV: Lê Nhựt Mi</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-emerald-500/20 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-semibold text-emerald-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-comments text-[11px]"></i> Tiếng Anh Giao tiếp (ENG105)
+                                </span>
+                                <span class="text-slate-400 font-medium">GV: Huỳnh Thị Kim Khánh</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-amber-400">17.39% (8 SV)</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1184,7 +1239,6 @@ def generate_weekly_director_dashboard():
                             </div>
                             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">TP. HCM &bull; CNTT</span>
                         </div>
-                        <!-- Subject 1 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-indigo-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-indigo-300 flex items-center gap-1.5">
@@ -1194,24 +1248,41 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-slate-200">8.89%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-amber-400">28.89% (13 SV)</span>
                                 </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">22 buổi &bull; Buổi 1</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Ổn định</span>
                             </div>
                         </div>
-                        <!-- Subject 2 -->
+                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-cyan-500/20 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-semibold text-cyan-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-users text-[11px]"></i> Kỹ năng làm việc nhóm (SKL01)
+                                </span>
+                                <span class="text-slate-400 font-medium">GV: Lê Nhựt Mi</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-emerald-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-emerald-300 flex items-center gap-1.5">
@@ -1221,21 +1292,17 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-amber-400">11.11%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">Ngoại ngữ</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-warning text-[10px]">🟡 Theo dõi EL</span>
                             </div>
                         </div>
                     </div>
@@ -1249,7 +1316,7 @@ def generate_weekly_director_dashboard():
                             </div>
                             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">Hà Nội &bull; QTKD</span>
                         </div>
-                        <!-- Subject 1 -->
+                        <!-- Subject 1: SSK103 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-amber-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-amber-300 flex items-center gap-1.5">
@@ -1259,16 +1326,16 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
-                                    <span class="font-bold text-slate-200">9.09%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-slate-200">9.09% (4 SV)</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-slate-200">6.82%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-slate-200">6.82% (3 SV)</span>
                                 </div>
                             </div>
                             <div class="flex justify-between items-center text-[11px] pt-0.5">
@@ -1276,83 +1343,30 @@ def generate_weekly_director_dashboard():
                                 <span class="px-2 py-0.5 rounded font-bold badge-warning text-[10px]">🟡 4 SV vắng</span>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- CARD 8: HN-KS26-QTKD2 -->
-                    <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-3 hover:border-slate-700 transition-all">
-                        <div class="flex items-center justify-between pb-2 border-b border-slate-800/80">
-                            <div class="flex items-center gap-2">
-                                <span class="font-bold text-white text-base">HN-KS26-QTKD2</span>
-                                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-xs font-semibold">44 SV</span>
-                            </div>
-                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">Hà Nội &bull; QTKD</span>
-                        </div>
-                        <!-- Subject 1 -->
-                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-amber-500/20 space-y-1.5">
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="font-semibold text-amber-300 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-chart-line text-[11px]"></i> Tư duy phân tích (SSK103)
-                                </span>
-                                <span class="text-slate-400 font-medium">GV: Nguyễn Ngọc Vân Khanh</span>
-                            </div>
-                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
-                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
-                                    <span class="font-bold text-slate-500">--</span>
-                                </div>
-                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
-                                    <span class="font-bold text-slate-500">--</span>
-                                </div>
-                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-slate-500">--</span>
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">Kỹ năng nền tảng</span>
-                                <span class="px-2 py-0.5 rounded font-bold bg-slate-800 text-slate-400 border border-slate-700 text-[10px]">⏳ Chuẩn bị học</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD 9: HN-KS26-QTKD3 -->
-                    <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-3 hover:border-slate-700 transition-all">
-                        <div class="flex items-center justify-between pb-2 border-b border-slate-800/80">
-                            <div class="flex items-center gap-2">
-                                <span class="font-bold text-white text-base">HN-KS26-QTKD3</span>
-                                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-xs font-semibold">44 SV</span>
-                            </div>
-                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">Hà Nội &bull; QTKD</span>
-                        </div>
-                        <!-- Subject 1 -->
+                        <!-- Subject 2: ENG105 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-emerald-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-emerald-300 flex items-center gap-1.5">
                                     <i class="fa-solid fa-comments text-[11px]"></i> Tiếng Anh Giao tiếp (ENG105)
                                 </span>
-                                <span class="text-slate-400 font-medium">GV: Nguyễn Hồng Nhung</span>
+                                <span class="text-slate-400 font-medium">GV: Lò Thị Ngọc Anh</span>
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-slate-200">9.09% (4 SV)</span>
                                 </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">Ngoại ngữ</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Hoàn hảo (0%)</span>
                             </div>
                         </div>
-                        <!-- Subject 2 -->
+                        <!-- Subject 3: SSK102 (Tin học ứng dụng) -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-purple-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-purple-300 flex items-center gap-1.5">
@@ -1362,62 +1376,237 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
-                                    <span class="font-extrabold text-rose-400">18.18%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-amber-400">11.36% (5 SV)</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
-                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-amber-400">6.82% (3 SV)</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-slate-200">9.09%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-slate-200">6.82% (3 SV)</span>
                                 </div>
-                            </div>
-                            <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">Đại cương</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-danger text-[10px]">🚨 8 SV vắng</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- CARD 10: HCM-KS26-QTKD1 -->
+                    <!-- CARD 8: HN-KS26-QTKD2 -->
                     <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-3 hover:border-slate-700 transition-all">
                         <div class="flex items-center justify-between pb-2 border-b border-slate-800/80">
                             <div class="flex items-center gap-2">
-                                <span class="font-bold text-white text-base">HCM-KS26-QTKD1</span>
-                                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-xs font-semibold">46 SV</span>
+                                <span class="font-bold text-white text-base">HN-KS26-QTKD2</span>
+                                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-xs font-semibold">45 SV</span>
                             </div>
-                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">TP. HCM &bull; QTKD</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">Hà Nội &bull; QTKD</span>
                         </div>
-                        <!-- Subject 1 -->
+                        <!-- Subject 1: ENG105 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-emerald-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-emerald-300 flex items-center gap-1.5">
                                     <i class="fa-solid fa-comments text-[11px]"></i> Tiếng Anh Giao tiếp (ENG105)
                                 </span>
-                                <span class="text-slate-400 font-medium">GV: Huỳnh Thị Kim Khánh</span>
+                                <span class="text-slate-400 font-medium">GV: Nguyễn Hồng Nhung</span>
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-extrabold text-rose-400">30.43%</span>
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-amber-400">20.00% (9 SV)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Subject 2: SSK103 (Tư duy phân tích) -->
+                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-amber-500/20 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-semibold text-amber-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-chart-line text-[11px]"></i> Tư duy phân tích (SSK103)
+                                </span>
+                                <span class="text-slate-400 font-medium">GV: Nguyễn Thị Hồng Minh</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-slate-200">6.67% (3 SV)</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-slate-200">8.89% (4 SV)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Subject 3: SSK102 (Tin học ứng dụng) -->
+                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-purple-500/20 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-semibold text-purple-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-desktop text-[11px]"></i> Tin học ứng dụng (SSK102)
+                                </span>
+                                <span class="text-slate-400 font-medium">GV: Nguyễn Ngọc Vân Khanh</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-slate-200">6.67% (3 SV)</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-slate-200">8.89% (4 SV)</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-amber-400">20.00% (9 SV)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 9: HN-KS26-QTKD3 (ĐIỂM NÓNG ĐƯỢC GIÁM ĐỐC CHỈ ĐẠO) -->
+                    <div class="bg-slate-900/90 rounded-xl border-2 border-amber-500/40 p-4 space-y-3 hover:border-amber-500/70 transition-all shadow-lg shadow-amber-950/20">
+                        <div class="flex items-center justify-between pb-2 border-b border-amber-500/30">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-amber-300 text-base flex items-center gap-1.5">
+                                    <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> HN-KS26-QTKD3
+                                </span>
+                                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-xs font-semibold">44 SV</span>
+                            </div>
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-950/60 text-amber-300 border border-amber-500/40">Hà Nội &bull; QTKD &bull; Đang Học 3 Môn</span>
+                        </div>
+
+                        <!-- Subject 1: SSK103 (TƯ DUY PHÂN TÍCH - SỐ LIỆU CHUẨN XÁC GIÁM ĐỐC ĐÀO TẠO ĐÃ NÊU) -->
+                        <div class="bg-slate-950/80 rounded-lg p-3 border border-amber-500/40 space-y-2">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-bold text-amber-300 flex items-center gap-1.5 text-sm">
+                                    <i class="fa-solid fa-brain text-amber-400"></i> Tư duy phân tích (SSK103)
+                                </span>
+                                <span class="text-slate-300 font-semibold">GV: Nguyễn Ngọc Vân Khanh</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/90 p-2 rounded-lg border border-rose-500/30">
+                                    <span class="text-[10px] text-slate-300 block font-semibold">Tỉ lệ SV nghỉ từ 10%</span>
+                                    <span class="font-black text-rose-400 text-sm">20.45%</span>
+                                    <span class="text-[10px] text-slate-400 block">(9/44 SV)</span>
+                                </div>
+                                <div class="bg-slate-900/90 p-2 rounded-lg border border-amber-500/30">
+                                    <span class="text-[10px] text-slate-300 block font-semibold">Thiếu BTVN từ 10%</span>
+                                    <span class="font-black text-amber-300 text-sm">6.82%</span>
+                                    <span class="text-[10px] text-slate-400 block">(3/44 SV)</span>
+                                </div>
+                                <div class="bg-slate-900/90 p-2 rounded-lg border border-rose-500/30">
+                                    <span class="text-[10px] text-slate-300 block font-semibold">Vi phạm KCB bài</span>
+                                    <span class="font-black text-rose-400 text-sm">20.45%</span>
+                                    <span class="text-[10px] text-slate-400 block">(9/44 SV)</span>
                                 </div>
                             </div>
                             <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">Ngoại ngữ</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-danger text-[10px]">🚨 Cảnh báo EL</span>
+                                <span class="text-slate-400">4 buổi &bull; 4 BTVN</span>
+                                <span class="px-2 py-0.5 rounded font-bold badge-danger text-[10px]">🚨 Điểm nóng cần đôn đốc ngay</span>
                             </div>
                         </div>
-                        <!-- Subject 2 -->
+
+                        <!-- Subject 2: SSK102 (TIN HỌC ỨNG DỤNG - SỐ LIỆU CHUẨN XÁC) -->
+                        <div class="bg-slate-950/80 rounded-lg p-3 border border-purple-500/40 space-y-2">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-bold text-purple-300 flex items-center gap-1.5 text-sm">
+                                    <i class="fa-solid fa-desktop text-purple-400"></i> Tin học ứng dụng (SSK102)
+                                </span>
+                                <span class="text-slate-300 font-semibold">GV: Nguyễn Thị Hồng Minh</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/90 p-2 rounded-lg border border-rose-500/30">
+                                    <span class="text-[10px] text-slate-300 block font-semibold">Tỉ lệ SV nghỉ từ 10%</span>
+                                    <span class="font-black text-rose-400 text-sm">15.91%</span>
+                                    <span class="text-[10px] text-slate-400 block">(7/44 SV)</span>
+                                </div>
+                                <div class="bg-slate-900/90 p-2 rounded-lg border border-emerald-500/30">
+                                    <span class="text-[10px] text-slate-300 block font-semibold">Thiếu BTVN từ 10%</span>
+                                    <span class="font-black text-emerald-400 text-sm">0.00%</span>
+                                    <span class="text-[10px] text-slate-400 block">&nbsp;</span></span>
+                                </div>
+                                <div class="bg-slate-900/90 p-2 rounded-lg border border-purple-500/30">
+                                    <span class="text-[10px] text-slate-300 block font-semibold">Vi phạm KCB bài</span>
+                                    <span class="font-black text-purple-300 text-sm">18.18%</span>
+                                    <span class="text-[10px] text-slate-400 block">(8/44 SV)</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-[11px] pt-0.5">
+                                <span class="text-slate-400">9 buổi &bull; 8 BTVN</span>
+                                <span class="px-2 py-0.5 rounded font-bold badge-danger text-[10px]">🚨 Điểm nóng chuyên cần (7 SV vắng)</span>
+                            </div>
+                        </div>
+
+                        <!-- Subject 3: ENG105 (TIẾNG ANH) -->
+                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-emerald-500/20 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-semibold text-emerald-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-comments text-[11px]"></i> Tiếng Anh Giao tiếp (ENG105)
+                                </span>
+                                <span class="text-slate-400 font-medium">GV: Nguyễn Hồng Nhung</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-slate-200">6.82% (3 SV)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 10: HCM-KS26-QTKD1 (SĨ SỐ CHUẨN 21 SV) -->
+                    <div class="bg-slate-900/90 rounded-xl border border-slate-800 p-4 space-y-3 hover:border-slate-700 transition-all">
+                        <div class="flex items-center justify-between pb-2 border-b border-slate-800/80">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-white text-base">HCM-KS26-QTKD1</span>
+                                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-xs font-semibold">21 SV</span>
+                            </div>
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300 border border-slate-700">TP. HCM &bull; QTKD</span>
+                        </div>
+                        <!-- Subject 1: SSK103 -->
+                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-amber-500/20 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-semibold text-amber-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-chart-line text-[11px]"></i> Tư duy phân tích (SSK103)
+                                </span>
+                                <span class="text-slate-400 font-medium">GV: Lê Thị Bảo Yến</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-[11px] pt-0.5">
+                                <span class="text-slate-400">Kỹ năng nền tảng</span>
+                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Chuẩn mực 100%</span>
+                            </div>
+                        </div>
+                        <!-- Subject 2: SSK102 -->
                         <div class="bg-slate-950/60 rounded-lg p-2.5 border border-purple-500/20 space-y-1.5">
                             <div class="flex items-center justify-between text-xs">
                                 <span class="font-semibold text-purple-300 flex items-center gap-1.5">
@@ -1427,21 +1616,48 @@ def generate_weekly_director_dashboard():
                             </div>
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">CC > 10%</span>
-                                    <span class="font-bold text-slate-200">8.70%</span>
-                                </div>
-                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">BT > 10%</span>
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
                                     <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                                 <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
-                                    <span class="text-[10px] text-slate-400 block">Elearning</span>
-                                    <span class="font-bold text-slate-200">8.70%</span>
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
                                 </div>
                             </div>
                             <div class="flex justify-between items-center text-[11px] pt-0.5">
-                                <span class="text-slate-400">Đại cương</span>
-                                <span class="px-2 py-0.5 rounded font-bold badge-warning text-[10px]">🟡 2 SV vắng</span>
+                                <span class="text-slate-400">Đại cương tin học</span>
+                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Chuẩn mực 100%</span>
+                            </div>
+                        </div>
+                        <!-- Subject 3: ENG105 -->
+                        <div class="bg-slate-950/60 rounded-lg p-2.5 border border-emerald-500/20 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-semibold text-emerald-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-comments text-[11px]"></i> Tiếng Anh Giao tiếp (ENG105)
+                                </span>
+                                <span class="text-slate-400 font-medium">GV: Huỳnh Thị Kim Khánh</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Nghỉ &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Thiếu BT &ge; 10%</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800">
+                                    <span class="text-[10px] text-slate-400 block">Vi phạm KCB bài</span>
+                                    <span class="font-bold text-emerald-400">0.00%</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-[11px] pt-0.5">
+                                <span class="text-slate-400">Ngoại ngữ</span>
+                                <span class="px-2 py-0.5 rounded font-bold badge-success text-[10px]">🟢 Chuẩn mực 100%</span>
                             </div>
                         </div>
                     </div>
@@ -1467,9 +1683,9 @@ def generate_weekly_director_dashboard():
                                         <th class="py-2.5 px-3 text-center">Sĩ số</th>
                                         <th class="py-2.5 px-4">Cơ sở</th>
                                         <th class="py-2.5 px-4">Giảng viên</th>
-                                        <th class="py-2.5 px-4 text-center">CC (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">BT (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">Elearning</th>
+                                        <th class="py-2.5 px-4 text-center">Nghỉ &ge;10%</th>
+                                        <th class="py-2.5 px-4 text-center">Thiếu BT &ge;10%</th>
+                                        <th class="py-2.5 px-4 text-center">Vi phạm KCB bài</th>
                                         <th class="py-2.5 px-4 text-center">Trạng thái</th>
                                     </tr>
                                 </thead>
@@ -1481,7 +1697,7 @@ def generate_weekly_director_dashboard():
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Trịnh Quốc Hai</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-slate-200">4.65%</td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">9.30% (4 SV)</td>
                                         <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Chuẩn mực</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
@@ -1489,30 +1705,30 @@ def generate_weekly_director_dashboard():
                                         <td class="py-2.5 px-3 text-center font-mono text-slate-300">40</td>
                                         <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Trịnh Quốc Hai</td>
-                                        <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                        <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                        <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700">⏳ Chuẩn bị học</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">2.50% (1 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Tốt</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HN-KS26-CNTT3</td>
-                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">42</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">41</td>
                                         <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Lương Quốc Tuấn</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Xuất sắc (0%)</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">2.44% (1 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Tốt</span></td>
                                     </tr>
-                                    <tr class="hover:bg-slate-800/40">
-                                        <td class="py-2.5 px-4 font-bold text-white">HN-KS26-CNTT4</td>
-                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">27</td>
+                                    <tr class="hover:bg-slate-800/40 bg-rose-950/20">
+                                        <td class="py-2.5 px-4 font-bold text-rose-300">HN-KS26-CNTT4</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">29</td>
                                         <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Lương Quốc Tuấn</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-extrabold text-rose-400">22.22%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Nhắc EL (6 SV)</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-rose-400">17.24% (5 SV)</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-rose-400">24.14% (7 SV)</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-rose-400">44.83% (13 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Điểm nóng</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HCM-KS26-CNTT1</td>
@@ -1521,8 +1737,8 @@ def generate_weekly_director_dashboard():
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Lê Hà Thanh Sang</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-slate-200">6.52%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Nề nếp tốt</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-rose-400">54.35% (25 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Đôn đốc EL</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HCM-KS26-CNTT2</td>
@@ -1531,8 +1747,8 @@ def generate_weekly_director_dashboard():
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Lê Hà Thanh Sang</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-slate-200">8.89%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Ổn định</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-amber-400">28.89% (13 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Đôn đốc EL</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1543,7 +1759,7 @@ def generate_weekly_director_dashboard():
                     <div class="ks26-subject-block space-y-2" data-subject="SKL01">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1.5">
-                                <i class="fa-solid fa-users"></i> 2. Kỹ Năng Làm Việc Nhóm (SKL01) &bull; 2 Lớp Phụ Trách
+                                <i class="fa-solid fa-users"></i> 2. Kỹ Năng Làm Việc Nhóm (SKL01) &bull; Khối CNTT
                             </span>
                             <span class="text-[11px] text-slate-400">Kỹ năng mềm</span>
                         </div>
@@ -1555,9 +1771,9 @@ def generate_weekly_director_dashboard():
                                         <th class="py-2.5 px-3 text-center">Sĩ số</th>
                                         <th class="py-2.5 px-4">Cơ sở</th>
                                         <th class="py-2.5 px-4">Giảng viên</th>
-                                        <th class="py-2.5 px-4 text-center">CC (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">BT (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">Elearning</th>
+                                        <th class="py-2.5 px-4 text-center">Nghỉ &ge;10%</th>
+                                        <th class="py-2.5 px-4 text-center">Thiếu BT &ge;10%</th>
+                                        <th class="py-2.5 px-4 text-center">Vi phạm KCB bài</th>
                                         <th class="py-2.5 px-4 text-center">Trạng thái</th>
                                     </tr>
                                 </thead>
@@ -1567,9 +1783,9 @@ def generate_weekly_director_dashboard():
                                         <td class="py-2.5 px-3 text-center font-mono text-slate-300">43</td>
                                         <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Hoàng Thị Hậu</td>
-                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">4.65%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-amber-400">16.28%</td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.98% (3 SV)</td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.98% (3 SV)</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-amber-400">20.93% (9 SV)</td>
                                         <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Đôn đốc EL</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
@@ -1577,21 +1793,41 @@ def generate_weekly_director_dashboard():
                                         <td class="py-2.5 px-3 text-center font-mono text-slate-300">40</td>
                                         <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Hoàng Thị Hậu</td>
-                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">2.50%</td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">2.50% (1 SV)</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">5.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">5.00% (2 SV)</td>
                                         <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Khởi đầu tốt</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-800/40">
+                                        <td class="py-2.5 px-4 font-bold text-white">HN-KS26-CNTT3</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">41</td>
+                                        <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Hoàng Thị Hậu</td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">2.44% (1 SV)</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">4.88% (2 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Tốt</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-800/40">
+                                        <td class="py-2.5 px-4 font-bold text-white">HCM-KS26-CNTT1</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">46</td>
+                                        <td class="py-2.5 px-4 text-slate-300">TP. HCM</td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Lê Nhựt Mi</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Hoàn hảo</span></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
-                    <!-- TABLE 3: ENG105 -->
+                    <!-- TABLE 3: ENG105 (ĐẦY ĐỦ 8 LỚP TOÀN KHÓA KS26) -->
                     <div class="ks26-subject-block space-y-2" data-subject="ENG105">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-emerald-300 uppercase tracking-wider flex items-center gap-1.5">
-                                <i class="fa-solid fa-comments"></i> 3. Tiếng Anh Giao Tiếp (ENG105-K26) &bull; 4 Lớp Phụ Trách
+                                <i class="fa-solid fa-comments"></i> 3. Tiếng Anh Giao Tiếp (ENG105-K26) &bull; Khối CNTT & QTKD (8 lớp)
                             </span>
                             <span class="text-[11px] text-slate-400">Ngoại ngữ</span>
                         </div>
@@ -1603,22 +1839,42 @@ def generate_weekly_director_dashboard():
                                         <th class="py-2.5 px-3 text-center">Sĩ số</th>
                                         <th class="py-2.5 px-4">Cơ sở</th>
                                         <th class="py-2.5 px-4">Giảng viên</th>
-                                        <th class="py-2.5 px-4 text-center">CC (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">BT (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">Elearning</th>
+                                        <th class="py-2.5 px-4 text-center">Nghỉ &ge;10%</th>
+                                        <th class="py-2.5 px-4 text-center">Thiếu BT &ge;10%</th>
+                                        <th class="py-2.5 px-4 text-center">Vi phạm KCB bài</th>
                                         <th class="py-2.5 px-4 text-center">Trạng thái</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-800">
                                     <tr class="hover:bg-slate-800/40">
+                                        <td class="py-2.5 px-4 font-bold text-white">HN-KS26-CNTT2</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">40</td>
+                                        <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Nguyễn Hồng Nhung</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Nhắc nhở CC</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HN-KS26-CNTT3</td>
-                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">42</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">41</td>
                                         <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Lò Thị Ngọc Anh</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">2.44% (1 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Tốt</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-800/40 bg-rose-950/20">
+                                        <td class="py-2.5 px-4 font-bold text-rose-300">HCM-KS26-CNTT1</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">46</td>
+                                        <td class="py-2.5 px-4 text-slate-300">TP. HCM</td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Huỳnh Thị Kim Khánh</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Hoàn hảo (0%)</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-amber-400">17.39% (8 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Đôn đốc CC & EL</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HCM-KS26-CNTT2</td>
@@ -1627,8 +1883,28 @@ def generate_weekly_director_dashboard():
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Huỳnh Thị Kim Khánh</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-semibold text-amber-400">11.11%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Theo dõi EL</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Hoàn hảo 100%</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-800/40">
+                                        <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD1</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
+                                        <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Lò Thị Ngọc Anh</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">9.09% (4 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Ổn định</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-800/40">
+                                        <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD2</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">45</td>
+                                        <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Nguyễn Hồng Nhung</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-amber-400">20.00% (9 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Nhắc nhở EL</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD3</td>
@@ -1637,114 +1913,160 @@ def generate_weekly_director_dashboard():
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Nguyễn Hồng Nhung</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Hoàn hảo (0%)</span></td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.82% (3 SV)</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Tốt</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HCM-KS26-QTKD1</td>
-                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">46</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">21</td>
                                         <td class="py-2.5 px-4 text-slate-300">TP. HCM</td>
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Huỳnh Thị Kim Khánh</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-extrabold text-rose-400">30.43%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Cảnh báo EL</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Hoàn hảo 100%</span></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
-                    <!-- TABLE 4: SSK103 -->
+                    <!-- TABLE 4: SSK103 (TƯ DUY PHÂN TÍCH - ĐẦY ĐỦ 4 LỚP QTKD) -->
                     <div class="ks26-subject-block space-y-2" data-subject="SSK103">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
-                                <i class="fa-solid fa-chart-line"></i> 4. Tư Duy Phân Tích (SSK103) &bull; 2 Lớp Phụ Trách
+                                <i class="fa-solid fa-brain"></i> 4. Tư Duy Phân Tích (SSK103) &bull; Khối Quản Trị Kinh Doanh (QTKD)
                             </span>
-                            <span class="text-[11px] text-slate-400">Kỹ năng nền tảng</span>
+                            <span class="text-[11px] text-amber-400 font-bold">Chỉ số theo dõi trọng điểm</span>
                         </div>
-                        <div class="overflow-x-auto rounded-xl border border-slate-800">
+                        <div class="overflow-x-auto rounded-xl border border-amber-500/30">
                             <table class="w-full text-left text-xs lg:text-sm">
-                                <thead class="bg-slate-900 text-slate-300 uppercase font-bold border-b border-slate-800">
+                                <thead class="bg-slate-900 text-amber-300 uppercase font-bold border-b border-amber-500/30">
                                     <tr>
                                         <th class="py-2.5 px-4">Tên Lớp</th>
                                         <th class="py-2.5 px-3 text-center">Sĩ số</th>
                                         <th class="py-2.5 px-4">Cơ sở</th>
                                         <th class="py-2.5 px-4">Giảng viên</th>
-                                        <th class="py-2.5 px-4 text-center">CC (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">BT (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">Elearning</th>
-                                        <th class="py-2.5 px-4 text-center">Trạng thái</th>
+                                        <th class="py-2.5 px-4 text-center">Tỉ lệ SV nghỉ từ 10%</th>
+                                        <th class="py-2.5 px-4 text-center">Thiếu BTVN từ 10%</th>
+                                        <th class="py-2.5 px-4 text-center">Vi phạm KCB bài</th>
+                                        <th class="py-2.5 px-4 text-center">Đánh giá & Trạng thái</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-800">
+                                    <!-- HN-QTKD3: SỐ LIỆU ĐƯỢC GIÁM ĐỐC CHỈ ĐẠO -->
+                                    <tr class="hover:bg-slate-800/40 bg-amber-950/20">
+                                        <td class="py-3 px-4 font-black text-amber-300 flex items-center gap-1.5">
+                                            <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> HN-KS26-QTKD3
+                                        </td>
+                                        <td class="py-3 px-3 text-center font-mono font-bold text-white">44</td>
+                                        <td class="py-3 px-4 text-slate-300">Hà Nội</td>
+                                        <td class="py-3 px-4 text-slate-200 font-semibold">Nguyễn Ngọc Vân Khanh</td>
+                                        <td class="py-3 px-4 text-center font-black text-rose-400 text-sm">20.45% <span class="text-xs font-normal text-slate-300">(9/44 SV)</span></td>
+                                        <td class="py-3 px-4 text-center font-black text-amber-300 text-sm">6.82% <span class="text-xs font-normal text-slate-300">(3/44 SV)</span></td>
+                                        <td class="py-3 px-4 text-center font-black text-rose-400 text-sm">20.45% <span class="text-xs font-normal text-slate-300">(9/44 SV)</span></td>
+                                        <td class="py-3 px-4 text-center"><span class="px-2.5 py-1 rounded-md text-xs font-extrabold badge-danger">🚨 Điểm nóng cần đôn đốc</span></td>
+                                    </tr>
                                     <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD1</td>
                                         <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
                                         <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Nguyễn Ngọc Vân Khanh</td>
-                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">9.09%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-slate-200">9.09% <span class="text-xs text-slate-400">(4 SV)</span></td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.82%</td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.82% <span class="text-xs text-slate-400">(3 SV)</span></td>
                                         <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 4 SV vắng</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
+                                        <td class="py-2.5 px-4 font-bold text-white">HCM-KS26-QTKD1</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">21</td>
+                                        <td class="py-2.5 px-4 text-slate-300">TP. HCM</td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Lê Thị Bảo Yến</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Chuẩn mực 100%</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD2</td>
-                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">45</td>
                                         <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
-                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Nguyễn Ngọc Vân Khanh</td>
-                                        <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                        <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                        <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700">⏳ Chuẩn bị học</span></td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Nguyễn Thị Hồng Minh</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-slate-200">6.67% <span class="text-xs text-slate-400">(3 SV)</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">8.89% <span class="text-xs text-slate-400">(4 SV)</span></td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Ổn định</span></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
-                    <!-- TABLE 5: SSK102 -->
+                    <!-- TABLE 5: SSK102 (TIN HỌC ỨNG DỤNG - ĐẦY ĐỦ CÁC LỚP QTKD) -->
                     <div class="ks26-subject-block space-y-2" data-subject="SSK102">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-purple-300 uppercase tracking-wider flex items-center gap-1.5">
-                                <i class="fa-solid fa-desktop"></i> 5. Tin Học Ứng Dụng (SSK102) &bull; 2 Lớp Phụ Trách
+                                <i class="fa-solid fa-desktop"></i> 5. Tin Học Ứng Dụng (SSK102) &bull; Khối Quản Trị Kinh Doanh (QTKD)
                             </span>
-                            <span class="text-[11px] text-slate-400">Đại cương tin học</span>
+                            <span class="text-[11px] text-purple-400 font-bold">Chỉ số theo dõi trọng điểm</span>
                         </div>
-                        <div class="overflow-x-auto rounded-xl border border-slate-800">
+                        <div class="overflow-x-auto rounded-xl border border-purple-500/30">
                             <table class="w-full text-left text-xs lg:text-sm">
-                                <thead class="bg-slate-900 text-slate-300 uppercase font-bold border-b border-slate-800">
+                                <thead class="bg-slate-900 text-purple-300 uppercase font-bold border-b border-purple-500/30">
                                     <tr>
                                         <th class="py-2.5 px-4">Tên Lớp</th>
                                         <th class="py-2.5 px-3 text-center">Sĩ số</th>
                                         <th class="py-2.5 px-4">Cơ sở</th>
                                         <th class="py-2.5 px-4">Giảng viên</th>
-                                        <th class="py-2.5 px-4 text-center">CC (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">BT (>10%)</th>
-                                        <th class="py-2.5 px-4 text-center">Elearning</th>
-                                        <th class="py-2.5 px-4 text-center">Trạng thái</th>
+                                        <th class="py-2.5 px-4 text-center">Tỉ lệ SV nghỉ từ 10%</th>
+                                        <th class="py-2.5 px-4 text-center">Thiếu BTVN từ 10%</th>
+                                        <th class="py-2.5 px-4 text-center">Vi phạm KCB bài</th>
+                                        <th class="py-2.5 px-4 text-center">Đánh giá & Trạng thái</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-800">
-                                    <tr class="hover:bg-slate-800/40">
-                                        <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD3</td>
-                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
-                                        <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
-                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Nguyễn Thị Hồng Minh</td>
-                                        <td class="py-2.5 px-4 text-center font-extrabold text-rose-400">18.18%</td>
-                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">9.09%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 8 SV vắng</span></td>
+                                    <!-- HN-QTKD3: SỐ LIỆU CHUẨN XÁC -->
+                                    <tr class="hover:bg-slate-800/40 bg-purple-950/20">
+                                        <td class="py-3 px-4 font-black text-purple-300 flex items-center gap-1.5">
+                                            <i class="fa-solid fa-triangle-exclamation text-purple-400"></i> HN-KS26-QTKD3
+                                        </td>
+                                        <td class="py-3 px-3 text-center font-mono font-bold text-white">44</td>
+                                        <td class="py-3 px-4 text-slate-300">Hà Nội</td>
+                                        <td class="py-3 px-4 text-slate-200 font-semibold">Nguyễn Thị Hồng Minh</td>
+                                        <td class="py-3 px-4 text-center font-black text-rose-400 text-sm">15.91% <span class="text-xs font-normal text-slate-300">(7/44 SV)</span></td>
+                                        <td class="py-3 px-4 text-center font-black text-emerald-400 text-sm">0.00%</td>
+                                        <td class="py-3 px-4 text-center font-black text-purple-300 text-sm">18.18% <span class="text-xs font-normal text-slate-300">(8/44 SV)</span></td>
+                                        <td class="py-3 px-4 text-center"><span class="px-2.5 py-1 rounded-md text-xs font-extrabold badge-danger">🚨 7 SV vắng chuyên cần</span></td>
                                     </tr>
                                     <tr class="hover:bg-slate-800/40">
                                         <td class="py-2.5 px-4 font-bold text-white">HCM-KS26-QTKD1</td>
-                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">46</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">21</td>
                                         <td class="py-2.5 px-4 text-slate-300">TP. HCM</td>
                                         <td class="py-2.5 px-4 text-slate-300 font-medium">Lê Hà Thanh Sang</td>
-                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">8.70%</td>
                                         <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">8.70%</td>
-                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 2 SV vắng</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Chuẩn mực 100%</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-800/40">
+                                        <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD1</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
+                                        <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Nguyễn Thị Hồng Minh</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-amber-400">11.36% <span class="text-xs text-slate-400">(5 SV)</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-amber-300">6.82% <span class="text-xs text-slate-400">(3 SV)</span></td>
+                                        <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.82% <span class="text-xs text-slate-400">(3 SV)</span></td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Cần đôn đốc CC</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-800/40">
+                                        <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD2</td>
+                                        <td class="py-2.5 px-3 text-center font-mono text-slate-300">45</td>
+                                        <td class="py-2.5 px-4 text-slate-300">Hà Nội</td>
+                                        <td class="py-2.5 px-4 text-slate-300 font-medium">Nguyễn Ngọc Vân Khanh</td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-slate-200">6.67% <span class="text-xs text-slate-400">(3 SV)</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-amber-300">8.89% <span class="text-xs text-slate-400">(4 SV)</span></td>
+                                        <td class="py-2.5 px-4 text-center font-bold text-rose-400">20.00% <span class="text-xs text-slate-400">(9 SV)</span></td>
+                                        <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 9 SV vi phạm KCB</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1764,9 +2086,9 @@ def generate_weekly_director_dashboard():
                                 <th class="py-3 px-3 text-center">Cơ sở</th>
                                 <th class="py-3 px-4">Môn Học</th>
                                 <th class="py-3 px-4">Giảng viên</th>
-                                <th class="py-3 px-4 text-center">CC (>10%)</th>
-                                <th class="py-3 px-4 text-center">BT (>10%)</th>
-                                <th class="py-3 px-4 text-center">Elearning</th>
+                                <th class="py-3 px-4 text-center">Nghỉ &ge;10%</th>
+                                <th class="py-3 px-4 text-center">Thiếu BT &ge;10%</th>
+                                <th class="py-3 px-4 text-center">Vi phạm KCB bài</th>
                                 <th class="py-3 px-4 text-center">Đánh giá & Trạng thái</th>
                             </tr>
                         </thead>
@@ -1780,7 +2102,7 @@ def generate_weekly_director_dashboard():
                                 <td class="py-2.5 px-4 text-slate-300">Trịnh Quốc Hai</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-slate-200">4.65%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-slate-200">9.30%</td>
                                 <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Chuẩn mực</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/40 bg-slate-900/30">
@@ -1789,9 +2111,9 @@ def generate_weekly_director_dashboard():
                                 <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
                                 <td class="py-2.5 px-4 text-cyan-300 font-semibold">Làm việc nhóm (SKL01)</td>
                                 <td class="py-2.5 px-4 text-slate-300">Hoàng Thị Hậu</td>
-                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">4.65%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-amber-400">16.28%</td>
+                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.98%</td>
+                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.98%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-amber-400">20.93%</td>
                                 <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Đôn đốc EL</span></td>
                             </tr>
 
@@ -1802,10 +2124,10 @@ def generate_weekly_director_dashboard():
                                 <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
                                 <td class="py-2.5 px-4 text-indigo-300 font-semibold">Nhập môn CNTT (IT108)</td>
                                 <td class="py-2.5 px-4 text-slate-300">Trịnh Quốc Hai</td>
-                                <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700">⏳ Chuẩn bị học</span></td>
+                                <td class="py-2.5 px-4 text-center text-emerald-400 font-bold">0.00%</td>
+                                <td class="py-2.5 px-4 text-center text-emerald-400 font-bold">0.00%</td>
+                                <td class="py-2.5 px-4 text-center text-slate-200">2.50%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Tốt</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/40 bg-slate-900/30">
                                 <td class="py-2.5 px-4 font-bold text-slate-400">HN-KS26-CNTT2</td>
@@ -1818,42 +2140,53 @@ def generate_weekly_director_dashboard():
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">5.00%</td>
                                 <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Khởi đầu tốt</span></td>
                             </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HN-KS26-CNTT2</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">40</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
+                                <td class="py-2.5 px-4 text-emerald-300 font-semibold">Tiếng Anh (ENG105)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Nguyễn Hồng Nhung</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Nhắc nhở CC</span></td>
+                            </tr>
 
                             <!-- HN3 -->
                             <tr class="hover:bg-slate-800/40">
                                 <td class="py-2.5 px-4 font-bold text-white">HN-KS26-CNTT3</td>
-                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">42</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">41</td>
                                 <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
                                 <td class="py-2.5 px-4 text-indigo-300 font-semibold">Nhập môn CNTT (IT108)</td>
                                 <td class="py-2.5 px-4 text-slate-300">Lương Quốc Tuấn</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Xuất sắc (0%)</span></td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">2.44%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Tốt</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/40 bg-slate-900/30">
                                 <td class="py-2.5 px-4 font-bold text-slate-400">HN-KS26-CNTT3</td>
-                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">42</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">41</td>
                                 <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
                                 <td class="py-2.5 px-4 text-emerald-300 font-semibold">Tiếng Anh (ENG105)</td>
                                 <td class="py-2.5 px-4 text-slate-300">Lò Thị Ngọc Anh</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Hoàn hảo (0%)</span></td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">2.44%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Tốt</span></td>
                             </tr>
 
                             <!-- HN4 -->
-                            <tr class="hover:bg-slate-800/40">
-                                <td class="py-2.5 px-4 font-bold text-white">HN-KS26-CNTT4</td>
-                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">27</td>
+                            <tr class="hover:bg-slate-800/40 bg-rose-950/20">
+                                <td class="py-2.5 px-4 font-bold text-rose-300">HN-KS26-CNTT4</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">29</td>
                                 <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
                                 <td class="py-2.5 px-4 text-indigo-300 font-semibold">Nhập môn CNTT (IT108)</td>
                                 <td class="py-2.5 px-4 text-slate-300">Lương Quốc Tuấn</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-extrabold text-rose-400">22.22%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Nhắc EL</span></td>
+                                <td class="py-2.5 px-4 text-center font-bold text-rose-400">17.24%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-rose-400">24.14%</td>
+                                <td class="py-2.5 px-4 text-center font-extrabold text-rose-400">44.83%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Điểm nóng</span></td>
                             </tr>
 
                             <!-- HCM1 -->
@@ -1865,8 +2198,30 @@ def generate_weekly_director_dashboard():
                                 <td class="py-2.5 px-4 text-slate-300">Lê Hà Thanh Sang</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-slate-200">6.52%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Nề nếp tốt</span></td>
+                                <td class="py-2.5 px-4 text-center font-bold text-rose-400">54.35%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Đôn đốc EL</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HCM-KS26-CNTT1</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">46</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HCM</td>
+                                <td class="py-2.5 px-4 text-cyan-300 font-semibold">Làm việc nhóm (SKL01)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Lê Nhựt Mi</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Chuẩn mực</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HCM-KS26-CNTT1</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">46</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HCM</td>
+                                <td class="py-2.5 px-4 text-emerald-300 font-semibold">Tiếng Anh (ENG105)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Huỳnh Thị Kim Khánh</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-amber-400">17.39%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Đôn đốc CC & EL</span></td>
                             </tr>
 
                             <!-- HCM2 -->
@@ -1878,8 +2233,19 @@ def generate_weekly_director_dashboard():
                                 <td class="py-2.5 px-4 text-slate-300">Lê Hà Thanh Sang</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-slate-200">8.89%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Ổn định</span></td>
+                                <td class="py-2.5 px-4 text-center font-bold text-amber-400">28.89%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Đôn đốc EL</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HCM-KS26-CNTT2</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">45</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HCM</td>
+                                <td class="py-2.5 px-4 text-cyan-300 font-semibold">Làm việc nhóm (SKL01)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Lê Nhựt Mi</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Chuẩn mực</span></td>
                             </tr>
                             <tr class="hover:bg-slate-800/40 bg-slate-900/30">
                                 <td class="py-2.5 px-4 font-bold text-slate-400">HCM-KS26-CNTT2</td>
@@ -1889,8 +2255,8 @@ def generate_weekly_director_dashboard():
                                 <td class="py-2.5 px-4 text-slate-300">Huỳnh Thị Kim Khánh</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-semibold text-amber-400">11.11%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Theo dõi EL</span></td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Hoàn hảo 100%</span></td>
                             </tr>
 
                             <!-- QTKD1 -->
@@ -1905,95 +2271,132 @@ def generate_weekly_director_dashboard():
                                 <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.82%</td>
                                 <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 4 SV vắng</span></td>
                             </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HN-KS26-QTKD1</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
+                                <td class="py-2.5 px-4 text-purple-300 font-semibold">Tin học ứng dụng (SSK102)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Nguyễn Thị Hồng Minh</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-amber-400">11.36%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-amber-300">6.82%</td>
+                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.82%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Cần đôn đốc CC</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HN-KS26-QTKD1</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
+                                <td class="py-2.5 px-4 text-emerald-300 font-semibold">Tiếng Anh (ENG105)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Lò Thị Ngọc Anh</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">9.09%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Ổn định</span></td>
+                            </tr>
 
                             <!-- QTKD2 -->
                             <tr class="hover:bg-slate-800/40">
                                 <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD2</td>
-                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">45</td>
                                 <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
                                 <td class="py-2.5 px-4 text-amber-300 font-semibold">Tư duy phân tích (SSK103)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Nguyễn Thị Hồng Minh</td>
+                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.67%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">8.89%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Ổn định</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HN-KS26-QTKD2</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">45</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
+                                <td class="py-2.5 px-4 text-purple-300 font-semibold">Tin học ứng dụng (SSK102)</td>
                                 <td class="py-2.5 px-4 text-slate-300">Nguyễn Ngọc Vân Khanh</td>
-                                <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                <td class="py-2.5 px-4 text-center text-slate-500">--</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700">⏳ Chuẩn bị học</span></td>
+                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.67%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-amber-300">8.89%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-rose-400">20.00%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 9 SV vi phạm KCB</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HN-KS26-QTKD2</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">45</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
+                                <td class="py-2.5 px-4 text-emerald-300 font-semibold">Tiếng Anh (ENG105)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Nguyễn Hồng Nhung</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-semibold text-amber-400">20.00%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 Nhắc nhở EL</span></td>
                             </tr>
 
-                            <!-- QTKD3 -->
-                            <tr class="hover:bg-slate-800/40">
-                                <td class="py-2.5 px-4 font-bold text-white">HN-KS26-QTKD3</td>
+                            <!-- QTKD3: ĐẦY ĐỦ 3 MÔN -->
+                            <tr class="hover:bg-slate-800/40 bg-amber-950/20">
+                                <td class="py-3 px-4 font-black text-amber-300">HN-KS26-QTKD3</td>
+                                <td class="py-3 px-3 text-center font-mono font-bold text-white">44</td>
+                                <td class="py-3 px-3 text-center text-slate-300 font-bold">HN</td>
+                                <td class="py-3 px-4 text-amber-300 font-black">Tư duy phân tích (SSK103)</td>
+                                <td class="py-3 px-4 text-slate-200 font-semibold">Nguyễn Ngọc Vân Khanh</td>
+                                <td class="py-3 px-4 text-center font-black text-rose-400 text-sm">20.45% (9 SV)</td>
+                                <td class="py-3 px-4 text-center font-black text-amber-300 text-sm">6.82% (3 SV)</td>
+                                <td class="py-3 px-4 text-center font-black text-rose-400 text-sm">20.45% (9 SV)</td>
+                                <td class="py-3 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-extrabold badge-danger">🚨 Điểm nóng cần đôn đốc</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-purple-950/20">
+                                <td class="py-3 px-4 font-black text-purple-300">HN-KS26-QTKD3</td>
+                                <td class="py-3 px-3 text-center font-mono font-bold text-white">44</td>
+                                <td class="py-3 px-3 text-center text-slate-300 font-bold">HN</td>
+                                <td class="py-3 px-4 text-purple-300 font-black">Tin học ứng dụng (SSK102)</td>
+                                <td class="py-3 px-4 text-slate-200 font-semibold">Nguyễn Thị Hồng Minh</td>
+                                <td class="py-3 px-4 text-center font-black text-rose-400 text-sm">15.91% (7 SV)</td>
+                                <td class="py-3 px-4 text-center font-black text-emerald-400 text-sm">0.00%</td>
+                                <td class="py-3 px-4 text-center font-black text-purple-300 text-sm">18.18% (8 SV)</td>
+                                <td class="py-3 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-extrabold badge-danger">🚨 7 SV vắng chuyên cần</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HN-KS26-QTKD3</td>
                                 <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
                                 <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
                                 <td class="py-2.5 px-4 text-emerald-300 font-semibold">Tiếng Anh (ENG105)</td>
                                 <td class="py-2.5 px-4 text-slate-300">Nguyễn Hồng Nhung</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Hoàn hảo (0%)</span></td>
-                            </tr>
-                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
-                                <td class="py-2.5 px-4 font-bold text-slate-400">HN-KS26-QTKD3</td>
-                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">44</td>
-                                <td class="py-2.5 px-3 text-center text-slate-400">HN</td>
-                                <td class="py-2.5 px-4 text-purple-300 font-semibold">Tin học ứng dụng (SSK102)</td>
-                                <td class="py-2.5 px-4 text-slate-300">Nguyễn Thị Hồng Minh</td>
-                                <td class="py-2.5 px-4 text-center font-extrabold text-rose-400">18.18%</td>
-                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">9.09%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 8 SV vắng</span></td>
+                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">6.82%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Tốt</span></td>
                             </tr>
 
-                            <!-- HCM-QTKD1 -->
+                            <!-- HCM-QTKD1: SĨ SỐ CHUẨN 21 SV -->
                             <tr class="hover:bg-slate-800/40">
                                 <td class="py-2.5 px-4 font-bold text-white">HCM-KS26-QTKD1</td>
-                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">46</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">21</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HCM</td>
+                                <td class="py-2.5 px-4 text-amber-300 font-semibold">Tư duy phân tích (SSK103)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Lê Thị Bảo Yến</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Chuẩn mực 100%</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HCM-KS26-QTKD1</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">21</td>
+                                <td class="py-2.5 px-3 text-center text-slate-400">HCM</td>
+                                <td class="py-2.5 px-4 text-purple-300 font-semibold">Tin học ứng dụng (SSK102)</td>
+                                <td class="py-2.5 px-4 text-slate-300">Lê Hà Thanh Sang</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Chuẩn mực 100%</span></td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
+                                <td class="py-2.5 px-4 font-bold text-slate-400">HCM-KS26-QTKD1</td>
+                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">21</td>
                                 <td class="py-2.5 px-3 text-center text-slate-400">HCM</td>
                                 <td class="py-2.5 px-4 text-emerald-300 font-semibold">Tiếng Anh (ENG105)</td>
                                 <td class="py-2.5 px-4 text-slate-300">Huỳnh Thị Kim Khánh</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-extrabold text-rose-400">30.43%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-danger">🚨 Cảnh báo EL</span></td>
-                            </tr>
-                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
-                                <td class="py-2.5 px-4 font-bold text-slate-400">HCM-KS26-QTKD1</td>
-                                <td class="py-2.5 px-3 text-center font-mono text-slate-300">46</td>
-                                <td class="py-2.5 px-3 text-center text-slate-400">HCM</td>
-                                <td class="py-2.5 px-4 text-purple-300 font-semibold">Tin học ứng dụng (SSK102)</td>
-                                <td class="py-2.5 px-4 text-slate-300">Lê Hà Thanh Sang</td>
-                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">8.70%</td>
                                 <td class="py-2.5 px-4 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-4 text-center font-semibold text-slate-200">8.70%</td>
-                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-warning">🟡 2 SV vắng</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>td class="py-2.5 px-5 text-slate-300 font-medium">Nguyễn Thị Hồng Minh</td>
-                                <td class="py-2.5 px-5 text-center font-extrabold text-rose-400">18.18%</td>
-                                <td class="py-2.5 px-5 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-5 text-center font-semibold text-slate-200">9.09%</td>
-                                <td class="py-2.5 px-5 text-center"><span class="px-2.5 py-1 rounded text-xs font-bold badge-danger">🚨 8 SV vắng</span></td>
-                            </tr>
-
-                            <!-- HCM-KS26-QTKD1 -->
-                            <tr class="hover:bg-slate-800/40">
-                                <td rowspan="2" class="py-3.5 px-5 font-bold text-white border-r border-slate-800/60 align-top">HCM-KS26-QTKD1</td>
-                                <td rowspan="2" class="py-3.5 px-5 text-center font-mono text-slate-300 border-r border-slate-800/60 align-top">46</td>
-                                <td class="py-2.5 px-5 text-emerald-300 font-semibold">Tiếng Anh Giao tiếp (ENG105)</td>
-                                <td class="py-2.5 px-5 text-slate-300 font-medium">Huỳnh Thị Kim Khánh</td>
-                                <td class="py-2.5 px-5 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-5 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-5 text-center font-extrabold text-rose-400">30.43%</td>
-                                <td class="py-2.5 px-5 text-center"><span class="px-2.5 py-1 rounded text-xs font-bold badge-danger">🚨 Cảnh báo EL</span></td>
-                            </tr>
-                            <tr class="hover:bg-slate-800/40 bg-slate-900/30">
-                                <td class="py-2.5 px-5 text-purple-300 font-semibold">Tin học ứng dụng (SSK102)</td>
-                                <td class="py-2.5 px-5 text-slate-300 font-medium">Lê Hà Thanh Sang</td>
-                                <td class="py-2.5 px-5 text-center font-semibold text-slate-200">8.70%</td>
-                                <td class="py-2.5 px-5 text-center font-bold text-emerald-400">0.00%</td>
-                                <td class="py-2.5 px-5 text-center font-semibold text-slate-200">8.70%</td>
-                                <td class="py-2.5 px-5 text-center"><span class="px-2.5 py-1 rounded text-xs font-bold badge-warning">🟡 2 SV vắng</span></td>
+                                <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded text-xs font-bold badge-success">🟢 Chuẩn mực 100%</span></td>
                             </tr>
                         </tbody>
                     </table>

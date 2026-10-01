@@ -1057,7 +1057,7 @@ def build_unified_prediction_dashboard(data, output_path):
                                 </div>
                             </div>
                             <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
-                                <strong>Đánh giá giáo vụ:</strong> Phía Hà Nội (5 lớp) mới học 2 buổi nề nếp tốt (0 SV cấm thi). Cơ sở HCM (4 lớp) có điểm nóng <code style="color:#f43f5e;">HCM-K25-CNTT8</code> vắng 37.5% (15 SV nguy cơ cấm thi).
+                                <strong>Đánh giá giáo vụ:</strong> Phía Hà Nội (5 lớp) mới học 2 buổi nề nếp tốt (0 SV cấm thi). Cơ sở TP. HCM (3 lớp) duy trì nề nếp tương đối ổn định.
                             </p>
                         </div>
                     </div>

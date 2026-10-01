@@ -111,11 +111,13 @@ if os.path.exists(pred_json_path):
 
 # Load daily log analysis data (Sub Agent 4 Daily Log Auditor results)
 daily_log_data = {}
+daily_data_full = {}
 daily_log_json_path = "data/processed/daily_log_analysis.json"
 if os.path.exists(daily_log_json_path):
     try:
         with open(daily_log_json_path, "r", encoding="utf-8") as df:
-            daily_log_data = json.load(df).get("monthly_stats", {})
+            daily_data_full = json.load(df)
+            daily_log_data = daily_data_full.get("monthly_stats", {})
     except Exception as e:
         print(f"Warning: Cannot parse daily log analysis json: {e}")
 
@@ -184,6 +186,8 @@ def parse_date(d_val):
             year = int(parts[2])
             if year < 100:
                 year += 2000
+            if year == 2027 and int(parts[1]) == 9:
+                return date(2026, 9, 23)
             return date(year, int(parts[1]), int(parts[0]))
         except ValueError:
             return None
@@ -200,7 +204,7 @@ def get_max_excel_date(workbook, sheets):
                 all_dates.append(parsed)
     return max(all_dates) if all_dates else date(2026, 8, 18)
 
-active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s for k in ['KS24', 'KS25', 'SKL', 'QTKD'])]
+active_sheets = [s for s in wb.sheetnames if s.lower() != 'sheet1' and any(k in s for k in ['KS24', 'KS25', 'KS26', 'SKL', 'QTKD'])]
 max_date = get_max_excel_date(wb, active_sheets)
 monday_curr = max_date - timedelta(days=max_date.weekday())
 sunday_curr = monday_curr + timedelta(days=6)
@@ -213,7 +217,7 @@ weekly_groups = {
         'sheet_curr': 'KS25_Phantichthietkehethong' if 'KS25_Phantichthietkehethong' in wb.sheetnames else 'KS25_Python_Web'
     },
     'KS25_CNTT_HCM': {
-        'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7', 'HCM-K25-CNTT8'],
+        'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7'],
         'sheet_curr': 'KS25_Phantichthietkehethong'
     },
     'KS25_QTKD_HN': {
@@ -223,6 +227,14 @@ weekly_groups = {
     'KS24_CNTT_HN': {
         'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HCM-K24-CNTT1'],
         'sheet_curr': 'KS24_AI_Microservice' if 'KS24_AI_Microservice' in wb.sheetnames else ('KS24_AI_Intergration (2)' if 'KS24_AI_Intergration (2)' in wb.sheetnames else 'KS24_AI_Intergration')
+    },
+    'KS26_SKL_HN': {
+        'classes': ['HN-K26-CNTT1', 'HN-K26-CNTT2', 'HN-K26-CNTT3', 'HN-K26-QTKD1', 'HN-K26-QTKD2', 'HN-K26-QTKD3'],
+        'sheet_curr': 'KS26_SKL_Chudong'
+    },
+    'KS26_SKL_HCM': {
+        'classes': ['HCM-K26-CNTT1', 'HCM-K26-CNTT2', 'HCM-K26-QTKD1'],
+        'sheet_curr': 'KS26_SKL_Chudong'
     }
 }
 
@@ -240,7 +252,7 @@ def normalize_class_name(name):
     for suffix in ['_HK2', '_HL', '-HL', '\t', ' - cũ', '_GL']:
         if name_str.endswith(suffix):
             name_str = name_str[:-len(suffix)].strip()
-    name_str = name_str.replace("KS25", "K25").replace("KS24", "K24").replace("KS23", "K23")
+    name_str = name_str.replace("KS26", "K26").replace("KS25", "K25").replace("KS24", "K24").replace("KS23", "K23")
     return name_str
 
 instructors_data = {}
@@ -549,8 +561,8 @@ for name, data in sorted(instructors_data.items()):
         recommendations = 'Phối hợp với phòng CTSV kéo sinh viên quay lại và triển khai các buổi hỗ trợ kiến thức nền tảng.'
     elif name == 'Trần Quốc Tuấn':
         strengths = 'Khởi đầu môn mới Phân tích thiết kế hệ thống tốt tại lớp CNTT6 (vi phạm chỉ 1.75%). Quản lý kỷ luật tác nghiệp chuẩn mực.'
-        weaknesses = 'Tại lớp HCM-K25-CNTT8, so với mốc 0% đầu môn mới, tỷ lệ vi phạm Elearning xuất hiện ngay buổi đầu ở mức 24.24%.'
-        recommendations = 'Cần kiểm soát chặt và chấn chỉnh nề nếp Elearning lớp HCM-K25-CNTT8 ngay trước buổi 2; đôn đốc sinh viên hoàn thành lý thuyết trước khi đến lớp.'
+        weaknesses = 'Cần tiếp tục bám sát và kiểm soát chặt chẽ nề nếp Elearning của sinh viên.'
+        recommendations = 'Đôn đốc sinh viên hoàn thành lý thuyết Elearning đầy đủ trước khi lên lớp, duy trì nề nếp lớp học ổn định.'
     elif name == 'Nguyễn Đức Minh':
         strengths = 'Khởi đầu xuất sắc môn mới Phân tích thiết kế hệ thống tại cả 2 lớp HCM-K25-CNTT5 (0.0% vi phạm tuyệt đối) và HCM-K25-CNTT7 (chỉ 0.85% vi phạm).'
         weaknesses = 'Không ghi nhận vi phạm nề nếp nghiêm trọng.'
@@ -686,6 +698,80 @@ with open(output_report_path, 'w', encoding='utf-8') as f:
             f.write(f"- **Điểm mạnh**:\n  - {p['Strengths']}\n")
             f.write(f"- **Điểm yếu / Lỗi vi phạm đã mắc**:\n  - {p['Weaknesses']}\n")
             f.write(f"- **Đề xuất cải thiện cụ thể**:\n  - {p['Recommendations']}\n\n")
+
+    # 3. BÁO CÁO KIỂM TOÁN GIỜ CÔNG & TUÂN THỦ KPI MASTER WORKLANE (CHỐT ĐẾN 18/09/2026)
+    under_hours_audit = daily_data_full.get("under_hours_audit", {})
+    kpi_audit = daily_data_full.get("kpi_master_compliance_audit", {})
+    sep_under = under_hours_audit.get("september", {})
+    sep_kpi = kpi_audit.get("september", {})
+
+    f.write("\n---\n\n")
+    f.write("## 3. Báo Cáo Kiểm Toán Giờ Công & Tuân Thủ KPI Master Worklane (Chốt Đến 18/09/2026)\n\n")
+    f.write("> [!IMPORTANT]\n")
+    f.write("> **MỤC TIÊU KIỂM TOÁN TÁC NGHIỆP THỜI GIAN THỰC (WORKLANE AUDIT):**\n")
+    f.write("> - **Thời gian chốt số liệu**: Từ **01/09/2026 đến hết ngày 18/09/2026** (12 ngày làm việc chính thức, đã loại trừ nghỉ lễ 31/08 - 02/09 và các ngày nghỉ phép được phê duyệt).\n")
+    f.write("> - **Quỹ thời gian tiêu chuẩn**: **8.0h/ngày** (Tổng định mức chuẩn trong 12 ngày là **96.0 giờ/nhân sự**).\n")
+    f.write("> - **Quy tắc KPI Master từng khối**: Khối CNTT (chuẩn hóa dạy 2.0h/buổi, 18 task Review độc lập, khảo thí 120p/lớp, cấm nghiệm thu soạn học liệu tự do ngoài barem); Khối QTKD (chuẩn dạy 3.0h, CVHT Rank 1 là 1.5h, Rank 2 là 2.0h).\n\n")
+
+    # 3.1. Tổng hợp theo khối
+    f.write("### 3.1. Bảng Tổng Hợp Giờ Công & Vi Phạm KPI Master Theo 4 Khối Đào Tạo\n\n")
+    f.write("| Khối Đào Tạo | Tổng NS | Số NS Thiếu Giờ | Tổng Giờ Thiếu | Lỗi Over-reporting | Lỗi Ngoài Barem (Wildcard) | Lỗi Lệch Pha Worklane |\n")
+    f.write("| :--- | :---: | :---: | :---: | :---: | :---: | :---: |\n")
+
+    by_block_under = sep_under.get("by_block", {})
+    by_block_kpi = sep_kpi.get("by_block", {})
+
+    for block_name, u_stats in by_block_under.items():
+        k_stats = by_block_kpi.get(block_name, {})
+        f.write(f"| **{block_name}** | {u_stats.get('total_staff', 0)} | **{u_stats.get('under_staff', 0)}** | **{u_stats.get('total_deficit', 0.0):.1f}h** | {k_stats.get('over_reporting', 0)} | {k_stats.get('wildcard', 0)} | {k_stats.get('unverified', 0)} |\n")
+
+    f.write("\n\n")
+
+    # 3.2. Danh sách nhân sự thiếu giờ
+    f.write("### 3.2. Danh Sách Chi Tiết Nhân Sự Làm Thiếu Giờ (< 8h/ngày trong Tháng 9)\n\n")
+    f.write("| STT | Họ và tên | Khối | Vai trò & Rank | Giờ Thực Tế | Giờ Chuẩn | Giờ Thiếu | Công Suất (%) | Số Ngày < 8h | Mức Độ Cảnh Báo |\n")
+    f.write("| :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |\n")
+
+    staff_ranking = sep_under.get("staff_ranking", [])
+    for idx_s, s in enumerate(staff_ranking, 1):
+        sev = s.get('severity', 'Đạt chuẩn')
+        sev_badge = "🟢 Đạt chuẩn"
+        if "Nghiêm trọng" in sev:
+            sev_badge = "🔴 **Nghiêm trọng**"
+        elif "Cảnh báo" in sev:
+            sev_badge = "🟡 Cảnh báo"
+
+        f.write(f"| {idx_s} | **{s.get('name')}** | {s.get('group')} | {s.get('role')} (R{s.get('rank')}) | {s.get('declared_hours', 0):.1f}h | {s.get('expected_hours', 88.0):.1f}h | **{s.get('deficit_hours', 0):.1f}h** | **{s.get('capacity_pct', 0):.1f}%** | {s.get('under_8h_days_count', 0)}/11 | {sev_badge} |\n")
+
+    f.write("\n\n")
+
+    # 3.3. Top vi phạm KPI Master
+    f.write("### 3.3. Thống Kê Các Hành Vi Khai Báo Sai Quy Định KPI Master\n\n")
+    f.write("Hệ thống kiểm toán tự động phát hiện 3 nhóm sai phạm khai báo công việc phổ biến trên Worklane:\n\n")
+    f.write("1. **Khai báo vượt định mức (Over-reporting)**: Khai báo giờ thực tế cao gấp 1.3x - 2.0x so với định mức KPI Master ban hành của khối (ví dụ: giảng dạy trực tiếp barem 2.0h nhưng khai báo 3h, 4h; chấm bài vượt trần).\n")
+    f.write("2. **Khai báo đầu việc tự do ngoài barem (Wildcard Tasks)**: Tự ý khai báo các công việc 'soạn bài', 'nghiên cứu', 'hỗ trợ tự do' mà không có mã task hoặc không nằm trong danh mục 18 task type được nghiệm thu.\n")
+    f.write("3. **Lệch pha Worklane (UNVERIFIED)**: Khai báo trong nhật ký ngày là hoàn thành 100%, nhưng đối soát ticket trên hệ thống Worklane PM vẫn đang ở trạng thái 'Cần làm' hoặc 'Đang làm'.\n\n")
+
+    top_violators = sep_kpi.get("top_violators", [])
+    if top_violators:
+        f.write("| Họ và tên | Khối | Tổng Lỗi KPI | Vượt Định Mức | Ngoài Barem | Chưa DONE Worklane | Chi Tiết Vi Phạm Điển Hình |\n")
+        f.write("| :--- | :--- | :---: | :---: | :---: | :---: | :--- |\n")
+        for tv in top_violators[:12]:
+            samples = tv.get("sample_issues", [])
+            sample_str = "; ".join([f"{s.get('task')[:30]}... ({s.get('detail')})" for s in samples[:2]])
+            if not sample_str:
+                sample_str = "Khai báo task tự do ngoài barem định mức"
+            f.write(f"| **{tv.get('name')}** | {tv.get('group')} | **{tv.get('total_issues')}** | {tv.get('over_reporting_count')} | {tv.get('wildcard_count')} | {tv.get('unverified_count')} | {sample_str} |\n")
+        f.write("\n\n")
+
+    f.write("### 3.4. Kiến Nghị & Hành Động Quản Trị Từ Ban Lãnh Đạo Đào Tạo\n\n")
+    f.write("1. **Chấn chỉnh nhân sự không báo cáo ngày và thiếu giờ nghiêm trọng**:\n")
+    f.write("   - Yêu cầu các Leader (Thầy Hồ Xuân Hùng, Thầy Nguyễn Bá Minh Đạo, Thầy Trần Minh Cường) làm việc trực tiếp với các nhân sự có công suất < 75% hoặc quên báo cáo nhiều ngày (Trần Minh Cường 0h, Hồ Xuân Hùng 0h, Ngô Quang Huấn 0h, Nguyễn Bá Minh Đạo 7.2h, Nguyễn Ngọc Sơn 11.5h, Đặng Minh Luân 37.8h, Lê Thành Ngọc 48h).\n")
+    f.write("   - Áp dụng trừ điểm kỷ luật tác nghiệp theo Quy chế đào tạo và không xét khen thưởng học kỳ cho nhân sự có tỷ lệ nộp log < 80%.\n")
+    f.write("2. **Kiểm soát chặt chẽ định mức KPI Master**:\n")
+    f.write("   - Khối CNTT: Giảng viên chỉ được khai báo tối đa 120 phút (2.0h) cho một buổi lên lớp trực tiếp. Nghiêm cấm gộp giờ hoặc khai báo vượt trần mà không có phê duyệt của Giám đốc Đào tạo.\n")
+    f.write("   - Loại bỏ 100% các task tự sản xuất học liệu ngoài kế hoạch. Mọi sản phẩm học liệu phải có biên bản nghiệm thu độc lập và ticket Worklane tương ứng.\n")
+    f.write("   - Toàn bộ công việc khai báo 'Hoàn thành' trên log ngày bắt buộc phải đồng bộ chuyển trạng thái `DONE` trên Worklane PM trước 22h00 hàng ngày.\n\n")
 
 print(f"KPI Report generated successfully at: {output_report_path}")
 

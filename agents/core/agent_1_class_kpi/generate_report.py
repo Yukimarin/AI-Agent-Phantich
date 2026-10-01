@@ -333,6 +333,8 @@ html_template = """<!DOCTYPE html>
                             <button id="btn-compare-hn" class="tab-btn active" onclick="switchCompareData('HN')">CNTT HN (KS25)</button>
                             <button id="btn-compare-hcm" class="tab-btn" onclick="switchCompareData('HCM')">CNTT HCM (KS25)</button>
                             <button id="btn-compare-qtkd" class="tab-btn" onclick="switchCompareData('QTKD')">QTKD HN (KS25)</button>
+                            <button id="btn-compare-ks26_hn" class="tab-btn" onclick="switchCompareData('KS26_HN')">KS26 HN (KNM)</button>
+                            <button id="btn-compare-ks26_hcm" class="tab-btn" onclick="switchCompareData('KS26_HCM')">KS26 HCM (KNM)</button>
                         </div>
                     </div>
                     <div style="position: relative; height: 260px;">

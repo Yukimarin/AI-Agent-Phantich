@@ -132,7 +132,7 @@ def load_all_staffs(md_path="data/inputs/staff_roles_ranks.md", emails_db=None):
                             rank = match.group(1) or match.group(2)
                             
                         # Phân chia địa lý cho khối CNTT theo 3 cơ sở chính xác
-                        hcm_cntt_list = ["Nguyễn Bá Minh Đạo", "Lê Hà Thanh Sang", "Trần Quốc Tuấn", "Nguyễn Đức Minh", "Đặng Minh Luân", "Lưu Hoàng Xuân Nguyên", "Phan Ngọc Tài", "Nguyễn Ngọc Sơn", "Phạm Viết Hùng"]
+                        hcm_cntt_list = ["Nguyễn Bá Minh Đạo", "Lê Hà Thanh Sang", "Trần Quốc Tuấn", "Nguyễn Đức Minh", "Lưu Hoàng Xuân Nguyên", "Phan Ngọc Tài", "Phạm Viết Hùng"]
                         hn_nt_cntt_list = ["Hồ Xuân Hùng", "Lâm Tùng Dương", "Lương Quốc Tuấn", "Ngọ Văn Quý", "Nguyễn Quảng An", "Lại Trung Lâm", "Phạm Ngọc Kiên"]
                         hn_hpc_cntt_list = ["Trịnh Quốc Hai", "Bùi Thanh Hải", "Nguyễn Xuân Bách", "Phạm Tuấn Bình", "Nguyễn Công Hưởng", "Đinh Thành Nam", "Mai Xuân Chinh"]
                         

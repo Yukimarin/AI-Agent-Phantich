@@ -1,6 +1,6 @@
 # Báo cáo Vi phạm Kỷ luật tác nghiệp GV/TG (Agent 3)
 
-*Thời gian đối chiếu: 17/09/2026 20:45:51*
+*Thời gian đối chiếu: 01/10/2026 14:10:11*
 
 > [!IMPORTANT]
 > Báo cáo này quét và đối chiếu tự động toàn bộ vi phạm trên hệ thống Worklane PM và QLĐT.
@@ -53,12 +53,10 @@
 | **Lò Thị Ngọc Anh** | GV | N/A | Khối Ngoại ngữ tiếng Anh | `anhltn1@rikkeiacademy.net` | 7 | 0 | **7** |
 | **Nguyễn Thị Tươi** | GV | N/A | Khối QLCDT | `tuoint@rikkei.edu.vn` | 7 | 0 | **7** |
 | **Đỗ Ngọc** | TG | N/A | Khối HN-CNTT | `ngọcd@rikkei.edu.vn` | 0 | 6 | **6** |
-| **Nguyễn Ngọc Sơn** | TG | N/A | Khối HCM-CNTT | `sonnn@rikkeiacademy.com` | 5 | 0 | **5** |
 | **Lê Thị Đỏ** | GV | N/A | Khối Ngoại ngữ tiếng Nhật | `dolt@rikkeieducation.top` | 3 | 0 | **3** |
 | **Nguyễn Đức Minh** | GV | N/A | Khối HCM-CNTT | `minhnd@rikkeiacademy.vn` | 3 | 0 | **3** |
 | **Nguyễn Lâm Thanh Vi** | GV | N/A | Khối HN-CNTT | `vinlt@rikkei.edu.vn` | 0 | 2 | **2** |
 | **Giáp Thị Minh Hằng** | GV | N/A | Khối Ngoại ngữ tiếng Nhật | `hanggtm@rikkeieducation.com` | 2 | 0 | **2** |
-| **Đặng Minh Luân** | TG | N/A | Khối HCM-CNTT | `luandm@rikkeiedu.io.vn` | 1 | 0 | **1** |
 
 ## 📋 PHẦN 2.1: CÁC VI PHẠM TRÊN WORKLANE
 
@@ -250,11 +248,6 @@
 | 2026-07-27 | Worklane | Báo cáo ngày | **Nguyễn Huyền Trang** | `trangnh@rikkei.edu.vn` | GV | N/A | Khối QLCDT | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-27 trên hệ thống Worklane PM |
 | 2026-07-29 | Worklane | Báo cáo ngày | **Nguyễn Huyền Trang** | `trangnh@rikkei.edu.vn` | GV | N/A | Khối QLCDT | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-29 trên hệ thống Worklane PM |
 | 2026-08-21 | Worklane | Báo cáo ngày | **Nguyễn Huyền Trang** | `trangnh@rikkei.edu.vn` | GV | N/A | Khối QLCDT | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-08-21 trên hệ thống Worklane PM |
-| 2026-07-01 | Worklane | Báo cáo ngày | **Nguyễn Ngọc Sơn** | `sonnn@rikkeiacademy.com` | TG | N/A | Khối HCM-CNTT | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-01 trên hệ thống Worklane PM |
-| 2026-07-02 | Worklane | Báo cáo ngày | **Nguyễn Ngọc Sơn** | `sonnn@rikkeiacademy.com` | TG | N/A | Khối HCM-CNTT | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-02 trên hệ thống Worklane PM |
-| 2026-07-03 | Worklane | Báo cáo ngày | **Nguyễn Ngọc Sơn** | `sonnn@rikkeiacademy.com` | TG | N/A | Khối HCM-CNTT | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-03 trên hệ thống Worklane PM |
-| 2026-07-17 | Worklane | Báo cáo ngày | **Nguyễn Ngọc Sơn** | `sonnn@rikkeiacademy.com` | TG | N/A | Khối HCM-CNTT | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-17 trên hệ thống Worklane PM |
-| 2026-08-24 | Worklane | Báo cáo ngày | **Nguyễn Ngọc Sơn** | `sonnn@rikkeiacademy.com` | TG | N/A | Khối HCM-CNTT | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-08-24 trên hệ thống Worklane PM |
 | 2026-07-20 | Worklane | Báo cáo ngày | **Nguyễn Ngọc Vân Khanh** | `khanhnnv@rikkeieducation.top` | GV | N/A | Khối QTKD | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-20 trên hệ thống Worklane PM |
 | 2026-07-21 | Worklane | Báo cáo ngày | **Nguyễn Ngọc Vân Khanh** | `khanhnnv@rikkeieducation.top` | GV | N/A | Khối QTKD | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-21 trên hệ thống Worklane PM |
 | 2026-07-22 | Worklane | Báo cáo ngày | **Nguyễn Ngọc Vân Khanh** | `khanhnnv@rikkeieducation.top` | GV | N/A | Khối QTKD | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-22 trên hệ thống Worklane PM |
@@ -405,7 +398,6 @@
 | 2026-08-13 | Worklane | Báo cáo ngày | **Đinh Thành Nam** | `namdt@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT HPC | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-08-13 trên hệ thống Worklane PM |
 | 2026-08-18 | Worklane | Báo cáo ngày | **Đinh Thành Nam** | `namdt@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT HPC | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-08-18 trên hệ thống Worklane PM |
 | 2026-08-20 | Worklane | Báo cáo ngày | **Đinh Thành Nam** | `namdt@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT HPC | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-08-20 trên hệ thống Worklane PM |
-| 2026-07-03 | Worklane | Báo cáo ngày | **Đặng Minh Luân** | `luandm@rikkeiedu.io.vn` | TG | N/A | Khối HCM-CNTT | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-03 trên hệ thống Worklane PM |
 | 2026-07-07 | Worklane | Báo cáo ngày | **Đặng Quỳnh Trang** | `trangdq@rikkeieducation.com` | GV | N/A | Khối QTKD | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-07 trên hệ thống Worklane PM |
 | 2026-07-10 | Worklane | Báo cáo ngày | **Đặng Quỳnh Trang** | `trangdq@rikkeieducation.com` | GV | N/A | Khối QTKD | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-10 trên hệ thống Worklane PM |
 | 2026-07-17 | Worklane | Báo cáo ngày | **Đặng Quỳnh Trang** | `trangdq@rikkeieducation.com` | GV | N/A | Khối QTKD | `WL-DAILY-LOG-MISSING` | Không nộp báo cáo ngày làm việc 2026-07-17 trên hệ thống Worklane PM |

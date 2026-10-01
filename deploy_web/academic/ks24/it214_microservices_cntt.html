@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Chuyên Sâu Học Vụ: Môn Microservices IT-214 (Khóa KS24 CNTT)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#111622', 900: '#0b0f19', 950: '#06080e' },
+                        indigo: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #06080e; color: #cbd5e1; font-size: 13px; }
+        code, pre, .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0b0f19; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #26324a; border-radius: 3px; }
+        .glass-card { background: rgba(15, 20, 31, 0.85); backdrop-filter: blur(12px); border: 1px solid #1e283d; }
+        .glass-card:hover { border-color: #334155; }
+        .tab-btn.active { background-color: #4f46e5; color: #ffffff; border-color: #6366f1; font-weight: 600; }
+        .metric-card { background: linear-gradient(180deg, rgba(22, 28, 45, 0.75) 0%, rgba(15, 20, 31, 0.9) 100%); border: 1px solid #1e293b; }
+        .funnel-step { position: relative; }
+        .funnel-step:not(:last-child)::after {
+            content: '➔';
+            position: absolute;
+            right: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-size: 14px;
+            font-weight: bold;
+            z-index: 10;
+        }
+        @media (max-width: 768px) {
+            .funnel-step:not(:last-child)::after { display: none; }
+        }
+    </style>
+</head>
+<body class="min-h-screen custom-scrollbar antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- HEADER HỌC VỤ KS24 -->
+    <header class="border-b border-slate-800 bg-slate-900/90 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-indigo-500/20">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div>
+                    <h1 class="text-base font-bold text-white tracking-tight flex items-center gap-2">
+                        BÁO CÁO TOÀN CẢNH HỌC VỤ: MÔN MICROSERVICES SYSTEM DESIGN
+                        <span class="text-xs bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded font-mono">Khóa KS24 CNTT</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Phân tích chuyên sâu 5 lớp CNTT, áp lực môi trường Hackathon và danh sách can thiệp 69 SV</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                
+    <div class="hidden lg:flex items-center space-x-1 bg-slate-800/90 p-1 rounded-lg border border-slate-700 text-xs">
+        <span class="bg-indigo-600 text-white px-2.5 py-1 rounded font-semibold">KS24 Microservices</span><a href="../ks25/it105_fastapi_cntt.html" class="text-slate-400 hover:text-white px-2 py-1 rounded transition hover:bg-slate-700/50">KS25 CNTT (FastAPI)</a><a href="../ks25/man107_qtkd.html" class="text-slate-400 hover:text-white px-2 py-1 rounded transition hover:bg-slate-700/50">KS25 QTKD (MAN107)</a><a href="../ks26/ssk101_cntt.html" class="text-slate-400 hover:text-white px-2 py-1 rounded transition hover:bg-slate-700/50">KS26 CNTT (SSK101)</a><a href="../ks26/ssk101_qtkd.html" class="text-slate-400 hover:text-white px-2 py-1 rounded transition hover:bg-slate-700/50">KS26 QTKD (SSK101)</a>
+        <div class="h-3 w-px bg-slate-700 mx-1"></div>
+        <a href="../../core/agent_5_master_portal.html" class="text-indigo-400 hover:text-indigo-300 font-medium px-2 py-1 flex items-center gap-1 transition" title="Quay về Master Executive Portal">
+            <i class="fa-solid fa-house-laptop"></i> Master Portal
+        </a>
+        <a href="../../management/director_cockpit.html" class="text-amber-400 hover:text-amber-300 font-medium px-2 py-1 flex items-center gap-1 transition" title="Báo cáo Giám đốc Đào tạo">
+            <i class="fa-solid fa-gauge-high"></i> Cockpit
+        </a>
+    </div>
+    
+                <button onclick="window.print()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-3.5 py-1.5 rounded-lg shadow-md transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-print"></i> In Báo Cáo
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION TABS -->
+    <div class="border-b border-slate-800 bg-slate-950/80 sticky top-16 z-40 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex space-x-2 py-2.5 overflow-x-auto custom-scrollbar" id="nav-tabs">
+                <button onclick="switchTab('tab-macro')" class="tab-btn active px-3.5 py-1.5 rounded-lg text-slate-300 border border-transparent transition flex items-center gap-2">
+                    <i class="fa-solid fa-filter"></i> I. Phễu Học Vụ & Tổng Quan
+                </button>
+                <button onclick="switchTab('tab-chokepoint')" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-300 border border-transparent transition flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation"></i> II. Độ Khó CDC & Vực Thẳm Hackathon
+                </button>
+                <button onclick="switchTab('tab-classes')" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-300 border border-transparent transition flex items-center gap-2">
+                    <i class="fa-solid fa-chalkboard-user"></i> III. Ma Trận 5 Lớp & GV/TG
+                </button>
+                <button onclick="switchTab('tab-recovery')" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-300 border border-transparent transition flex items-center gap-2 text-amber-300">
+                    <i class="fa-solid fa-life-ring"></i> IV. Phân Luồng Cứu Vãn 69 SV
+                </button>
+                <button onclick="switchTab('tab-students')" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-300 border border-transparent transition flex items-center gap-2">
+                    <i class="fa-solid fa-table-list"></i> V. Tra Cứu Toàn Bộ Sinh Viên
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- MAIN BODY -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <section id="tab-macro" class="tab-content space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="metric-card rounded-xl p-4 flex flex-col justify-between">
+                    <div class="flex items-center justify-between text-slate-400 text-xs font-semibold">
+                        <span>SĨ SỐ THỰC HỌC MÔN IT-214</span>
+                        <i class="fa-solid fa-users text-indigo-400"></i>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-3xl font-extrabold text-white font-mono">192 <span class="text-xs text-slate-400 font-normal">SV</span></div>
+                        <p class="text-xs text-slate-400 mt-1">5 lớp chính quy (HN: 149, HCM: 43)</p>
+                    </div>
+                </div>
+
+                <div class="metric-card rounded-xl p-4 flex flex-col justify-between">
+                    <div class="flex items-center justify-between text-slate-400 text-xs font-semibold">
+                        <span>DỰ BÁO QUA MÔN TRUNG BÌNH</span>
+                        <i class="fa-solid fa-chart-line text-emerald-400"></i>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-3xl font-extrabold text-emerald-400 font-mono">51.5%</div>
+                        <p class="text-xs text-emerald-300 mt-1 font-medium">Sau khi áp dụng hệ số phạt môi trường</p>
+                    </div>
+                </div>
+
+                <div class="metric-card rounded-xl p-4 flex flex-col justify-between border-amber-900/50 bg-amber-950/20">
+                    <div class="flex items-center justify-between text-amber-300 text-xs font-semibold">
+                        <span>DANH SÁCH CẦN CAN THIỆP (CARE LIST)</span>
+                        <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-3xl font-extrabold text-amber-400 font-mono">69 <span class="text-xs text-slate-400 font-normal">SV (35.9%)</span></div>
+                        <p class="text-xs text-amber-300 mt-1 font-medium">Nhóm nguy cơ đuối Hackathon & nợ bài</p>
+                    </div>
+                </div>
+
+                <div class="metric-card rounded-xl p-4 flex flex-col justify-between border-indigo-900/50">
+                    <div class="flex items-center justify-between text-slate-400 text-xs font-semibold">
+                        <span>LỚP ĐIỂM DẪN ĐẦU TOÀN KHÓA</span>
+                        <i class="fa-solid fa-medal text-yellow-400"></i>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-2xl font-extrabold text-indigo-300 font-mono">HN-K24-CNTT2</div>
+                        <p class="text-xs text-slate-300 mt-1">Dự báo đỗ 59.5% | Vắng CC 1.79% | 0 SV cấm thi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-xl p-6 border-indigo-900/40">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-sm font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-filter text-indigo-400"></i>
+                        SƠ ĐỒ PHỄU HAO HỤT HỌC VỤ MÔN MICROSERVICES (KS24)
+                    </h2>
+                    <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded font-mono">Hệ số độ khó CDC = 1.45</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-3 relative mb-6">
+                    <div class="funnel-step bg-slate-900/90 border border-slate-800 rounded-xl p-4 text-center">
+                        <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">1. SĨ SỐ ĐẦU VÀO MÔN</div>
+                        <div class="text-2xl font-extrabold text-white font-mono mt-1">192 SV</div>
+                        <div class="text-xs text-slate-500 mt-1">100% quy mô thực học</div>
+                        <div class="mt-2 pt-2 border-t border-slate-800 text-[11px] text-slate-400">5 lớp CNTT (HN & HCM)</div>
+                    </div>
+
+                    <div class="funnel-step bg-slate-900/90 border border-slate-800 rounded-xl p-4 text-center">
+                        <div class="text-[11px] font-semibold text-amber-400 uppercase tracking-wider">2. ĐẠT CHUẨN NỀ NẾP & R-POINT</div>
+                        <div class="text-2xl font-extrabold text-amber-400 font-mono mt-1">165 SV</div>
+                        <div class="text-xs text-slate-400 mt-1">85.9% duy trì kỷ luật tốt</div>
+                        <div class="mt-2 pt-2 border-t border-slate-800 text-[11px] text-rose-400">-27 SV vi phạm nề nếp</div>
+                    </div>
+
+                    <div class="funnel-step bg-rose-950/30 border-2 border-rose-600/60 rounded-xl p-4 text-center shadow-lg">
+                        <div class="text-[11px] font-bold text-rose-400 uppercase tracking-wider flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-triangle-exclamation"></i> 3. VƯỢT RÀO CẢN HACKATHON
+                        </div>
+                        <div class="text-2xl font-extrabold text-rose-300 font-mono mt-1">123 SV</div>
+                        <div class="text-xs text-slate-300 mt-1">64.1% đạt điểm thi thực tế ≥50</div>
+                        <div class="mt-2 pt-2 border-t border-rose-900 text-[11px] font-bold text-rose-400">ĐIỂM NGHẼN: 69 SV ĐUỐI THỰC CHIẾN</div>
+                    </div>
+
+                    <div class="funnel-step bg-emerald-950/30 border border-emerald-600/40 rounded-xl p-4 text-center">
+                        <div class="text-[11px] font-semibold text-emerald-400 uppercase tracking-wider">4. DỰ BÁO QUA MÔN CHÍNH THỨC</div>
+                        <div class="text-2xl font-extrabold text-emerald-400 font-mono mt-1">99 SV</div>
+                        <div class="text-xs text-emerald-300 mt-1">51.5% tỷ lệ hoàn thành kỳ vọng</div>
+                        <div class="mt-2 pt-2 border-t border-emerald-900 text-[11px] text-emerald-400">HN2 dẫn đầu với 59.5%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="glass-card rounded-xl p-5">
+                    <h3 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-indigo-400"></i>
+                        Phân Bổ Rủi Ro Học Thuật 192 Sinh Viên
+                    </h3>
+                    <div class="h-64 flex items-center justify-center">
+                        <canvas id="riskDoughnutChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl p-5">
+                    <h3 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-column text-indigo-400"></i>
+                        Tỷ Lệ Dự Báo Đỗ & Số Lượng Care List Theo 5 Lớp
+                    </h3>
+                    <div class="h-64">
+                        <canvas id="classComparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-chokepoint" class="tab-content space-y-6 hidden">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="glass-card rounded-xl p-5 border-l-4 border-l-rose-500">
+                    <div class="text-xs font-bold text-rose-400 uppercase">HỆ SỐ ĐỘ KHÓ MÔN HỌC (CDC)</div>
+                    <div class="text-3xl font-extrabold text-white font-mono mt-2">1.45</div>
+                    <p class="text-xs text-slate-400 mt-2">
+                        Cao nhất toàn bộ chương trình (PTTKHT: 1.25, MAN107: 1.10). Kiến thức nặng: Distributed Tracing, Kafka/RabbitMQ, Docker Swarm/K8s, API Gateway, Circuit Breaker.
+                    </p>
+                </div>
+                <div class="glass-card rounded-xl p-5 border-l-4 border-l-amber-500">
+                    <div class="text-xs font-bold text-amber-400 uppercase">ĐỘ VÊNH BÀI TẬP VS HACKATHON</div>
+                    <div class="text-3xl font-extrabold text-amber-400 font-mono mt-2">39.7 Điểm</div>
+                    <p class="text-xs text-slate-400 mt-2">
+                        Nhiều SV hoàn thành BTVN > 85% nhờ template có sẵn nhưng điểm Hackathon thực chiến chỉ đạt 45.3 điểm (thất bại khi debug microservices trực tiếp).
+                    </p>
+                </div>
+                <div class="glass-card rounded-xl p-5 border-l-4 border-l-indigo-500">
+                    <div class="text-xs font-bold text-indigo-400 uppercase">HỆ SỐ PHẠT NỀ NẾP (MULT_ENV)</div>
+                    <div class="text-3xl font-extrabold text-indigo-300 font-mono mt-2">0.850</div>
+                    <p class="text-xs text-slate-400 mt-2">
+                        Áp dụng cho các lớp có tỷ lệ vi phạm trung bình > 10% (HN3 vắng 25.64%, HCM1 vắng 16.28%).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-classes" class="tab-content space-y-6 hidden">
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-chalkboard-user text-indigo-400"></i>
+                    Bảng Đối Chuẩn Hiệu Suất Học Vụ 5 Lớp Khóa KS24
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-800 text-[11px] uppercase tracking-wider text-slate-400 bg-slate-900/50">
+                                <th class="p-3">Lớp Học</th>
+                                <th class="p-3">Sĩ Số</th>
+                                <th class="p-3">Giảng Viên & Trợ Giảng</th>
+                                <th class="p-3">Vắng CC (%)</th>
+                                <th class="p-3">Nợ BT (%)</th>
+                                <th class="p-3">Elearning (%)</th>
+                                <th class="p-3">Dự Báo Đỗ Mới</th>
+                                <th class="p-3">Care List</th>
+                                <th class="p-3">Đánh Giá Trạng Thái</th>
+                            </tr>
+                        </thead>
+                        <tbody id="classesTableBody" class="divide-y divide-slate-800/60 text-xs font-mono">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-recovery" class="tab-content space-y-6 hidden">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="glass-card rounded-xl p-4 border-t-4 border-t-rose-500">
+                    <div class="flex items-center justify-between text-rose-400 font-bold text-xs">
+                        <span>NHÓM RED (BÁO ĐỘNG ĐỎ)</span>
+                        <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 font-mono">18 SV</span>
+                    </div>
+                    <p class="text-xs text-slate-300 mt-2 font-sans">Hổng kiến thức nặng, Hackathon < 40 điểm, nguy cơ trượt > 80%.</p>
+                </div>
+                <div class="glass-card rounded-xl p-4 border-t-4 border-t-amber-500">
+                    <div class="flex items-center justify-between text-amber-400 font-bold text-xs">
+                        <span>NHÓM ORANGE (ĐUỐI THỰC HÀNH)</span>
+                        <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono">24 SV</span>
+                    </div>
+                    <p class="text-xs text-slate-300 mt-2 font-sans">Làm BTVN tốt nhưng đuối khi test bài tập độc lập (Hackathon 40 - 55 điểm).</p>
+                </div>
+                <div class="glass-card rounded-xl p-4 border-t-4 border-t-yellow-500">
+                    <div class="flex items-center justify-between text-yellow-400 font-bold text-xs">
+                        <span>NHÓM YELLOW (KỶ LUẬT KÉM)</span>
+                        <span class="px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300 font-mono">15 SV</span>
+                    </div>
+                    <p class="text-xs text-slate-300 mt-2 font-sans">Tư duy tốt nhưng vắng học và nợ bài tập > 15%.</p>
+                </div>
+                <div class="glass-card rounded-xl p-4 border-t-4 border-t-emerald-500">
+                    <div class="flex items-center justify-between text-emerald-400 font-bold text-xs">
+                        <span>NHÓM GREEN (CÓ TIỀM NĂNG)</span>
+                        <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">12 SV</span>
+                    </div>
+                    <p class="text-xs text-slate-300 mt-2 font-sans">Chỉ cần bồi dưỡng kiến thức đề tài lớn để chắc chắn vượt qua ngưỡng 60 điểm.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-students" class="tab-content space-y-6 hidden">
+            <div class="glass-card rounded-xl p-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
+                    <div>
+                        <h3 class="text-base font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-table-list text-indigo-400"></i>
+                            Danh Sách 69 Sinh Viên Nhóm Nguy Cơ (Care List KS24)
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-1">Lọc theo lớp học, mức độ rủi ro hoặc tìm kiếm tên sinh viên</p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3">
+                        <input type="text" id="studentSearch" placeholder="Tìm tên sinh viên..." 
+                            class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 w-48">
+                        
+                        <select id="classFilter" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:border-indigo-500">
+                            <option value="ALL">Tất cả 5 lớp</option>
+                            <option value="HN-K24-CNTT1">HN-K24-CNTT1</option>
+                            <option value="HN-K24-CNTT2">HN-K24-CNTT2</option>
+                            <option value="HN-K24-CNTT3">HN-K24-CNTT3</option>
+                            <option value="HN-K24-CNTT4">HN-K24-CNTT4</option>
+                            <option value="HCM-K24-CNTT1">HCM-K24-CNTT1</option>
+                        </select>
+
+                        <select id="riskFilter" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:border-indigo-500">
+                            <option value="ALL">Tất cả rủi ro</option>
+                            <option value="RED">RED (Rất cao)</option>
+                            <option value="ORANGE">ORANGE (Cao)</option>
+                            <option value="YELLOW">YELLOW (Trung bình)</option>
+                            <option value="GREEN">GREEN (Nhẹ)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-800 text-[11px] uppercase tracking-wider text-slate-400 bg-slate-900/50">
+                                <th class="p-3">#</th>
+                                <th class="p-3">Lớp</th>
+                                <th class="p-3">Họ và Tên</th>
+                                <th class="p-3 text-center">P_Final (%)</th>
+                                <th class="p-3 text-center">Hackathon Trước</th>
+                                <th class="p-3 text-center">Hackathon Hiện Tại</th>
+                                <th class="p-3 text-center">BTVN (%)</th>
+                                <th class="p-3 text-center">Vắng CC (%)</th>
+                                <th class="p-3 text-center">R-Point</th>
+                                <th class="p-3 text-center">Mức Rủi Ro</th>
+                                <th class="p-3">Lý Do & Hành Động Can Thiệp</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody" class="divide-y divide-slate-800/60 text-xs">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const rawStudents = [{"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 213, "full_name": "Nguyễn Mạnh Thắng", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (52.9%)"], "p_final": 52.92025656978109, "is_failed_new": false, "is_excellent": true, "prior_hack": 81.0, "hack": 45.29999923706055, "att": 0.0, "hw": 91.29640120028408, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 152, "full_name": "Nguyễn Nhật Minh", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (44.8%)"], "p_final": 24.637599486582957, "is_failed_new": true, "is_excellent": true, "prior_hack": 96.0, "hack": null, "att": 44.831111111111106, "hw": 81.68626812073857, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 304, "full_name": "Hoàng Cương Cát", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (49.3%)"], "p_final": 49.31794916354107, "is_failed_new": false, "is_excellent": true, "prior_hack": 79.0, "hack": 35.0, "att": 5.603888888888888, "hw": 86.49128901231073, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 114, "full_name": "Trần Đăng Việt", "risk_level": "GREEN", "reasons": [], "p_final": 60.35680476742004, "is_failed_new": false, "is_excellent": true, "prior_hack": 93.0, "hack": 77.69999694824219, "att": 16.811666666666664, "hw": 91.29640120028408, "el": 0.0, "rp": 100.0, "anomalies": ["sudden_drop"]}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 240, "full_name": "Phùng Văn Vượng", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (51.0%)"], "p_final": 50.97227279629379, "is_failed_new": false, "is_excellent": true, "prior_hack": 91.0, "hack": 40.70000076293945, "att": 11.207777777777777, "hw": 91.29640120028408, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 205, "full_name": "Nguyễn Sỹ Trung", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (44.8%)"], "p_final": 50.86779791696196, "is_failed_new": true, "is_excellent": true, "prior_hack": 95.0, "hack": null, "att": 44.831111111111106, "hw": 91.29640120028408, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 103, "full_name": "Đinh Trọng An", "risk_level": "GREEN", "reasons": [], "p_final": 60.8305719447795, "is_failed_new": false, "is_excellent": true, "prior_hack": 97.0, "hack": 94.30000305175781, "att": 16.811666666666664, "hw": 91.29640120028408, "el": 0.0, "rp": 100.0, "anomalies": ["discipline_paradox"]}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 102, "full_name": "Quách Văn Sơn Bách", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (22.4%)"], "p_final": 27.861329143370725, "is_failed_new": true, "is_excellent": true, "prior_hack": 98.0, "hack": 65.0, "att": 22.415555555555553, "hw": 91.29640120028408, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 249, "full_name": "Lê Xuân Ánh", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (52.9%)"], "p_final": 52.92740547380278, "is_failed_new": false, "is_excellent": true, "prior_hack": 85.0, "hack": 43.0, "att": 0.0, "hw": 91.29640120028408, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 86, "full_name": "Đỗ Minh Tuyến", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (55.3%)"], "p_final": 55.31332157505911, "is_failed_new": false, "is_excellent": true, "prior_hack": 93.0, "hack": 49.70000076293945, "att": 5.603888888888888, "hw": 91.29640120028408, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 242, "full_name": "Lê Duy Minh", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (51.4%)"], "p_final": 51.40361784075406, "is_failed_new": false, "is_excellent": true, "prior_hack": 75.0, "hack": 40.29999923706055, "att": 11.207777777777777, "hw": 86.49128901231073, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 288, "full_name": "Nguyễn Văn Tùng", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (44.8%)"], "p_final": 25.10723284410381, "is_failed_new": true, "is_excellent": true, "prior_hack": 86.0, "hack": null, "att": 44.831111111111106, "hw": 86.49128901231073, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 203, "full_name": "Trần Quang Hiệp", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (22.4%)"], "p_final": 26.851473837751218, "is_failed_new": true, "is_excellent": true, "prior_hack": 90.0, "hack": null, "att": 22.415555555555553, "hw": 81.68626812073857, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT2", "course_name": "[IT-214] Microservices System Design", "student_id": 170, "full_name": "Đỗ Trí Công", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (54.6%)"], "p_final": 54.63533484634435, "is_failed_new": false, "is_excellent": true, "prior_hack": 79.0, "hack": 42.0, "att": 3.409023255813954, "hw": 96.33380433061217, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT2", "course_name": "[IT-214] Microservices System Design", "student_id": 243, "full_name": "Phan Thuận Thành", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (54.7%)"], "p_final": 54.702249912390876, "is_failed_new": false, "is_excellent": true, "prior_hack": 75.0, "hack": 43.0, "att": 6.818046511627908, "hw": 96.33380433061217, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT2", "course_name": "[IT-214] Microservices System Design", "student_id": 106, "full_name": "Ngô Trung Chiến", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (57.0%)"], "p_final": 56.99721978029786, "is_failed_new": false, "is_excellent": true, "prior_hack": 80.0, "hack": 49.0, "att": 0.0, "hw": 96.33380433061217, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT2", "course_name": "[IT-214] Microservices System Design", "student_id": 399, "full_name": "Đặng Thanh Bình", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (54.9%)"], "p_final": 54.93641978029786, "is_failed_new": false, "is_excellent": true, "prior_hack": 97.0, "hack": 48.0, "att": 0.0, "hw": 96.33380433061217, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT2", "course_name": "[IT-214] Microservices System Design", "student_id": 68, "full_name": "Đỗ Tiến Đạt", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (23.9%)"], "p_final": 56.27562641776268, "is_failed_new": true, "is_excellent": true, "prior_hack": 86.0, "hack": 65.0, "att": 23.863162790697675, "hw": 86.19341908535894, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT2", "course_name": "[IT-214] Microservices System Design", "student_id": 97, "full_name": "Đỗ Hoàng Anh", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (50.6%)"], "p_final": 50.58064991239088, "is_failed_new": false, "is_excellent": false, "prior_hack": 71.0, "hack": 25.0, "att": 6.818046511627908, "hw": 96.33380433061217, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT2", "course_name": "[IT-214] Microservices System Design", "student_id": 139, "full_name": "Nguyễn Văn Kiên", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (53.7%)"], "p_final": 53.671849912390876, "is_failed_new": false, "is_excellent": true, "prior_hack": 78.0, "hack": 40.0, "att": 6.818046511627908, "hw": 96.33380433061217, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT2", "course_name": "[IT-214] Microservices System Design", "student_id": 167, "full_name": "Tô Anh Tuấn", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (54.9%)"], "p_final": 54.93641978029786, "is_failed_new": false, "is_excellent": true, "prior_hack": 85.0, "hack": 42.0, "att": 0.0, "hw": 96.33380433061217, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 266, "full_name": "Nguyễn Tiến Minh", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (53.6%)"], "p_final": 53.6284407690908, "is_failed_new": false, "is_excellent": true, "prior_hack": 80.7, "hack": 47.0, "att": 9.715512195121953, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 146, "full_name": "Lê Trung Chiến", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (57.9%)"], "p_final": 57.87211480616398, "is_failed_new": false, "is_excellent": true, "prior_hack": 85.3, "hack": 49.0, "att": 0.0, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 138, "full_name": "Nguyễn Trí Thắng", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (53.8%)"], "p_final": 53.836677787627394, "is_failed_new": false, "is_excellent": true, "prior_hack": 85.3, "hack": 35.0, "att": 4.857756097560976, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 265, "full_name": "Vũ Thu Trang", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (52.7%)"], "p_final": 52.745240769090806, "is_failed_new": false, "is_excellent": true, "prior_hack": 94.7, "hack": 32.0, "att": 9.715512195121953, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 888, "full_name": "Nguyễn Quang Vinh", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.3%)"], "p_final": 49.43065208758484, "is_failed_new": true, "is_excellent": false, "prior_hack": null, "hack": 38.0, "att": 24.28878048780488, "hw": 92.75342657170764, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner", "sudden_drop"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 233, "full_name": "Nguyễn Tuấn Minh", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (52.3%)"], "p_final": 52.25175116980034, "is_failed_new": false, "is_excellent": true, "prior_hack": 80.0, "hack": 38.0, "att": 0.0, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 898, "full_name": "Ngô Thị Hoài Phương", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (52.7%)"], "p_final": 52.72011480616398, "is_failed_new": false, "is_excellent": true, "prior_hack": 76.7, "hack": 35.0, "att": 0.0, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 91, "full_name": "Phạm Thị Hồng Nhung", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (55.7%)"], "p_final": 55.66411480616398, "is_failed_new": false, "is_excellent": true, "prior_hack": 92.0, "hack": 48.0, "att": 0.0, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 201, "full_name": "Vũ Văn Đoàn", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (57.2%)"], "p_final": 57.20971480616397, "is_failed_new": false, "is_excellent": false, "prior_hack": 74.7, "hack": 46.0, "att": 0.0, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 186, "full_name": "Trần Quang Duy", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (55.8%)"], "p_final": 55.75027778762739, "is_failed_new": false, "is_excellent": true, "prior_hack": 91.3, "hack": 46.0, "att": 4.857756097560976, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 96, "full_name": "Nguyễn Thị Phương", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (38.9%)"], "p_final": 27.344384560187663, "is_failed_new": true, "is_excellent": true, "prior_hack": 82.0, "hack": null, "att": 38.86204878048781, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT4", "course_name": "[IT-214] Microservices System Design", "student_id": 81, "full_name": "Đoàn Trung Nguyên", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (54.3%)"], "p_final": 54.278277787627395, "is_failed_new": false, "is_excellent": true, "prior_hack": 94.7, "hack": 37.0, "att": 4.857756097560976, "hw": 97.90643822855283, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 582, "full_name": "Cao Tất Thành", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (55.2%)"], "p_final": 55.23873129458935, "is_failed_new": false, "is_excellent": false, "prior_hack": 63.5, "hack": 46.70000076293945, "att": 0.0, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 605, "full_name": "Nguyễn Quang Anh", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (53.4%)"], "p_final": 53.36017865570345, "is_failed_new": false, "is_excellent": false, "prior_hack": 74.0, "hack": 37.29999923706055, "att": 6.103173708920187, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 635, "full_name": "Võ Thanh Khang", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (30.5%)"], "p_final": 56.73833783387189, "is_failed_new": true, "is_excellent": true, "prior_hack": 83.5, "hack": 0.0, "att": 30.51586854460094, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 621, "full_name": "Phạm Huỳnh Tiến Đạt", "risk_level": "GREEN", "reasons": [], "p_final": 63.75100149294409, "is_failed_new": false, "is_excellent": true, "prior_hack": 84.0, "hack": 94.0, "att": 18.30952112676056, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": ["discipline_paradox"]}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 639, "full_name": "Đoàn Nhật Cường", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.4%)"], "p_final": 56.387241918245, "is_failed_new": true, "is_excellent": true, "prior_hack": 100.0, "hack": 65.0, "att": 24.41269483568075, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 618, "full_name": "Phan Văn Đạt", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.4%)"], "p_final": 56.67428174978796, "is_failed_new": true, "is_excellent": true, "prior_hack": 98.0, "hack": 63.29999923706055, "att": 24.41269483568075, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 628, "full_name": "Trần Minh Đức", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.4%)"], "p_final": 48.50468174978796, "is_failed_new": true, "is_excellent": true, "prior_hack": 78.0, "hack": 34.29999923706055, "att": 24.41269483568075, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 615, "full_name": "Phan Lê Duy Thịnh", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.4%)"], "p_final": 46.377641918245, "is_failed_new": true, "is_excellent": false, "prior_hack": 71.5, "hack": 20.0, "att": 24.41269483568075, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 626, "full_name": "Trần Hoàng Thanh", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.4%)"], "p_final": 61.54660124441688, "is_failed_new": true, "is_excellent": true, "prior_hack": 66.0, "hack": 82.69999694824219, "att": 24.41269483568075, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": ["discipline_paradox"]}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 609, "full_name": "Nguyễn Tuấn Nhựt", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (48.2%)"], "p_final": 48.167874220216824, "is_failed_new": false, "is_excellent": true, "prior_hack": 84.0, "hack": 23.0, "att": 18.30952112676056, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 676, "full_name": "Hoàng Đình Tùng", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.4%)"], "p_final": 56.681641918245, "is_failed_new": true, "is_excellent": true, "prior_hack": 85.0, "hack": 66.0, "att": 24.41269483568075, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 585, "full_name": "Dương Phúc Thịnh", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.4%)"], "p_final": 61.29836919097227, "is_failed_new": true, "is_excellent": true, "prior_hack": 66.5, "hack": 91.69999694824219, "att": 24.41269483568075, "hw": 98.00671359051324, "el": 0.0, "rp": 100.0, "anomalies": ["discipline_paradox"]}, {"batch": "K24", "class_name": "HCM-K24-CNTT1", "course_name": "[IT-214] Microservices System Design", "student_id": 616, "full_name": "Phan Trung Kiên", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (30.5%)"], "p_final": 55.59945804149583, "is_failed_new": true, "is_excellent": true, "prior_hack": 94.0, "hack": 65.0, "att": 30.51586854460094, "hw": 87.69023289783506, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 75, "full_name": "Lê Trung Đông", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (54.7%)"], "p_final": 54.71958737371196, "is_failed_new": false, "is_excellent": false, "prior_hack": 71.0, "hack": 44.0, "att": 0.0, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 209, "full_name": "Nguyễn Trần Bảo Khánh", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.8%)"], "p_final": 52.593688151672566, "is_failed_new": true, "is_excellent": true, "prior_hack": 93.0, "hack": 55.0, "att": 24.842137931034483, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 244, "full_name": "Nguyễn Trường An", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (51.1%)"], "p_final": 51.089347586692256, "is_failed_new": false, "is_excellent": true, "prior_hack": 84.0, "hack": 32.0, "att": 12.421068965517241, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 222, "full_name": "Hà Quang Huy", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (50.6%)"], "p_final": 50.62918639718242, "is_failed_new": false, "is_excellent": true, "prior_hack": 87.0, "hack": 39.0, "att": 18.63160344827586, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 218, "full_name": "Hoàng Trung Dũng", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (31.1%)"], "p_final": 54.55088553118815, "is_failed_new": true, "is_excellent": true, "prior_hack": 90.0, "hack": 0.0, "att": 31.052672413793104, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 250, "full_name": "Đặng Văn Thắng", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (55.6%)"], "p_final": 55.57535076571195, "is_failed_new": false, "is_excellent": false, "prior_hack": 65.0, "hack": 48.0, "att": 0.0, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 226, "full_name": "Hoàng Thiên Sơn", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (49.7%)"], "p_final": 51.03829785763318, "is_failed_new": true, "is_excellent": true, "prior_hack": 76.0, "hack": 60.0, "att": 49.684275862068965, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 252, "full_name": "Lê Thành Long", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (51.3%)"], "p_final": 51.33556792820211, "is_failed_new": false, "is_excellent": true, "prior_hack": 81.0, "hack": 44.0, "att": 6.210534482758621, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 236, "full_name": "Đoàn Việt Anh", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (50.0%)"], "p_final": 49.987363853182416, "is_failed_new": false, "is_excellent": true, "prior_hack": 96.0, "hack": 40.0, "att": 18.63160344827586, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 227, "full_name": "Đỗ Hồng Kỳ", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (48.1%)"], "p_final": 48.12645520820211, "is_failed_new": false, "is_excellent": false, "prior_hack": 70.0, "hack": 29.0, "att": 6.210534482758621, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 889, "full_name": "Nguyễn Thanh Tùng 3", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (53.7%)"], "p_final": 53.721196749711964, "is_failed_new": false, "is_excellent": true, "prior_hack": 88.0, "hack": 44.0, "att": 0.0, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 887, "full_name": "Nguyễn Minh Hoàng", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (44.1%)"], "p_final": 44.14114728985402, "is_failed_new": false, "is_excellent": false, "prior_hack": 47.0, "hack": 22.0, "att": 0.0, "hw": 89.59806303392342, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 273, "full_name": "Nguyễn Tiến Thành", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (53.6%)"], "p_final": 53.57856951771196, "is_failed_new": false, "is_excellent": true, "prior_hack": 84.0, "hack": 41.0, "att": 0.0, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 254, "full_name": "Hồ Khánh Linh", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (50.7%)"], "p_final": 50.72602487771196, "is_failed_new": false, "is_excellent": true, "prior_hack": 98.0, "hack": 30.0, "att": 0.0, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 416, "full_name": "Nguyễn Hoàng Nhật", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (86.9%)", "Nợ bài tập > 20% (30.3%)"], "p_final": 10.7866950231751, "is_failed_new": true, "is_excellent": false, "prior_hack": 0.0, "hack": null, "att": 86.9474827586207, "hw": 69.68740337655716, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 308, "full_name": "Đỗ Chung Hiếu", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (49.1%)"], "p_final": 49.092566338692265, "is_failed_new": false, "is_excellent": false, "prior_hack": 52.0, "hack": 36.0, "att": 12.421068965517241, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 238, "full_name": "Lê Thanh Tùng", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (53.4%)"], "p_final": 53.40366279220213, "is_failed_new": false, "is_excellent": false, "prior_hack": 72.0, "hack": 45.0, "att": 6.210534482758621, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 267, "full_name": "Nguyễn Minh Duy", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (50.7%)"], "p_final": 50.69374538420212, "is_failed_new": false, "is_excellent": true, "prior_hack": 96.0, "hack": 36.0, "att": 6.210534482758621, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 298, "full_name": "Lê Hoàng Xuân Vinh", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (53.6%)"], "p_final": 53.553044653182425, "is_failed_new": false, "is_excellent": false, "prior_hack": 72.0, "hack": 46.0, "att": 18.63160344827586, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner", "sudden_drop"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 902, "full_name": "Trịnh Khắc Hưng", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (43.5%)"], "p_final": 42.798197895143026, "is_failed_new": true, "is_excellent": false, "prior_hack": null, "hack": 19.0, "att": 43.47374137931035, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 933, "full_name": "Ngô Quang Anh", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (68.3%)"], "p_final": 23.25355674263304, "is_failed_new": true, "is_excellent": false, "prior_hack": 61.0, "hack": 0.0, "att": 68.31587931034483, "hw": 84.62044540746946, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 910, "full_name": "Đặng Tô Ngọc Dũng", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.8%)"], "p_final": 55.303605559672576, "is_failed_new": true, "is_excellent": false, "prior_hack": 51.0, "hack": 65.0, "att": 24.842137931034483, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": []}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 223, "full_name": "Trần Anh Dũng", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (52.2%)"], "p_final": 52.15905182669226, "is_failed_new": false, "is_excellent": false, "prior_hack": null, "hack": 46.0, "att": 12.421068965517241, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 901, "full_name": "Trần Thị Khánh Huyền", "risk_level": "GREEN", "reasons": ["Học lực cần theo dõi (52.4%)"], "p_final": 52.372992674692256, "is_failed_new": false, "is_excellent": true, "prior_hack": 96.0, "hack": 49.0, "att": 12.421068965517241, "hw": 94.5757752361526, "el": 0.0, "rp": 100.0, "anomalies": ["copy_suspect", "passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 185, "full_name": "Trần Khánh An", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (99.4%)", "Nợ bài tập > 20% (30.3%)"], "p_final": 10.9527433654196, "is_failed_new": true, "is_excellent": false, "prior_hack": null, "hack": null, "att": 99.36855172413793, "hw": 69.68740337655716, "el": 0.0, "rp": 100.0, "anomalies": ["passive_learner"]}, {"batch": "K24", "class_name": "HN-K24-CNTT3", "course_name": "[IT-214] Microservices System Design", "student_id": 272, "full_name": "Ngô Xuân Hoàng", "risk_level": "RED", "reasons": ["Vắng chuyên cần > 20% (24.8%)"], "p_final": 19.22344256863404, "is_failed_new": true, "is_excellent": false, "prior_hack": null, "hack": null, "att": 24.842137931034483, "hw": 89.59806303392342, "el": 1.0, "rp": 100.0, "anomalies": []}];
+        const rawClasses = [{"name": "HN-K24-CNTT1", "size": 35, "gv": "Bùi Thanh Hải", "tg": "Phạm Tuấn Bình", "pred_old": 54.6, "pred_new": 51.7, "att_v": 12.9, "hw_v": 11.4, "el_v": 14.3, "care_count": 14, "status": "YELLOW"}, {"name": "HN-K24-CNTT2", "size": 39, "gv": "Bùi Thanh Hải", "tg": "Đinh Thành Nam", "pred_old": 59.5, "pred_new": 59.5, "att_v": 1.8, "hw_v": 3.8, "el_v": 5.1, "care_count": 7, "status": "GREEN"}, {"name": "HN-K24-CNTT3", "size": 43, "gv": "Hồ Xuân Hùng", "tg": "Phạm Tuấn Bình", "pred_old": 51.0, "pred_new": 43.3, "att_v": 25.6, "hw_v": 18.6, "el_v": 27.9, "care_count": 21, "status": "RED"}, {"name": "HN-K24-CNTT4", "size": 32, "gv": "Bùi Thanh Hải", "tg": "Đinh Thành Nam", "pred_old": 57.0, "pred_new": 54.6, "att_v": 9.7, "hw_v": 9.4, "el_v": 12.5, "care_count": 11, "status": "YELLOW"}, {"name": "HCM-K24-CNTT1", "size": 43, "gv": "Nguyễn Bá Minh Đạo", "tg": "Phan Ngọc Tài", "pred_old": 60.2, "pred_new": 48.5, "att_v": 16.3, "hw_v": 14.0, "el_v": 18.6, "care_count": 16, "status": "ORANGE"}];
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(tabId).classList.remove('hidden');
+            event.currentTarget.classList.add('active');
+        }
+
+        function renderClasses() {
+            const tbody = document.getElementById('classesTableBody');
+            tbody.innerHTML = rawClasses.map(c => {
+                let statusBadge = c.status === 'GREEN' 
+                    ? '<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-sans font-semibold">🟢 Kiểu mẫu</span>'
+                    : c.status === 'RED'
+                    ? '<span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 font-sans font-semibold">🔴 Báo động</span>'
+                    : c.status === 'ORANGE'
+                    ? '<span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 font-sans font-semibold">🟠 Đuối thực hành</span>'
+                    : '<span class="px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300 font-sans font-semibold">🟡 Cần theo dõi</span>';
+
+                return `
+                    <tr class="hover:bg-slate-800/40 transition">
+                        <td class="p-3 font-bold text-white">${c.name}</td>
+                        <td class="p-3">${c.size} SV</td>
+                        <td class="p-3 font-sans"><span class="text-slate-200">${c.gv}</span> <span class="text-slate-500">|</span> <span class="text-slate-400">TG: ${c.tg}</span></td>
+                        <td class="p-3 text-center ${c.att_v > 15 ? 'text-rose-400 font-bold' : 'text-slate-300'}">${c.att_v}%</td>
+                        <td class="p-3 text-center text-slate-300">${c.hw_v}%</td>
+                        <td class="p-3 text-center text-slate-300">${c.el_v}%</td>
+                        <td class="p-3 text-center font-bold ${c.pred_new < 50 ? 'text-rose-400' : 'text-emerald-400'}">${c.pred_new}%</td>
+                        <td class="p-3 text-center font-bold text-amber-400">${c.care_count} SV</td>
+                        <td class="p-3">${statusBadge}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderStudents() {
+            const searchVal = document.getElementById('studentSearch').value.toLowerCase();
+            const classVal = document.getElementById('classFilter').value;
+            const riskVal = document.getElementById('riskFilter').value;
+
+            const filtered = rawStudents.filter(s => {
+                const matchName = (s.full_name || '').toLowerCase().includes(searchVal);
+                const matchClass = classVal === 'ALL' || (s.class_name || '') === classVal;
+                const matchRisk = riskVal === 'ALL' || (s.risk_level || '') === riskVal;
+                return matchName && matchClass && matchRisk;
+            });
+
+            const tbody = document.getElementById('studentTableBody');
+            if (filtered.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="11" class="text-center p-6 text-slate-500">Không tìm thấy sinh viên phù hợp bộ lọc.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = filtered.map((s, idx) => {
+                let riskBadge = s.risk_level === 'RED'
+                    ? '<span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 font-bold">RED</span>'
+                    : s.risk_level === 'ORANGE'
+                    ? '<span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 font-bold">ORANGE</span>'
+                    : s.risk_level === 'YELLOW'
+                    ? '<span class="px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300 font-bold">YELLOW</span>'
+                    : '<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">GREEN</span>';
+
+                let reasonsText = (s.reasons || []).join('; ');
+                let pFinal = typeof s.p_final === 'number' ? s.p_final.toFixed(1) : (s.p_final || '—');
+
+                return `
+                    <tr class="hover:bg-slate-800/40 transition">
+                        <td class="p-3 text-slate-500 font-mono">${idx + 1}</td>
+                        <td class="p-3 font-mono font-bold text-slate-300">${s.class_name || '—'}</td>
+                        <td class="p-3 font-semibold text-white">${s.full_name || '—'}</td>
+                        <td class="p-3 text-center font-mono font-bold ${pFinal < 50 ? 'text-rose-400' : 'text-emerald-400'}">${pFinal}%</td>
+                        <td class="p-3 text-center font-mono text-slate-300">${s.prior_hack || '—'}</td>
+                        <td class="p-3 text-center font-mono font-bold ${s.hack < 50 ? 'text-rose-400' : 'text-slate-200'}">${s.hack != null ? Number(s.hack).toFixed(1) : '—'}</td>
+                        <td class="p-3 text-center font-mono text-slate-300">${s.hw != null ? Number(s.hw).toFixed(1) : '—'}%</td>
+                        <td class="p-3 text-center font-mono ${s.att > 15 ? 'text-rose-400 font-bold' : 'text-slate-400'}">${s.att || 0}%</td>
+                        <td class="p-3 text-center font-mono text-slate-300">${s.rp || 100}</td>
+                        <td class="p-3 text-center">${riskBadge}</td>
+                        <td class="p-3 text-slate-400 text-xs">${reasonsText || 'Đuối thực hành Hackathon, cần bồi dưỡng thêm'}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function initCharts() {
+            const ctxDoughnut = document.getElementById('riskDoughnutChart').getContext('2d');
+            new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['An Toàn / Xuất Sắc', 'RED (Nguy Cơ Cao)', 'ORANGE (Đuối Hackathon)', 'YELLOW (Kỷ Luật)', 'GREEN (Tiềm Năng)'],
+                    datasets: [{
+                        data: [123, 18, 24, 15, 12],
+                        backgroundColor: ['#10b981', '#f43f5e', '#f97316', '#eab308', '#3b82f6'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: '#94a3b8', font: { size: 11 } } }
+                    }
+                }
+            });
+
+            const ctxBar = document.getElementById('classComparisonChart').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['HN-CNTT1', 'HN-CNTT2', 'HN-CNTT3', 'HN-CNTT4', 'HCM-CNTT1'],
+                    datasets: [
+                        {
+                            label: 'Dự Báo Đỗ (%)',
+                            data: [51.7, 59.5, 43.3, 54.6, 48.5],
+                            backgroundColor: '#6366f1',
+                            borderRadius: 6
+                        },
+                        {
+                            label: 'Số SV Care List',
+                            data: [14, 7, 21, 11, 16],
+                            backgroundColor: '#f59e0b',
+                            borderRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } },
+                        x: { grid: { display: false }, ticks: { color: '#94a3b8' } }
+                    },
+                    plugins: {
+                        legend: { labels: { color: '#94a3b8' } }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderClasses();
+            renderStudents();
+            initCharts();
+
+            document.getElementById('studentSearch').addEventListener('input', renderStudents);
+            document.getElementById('classFilter').addEventListener('change', renderStudents);
+            document.getElementById('riskFilter').addEventListener('change', renderStudents);
+        });
+    </script>
+</body>
+</html>

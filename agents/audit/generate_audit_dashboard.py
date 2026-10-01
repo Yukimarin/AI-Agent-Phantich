@@ -88,27 +88,26 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
 
         <div class="flex items-center space-x-3 text-xs">
-            <!-- Period Switcher Buttons -->
-            <div class="flex items-center bg-slate-800/90 p-1 rounded-xl border border-slate-700/80 shadow-inner">
-                <button id="btnPeriodSept" onclick="switchPeriod('sept_01_08')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center space-x-1.5 bg-indigo-600 text-white shadow-sm">
-                    <i class="fa-solid fa-bolt text-amber-300"></i>
-                    <span>Kỳ 01/09 - 11/09/2026 (Mới)</span>
-                </button>
-                <button id="btnPeriodAug" onclick="switchPeriod('august')" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
-                    <i class="fa-regular fa-calendar text-slate-400"></i>
-                    <span>Tháng 08/2026 (Lịch sử)</span>
-                </button>
+            <!-- Period Switcher Select -->
+            <div class="flex items-center bg-slate-800/90 rounded-xl border border-slate-700/80 shadow-inner px-2 py-1">
+                <i class="fa-solid fa-clock-rotate-left text-indigo-400 mr-2"></i>
+                <select id="periodSelect" onchange="switchPeriod(this.value)" class="bg-transparent text-slate-200 text-xs font-semibold focus:outline-none focus:ring-0 cursor-pointer border-none py-1.5 pr-2 outline-none">
+                    <option value="sept_full" class="bg-slate-800 text-slate-200 font-medium">Toàn bộ Tháng 09/2026 (01/09 - 30/09)</option>
+                    <option value="week_14_18" class="bg-slate-800 text-slate-200 font-medium">Tuần 21/09 - 25/09 (Tuần này - 40h)</option>
+                    <option value="sept_01_08" class="bg-slate-800 text-slate-200 font-medium">Lũy kế 01/09 - 25/09 (17 ngày)</option>
+                    <option value="august" class="bg-slate-800 text-slate-200 font-medium">Tháng 08/2026 (20 ngày)</option>
+                </select>
             </div>
 
             <div class="bg-slate-800/80 border border-slate-700/80 rounded-lg px-3 py-1.5 flex items-center space-x-2 text-slate-300">
                 <i class="fa-regular fa-calendar text-indigo-400"></i>
-                <span id="lblPeriodDates">Kỳ 01/09 - 11/09/2026 (7 ngày làm việc)</span>
+                <span id="lblPeriodDates">Tuần 14/09 - 18/09/2026 (5 ngày - Chuẩn 40h/tuần)</span>
             </div>
             <button onclick="window.print()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-700 transition flex items-center space-x-1.5">
                 <i class="fa-solid fa-print"></i>
                 <span>In Báo Cáo</span>
             </button>
-            <a id="btnMarkdownReport" href="../../docs/reports/2026-09-09-kiem-toan-worklane-01-08-thang-9-theo-kpi-master-moi.md" target="_blank" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition font-medium shadow-sm flex items-center space-x-1.5">
+            <a id="btnMarkdownReport" href="../../reports/core/agent_4_daily_logs.md" target="_blank" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition font-medium shadow-sm flex items-center space-x-1.5">
                 <i class="fa-regular fa-file-lines"></i>
                 <span>Báo Cáo Markdown</span>
             </a>
@@ -137,13 +136,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </div>
         </div>
 
-        <!-- 1. Cố định: Overview Toàn Trung tâm (Trung tâm Đào tạo Công nghệ & Kinh tế số - 41 NS) -->
+        <!-- 1. Cố định: Overview Toàn Trung tâm (Trung tâm Đào tạo Công nghệ & Kinh tế số - 42 NS) -->
         <div class="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-5 shadow-sm space-y-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
                     <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
                     <h2 class="text-xs font-bold uppercase tracking-wider text-slate-300">Tổng Quan Toàn Trung Tâm Đào Tạo Công Nghệ & Kinh Tế Số</h2>
-                    <span class="px-2 py-0.5 text-[11px] font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-md">6 Khối • 3 Cơ sở • 41 Nhân sự</span>
+                    <span class="px-2 py-0.5 text-[11px] font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-md">6 Khối • 3 Cơ sở • 42 Nhân sự</span>
                 </div>
                 <span id="lblOverviewSubtitle" class="text-[11px] text-slate-500">Dữ liệu kiểm toán chuẩn hóa theo bộ 3 KPI Master mới</span>
             </div>
@@ -157,12 +156,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <i class="fa-solid fa-clipboard-check text-emerald-400"></i>
                     </div>
                     <div class="flex items-baseline space-x-2">
-                        <span id="valComplianceRate" class="text-2xl font-bold text-white">86.0%</span>
-                        <span class="text-xs text-slate-400">(41 NS)</span>
+                        <span id="valComplianceRate" class="text-2xl font-bold text-white">79.5%</span>
+                        <span class="text-xs text-slate-400">(42 NS)</span>
                     </div>
                     <div class="text-[11px] text-slate-400 mt-2 flex items-center space-x-1">
                         <i class="fa-solid fa-circle-check text-emerald-400"></i>
-                        <span id="valHoursRatio">Khai báo: 1067.9h / Chuẩn: 604.0h</span>
+                        <span id="valHoursRatio">Khai báo: 1275.0h / Chuẩn: 986.6h</span>
                     </div>
                 </div>
 
@@ -174,7 +173,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <i class="fa-solid fa-clock-rotate-left text-rose-400"></i>
                     </div>
                     <div class="flex items-baseline space-x-2">
-                        <span id="valExcessHours" class="text-2xl font-bold text-rose-400">+468.4h</span>
+                        <span id="valExcessHours" class="text-2xl font-bold text-rose-400">+364.3h</span>
                         <span class="text-xs text-slate-400">so barem Master</span>
                     </div>
                     <div class="text-[11px] text-rose-300 mt-2 flex items-center space-x-1">
@@ -183,36 +182,36 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     </div>
                 </div>
 
-                <!-- Card 3: Hạ Rank -->
+                <!-- Card 3: Hạ Rank / Chưa đạt 40h -->
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 relative overflow-hidden">
-                    <div class="absolute -right-2 -bottom-2 w-16 h-16 bg-amber-500/10 rounded-full blur-xl"></div>
+                    <div class="absolute -right-2 -bottom-2 w-16 h-16 bg-rose-500/10 rounded-full blur-xl"></div>
                     <div class="flex items-center justify-between text-slate-400 text-xs mb-1">
-                        <span>DIỆN XEM XÉT HẠ RANK</span>
-                        <i class="fa-solid fa-user-gear text-amber-400"></i>
+                        <span id="lblCard3">CHƯA ĐẠT 40H/TUẦN</span>
+                        <i class="fa-solid fa-triangle-exclamation text-rose-400"></i>
                     </div>
                     <div class="flex items-baseline space-x-2">
-                        <span id="valReviewRank" class="text-2xl font-bold text-amber-400">15 NS</span>
-                        <span class="text-xs text-slate-400">vượt 1.5x - 3x định mức</span>
+                        <span id="valReviewRank" class="text-2xl font-bold text-rose-400">27 NS</span>
+                        <span class="text-xs text-slate-400">chưa đạt định mức tuần</span>
                     </div>
-                    <div class="text-[11px] text-amber-300 mt-2 flex items-center space-x-1">
-                        <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
-                        <span>Chậm tiến độ nghiệp vụ cốt lõi</span>
+                    <div class="text-[11px] text-rose-300 mt-2 flex items-center space-x-1">
+                        <i class="fa-solid fa-clock text-rose-400"></i>
+                        <span>Cần giải trình thiếu giờ hoặc bù giờ</span>
                     </div>
                 </div>
 
-                <!-- Card 4: Cắt Giờ Ảo -->
+                <!-- Card 4: Cắt Giờ Ảo / Task Ngoài Master -->
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 relative overflow-hidden">
-                    <div class="absolute -right-2 -bottom-2 w-16 h-16 bg-indigo-500/10 rounded-full blur-xl"></div>
+                    <div class="absolute -right-2 -bottom-2 w-16 h-16 bg-amber-500/10 rounded-full blur-xl"></div>
                     <div class="flex items-center justify-between text-slate-400 text-xs mb-1">
-                        <span>DIỆN CẮT GIỜ CÔNG ẢO</span>
-                        <i class="fa-solid fa-scissors text-indigo-400"></i>
+                        <span id="lblCard4">CÓ TASK NGOÀI MASTER</span>
+                        <i class="fa-solid fa-scissors text-amber-400"></i>
                     </div>
                     <div class="flex items-baseline space-x-2">
-                        <span id="valDeductHours" class="text-2xl font-bold text-indigo-400">22 NS</span>
-                        <span class="text-xs text-slate-400">khai bù giờ/tự do</span>
+                        <span id="valDeductHours" class="text-2xl font-bold text-amber-400">38 NS</span>
+                        <span class="text-xs text-slate-400">khai task tự do</span>
                     </div>
-                    <div class="text-[11px] text-indigo-300 mt-2 flex items-center space-x-1">
-                        <i class="fa-solid fa-filter text-indigo-400"></i>
+                    <div class="text-[11px] text-amber-300 mt-2 flex items-center space-x-1">
+                        <i class="fa-solid fa-filter text-amber-400"></i>
                         <span>Chỉ nghiệm thu theo barem chuẩn</span>
                     </div>
                 </div>
@@ -414,9 +413,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <option value="ALL">Tất cả các Khối (6 Khối)</option>
                         <option value="Khối CNTT Hà Nội">Khối CNTT Hà Nội (13 NS - Leader Hồ Xuân Hùng)</option>
                         <option value="Khối Quản trị Kinh doanh">Khối Quản trị Kinh doanh (9 NS - Leader Hoàng Thị Kim Oanh)</option>
-                        <option value="Khối Ngoại ngữ và KNM">Khối Ngoại ngữ và KNM (4 NS - Leader Giáp Thị Minh Hằng)</option>
+                        <option value="Khối Ngoại ngữ và KNM">Khối Ngoại ngữ và KNM (7 NS - Leader Giáp Thị Minh Hằng)</option>
                         <option value="Khối QLCLĐT Hà Nội">Khối QLCLĐT Hà Nội (4 NS - Leader Nguyễn Thị Tươi)</option>
-                        <option value="Khối CNTT HCM">Khối CNTT HCM (9 NS - Leader Nguyễn Bá Minh Đạo)</option>
+                        <option value="Khối CNTT HCM">Khối CNTT HCM (7 NS - Leader Nguyễn Bá Minh Đạo)</option>
                         <option value="LMS AI">LMS AI (2 NS - Leader Trần Minh Cường)</option>
                     </select>
                 </div>
@@ -426,10 +425,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <label class="text-slate-400 font-medium"><i class="fa-solid fa-tag text-slate-500 mr-1"></i>Đề xuất:</label>
                     <select id="categoryFilter" onchange="filterTable()" class="bg-slate-800 border border-slate-700 text-slate-200 rounded-lg px-3 py-1.5 text-xs focus:ring-1 focus:ring-indigo-500 focus:outline-none">
                         <option value="ALL">Tất cả phân loại</option>
-                        <option value="CẦN RÀ SOÁT RANK">Cần rà soát hạ Rank</option>
-                        <option value="CẢNH BÁO BÙ GIỜ">Cắt giảm giờ công ảo / Khai bù</option>
-                        <option value="CHƯA NỘP BÁO CÁO">Chưa nộp báo cáo (0%)</option>
-                        <option value="CHUẨN MỰC">Khai báo chuẩn mực</option>
+                        <option value="THIẾU GIỜ 40H">🔴 Chưa đạt 40h/tuần (Thiếu giờ)</option>
+                        <option value="CHƯA NỘP BÁO CÁO">⚫ Bỏ trống báo cáo (0%)</option>
+                        <option value="CẦN RÀ SOÁT RANK">🟡 Cần rà soát hạ Rank</option>
+                        <option value="CẢNH BÁO BÙ GIỜ">🟠 Cắt giảm giờ ảo / Ngoài barem</option>
+                        <option value="CHUẨN MỰC">🟢 Đạt chuẩn (≥40h/tuần)</option>
                     </select>
                 </div>
             </div>
@@ -582,7 +582,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         const comparisonData = __COMPARISON_JSON__;
         const capacityMatrixData = __CAPACITY_MATRIX_JSON__;
 
-        let currentPeriod = "sept_01_08";
+        let currentPeriod = "week_14_18";
         let currentData = (auditData.periods && auditData.periods[currentPeriod]) ? auditData.periods[currentPeriod] : auditData;
         let staffList = Object.values(currentData.staff_details || {});
         let currentSelectedStaff = null;
@@ -610,8 +610,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 role: "Leader Khối Ngoại ngữ & KNM",
                 rank: 5,
                 groupKey: "Khối Ngoại ngữ và KNM",
-                campuses: "Cơ sở Hà Nội - HPC",
-                totalSubs: 3
+                campuses: "Cơ sở Hà Nội - HPC (7 NS)",
+                totalSubs: 6
             },
             "Khối QLCLĐT Hà Nội": {
                 name: "Nguyễn Thị Tươi",
@@ -626,8 +626,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 role: "Leader Khối CNTT HCM",
                 rank: 5,
                 groupKey: "Khối CNTT HCM",
-                campuses: "Cơ sở TP. Hồ Chí Minh (8 NS)",
-                totalSubs: 8
+                campuses: "Cơ sở TP. Hồ Chí Minh (7 NS)",
+                totalSubs: 6
             },
             "LMS AI": {
                 name: "Trần Minh Cường",
@@ -635,7 +635,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 rank: 5,
                 groupKey: "LMS AI",
                 campuses: "Hà Nội - HPC (1 NS) & TP. Hồ Chí Minh (1 NS)",
-                totalSubs: 2
+                totalSubs: 1
             }
         };
 
@@ -648,29 +648,44 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             }
             staffList = Object.values(currentData.staff_details || {});
 
-            const btnSept = document.getElementById("btnPeriodSept");
-            const btnAug = document.getElementById("btnPeriodAug");
             const lblDates = document.getElementById("lblPeriodDates");
             const btnMd = document.getElementById("btnMarkdownReport");
+            const selectEl = document.getElementById("periodSelect");
+            
+            if (selectEl && selectEl.value !== periodKey) {
+                selectEl.value = periodKey;
+            }
 
-            if (periodKey === 'sept_01_08') {
-                btnSept.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center space-x-1.5 bg-indigo-600 text-white shadow-sm";
-                btnAug.className = "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5";
-                lblDates.textContent = "Kỳ 01/09 - 11/09/2026 (7 ngày làm việc)";
-                btnMd.href = "../../docs/reports/2026-09-09-kiem-toan-worklane-01-08-thang-9-theo-kpi-master-moi.md";
+            if (periodKey === 'sept_full') {
+                lblDates.textContent = "Tháng 09/2026 (22 ngày làm việc - 01/09 đến 30/09)";
+                if (btnMd) btnMd.href = "../../reports/core/agent_4_daily_logs.md";
+            } else if (periodKey === 'week_14_18') {
+                lblDates.textContent = "Tuần 21/09 - 25/09/2026 (5 ngày - Chuẩn 40h/tuần)";
+                if (btnMd) btnMd.href = "../../reports/core/agent_4_daily_logs.md";
+            } else if (periodKey === 'sept_01_08') {
+                lblDates.textContent = "Lũy kế 01/09 - 25/09/2026 (17 ngày làm việc)";
+                if (btnMd) btnMd.href = "../../docs/reports/2026-09-09-kiem-toan-worklane-01-08-thang-9-theo-kpi-master-moi.md";
             } else {
-                btnAug.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center space-x-1.5 bg-indigo-600 text-white shadow-sm";
-                btnSept.className = "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5";
                 lblDates.textContent = "Tháng 08/2026 (20 ngày làm việc)";
-                btnMd.href = "../../docs/reports/2026-09-04-kiem-toan-hieu-suat-va-khai-bao-worklane.md";
+                if (btnMd) btnMd.href = "../../docs/reports/2026-09-04-kiem-toan-hieu-suat-va-khai-bao-worklane.md";
             }
 
             const s = currentData.summary || {};
             document.getElementById("valComplianceRate").textContent = (s.overall_compliance_rate || 0) + "%";
             document.getElementById("valHoursRatio").textContent = `Khai báo: ${s.total_declared_hours || 0}h / Chuẩn: ${s.total_standard_hours || 0}h`;
             document.getElementById("valExcessHours").textContent = "+" + (s.total_excess_hours || 0) + "h";
-            document.getElementById("valReviewRank").textContent = (s.count_review_rank || 0) + " NS";
-            document.getElementById("valDeductHours").textContent = (s.count_deduct_hours || 0) + " NS";
+            
+            if (periodKey === 'week_14_18') {
+                const c3 = document.getElementById("lblCard3"); if (c3) c3.textContent = "CHƯA ĐẠT 40H/TUẦN";
+                const c4 = document.getElementById("lblCard4"); if (c4) c4.textContent = "CÓ TASK NGOÀI MASTER";
+                document.getElementById("valReviewRank").textContent = (s.count_under_40h || 0) + " NS";
+                document.getElementById("valDeductHours").textContent = (s.count_free_tasks_staff || s.count_deduct_hours || 0) + " NS";
+            } else {
+                const c3 = document.getElementById("lblCard3"); if (c3) c3.textContent = "DIỆN XEM XÉT HẠ RANK";
+                const c4 = document.getElementById("lblCard4"); if (c4) c4.textContent = "DIỆN CẮT GIỜ CÔNG ẢO";
+                document.getElementById("valReviewRank").textContent = (s.count_review_rank || 0) + " NS";
+                document.getElementById("valDeductHours").textContent = (s.count_deduct_hours || 0) + " NS";
+            }
 
             renderCapacityMatrix(periodKey);
             filterTable();
@@ -1029,19 +1044,23 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             }
 
             const sorted = [...filtered].sort((a, b) => {
-                const order = { "CẦN RÀ SOÁT RANK": 1, "CẢNH BÁO BÙ GIỜ": 2, "CHƯA NỘP BÁO CÁO": 3, "CHUẨN MỰC": 4 };
+                const order = { "THIẾU GIỜ 40H": 1, "CHƯA NỘP BÁO CÁO": 2, "CẦN RÀ SOÁT RANK": 3, "CẢNH BÁO BÙ GIỜ": 4, "CHUẨN MỰC": 5 };
                 return (order[a.recommendation_category] || 99) - (order[b.recommendation_category] || 99) || (b.excess_hours - a.excess_hours);
             });
 
             sorted.forEach(s => {
                 let badgeHtml = "";
-                if (s.recommendation_category === "CẦN RÀ SOÁT RANK") {
+                if (s.recommendation_category === "THIẾU GIỜ 40H") {
+                    badgeHtml = `<span class="px-2.5 py-0.5 text-[11px] font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full inline-flex items-center gap-1">
+                                    <i class="fa-solid fa-triangle-exclamation text-[10px]"></i> ${s.recommendation_label}
+                                 </span>`;
+                } else if (s.recommendation_category === "CẦN RÀ SOÁT RANK") {
                     badgeHtml = `<span class="px-2.5 py-0.5 text-[11px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full inline-flex items-center gap-1">
                                     <i class="fa-solid fa-user-gear text-[10px]"></i> Cần rà soát hạ Rank
                                  </span>`;
                 } else if (s.recommendation_category === "CẢNH BÁO BÙ GIỜ") {
-                    badgeHtml = `<span class="px-2.5 py-0.5 text-[11px] font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full inline-flex items-center gap-1">
-                                    <i class="fa-solid fa-scissors text-[10px]"></i> Cắt giảm giờ công ảo
+                    badgeHtml = `<span class="px-2.5 py-0.5 text-[11px] font-semibold bg-orange-500/20 text-orange-300 border border-orange-500/40 rounded-full inline-flex items-center gap-1">
+                                    <i class="fa-solid fa-scissors text-[10px]"></i> Cắt giờ ảo / Ngoài barem
                                  </span>`;
                 } else if (s.recommendation_category === "CHƯA NỘP BÁO CÁO") {
                     badgeHtml = `<span class="px-2.5 py-0.5 text-[11px] font-semibold bg-slate-800 text-slate-400 border border-slate-700 rounded-full inline-flex items-center gap-1">
@@ -1049,12 +1068,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                                  </span>`;
                 } else {
                     badgeHtml = `<span class="px-2.5 py-0.5 text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full inline-flex items-center gap-1">
-                                    <i class="fa-solid fa-check text-[10px]"></i> Chuẩn mực
+                                    <i class="fa-solid fa-check text-[10px]"></i> Chuẩn mực (≥40h)
                                  </span>`;
                 }
 
                 const diffHours = s.excess_hours;
                 const diffColor = diffHours > 40 ? "text-rose-400 font-bold" : (diffHours > 15 ? "text-amber-400 font-semibold" : "text-slate-300");
+
+                const targetH = s.target_hours || (s.expected_days * 8.0) || 40.0;
+                const pctTarget = s.pct_target !== undefined ? s.pct_target : ((s.total_declared_hours / targetH) * 100);
 
                 const tr = document.createElement("tr");
                 tr.className = "hover:bg-slate-800/60 cursor-pointer transition";
@@ -1079,7 +1101,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </span>
                         <div class="text-[10px] text-slate-500">${s.reported_days}/${s.expected_days} ngày</div>
                     </td>
-                    <td class="py-2.5 px-3 text-right font-medium text-slate-200">${s.total_declared_hours}h</td>
+                    <td class="py-2.5 px-3 text-right">
+                        <div class="font-bold text-slate-200">${s.total_declared_hours}h</div>
+                        <div class="text-[10px] ${s.is_under_target ? 'text-rose-400 font-semibold' : 'text-emerald-400'}">/ ${targetH}h (${pctTarget.toFixed(0)}%)</div>
+                    </td>
                     <td class="py-2.5 px-3 text-right font-medium text-emerald-400/90">${s.total_standard_hours}h</td>
                     <td class="py-2.5 px-3 text-right ${diffColor}">+${diffHours}h</td>
                     <td class="py-2.5 px-4">${badgeHtml}</td>
@@ -1639,9 +1664,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         function safeInit() {
             if (isChartsInit) return;
             isChartsInit = true;
+            isChartsInit = true;
             initComparisonCharts();
-            renderCapacityMatrix('sept_01_08');
-            filterTable();
+            
+            const selectEl = document.getElementById("periodSelect");
+            let initialPeriod = 'sept_full';
+            if (selectEl) {
+                initialPeriod = selectEl.value;
+            }
+            switchPeriod(initialPeriod);
         }
 
         if (document.readyState === 'loading') {
@@ -1684,7 +1715,7 @@ def generate_dashboard_v4():
     html = html.replace("__COMPARISON_JSON__", comp_embedded)
     html = html.replace("__CAPACITY_MATRIX_JSON__", matrix_embedded)
 
-    out_dir = r"output/dashboards/audit"
+    out_dir = r"output/dashboards/management"
     os.makedirs(out_dir, exist_ok=True)
     out_html_path = os.path.join(out_dir, "worklane_staff_audit.html")
     with open(out_html_path, "w", encoding="utf-8") as f:

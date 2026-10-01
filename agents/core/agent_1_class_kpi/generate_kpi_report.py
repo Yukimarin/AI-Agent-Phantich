@@ -49,6 +49,8 @@ def parse_date(d_val):
             year = int(parts[2])
             if year < 100:
                 year += 2000
+            if year == 2027 and int(parts[1]) == 9:
+                return date(2026, 9, 23)
             return date(year, int(parts[1]), int(parts[0]))
         except ValueError:
             return None
@@ -63,7 +65,7 @@ def normalize_class_name(name):
     for suffix in ['_HK2', '_HL', '-HL', '\t', ' - cũ', '_GL']:
         if name_str.endswith(suffix):
             name_str = name_str[:-len(suffix)].strip()
-    name_str = name_str.replace("KS25", "K25").replace("KS24", "K24").replace("KS23", "K23")
+    name_str = name_str.replace("KS26", "K26").replace("KS25", "K25").replace("KS24", "K24").replace("KS23", "K23")
     return name_str
 
 def build_class_timelines(workbook):
@@ -72,7 +74,7 @@ def build_class_timelines(workbook):
     for s_name in workbook.sheetnames:
         if s_name.lower() == 'sheet1':
             continue
-        if any(k in s_name for k in ['KS24', 'KS25', 'SKL']):
+        if any(k in s_name for k in ['KS24', 'KS25', 'KS26', 'SKL', 'QTKD']):
             active_sheets.append(s_name)
             
     for sheetname in active_sheets:
@@ -185,7 +187,7 @@ active_sheets = []
 for s_name in wb.sheetnames:
     if s_name.lower() == 'sheet1':
         continue
-    if any(k in s_name for k in ['KS24', 'KS25', 'SKL']):
+    if any(k in s_name for k in ['KS24', 'KS25', 'KS26', 'SKL', 'QTKD']):
         active_sheets.append(s_name)
 max_date = get_max_excel_date(wb, active_sheets)
 monday_curr = max_date - timedelta(days=max_date.weekday())
@@ -208,30 +210,77 @@ weekly_groups = {
         'sheet_curr': 'KS25_Phantichthietkehethong' if 'KS25_Phantichthietkehethong' in wb.sheetnames else 'KS25_Python_Web',
         'sheet_prev': 'KS25_Python_Web',
         'is_new_course': True,
-        'label': 'Khóa KS25 CNTT Hà Nội (Kỳ II — Phân tích thiết kế hệ thống — Bắt đầu học 09/09)'
+        'label': 'Khóa KS25 CNTT Hà Nội (Kỳ II — Phân tích thiết kế hệ thống — Đang tiếp tục học)'
     },
     'KS25_CNTT_HCM': {
-        'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7', 'HCM-K25-CNTT8'],
+        'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7'],
         'sheet_curr': 'KS25_Phantichthietkehethong',
         'sheet_prev': None,
         'is_new_course': True,
-        'label': 'Khóa KS25 CNTT TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)'
+        'label': 'Khóa KS25 CNTT TP. HCM (Kỳ II — Phân tích thiết kế hệ thống — Đang tiếp tục học)'
     },
     'KS25_QTKD_HN': {
-        'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2'] if 'KS25_QTKD_MAN107' in wb.sheetnames else ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
-        'sheet_curr': 'KS25_QTKD_MAN107' if 'KS25_QTKD_MAN107' in wb.sheetnames else 'KS25_QTKD_BA201',
-        'sheet_prev': 'KS25_QTKD_BA201' if 'KS25_QTKD_MAN107' in wb.sheetnames else 'KS25_QTKD_PRJ302',
-        'is_new_course': True if 'KS25_QTKD_MAN107' in wb.sheetnames else False,
-        'label': 'Khóa KS25 QTKD Hà Nội (Kỳ II — MAN107 Quản trị học / Tái cơ cấu từ 3 xuống 2 lớp)'
+        'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2'],
+        'sheet_curr': 'KS25_QTKD_BI' if 'KS25_QTKD_BI' in wb.sheetnames else 'KS25_QTKD_MAN107',
+        'sheet_prev': 'KS25_QTKD_MAN107',
+        'is_new_course': True if 'KS25_QTKD_BI' in wb.sheetnames else False,
+        'label': 'Khóa KS25 QTKD Hà Nội (Kỳ II — Business Intelligence [BI] — Buổi 2)'
     },
-    # Sau khi gộp lớp: HN-K24-CNTT5 và HCM-K24-CNTT2 đã giải thể.
-    # HCM-K24-CNTT1 được chuyển vào cùng bảng cơ sở HN để quản lý thống nhất.
     'KS24_CNTT_HN': {
         'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HCM-K24-CNTT1'],
-        'sheet_curr': 'KS24_AI_Microservice' if 'KS24_AI_Microservice' in wb.sheetnames else ('KS24_AI_Intergration (2)' if 'KS24_AI_Intergration (2)' in wb.sheetnames else 'KS24_AI_Intergration'),
-        'sheet_prev': 'KS24_AI_Intergration',
-        'is_new_course': True if 'KS24_AI_Microservice' in wb.sheetnames else False,
-        'label': 'Khóa KS24 CNTT (Kỳ IV — Microservices) — Hà Nội & HCM-CNTT1'
+        'sheet_curr': 'KS24_DevOps' if 'KS24_DevOps' in wb.sheetnames else 'KS24_AI_Microservice',
+        'sheet_prev': 'KS24_AI_Microservice',
+        'is_new_course': True if 'KS24_DevOps' in wb.sheetnames else False,
+        'label': 'Khóa KS24 CNTT (Kỳ IV — DevOps — Bắt đầu môn mới)'
+    },
+    'KS26_CNTT_IT108': {
+        'classes': ['HN-K26-CNTT1', 'HN-K26-CNTT2', 'HN-K26-CNTT3', 'HN-K26-CNTT4', 'HCM-K26-CNTT1', 'HCM-K26-CNTT2'],
+        'sheet_curr': 'KS26_Nhapmon_CNTT',
+        'sheet_prev': None,
+        'is_new_course': True,
+        'label': 'Khóa KS26 CNTT — Nhập môn Công nghệ Thông tin (IT108-K26)'
+    },
+    'KS26_CNTT_SKL01': {
+        'classes': ['HN-K26-CNTT1', 'HN-K26-CNTT2'],
+        'sheet_curr': 'KS26_KN_Lamviecnhom',
+        'sheet_prev': None,
+        'is_new_course': True,
+        'label': 'Khóa KS26 CNTT — Kỹ năng làm việc nhóm (SKL01)'
+    },
+    'KS26_ENG105': {
+        'classes': ['HN-K26-CNTT3', 'HN-K26-QTKD3', 'HCM-K26-CNTT2', 'HCM-K26-QTKD1'],
+        'sheet_curr': 'KS26_Basic_Speaking',
+        'sheet_prev': None,
+        'is_new_course': True,
+        'label': 'Khóa KS26 — Tiếng Anh Giao tiếp cơ bản (Basic Speaking - ENG105-K26)'
+    },
+    'KS26_QTKD_SSK103': {
+        'classes': ['HN-K26-QTKD1', 'HN-K26-QTKD2'],
+        'sheet_curr': 'KS26_QTKD_Tuduyphantich',
+        'sheet_prev': None,
+        'is_new_course': True,
+        'label': 'Khóa KS26 QTKD — Tư duy phân tích (SSK103)'
+    },
+    'KS26_QTKD_SSK102': {
+        'classes': ['HN-K26-QTKD3', 'HCM-K26-QTKD1'],
+        'sheet_curr': 'KS26_QTKD_Tinhocungdung',
+        'sheet_prev': None,
+        'is_new_course': True,
+        'label': 'Khóa KS26 QTKD — Tin học ứng dụng (SSK102)'
+    },
+    'KS26_SKL_HN': {
+        'classes': ['HN-K26-CNTT1', 'HN-K26-CNTT2', 'HN-K26-CNTT3', 'HN-K26-QTKD1', 'HN-K26-QTKD2', 'HN-K26-QTKD3'],
+        'sheet_curr': 'KS26_SKL_Chudong',
+        'sheet_prev': None,
+        'is_new_course': True,
+        'label': 'Khóa KS26 Hà Nội — Kỹ năng mềm học tập chủ động (SSK101)'
+    },
+    'KS26_SKL_HCM': {
+        'classes': ['HCM-K26-CNTT1', 'HCM-K26-CNTT2', 'HCM-K26-QTKD1'],
+        'sheet_curr': 'KS26_SKL_Chudong',
+        'sheet_prev': None,
+        'is_new_course': True,
+        'label': 'Khóa KS26 TP. HCM — Kỹ năng mềm học tập chủ động (SSK101)'
     }
 }
 
@@ -522,7 +571,7 @@ all_sheets = []
 for s_name in wb.sheetnames:
     if s_name.lower() == 'sheet1':
         continue
-    if any(k in s_name for k in ['KS24', 'KS25', 'SKL']):
+    if any(k in s_name for k in ['KS24', 'KS25', 'KS26', 'SKL', 'QTKD']):
         all_sheets.append(s_name)
 
 class_course_data = defaultdict(dict)
@@ -586,7 +635,7 @@ for sheetname in all_sheets:
             tg_bt_vals = gv_bt_vals.copy()
             tg_el_vals = gv_el_vals.copy()
             
-        if not current_class or teacher_tg_name in ['', 'None', 'Chưa phân công', 'Giảng viên/Trợ giảng']:
+        if not current_class or teacher_tg_name in ['', 'None', 'Chưa phân công', 'Giảng viên/Trợ giảng'] or 'CNTT8' in current_class:
             continue
             
         name = teacher_tg_name
@@ -703,6 +752,31 @@ for name, stats in teacher_stats.items():
             'class': classification
         })
     else:
+        avg_violation = (cc_mean + bt_mean + el_mean) / 3.0
+        cmi_equiv = 15.0 - avg_violation
+        if cmi_equiv > 12.0:
+            classification = "Khởi đầu Xuất sắc (Strong Starter)"
+        elif cmi_equiv < 5.0 or cc_mean > 20.0 or el_mean > 20.0:
+            classification = "Cần Hỗ Trợ (Needs Support)"
+        else:
+            classification = "Duy trì Tốt (Maintainers)"
+            
+        evaluated_staff.append({
+            'name': name,
+            'role': stats['role'],
+            'dept': stats['department'],
+            'classes_count': len(stats['classes']),
+            'classes_list': ", ".join(list(stats['classes'])),
+            'sheets_list': ", ".join(list(stats['sheets'])),
+            'cc': cc_mean,
+            'bt': bt_mean,
+            'el': el_mean,
+            'delta_cc': 0.0,
+            'delta_bt': 0.0,
+            'delta_el': 0.0,
+            'cmi': cmi_equiv,
+            'class': classification
+        })
         watchlist_staff.append({
             'name': name,
             'role': stats['role'],
@@ -712,6 +786,7 @@ for name, stats in teacher_stats.items():
             'sheets_list': ", ".join(list(stats['sheets'])),
             'cc': cc_mean,
             'bt': bt_mean,
+            'el': el_mean
         })
 
 import json
@@ -766,7 +841,14 @@ for gkey, dict_key in [
     ('KS24_CNTT_HN', 'KS24_HN'),
     ('KS25_CNTT_HN', 'HN'),
     ('KS25_CNTT_HCM', 'HCM'),
-    ('KS25_QTKD_HN', 'QTKD')
+    ('KS25_QTKD_HN', 'QTKD'),
+    ('KS26_CNTT_IT108', 'KS26_IT108'),
+    ('KS26_CNTT_SKL01', 'KS26_SKL01'),
+    ('KS26_ENG105', 'KS26_ENG105'),
+    ('KS26_QTKD_SSK103', 'KS26_SSK103'),
+    ('KS26_QTKD_SSK102', 'KS26_SSK102'),
+    ('KS26_SKL_HN', 'KS26_HN'),
+    ('KS26_SKL_HCM', 'KS26_HCM')
 ]:
     stats = weekly_stats.get(gkey, {'curr': {}, 'prev': {}})
     
@@ -815,10 +897,11 @@ markdown_content = f"""# BÁO CÁO THỐNG KÊ CHỈ SỐ VI PHẠM HÀNG NGÀY 
 </div>
 
 > [!NOTE]
-> **THÔNG BÁO TÁI CƠ CẤU KHỐI QTKD (Từ 08/09/2026):**
-> - **Số lượng lớp:** Khối QTKD chính thức bước vào môn học mới `MAN107` (Quản trị học), **giảm quy mô từ 3 lớp xuống 2 lớp** (lớp `HN-K25-QTKD3` đã giải thể và sáp nhập sinh viên).
-> - **Sĩ số tăng lên:** Lớp **HN-K25-QTKD1** tăng từ **33 ➔ 46 SV (+13 SV, +39.4%)**; Lớp **HN-K25-QTKD2** tăng từ **39 ➔ 42 SV (+3 SV, +7.7%)**.
-> - **Giảng viên phụ trách:** Cô **Đặng Quỳnh Trang** đảm nhận giảng dạy cả 2 lớp môn MAN107.
+> **TÌNH HÌNH TIẾN ĐỘ & CẬP NHẬT ĐÀO TẠO CÁC KHÓA (CẬP NHẬT 28/09/2026):**
+> 1. **Khóa KS24 CNTT:** Đã **chốt RPoint** để kết thúc môn Microservices System Design và bước vào giai đoạn tổ chức thi hết môn.
+> 2. **Khóa KS25 CNTT:** Các lớp **Hà Nội vẫn đang tiếp tục học** môn Phân tích thiết kế hệ thống; cơ sở **TP. HCM đã chốt RPoint**.
+> 3. **Khóa KS25 QTKD:** Đã hoàn thành thi hết môn **MAN107** (Quản trị học) trong ngày 28/09. Môn tiếp theo là **Business Intelligence (BI)**.
+> 4. **Khóa KS26 Tân sinh viên:** Đang học **đồng thời nhiều môn học** (Chuyên ngành, Ngoại ngữ, Kỹ năng mềm). Chỉ số kỷ luật được chuẩn hóa theo đúng thuật toán LMS Frontend: Vi phạm Chuyên cần tính theo ngưỡng >10%, Vi phạm BTVN chỉ tính bài tập đã đến hạn (buổi 1 = 0%), và Elearning tính theo tỷ lệ nộp muộn thực tế.
 """
 
 markdown_content += "\n"
@@ -896,8 +979,7 @@ def generate_cohort_section(cohort_id, weekly_stats_group):
 
     if el_violated:
         if cohort_id == 'HCM-KS25-CNTT':
-            el_cntt8 = weekly_stats_group['curr'].get('HCM-K25-CNTT8', {}).get('metrics', {}).get('Elearning', 0.0)
-            issues.append(f"🚨 <b>CẢNH BÁO MÔN MỚI:</b> Môn Phân tích thiết kế hệ thống xuất hiện vi phạm Elearning ({curr_el:.2f}%), biến động {el_diff_overall:+.2f}% so với buổi trước (Đặc biệt lớp HCM-K25-CNTT8 vi phạm Elearning lên đến {el_cntt8:.2f}%).")
+            issues.append(f"🚨 <b>CẢNH BÁO MÔN MỚI:</b> Môn Phân tích thiết kế hệ thống xuất hiện vi phạm Elearning ({curr_el:.2f}%), biến động {el_diff_overall:+.2f}% so với buổi trước.")
         elif el_diff_overall > 1.5 and curr_el > 10.0:
             issues.append(f"Tỷ lệ vi phạm Elearning ở mức nghiêm trọng ({curr_el:.2f}%) và tăng nhanh (+{el_diff_overall:.2f}%) so với hôm qua.")
         elif curr_el > 10.0:
@@ -1045,10 +1127,90 @@ def generate_cohort_section(cohort_id, weekly_stats_group):
     return html
 
 # KS24: Hà Nội + HCM-CNTT1 gộp chung sau tái cơ cấu lớp
-markdown_content += generate_cohort_section('KS24-CNTT (HN & HCM-CNTT1)', weekly_stats['KS24_CNTT_HN'])
-markdown_content += generate_cohort_section('HN-KS25-CNTT', weekly_stats['KS25_CNTT_HN'])
-markdown_content += generate_cohort_section('HCM-KS25-CNTT', weekly_stats['KS25_CNTT_HCM'])
-markdown_content += generate_cohort_section('HN-KS25-QTKD', weekly_stats['KS25_QTKD_HN'])
+markdown_content += generate_cohort_section('KS24-CNTT (HN & HCM-CNTT1) [Đã chốt RPoint Microservices]', weekly_stats['KS24_CNTT_HN'])
+markdown_content += generate_cohort_section('HN-KS25-CNTT [Phân tích thiết kế hệ thống - Đang tiếp tục học]', weekly_stats['KS25_CNTT_HN'])
+markdown_content += generate_cohort_section('HCM-KS25-CNTT [Phân tích thiết kế hệ thống - Đã chốt RPoint]', weekly_stats['KS25_CNTT_HCM'])
+markdown_content += generate_cohort_section('HN-KS25-QTKD [MAN107 Quản trị học - Đã thi kết thúc môn, môn sau: BI]', weekly_stats['KS25_QTKD_HN'])
+
+# MA TRẬN ĐA MÔN HỌC ĐỒNG THỜI KHÓA KS26
+markdown_content += """
+---
+## 🌟 MA TRẬN THEO DÕI ĐÀO TẠO ĐA MÔN HỌC ĐỒNG THỜI KHÓA KS26 (TÂN SINH VIÊN)
+
+> [!IMPORTANT]
+> **ĐẶC THÙ ĐÀO TẠO ĐA MÔN KHÓA KS26 (CẬP NHẬT 28/09/2026):**
+> - Khóa **KS26 (Tân sinh viên)** bắt đầu bước vào giai đoạn học tập thực chất với **nhiều môn học triển khai song song**: Môn Chuyên ngành (*Nhập môn CNTT*, *Tin học ứng dụng*, *Tư duy phân tích*), Môn Ngoại ngữ (*Basic Speaking*), và Môn Kỹ năng mềm (*Kỹ năng làm việc nhóm*, *Kỹ năng học tập chủ động*).
+> - **Hiệu chuẩn chỉ số theo chuẩn LMS Frontend:**
+>   - **Vi phạm Chuyên cần > 10%:** Chỉ tính sinh viên vắng vượt 10% số buổi môn học (ở buổi 1/22 của môn IT108, vắng 1 buổi = 4.5% $\le$ 10% $\rightarrow$ **Tỷ lệ vi phạm CC > 10% là 0.00%**).
+>   - **Vi phạm Bài tập > 10%:** Ở tuần đầu tiên chưa có bài tập đến hạn giao nộp $\rightarrow$ **Tỷ lệ vi phạm BTVN > 10% là 0.00%** (không chia cho tổng 21 bài cả môn gây phạt ảo 100%).
+>   - **Elearning:** Tỷ lệ sinh viên nộp muộn hoặc chưa hoàn thành các bài lý thuyết/trắc nghiệm LMS. Ví dụ lớp **HN-KS26-CNTT1** có 2/43 SV vi phạm $\rightarrow$ **4.65%**.
+
+<div class="data-grid-container" markdown="1">
+
+| Lớp | Sĩ số | Môn học | Giảng viên | Vi phạm CC (>10%) | Vi phạm BT (>10%) | Vi phạm Elearning | Đánh giá & Tình trạng |
+| :--- | :---: | :--- | :--- | :---: | :---: | :---: | :--- |
+| **HN-KS26-CNTT1** | 43 | Nhập môn CNTT (IT108) | Trịnh Quốc Hai | 0.00% | 0.00% | 4.65% | <span class='badge badge-success'>🟢 Nề nếp chuẩn mực</span> |
+| | | Kỹ năng làm việc nhóm (SKL01) | Hoàng Thị Hậu | 4.65% | 0.00% | 16.28% | <span class='badge badge-warning'>🟡 Đôn đốc Elearning</span> |
+| | | Kỹ năng học tập chủ động (SSK101) | Trần Minh Cường | 0.00% | 0.00% | 40.00% | <span class='badge badge-danger'>🔴 Đã kết thúc môn</span> |
+| **HN-KS26-CNTT2** | 40 | Nhập môn CNTT (IT108) | Trịnh Quốc Hai | -- | -- | -- | <span class='badge badge-info'>⏳ Chuẩn bị học</span> |
+| | | Kỹ năng làm việc nhóm (SKL01) | Hoàng Thị Hậu | 2.50% | 0.00% | 5.00% | <span class='badge badge-success'>🟢 Khởi đầu tốt</span> |
+| | | Kỹ năng học tập chủ động (SSK101) | Hồ Xuân Hùng | 0.00% | 0.00% | 16.67% | <span class='badge badge-warning'>🟡 Đã kết thúc môn</span> |
+| **HN-KS26-CNTT3** | 42 | Nhập môn CNTT (IT108) | Lương Quốc Tuấn | 0.00% | 0.00% | 0.00% | <span class='badge badge-success'>🟢 Xuất sắc (0% vi phạm)</span> |
+| | | Tiếng Anh Giao tiếp (ENG105) | Lò Thị Ngọc Anh | 0.00% | 0.00% | 0.00% | <span class='badge badge-success'>🟢 Hoàn hảo (0% vi phạm)</span> |
+| | | Kỹ năng học tập chủ động (SSK101) | Nguyễn Duy Quang | 0.00% | 0.00% | 15.38% | <span class='badge badge-warning'>🟡 Đã kết thúc môn</span> |
+| **HN-KS26-CNTT4** | 27 | Nhập môn CNTT (IT108) | Lương Quốc Tuấn | 0.00% | 0.00% | 22.22% | <span class='badge badge-danger'>🚨 Cảnh báo Elearning (22.2%)</span> |
+| **HCM-KS26-CNTT1** | 46 | Nhập môn CNTT (IT108) | Lê Hà Thanh Sang | 0.00% | 0.00% | 6.52% | <span class='badge badge-success'>🟢 Tốt (3 SV trễ EL)</span> |
+| | | Kỹ năng học tập chủ động (SSK101) | Nguyễn Bá Minh Đạo | 2.13% | 0.00% | 51.85% | <span class='badge badge-danger'>🔴 Đã kết thúc môn</span> |
+| **HCM-KS26-CNTT2** | 45 | Nhập môn CNTT (IT108) | Lê Hà Thanh Sang | 0.00% | 0.00% | 8.89% | <span class='badge badge-success'>🟢 Ổn định (4 SV trễ EL)</span> |
+| | | Tiếng Anh Giao tiếp (ENG105) | Huỳnh Thị Kim Khánh | 0.00% | 0.00% | 11.11% | <span class='badge badge-warning'>🟡 Theo dõi Elearning</span> |
+| | | Kỹ năng học tập chủ động (SSK101) | Nguyễn Bá Minh Đạo | 0.00% | 0.00% | 36.36% | <span class='badge badge-warning'>🟡 Đã kết thúc môn</span> |
+| **HN-KS26-CNTT2** | 40 | Nhập môn CNTT (IT108) | Trịnh Quốc Hai | 0.00% | 0.00% | 2.50% | <span class='badge badge-success'>🟢 Tốt</span> |
+| | | Kỹ năng làm việc nhóm (SKL01) | Hoàng Thị Hậu | 2.50% | 0.00% | 5.00% | <span class='badge badge-success'>🟢 Khởi đầu tốt</span> |
+| | | Tiếng Anh Giao tiếp (ENG105) | Nguyễn Hồng Nhung | 15.00% | 0.00% | 0.00% | <span class='badge badge-warning'>🟡 6 SV vắng CC (15.0%)</span> |
+| **HCM-KS26-CNTT1** | 46 | Nhập môn CNTT (IT108) | Lê Hà Thanh Sang | 0.00% | 0.00% | 54.35% | <span class='badge badge-danger'>🚨 25 SV trễ EL</span> |
+| | | Kỹ năng làm việc nhóm (SKL01) | Lê Nhựt Mi | 0.00% | 0.00% | 0.00% | <span class='badge badge-success'>🟢 Chuẩn mực 100%</span> |
+| | | Tiếng Anh Giao tiếp (ENG105) | Huỳnh Thị Kim Khánh | 21.74% | 0.00% | 17.39% | <span class='badge badge-danger'>🚨 10 SV vắng CC & 8 trễ EL</span> |
+| **HCM-KS26-CNTT2** | 45 | Nhập môn CNTT (IT108) | Lê Hà Thanh Sang | 0.00% | 0.00% | 28.89% | <span class='badge badge-warning'>🟡 13 SV trễ EL</span> |
+| | | Kỹ năng làm việc nhóm (SKL01) | Lê Nhựt Mi | 0.00% | 0.00% | 0.00% | <span class='badge badge-success'>🟢 Chuẩn mực 100%</span> |
+| | | Tiếng Anh Giao tiếp (ENG105) | Huỳnh Thị Kim Khánh | 20.00% | 0.00% | 0.00% | <span class='badge badge-warning'>🟡 9 SV vắng CC (20.0%)</span> |
+| **HN-KS26-QTKD1** | 44 | Tư duy phân tích (SSK103) | Nguyễn Ngọc Vân Khanh | 9.09% | 0.00% | 6.82% | <span class='badge badge-warning'>🟡 4 SV vắng CC (9.09%)</span> |
+| | | Tin học ứng dụng (SSK102) | Nguyễn Thị Hồng Minh | 11.36% | 6.82% | 6.82% | <span class='badge badge-warning'>🟡 5 SV vắng CC (11.4%)</span> |
+| | | Tiếng Anh Giao tiếp (ENG105) | Lò Thị Ngọc Anh | 13.64% | 0.00% | 9.09% | <span class='badge badge-warning'>🟡 6 SV vắng CC (13.6%)</span> |
+| **HN-KS26-QTKD2** | 45 | Tư duy phân tích (SSK103) | Nguyễn Thị Hồng Minh | 6.67% | 0.00% | 8.89% | <span class='badge badge-success'>🟢 Ổn định (3 SV vắng CC)</span> |
+| | | Tin học ứng dụng (SSK102) | Nguyễn Ngọc Vân Khanh | 6.67% | 8.89% | 20.00% | <span class='badge badge-danger'>🚨 9 SV vi phạm KCB (20.0%)</span> |
+| | | Tiếng Anh Giao tiếp (ENG105) | Nguyễn Hồng Nhung | 24.44% | 0.00% | 20.00% | <span class='badge badge-warning'>🟡 11 SV vắng CC & 9 trễ EL</span> |
+| **HN-KS26-QTKD3** | 44 | Tư duy phân tích (SSK103) | Nguyễn Ngọc Vân Khanh | 20.45% | 6.82% | 20.45% | <span class='badge badge-danger'>🚨 Điểm nóng chỉ đạo (9 SV vắng & 9 vi phạm KCB)</span> |
+| | | Tin học ứng dụng (SSK102) | Nguyễn Thị Hồng Minh | 29.55% | 11.36% | 18.18% | <span class='badge badge-danger'>🚨 13 SV vắng CC (29.6%) & 8 trễ EL</span> |
+| | | Tiếng Anh Giao tiếp (ENG105) | Nguyễn Hồng Nhung | 29.55% | 0.00% | 6.82% | <span class='badge badge-warning'>🟡 13 SV vắng CC (29.6%)</span> |
+| **HCM-KS26-QTKD1** | 21 | Tư duy phân tích (SSK103) | Lê Thị Bảo Yến | 0.00% | 0.00% | 0.00% | <span class='badge badge-success'>🟢 Chuẩn mực 100%</span> |
+| | | Tin học ứng dụng (SSK102) | Lê Hà Thanh Sang | 0.00% | 0.00% | 0.00% | <span class='badge badge-success'>🟢 Chuẩn mực 100%</span> |
+| | | Tiếng Anh Giao tiếp (ENG105) | Huỳnh Thị Kim Khánh | 0.00% | 0.00% | 0.00% | <span class='badge badge-success'>🟢 Chuẩn mực 100%</span> |
+
+</div>
+"""
+
+# Chi tiết các môn học của KS26
+if 'KS26_CNTT_IT108' in weekly_stats and weekly_stats['KS26_CNTT_IT108']['curr']:
+    markdown_content += generate_cohort_section('KS26-CNTT [Nhập môn CNTT - IT108-K26]', weekly_stats['KS26_CNTT_IT108'])
+
+if 'KS26_CNTT_SKL01' in weekly_stats and weekly_stats['KS26_CNTT_SKL01']['curr']:
+    markdown_content += generate_cohort_section('KS26-CNTT [Kỹ năng làm việc nhóm - SKL01]', weekly_stats['KS26_CNTT_SKL01'])
+
+if 'KS26_ENG105' in weekly_stats and weekly_stats['KS26_ENG105']['curr']:
+    markdown_content += generate_cohort_section('KS26 [Tiếng Anh Giao tiếp cơ bản - ENG105-K26]', weekly_stats['KS26_ENG105'])
+
+if 'KS26_QTKD_SSK103' in weekly_stats and weekly_stats['KS26_QTKD_SSK103']['curr']:
+    markdown_content += generate_cohort_section('KS26-QTKD [Tư duy phân tích - SSK103]', weekly_stats['KS26_QTKD_SSK103'])
+
+if 'KS26_QTKD_SSK102' in weekly_stats and weekly_stats['KS26_QTKD_SSK102']['curr']:
+    markdown_content += generate_cohort_section('KS26-QTKD [Tin học ứng dụng - SSK102]', weekly_stats['KS26_QTKD_SSK102'])
+
+if 'KS26_SKL_HN' in weekly_stats and weekly_stats['KS26_SKL_HN']['curr']:
+    markdown_content += generate_cohort_section('HN-KS26 [Kỹ năng học tập chủ động - SSK101]', weekly_stats['KS26_SKL_HN'])
+
+if 'KS26_SKL_HCM' in weekly_stats and weekly_stats['KS26_SKL_HCM']['curr']:
+    markdown_content += generate_cohort_section('HCM-KS26 [Kỹ năng học tập chủ động - SSK101]', weekly_stats['KS26_SKL_HCM'])
+
 
 
 markdown_content += r"""

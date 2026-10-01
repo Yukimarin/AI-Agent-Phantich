@@ -19,22 +19,29 @@ from openpyxl.utils import get_column_letter
 
 sys.stdout.reconfigure(encoding='utf-8')
 
+import re
+
+def normalize_name(s):
+    if not s: return ''
+    s = s.strip().lower()
+    return re.sub(r'\s+', ' ', s)
+
 def build_data():
     with open('scratch/ks26_v2_clean.json', 'r', encoding='utf-8') as f:
         base_students = json.load(f)['all_students']
 
-    with open('scratch/all_target_courses_extracted.json', 'r', encoding='utf-8') as f:
-        new_courses_data = json.load(f)
+    with open('scratch/all_ks26_classes_live_metrics.json', 'r', encoding='utf-8') as f:
+        live_data = json.load(f)
 
     # Student new courses map
     student_new_map = {}
-    for c_code, c_info in new_courses_data.items():
-        c_name = c_info.get('courseName')
-        for cls in c_info.get('classes', []):
-            cls_name = cls.get('className')
-            for st in cls.get('allStudents', []):
-                code = st.get('studentCode')
-                if not code: continue
+    for cls_name, courses in live_data.items():
+        cls_key = cls_name.replace('KS26', 'K26')
+        for c_code, c_info in courses.items():
+            stus = c_info.get('students', [])
+            for st in stus:
+                code = st.get('studentCode') or ''
+                name = normalize_name(st.get('fullName'))
                 absence = st.get('absence', {})
                 att_s = absence.get('attendedSessions', 0)
                 abs_s = absence.get('absentSessions', 0)
@@ -45,12 +52,17 @@ def build_data():
                 ticked_el = el.get('tickedSessions', 0)
                 el_violate = (late_el / ticked_el * 100.0) if ticked_el > 0 else 0.0
                 
-                if code not in student_new_map:
-                    student_new_map[code] = {}
-                student_new_map[code][c_code] = {
+                info = {
                     'abs_s': abs_s, 'att_s': att_s, 'cc_violate': cc_violate,
                     'late_el': late_el, 'ticked_el': ticked_el, 'el_violate': el_violate
                 }
+                if code:
+                    if code not in student_new_map: student_new_map[code] = {}
+                    student_new_map[code][c_code] = info
+                if name:
+                    key = (cls_key, name)
+                    if key not in student_new_map: student_new_map[key] = {}
+                    student_new_map[key][c_code] = info
 
     # 1. Course Stats
     tot_base = len(base_students)
@@ -82,17 +94,17 @@ def build_data():
         },
         {
             'code': 'SSK103', 'name': 'Tư duy phân tích (3 lớp QTKD1, 3, HCM1 - QTKD2 chưa vào môn)',
-            'total': 109, 'cc_count': 11, 'cc_rate': 10.1, 'delta_cc': -13.2,
-            'hw_count': 0, 'hw_rate': 0.0, 'delta_hw': -27.5,
+            'total': 109, 'cc_count': 13, 'cc_rate': 11.9, 'delta_cc': -11.4,
+            'hw_count': 3, 'hw_rate': 2.8, 'delta_hw': -24.7,
             'el_count': 12, 'el_rate': 11.0, 'delta_el': -40.1,
-            'note': 'Cải thiện tốt cả CC và EL'
+            'note': 'HN-QTKD3 điểm nóng: Nghỉ 20.45% (9 SV), Thiếu BT 6.82% (3 SV), KCB 20.45% (9 SV)'
         },
         {
             'code': 'SSK102', 'name': 'Tin học ứng dụng (2 lớp QTKD3, HCM1 - QTKD1, 2 chưa vào môn)',
             'total': 65, 'cc_count': 13, 'cc_rate': 20.0, 'delta_cc': -3.3,
-            'hw_count': 0, 'hw_rate': 0.0, 'delta_hw': -27.5,
+            'hw_count': 5, 'hw_rate': 7.7, 'delta_hw': -19.8,
             'el_count': 8, 'el_rate': 12.3, 'delta_el': -38.8,
-            'note': 'Điểm nóng CC (vắng 20.0% tại HN-QTKD3)'
+            'note': 'HN-QTKD3 điểm nóng: Nghỉ 29.55% (13 SV), Thiếu BT 11.36% (5 SV), KCB 18.18% (8 SV)'
         }
     ]
 
@@ -123,7 +135,9 @@ def build_data():
         new_cnt = 0
         for s in c_students:
             code = s.get('code')
-            nd = student_new_map.get(code, {})
+            cls_k = c_name.replace('KS26', 'K26')
+            name_k = (cls_k, normalize_name(s.get('name')))
+            nd = student_new_map.get(code) or student_new_map.get(name_k, {})
             has_violate = any(st['abs_s'] > 0 or st['late_el'] > 0 for st in nd.values())
             if has_violate:
                 m1_has = (s.get('att_violate', 0) > 0) or (s.get('hwRate', 100) == 0) or (s.get('el_violate', 0) > 0)
@@ -160,8 +174,9 @@ def build_data():
     for s in base_students:
         code = s.get('code')
         name = s.get('name')
-        c_name = s.get('class')
-        nd = student_new_map.get(code, {})
+        cls_k = c_name.replace('KS26', 'K26')
+        name_k = (cls_k, normalize_name(name))
+        nd = student_new_map.get(code) or student_new_map.get(name_k, {})
         if not nd: continue
 
         abs_list = []

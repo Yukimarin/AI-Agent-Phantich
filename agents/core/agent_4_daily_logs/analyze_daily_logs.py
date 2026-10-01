@@ -41,11 +41,9 @@ target_groups = {
         "Nguyễn Xuân Bách",
         "Lại Trung Lâm",
         "Phạm Ngọc Kiên",
-        "Đặng Minh Luân",
         "Lê Hà Thanh Sang",
         "Lưu Hoàng Xuân Nguyên",
         "Nguyễn Đức Minh",
-        "Nguyễn Ngọc Sơn",
         "Phạm Viết Hùng",
         "Phan Ngọc Tài",
         "Trần Quốc Tuấn"
@@ -54,13 +52,22 @@ target_groups = {
         "Giáp Thị Minh Hằng",
         "Lò Thị Ngọc Anh",
         "Ngô Quang Huấn",
-        "Lê Thị Đỏ"
+        "Lê Thị Đỏ",
+        "Đỗ Hà Khanh",
+        "Huỳnh Thị Kim Khánh",
+        "Nguyễn Hồng Nhung"
     ],
     "Khối QLCLĐT": [
         "Nguyễn Thị Tươi",
         "Nguyễn Huyền Trang",
         "Trần Thị Mỹ Phước"
     ]
+}
+
+STAFF_JOIN_DATES = {
+    "đỗ hà khanh": "2026-09-08",
+    "huỳnh thị kim khánh": "2026-09-15",
+    "nguyễn hồng nhung": "2026-09-18"
 }
 
 LEAVE_DAYS = {
@@ -122,7 +129,7 @@ def call_mcp_tool(tool_name, arguments={}):
     )
 
     try:
-        with urllib.request.urlopen(req, context=ctx, timeout=1.5) as response:
+        with urllib.request.urlopen(req, context=ctx, timeout=10) as response:
             resp_str = response.read().decode("utf-8")
             for line in resp_str.split("\n"):
                 if line.startswith("data:"):
@@ -191,6 +198,9 @@ def load_staff_profiles():
         except Exception as e:
             print("Warning loading CNTT Staff profiles:", e)
             
+    profiles["đỗ hà khanh"] = {"role": "Giảng viên", "rank": "3"}
+    profiles["huỳnh thị kim khánh"] = {"role": "Giảng viên", "rank": "3"}
+    profiles["nguyễn hồng nhung"] = {"role": "Giảng viên", "rank": "3"}
     return profiles
 
 def load_kpi_masters():
@@ -330,14 +340,13 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
             norm_name = normalize_name(m)
             # Lọc bỏ ngày nghỉ phép và ngày nghỉ lễ công ty khỏi danh sách ngày cần báo cáo
             personal_leave = LEAVE_DAYS.get(norm_name, []) + COMPANY_HOLIDAYS
-            effective_target_dates = [d for d in target_dates if d not in personal_leave]
+            join_date = STAFF_JOIN_DATES.get(norm_name, "2026-01-01")
+            effective_target_dates = [d for d in target_dates if d not in personal_leave and d >= join_date]
             personal_total_days = len(effective_target_dates)
-            
-            reported_days_list = [d for d in effective_target_dates if m_data["reports"][d] is not None]
+            reported_days_list = [d for d in effective_target_dates if m_data["reports"].get(d) is not None]
             reported_days_count = len(reported_days_list)
-            missing_days = [d for d in effective_target_dates if m_data["reports"][d] is None]
+            missing_days = [d for d in effective_target_dates if m_data["reports"].get(d) is None]
             
-            norm_name = normalize_name(m)
             profile = staff_profiles.get(norm_name, {"role": "Giảng viên", "rank": "3"})
             role = profile["role"]
             rank = profile["rank"]
@@ -350,6 +359,8 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
             time_score = 100.0
             time_violations = []
             warning_flags = []
+            kpi_issues_detail = []
+            under_8h_list = []
             
             norm_m_clean = normalize_vietnamese_name(m)
             user_candidate_issues = user_issues_map.get(norm_m_clean, [])
@@ -359,11 +370,23 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
                         user_candidate_issues = v
                         break
             
-            for d in target_dates:
-                r = m_data["reports"][d]
+            kpi_over_report_count = 0
+            kpi_wildcard_count = 0
+            unverified_count = 0
+
+            for d in effective_target_dates:
+                r = m_data["reports"].get(d)
                 if r:
                     stats = r.get("stats", {})
-                    declared_hours += float(stats.get("hours", 0.0))
+                    d_hours = float(stats.get("hours", 0.0))
+                    declared_hours += d_hours
+                    
+                    if d_hours < 8.0:
+                        under_8h_list.append({
+                            "date": d,
+                            "hours": d_hours,
+                            "deficit": round(8.0 - d_hours, 1)
+                        })
                     
                     tasks = r.get("tasks", [])
                     for t in tasks:
@@ -377,17 +400,36 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
                         std_hours = std_time / 60.0
                         
                         if is_wildcard:
-                            # KHÔNG PHẠT TRỪ ĐIỂM CHO TASK LẠ, chỉ lưu ghi nhận
+                            # Ghi nhận task ngoài barem quy chuẩn
+                            kpi_wildcard_count += 1
                             warning_flags.append(
                                 f"Task '{t_title}' chưa định dạng (gán tạm {std_time:.0f} phút)"
                             )
+                            kpi_issues_detail.append({
+                                "type": "OUT_OF_MASTER",
+                                "date": d,
+                                "task": t_title,
+                                "hours": t_hours,
+                                "std_hours": std_hours,
+                                "detail": f"Khai báo ngoài barem KPI Master khối ({t_hours}h)"
+                            })
                         else:
                             # Có trong KPI Master -> check over-reporting
-                            if t_hours > std_hours * 1.5:
-                                time_score -= 5.0
+                            if t_hours > std_hours * 1.3:
+                                kpi_over_report_count += 1
+                                if t_hours > std_hours * 1.5:
+                                    time_score -= 5.0
                                 time_violations.append(
                                     f"{d.split('-')[-1]}/{d.split('-')[-2]}: Task '{t_title}' khai báo {t_hours}h so với định mức tiêu chuẩn {std_hours:.1f}h"
                                 )
+                                kpi_issues_detail.append({
+                                    "type": "OVER_REPORTING",
+                                    "date": d,
+                                    "task": t_title,
+                                    "hours": t_hours,
+                                    "std_hours": std_hours,
+                                    "detail": f"Vượt định mức ({t_hours}h vs {std_hours:.1f}h barem)"
+                                })
 
                         if t.get("done") is True or str(t.get("percent")) == "100":
                             is_verified = True
@@ -407,7 +449,16 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
                                 
                                 if found_in_wl and not is_done_in_wl:
                                     is_verified = False
+                                    unverified_count += 1
                                     warning_flags.append(f"UNVERIFIED: Task '{t_title}' khai báo xong nhưng trên Worklane chưa DONE.")
+                                    kpi_issues_detail.append({
+                                        "type": "UNVERIFIED_WORKLANE",
+                                        "date": d,
+                                        "task": t_title,
+                                        "hours": t_hours,
+                                        "std_hours": std_hours,
+                                        "detail": "Khai báo 100% nhưng ticket Worklane chưa DONE"
+                                    })
                             
                             if is_verified:
                                 completed_tasks += 1
@@ -415,6 +466,13 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
                                 uncompleted_reasons.append(f"{t_title} (UNVERIFIED)")
                         else:
                             uncompleted_reasons.append(f"{t_title} ({t.get('percent', 0)}%)")
+                else:
+                    # Ngày không nộp báo cáo
+                    under_8h_list.append({
+                        "date": d,
+                        "hours": 0.0,
+                        "deficit": 8.0
+                    })
 
             time_score = max(0.0, time_score)
             report_rate = (reported_days_count / float(personal_total_days)) if personal_total_days > 0 else 1.0
@@ -430,6 +488,17 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
                 completion_rate = 1.0
                 work_score = (report_rate * 40.0) + (completion_rate * 40.0) + (time_score * 0.20)
 
+            expected_hours = round(personal_total_days * 8.0, 1)
+            deficit_hours = round(max(0.0, expected_hours - declared_hours), 1)
+            capacity_pct = round((declared_hours / expected_hours * 100.0), 1) if expected_hours > 0 else 0.0
+            avg_hours_per_day = round(declared_hours / personal_total_days, 2) if personal_total_days > 0 else 0.0
+
+            severity = "Đạt chuẩn"
+            if capacity_pct < 75.0 or deficit_hours > 20.0:
+                severity = "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)"
+            elif capacity_pct < 90.0 or deficit_hours > 8.0:
+                severity = "Cảnh báo (Thiếu 8h-20h hoặc công suất 75-90%)"
+
             analysis[norm_name] = {
                 "name": m,
                 "group": group,
@@ -442,10 +511,22 @@ def process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_maste
                 "completion_rate": completion_rate * 100.0,
                 "time_score": time_score,
                 "work_score": round(work_score, 1),
-                "declared_hours": declared_hours,
-                "time_violations": time_violations[:3],
-                "warning_flags": warning_flags[:3],
-                "uncompleted_tasks": uncompleted_reasons[:3]
+                "declared_hours": round(declared_hours, 1),
+                "expected_hours": expected_hours,
+                "deficit_hours": deficit_hours,
+                "capacity_pct": capacity_pct,
+                "avg_hours_per_day": avg_hours_per_day,
+                "under_8h_days_count": len(under_8h_list),
+                "under_8h_details": under_8h_list,
+                "severity": severity,
+                "kpi_over_report_count": kpi_over_report_count,
+                "kpi_wildcard_count": kpi_wildcard_count,
+                "unverified_count": unverified_count,
+                "kpi_issues_count": len(kpi_issues_detail),
+                "kpi_issues_detail": kpi_issues_detail[:10],
+                "time_violations": time_violations[:5],
+                "warning_flags": warning_flags[:5],
+                "uncompleted_tasks": uncompleted_reasons[:5]
             }
             
     return analysis
@@ -485,28 +566,38 @@ def calculate_summary_stats(stats_dict):
 
 def main():
     from datetime import datetime, timedelta, date
-    print("Agent 4: Bắt đầu fetch dữ liệu báo cáo ngày từ Worklane PM...")
+    print("Agent 4: Bắt đầu fetch dữ liệu báo cáo ngày từ Worklane PM đến hết ngày 21/09/2026...")
     
     # 1. Cấu hình ngày kiểm toán và kỳ nghỉ lễ công ty
-    # Toàn công ty nghỉ lễ 31/08 - 02/09 -> Ngày làm việc gần nhất chốt kiểm toán là 28/08/2026
-    yesterday_str = "2026-08-28"
+    # Chốt kiểm toán mới nhất: ngày 29/09/2026
+    yesterday_str = "2026-09-29"
     
-    # Tuần làm việc kiểm toán: từ 24/08 đến hết 28/08
-    dates_weekly = ["2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28"]
+    # 5 ngày làm việc gần nhất chốt đến 29/09 (40h tiêu chuẩn): 23/09 đến 29/09
+    dates_weekly = ["2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29"]
     
-    # Danh sách toàn bộ ngày làm việc trong kỳ (01/07/2026 đến 28/08/2026, loại trừ T7/CN và ngày nghỉ lễ)
+    # Danh sách toàn bộ ngày làm việc trong kỳ (01/07/2026 đến 29/09/2026, loại trừ T7/CN và ngày nghỉ lễ)
     dates_all = []
     curr = date(2026, 7, 1)
-    end_date = date(2026, 8, 28)
+    end_date = date(2026, 9, 29)
     while curr <= end_date:
         curr_str = curr.strftime("%Y-%m-%d")
         if curr.weekday() < 5 and curr_str not in COMPANY_HOLIDAYS:
             dates_all.append(curr_str)
         curr += timedelta(days=1)
         
+    # Danh sách ngày làm việc riêng Tháng 9 (01/09/2026 đến 21/09/2026)
+    dates_september = []
+    curr_sep = date(2026, 9, 1)
+    while curr_sep <= end_date:
+        curr_str = curr_sep.strftime("%Y-%m-%d")
+        if curr_sep.weekday() < 5 and curr_str not in COMPANY_HOLIDAYS:
+            dates_september.append(curr_str)
+        curr_sep += timedelta(days=1)
+
     print(f"  Thời gian kiểm toán báo cáo: chốt ngày ({yesterday_str})")
-    print(f"  Danh sách ngày tuần (24/08 - 28/08): {dates_weekly}")
-    print(f"  Tổng số ngày làm việc trong kỳ: {len(dates_all)} ngày (01/07 - 28/08)")
+    print(f"  Danh sách ngày tuần gần nhất (15/09 - 21/09): {dates_weekly}")
+    print(f"  Danh sách ngày làm việc Tháng 9 (03/09 - 21/09): {len(dates_september)} ngày ({dates_september})")
+    print(f"  Tổng số ngày làm việc trong toàn kỳ: {len(dates_all)} ngày (01/07 - 21/09)")
     
     print("  Đang nạp thông tin nhân sự và định mức KPI Master từ Excel...")
     staff_profiles = load_staff_profiles()
@@ -535,7 +626,10 @@ def main():
     cache_updated = False
     for d in dates_all:
         reports = []
-        if d in raw_cache:
+        if d in raw_cache and len(raw_cache[d]) > 0:
+            reports = raw_cache[d]
+        elif d in raw_cache and d in ["2026-09-01", "2026-09-02", "2026-09-05", "2026-09-06", "2026-09-12", "2026-09-13"]:
+            # Ngày nghỉ đã biết rõ 0 reports
             reports = raw_cache[d]
         else:
             print(f"  Tải dữ liệu ngày {d} từ Worklane API...")
@@ -575,13 +669,12 @@ def main():
         except Exception as e:
             print("  Warning: Failed to save raw daily cache:", e)
 
-    # Phát hiện nhân sự không báo cáo ngày chốt kiểm toán (28/08/2026)
+    # Phát hiện nhân sự không báo cáo ngày chốt kiểm toán (17/09/2026)
     missing_yesterday = []
     if yesterday_str in dates_all:
         for group, members in results.items():
             for m, m_data in members.items():
                 norm_name = normalize_name(m)
-                # Bỏ qua nếu là ngày nghỉ phép hoặc nghỉ lễ
                 if yesterday_str in LEAVE_DAYS.get(norm_name, []) or yesterday_str in COMPANY_HOLIDAYS:
                     continue
                 if m_data["reports"].get(yesterday_str) is None:
@@ -599,32 +692,148 @@ def main():
         try:
             with open(wl_path, "r", encoding="utf-8") as f:
                 wl_data = json.load(f)
-                # Ensure wl_data is a dictionary
                 if isinstance(wl_data, dict):
                     if 'projects' in wl_data:
-                        # Sometimes it's nested
                         worklane_projects = wl_data['projects']
                     else:
                         worklane_projects = wl_data
         except Exception as e:
             print("  Warning: Could not load project_issues_worklane.json:", e)
 
-    print("Agent 4: Tiến hành phân tích riêng biệt theo Tuần và Tháng...")
+    print("Agent 4: Tiến hành phân tích riêng biệt theo Tuần, Tháng 9 và Toàn kỳ...")
     weekly_analysis = process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_master_cntt, dates_weekly, worklane_projects) if dates_weekly else {}
+    september_analysis = process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_master_cntt, dates_september, worklane_projects)
     monthly_analysis = process_stats_for_period(results, staff_profiles, kpi_master_qtkd, kpi_master_cntt, dates_all, worklane_projects)
     
     weekly_summary = calculate_summary_stats(weekly_analysis) if dates_weekly else {}
+    september_summary = calculate_summary_stats(september_analysis)
     monthly_summary = calculate_summary_stats(monthly_analysis)
+
+    # Xây dựng Module kiểm toán chuyên sâu: Nhân sự thiếu giờ (8h/ngày) & Vi phạm KPI Master
+    def build_under_hours_audit(analysis_dict, period_name, expected_days):
+        staff_list = []
+        by_block = {}
+        for norm_name, data in analysis_dict.items():
+            g = data.get("group", "Khác")
+            if g not in by_block:
+                by_block[g] = {"total_staff": 0, "under_staff": 0, "total_deficit": 0.0, "total_hours": 0.0}
+            
+            by_block[g]["total_staff"] += 1
+            by_block[g]["total_hours"] += data.get("declared_hours", 0.0)
+            
+            deficit = data.get("deficit_hours", 0.0)
+            if deficit > 0 or data.get("under_8h_days_count", 0) > 0:
+                by_block[g]["under_staff"] += 1
+                by_block[g]["total_deficit"] += deficit
+                
+            staff_list.append({
+                "name": data.get("name"),
+                "group": g,
+                "role": data.get("role"),
+                "rank": data.get("rank"),
+                "expected_hours": data.get("expected_hours"),
+                "declared_hours": data.get("declared_hours"),
+                "deficit_hours": deficit,
+                "capacity_pct": data.get("capacity_pct"),
+                "avg_hours_per_day": data.get("avg_hours_per_day"),
+                "under_8h_days_count": data.get("under_8h_days_count"),
+                "missing_days_count": len(data.get("missing_days", [])),
+                "severity": data.get("severity"),
+                "under_8h_details": data.get("under_8h_details", [])
+            })
+            
+        staff_list.sort(key=lambda x: (x["capacity_pct"], -x["deficit_hours"]))
+        return {
+            "period": period_name,
+            "expected_days": expected_days,
+            "total_staff": len(staff_list),
+            "under_staff_count": len([s for s in staff_list if s["deficit_hours"] > 0]),
+            "by_block": by_block,
+            "staff_ranking": staff_list
+        }
+
+    def build_kpi_compliance_audit(analysis_dict, period_name):
+        by_block = {}
+        top_violators = []
+        all_over_report_cases = []
+        all_unverified_cases = []
+        
+        for norm_name, data in analysis_dict.items():
+            g = data.get("group", "Khác")
+            if g not in by_block:
+                by_block[g] = {"total_issues": 0, "over_reporting": 0, "wildcard": 0, "unverified": 0}
+                
+            over_rep = data.get("kpi_over_report_count", 0)
+            wildcards = data.get("kpi_wildcard_count", 0)
+            unver = data.get("unverified_count", 0)
+            total_iss = over_rep + wildcards + unver
+            
+            by_block[g]["over_reporting"] += over_rep
+            by_block[g]["wildcard"] += wildcards
+            by_block[g]["unverified"] += unver
+            by_block[g]["total_issues"] += total_iss
+            
+            if total_iss > 0:
+                top_violators.append({
+                    "name": data.get("name"),
+                    "group": g,
+                    "role": data.get("role"),
+                    "rank": data.get("rank"),
+                    "total_issues": total_iss,
+                    "over_reporting_count": over_rep,
+                    "wildcard_count": wildcards,
+                    "unverified_count": unver,
+                    "sample_issues": data.get("kpi_issues_detail", [])
+                })
+                
+            for iss in data.get("kpi_issues_detail", []):
+                if iss.get("type") == "OVER_REPORTING":
+                    all_over_report_cases.append({
+                        "staff": data.get("name"),
+                        "group": g,
+                        **iss
+                    })
+                elif iss.get("type") == "UNVERIFIED_WORKLANE":
+                    all_unverified_cases.append({
+                        "staff": data.get("name"),
+                        "group": g,
+                        **iss
+                    })
+                    
+        top_violators.sort(key=lambda x: -x["total_issues"])
+        return {
+            "period": period_name,
+            "by_block": by_block,
+            "top_violators": top_violators,
+            "sample_over_reporting": all_over_report_cases[:15],
+            "sample_unverified": all_unverified_cases[:15]
+        }
+
+    under_hours_audit = {
+        "september": build_under_hours_audit(september_analysis, "Tháng 9 (01/09 - 21/09/2026)", len(dates_september)),
+        "weekly": build_under_hours_audit(weekly_analysis, "5 ngày gần nhất (15/09 - 21/09/2026)", len(dates_weekly)),
+        "overall": build_under_hours_audit(monthly_analysis, "Toàn kỳ (01/07 - 21/09/2026)", len(dates_all))
+    }
+
+    kpi_master_compliance_audit = {
+        "september": build_kpi_compliance_audit(september_analysis, "Tháng 9 (01/09 - 21/09/2026)"),
+        "overall": build_kpi_compliance_audit(monthly_analysis, "Toàn kỳ (01/07 - 21/09/2026)")
+    }
     
     combined_output = {
         "yesterday": yesterday_str,
         "missing_yesterday": missing_yesterday,
         "dates_weekly": dates_weekly,
+        "dates_september": dates_september,
         "dates_monthly": dates_all,
         "weekly_stats": weekly_analysis,
+        "september_stats": september_analysis,
         "monthly_stats": monthly_analysis,
         "weekly_summary": weekly_summary,
+        "september_summary": september_summary,
         "monthly_summary": monthly_summary,
+        "under_hours_audit": under_hours_audit,
+        "kpi_master_compliance_audit": kpi_master_compliance_audit,
         "raw_reports": results
     }
 
@@ -636,7 +845,7 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(combined_output, f, indent=2, ensure_ascii=False)
         
-    print(f"Agent 4: Phân tích tuần/tháng thành công! Kết quả lưu tại {output_path}")
+    print(f"Agent 4: Phân tích tuần/tháng/toàn kỳ thành công! Kết quả lưu tại {output_path}")
 
 
 if __name__ == "__main__":
