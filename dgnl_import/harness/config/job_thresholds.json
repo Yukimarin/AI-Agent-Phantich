@@ -1,0 +1,67 @@
+{
+  "thresholds": {
+    "KS24_CNTT": {
+      "Backend_Developer_Java": {
+        "required_courses": ["IT203A-K24", "IT203B-K24", "IT210-K24", "IT211-K24", "IT202-K24"],
+        "min_score": 50.0,
+        "weight": {
+          "IT203B-K24": 0.3,
+          "IT210-K24": 0.25,
+          "IT211-K24": 0.25,
+          "IT202-K24": 0.2
+        }
+      },
+      "Frontend_Developer_React": {
+        "required_courses": ["IT103-K24", "IT104-K24"],
+        "min_score": 50.0,
+        "weight": {
+          "IT104-K24": 0.6,
+          "IT103-K24": 0.4
+        }
+      },
+      "Fullstack_Developer_Java_React": {
+        "required_courses": ["IT104-K24", "IT203B-K24", "IT210-K24", "IT202-K24"],
+        "min_score": 50.0,
+        "weight": {
+          "IT203B-K24": 0.3,
+          "IT210-K24": 0.3,
+          "IT104-K24": 0.25,
+          "IT202-K24": 0.15
+        }
+      }
+    },
+    "KS25_CNTT": {
+      "Backend_Developer_Python": {
+        "required_courses": ["IT205-K25", "IT215-K25", "IT202-K25"],
+        "min_score": 50.0,
+        "weight": {
+          "IT215-K25": 0.4,
+          "IT205-K25": 0.3,
+          "IT202-K25": 0.3
+        }
+      }
+    },
+    "KS25_QTKD": {
+      "Business_Analyst": {
+        "required_courses": ["BA201", "DA201", "DA204", "PRJ301"],
+        "min_score": 50.0,
+        "weight": {
+          "BA201": 0.4,
+          "DA201": 0.2,
+          "DA204": 0.2,
+          "PRJ301": 0.2
+        }
+      },
+      "Data_Analyst": {
+        "required_courses": ["DA201", "DA202", "DA204", "DA205"],
+        "min_score": 50.0,
+        "weight": {
+          "DA202": 0.3,
+          "DA204": 0.3,
+          "DA201": 0.2,
+          "DA205": 0.2
+        }
+      }
+    }
+  }
+}
