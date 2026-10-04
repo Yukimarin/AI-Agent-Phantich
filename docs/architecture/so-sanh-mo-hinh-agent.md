@@ -1,6 +1,6 @@
 # So sánh Mô hình Agent Cũ và Mới
 
-> Cập nhật: 04/10/2026 · Thiết kế: [[plans/2026-10-04-data-hub-verification-design|Data Hub + Verification Gates]]
+> Cập nhật: 04/10/2026 · Thiết kế: [[architecture/data-hub|Data Hub + Verification Gates]]
 
 ---
 
@@ -152,4 +152,4 @@ Ngay lần chạy đầu, **Gate 1 đã chặn một lỗi mà mô hình cũ đa
 **Lộ trình còn lại:** P0 golden set → M3 (Worklane connector) → M2 → Renderer + G3/G4 → cắt chuyển và lưu trữ agent cũ.
 
 ---
-Trở về: [[Bản đồ Tri thức MOC|Bản đồ Tri thức dự án]]
+Trở về: [[README|Mục lục tài liệu]]

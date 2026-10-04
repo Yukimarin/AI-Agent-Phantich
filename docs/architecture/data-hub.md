@@ -95,7 +95,7 @@ Mỗi module xuất 2 file: `result.json` (đầy đủ, cho renderer) và `summ
 | **G3 Đối soát chéo** | Cùng một lớp: sĩ số, số SV vi phạm khớp nhau giữa M1, M2, M3 và mọi view | Sửa 1 view quên 2 view → lệch số là lỗi chặn |
 | **G4 Giao diện** | Số liệu trong HTML đã render == JSON (tổng quát hóa `compare_report_vs_live.py`); kiểm tra trình duyệt: không lỗi console, không trắng trang, đủ các tab | Bài học #2 *hardcode HTML* |
 
-**Vòng học liên tục:** Mỗi khi người dùng phát hiện và sửa một lỗi → bắt buộc thêm 1 test vào `tests/regression/` + 1 dòng vào `super_memory.md` trỏ tới test đó. Lỗi đã sửa thì **không thể tái phạm** mà không bị gate chặn.
+**Vòng học liên tục:** Mỗi khi người dùng phát hiện và sửa một lỗi → bắt buộc thêm 1 test vào `tests/regression/` + 1 mục `docs/DECISIONS.md` nếu là quyết định nghiệp vụ. Lỗi đã sửa thì **không thể tái phạm** mà không bị gate chặn.
 
 ### 2.5 Một lệnh duy nhất
 
@@ -147,7 +147,7 @@ output/
 | **P3 – Modules M1/M2/M3 + G3** (4-5 ngày) | Viết lại logic từ Agent 1-4 dựa trên kho | Đối soát chéo đạt; số liệu khớp golden |
 | **P4 – Renderer + G4** (3-4 ngày) | Template cố định, cấu trúc `output/<kỳ>/` | So khớp HTML với JSON đạt; VisualQA đạt |
 | **P5 – Orchestrator + Skill + Lead** (2 ngày) | `pmo run`, `run_report.md`, skill câu lệnh tự nhiên | Gõ 1 câu → nhận báo cáo, không sửa tay |
-| **P6 – Cắt chuyển** (2 tuần chạy song song) | So sánh kết quả cũ/mới 2 kỳ; sau đó đưa `agents/`, `scripts/` cũ vào `_archive`; cập nhật `AGENTS.md`, `super_memory.md` | Hệ thống cũ ngừng chạy |
+| **P6 – Cắt chuyển** (2 tuần chạy song song) | So sánh kết quả cũ/mới 2 kỳ; sau đó đưa `agents/`, `scripts/` cũ vào `legacy/` (Đợt B); cập nhật `AGENTS.md`, `docs/STATUS.md` | Hệ thống cũ ngừng chạy |
 
 > [!IMPORTANT]
 > P0 là then chốt: không có golden set do người dùng xác nhận thì không có cách tự động biết "đúng". Đây là phần duy nhất cần người dùng tham gia trực tiếp.

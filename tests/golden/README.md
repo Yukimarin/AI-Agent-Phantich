@@ -25,7 +25,7 @@ Không có golden set thì Gate 2 chỉ cảnh báo (WARN), chưa khẳng địn
 }
 ```
 
-- `tolerance.cc = 2`: API không tách vắng KP/CP/Muộn nên chấp nhận lệch tối đa 2 SV (super_memory mục 7.1).
+- `tolerance.cc = 2`: API không tách vắng KP/CP/Muộn nên chấp nhận lệch tối đa 2 SV (docs/domain/quy_chuan_nghiep_vu.md mục 7.1).
 - Bỏ `period` nếu muốn áp dụng cho mọi kỳ.
 
 ## Khi phát hiện số sai

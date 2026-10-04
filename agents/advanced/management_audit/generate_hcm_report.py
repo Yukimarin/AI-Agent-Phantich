@@ -11,7 +11,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 # ============ CONFIGURATION ============
 DAILY_LOG_ANALYSIS_PATH = "data/processed/daily_log_analysis.json"
 PROJECT_ISSUES_PATH = "data/processed/project_issues_worklane.json"
-TEMPLATE_HTML_PATH = r"C:\Users\DELL\Desktop\AI-Agent\AI_Report_NN\output\Bao_Cao_Tong_Hop_NN.html"
+TEMPLATE_HTML_PATH = "config/templates/Bao_Cao_Tong_Hop_NN.html"  # chuyển từ AI_Report_NN (đã gộp 04/10/2026)
 OUTPUT_HTML_PATH = "output/dashboards/advanced/Bao_Cao_Tong_Hop_HCM.html"
 
 # 9 nhân sự HCM

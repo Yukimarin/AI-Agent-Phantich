@@ -15,7 +15,7 @@ Assume they are a skilled developer, but know almost nothing about our toolset o
 
 **Context:** This should be run in a dedicated worktree (created by brainstorming skill).
 
-**Save plans to:** `docs/plans/YYYY-MM-DD-<feature-name>.md`
+**Save plans to:** `docs/plans/<feature-name>.md` — ONLY when work spans > 1 day or many dependent steps (see `docs/plans/README.md`). Small tasks: no plan file, use the in-conversation task list + commit messages. **Delete the plan file (and `task.md`) when all tasks are done**; git keeps history. Record lasting design choices in `docs/DECISIONS.md` / `docs/architecture/`.
 
 ## Bite-Sized Task Granularity
 

@@ -1,6 +1,6 @@
 """Bài học đã trả giá — mỗi bài học là một test. Thêm test mới mỗi khi người dùng sửa một lỗi.
 
-Nguồn: docs/super_memory.md mục 7 và mục 11.
+Nguồn: docs/archive/super_memory_20261004.md mục 7 và mục 11.
 """
 from __future__ import annotations
 

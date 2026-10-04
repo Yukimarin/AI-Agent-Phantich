@@ -1,0 +1,60 @@
+# Vai trò Agent 1-5 (mô hình cũ — đang chuyển đổi)
+
+> Chuyển từ `.agents/AGENTS.md` ngày 04/10/2026 để rút gọn luật nạp mỗi lượt. Áp dụng khi chạy `run_pipeline.py` (legacy) cho tới khi cắt chuyển P6.
+
+## 2. Vai trò của các Subagent
+Khi thực hiện nhiệm vụ, Antigravity sẽ phân chia công việc cho các Subagent và Agent Lead có cấu hình chuyên biệt sau:
+
+### 2.1 Agent Lead: MasterEvaluator
+- **Nhiệm vụ**: Tổng hợp kết quả từ các Subagent và tính điểm KPI tổng hợp theo trọng số:
+  - Điểm Kỷ luật (40%): Gộp trung bình cộng từ Kỷ luật học viên (Sub Agent 1) và Kỷ luật tác nghiệp của GV/TG (Sub Agent 3).
+  - Điểm Học tập (30%): Hiệu suất học tập của sinh viên do Sub Agent 2 đánh giá.
+  - Điểm Báo cáo ngày (30%): Chất lượng báo cáo ngày của GV/TG do Sub Agent 4 đánh giá.
+- **Đầu ra yêu cầu**: Xuất file báo cáo Markdown đẹp mắt tại `data/report_kpi_gv_tg.md`.
+
+### 2.2 Sub Agent 1: ViolationAnalyst (Compliance Auditor)
+- **Nhiệm vụ**: Phân tích lỗi vi phạm của sinh viên từ `data/vi_pham.xlsx` và tính toán Điểm Kỷ Luật học viên.
+- **Đầu ra yêu cầu**: JSON chứa thông tin chi tiết lỗi của học viên từng lớp và điểm số tương ứng.
+
+### 2.3 Sub Agent 2: AcademicPredictor
+- **Nhiệm vụ**: Đọc database SQLite/SQL script `data/qldt.sql` (hoặc database MySQL `qldt_el`) để tính điểm trung bình (GPA), tỷ lệ sinh viên qua/rớt môn của từng lớp.
+- **Quy tắc làm việc và dự báo**:
+  - **Hệ số độ khó môn học (CDC)**: Kết hợp tự động từ dữ liệu tỷ lệ trượt lịch sử trong DB (nếu có), file cấu hình cấu trúc môn học tại `data/course_metadata.json`, và thuật toán phán đoán Heuristics dựa trên từ khóa tên môn học nếu chưa được cấu hình.
+  - **Điểm Kỷ luật môn trước**: Đối với khóa KS25, truy cập trường `total_score` từ bảng `auto_rpoints` của môn học trước. Đối với khóa KS24, truy cập cột `rpoints` trong bảng `final_results` của môn học trước.
+  - **Quy tắc chặn cứng cấm thi**: Chỉ áp dụng cấm thi dựa trên kỷ luật của môn hiện tại khi thời lượng môn học đã đạt trên 30% (số buổi học > 3). Nếu số buổi học <= 3, bỏ qua các chốt chặn kỷ luật môn hiện tại để tránh cảnh báo ảo.
+  - **Hiệu chuẩn chỉ số (Calibration) & Quy chuẩn hiển thị LMS Frontend**:
+    - **Chuyên cần**: Backend lưu `presenceRate` (% đi học). Frontend hiển thị theo hướng vi phạm: **Vi phạm chuyên cần (%)** = `100.0 - presenceRate` (hoặc `absence.rate`). Ví dụ đi đủ 100% thì vi phạm là `0%`.
+    - **Bài tập**: Backend API thường tính `done / total_cả_môn`. Trên Frontend LMS và báo cáo, phải tính theo **số bài tập thực tế đã đến hạn trong tuần** (`current_due_hw`). Với tuần đầu giao 1 bài, SV làm 1 bài (`done >= 1` hoặc `eligible = True`) thì **Vi phạm BTVN = 0%**, chỉ SV chưa nộp (`done = 0`) mới tính nợ bài (**100%**). Tuyệt đối không chia tổng bài cả môn gây phạt ảo 75%.
+    - **Elearning**: Giữ nguyên **số bài vi phạm / chậm tuyệt đối** (ví dụ: `Chậm 1 bài`, `0 bài`) để xét cấm thi theo Quy chế mới, không cào bằng theo tỷ lệ % để tránh cấm thi ảo do unit mismatch.
+    - **Đọc dữ liệu Excel**: Tiêu đề các cột CC, BT, EL nằm ở Dòng 4 (dưới ngày học ở Dòng 3). Cần duyệt qua 3 cột liên tiếp (CC, BT, EL) của tất cả các cột ngày học và tính trung bình cộng để ra chỉ số vi phạm thực chất của lớp.
+  - **Hệ số phạt môi trường (Peer Pressure)**: Áp dụng hệ số Env $Multiplier_{env}$ khi tỷ lệ vi phạm trung bình của lớp > 10% để điều chỉnh xác suất đỗ của từng cá nhân ($P_{final} = P_{eligible} \times Multiplier_{env}$).
+- **Đầu ra yêu cầu**: Thống kê số lượng sinh viên đạt/trượt và dự đoán hiệu suất học tập của các lớp và cá nhân học viên.
+
+### 2.4 Sub Agent 3: TaskAggregator (Phân tích Công việc & Kỷ luật tác nghiệp)
+- **Nhiệm vụ**: Phân tích lỗi kỷ luật tác nghiệp của GV/TG (chậm trễ, quên điểm danh, phản hồi muộn) và tiến độ lớp học.
+- **Đầu ra yêu cầu**: Điểm kỷ luật tác nghiệp của từng GV/TG.
+
+### 2.5 Sub Agent 4: Báo cáo ngày (Daily Log Auditor)
+- **Nhiệm vụ**: Phân tích tiến độ và chất lượng báo cáo ngày của GV/TG trong `data/daily_logs.txt`.
+- **Đầu ra yêu cầu**: Tỷ lệ hoàn thành công việc và điểm hiệu suất báo cáo ngày.
+
+### 2.6 Agent Hỗ Trợ 1: DataSanitizer (Làm sạch & Đồng bộ hóa Dữ liệu)
+- **Nhiệm vụ**: Khởi chạy ở đầu pipeline, tự động phân tích và làm sạch dữ liệu thô (chuẩn hóa tên nhân sự không dấu, xử lý unit mismatch).
+- **Quy tắc**: Tuân thủ hướng dẫn tại skill `data-cleaner-and-aligner`.
+
+### 2.7 Agent Hỗ Trợ 2: VisualQA (Kiểm toán Giao diện Tự động)
+- **Nhiệm vụ**: Chạy tự động ở cuối pipeline, sử dụng browser_subagent mô phỏng click các tab, kiểm tra lỗi console log và trắng màn hình của Master Dashboard.
+- **Quy tắc**: Tuân thủ hướng dẫn tại skill `automated-visual-testing`.
+
+### 2.8 Agent Hỗ Trợ 3: ContextPreserver (Duy trì Bối cảnh liên phiên)
+- **Nhiệm vụ**: Đúc rút các lỗi kỹ thuật, quyết định thiết kế của User ở cuối phiên để tự động cập nhật vào `super_memory.md`.
+
+## 3. Quy chuẩn Báo cáo cuối cùng (report_kpi_gv_tg.md)
+Báo cáo KPI cuối cùng phải tuân theo cấu trúc sau:
+1. **Tiêu đề**: Báo cáo Đánh giá KPI GV/TG Học kỳ.
+2. **Bảng tổng hợp KPI**: Chứa các cột: Họ và tên, Vai trò, Lớp phụ trách, Điểm Kỷ luật SV & Tác nghiệp (40%), Điểm Học tập (30%), Điểm Báo cáo ngày (30%), Điểm KPI tổng.
+3. **Đánh giá chi tiết từng cá nhân**:
+   - Điểm mạnh.
+   - Điểm yếu / Lỗi vi phạm đã mắc.
+   - Đề xuất cải thiện cụ thể.
+

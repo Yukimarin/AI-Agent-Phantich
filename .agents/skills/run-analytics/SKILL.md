@@ -30,7 +30,7 @@ description: Use when the user asks to fetch data and analyze / produce statisti
 1. Ghi số đúng vào golden set (`tests/golden/`, xem README).
 2. Chạy `uv run python -m pmo verify` → phải FAIL ở G2.
 3. Sửa `pmo/metrics/lms_fe.py` hoặc registry cho đến khi PASS.
-4. Thêm test vào `tests/regression/test_lessons.py`; ghi 1 dòng vào `docs/super_memory.md` trỏ tới test.
+4. Thêm test vào `tests/regression/test_lessons.py` (docstring ghi rõ lỗi gốc); nếu là quyết định nghiệp vụ mới thì thêm 1 mục vào `docs/DECISIONS.md`.
 
 ## Lệnh tham khảo
 | Lệnh | Tác dụng |

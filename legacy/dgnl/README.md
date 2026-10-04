@@ -1,6 +1,6 @@
-﻿# ĐGNL — Báo cáo Khảo thí Đánh giá Năng lực (Đợt 1, chốt 02/09/2026)
+# ĐGNL — Báo cáo Khảo thí Đánh giá Năng lực (Đợt 1, chốt 02/09/2026)
 
-Gộp từ dự án `AI-ĐGNL` ngày 04/10/2026 (giữ nguyên lịch sử git qua subtree merge).
+Gộp từ dự án `AI-ĐGNL` ngày 04/10/2026 (giữ nguyên lịch sử git qua subtree merge). Xem lịch sử gốc: `git log dab108d^2 -- src/` (đường dẫn cũ trước khi chuyển). Bản sao toàn bộ thư mục gốc: `AI-Agent/_archive_20261004/AI-DGNL.zip`.
 
 | Thư mục | Nội dung |
 |---|---|
