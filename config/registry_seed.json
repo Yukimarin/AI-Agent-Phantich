@@ -1,0 +1,4457 @@
+{
+  "generatedAt": "2026-09-24T20:53:20.457Z",
+  "totalClasses": 10,
+  "totalUniqueCourses": 14,
+  "classes": [
+    {
+      "classId": "6aac917e6fde2b6e692ed504",
+      "className": "HCM-K26-QTKD1",
+      "classCode": "HCM-K26-QTKD1",
+      "totalCourses": 5,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4fc502fbc7e0fab04401f",
+          "courseId": "6a8d13ca1d62b8910b674ea4",
+          "courseName": "Basic Speaking",
+          "courseCode": "ENG105-K26",
+          "teacherName": "Huỳnh Thị Kim Khánh"
+        },
+        {
+          "courseClassId": "6ab4f95e2fbc7e0fab03c938",
+          "courseId": "6aad0fc1f00919310d3f19cb",
+          "courseName": "Tư duy phân tích",
+          "courseCode": "SSK103",
+          "teacherName": "Lê Thị Bảo Yến"
+        },
+        {
+          "courseClassId": "6ab4f9532fbc7e0fab03c7c7",
+          "courseId": "6aad0943f00919310d3f10f5",
+          "courseName": "Tin học ứng dụng",
+          "courseCode": "SSK102",
+          "teacherName": "Lê Hà Thanh Sang"
+        },
+        {
+          "courseClassId": "6aae5dcc7d22545796a8f920",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Lê Nhựt Mi"
+        },
+        {
+          "courseClassId": "6aae5dbf7d22545796a8f90b",
+          "courseId": "6aae5ad27d22545796a8eeaa",
+          "courseName": "Định hướng đầu khóa",
+          "courseCode": "Orientation",
+          "teacherName": "Trần Thị Mỹ Phước"
+        }
+      ]
+    },
+    {
+      "classId": "6aac91736fde2b6e692ed4f8",
+      "className": "HCM-KS26-CNTT1",
+      "classCode": "HCM-KS26-CNTT1",
+      "totalCourses": 5,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4f8fa2fbc7e0fab039185",
+          "courseId": "6ab48f55e8eaed812f0941cb",
+          "courseName": "Kỹ năng làm việc nhóm",
+          "courseCode": "SKL01",
+          "teacherName": "Lê Nhựt Mi"
+        },
+        {
+          "courseClassId": "6ab4f8e12fbc7e0fab038ff7",
+          "courseId": "6a8d13ca1d62b8910b674ea4",
+          "courseName": "Basic Speaking",
+          "courseCode": "ENG105-K26",
+          "teacherName": "Huỳnh Thị Kim Khánh"
+        },
+        {
+          "courseClassId": "6ab4f8bd2fbc7e0fab038d6a",
+          "courseId": "6a88fb77a493e63f11a75432",
+          "courseName": "Nhập Môn Công Nghệ Thông Tin",
+          "courseCode": "IT108-K26",
+          "teacherName": "Lê Hà Thanh Sang"
+        },
+        {
+          "courseClassId": "6aae9e767d22545796a9d89e",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Nguyễn Bá Minh Đạo"
+        },
+        {
+          "courseClassId": "6aae9e677d22545796a9d875",
+          "courseId": "6aae5ad27d22545796a8eeaa",
+          "courseName": "Định hướng đầu khóa",
+          "courseCode": "Orientation",
+          "teacherName": "Trần Thị Mỹ Phước"
+        }
+      ]
+    },
+    {
+      "classId": "6aac91786fde2b6e692ed4fd",
+      "className": "HCM-KS26-CNTT2",
+      "classCode": "HCM-KS26-CNTT2",
+      "totalCourses": 5,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4f9302fbc7e0fab03abec",
+          "courseId": "6a8d13ca1d62b8910b674ea4",
+          "courseName": "Basic Speaking",
+          "courseCode": "ENG105-K26",
+          "teacherName": "Huỳnh Thị Kim Khánh"
+        },
+        {
+          "courseClassId": "6ab4f9242fbc7e0fab039331",
+          "courseId": "6ab48f55e8eaed812f0941cb",
+          "courseName": "Kỹ năng làm việc nhóm",
+          "courseCode": "SKL01",
+          "teacherName": "Lê Nhựt Mi"
+        },
+        {
+          "courseClassId": "6ab4f9182fbc7e0fab0391df",
+          "courseId": "6a88fb77a493e63f11a75432",
+          "courseName": "Nhập Môn Công Nghệ Thông Tin",
+          "courseCode": "IT108-K26",
+          "teacherName": "Lê Hà Thanh Sang"
+        },
+        {
+          "courseClassId": "6aae9ef97d22545796a9db6c",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Nguyễn Bá Minh Đạo"
+        },
+        {
+          "courseClassId": "6aae9eec7d22545796a9db12",
+          "courseId": "6aae5ad27d22545796a8eeaa",
+          "courseName": "Định hướng đầu khóa",
+          "courseCode": "Orientation",
+          "teacherName": "Trần Thị Mỹ Phước"
+        }
+      ]
+    },
+    {
+      "classId": "6aac915d6fde2b6e692ed4de",
+      "className": "HN-K26-QTKD1",
+      "classCode": "HN-K26-QTKD1",
+      "totalCourses": 11,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4d7ad2f8b9a21479d23ab",
+          "courseId": "6a8d13ca1d62b8910b674ea4",
+          "courseName": "Basic Speaking",
+          "courseCode": "ENG105-K26",
+          "teacherName": "Lò Thị Ngọc Anh"
+        },
+        {
+          "courseClassId": "6aafac5fa7defdd54c03db1c",
+          "courseId": "6aad0ed5f00919310d3f1835",
+          "courseName": "Dự án kinh doanh số 1 (Bán hàng số)",
+          "courseCode": "PRJ101",
+          "teacherName": "Hoàng Thị Kim Oanh"
+        },
+        {
+          "courseClassId": "6aafac40a7defdd54c03d9db",
+          "courseId": "6aad09d3f00919310d3f1432",
+          "courseName": "AI Foundation",
+          "courseCode": "AI101",
+          "teacherName": "Lê Thành Ngọc"
+        },
+        {
+          "courseClassId": "6aafac20a7defdd54c03d893",
+          "courseId": "6aad09bcf00919310d3f136d",
+          "courseName": "Data Analyst Foundation",
+          "courseCode": "DA101",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        },
+        {
+          "courseClassId": "6aafabf0a7defdd54c03d74f",
+          "courseId": "6aad0997f00919310d3f12a2",
+          "courseName": "Digital Marketing",
+          "courseCode": "MKT101",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "courseClassId": "6aafabc9a7defdd54c03d5eb",
+          "courseId": "6aad0965f00919310d3f11b7",
+          "courseName": "Kỹ năng bán hàng thực chiến",
+          "courseCode": "SEL101",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "courseClassId": "6aafaba1a7defdd54c03d4a3",
+          "courseId": "6a98e37917c71a5181521502",
+          "courseName": "Quản trị học căn bản",
+          "courseCode": "MAN101",
+          "teacherName": "Đặng Quỳnh Trang"
+        },
+        {
+          "courseClassId": "6aafaad1a7defdd54c03cd6a",
+          "courseId": "6aad0fc1f00919310d3f19cb",
+          "courseName": "Tư duy phân tích",
+          "courseCode": "SSK103",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        },
+        {
+          "courseClassId": "6aafaa13a7defdd54c03c945",
+          "courseId": "6aad0943f00919310d3f10f5",
+          "courseName": "Tin học ứng dụng",
+          "courseCode": "SSK102",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        },
+        {
+          "courseClassId": "6aae5e917d22545796a8fb61",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "courseClassId": "6aae5e797d22545796a8fb2f",
+          "courseId": "6aae5ad27d22545796a8eeaa",
+          "courseName": "Định hướng đầu khóa",
+          "courseCode": "Orientation",
+          "teacherName": "Nguyễn Thị Tươi"
+        }
+      ]
+    },
+    {
+      "classId": "6aac91686fde2b6e692ed4eb",
+      "className": "HN-K26-QTKD2",
+      "classCode": "HN-K26-QTKD2",
+      "totalCourses": 5,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4d8222f8b9a21479d3175",
+          "courseId": "6aad0fc1f00919310d3f19cb",
+          "courseName": "Tư duy phân tích",
+          "courseCode": "SSK103",
+          "teacherName": "Nguyễn Thị Hồng Minh"
+        },
+        {
+          "courseClassId": "6ab4d8142f8b9a21479d2eac",
+          "courseId": "6aad0943f00919310d3f10f5",
+          "courseName": "Tin học ứng dụng",
+          "courseCode": "SSK102",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        },
+        {
+          "courseClassId": "6ab4d7fa2f8b9a21479d2dc5",
+          "courseId": "6a8d13ca1d62b8910b674ea4",
+          "courseName": "Basic Speaking",
+          "courseCode": "ENG105-K26",
+          "teacherName": "Nguyễn Hồng Nhung"
+        },
+        {
+          "courseClassId": "6aae5f0c7d22545796a8fcf5",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Hoàng Thị Kim Oanh"
+        },
+        {
+          "courseClassId": "6aae5efe7d22545796a8fcdc",
+          "courseId": "6aae5ad27d22545796a8eeaa",
+          "courseName": "Định hướng đầu khóa",
+          "courseCode": "Orientation",
+          "teacherName": "Nguyễn Xuân Bách"
+        }
+      ]
+    },
+    {
+      "classId": "6aac916e6fde2b6e692ed4f1",
+      "className": "HN-K26-QTKD3",
+      "classCode": "HN-K26-QTKD3",
+      "totalCourses": 5,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4d8782f8b9a21479d3781",
+          "courseId": "6a8d13ca1d62b8910b674ea4",
+          "courseName": "Basic Speaking",
+          "courseCode": "ENG105-K26",
+          "teacherName": "Nguyễn Hồng Nhung"
+        },
+        {
+          "courseClassId": "6ab4d8632f8b9a21479d35e6",
+          "courseId": "6aad0fc1f00919310d3f19cb",
+          "courseName": "Tư duy phân tích",
+          "courseCode": "SSK103",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        },
+        {
+          "courseClassId": "6ab4d8582f8b9a21479d3476",
+          "courseId": "6aad0943f00919310d3f10f5",
+          "courseName": "Tin học ứng dụng",
+          "courseCode": "SSK102",
+          "teacherName": "Nguyễn Thị Hồng Minh"
+        },
+        {
+          "courseClassId": "6aae60497d22545796a8ffa4",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "courseClassId": "6aae60387d22545796a8ff89",
+          "courseId": "6aae5ad27d22545796a8eeaa",
+          "courseName": "Định hướng đầu khóa",
+          "courseCode": "Orientation",
+          "teacherName": "Nguyễn Xuân Bách"
+        }
+      ]
+    },
+    {
+      "classId": "6aac91216fde2b6e692ed2d2",
+      "className": "HN-KS26-CNTT1",
+      "classCode": "HN-KS26-CNTT1",
+      "totalCourses": 5,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4f8452fbc7e0fab038512",
+          "courseId": "6ab48f55e8eaed812f0941cb",
+          "courseName": "Kỹ năng làm việc nhóm",
+          "courseCode": "SKL01",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "courseClassId": "6ab4d8d92f8b9a21479d3cdb",
+          "courseId": "6a88fb77a493e63f11a75432",
+          "courseName": "Nhập Môn Công Nghệ Thông Tin",
+          "courseCode": "IT108-K26",
+          "teacherName": "Trịnh Quốc Hai"
+        },
+        {
+          "courseClassId": "6ab4d8b12f8b9a21479d3a51",
+          "courseId": "6a88fd66a493e63f11a75dde",
+          "courseName": "Tiếng Nhật cơ sở 1",
+          "courseCode": "JPN105-K26",
+          "teacherName": "Giáp Thị Minh Hằng"
+        },
+        {
+          "courseClassId": "6aae5ce07d22545796a8f5f4",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Trần Minh Cường"
+        },
+        {
+          "courseClassId": "6aae5cd07d22545796a8f5e1",
+          "courseId": "6aae5ad27d22545796a8eeaa",
+          "courseName": "Định hướng đầu khóa",
+          "courseCode": "Orientation",
+          "teacherName": "Nguyễn Xuân Bách"
+        }
+      ]
+    },
+    {
+      "classId": "6aac91436fde2b6e692ed446",
+      "className": "HN-KS26-CNTT2",
+      "classCode": "HN-KS26-CNTT2",
+      "totalCourses": 5,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4f8362fbc7e0fab0384e2",
+          "courseId": "6ab48f55e8eaed812f0941cb",
+          "courseName": "Kỹ năng làm việc nhóm",
+          "courseCode": "SKL01",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "courseClassId": "6ab4f82a2fbc7e0fab038365",
+          "courseId": "6a8d13ca1d62b8910b674ea4",
+          "courseName": "Basic Speaking",
+          "courseCode": "ENG105-K26",
+          "teacherName": "Nguyễn Hồng Nhung"
+        },
+        {
+          "courseClassId": "6ab4f7f22fbc7e0fab038304",
+          "courseId": "6a88fb77a493e63f11a75432",
+          "courseName": "Nhập Môn Công Nghệ Thông Tin",
+          "courseCode": "IT108-K26",
+          "teacherName": "Trịnh Quốc Hai"
+        },
+        {
+          "courseClassId": "6aae5d0b7d22545796a8f75f",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Hồ Xuân Hùng"
+        },
+        {
+          "courseClassId": "6aae5cfc7d22545796a8f74c",
+          "courseId": "6aae5ad27d22545796a8eeaa",
+          "courseName": "Định hướng đầu khóa",
+          "courseCode": "Orientation",
+          "teacherName": "Nguyễn Thị Tươi"
+        }
+      ]
+    },
+    {
+      "classId": "6aac914b6fde2b6e692ed45a",
+      "className": "HN-KS26-CNTT3",
+      "classCode": "HN-KS26-CNTT3",
+      "totalCourses": 5,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4f8992fbc7e0fab038b01",
+          "courseId": "6a8d13ca1d62b8910b674ea4",
+          "courseName": "Basic Speaking",
+          "courseCode": "ENG105-K26",
+          "teacherName": "Lò Thị Ngọc Anh"
+        },
+        {
+          "courseClassId": "6ab4f87b2fbc7e0fab038a47",
+          "courseId": "6ab48f55e8eaed812f0941cb",
+          "courseName": "Kỹ năng làm việc nhóm",
+          "courseCode": "SKL01",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "courseClassId": "6ab4f86e2fbc7e0fab038a31",
+          "courseId": "6a88fb77a493e63f11a75432",
+          "courseName": "Nhập Môn Công Nghệ Thông Tin",
+          "courseCode": "IT108-K26",
+          "teacherName": "Lương Quốc Tuấn"
+        },
+        {
+          "courseClassId": "6aae5cb97d22545796a8f48a",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Nguyễn Duy Quang"
+        },
+        {
+          "courseClassId": "6aae5ca77d22545796a8f46d",
+          "courseId": "6aae5ad27d22545796a8eeaa",
+          "courseName": "Định hướng đầu khóa",
+          "courseCode": "Orientation",
+          "teacherName": "Nguyễn Thị Tươi"
+        }
+      ]
+    },
+    {
+      "classId": "6aac91536fde2b6e692ed461",
+      "className": "HN-KS26-CNTT4",
+      "classCode": "HN-KS26-CNTT4",
+      "totalCourses": 1,
+      "assignedCourses": [
+        {
+          "courseClassId": "6ab4e2762f8b9a21479e7420",
+          "courseId": "6a88fb77a493e63f11a75432",
+          "courseName": "Nhập Môn Công Nghệ Thông Tin",
+          "courseCode": "IT108-K26",
+          "teacherName": "Lương Quốc Tuấn"
+        }
+      ]
+    }
+  ],
+  "courseAudits": [
+    {
+      "courseId": "6a8d13ca1d62b8910b674ea4",
+      "courseName": "Basic Speaking",
+      "courseCode": "ENG105-K26",
+      "assignedClasses": [
+        {
+          "className": "HCM-K26-QTKD1",
+          "teacherName": "Huỳnh Thị Kim Khánh"
+        },
+        {
+          "className": "HCM-KS26-CNTT1",
+          "teacherName": "Huỳnh Thị Kim Khánh"
+        },
+        {
+          "className": "HCM-KS26-CNTT2",
+          "teacherName": "Huỳnh Thị Kim Khánh"
+        },
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Lò Thị Ngọc Anh"
+        },
+        {
+          "className": "HN-K26-QTKD2",
+          "teacherName": "Nguyễn Hồng Nhung"
+        },
+        {
+          "className": "HN-K26-QTKD3",
+          "teacherName": "Nguyễn Hồng Nhung"
+        },
+        {
+          "className": "HN-KS26-CNTT2",
+          "teacherName": "Nguyễn Hồng Nhung"
+        },
+        {
+          "className": "HN-KS26-CNTT3",
+          "teacherName": "Lò Thị Ngọc Anh"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 23,
+      "totalLessons": 12,
+      "approvedLessons": 12,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "100.0%",
+      "totalPractices": 10,
+      "totalHomeworks": 0,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"ORIENTATION - LESSON 1\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa09b57baff09e71f612aa"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 1: ALPHABET AND SOUNDS - LESSON 3\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa09f87baff09e71f612d0"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 2: WELCOME - LESSON 5\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa139d7baff09e71f669a0"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 3: INTEREST - LESSON 7\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa17027baff09e71f68c19"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 4: PEOPLE - LESSON 9\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa19377baff09e71f69c26"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 5: DAILY LIFE - LESSON 11\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa1a517baff09e71f69de3"
+          },
+          {
+            "code": "LESSON_NO_MATERIAL",
+            "message": "Bài \"[ENG105] PRE-LESSON 12 QUIZ\" chưa có video lẫn bài đọc, dùng lms_set_lesson_video hoặc lms_set_lesson_reading",
+            "sessionId": "6aaa1fc47baff09e71f6bc9b",
+            "lessonId": "6ab2922e898bcba3abb9a238"
+          },
+          {
+            "code": "LESSON_NO_MATERIAL",
+            "message": "Bài \"[ENG105] PRE-LESSON 23 QUIZ\" chưa có video lẫn bài đọc, dùng lms_set_lesson_video hoặc lms_set_lesson_reading",
+            "sessionId": "6aaa227c7baff09e71f6d078",
+            "lessonId": "6ab29259898bcba3abb9ab7f"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 6: MY HOME - LESSON 14\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa21177baff09e71f6cbfb"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 7: SHOPPING - LESSON 16\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa22197baff09e71f6d028"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 8: FOOD - LESSON 18\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa222f7baff09e71f6d03f"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 9: PAST - LESSON 20\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa22477baff09e71f6d053"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"UNIT 10: FUTURE - LESSON 22\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aaa22657baff09e71f6d06d"
+          }
+        ],
+        "warnings": [
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"ORIENTATION - LESSON 1\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa09b57baff09e71f612aa"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"ORIENTATION - LESSON 1\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa09b57baff09e71f612aa"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 1: ALPHABET AND SOUNDS - LESSON 2\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa09d67baff09e71f612bb"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 1: ALPHABET AND SOUNDS - LESSON 2\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa09d67baff09e71f612bb"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 1: ALPHABET AND SOUNDS - LESSON 3\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa09f87baff09e71f612d0"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 2: WELCOME - LESSON 4\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa12ab7baff09e71f657f3"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 2: WELCOME - LESSON 4\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa12ab7baff09e71f657f3"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 2: WELCOME - LESSON 5\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa139d7baff09e71f669a0"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 3: INTEREST - LESSON 6\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa15677baff09e71f66fcd"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 3: INTEREST - LESSON 6\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa15677baff09e71f66fcd"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 3: INTEREST - LESSON 7\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa17027baff09e71f68c19"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 4: PEOPLE - LESSON 8\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa188f7baff09e71f68db2"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 4: PEOPLE - LESSON 8\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa188f7baff09e71f68db2"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 4: PEOPLE - LESSON 9\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa19377baff09e71f69c26"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 5: DAILY LIFE - LESSON 10\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa1a497baff09e71f69ddb"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 5: DAILY LIFE - LESSON 10\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa1a497baff09e71f69ddb"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 5: DAILY LIFE - LESSON 11\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa1a517baff09e71f69de3"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"MID-COURSE TEST - LESSON 12\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa1fc47baff09e71f6bc9b"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"MID-COURSE TEST - LESSON 12\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa1fc47baff09e71f6bc9b"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"COURSE REVIEW - LESSON 23\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa227c7baff09e71f6d078"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"COURSE REVIEW - LESSON 23\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa227c7baff09e71f6d078"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 6: MY HOME - LESSON 13\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab1dfec1f298b38a3efbb89"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 6: MY HOME - LESSON 13\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6ab1dfec1f298b38a3efbb89"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 6: MY HOME - LESSON 14\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa21177baff09e71f6cbfb"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 7: SHOPPING - LESSON 15\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa22127baff09e71f6d01f"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 7: SHOPPING - LESSON 15\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa22127baff09e71f6d01f"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 7: SHOPPING - LESSON 16\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa22197baff09e71f6d028"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 8: FOOD - LESSON 17\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa22297baff09e71f6d038"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 8: FOOD - LESSON 17\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa22297baff09e71f6d038"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 8: FOOD - LESSON 18\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa222f7baff09e71f6d03f"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 9: PAST - LESSON 19\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa223e7baff09e71f6d04a"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 9: PAST - LESSON 19\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa223e7baff09e71f6d04a"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 9: PAST - LESSON 20\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa22477baff09e71f6d053"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"UNIT 10: FUTURE - LESSON 21\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aaa225d7baff09e71f6d05f"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 10: FUTURE - LESSON 21\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa225d7baff09e71f6d05f"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"UNIT 10: FUTURE - LESSON 22\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aaa22657baff09e71f6d06d"
+          },
+          {
+            "code": "COURSE_PUBLISHED_LEGACY_CONTENT",
+            "message": "Môn này đã có bản publish: video và bài đọc gắn qua MCP (mô hình cũ) không vào snapshot, sinh viên đang học bản publish sẽ không thấy. Muốn tới sinh viên phải soạn block VIDEO/READING trên web rồi publish lại."
+          }
+        ]
+      },
+      "sessionDetails": [
+        {
+          "sessionId": "6aaa09b57baff09e71f612aa",
+          "sessionName": "ORIENTATION - LESSON 1",
+          "position": 1,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa09d67baff09e71f612bb",
+          "sessionName": "UNIT 1: ALPHABET AND SOUNDS - LESSON 2",
+          "position": 2,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aaa0b907baff09e71f61e71",
+              "name": "[ENG105] UNIT 1: ALPHABET AND SOUNDS",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa09f87baff09e71f612d0",
+          "sessionName": "UNIT 1: ALPHABET AND SOUNDS - LESSON 3",
+          "position": 3,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa12ab7baff09e71f657f3",
+          "sessionName": "UNIT 2: WELCOME - LESSON 4",
+          "position": 4,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aaa12ea7baff09e71f6581f",
+              "name": "[ENG105] UNIT 2: WELCOME",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa139d7baff09e71f669a0",
+          "sessionName": "UNIT 2: WELCOME - LESSON 5",
+          "position": 5,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa15677baff09e71f66fcd",
+          "sessionName": "UNIT 3: INTEREST - LESSON 6",
+          "position": 6,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aaa15967baff09e71f66ff8",
+              "name": "[ENG105] UNIT 3: INTEREST - PRE-LESSON 6 VIDEO",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa17027baff09e71f68c19",
+          "sessionName": "UNIT 3: INTEREST - LESSON 7",
+          "position": 7,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa188f7baff09e71f68db2",
+          "sessionName": "UNIT 4: PEOPLE - LESSON 8",
+          "position": 8,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aaa18bc7baff09e71f68dc6",
+              "name": "[ENG105] UNIT 4: PEOPLE - PRE-LESSON 8 VIDEO",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa19377baff09e71f69c26",
+          "sessionName": "UNIT 4: PEOPLE - LESSON 9",
+          "position": 9,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa1a497baff09e71f69ddb",
+          "sessionName": "UNIT 5: DAILY LIFE - LESSON 10",
+          "position": 10,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aaa1e7a7baff09e71f6aae5",
+              "name": "[ENG105] UNIT 5: DAILY LIFE - PRE-LESSON 10 VIDEO",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa1a517baff09e71f69de3",
+          "sessionName": "UNIT 5: DAILY LIFE - LESSON 11",
+          "position": 11,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa1fc47baff09e71f6bc9b",
+          "sessionName": "MID-COURSE TEST - LESSON 12",
+          "position": 12,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6ab2922e898bcba3abb9a238",
+              "name": "[ENG105] PRE-LESSON 12 QUIZ",
+              "status": "APPROVED",
+              "hasVideo": false,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa227c7baff09e71f6d078",
+          "sessionName": "COURSE REVIEW - LESSON 23",
+          "position": 13,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6ab29259898bcba3abb9ab7f",
+              "name": "[ENG105] PRE-LESSON 23 QUIZ",
+              "status": "APPROVED",
+              "hasVideo": false,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab1dfec1f298b38a3efbb89",
+          "sessionName": "UNIT 6: MY HOME - LESSON 13",
+          "position": 14,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6ab1e0131f298b38a3efd741",
+              "name": "[ENG105] UNIT 6: MY HOME - PRE-LESSON 13 VIDEO",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa21177baff09e71f6cbfb",
+          "sessionName": "UNIT 6: MY HOME - LESSON 14",
+          "position": 15,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa22127baff09e71f6d01f",
+          "sessionName": "UNIT 7: SHOPPING - LESSON 15",
+          "position": 16,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aaa25d6255d324b938ff5cd",
+              "name": "[ENG105] UNIT 7: SHOPPING - PRE-LESSON 15 VIDEO",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa22197baff09e71f6d028",
+          "sessionName": "UNIT 7: SHOPPING - LESSON 16",
+          "position": 17,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa22297baff09e71f6d038",
+          "sessionName": "UNIT 8: FOOD - LESSON 17",
+          "position": 18,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aaa2bb0255d324b938ff8e9",
+              "name": "[ENG105] UNIT 8: FOOD - PRE-LESSON 17 VIDEO",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa222f7baff09e71f6d03f",
+          "sessionName": "UNIT 8: FOOD - LESSON 18",
+          "position": 19,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa223e7baff09e71f6d04a",
+          "sessionName": "UNIT 9: PAST - LESSON 19",
+          "position": 20,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aaa31af255d324b939018a5",
+              "name": "UNIT 9: PAST - PRE-LESSON 19 VIDEO",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa22477baff09e71f6d053",
+          "sessionName": "UNIT 9: PAST - LESSON 20",
+          "position": 21,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6aaa225d7baff09e71f6d05f",
+          "sessionName": "UNIT 10: FUTURE - LESSON 21",
+          "position": 22,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aaa370e255d324b93901a13",
+              "name": "UNIT 10: FUTURE - PRE-LESSON 21 VIDEO",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6aaa22657baff09e71f6d06d",
+          "sessionName": "UNIT 10: FUTURE - LESSON 22",
+          "position": 23,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        }
+      ]
+    },
+    {
+      "courseId": "6aad0fc1f00919310d3f19cb",
+      "courseName": "Tư duy phân tích",
+      "courseCode": "SSK103",
+      "assignedClasses": [
+        {
+          "className": "HCM-K26-QTKD1",
+          "teacherName": "Lê Thị Bảo Yến"
+        },
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        },
+        {
+          "className": "HN-K26-QTKD2",
+          "teacherName": "Nguyễn Thị Hồng Minh"
+        },
+        {
+          "className": "HN-K26-QTKD3",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 4,
+      "totalLessons": 8,
+      "approvedLessons": 0,
+      "pendingLessons": 8,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 4,
+      "totalHomeworks": 4,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Tư duy phân tích và vai trò trong học tập, công việc và ra quyết định\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab48431e8eaed812f06dab5",
+            "lessonId": "6ab48432e8eaed812f06dae0"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Nhận diện vấn đề và làm rõ vấn đề\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab48431e8eaed812f06dab5",
+            "lessonId": "6ab48432e8eaed812f06dae3"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Phân rã vấn đề thành các thành phần và xác định mối quan hệ giữa các yếu tố\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab48436e8eaed812f06db36",
+            "lessonId": "6ab48436e8eaed812f06db3b"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Phân tích nguyên nhân và tìm nguyên nhân gốc (root cause)\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab48436e8eaed812f06db36",
+            "lessonId": "6ab48437e8eaed812f06db3e"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Phân biệt dữ kiện, thông tin, giả định và kết luận\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4843ae8eaed812f06db68",
+            "lessonId": "6ab4843be8eaed812f06db6c"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Đánh giá bằng chứng và xây dựng lập luận\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4843ae8eaed812f06db68",
+            "lessonId": "6ab4843ce8eaed812f06db6f"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Tổng hợp kết quả phân tích và xây dựng phương án giải quyết vấn đề\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4843fe8eaed812f06dbd0",
+            "lessonId": "6ab48440e8eaed812f06dbd5"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Đánh giá phương án và ra quyết định\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4843fe8eaed812f06dbd0",
+            "lessonId": "6ab48440e8eaed812f06dc43"
+          }
+        ],
+        "warnings": []
+      },
+      "sessionDetails": [
+        {
+          "sessionId": "6ab48431e8eaed812f06dab5",
+          "sessionName": "Session 01 - Tổng quan về tư duy phân tích",
+          "position": 1,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6ab48432e8eaed812f06dae0",
+              "name": "Lesson 1: Tư duy phân tích và vai trò trong học tập, công việc và ra quyết định",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab48432e8eaed812f06dae3",
+              "name": "Lesson 2: Nhận diện vấn đề và làm rõ vấn đề",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab48436e8eaed812f06db36",
+          "sessionName": "Session 02 - Phân tích vấn đề và phương pháp khai thác nguyên nhân gốc rễ",
+          "position": 2,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6ab48436e8eaed812f06db3b",
+              "name": "Lesson 1: Phân rã vấn đề thành các thành phần và xác định mối quan hệ giữa các yếu tố",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab48437e8eaed812f06db3e",
+              "name": "Lesson 2: Phân tích nguyên nhân và tìm nguyên nhân gốc (root cause)",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab4843ae8eaed812f06db68",
+          "sessionName": "Session 03 - Phân tích thông tin, bằng chứng và lập luận",
+          "position": 3,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6ab4843be8eaed812f06db6c",
+              "name": "Lesson 1: Phân biệt dữ kiện, thông tin, giả định và kết luận",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab4843ce8eaed812f06db6f",
+              "name": "Lesson 2: Đánh giá bằng chứng và xây dựng lập luận",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab4843fe8eaed812f06dbd0",
+          "sessionName": "Session 04 - Tổng hợp kết quả phân tích và ra quyết định",
+          "position": 4,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6ab48440e8eaed812f06dbd5",
+              "name": "Lesson 1: Tổng hợp kết quả phân tích và xây dựng phương án giải quyết vấn đề",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab48440e8eaed812f06dc43",
+              "name": "Lesson 2: Đánh giá phương án và ra quyết định",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "6aad0943f00919310d3f10f5",
+      "courseName": "Tin học ứng dụng",
+      "courseCode": "SSK102",
+      "assignedClasses": [
+        {
+          "className": "HCM-K26-QTKD1",
+          "teacherName": "Lê Hà Thanh Sang"
+        },
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        },
+        {
+          "className": "HN-K26-QTKD2",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        },
+        {
+          "className": "HN-K26-QTKD3",
+          "teacherName": "Nguyễn Thị Hồng Minh"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 9,
+      "totalLessons": 14,
+      "approvedLessons": 0,
+      "pendingLessons": 14,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 9,
+      "totalHomeworks": 37,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Tổng quan về máy tính\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1c9db1f298b38a3e7bc5e",
+            "lessonId": "6ab1ca471f298b38a3e7f646"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Mạng máy tính và trình duyệt web\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1c9db1f298b38a3e7bc5e",
+            "lessonId": "6ab1ca521f298b38a3e7f7d5"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Soạn thảo văn bản với Google Doc\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1c9e61f298b38a3e7bf4e",
+            "lessonId": "6ab1ca5f1f298b38a3e7f8a2"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Các tính năng cơ bản trong Google Doc\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1c9e61f298b38a3e7bf4e",
+            "lessonId": "6ab1ca661f298b38a3e7f8de"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 3: Soạn thảo văn bản trực tuyến (Lark Doc)\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1c9e61f298b38a3e7bf4e",
+            "lessonId": "6ab1ca6d1f298b38a3e810ef"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Thực hành soạn thảo và định dạng văn bản\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6ab1c9ef1f298b38a3e7bfaf"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Làm việc với Google Sheet\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1c9fb1f298b38a3e7c771",
+            "lessonId": "6ab1cb551f298b38a3e85f4f"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Các tính năng cơ bản trong Google Sheet\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1c9fb1f298b38a3e7c771",
+            "lessonId": "6ab1cb5c1f298b38a3e861ad"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 3: Các hàm tính toán cơ bản trong Google Sheet\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1c9fb1f298b38a3e7c771",
+            "lessonId": "6ab1cb641f298b38a3e8661a"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 4: Các nền tảng làm việc trực tuyến (Lark Sheet)\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1c9fb1f298b38a3e7c771",
+            "lessonId": "6ab1cb6b1f298b38a3e86b46"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Thực hành làm việc với trang tính\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6ab1ca051f298b38a3e7d096"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Thiết kế bài thuyết trình với Google Slides\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1ca111f298b38a3e7d460",
+            "lessonId": "6ab1ca9d1f298b38a3e819f2"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Các tính năng cơ bản trong Google Slides\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1ca111f298b38a3e7d460",
+            "lessonId": "6ab1caac1f298b38a3e81b9f"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 3: Thiết kế bài thuyết trình trực tuyến (Lark Slides, Canva)\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1ca111f298b38a3e7d460",
+            "lessonId": "6ab1cab21f298b38a3e81c93"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Thực hành thiết kế bài thuyết trình\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6ab1ca231f298b38a3e7f002"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Lưu trữ và chia sẻ tài nguyên online\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1ca2c1f298b38a3e7f1bb",
+            "lessonId": "6ab1cabe1f298b38a3e81dfd"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Họp trực tuyến (Google Meet, Lark Meeting)\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab1ca2c1f298b38a3e7f1bb",
+            "lessonId": "6ab1cac41f298b38a3e8202b"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Thực hành tổng hợp\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6ab1ca341f298b38a3e7f245"
+          }
+        ],
+        "warnings": [
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Thực hành tổng hợp\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6ab1ca341f298b38a3e7f245"
+          }
+        ]
+      },
+      "sessionDetails": [
+        {
+          "sessionId": "6ab1c9db1f298b38a3e7bc5e",
+          "sessionName": "Tổng quan về máy tính",
+          "position": 1,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 5,
+          "lessons": [
+            {
+              "id": "6ab1ca471f298b38a3e7f646",
+              "name": "Lesson 1: Tổng quan về máy tính",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab1ca521f298b38a3e7f7d5",
+              "name": "Lesson 2: Mạng máy tính và trình duyệt web",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab1c9e61f298b38a3e7bf4e",
+          "sessionName": "Soạn thảo văn bản",
+          "position": 2,
+          "lessonsCount": 3,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 5,
+          "lessons": [
+            {
+              "id": "6ab1ca5f1f298b38a3e7f8a2",
+              "name": "Lesson 1: Soạn thảo văn bản với Google Doc",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab1ca661f298b38a3e7f8de",
+              "name": "Lesson 2: Các tính năng cơ bản trong Google Doc",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab1ca6d1f298b38a3e810ef",
+              "name": "Lesson 3: Soạn thảo văn bản trực tuyến (Lark Doc)",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab1c9ef1f298b38a3e7bfaf",
+          "sessionName": "Thực hành soạn thảo và định dạng văn bản",
+          "position": 3,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 5,
+          "lessons": []
+        },
+        {
+          "sessionId": "6ab1c9fb1f298b38a3e7c771",
+          "sessionName": "Làm việc với trang tính",
+          "position": 4,
+          "lessonsCount": 4,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 5,
+          "lessons": [
+            {
+              "id": "6ab1cb551f298b38a3e85f4f",
+              "name": "Lesson 1: Làm việc với Google Sheet",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab1cb5c1f298b38a3e861ad",
+              "name": "Lesson 2: Các tính năng cơ bản trong Google Sheet",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab1cb641f298b38a3e8661a",
+              "name": "Lesson 3: Các hàm tính toán cơ bản trong Google Sheet",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab1cb6b1f298b38a3e86b46",
+              "name": "Lesson 4: Các nền tảng làm việc trực tuyến (Lark Sheet)",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab1ca051f298b38a3e7d096",
+          "sessionName": "Thực hành làm việc với trang tính",
+          "position": 5,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 5,
+          "lessons": []
+        },
+        {
+          "sessionId": "6ab1ca111f298b38a3e7d460",
+          "sessionName": "Thiết kế bài thuyết trình",
+          "position": 6,
+          "lessonsCount": 3,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 5,
+          "lessons": [
+            {
+              "id": "6ab1ca9d1f298b38a3e819f2",
+              "name": "Lesson 1: Thiết kế bài thuyết trình với Google Slides",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab1caac1f298b38a3e81b9f",
+              "name": "Lesson 2: Các tính năng cơ bản trong Google Slides",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab1cab21f298b38a3e81c93",
+              "name": "Lesson 3: Thiết kế bài thuyết trình trực tuyến (Lark Slides, Canva)",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab1ca231f298b38a3e7f002",
+          "sessionName": "Thực hành thiết kế bài thuyết trình",
+          "position": 7,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 4,
+          "lessons": []
+        },
+        {
+          "sessionId": "6ab1ca2c1f298b38a3e7f1bb",
+          "sessionName": "Chia sẻ và cộng tác trực tuyến",
+          "position": 8,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 3,
+          "lessons": [
+            {
+              "id": "6ab1cabe1f298b38a3e81dfd",
+              "name": "Lesson 1: Lưu trữ và chia sẻ tài nguyên online",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab1cac41f298b38a3e8202b",
+              "name": "Lesson 2: Họp trực tuyến (Google Meet, Lark Meeting)",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab1ca341f298b38a3e7f245",
+          "sessionName": "Thực hành tổng hợp",
+          "position": 9,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        }
+      ]
+    },
+    {
+      "courseId": "6aad0918f00919310d3f102b",
+      "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+      "courseCode": "SSK101",
+      "assignedClasses": [
+        {
+          "className": "HCM-K26-QTKD1",
+          "teacherName": "Lê Nhựt Mi"
+        },
+        {
+          "className": "HCM-KS26-CNTT1",
+          "teacherName": "Nguyễn Bá Minh Đạo"
+        },
+        {
+          "className": "HCM-KS26-CNTT2",
+          "teacherName": "Nguyễn Bá Minh Đạo"
+        },
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "className": "HN-K26-QTKD2",
+          "teacherName": "Hoàng Thị Kim Oanh"
+        },
+        {
+          "className": "HN-K26-QTKD3",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "className": "HN-KS26-CNTT1",
+          "teacherName": "Trần Minh Cường"
+        },
+        {
+          "className": "HN-KS26-CNTT2",
+          "teacherName": "Hồ Xuân Hùng"
+        },
+        {
+          "className": "HN-KS26-CNTT3",
+          "teacherName": "Nguyễn Duy Quang"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 5,
+      "totalLessons": 7,
+      "approvedLessons": 7,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "100.0%",
+      "totalPractices": 5,
+      "totalHomeworks": 3,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Lập kế hoạch phát triển bản thân\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6aae2daf051be35c19c09b73"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Ôn tập tổng hợp\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6ab4ce1346f7c2bd3161a469"
+          }
+        ],
+        "warnings": [
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Học tập chủ động trong môi trường đại học\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aae2d7f051be35c19c09b49"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Xây dựng thói quen & Tạo động lực phát triển bản thân\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aae2dd9051be35c19c09b8d"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Quản lý và phân chia thời gian\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aae2d9c051be35c19c09b67"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Lập kế hoạch phát triển bản thân\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aae2daf051be35c19c09b73"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Lập kế hoạch phát triển bản thân\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aae2daf051be35c19c09b73"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Ôn tập tổng hợp\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6ab4ce1346f7c2bd3161a469"
+          },
+          {
+            "code": "COURSE_PUBLISHED_LEGACY_CONTENT",
+            "message": "Môn này đã có bản publish: video và bài đọc gắn qua MCP (mô hình cũ) không vào snapshot, sinh viên đang học bản publish sẽ không thấy. Muốn tới sinh viên phải soạn block VIDEO/READING trên web rồi publish lại."
+          }
+        ]
+      },
+      "sessionDetails": [
+        {
+          "sessionId": "6aae2d7f051be35c19c09b49",
+          "sessionName": "Học tập chủ động trong môi trường đại học",
+          "position": 1,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 2,
+          "practicesCount": 1,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6aae2dea051be35c19c09b98",
+              "name": "Lesson 1: Tư duy học tập chủ động",
+              "status": "APPROVED",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6aae2e37051be35c19c0acd5",
+              "name": "Lesson 2: Phương pháp học tập chủ động hiệu quả",
+              "status": "APPROVED",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6aae2dd9051be35c19c09b8d",
+          "sessionName": "Xây dựng thói quen & Tạo động lực phát triển bản thân",
+          "position": 2,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 2,
+          "practicesCount": 1,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6aae48637d22545796a8ad69",
+              "name": "Lesson 1: Thiết lập mục tiêu phát triển cá nhân",
+              "status": "APPROVED",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6aae48777d22545796a8ad81",
+              "name": "Lesson 2: Phương pháp lập kế hoạch phát triển bản thân",
+              "status": "APPROVED",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6aae2d9c051be35c19c09b67",
+          "sessionName": "Quản lý và phân chia thời gian",
+          "position": 3,
+          "lessonsCount": 3,
+          "approvedLessonsCount": 3,
+          "practicesCount": 1,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6aae481c7d22545796a8ad0e",
+              "name": "Lesson 1: Quản lý & phân chia thời gian",
+              "status": "APPROVED",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6aae482c7d22545796a8ad20",
+              "name": "Lesson 2: Các phương pháp ưu tiên thứ tự công việc",
+              "status": "APPROVED",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6aae48427d22545796a8ad38",
+              "name": "Lesson 3: Ứng dụng phân chia thời gian trong học tập với phương pháp Lớp học đảo ngược",
+              "status": "APPROVED",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6aae2daf051be35c19c09b73",
+          "sessionName": "Lập kế hoạch phát triển bản thân",
+          "position": 4,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6ab4ce1346f7c2bd3161a469",
+          "sessionName": "Ôn tập tổng hợp",
+          "position": 5,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 0,
+          "lessons": []
+        }
+      ]
+    },
+    {
+      "courseId": "6aae5ad27d22545796a8eeaa",
+      "courseName": "Định hướng đầu khóa",
+      "courseCode": "Orientation",
+      "assignedClasses": [
+        {
+          "className": "HCM-K26-QTKD1",
+          "teacherName": "Trần Thị Mỹ Phước"
+        },
+        {
+          "className": "HCM-KS26-CNTT1",
+          "teacherName": "Trần Thị Mỹ Phước"
+        },
+        {
+          "className": "HCM-KS26-CNTT2",
+          "teacherName": "Trần Thị Mỹ Phước"
+        },
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Nguyễn Thị Tươi"
+        },
+        {
+          "className": "HN-K26-QTKD2",
+          "teacherName": "Nguyễn Xuân Bách"
+        },
+        {
+          "className": "HN-K26-QTKD3",
+          "teacherName": "Nguyễn Xuân Bách"
+        },
+        {
+          "className": "HN-KS26-CNTT1",
+          "teacherName": "Nguyễn Xuân Bách"
+        },
+        {
+          "className": "HN-KS26-CNTT2",
+          "teacherName": "Nguyễn Thị Tươi"
+        },
+        {
+          "className": "HN-KS26-CNTT3",
+          "teacherName": "Nguyễn Thị Tươi"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 0,
+      "totalLessons": 0,
+      "approvedLessons": 0,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 0,
+      "totalHomeworks": 0,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "COURSE_NO_SESSION",
+            "message": "Môn chưa có buổi nào, dùng lms_create_session để tạo buổi"
+          }
+        ],
+        "warnings": []
+      },
+      "sessionDetails": []
+    },
+    {
+      "courseId": "6ab48f55e8eaed812f0941cb",
+      "courseName": "Kỹ năng làm việc nhóm",
+      "courseCode": "SKL01",
+      "assignedClasses": [
+        {
+          "className": "HCM-KS26-CNTT1",
+          "teacherName": "Lê Nhựt Mi"
+        },
+        {
+          "className": "HCM-KS26-CNTT2",
+          "teacherName": "Lê Nhựt Mi"
+        },
+        {
+          "className": "HN-KS26-CNTT1",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "className": "HN-KS26-CNTT2",
+          "teacherName": "Hoàng Thị Hậu"
+        },
+        {
+          "className": "HN-KS26-CNTT3",
+          "teacherName": "Hoàng Thị Hậu"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 0,
+      "totalLessons": 0,
+      "approvedLessons": 0,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 0,
+      "totalHomeworks": 0,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "COURSE_NO_SESSION",
+            "message": "Môn chưa có buổi nào, dùng lms_create_session để tạo buổi"
+          }
+        ],
+        "warnings": []
+      },
+      "sessionDetails": []
+    },
+    {
+      "courseId": "6a88fb77a493e63f11a75432",
+      "courseName": "Nhập Môn Công Nghệ Thông Tin",
+      "courseCode": "IT108-K26",
+      "assignedClasses": [
+        {
+          "className": "HCM-KS26-CNTT1",
+          "teacherName": "Lê Hà Thanh Sang"
+        },
+        {
+          "className": "HCM-KS26-CNTT2",
+          "teacherName": "Lê Hà Thanh Sang"
+        },
+        {
+          "className": "HN-KS26-CNTT1",
+          "teacherName": "Trịnh Quốc Hai"
+        },
+        {
+          "className": "HN-KS26-CNTT2",
+          "teacherName": "Trịnh Quốc Hai"
+        },
+        {
+          "className": "HN-KS26-CNTT3",
+          "teacherName": "Lương Quốc Tuấn"
+        },
+        {
+          "className": "HN-KS26-CNTT4",
+          "teacherName": "Lương Quốc Tuấn"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 23,
+      "totalLessons": 48,
+      "approvedLessons": 48,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "100.0%",
+      "totalPractices": 9,
+      "totalHomeworks": 189,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 03 : Luyện tập tổng hợp - Làm việc với Hệ Điều Hành và Máy Tính\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a890a16a493e63f11a7882f"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 05 : Luyện tập tổng hợp - Các thao tác Terminal\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a890aeaa493e63f11a788ad"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 07 : Luyện tập tổng hợp - Tự động hóa công việc bằng Script\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a890baba493e63f11a78915"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 09 : Luyện tập tổng hợp - Thiết kế file Đặc tả (README.md)\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a890c42a493e63f11a78976"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 11 : Luyện tập tổng hợp - Tối ưu hóa tài liệu thô\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a890cbba493e63f11a789d0"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 12 : Dự án - Thiết kế cấu trúc thư mục tối ưu và script tự động hóa\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a890dcca493e63f11a78dd6"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 13 : Thi giữa môn - HACKATHON\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a890e34a493e63f11a78e7a"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 15 : Thiết lập Cloud Workspace\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8d13981d62b8910b674e24"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 17 : Thực hành làm việc với trình duyệt\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8d143a8c16f152a54bd7f7"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 19 : Xây dựng hàng rào bảo mật\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8d15288c16f152a54bd8cb"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 21 : Luyện tập tổng hợp Troubleshooting\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8d16298c16f152a54be061"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Session 22 : Mini project - Luyện tập tổng hợp các tình huống làm việc kết nối đám mây\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8d16468c16f152a54be083"
+          }
+        ],
+        "warnings": [
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Định Hướng Môn Học (Nhập Môn Công Nghệ Thông Tin)\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6aab5756f7b0358fde53a42b"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Định Hướng Môn Học (Nhập Môn Công Nghệ Thông Tin)\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6aab5756f7b0358fde53a42b"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 01 : Tổng quan ngành Công Nghệ Thông Tin\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a88fe3ea493e63f11a75ec1"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 02 : Kiến trúc Hệ Điều Hành & Tư duy quản lý file\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8907aca493e63f11a78336"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 03 : Luyện tập tổng hợp - Làm việc với Hệ Điều Hành và Máy Tính\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a890a16a493e63f11a7882f"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 05 : Luyện tập tổng hợp - Các thao tác Terminal\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a890aeaa493e63f11a788ad"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 07 : Luyện tập tổng hợp - Tự động hóa công việc bằng Script\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a890baba493e63f11a78915"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 09 : Luyện tập tổng hợp - Thiết kế file Đặc tả (README.md)\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a890c42a493e63f11a78976"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 11 : Luyện tập tổng hợp - Tối ưu hóa tài liệu thô\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a890cbba493e63f11a789d0"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 12 : Dự án - Thiết kế cấu trúc thư mục tối ưu và script tự động hóa\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a890dcca493e63f11a78dd6"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 13 : Thi giữa môn - HACKATHON\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a890e34a493e63f11a78e7a"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Session 13 : Thi giữa môn - HACKATHON\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a890e34a493e63f11a78e7a"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 15 : Thiết lập Cloud Workspace\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8d13981d62b8910b674e24"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 17 : Thực hành làm việc với trình duyệt\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8d143a8c16f152a54bd7f7"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 19 : Xây dựng hàng rào bảo mật\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8d15288c16f152a54bd8cb"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 21 : Luyện tập tổng hợp Troubleshooting\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8d16298c16f152a54be061"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Session 22 : Mini project - Luyện tập tổng hợp các tình huống làm việc kết nối đám mây\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8d16468c16f152a54be083"
+          },
+          {
+            "code": "COURSE_PUBLISHED_LEGACY_CONTENT",
+            "message": "Môn này đã có bản publish: video và bài đọc gắn qua MCP (mô hình cũ) không vào snapshot, sinh viên đang học bản publish sẽ không thấy. Muốn tới sinh viên phải soạn block VIDEO/READING trên web rồi publish lại."
+          }
+        ]
+      },
+      "sessionDetails": [
+        {
+          "sessionId": "6aab5756f7b0358fde53a42b",
+          "sessionName": "Định Hướng Môn Học (Nhập Môn Công Nghệ Thông Tin)",
+          "position": 1,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6aab58fdf7b0358fde542d2f",
+              "name": "Lesson : Định Hướng Môn Học",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a88fe3ea493e63f11a75ec1",
+          "sessionName": "Session 01 : Tổng quan ngành Công Nghệ Thông Tin",
+          "position": 2,
+          "lessonsCount": 7,
+          "approvedLessonsCount": 7,
+          "practicesCount": 0,
+          "homeworksCount": 13,
+          "lessons": [
+            {
+              "id": "6a88fe80a493e63f11a75f4d",
+              "name": "Lesson 01 : Ngành CNTT là gì? – Vai trò trong xã hội số, ứng dụng trong các ngành khác",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a88fe91a493e63f11a75f66",
+              "name": "Lesson  02 : Phân biệt IT – Computer Science – Software Engineering – Data Science",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8905e0a493e63f11a77a74",
+              "name": "Lesson  03 : Các lĩnh vực chính: Lập trình, App/Web, Mạng – Bảo mật, AI – Big Data, UI/UX, IoT",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8905eda493e63f11a77ab2",
+              "name": "Lesson  04 : Khái niệm thông tin, dữ liệu và tri thức",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8905f8a493e63f11a77ad8",
+              "name": "Lesson  05 : Tổng quan về máy tính điện tử (Khái niệm, lịch sử và phân loại)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a890606a493e63f11a77b07",
+              "name": "Lesson  06 : Đơn vị lưu trữ (bit, byte, KB, MB, GB, TB)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a890610a493e63f11a77b1e",
+              "name": "Lesson  07 : Xử lý thông tin bằng máy tính điện tử",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8907aca493e63f11a78336",
+          "sessionName": "Session 02 : Kiến trúc Hệ Điều Hành & Tư duy quản lý file",
+          "position": 3,
+          "lessonsCount": 6,
+          "approvedLessonsCount": 6,
+          "practicesCount": 0,
+          "homeworksCount": 13,
+          "lessons": [
+            {
+              "id": "6a890972a493e63f11a78728",
+              "name": "Lesson  01 : Tổng quan về Hệ điều hành",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a89098aa493e63f11a78743",
+              "name": "Lesson  02 : Kiến trúc hệ thống file và cây thư mục (File System Tree)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a890998a493e63f11a7875a",
+              "name": "Lesson  03 : Khái niệm Đường dẫn (Path) tuyệt đối và tương đối",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8909a8a493e63f11a7878c",
+              "name": "Lesson  04 : Quy tắc đặt tên chuẩn Developer (Phân biệt kebab-case, snake_case, camelCase)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8909b7a493e63f11a787a3",
+              "name": "Lesson  05 : Dọn dẹp và tổ chức lại cây thư mục ổ đĩa cá nhân",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8909c2a493e63f11a787ec",
+              "name": "Lesson  06 : Hiển thị đuôi file (extensions) và file ẩn hệ thống (Hidden files)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a890a16a493e63f11a7882f",
+          "sessionName": "Session 03 : Luyện tập tổng hợp - Làm việc với Hệ Điều Hành và Máy Tính",
+          "position": 4,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 6,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a890ac4a493e63f11a78884",
+          "sessionName": "Session 04 : Giao diện dòng lệnh (Terminal) cơ bản",
+          "position": 5,
+          "lessonsCount": 4,
+          "approvedLessonsCount": 4,
+          "practicesCount": 1,
+          "homeworksCount": 13,
+          "lessons": [
+            {
+              "id": "6a895e6d4aa747300c14d083",
+              "name": "Lesson  01 : CLI vs GUI , cấu trúc câu lệnh: Tại sao Developer bắt buộc phải dùng Terminal?",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a895e8b4aa747300c14d09e",
+              "name": "Lesson  02 : Các lệnh điều hướng hệ thống file và đường dẫn (pwd, cd, ls / dir)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a895e9f4aa747300c14d0c1",
+              "name": "Lesson  03 : Các lệnh thao tác file và thư mục (mkdir, touch / New-Item, rm, cp, mv)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a895ea94aa747300c14d0d8",
+              "name": "Lesson  04 : Các lỗi thường gặp khi làm việc với Terminal",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a890aeaa493e63f11a788ad",
+          "sessionName": "Session 05 : Luyện tập tổng hợp - Các thao tác Terminal",
+          "position": 6,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 6,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a890b90a493e63f11a788ee",
+          "sessionName": "Session 06 : Terminal nâng cao & Tiền đề Scripting",
+          "position": 7,
+          "lessonsCount": 5,
+          "approvedLessonsCount": 5,
+          "practicesCount": 2,
+          "homeworksCount": 13,
+          "lessons": [
+            {
+              "id": "6a895fa64aa747300c14d175",
+              "name": "Lesson  01 : Đọc & Định vị tập tin trên Windows & macOS",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8abe974aa747300c156084",
+              "name": "Lesson  02 : Lọc dữ liệu & Kỹ thuật Đường ống (grep, findstr, Pipe |)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8abea34aa747300c15609b",
+              "name": "Lesson  03 : Luồng dữ liệu, pipeline và chuyển hướng",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8abeb94aa747300c1560b4",
+              "name": "Lesson  04 : Giới thiệu khái niệm Shell Script",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8abec94aa747300c1560cd",
+              "name": "Lesson  05 : Viết, chạy và kiểm tra script đầu tiên - Kiểm tra lệnh và script do AI đề xuất",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a890baba493e63f11a78915",
+          "sessionName": "Session 07 : Luyện tập tổng hợp - Tự động hóa công việc bằng Script",
+          "position": 8,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 6,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a890c28a493e63f11a78951",
+          "sessionName": "Session 08 : Ngôn ngữ Markdown & Viết tài liệu Kỹ thuật",
+          "position": 9,
+          "lessonsCount": 4,
+          "approvedLessonsCount": 4,
+          "practicesCount": 1,
+          "homeworksCount": 13,
+          "lessons": [
+            {
+              "id": "6a8abee54aa747300c1560ed",
+              "name": "Lesson  01 : Markdown là gì? Markdown được dùng ở đâu ? Tại sao GitHub và các AI IDE chỉ đọc Markdown?",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8abef54aa747300c156104",
+              "name": "Lesson  02 : Cú pháp Markdown cơ bản (Heading, List, Link, Image, Bold/Italic , Quote,).",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8abf0c4aa747300c15611f",
+              "name": "Lesson  03 : Cú pháp Markdown nâng cao (Inline Code , Code block, Table, Task list , Emoji).",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8abf1a4aa747300c156136",
+              "name": "Lesson  04 : Markdown cho AI",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a890c42a493e63f11a78976",
+          "sessionName": "Session 09 : Luyện tập tổng hợp - Thiết kế file Đặc tả (README.md)",
+          "position": 10,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 6,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a890c98a493e63f11a789a9",
+          "sessionName": "Session 10 : Tin học văn phòng cơ bản",
+          "position": 11,
+          "lessonsCount": 4,
+          "approvedLessonsCount": 4,
+          "practicesCount": 1,
+          "homeworksCount": 14,
+          "lessons": [
+            {
+              "id": "6a8ac5284aa747300c158c7f",
+              "name": "Lesson  01 : Word/Docs: Sử dụng Heading Styles và Auto TOC (Mục lục tự động) để làm tài liệu Đặc tả hệ thống (SRS)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8ac5344aa747300c158c96",
+              "name": "Lesson  02 : Excel/Sheets: Tư duy Database & Filter",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8ac53f4aa747300c158cad",
+              "name": "Lesson  03 : Excel/Sheets: VLOOKUP",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8ac54c4aa747300c158cc6",
+              "name": "Lesson  04 : PowerPoint/Slides: Nguyên lý trình bày thiết kế báo cáo kỹ thuật trực quan",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a890cbba493e63f11a789d0",
+          "sessionName": "Session 11 : Luyện tập tổng hợp - Tối ưu hóa tài liệu thô",
+          "position": 12,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 6,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a890dcca493e63f11a78dd6",
+          "sessionName": "Session 12 : Dự án - Thiết kế cấu trúc thư mục tối ưu và script tự động hóa",
+          "position": 13,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 2,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a890e34a493e63f11a78e7a",
+          "sessionName": "Session 13 : Thi giữa môn - HACKATHON",
+          "position": 14,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8d135d1d62b8910b674d99",
+          "sessionName": "Session 14 : Không gian cộng tác đám mây (Cloud Workspace)",
+          "position": 15,
+          "lessonsCount": 3,
+          "approvedLessonsCount": 3,
+          "practicesCount": 1,
+          "homeworksCount": 13,
+          "lessons": [
+            {
+              "id": "6a8d192a8c16f152a54bf6ea",
+              "name": "Lesson  01 : Local Storage vs Cloud Storage (Tư duy đồng bộ hóa dữ liệu)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d19358c16f152a54bfc38",
+              "name": "Lesson 02 : Quản lý quyền chia sẻ (Permissions: Viewer, Commenter, Editor) tránh rò rỉ dữ liệu",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d19428c16f152a54bfc5e",
+              "name": "Lesson  03 : Văn hóa giao tiếp nhóm qua công cụ doanh nghiệp (Lark Suite, Slack, Teams)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8d13981d62b8910b674e24",
+          "sessionName": "Session 15 : Thiết lập Cloud Workspace",
+          "position": 16,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 6,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8d141b1d62b8910b6755b0",
+          "sessionName": "Session 16 : Trình duyệt Web",
+          "position": 17,
+          "lessonsCount": 6,
+          "approvedLessonsCount": 6,
+          "practicesCount": 1,
+          "homeworksCount": 13,
+          "lessons": [
+            {
+              "id": "6a8d19ca8c16f152a54bfd69",
+              "name": "Lesson  01 : Kiến trúc trình duyệt và sự quan trọng của Developer Tools (F12)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d19d38c16f152a54bfd95",
+              "name": "Lesson  02 : Quản lý Bookmark khoa học và chia Profile (Cá nhân vs Công việc)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d19de8c16f152a54bfe18",
+              "name": "Lesson  03 : Bộ nhớ trình duyệt cơ bản (Cache vs Cookies)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d19e98c16f152a54bfe2f",
+              "name": "Lesson  04 : Phân tách Profile trình duyệt để không lẫn lộn tài khoản",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d19f48c16f152a54bfe46",
+              "name": "Lesson  05 : Cài đặt hệ sinh thái Extensions thiết yếu (Adblock, JSON Viewer, Color Picker)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d1a008c16f152a54bfe5d",
+              "name": "Lesson  06 : Thao tác F12 cơ bản: Inspect Element (kiểm tra phần tử) và xem Network tab",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8d143a8c16f152a54bd7f7",
+          "sessionName": "Session 17 : Thực hành làm việc với trình duyệt",
+          "position": 18,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 6,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8d15038c16f152a54bd8aa",
+          "sessionName": "Session 18 : Bảo mật không gian số cá nhân",
+          "position": 19,
+          "lessonsCount": 4,
+          "approvedLessonsCount": 4,
+          "practicesCount": 1,
+          "homeworksCount": 13,
+          "lessons": [
+            {
+              "id": "6a8d1a0f8c16f152a54bfe76",
+              "name": "Lesson  01 : Developer và các rủi ro bảo mật cơ bản (Phishing, dính mã độc qua phần mềm crack)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d1a1d8c16f152a54bfe8d",
+              "name": "Lesson  02 : Nguyên lý của Password Manager (Quản lý mật khẩu tập trung)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d1a2b8c16f152a54bfea6",
+              "name": "Lesson  03 : Tầm quan trọng sống còn của Xác thực 2 bước (2FA/MFA) qua Authenticator App",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d1a368c16f152a54bfebd",
+              "name": "Lesson  04 : Quản lý & Bảo mật Secrets trong Lập trình (API Keys, SSH Keys, .env & .gitignore)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8d15288c16f152a54bd8cb",
+          "sessionName": "Session 19 : Xây dựng hàng rào bảo mật",
+          "position": 20,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 6,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8d16078c16f152a54be040",
+          "sessionName": "Session 20 : Kỹ năng tra cứu & Gỡ lỗi (Troubleshooting)",
+          "position": 21,
+          "lessonsCount": 4,
+          "approvedLessonsCount": 4,
+          "practicesCount": 1,
+          "homeworksCount": 13,
+          "lessons": [
+            {
+              "id": "6a8d1a478c16f152a54bfed4",
+              "name": "Lesson  01 : Nghệ thuật \"Googling\" cho Dev (Sử dụng toán tử site:, \" \", -)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d1a518c16f152a54bfeec",
+              "name": "Lesson  02 : Đọc hiểu ngữ cảnh trên StackOverflow và GitHub Issues",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d1a5c8c16f152a54bff05",
+              "name": "Lesson  03 : Đọc hiểu Ngữ cảnh Lỗi & Giải mã cùng Trợ lý AI",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            },
+            {
+              "id": "6a8d1a668c16f152a54bff1c",
+              "name": "Lesson  04 : Framework đặt câu hỏi khi gặp Bug (Nêu bối cảnh -> Hành vi mong muốn -> Hành vi thực tế -> Log lỗi)",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8d16298c16f152a54be061",
+          "sessionName": "Session 21 : Luyện tập tổng hợp Troubleshooting",
+          "position": 22,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 6,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8d16468c16f152a54be083",
+          "sessionName": "Session 22 : Mini project - Luyện tập tổng hợp các tình huống làm việc kết nối đám mây",
+          "position": 23,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 2,
+          "lessons": []
+        }
+      ]
+    },
+    {
+      "courseId": "6aad0ed5f00919310d3f1835",
+      "courseName": "Dự án kinh doanh số 1 (Bán hàng số)",
+      "courseCode": "PRJ101",
+      "assignedClasses": [
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Hoàng Thị Kim Oanh"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 0,
+      "totalLessons": 0,
+      "approvedLessons": 0,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 0,
+      "totalHomeworks": 0,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "COURSE_NO_SESSION",
+            "message": "Môn chưa có buổi nào, dùng lms_create_session để tạo buổi"
+          }
+        ],
+        "warnings": []
+      },
+      "sessionDetails": []
+    },
+    {
+      "courseId": "6aad09d3f00919310d3f1432",
+      "courseName": "AI Foundation",
+      "courseCode": "AI101",
+      "assignedClasses": [
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Lê Thành Ngọc"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 0,
+      "totalLessons": 0,
+      "approvedLessons": 0,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 0,
+      "totalHomeworks": 0,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "COURSE_NO_SESSION",
+            "message": "Môn chưa có buổi nào, dùng lms_create_session để tạo buổi"
+          }
+        ],
+        "warnings": []
+      },
+      "sessionDetails": []
+    },
+    {
+      "courseId": "6aad09bcf00919310d3f136d",
+      "courseName": "Data Analyst Foundation",
+      "courseCode": "DA101",
+      "assignedClasses": [
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Nguyễn Ngọc Vân Khanh"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 0,
+      "totalLessons": 0,
+      "approvedLessons": 0,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 0,
+      "totalHomeworks": 0,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "COURSE_NO_SESSION",
+            "message": "Môn chưa có buổi nào, dùng lms_create_session để tạo buổi"
+          }
+        ],
+        "warnings": []
+      },
+      "sessionDetails": []
+    },
+    {
+      "courseId": "6aad0997f00919310d3f12a2",
+      "courseName": "Digital Marketing",
+      "courseCode": "MKT101",
+      "assignedClasses": [
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Hoàng Thị Hậu"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 0,
+      "totalLessons": 0,
+      "approvedLessons": 0,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 0,
+      "totalHomeworks": 0,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "COURSE_NO_SESSION",
+            "message": "Môn chưa có buổi nào, dùng lms_create_session để tạo buổi"
+          }
+        ],
+        "warnings": []
+      },
+      "sessionDetails": []
+    },
+    {
+      "courseId": "6aad0965f00919310d3f11b7",
+      "courseName": "Kỹ năng bán hàng thực chiến",
+      "courseCode": "SEL101",
+      "assignedClasses": [
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Hoàng Thị Hậu"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 0,
+      "totalLessons": 0,
+      "approvedLessons": 0,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 0,
+      "totalHomeworks": 0,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "COURSE_NO_SESSION",
+            "message": "Môn chưa có buổi nào, dùng lms_create_session để tạo buổi"
+          }
+        ],
+        "warnings": []
+      },
+      "sessionDetails": []
+    },
+    {
+      "courseId": "6a98e37917c71a5181521502",
+      "courseName": "Quản trị học căn bản",
+      "courseCode": "MAN101",
+      "assignedClasses": [
+        {
+          "className": "HN-K26-QTKD1",
+          "teacherName": "Đặng Quỳnh Trang"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 11,
+      "totalLessons": 15,
+      "approvedLessons": 0,
+      "pendingLessons": 15,
+      "otherStatusLessons": 0,
+      "approvalRate": "0.0%",
+      "totalPractices": 10,
+      "totalHomeworks": 165,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Bản chất và vai trò của quản trị\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4ef922f8b9a2147a1720b",
+            "lessonId": "6ab4ef9f2f8b9a2147a17290"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Nhà quản trị\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4ef922f8b9a2147a1720b",
+            "lessonId": "6ab4efa12f8b9a2147a1729a"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Môi trường bên ngoài\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efb02f8b9a2147a172d0",
+            "lessonId": "6ab4efe22f8b9a2147a176f3"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Môi trường nội bộ\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efb02f8b9a2147a172d0",
+            "lessonId": "6ab4efe32f8b9a2147a176f7"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Nhận diện và Phân tích môi trường quản trị của doanh nghiệp\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6ab4efb22f8b9a2147a172dd"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Quy trình hoạch định trong doanh nghiệp\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efb82f8b9a2147a172f8",
+            "lessonId": "6ab4efe42f8b9a2147a176fb"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Các công cụ hỗ trợ hoạch định\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efb82f8b9a2147a172f8",
+            "lessonId": "6ab4efe42f8b9a2147a176ff"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Các yếu tố định hình cơ cấu tổ chức doanh nghiệp\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efbf2f8b9a2147a1730b",
+            "lessonId": "6ab4efe52f8b9a2147a17704"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Các mô hình cơ cấu tổ chức phổ biến\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efbf2f8b9a2147a1730b",
+            "lessonId": "6ab4efe72f8b9a2147a1770a"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Lựa chọn cơ cấu tổ chức cho doanh nghiệp\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6ab4efc02f8b9a2147a17314"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Thi giữa môn\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6ab4efd52f8b9a2147a17336"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Các phong cách lãnh đạo phổ biến\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efd62f8b9a2147a1733f",
+            "lessonId": "6ab4eff42f8b9a2147a1786e"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Căn cứ lựa chọn phong cách lãnh đạo trong doanh nghiệp\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efd62f8b9a2147a1733f",
+            "lessonId": "6ab4eff52f8b9a2147a179e3"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Thông tin quản trị\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efd72f8b9a2147a17347",
+            "lessonId": "6ab4f0192f8b9a2147a194b7"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Quy trình và căn cứ ra quyết định trong quản trị\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efd72f8b9a2147a17347",
+            "lessonId": "6ab4f01f2f8b9a2147a194bb"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 3: Các mô hình ra quyết định phổ biến\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efd72f8b9a2147a17347",
+            "lessonId": "6ab4f0262f8b9a2147a194c2"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 1: Các yêu cầu đối với hoạt động kiểm soát trong doanh nghiệp\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efd82f8b9a2147a17353",
+            "lessonId": "6ab4f02e2f8b9a2147a194c9"
+          },
+          {
+            "code": "LESSON_PENDING_APPROVAL",
+            "message": "Bài \"Lesson 2: Quy trình kiểm soát trong doanh nghiệp\" đang chờ duyệt, cần ADMIN/MANAGER duyệt trên web",
+            "sessionId": "6ab4efd82f8b9a2147a17353",
+            "lessonId": "6ab4f0332f8b9a2147a194d3"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Ôn tập hệ thống kiến thức Quản trị học\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6ab4efd92f8b9a2147a1735b"
+          }
+        ],
+        "warnings": [
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Tổng quan về quản trị và nhà quản trị trong doanh nghiệp\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4ef922f8b9a2147a1720b"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Môi trường quản trị của doanh nghiệp\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efb02f8b9a2147a172d0"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Nhận diện và Phân tích môi trường quản trị của doanh nghiệp\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efb22f8b9a2147a172dd"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Các cấp độ hoạch định trong doanh nghiệp\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efb82f8b9a2147a172f8"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Các mô hình cơ cấu tổ chức doanh nghiệp phổ biến\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efbf2f8b9a2147a1730b"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Lựa chọn cơ cấu tổ chức cho doanh nghiệp\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efc02f8b9a2147a17314"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Thi giữa môn\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efd52f8b9a2147a17336"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Các phong cách lãnh đạo của nhà quản trị\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efd62f8b9a2147a1733f"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Các mô hình ra quyết định quản trị\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efd72f8b9a2147a17347"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Kiểm soát và xử lý vấn đề trong quản trị\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efd82f8b9a2147a17353"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Ôn tập hệ thống kiến thức Quản trị học\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6ab4efd92f8b9a2147a1735b"
+          },
+          {
+            "code": "COURSE_PUBLISHED_LEGACY_CONTENT",
+            "message": "Môn này đã có bản publish: video và bài đọc gắn qua MCP (mô hình cũ) không vào snapshot, sinh viên đang học bản publish sẽ không thấy. Muốn tới sinh viên phải soạn block VIDEO/READING trên web rồi publish lại."
+          }
+        ]
+      },
+      "sessionDetails": [
+        {
+          "sessionId": "6ab4ef922f8b9a2147a1720b",
+          "sessionName": "Tổng quan về quản trị và nhà quản trị trong doanh nghiệp",
+          "position": 1,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": [
+            {
+              "id": "6ab4ef9f2f8b9a2147a17290",
+              "name": "Lesson 1: Bản chất và vai trò của quản trị",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab4efa12f8b9a2147a1729a",
+              "name": "Lesson 2: Nhà quản trị",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab4efb02f8b9a2147a172d0",
+          "sessionName": "Môi trường quản trị của doanh nghiệp",
+          "position": 2,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": [
+            {
+              "id": "6ab4efe22f8b9a2147a176f3",
+              "name": "Lesson 1: Môi trường bên ngoài",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab4efe32f8b9a2147a176f7",
+              "name": "Lesson 2: Môi trường nội bộ",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab4efb22f8b9a2147a172dd",
+          "sessionName": "Nhận diện và Phân tích môi trường quản trị của doanh nghiệp",
+          "position": 3,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": []
+        },
+        {
+          "sessionId": "6ab4efb82f8b9a2147a172f8",
+          "sessionName": "Các cấp độ hoạch định trong doanh nghiệp",
+          "position": 4,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": [
+            {
+              "id": "6ab4efe42f8b9a2147a176fb",
+              "name": "Lesson 1: Quy trình hoạch định trong doanh nghiệp",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab4efe42f8b9a2147a176ff",
+              "name": "Lesson 2: Các công cụ hỗ trợ hoạch định",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab4efbf2f8b9a2147a1730b",
+          "sessionName": "Các mô hình cơ cấu tổ chức doanh nghiệp phổ biến",
+          "position": 5,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": [
+            {
+              "id": "6ab4efe52f8b9a2147a17704",
+              "name": "Lesson 1: Các yếu tố định hình cơ cấu tổ chức doanh nghiệp",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab4efe72f8b9a2147a1770a",
+              "name": "Lesson 2: Các mô hình cơ cấu tổ chức phổ biến",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab4efc02f8b9a2147a17314",
+          "sessionName": "Lựa chọn cơ cấu tổ chức cho doanh nghiệp",
+          "position": 6,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": []
+        },
+        {
+          "sessionId": "6ab4efd52f8b9a2147a17336",
+          "sessionName": "Thi giữa môn",
+          "position": 7,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 15,
+          "lessons": []
+        },
+        {
+          "sessionId": "6ab4efd62f8b9a2147a1733f",
+          "sessionName": "Các phong cách lãnh đạo của nhà quản trị",
+          "position": 8,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": [
+            {
+              "id": "6ab4eff42f8b9a2147a1786e",
+              "name": "Lesson 1: Các phong cách lãnh đạo phổ biến",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab4eff52f8b9a2147a179e3",
+              "name": "Lesson 2: Căn cứ lựa chọn phong cách lãnh đạo trong doanh nghiệp",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab4efd72f8b9a2147a17347",
+          "sessionName": "Các mô hình ra quyết định quản trị",
+          "position": 9,
+          "lessonsCount": 3,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": [
+            {
+              "id": "6ab4f0192f8b9a2147a194b7",
+              "name": "Lesson 1: Thông tin quản trị",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab4f01f2f8b9a2147a194bb",
+              "name": "Lesson 2: Quy trình và căn cứ ra quyết định trong quản trị",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab4f0262f8b9a2147a194c2",
+              "name": "Lesson 3: Các mô hình ra quyết định phổ biến",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab4efd82f8b9a2147a17353",
+          "sessionName": "Kiểm soát và xử lý vấn đề trong quản trị",
+          "position": 10,
+          "lessonsCount": 2,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": [
+            {
+              "id": "6ab4f02e2f8b9a2147a194c9",
+              "name": "Lesson 1: Các yêu cầu đối với hoạt động kiểm soát trong doanh nghiệp",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            },
+            {
+              "id": "6ab4f0332f8b9a2147a194d3",
+              "name": "Lesson 2: Quy trình kiểm soát trong doanh nghiệp",
+              "status": "PENDING",
+              "hasVideo": false,
+              "hasReading": true
+            }
+          ]
+        },
+        {
+          "sessionId": "6ab4efd92f8b9a2147a1735b",
+          "sessionName": "Ôn tập hệ thống kiến thức Quản trị học",
+          "position": 11,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 1,
+          "homeworksCount": 15,
+          "lessons": []
+        }
+      ]
+    },
+    {
+      "courseId": "6a88fd66a493e63f11a75dde",
+      "courseName": "Tiếng Nhật cơ sở 1",
+      "courseCode": "JPN105-K26",
+      "assignedClasses": [
+        {
+          "className": "HN-KS26-CNTT1",
+          "teacherName": "Giáp Thị Minh Hằng"
+        }
+      ],
+      "outlineFound": true,
+      "totalSessions": 48,
+      "totalLessons": 21,
+      "approvedLessons": 21,
+      "pendingLessons": 0,
+      "otherStatusLessons": 0,
+      "approvalRate": "100.0%",
+      "totalPractices": 0,
+      "totalHomeworks": 22,
+      "checkResult": {
+        "errors": [
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Ôn tập 2 bảng chữ cái\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8b93b64aa747300c16a0af"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_どうぞよろしく\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8bbfa98c18de0abc2d4a78"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_かぞくは３にんです\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8bc1b18c18de0abc2d50f4"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_Topic 1_わたし\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8bc33c8c18de0abc2d51d4"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_なにがすきですか\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8bc3728c18de0abc2d51fa"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_どこでたべますか\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8bc75a8c18de0abc2d7dc7"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_Topic 3_(Tên topic)\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8ce0798c18de0abc2e4ce7"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_へやが３つあります\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8ce8fb8c18de0abc2e5c33"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_いいへやですね\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8ceb308c18de0abc2e5d2f"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_Topic 4_いえ\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8ced488c18de0abc2e5e7d"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_なんじにおきますか\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cef118c18de0abc2e5f24"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_いつがいいですか\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8ceff88c18de0abc2e6160"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_topic 5_せいかつ\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cf1308c18de0abc2e6bea"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_Topic_1-5\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cf1fa8c18de0abc2e6c61"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_しゅみはなんですか？\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cf2a38c18de0abc2e70e5"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_いっしょに　行きませんか\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cf3718c18de0abc2e7463"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_Topic 6_やすみのひ 1\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cf4c28c18de0abc2e7e92"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_どうやって いきますか\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cf5e28c18de0abc2e886b"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_ゆうめいな おてらです\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cf76f8c18de0abc2e8955"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_Topic 7_まち\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cf9718c18de0abc2e9786"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_かわいい！\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cf9c88c18de0abc2e97f9"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_これ、ください\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cfacf8c18de0abc2eaa9b"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_Topic 8_かいもの\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cfc988c18de0abc2ed14d"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_たのしかったです\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cfd2f8c18de0abc2ed182"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Katsudou_つぎは きょうとに いきたいです\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cfe448c18de0abc2ed21b"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_Topic 9_やすみのひ 2\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8cffad8c18de0abc2ed972"
+          },
+          {
+            "code": "SESSION_NO_LESSON",
+            "message": "Buổi \"Renshu_Topic 6-9\" chưa có bài nào, dùng lms_create_lesson",
+            "sessionId": "6a8d02618c18de0abc2eda2b"
+          }
+        ],
+        "warnings": [
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Bảng chữ cái Hiragana 1\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a891fb6a493e63f11a79828"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Bảng chữ cái Hiragana 2\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8b8fbd4aa747300c16996a"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Bảng chữ cái Hiragana 3\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8b90ef4aa747300c169a2b"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Bảng chữ cái Katakana 1\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8b937e4aa747300c16a058"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Bảng chữ cái Katakana 2\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8b93a44aa747300c16a08f"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Ôn tập 2 bảng chữ cái\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8b93b64aa747300c16a0af"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_どうぞよろしく\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8bbfa98c18de0abc2d4a78"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_どうぞよろしく\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8bbfd18c18de0abc2d4ab1"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_どうぞよろしく\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8bbfd18c18de0abc2d4ab1"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_かぞくは３にんです\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8bc1b18c18de0abc2d50f4"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_かぞくは３にんです\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8bc1f18c18de0abc2d5132"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_かぞくは３にんです\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8bc1f18c18de0abc2d5132"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_Topic 1_わたし\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8bc33c8c18de0abc2d51d4"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_Topic 1_わたし\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8bc33c8c18de0abc2d51d4"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_なにがすきですか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8bc3728c18de0abc2d51fa"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_なにがすきですか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8bc37b8c18de0abc2d5218"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_なにがすきですか\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8bc37b8c18de0abc2d5218"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_どこでたべますか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8bc75a8c18de0abc2d7dc7"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_どこでたべますか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8bc76b8c18de0abc2d7dfc"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_どこでたべますか\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8bc76b8c18de0abc2d7dfc"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_Topic 3_(Tên topic)\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8ce0798c18de0abc2e4ce7"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_Topic 3_(Tên topic)\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8ce0798c18de0abc2e4ce7"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_へやが３つあります\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8ce8fb8c18de0abc2e5c33"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_へやが３つあります\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8ce96c8c18de0abc2e5c79"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_へやが３つあります\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8ce96c8c18de0abc2e5c79"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_いいへやですね\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8ceb308c18de0abc2e5d2f"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_いいへやですね\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8ceb9f8c18de0abc2e5da0"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_いいへやですね\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8ceb9f8c18de0abc2e5da0"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_Topic 4_いえ\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8ced488c18de0abc2e5e7d"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_Topic 4_いえ\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8ced488c18de0abc2e5e7d"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_なんじにおきますか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cef118c18de0abc2e5f24"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_なんじにおきますか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cef718c18de0abc2e5f68"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_なんじにおきますか\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cef718c18de0abc2e5f68"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_いつがいいですか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8ceff88c18de0abc2e6160"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_いつがいいですか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf0288c18de0abc2e61b2"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_いつがいいですか\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cf0288c18de0abc2e61b2"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_topic 5_せいかつ\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf1308c18de0abc2e6bea"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_topic 5_せいかつ\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cf1308c18de0abc2e6bea"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_Topic_1-5\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf1fa8c18de0abc2e6c61"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_Topic_1-5\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cf1fa8c18de0abc2e6c61"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_しゅみはなんですか？\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf2a38c18de0abc2e70e5"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_しゅみはなんですか？\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf2f78c18de0abc2e7200"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_しゅみはなんですか？\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cf2f78c18de0abc2e7200"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_いっしょに　行きませんか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf3718c18de0abc2e7463"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_いっしょに　行きませんか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf3c98c18de0abc2e7bd1"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_いっしょに　行きませんか\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cf3c98c18de0abc2e7bd1"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_Topic 6_やすみのひ 1\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf4c28c18de0abc2e7e92"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_Topic 6_やすみのひ 1\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cf4c28c18de0abc2e7e92"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_どうやって いきますか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf5e28c18de0abc2e886b"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_どうやって いきますか\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf6d28c18de0abc2e88c7"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_どうやって いきますか\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cf6d28c18de0abc2e88c7"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_ゆうめいな おてらです\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf76f8c18de0abc2e8955"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_ゆうめいな おてらです\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf8478c18de0abc2e89b0"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_ゆうめいな おてらです\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cf8478c18de0abc2e89b0"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_Topic 7_まち\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf9718c18de0abc2e9786"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_Topic 7_まち\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cf9718c18de0abc2e9786"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_かわいい！\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cf9c88c18de0abc2e97f9"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_かわいい！\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cfa3e8c18de0abc2ea2f4"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_かわいい！\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cfa3e8c18de0abc2ea2f4"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_これ、ください\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cfacf8c18de0abc2eaa9b"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_これ、ください\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cfb318c18de0abc2eaaf5"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_これ、ください\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cfb318c18de0abc2eaaf5"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_Topic 8_かいもの\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cfc988c18de0abc2ed14d"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_Topic 8_かいもの\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cfc988c18de0abc2ed14d"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_たのしかったです\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cfd2f8c18de0abc2ed182"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_たのしかったです\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cfd848c18de0abc2ed1ba"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_たのしかったです\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cfd848c18de0abc2ed1ba"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Katsudou_つぎは きょうとに いきたいです\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cfe448c18de0abc2ed21b"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Rikai_つぎは きょうとに いきたいです\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cfeb28c18de0abc2ed262"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Rikai_つぎは きょうとに いきたいです\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cfeb28c18de0abc2ed262"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_Topic 9_やすみのひ 2\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8cffad8c18de0abc2ed972"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_Topic 9_やすみのひ 2\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8cffad8c18de0abc2ed972"
+          },
+          {
+            "code": "SESSION_NO_REQUIRED_PRACTICE",
+            "message": "Buổi \"Renshu_Topic 6-9\" chưa có bài thực hành/bài tập bắt buộc ở cấp buổi (bài tập trong từng bài không được tính ở đây); dùng lms_add_practice nếu cần",
+            "sessionId": "6a8d02618c18de0abc2eda2b"
+          },
+          {
+            "code": "SESSION_NO_HOMEWORK",
+            "message": "Buổi \"Renshu_Topic 6-9\" chưa có bài tập về nhà, dùng lms_add_homework nếu cần",
+            "sessionId": "6a8d02618c18de0abc2eda2b"
+          },
+          {
+            "code": "COURSE_PUBLISHED_LEGACY_CONTENT",
+            "message": "Môn này đã có bản publish: video và bài đọc gắn qua MCP (mô hình cũ) không vào snapshot, sinh viên đang học bản publish sẽ không thấy. Muốn tới sinh viên phải soạn block VIDEO/READING trên web rồi publish lại."
+          }
+        ]
+      },
+      "sessionDetails": [
+        {
+          "sessionId": "6a891fb6a493e63f11a79828",
+          "sessionName": "Bảng chữ cái Hiragana 1",
+          "position": 1,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6a891fd5a493e63f11a7984a",
+              "name": "Tiết 1: Bảng chữ cái Hiragana",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8b8fbd4aa747300c16996a",
+          "sessionName": "Bảng chữ cái Hiragana 2",
+          "position": 2,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6a8b90ac4aa747300c1699e8",
+              "name": "Tiết 2: Bảng chữ cái Hiragana 2",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8b90ef4aa747300c169a2b",
+          "sessionName": "Bảng chữ cái Hiragana 3",
+          "position": 3,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6a8b91094aa747300c169a46",
+              "name": "Tiết 3: Bảng chữ cái Hiragana 3",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8b937e4aa747300c16a058",
+          "sessionName": "Bảng chữ cái Katakana 1",
+          "position": 4,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6a8bbc338c18de0abc2d43b8",
+              "name": "Tiết 4: Bảng chữ cái Katakana 1",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8b93a44aa747300c16a08f",
+          "sessionName": "Bảng chữ cái Katakana 2",
+          "position": 5,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": [
+            {
+              "id": "6a8bbf0b8c18de0abc2d49fc",
+              "name": "Tiết 5: Bảng Katakana 2",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8b93b64aa747300c16a0af",
+          "sessionName": "Ôn tập 2 bảng chữ cái",
+          "position": 6,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8bbfa98c18de0abc2d4a78",
+          "sessionName": "Katsudou_どうぞよろしく",
+          "position": 7,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8bbfd18c18de0abc2d4ab1",
+          "sessionName": "Rikai_どうぞよろしく",
+          "position": 8,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6ab0f5c84cf535213d285b51",
+              "name": "Tiết 8_Rikai_どうぞよろしく",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8bc1b18c18de0abc2d50f4",
+          "sessionName": "Katsudou_かぞくは３にんです",
+          "position": 9,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8bc1f18c18de0abc2d5132",
+          "sessionName": "Rikai_かぞくは３にんです",
+          "position": 10,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8bc1fc8c18de0abc2d514d",
+              "name": "Tiết 10_Rikai_かぞくは３にんです",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8bc33c8c18de0abc2d51d4",
+          "sessionName": "Renshu_Topic 1_わたし",
+          "position": 11,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8bc3728c18de0abc2d51fa",
+          "sessionName": "Katsudou_なにがすきですか",
+          "position": 12,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8bc37b8c18de0abc2d5218",
+          "sessionName": "Rikai_なにがすきですか",
+          "position": 13,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8bc3948c18de0abc2d5248",
+              "name": "Tiết 13_Rikai_なにがすきですか",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8bc75a8c18de0abc2d7dc7",
+          "sessionName": "Katsudou_どこでたべますか",
+          "position": 14,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8bc76b8c18de0abc2d7dfc",
+          "sessionName": "Rikai_どこでたべますか",
+          "position": 15,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8bc7778c18de0abc2d7e15",
+              "name": "Tiết 15_Rikai_どこでたべますか",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8ce0798c18de0abc2e4ce7",
+          "sessionName": "Renshu_Topic 3_(Tên topic)",
+          "position": 16,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8ce8fb8c18de0abc2e5c33",
+          "sessionName": "Katsudou_へやが３つあります",
+          "position": 17,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8ce96c8c18de0abc2e5c79",
+          "sessionName": "Rikai_へやが３つあります",
+          "position": 18,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cea1b8c18de0abc2e5cd0",
+              "name": "Tiết 18_Rikai_へやが３つあります",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8ceb308c18de0abc2e5d2f",
+          "sessionName": "Katsudou_いいへやですね",
+          "position": 19,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8ceb9f8c18de0abc2e5da0",
+          "sessionName": "Rikai_いいへやですね",
+          "position": 20,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8ceba88c18de0abc2e5db5",
+              "name": "Tiết 20_rikai_いいへやですね",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8ced488c18de0abc2e5e7d",
+          "sessionName": "Renshu_Topic 4_いえ",
+          "position": 21,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cef118c18de0abc2e5f24",
+          "sessionName": "Katsudou_なんじにおきますか",
+          "position": 22,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cef718c18de0abc2e5f68",
+          "sessionName": "Rikai_なんじにおきますか",
+          "position": 23,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cef7c8c18de0abc2e5f7d",
+              "name": "Tiết 23_Rikai_なんじにおきますか",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8ceff88c18de0abc2e6160",
+          "sessionName": "Katsudou_いつがいいですか",
+          "position": 24,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cf0288c18de0abc2e61b2",
+          "sessionName": "Rikai_いつがいいですか",
+          "position": 25,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cf0328c18de0abc2e61c7",
+              "name": "Tiết 25_Rikai_いつがいいですか",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8cf1308c18de0abc2e6bea",
+          "sessionName": "Renshu_topic 5_せいかつ",
+          "position": 26,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cf1fa8c18de0abc2e6c61",
+          "sessionName": "Renshu_Topic_1-5",
+          "position": 27,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cf2a38c18de0abc2e70e5",
+          "sessionName": "Katsudou_しゅみはなんですか？",
+          "position": 28,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cf2f78c18de0abc2e7200",
+          "sessionName": "Rikai_しゅみはなんですか？",
+          "position": 29,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cf3028c18de0abc2e7215",
+              "name": "Tiết 29_Rikai_しゅみはなんですか？",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8cf3718c18de0abc2e7463",
+          "sessionName": "Katsudou_いっしょに　行きませんか",
+          "position": 30,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cf3c98c18de0abc2e7bd1",
+          "sessionName": "Rikai_いっしょに　行きませんか",
+          "position": 31,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cf3da8c18de0abc2e7bea",
+              "name": "Tiết 31_Rikai_いっしょに　行きませんか",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8cf4c28c18de0abc2e7e92",
+          "sessionName": "Renshu_Topic 6_やすみのひ 1",
+          "position": 32,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cf5e28c18de0abc2e886b",
+          "sessionName": "Katsudou_どうやって いきますか",
+          "position": 33,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cf6d28c18de0abc2e88c7",
+          "sessionName": "Rikai_どうやって いきますか",
+          "position": 34,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cf6db8c18de0abc2e88dc",
+              "name": "Tiết 34_Rikai_どうやって いきますか",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8cf76f8c18de0abc2e8955",
+          "sessionName": "Katsudou_ゆうめいな おてらです",
+          "position": 35,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cf8478c18de0abc2e89b0",
+          "sessionName": "Rikai_ゆうめいな おてらです",
+          "position": 36,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cf84f8c18de0abc2e89c5",
+              "name": "Tiết 36_Rikai_ゆうめいな おてらです",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8cf9718c18de0abc2e9786",
+          "sessionName": "Renshu_Topic 7_まち",
+          "position": 37,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cf9c88c18de0abc2e97f9",
+          "sessionName": "Katsudou_かわいい！",
+          "position": 38,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cfa3e8c18de0abc2ea2f4",
+          "sessionName": "Rikai_かわいい！",
+          "position": 39,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cfa458c18de0abc2ea36b",
+              "name": "Tiết 39_Rikai_かわいい！",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8cfacf8c18de0abc2eaa9b",
+          "sessionName": "Katsudou_これ、ください",
+          "position": 40,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cfb318c18de0abc2eaaf5",
+          "sessionName": "Rikai_これ、ください",
+          "position": 41,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cfb448c18de0abc2eab0b",
+              "name": "Tiết 41_Rikai_これ、ください",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8cfc988c18de0abc2ed14d",
+          "sessionName": "Renshu_Topic 8_かいもの",
+          "position": 42,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cfd2f8c18de0abc2ed182",
+          "sessionName": "Katsudou_たのしかったです",
+          "position": 43,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cfd848c18de0abc2ed1ba",
+          "sessionName": "Rikai_たのしかったです",
+          "position": 44,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cfd9c8c18de0abc2ed1d3",
+              "name": "Tiết 44_Rikai_たのしかったです",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8cfe448c18de0abc2ed21b",
+          "sessionName": "Katsudou_つぎは きょうとに いきたいです",
+          "position": 45,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 1,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8cfeb28c18de0abc2ed262",
+          "sessionName": "Rikai_つぎは きょうとに いきたいです",
+          "position": 46,
+          "lessonsCount": 1,
+          "approvedLessonsCount": 1,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": [
+            {
+              "id": "6a8cfed08c18de0abc2ed27b",
+              "name": "Tiết 46_Rikai_つぎは きょうとに いきたいです",
+              "status": "APPROVED",
+              "hasVideo": true,
+              "hasReading": false
+            }
+          ]
+        },
+        {
+          "sessionId": "6a8cffad8c18de0abc2ed972",
+          "sessionName": "Renshu_Topic 9_やすみのひ 2",
+          "position": 47,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        },
+        {
+          "sessionId": "6a8d02618c18de0abc2eda2b",
+          "sessionName": "Renshu_Topic 6-9",
+          "position": 48,
+          "lessonsCount": 0,
+          "approvedLessonsCount": 0,
+          "practicesCount": 0,
+          "homeworksCount": 0,
+          "lessons": []
+        }
+      ]
+    }
+  ]
+}

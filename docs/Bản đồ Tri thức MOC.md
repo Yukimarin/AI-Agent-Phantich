@@ -8,6 +8,7 @@ Chào mừng bạn đến với Bản đồ Tri thức Trung tâm của dự án
 *   [[super_memory|Bộ nhớ siêu cấp (Super Memory)]]: Nhật ký quyết định thiết kế, bài học kinh nghiệm và lịch sử sửa lỗi liên phiên.
 *   [[Quy trình Multi-Agent Workflow|Quy trình Multi-Agent]]: Mô hình hoạt động và điều phối giữa các Agent.
 *   [[Model Calibration Notes|Ghi nhận Hiệu chuẩn]]: Tài liệu phân tích và hiệu chuẩn tham số cho thuật toán dự báo học tập.
+*   [[So sánh Mô hình Agent Cũ và Mới]]: Sơ đồ Agent 1-5 cũ và PMO Data Hub mới, so sánh và đánh giá.
 
 ---
 

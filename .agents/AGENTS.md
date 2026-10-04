@@ -2,10 +2,20 @@
 
 Tài liệu này định nghĩa các nguyên tắc hoạt động, vai trò của các Subagent và định dạng dữ liệu trong dự án phân tích chỉ số đào tạo và đánh giá KPI Giảng viên (GV) & Trợ giảng (TG).
 
+## 0. Mô hình PMO Data Hub (ƯU TIÊN — đang chuyển đổi từ 04/10/2026)
+Thiết kế: `docs/plans/2026-10-04-data-hub-verification-design.md`. Skill vận hành: `run-analytics`.
+- **Một lệnh**: `uv run python -m pmo run [--refresh]` → Data Agent lấy dữ liệu 1 lần/kỳ vào `data/warehouse/<YYYY-Www>/` → Metric Engine (`pmo/metrics/lms_fe.py`, nơi DUY NHẤT tính CC/BT/EL) → Gates → Modules → `output/<kỳ>/`.
+- **Script tính, AI nhận định**: AI không tự tính chỉ số, không gọi nguồn trực tiếp, không sửa số trong đầu ra. AI chỉ đọc `summary.json` để viết nhận định và phương án hành động.
+- **Gate là trọng tài**: Gate FAIL ⇒ pipeline dừng có kiểm soát, ghi `output/<kỳ>/run_report.md` nêu rõ lỗi. Không "chỉnh số cho khớp".
+- **Bài học = test**: Mỗi lỗi người dùng phát hiện phải thành 1 test trong `tests/regression/` hoặc 1 mục golden set `tests/golden/`.
+- **Thêm báo cáo mới** = thêm module trong `pmo/modules/` (chỉ đọc kho), đăng ký vào `REGISTRY`.
+- Token/bí mật đặt trong `.env` (không commit, không hardcode).
+- Các Agent 1-5 bên dưới vẫn chạy song song cho tới khi các module M2/M3 và Renderer hoàn tất (giai đoạn P6).
+
 ## 1. Nguyên tắc hoạt động chung
-- **Không tự ý viết thêm code agent ứng dụng (multi-agent code)**: Mọi hoạt động phân tích và điều phối phải được thực hiện trực tiếp bởi Antigravity và các Subagent tích hợp sẵn.
+- **Không tự ý viết thêm code agent ứng dụng (multi-agent code)**: Mọi hoạt động phân tích và điều phối phải được thực hiện trực tiếp bởi Antigravity và các Subagent tích hợp sẵn. (Package `pmo/` là pipeline dữ liệu tất định, không phải multi-agent code.)
 - **Ngôn ngữ báo cáo**: Toàn bộ báo cáo KPI, phản hồi và phân tích phải sử dụng tiếng Việt chuẩn, chuyên nghiệp, rõ ràng.
-- **Xử lý lỗi dữ liệu**: Nếu thiếu dữ liệu hoặc file bị lỗi, Agent phải báo cáo chi tiết lỗi và đưa ra cảnh báo thay vì dừng chạy đột ngột.
+- **Xử lý lỗi dữ liệu**: Nếu thiếu dữ liệu hoặc file bị lỗi, Agent phải báo cáo chi tiết lỗi và đưa ra cảnh báo thay vì dừng chạy đột ngột. Với pipeline `pmo`, lỗi được ghi chi tiết vào `run_report.md` và chặn xuất báo cáo sai.
 
 ## 2. Vai trò của các Subagent
 Khi thực hiện nhiệm vụ, Antigravity sẽ phân chia công việc cho các Subagent và Agent Lead có cấu hình chuyên biệt sau:
