@@ -81,3 +81,14 @@ def test_bt_dung_learning_homeworkMissingRate_khong_suy_luan_so_bai_den_han():
     bt = lms_fe.calc_homework_violation(students)
     assert bt["count"] == 0
 
+
+def test_bt_nguong_tu_10_phan_tram_thieu_1_bai_mon_dai_khong_vi_pham():
+    """HCM-CNTT2/IT108: FE 0%, hệ thống (ngưỡng > 0) 13.33% (6/45).
+
+    6 SV thiếu 1 bài / 22 buổi = homeworkMissingRate 4.55 < 10 → KHÔNG vi phạm.
+    Nhãn FE: "Tỉ lệ SV thiếu BTVN từ 10%". Môn 4 buổi (SKL01) thiếu 1 bài = 25% → vi phạm.
+    """
+    students = [_sv(0, 0, hw_miss=4.55)] * 6 + [_sv(0, 0, hw_miss=10)] + [_sv(0, 0, hw_miss=25)] + [_sv(0, 0)] * 37
+    bt = lms_fe.calc_homework_violation(students)
+    assert bt["count"] == 2
+

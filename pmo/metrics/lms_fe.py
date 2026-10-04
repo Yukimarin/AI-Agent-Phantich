@@ -92,7 +92,8 @@ def infer_due_homework(students: list[Student]) -> int | None:
 def calc_homework_violation(students: list[Student], current_due_hw: int | None = None) -> dict:
     """SV vi phạm BT. TUYỆT ĐỐI không dùng homework.rate của API (chia cho tổng bài cả môn).
 
-    Ưu tiên: `learning.homeworkMissingRate` > 0 (API tính sẵn so với bài ĐÃ đến hạn).
+    Ưu tiên (khớp FE, golden W40): `learning.homeworkMissingRate` ≥ 10 — nhãn FE "thiếu BTVN từ 10%".
+    Môn dài (22 buổi) thiếu 1 bài = 4.55% → chưa vi phạm; môn 4 buổi thiếu 1 bài = 25% → vi phạm.
     Fallback: done < số bài đến hạn suy luận — suy luận này từng tính oan cả lớp
     (CNTT1/JPN105 44% vs FE 0%) nên chỉ dùng khi API thiếu trường `learning`.
     """
@@ -103,7 +104,7 @@ def calc_homework_violation(students: list[Student], current_due_hw: int | None 
         details = []
         for s in students:
             miss = s["learning"]["homeworkMissingRate"]
-            if miss > 0:
+            if miss >= 10:
                 hw = s.get("homework") or {}
                 details.append({
                     "code": s.get("studentCode"),
@@ -113,7 +114,7 @@ def calc_homework_violation(students: list[Student], current_due_hw: int | None 
                     "missingRate": _round2(miss),
                 })
         return {"count": len(details), "total": total, "percent": _pct(len(details), total),
-                "details": details, "source": "learning.homeworkMissingRate>0"}
+                "details": details, "source": "learning.homeworkMissingRate>=10"}
     due = current_due_hw
     if due is None:
         due = infer_due_homework(students)

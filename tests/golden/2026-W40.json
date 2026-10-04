@@ -1,12 +1,18 @@
 {
   "period": "2026-W40",
-  "confirmedBy": "PMO Đào tạo (đối chiếu LMS FE 04/10/2026 22:39)",
+  "confirmedBy": "PMO Đào tạo (đối chiếu LMS FE 04/10/2026 22:39 + 23:02)",
   "items": [
-    {"className": "HN-KS26-CNTT1", "courseCode": "IT108-K26", "cc_count": 1, "bt_count": 1, "el_count": 5},
+    {"className": "HN-KS26-CNTT1", "courseCode": "IT108-K26", "cc_count": 1, "bt_count": 1, "el_count": 5,
+     "note": "BT=1 mâu thuẫn quy tắc ≥10% (SV duy nhất B26DTCN079 thiếu 4.55%) — chờ người dùng kiểm tra lại"},
     {"className": "HN-KS26-CNTT1", "courseCode": "JPN105-K26", "bt_count": 0},
     {"className": "HN-KS26-CNTT1", "courseCode": "SKL01", "cc_count": 3, "bt_count": 3, "el_count": 9},
     {"className": "HN-KS26-CNTT2", "courseCode": "IT108-K26", "cc_count": 0, "bt_count": 0, "el_count": 2},
     {"className": "HN-KS26-CNTT2", "courseCode": "ENG105-K26", "cc_count": 0, "bt_count": 0, "el_count": 1},
-    {"className": "HN-KS26-CNTT2", "courseCode": "SKL01", "cc_count": 10}
+    {"className": "HN-KS26-CNTT2", "courseCode": "SKL01", "cc_count": 10},
+    {"className": "HCM-KS26-CNTT1", "courseCode": "ENG105-K26", "cc_count": 0, "bt_count": 0, "el_count": 5},
+    {"className": "HCM-KS26-CNTT1", "courseCode": "SKL01", "cc_count": 7, "bt_count": 3, "el_count": 6},
+    {"className": "HCM-KS26-CNTT2", "courseCode": "IT108-K26", "bt_count": 0},
+    {"className": "HCM-KS26-CNTT2", "courseCode": "ENG105-K26", "cc_count": 0, "bt_count": 0, "el_count": 4},
+    {"className": "HCM-KS26-CNTT2", "courseCode": "SKL01", "cc_count": 6, "bt_count": 4, "el_count": 9}
   ]
 }
