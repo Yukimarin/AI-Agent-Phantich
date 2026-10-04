@@ -4,6 +4,7 @@
 
 | Ngày | Quyết định | Lý do |
 |---|---|---|
+| 2026-10-04 | Công thức chỉ số phải theo **định nghĩa chính thức của LMS** (đang xin); trước đó chỉ sửa công thức khi golden set chứng minh, không khớp theo 1 điểm dữ liệu | ~10 phiên sai lặp do đoán công thức từ số FE và sửa cho khớp từng lớp |
 | 2026-10-04 | CC = `learning.absenceRate` ≥ 10 (KP×1, CP×0.5, Muộn×0.5 / buổi kế hoạch); BT = `learning.homeworkMissingRate` ≥ 10 (nhãn FE "thiếu BTVN từ 10%", golden HCM-CNTT2/IT108); công thức cũ chỉ là fallback | Golden W40: CNTT2/SKL01 CC FE 25% vs cũ 10%; CNTT1/JPN105 BT FE 0% vs cũ 44% (suy luận số bài đến hạn sai) |
 | 2026-10-04 | Bỏ `super_memory.md`, thay bằng `STATUS.md` (trạng thái) + `domain/quy_chuan_nghiep_vu.md` (tham chiếu) | Bài học đã thành test, danh mục lớp thành registry; văn bản tĩnh dễ lỗi thời và tốn token |
 | 2026-10-04 | Không tạo file `docs/plans` cho mỗi phiên; plan xong thì xóa | 33 file plan cũ không ai đọc lại, làm nhiễu tìm kiếm |
