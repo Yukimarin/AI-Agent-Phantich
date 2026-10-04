@@ -23,3 +23,8 @@ logs/
 data/processed/watcher.pid
 data/processed/*.log
 
+# PMO Data Hub: secrets & kho dữ liệu theo kỳ
+.env
+data/warehouse/
+.pytest_cache/
+

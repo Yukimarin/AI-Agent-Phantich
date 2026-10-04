@@ -1,0 +1,17 @@
+[project]
+name = "pmo-analytics"
+version = "0.1.0"
+description = "PMO Data Hub: lấy dữ liệu 1 lần/kỳ, tính chỉ số chuẩn LMS FE, kiểm định tự động, xuất báo cáo"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.uv]
+# Không build package; các script cũ vẫn chạy bằng `uv run --with ...` như trước.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
