@@ -4,6 +4,7 @@
 
 | Ngày | Quyết định | Lý do |
 |---|---|---|
+| 2026-10-04 | CC = `learning.absenceRate` ≥ 10 (KP×1, CP×0.5, Muộn×0.5 / buổi kế hoạch); BT = `learning.homeworkMissingRate` > 0; công thức cũ chỉ là fallback | Golden W40: CNTT2/SKL01 CC FE 25% vs cũ 10%; CNTT1/JPN105 BT FE 0% vs cũ 44% (suy luận số bài đến hạn sai) |
 | 2026-10-04 | Bỏ `super_memory.md`, thay bằng `STATUS.md` (trạng thái) + `domain/quy_chuan_nghiep_vu.md` (tham chiếu) | Bài học đã thành test, danh mục lớp thành registry; văn bản tĩnh dễ lỗi thời và tốn token |
 | 2026-10-04 | Không tạo file `docs/plans` cho mỗi phiên; plan xong thì xóa | 33 file plan cũ không ai đọc lại, làm nhiễu tìm kiếm |
 | 2026-10-04 | Rút gọn `AGENTS.md`; vai trò Agent 1-5 chuyển `docs/legacy/agent_roles.md` | AGENTS.md được nạp mọi lượt chat |

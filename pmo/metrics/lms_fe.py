@@ -35,18 +35,31 @@ def _pct(count: int, total: int) -> float:
     return _round2(count / total * 100)
 
 
-def calc_attendance_violation(students: list[Student]) -> dict:
-    """SV vi phạm CC khi absence.rate > 10 (nghiêm ngặt).
+def _has_learning(students: list[Student], key: str) -> bool:
+    """API mới (từ 10/2026) trả `learning.<key>` — đúng nguồn LMS FE dùng."""
+    return bool(students) and all(isinstance((s.get("learning") or {}).get(key), (int, float)) for s in students)
 
-    API không tách vắng KP/CP/Muộn → sai lệch 1-2 SV so với FE là chấp nhận được.
+
+def calc_attendance_violation(students: list[Student]) -> dict:
+    """SV vi phạm CC.
+
+    Ưu tiên (khớp FE, golden 2026-W40): `learning.absenceRate` ≥ 10, trong đó
+    absenceRate = (KP×1 + CP×0.5 + Muộn×0.5) / buổi kế hoạch × 100.
+    Fallback (API cũ không có `learning`): `absence.rate` > 10 — không tách KP/CP/Muộn.
     """
     if not students:
         return _empty()
+    use_learning = _has_learning(students, "absenceRate")
     details = []
     for s in students:
         abs_ = s.get("absence") or {}
-        rate = _num(abs_.get("rate"), 0)
-        if rate > 10:
+        if use_learning:
+            rate = s["learning"]["absenceRate"]
+            violated = rate >= 10
+        else:
+            rate = _num(abs_.get("rate"), 0)
+            violated = rate > 10
+        if violated:
             details.append({
                 "code": s.get("studentCode"),
                 "name": s.get("fullName"),
@@ -56,7 +69,10 @@ def calc_attendance_violation(students: list[Student]) -> dict:
                 "plannedSessions": _num(abs_.get("plannedSessions"), 0),
             })
     total = len(students)
-    return {"count": len(details), "total": total, "percent": _pct(len(details), total), "details": details}
+    out = {"count": len(details), "total": total, "percent": _pct(len(details), total), "details": details}
+    if use_learning:  # nhánh fallback giữ nguyên định dạng bản JS (test parity)
+        out["source"] = "learning.absenceRate>=10"
+    return out
 
 
 def infer_due_homework(students: list[Student]) -> int | None:
@@ -74,10 +90,30 @@ def infer_due_homework(students: list[Student]) -> int | None:
 
 
 def calc_homework_violation(students: list[Student], current_due_hw: int | None = None) -> dict:
-    """SV vi phạm BT khi done < số bài ĐÃ ĐẾN HẠN. TUYỆT ĐỐI không dùng homework.rate của API."""
+    """SV vi phạm BT. TUYỆT ĐỐI không dùng homework.rate của API (chia cho tổng bài cả môn).
+
+    Ưu tiên: `learning.homeworkMissingRate` > 0 (API tính sẵn so với bài ĐÃ đến hạn).
+    Fallback: done < số bài đến hạn suy luận — suy luận này từng tính oan cả lớp
+    (CNTT1/JPN105 44% vs FE 0%) nên chỉ dùng khi API thiếu trường `learning`.
+    """
     if not students:
         return _empty()
     total = len(students)
+    if current_due_hw is None and _has_learning(students, "homeworkMissingRate"):
+        details = []
+        for s in students:
+            miss = s["learning"]["homeworkMissingRate"]
+            if miss > 0:
+                hw = s.get("homework") or {}
+                details.append({
+                    "code": s.get("studentCode"),
+                    "name": s.get("fullName"),
+                    "done": _num(hw.get("done"), 0),
+                    "hwTotal": _num(hw.get("total"), 0),
+                    "missingRate": _round2(miss),
+                })
+        return {"count": len(details), "total": total, "percent": _pct(len(details), total),
+                "details": details, "source": "learning.homeworkMissingRate>0"}
     due = current_due_hw
     if due is None:
         due = infer_due_homework(students)

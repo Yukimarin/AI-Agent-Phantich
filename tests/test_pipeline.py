@@ -87,7 +87,8 @@ def test_bai_hoc_3_registry_tu_cap_nhat_ma_lop_tu_lms(tmp_path):
     assert ID_C in ids and ID_B not in ids
 
 
-def test_pipeline_dat_va_m1_de_xuat(tmp_path):
+def test_pipeline_dat_va_m1_de_xuat(tmp_path, monkeypatch):
+    monkeypatch.setattr(g2_metrics, "GOLDEN_DIR", tmp_path / "golden")  # dữ liệu giả: không áp golden thật
     snap = Snapshot(current_period(), base=tmp_path)
     data_agent.fetch(snap, fetcher=_fake({ID_A: 5, ID_B: 20}), seed=_seed())
     assert passed(g1_data.run(snap))
