@@ -40,9 +40,9 @@ def call_tool(name: str, arguments: dict | None = None, timeout: int = 60, retri
         except Exception as e:  # mạng chập chờn: thử lại có giãn cách
             last_err = e
             code = getattr(e, "code", None)
-            if isinstance(code, int) and 400 <= code < 500:
+            if isinstance(code, int) and 400 <= code < 500 and code != 429:
                 raise LmsError(f"{name}: HTTP {code} (kiểm tra LMS_TOKEN / quyền truy cập)") from e
-            time.sleep(1.5 * (attempt + 1))
+            time.sleep((5.0 if code == 429 else 1.5) * (attempt + 1))  # 429: LMS giới hạn tần suất
     else:
         raise LmsError(f"{name} thất bại sau {retries + 1} lần: {last_err}")
 
