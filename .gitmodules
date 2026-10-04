@@ -1,0 +1,3 @@
+[submodule "legacy/dgnl/outputs"]
+	path = legacy/dgnl/outputs
+	url = https://github.com/Yukimarin/dgnl-reports.git
