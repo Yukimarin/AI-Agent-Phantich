@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÁO CÁO CHUYÊN SÂU HỌC VỤ: MÔN SSK101 (KHÓA KS26 CNTT)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#111622', 900: '#0b0f19', 950: '#06080e' },
+                        indigo: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #06080e; color: #cbd5e1; font-size: 13px; }
+        code, pre, .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0b0f19; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #26324a; border-radius: 3px; }
+        .glass-card { background: rgba(15, 20, 31, 0.85); backdrop-filter: blur(12px); border: 1px solid #1e283d; }
+        .glass-card:hover { border-color: #334155; }
+        .tab-btn.active { background-color: #4f46e5; color: #ffffff; border-color: #6366f1; font-weight: 600; }
+        .metric-card { background: linear-gradient(180deg, rgba(22, 28, 45, 0.75) 0%, rgba(15, 20, 31, 0.9) 100%); border: 1px solid #1e293b; }
+        .funnel-step { position: relative; }
+        .funnel-step:not(:last-child)::after {
+            content: '➔';
+            position: absolute;
+            right: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-size: 14px;
+            font-weight: bold;
+            z-index: 10;
+        }
+        @media (max-width: 768px) {
+            .funnel-step:not(:last-child)::after { display: none; }
+        }
+    </style>
+</head>
+<body class="min-h-screen custom-scrollbar antialiased selection:bg-indigo-500 selection:text-white">
+
+    <header class="border-b border-slate-800 bg-slate-900/90 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div>
+                    <h1 class="text-base font-bold text-white tracking-tight flex items-center gap-2">
+                        BÁO CÁO CHUYÊN SÂU HỌC VỤ: MÔN SSK101 (KHÓA KS26 CNTT)
+                        <span class="text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded font-mono">Khối CNTT</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Kiểm toán điều kiện thi 6 lớp CNTT, mổ xẻ rào cản nợ BTVN 0-25% và danh sách bảo lãnh</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                
+    <div class="hidden lg:flex items-center space-x-1 bg-slate-800/90 p-1 rounded-lg border border-slate-700 text-xs">
+        <a href="../ks24/it214_microservices_cntt.html" class="text-slate-400 hover:text-white px-2 py-1 rounded transition hover:bg-slate-700/50">KS24 Microservices</a><a href="../ks25/it105_fastapi_cntt.html" class="text-slate-400 hover:text-white px-2 py-1 rounded transition hover:bg-slate-700/50">KS25 CNTT (FastAPI)</a><a href="../ks25/man107_qtkd.html" class="text-slate-400 hover:text-white px-2 py-1 rounded transition hover:bg-slate-700/50">KS25 QTKD (MAN107)</a><span class="bg-indigo-600 text-white px-2.5 py-1 rounded font-semibold">KS26 CNTT (SSK101)</span><a href="ssk101_qtkd.html" class="text-slate-400 hover:text-white px-2 py-1 rounded transition hover:bg-slate-700/50">KS26 QTKD (SSK101)</a>
+        <div class="h-3 w-px bg-slate-700 mx-1"></div>
+        <a href="../../core/agent_5_master_portal.html" class="text-indigo-400 hover:text-indigo-300 font-medium px-2 py-1 flex items-center gap-1 transition" title="Quay về Master Executive Portal">
+            <i class="fa-solid fa-house-laptop"></i> Master Portal
+        </a>
+        <a href="../../management/director_cockpit.html" class="text-amber-400 hover:text-amber-300 font-medium px-2 py-1 flex items-center gap-1 transition" title="Báo cáo Giám đốc Đào tạo">
+            <i class="fa-solid fa-gauge-high"></i> Cockpit
+        </a>
+    </div>
+    
+                <button onclick="window.print()" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-3.5 py-1.5 rounded-lg shadow-md transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-print"></i> In Báo Cáo
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="border-b border-slate-800 bg-slate-950/80 sticky top-16 z-40 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex space-x-2 py-2.5 overflow-x-auto custom-scrollbar" id="nav-tabs">
+                <button onclick="switchTab('tab-macro')" class="tab-btn active px-3.5 py-1.5 rounded-lg text-slate-300 border border-transparent transition flex items-center gap-2">
+                    <i class="fa-solid fa-filter"></i> I. Bức Tranh Điều Kiện Thi
+                </button>
+                <button onclick="switchTab('tab-classes')" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-300 border border-transparent transition flex items-center gap-2">
+                    <i class="fa-solid fa-chalkboard-user"></i> II. Ma Trận Các Lớp & Giảng Viên
+                </button>
+                <button onclick="switchTab('tab-guarantee')" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-300 border border-transparent transition flex items-center gap-2 text-rose-300">
+                    <i class="fa-solid fa-signature"></i> III. Danh Sách Bảo Lãnh Khối CNTT
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <section id="tab-macro" class="tab-content space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="metric-card rounded-xl p-4 flex flex-col justify-between">
+                    <div class="flex items-center justify-between text-slate-400 text-xs font-semibold">
+                        <span>TỔNG SĨ SỐ KHỐI CNTT</span>
+                        <i class="fa-solid fa-users text-indigo-400"></i>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-3xl font-extrabold text-white font-mono">241 <span class="text-xs text-slate-400 font-normal">SV</span></div>
+                        <p class="text-xs text-slate-400 mt-1">6 lớp học phần chính thức</p>
+                    </div>
+                </div>
+
+                <div class="metric-card rounded-xl p-4 flex flex-col justify-between">
+                    <div class="flex items-center justify-between text-slate-400 text-xs font-semibold">
+                        <span>ĐỦ ĐIỀU KIỆN DỰ THI</span>
+                        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-3xl font-extrabold text-emerald-400 font-mono">155 <span class="text-xs text-slate-400 font-normal">SV</span></div>
+                        <p class="text-xs text-emerald-300 mt-1 font-medium">64.3% đạt điều kiện thi</p>
+                    </div>
+                </div>
+
+                <div class="metric-card rounded-xl p-4 flex flex-col justify-between border-rose-900/50 bg-rose-950/20">
+                    <div class="flex items-center justify-between text-rose-300 text-xs font-semibold">
+                        <span>KHÔNG ĐỦ ĐIỀU KIỆN THI</span>
+                        <i class="fa-solid fa-ban text-rose-400"></i>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-3xl font-extrabold text-rose-400 font-mono">56 <span class="text-xs text-slate-400 font-normal">SV (23.2%)</span></div>
+                        <p class="text-xs text-rose-300 mt-1 font-medium">Cần làm thủ tục bảo lãnh gấp</p>
+                    </div>
+                </div>
+
+                <div class="metric-card rounded-xl p-4 flex flex-col justify-between border-amber-900/50 bg-amber-950/20">
+                    <div class="flex items-center justify-between text-amber-300 text-xs font-semibold">
+                        <span>TỶ LỆ BẢO LÃNH HIỆN TẠI</span>
+                        <i class="fa-solid fa-stamp text-amber-400"></i>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-3xl font-extrabold text-amber-400 font-mono">0% <span class="text-xs text-slate-400 font-normal">(0/56 SV)</span></div>
+                        <p class="text-xs text-amber-300 mt-1 font-medium">Chưa có SV nào được ký duyệt trên LMS</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHARTS -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="glass-card rounded-xl p-5">
+                    <h3 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-indigo-400"></i>
+                        Cơ Cấu Đủ / Không Đủ Điều Kiện Thi
+                    </h3>
+                    <div class="h-64 flex items-center justify-center">
+                        <canvas id="cohortDoughnutChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl p-5">
+                    <h3 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-column text-indigo-400"></i>
+                        Tỷ Lệ Không Đủ Điều Kiện Thi Theo Lớp (%)
+                    </h3>
+                    <div class="h-64">
+                        <canvas id="cohortBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-classes" class="tab-content space-y-6 hidden">
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-chalkboard-user text-indigo-400"></i>
+                    Ma Trận Các Lớp Học Khối CNTT
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-800 text-[11px] uppercase tracking-wider text-slate-400 bg-slate-900/50">
+                                <th class="p-3">Lớp Học</th>
+                                <th class="p-3">Giảng Viên</th>
+                                <th class="p-3 text-center">Sĩ Số</th>
+                                <th class="p-3 text-center">Đủ ĐK Thi</th>
+                                <th class="p-3 text-center">Không Đủ ĐK</th>
+                                <th class="p-3 text-center">Tỷ Lệ Cấm Thi (%)</th>
+                                <th class="p-3">Điểm Nghẽn & Đánh Giá</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cohortClassesBody" class="divide-y divide-slate-800/60 text-xs font-mono">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-guarantee" class="tab-content space-y-6 hidden">
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-table-list text-indigo-400"></i>
+                    Danh Sách Sinh Viên Cần Bảo Lãnh Khối CNTT
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-800 text-[11px] uppercase tracking-wider text-slate-400 bg-slate-900/50">
+                                <th class="p-3">#</th>
+                                <th class="p-3">Lớp</th>
+                                <th class="p-3">Họ và Tên</th>
+                                <th class="p-3 text-center">CC (%)</th>
+                                <th class="p-3 text-center">BTVN (%)</th>
+                                <th class="p-3 text-center">EL (%)</th>
+                                <th class="p-3 text-center">R-Point</th>
+                                <th class="p-3">Lý Do Vi Phạm</th>
+                                <th class="p-3 text-center">Phương Án Bảo Lãnh</th>
+                                <th class="p-3">Hành Động Khuyến Nghị</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cohortStudentsBody" class="divide-y divide-slate-800/60 text-xs">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const rawClasses = [{"name": "HN-KS26-CNTT1", "size": 43, "eligible": 27, "not_eligible": 16, "unknown": 0, "gv": "Trần Minh Cường", "dept": "Khối CNTT", "p_fail": 37.2, "status": "RED", "issue": "BTVN nộp rất thấp (0-25%), Elearning chỉ 25-75%"}, {"name": "HN-K26-CNTT2", "size": 43, "eligible": 40, "not_eligible": 3, "unknown": 0, "gv": "Hồ Xuân Hùng", "dept": "Khối CNTT", "p_fail": 7.0, "status": "GREEN", "issue": "Lớp xuất sắc số 1 khóa KS26, kỷ luật nề nếp vượt trội"}, {"name": "HN-K26-CNTT3", "size": 41, "eligible": 24, "not_eligible": 9, "unknown": 8, "gv": "Nguyễn Duy Quang", "dept": "Khối CNTT", "p_fail": 22.0, "status": "RED", "issue": "Có 8 SV lỗi dữ liệu LMS chưa định danh + 9 SV nợ bài"}, {"name": "HN-K26-CNTT4", "size": 22, "eligible": 0, "not_eligible": 0, "unknown": 0, "gv": "Lương Quốc Tuấn", "dept": "Khối CNTT", "p_fail": 0.0, "status": "GRAY", "issue": "Lớp mới khởi tạo, chuẩn bị vào môn SSK101"}, {"name": "HCM-KS26-CNTT1", "size": 47, "eligible": 26, "not_eligible": 21, "unknown": 0, "gv": "Nguyễn Bá Minh Đạo", "dept": "Khối CNTT", "p_fail": 44.7, "status": "CRITICAL", "issue": "🚨 Báo động Đỏ: Gần 1/2 lớp (21 SV) cấm thi vì BTVN 0% & vắng nặng"}, {"name": "HCM-KS26-CNTT2", "size": 45, "eligible": 38, "not_eligible": 7, "unknown": 0, "gv": "Nguyễn Bá Minh Đạo", "dept": "Khối CNTT", "p_fail": 15.6, "status": "YELLOW", "issue": "Khá hơn lớp 1, 7 SV nợ BTVN hoàn toàn (0%)"}];
+        const rawStudents = [{"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Mai Ngọc Đức Hải", "cc": 100, "bt": 0, "el": 50, "rp": 50, "reason": "Nợ 100% BTVN, Elearning chỉ 50%", "can_guarantee": true, "action": "Cho nộp bù BTVN trước giờ thi, duyệt bảo lãnh"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Đặng Quang Anh", "cc": 100, "bt": 0, "el": 50, "rp": 50, "reason": "Nợ 100% BTVN, Elearning chỉ 50%", "can_guarantee": true, "action": "Cho nộp bù BTVN, làm cam kết bảo lãnh"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Trần Bình An", "cc": 40, "bt": 25, "el": 50, "rp": 70, "reason": "Vắng 60% chuyên cần, nợ 75% BTVN", "can_guarantee": false, "action": "Học lại thực chất, không đủ cơ sở bảo lãnh"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Phạm Gia Bảo 3", "cc": 80, "bt": 0, "el": 50, "rp": 50, "reason": "Nợ 100% BTVN, vắng 1 buổi", "can_guarantee": true, "action": "Làm bài tập bổ sung, GV ký bảo lãnh"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Phạm Quốc Đạt", "cc": 100, "bt": 25, "el": 75, "rp": 75, "reason": "Thiếu bài tập về nhà (chỉ đạt 25%)", "can_guarantee": true, "action": "Bảo lãnh ngay, SV chuyên cần 100%"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Nguyễn Tiến Duy 2", "cc": 60, "bt": 0, "el": 50, "rp": 70, "reason": "Vắng 40% buổi học, không làm BTVN", "can_guarantee": false, "action": "Xem xét học lại hoặc kèm bù giờ công"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Đỗ Phạm Gia Hiếu", "cc": 40, "bt": 0, "el": 0, "rp": 40, "reason": "Bỏ học: CC 40%, BT 0%, EL 0%", "can_guarantee": false, "action": "Cấm thi chính thức, đưa vào danh sách bảo lưu"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Trần Mạnh Hoa", "cc": 100, "bt": 25, "el": 50, "rp": 70, "reason": "Nợ 75% BTVN, Elearning 50%", "can_guarantee": true, "action": "Bảo lãnh có điều kiện nộp đủ bài tập"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Diêm Quang Huy", "cc": 80, "bt": 0, "el": 25, "rp": 40, "reason": "Nợ BTVN 100%, EL chỉ 25%", "can_guarantee": false, "action": "Cần hoàn thành 3 bài tập gấp trước khi xét"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Đường Gia Huy", "cc": 100, "bt": 0, "el": 50, "rp": 50, "reason": "Nợ 100% BTVN, CC đạt 100%", "can_guarantee": true, "action": "Bảo lãnh ngay, hướng dẫn nộp bài LMS"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Nguyễn Vương Anh Minh", "cc": 100, "bt": 25, "el": 75, "rp": 75, "reason": "CC 100%, RP 75 cận ngưỡng", "can_guarantee": true, "action": "Ưu tiên duyệt bảo lãnh số 1"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Lê Minh Thảo", "cc": 100, "bt": 25, "el": 75, "rp": 75, "reason": "CC 100%, RP 75 cận ngưỡng", "can_guarantee": true, "action": "Ưu tiên duyệt bảo lãnh số 1"}, {"class": "HN-KS26-CNTT1", "dept": "CNTT", "name": "Trần Đức Thiện 2", "cc": 100, "bt": 25, "el": 75, "rp": 75, "reason": "CC 100%, RP 75 cận ngưỡng", "can_guarantee": true, "action": "Ưu tiên duyệt bảo lãnh số 1"}, {"class": "HN-K26-CNTT2", "dept": "CNTT", "name": "Trần Minh Tiến 2", "cc": 60, "bt": 0, "el": 100, "rp": 80, "reason": "Vắng CC 40%, không nộp BT", "can_guarantee": true, "action": "GV Hồ Xuân Hùng bảo lãnh sau khi test nhanh"}, {"class": "HN-K26-CNTT2", "dept": "CNTT", "name": "Nguyễn Văn Đạt 4", "cc": 80, "bt": 25, "el": 75, "rp": 75, "reason": "Cận ngưỡng 75 RP", "can_guarantee": true, "action": "Bảo lãnh ngay"}, {"class": "HN-K26-CNTT2", "dept": "CNTT", "name": "Lê Hoàng Long 3", "cc": 80, "bt": 0, "el": 100, "rp": 75, "reason": "Thiếu nộp BTVN", "can_guarantee": true, "action": "Bảo lãnh có điều kiện"}, {"class": "HN-K26-CNTT3", "dept": "CNTT", "name": "Phạm Viết Toàn", "cc": 100, "bt": 50, "el": 100, "rp": 60, "reason": "RP 60 điểm (chưa đạt chuẩn 80)", "can_guarantee": true, "action": "Bảo lãnh có điều kiện"}, {"class": "HN-K26-CNTT3", "dept": "CNTT", "name": "Nguyễn Thuận Phát", "cc": 100, "bt": 50, "el": 100, "rp": 60, "reason": "RP 60 điểm", "can_guarantee": true, "action": "Bảo lãnh có điều kiện"}, {"class": "HN-K26-CNTT3", "dept": "CNTT", "name": "Hoàng Xuân Nam", "cc": 100, "bt": 50, "el": 100, "rp": 80, "reason": "Thiếu 1 bài tập", "can_guarantee": true, "action": "Duyệt bảo lãnh ngay"}, {"class": "HN-K26-CNTT3", "dept": "CNTT", "name": "Bùi Quang Huy 2", "cc": 80, "bt": 75, "el": 100, "rp": 60, "reason": "RP 60 điểm", "can_guarantee": true, "action": "Bảo lãnh ngay"}, {"class": "HN-K26-CNTT3", "dept": "CNTT", "name": "Nguyễn Trường Khang", "cc": 60, "bt": 100, "el": 100, "rp": 80, "reason": "Vắng 40% buổi học", "can_guarantee": false, "action": "Học bù chuyên cần"}, {"class": "HCM-KS26-CNTT1", "dept": "CNTT", "name": "Vũ Trung Hiếu 2", "cc": 20, "bt": 0, "el": 0, "rp": 51, "reason": "Vắng 80% buổi, bỏ học phần", "can_guarantee": false, "action": "Cấm thi chính thức"}, {"class": "HCM-KS26-CNTT1", "dept": "CNTT", "name": "Khưu Nhật Tân", "cc": 80, "bt": 25, "el": 50, "rp": 75, "reason": "RP 75 cận chuẩn 80", "can_guarantee": true, "action": "Bảo lãnh ngay"}, {"class": "HCM-KS26-CNTT1", "dept": "CNTT", "name": "Trần Tiến Đạt 3", "cc": 80, "bt": 25, "el": 50, "rp": 78, "reason": "RP 78 cận chuẩn 80", "can_guarantee": true, "action": "Bảo lãnh ngay"}, {"class": "HCM-KS26-CNTT1", "dept": "CNTT", "name": "Bùi Gia Anh", "cc": 20, "bt": 0, "el": 0, "rp": 50, "reason": "Vắng 80% buổi học", "can_guarantee": false, "action": "Cấm thi"}, {"class": "HCM-KS26-CNTT1", "dept": "CNTT", "name": "Trần Văn Gia Khang", "cc": 80, "bt": 0, "el": 50, "rp": 75, "reason": "Nợ 100% BTVN, CC 80%", "can_guarantee": true, "action": "Cho nộp bù BTVN để bảo lãnh"}, {"class": "HCM-KS26-CNTT1", "dept": "CNTT", "name": "Bùi Minh Hoàng 2", "cc": 100, "bt": 25, "el": 0, "rp": 73, "reason": "Chưa làm Elearning", "can_guarantee": true, "action": "Bảo lãnh ngay, hoàn thành EL"}, {"class": "HCM-KS26-CNTT1", "dept": "CNTT", "name": "Dương Công Quốc", "cc": 100, "bt": 0, "el": 50, "rp": 55, "reason": "CC 100%, nợ BTVN", "can_guarantee": true, "action": "Bảo lãnh ngay"}, {"class": "HCM-KS26-CNTT1", "dept": "CNTT", "name": "Trần Hoàng Ân", "cc": 100, "bt": 0, "el": 50, "rp": 76, "reason": "CC 100%, RP 76", "can_guarantee": true, "action": "Bảo lãnh ngay"}, {"class": "HCM-KS26-CNTT2", "dept": "CNTT", "name": "Trần Quốc Khánh 2", "cc": 60, "bt": 0, "el": 0, "rp": 40, "reason": "Vắng 40%, nợ BT", "can_guarantee": false, "action": "Học bù chuyên cần"}, {"class": "HCM-KS26-CNTT2", "dept": "CNTT", "name": "Phan Nguyễn Gia Bảo", "cc": 100, "bt": 25, "el": 75, "rp": 75, "reason": "RP 75 cận chuẩn 80", "can_guarantee": true, "action": "Bảo lãnh ngay"}];
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(tabId).classList.remove('hidden');
+            event.currentTarget.classList.add('active');
+        }
+
+        function renderClasses() {
+            const tbody = document.getElementById('cohortClassesBody');
+            tbody.innerHTML = rawClasses.map(c => `
+                <tr class="hover:bg-slate-800/40 transition">
+                    <td class="p-3 font-bold text-white">${c.name}</td>
+                    <td class="p-3 font-sans">${c.gv}</td>
+                    <td class="p-3 text-center">${c.size}</td>
+                    <td class="p-3 text-center font-bold text-emerald-400">${c.eligible}</td>
+                    <td class="p-3 text-center font-bold ${c.not_eligible > 5 ? 'text-rose-400' : 'text-slate-300'}">${c.not_eligible}</td>
+                    <td class="p-3 text-center font-bold ${c.p_fail > 30 ? 'text-rose-400' : c.p_fail > 15 ? 'text-amber-400' : 'text-emerald-400'}">${c.p_fail}%</td>
+                    <td class="p-3 text-slate-300 text-xs font-sans">${c.issue}</td>
+                </tr>
+            `).join('');
+        }
+
+        function renderStudents() {
+            const tbody = document.getElementById('cohortStudentsBody');
+            tbody.innerHTML = rawStudents.map((s, idx) => `
+                <tr class="hover:bg-slate-800/40 transition">
+                    <td class="p-3 text-slate-500 font-mono">${idx + 1}</td>
+                    <td class="p-3 font-mono font-bold text-slate-300">${s.class}</td>
+                    <td class="p-3 font-semibold text-white">${s.name}</td>
+                    <td class="p-3 text-center font-mono ${s.cc < 80 ? 'text-rose-400 font-bold' : 'text-slate-300'}">${s.cc}%</td>
+                    <td class="p-3 text-center font-mono ${s.bt < 50 ? 'text-rose-400 font-bold' : 'text-slate-300'}">${s.bt}%</td>
+                    <td class="p-3 text-center font-mono ${s.el < 50 ? 'text-amber-400' : 'text-slate-300'}">${s.el}%</td>
+                    <td class="p-3 text-center font-mono font-bold ${s.rp < 60 ? 'text-rose-400' : 'text-amber-400'}">${s.rp}</td>
+                    <td class="p-3 text-slate-300 text-xs">${s.reason}</td>
+                    <td class="p-3 text-center"><span class="px-2 py-0.5 rounded ${s.can_guarantee ? 'bg-emerald-500/20 text-emerald-300' : 'bg-rose-500/20 text-rose-300'} font-bold">${s.can_guarantee ? 'Duyệt bảo lãnh' : 'Cấm thi'}</span></td>
+                    <td class="p-3 text-slate-400 text-xs">${s.action}</td>
+                </tr>
+            `).join('');
+        }
+
+        function initCharts() {
+            const ctxDoughnut = document.getElementById('cohortDoughnutChart').getContext('2d');
+            new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Đủ ĐK Thi (155)', 'Không Đủ ĐK (56)'],
+                    datasets: [{
+                        data: [155, 56],
+                        backgroundColor: ['#10b981', '#f43f5e'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: '#94a3b8' } }
+                    }
+                }
+            });
+
+            const ctxBar = document.getElementById('cohortBarChart').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: rawClasses.map(c => c.name.replace('HN-K26-', '').replace('HCM-KS26-', '')),
+                    datasets: [{
+                        label: 'Tỷ Lệ Không Đủ ĐK Thi (%)',
+                        data: rawClasses.map(c => c.p_fail),
+                        backgroundColor: rawClasses.map(c => c.p_fail > 30 ? '#f43f5e' : c.p_fail > 15 ? '#f59e0b' : '#10b981'),
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } },
+                        x: { grid: { display: false }, ticks: { color: '#94a3b8' } }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderClasses();
+            renderStudents();
+            initCharts();
+        });
+    </script>
+</body>
+</html>
