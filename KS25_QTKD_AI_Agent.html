@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Chuyên Sâu Học Vụ: Môn AI Agent (Khóa KS25 QTKD)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#111622', 900: '#0b0f19', 950: '#06080e' },
+                        indigo: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #06080e; color: #cbd5e1; font-size: 13px; }
+        code, pre, .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0b0f19; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #26324a; border-radius: 3px; }
+        .glass-card { background: rgba(15, 20, 31, 0.85); backdrop-filter: blur(12px); border: 1px solid #1e283d; }
+        .glass-card:hover { border-color: #334155; }
+        .metric-card { background: linear-gradient(180deg, rgba(22, 28, 45, 0.75) 0%, rgba(15, 20, 31, 0.9) 100%); border: 1px solid #1e293b; }
+    </style>
+</head>
+<body class="custom-scrollbar min-h-screen">
+
+    <!-- Top Navigation Header -->
+    <header class="border-b border-slate-800 bg-slate-900/80 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <a href="00_Cong_Hoc_Vu_Ba_Khoa_KS24_25_26.html" class="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition" title="Về Cổng Báo Cáo Học Vụ">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-indigo-500/20 text-indigo-300 border border-indigo-500/40">KS25 QTKD</span>
+                        <h1 class="text-sm lg:text-base font-bold text-white tracking-wide">Báo Cáo Chuyên Sâu: Môn Ứng Dụng AI Agent Trong Kinh Doanh</h1>
+                    </div>
+                    <p class="text-[11px] text-slate-400">Thời điểm cập nhật: <span class="text-indigo-400 font-semibold font-mono">10/11/2026</span> • Dữ liệu LMS & PMO Hub</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Kỷ luật học vụ xuất sắc
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 lg:px-8 py-6 space-y-6">
+
+        <!-- Executive Summary Banner -->
+        <div class="glass-card rounded-2xl p-6 border-indigo-500/30 bg-gradient-to-r from-indigo-950/40 via-slate-900/60 to-slate-900/40">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2 text-indigo-400 font-bold text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-sparkles"></i> Đột phá học vụ môn công nghệ ứng dụng
+                    </div>
+                    <h2 class="text-xl lg:text-2xl font-black text-white">Chỉ Số Kỷ Luật Vượt Bậc Của Khối QTKD Với Môn AI Agent</h2>
+                    <p class="text-slate-300 text-xs lg:text-sm max-w-3xl leading-relaxed">
+                        Sau giai đoạn sáp nhập lớp ở môn Quản trị học MAN107 (vi phạm chuyên cần từng vượt 46%), khi bước vào môn <strong>Ứng dụng AI Agent trong Kinh Doanh</strong>, tỷ lệ vi phạm chuyên cần và bài tập đã giảm kỷ lục. Cả 2 lớp duy trì tỷ lệ nộp bài tập đạt từ <strong>97.8% &ndash; 100%</strong>, vi phạm E-learning chỉ từ <strong>4.35% &ndash; 5.0%</strong>.
+                    </p>
+                </div>
+                <div class="flex gap-4 shrink-0">
+                    <div class="text-center p-3 rounded-xl bg-slate-900/80 border border-slate-800 min-w-[100px]">
+                        <span class="text-[11px] text-slate-400 uppercase font-semibold">Tổng sĩ số</span>
+                        <div class="text-2xl font-black text-white font-mono mt-1">86</div>
+                        <span class="text-[10px] text-slate-500">2 lớp chính quy</span>
+                    </div>
+                    <div class="text-center p-3 rounded-xl bg-emerald-950/40 border border-emerald-800/40 min-w-[100px]">
+                        <span class="text-[11px] text-emerald-400 uppercase font-semibold">Tỷ lệ nộp BT</span>
+                        <div class="text-2xl font-black text-emerald-400 font-mono mt-1">98.9%</div>
+                        <span class="text-[10px] text-emerald-500/80">Kỷ luật hàng đầu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Cột Chỉ Số So Sánh 2 Lớp -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Card Lớp HN-K25-QTKD1 -->
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 space-y-4">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-3 h-3 rounded-full bg-indigo-500"></span>
+                        <div>
+                            <h3 class="text-base font-bold text-white">HN-K25-QTKD1</h3>
+                            <p class="text-[11px] text-slate-400">Sĩ số: <strong class="text-white">46 sinh viên</strong> (lớp tiếp nhận sáp nhập)</p>
+                        </div>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30">
+                        Chuyên cần chớm 10%
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800 text-center">
+                        <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold block">Vi phạm CC</span>
+                        <span class="text-xl font-black text-amber-300 font-mono mt-1 block">10.87%</span>
+                        <span class="text-[10px] text-slate-500">5/46 SV vắng</span>
+                    </div>
+                    <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800 text-center">
+                        <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold block">Nợ BTVN</span>
+                        <span class="text-xl font-black text-emerald-400 font-mono mt-1 block">2.17%</span>
+                        <span class="text-[10px] text-slate-500">1/46 SV nợ</span>
+                    </div>
+                    <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800 text-center">
+                        <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold block">Lỗi E-learning</span>
+                        <span class="text-xl font-black text-emerald-400 font-mono mt-1 block">4.35%</span>
+                        <span class="text-[10px] text-slate-500">2/46 SV lỗi</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/50 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300 space-y-1.5 leading-relaxed">
+                    <p><strong class="text-white">Đánh giá:</strong> Lớp đã ổn định tổ chức vượt bậc so với thời điểm MAN107 (56.52% vắng). Kỷ luật nộp bài tập môn AI Agent cực kỳ nghiêm túc (chỉ 1 SV nợ). Cần nhắc nhở 5 SV vắng duy trì sự hiện diện để không vượt ngưỡng 20% cấm thi.</p>
+                </div>
+            </div>
+
+            <!-- Card Lớp HN-K25-QTKD2 -->
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 space-y-4">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                        <div>
+                            <h3 class="text-base font-bold text-white">HN-K25-QTKD2</h3>
+                            <p class="text-[11px] text-slate-400">Sĩ số: <strong class="text-white">40 sinh viên</strong></p>
+                        </div>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+                        Toàn diện an toàn
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800 text-center">
+                        <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold block">Vi phạm CC</span>
+                        <span class="text-xl font-black text-emerald-400 font-mono mt-1 block">7.50%</span>
+                        <span class="text-[10px] text-slate-500">3/40 SV vắng</span>
+                    </div>
+                    <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800 text-center">
+                        <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold block">Nợ BTVN</span>
+                        <span class="text-xl font-black text-emerald-400 font-mono mt-1 block">0.00%</span>
+                        <span class="text-[10px] text-emerald-500 font-semibold">100% nộp đủ</span>
+                    </div>
+                    <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800 text-center">
+                        <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold block">Lỗi E-learning</span>
+                        <span class="text-xl font-black text-emerald-400 font-mono mt-1 block">5.00%</span>
+                        <span class="text-[10px] text-slate-500">2/40 SV lỗi</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/50 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300 space-y-1.5 leading-relaxed">
+                    <p><strong class="text-white">Đánh giá:</strong> Lớp mẫu mực về kỷ luật học tập. 100% sinh viên hoàn thành bài tập thực hành ứng dụng AI Agent đúng hạn. Tỷ lệ chuyên cần vắng chỉ 7.5% (nằm sâu trong ngưỡng an toàn dưới 10%).</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bảng Thống Kê Tổng Hợp Đối Soát -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <h3 class="text-sm lg:text-base font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-table-list text-indigo-400"></i> Bảng Đối Soát Chi Tiết Khối KS25 QTKD (Môn AI Agent)
+                </h3>
+                <span class="text-xs text-slate-400 font-mono">Snapshot: 10/11/2026</span>
+            </div>
+
+            <div class="overflow-x-auto rounded-xl border border-slate-800">
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead>
+                        <tr class="bg-slate-900/90 text-slate-400 border-b border-slate-800 font-semibold uppercase tracking-wider">
+                            <th class="py-3 px-4">Mã Lớp</th>
+                            <th class="py-3 px-4 text-center">Sĩ Số</th>
+                            <th class="py-3 px-4 text-center">Vi Phạm Chuyên Cần (%)</th>
+                            <th class="py-3 px-4 text-center">Nợ BTVN (%)</th>
+                            <th class="py-3 px-4 text-center">Vi Phạm Elearning (%)</th>
+                            <th class="py-3 px-4 text-center">Trạng Thái Kỷ Luật</th>
+                            <th class="py-3 px-4 text-center">Đề Xuất Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/60 font-mono">
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="py-3.5 px-4 font-bold text-white font-sans flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-amber-400"></span> HN-K25-QTKD1
+                            </td>
+                            <td class="py-3.5 px-4 text-center text-slate-300">46</td>
+                            <td class="py-3.5 px-4 text-center font-bold text-amber-300">10.87%</td>
+                            <td class="py-3.5 px-4 text-center font-semibold text-emerald-400">2.17%</td>
+                            <td class="py-3.5 px-4 text-center font-semibold text-emerald-400">4.35%</td>
+                            <td class="py-3.5 px-4 text-center font-sans">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-500/10 text-amber-300 border border-amber-500/30">Cảnh báo nhẹ CC</span>
+                            </td>
+                            <td class="py-3.5 px-4 text-center font-sans text-slate-300 text-[11px]">
+                                Đôn đốc 5 SV vắng không bỏ buổi tiếp theo
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="py-3.5 px-4 font-bold text-white font-sans flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> HN-K25-QTKD2
+                            </td>
+                            <td class="py-3.5 px-4 text-center text-slate-300">40</td>
+                            <td class="py-3.5 px-4 text-center font-bold text-emerald-400">7.50%</td>
+                            <td class="py-3.5 px-4 text-center font-semibold text-emerald-400">0.00%</td>
+                            <td class="py-3.5 px-4 text-center font-semibold text-emerald-400">5.00%</td>
+                            <td class="py-3.5 px-4 text-center font-sans">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">Xuất sắc</span>
+                            </td>
+                            <td class="py-3.5 px-4 text-center font-sans text-slate-300 text-[11px]">
+                                Biểu dương lớp nộp 100% bài tập thực hành
+                            </td>
+                        </tr>
+                        <tr class="bg-indigo-950/30 font-bold border-t border-slate-700">
+                            <td class="py-3 px-4 text-white font-sans">Toàn Khối QTKD (TB)</td>
+                            <td class="py-3 px-4 text-center text-white">86</td>
+                            <td class="py-3 px-4 text-center text-indigo-300">9.30%</td>
+                            <td class="py-3 px-4 text-center text-emerald-400">1.16%</td>
+                            <td class="py-3 px-4 text-center text-emerald-400">4.65%</td>
+                            <td class="py-3 px-4 text-center font-sans">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40">An toàn cao</span>
+                            </td>
+                            <td class="py-3 px-4 text-center font-sans text-indigo-200 text-[11px]">
+                                Duy trì đà thực hành ứng dụng công nghệ
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Đánh giá nguyên nhân & Nhận định sư phạm -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 space-y-2">
+                <div class="text-emerald-400 font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check"></i> Sức hút từ nội dung thực chiến
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Môn AI Agent mang tính ứng dụng trực tiếp vào tự động hóa công việc kinh doanh (tạo content, phân tích thị trường, chatbot hỗ trợ khách hàng) giúp sinh viên QTKD hào hứng thực hành, tỷ lệ nộp bài tập đạt mốc kỷ lục gần như tuyệt đối (0% - 2.17% nợ).
+                </p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 space-y-2">
+                <div class="text-indigo-400 font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-users-gear"></i> Ổn định sau sáp nhập
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Tình trạng phân tâm và thiếu liên kết sau đợt sáp nhập lớp QTKD3 sang QTKD1 & QTKD2 đã được khắc phục. Sinh viên các nhóm đã hòa nhập và cùng làm bài tập nhóm trên các công cụ AI.
+                </p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 space-y-2">
+                <div class="text-amber-400 font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-bullhorn"></i> Trọng tâm kiểm soát sắp tới
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Khối QTKD cần duy trì điểm danh chặt chẽ các buổi seminar demo sản phẩm Agent, tránh để sinh viên vắng tích lũy dồn vào các buổi cuối kỳ gây nguy cơ cấm thi không đáng có.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+        Phòng Đào Tạo & Quản Lý Chất Lượng &bull; Hệ Thống Báo Cáo Tự Động PMO Data Hub &bull; 2026
+    </footer>
+
+</body>
+</html>
