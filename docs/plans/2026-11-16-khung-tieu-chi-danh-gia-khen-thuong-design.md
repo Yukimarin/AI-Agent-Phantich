@@ -1,118 +1,119 @@
 # Thiết Kế Hệ Thống Khung Tiêu Chí Đánh Giá & Khen Thưởng Nội Bộ
-*Áp dụng cho: Khối Đào tạo (GV/TG), Phòng Thiết kế giải pháp LMS và Phòng Quản lý Đào tạo (PTIT x Rikkei)*
+*Áp dụng cho: Khối Đào tạo (GV/TG), Phòng Thiết kế giải pháp LMS và Ban QLĐT (PTIT x Rikkei)*
 *Dịp áp dụng: Lễ 20/11 và các kỳ vinh danh định kỳ (Quý / Năm học)*
+*Cập nhật: Bám sát chuẩn 100% 2 sheet đầu tiên do Trưởng ban QLĐT trực tiếp định hình.*
 
 ---
 
-## 1. Bối cảnh & Mục tiêu Thiết kế
-Nhân dịp Lễ Kỷ niệm Ngày Nhà giáo Việt Nam 20/11 và chuẩn hóa quy trình thi đua khen thưởng lâu dài, Học viện cần một **Bộ Khung Tiêu chí Đánh giá & Khen thưởng (Academic & Operations Recognition Framework)**:
-1. **Minh bạch & Định lượng**: Triệt tiêu cảm tính, cào bằng hoặc "bình bầu dĩ hòa vi quý".
-2. **Có minh chứng số liệu cứng (Telemetry)**: 70% điểm số quét tự động từ LMS API và Worklane Forensic Audit.
-3. **Bao quát giá trị con người**: 30% điểm số đo lường cái tâm của người thầy, trải nghiệm người dùng thực tế và tinh thần cống hiến hỗ trợ sinh viên yếu qua Rubric chuẩn hóa.
-4. **Tương thích hoàn toàn với Lark Base**: Cấu trúc dữ liệu dạng bảng phẳng dễ dàng import và vận hành form đánh giá.
+## 1. Bối cảnh & Nguyên Tắc Cốt Lõi: Tỷ Trọng 75% / 25%
 
----
-
-## 2. Mô hình Tổng quan: Tỷ trọng 70 / 30
+Toàn bộ hệ thống đánh giá được vận hành theo cơ cấu **75% Chỉ số cốt lõi từ hệ thống + 25% Khảo sát & Đổi mới thích ứng**:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │                        TỔNG ĐIỂM: 100 ĐIỂM                             │
 ├──────────────────────────────────────┬─────────────────────────────────┤
-│    70% ĐỊNH LƯỢNG HỆ THỐNG           │    30% ĐÁNH GIÁ PHẢN HỒI        │
-│    (Telemetry & Forensic Data)       │    (Feedback & Management Rubric│
+│            TỶ TRỌNG 75%              │          TỶ TRỌNG 25%           │
+│    (Chỉ số Hệ thống & Quy trình)     │    (Khảo sát & Đổi mới cải tiến)│
 ├──────────────────────────────────────┼─────────────────────────────────┤
-│ • 35% Hiệu quả chuyên môn cốt lõi    │ • 15% Khảo sát Người dùng/SV    │
-│   (Chuyên cần, BTVN, Uptime, TKB)    │   (Student/Internal User CSAT)  │
-│ • 35% Kỷ luật vận hành & SLA         │ • 15% Tinh thần Cống hiến       │
-│   (Chấm bài, Báo cáo, Khắc phục lỗi) │   (Phụ đạo SV yếu, Đổi mới AI)  │
+│ • 40% - 50% Chỉ số chuyên môn nghiệp │ • 10% Khảo sát định kỳ          │
+│   vụ cốt lõi (LMS AI, Worklane)      │   (Sinh viên / Phụ huynh / GV)  │
+│ • 25% - 35% Tuân thủ quy trình, quy  │ • 15% Cải tiến tối ưu & Sẵn sàng│
+│   định đào tạo, ổn định hệ thống     │   nhận mọi nhiệm vụ được giao   │
 └──────────────────────────────────────┴─────────────────────────────────┘
 ```
 
 ---
 
-## 3. Khung Tiêu chí Chi tiết theo từng Khối
+## 2. Khung Tiêu Chí Chi Tiết theo từng Khối
 
-### 3.1. Khối Đào tạo (Giảng viên & Trợ giảng) — Trọng tâm 20/11
-* **Nhóm 1: Hiệu quả Đào tạo (35 điểm - LMS Telemetry)**:
-  * `DT-01` (10đ): Tỷ lệ chuyên cần sinh viên lớp phụ trách ($\ge 92\%$).
-  * `DT-02` (10đ): Tỷ lệ nộp và hoàn thành BTVN ($\ge 85\%$).
-  * `DT-03` (5đ): Tỷ lệ hoàn thành eLearning đúng hạn ($\ge 90\%$).
-  * `DT-04` (10đ): Tỷ lệ sinh viên đủ điều kiện dự thi ($\ge 90\%$).
-* **Nhóm 2: Kỷ luật Vận hành (35 điểm - Worklane & LMS Audit)**:
-  * `DT-05` (10đ): Kỷ luật lên lớp đúng giờ 100%, zero bỏ tiết/đổi lịch tùy tiện.
-  * `DT-06` (10đ): Tốc độ và chất lượng chấm bài / feedback cho SV (SLA $\le 48$h).
-  * `DT-07` (10đ): Tính chuẩn xác báo cáo công việc (Zero vi phạm log khống Worklane).
-  * `DT-08` (5đ): Cập nhật nề nếp, nộp daily report đúng hạn trước 21h00.
-* **Nhóm 3: Khảo sát Sinh viên (15 điểm - Student CSAT)**:
-  * `DT-09` (10đ): Điểm hài lòng của sinh viên cuối môn qua form ẩn danh ($\ge 4.5/5.0$).
-  * `DT-10` (5đ): Tính tương tác, truyền cảm hứng và không khí học tập tích cực.
-* **Nhóm 4: Cống hiến & Cải tiến (15 điểm - Academic Rubric)**:
-  * `DT-11` (5đ): Chủ động phụ đạo, kèm cặp ngoài giờ kéo điểm cho SV yếu (có log).
-  * `DT-12` (5đ): Đóng góp cải tiến học liệu, cập nhật bài lab AI thực chiến.
-  * `DT-13` (5đ): Tinh thần trách nhiệm, sẵn sàng hỗ trợ việc khẩn cấp / sự kiện chung.
+### 2.1. Khối Đào tạo (Giảng viên & Trợ giảng) — *13 Tiêu chí (100%)*
+*(Giữ nguyên vẹn 100% theo Sheet `Khối đào tạo`)*
 
----
-
-### 3.2. Phòng Thiết kế Giải pháp LMS (LMS AI & Tech)
-* **Nhóm 1: Tiến độ & Sản phẩm (35 điểm - Jira / GitHub)**:
-  * `LMS-01` (15đ): Tỷ lệ hoàn thành Sprint / Roadmap đúng hạn ($\ge 85\%$).
-  * `LMS-02` (10đ): Tốc độ xử lý các yêu cầu nghiệp vụ khẩn phục vụ kỳ học/thi cử.
-  * `LMS-03` (10đ): Chất lượng code & tỷ lệ lỗi sau release (Defect Leakage $< 5\%$).
-* **Nhóm 2: Ổn định & Năng lực Vận hành (35 điểm - System SLA)**:
-  * `LMS-04` (15đ): Độ sẵn sàng hệ thống (System Uptime $\ge 99.5\%$, zero lỗi giờ thi).
-  * `LMS-05` (10đ): Thời gian khắc phục sự cố nghiêm trọng (SLA Recovery $< 2$h).
-  * `LMS-06` (10đ): Hiệu quả tự động hóa tối ưu giờ công cho GV/QLĐT (Auto-grading, RPoint).
-* **Nhóm 3: Khách hàng Nội bộ (15 điểm - Internal CSAT)**:
-  * `LMS-07` (10đ): Điểm đánh giá trải nghiệm từ GV, TG và QLĐT ($\ge 4.2/5.0$).
-  * `LMS-08` (5đ): Thái độ và tốc độ hỗ trợ sự cố kỹ thuật cho người dùng.
-* **Nhóm 4: Sáng tạo & Công nghệ (15 điểm - Tech Innovation)**:
-  * `LMS-09` (10đ): Sáng kiến ứng dụng AI & tính năng đột phá đưa vào thực tế.
-  * `LMS-10` (5đ): Chuẩn hóa tài liệu kiến trúc, Wiki hướng dẫn sử dụng.
+* **1. Hiệu quả Đào tạo (50%)**:
+  * `DT-01` (5% | 10đ): Tỷ lệ Chuyên cần sinh viên trung bình *(Nguồn: LMS AI)*.
+  * `DT-02` (5% | 10đ): Tỷ lệ hoàn thành Bài tập về nhà (BTVN) *(Nguồn: LMS AI)*.
+  * `DT-03` (5% | 10đ): Tỷ lệ hoàn thành eLearning đúng hạn *(Nguồn: LMS AI)*.
+  * `DT-04` (15% | 10đ): Tỷ lệ SV Đủ điều kiện dự thi *(Nguồn: LMS AI)*.
+  * `DT-05` (20% | 10đ): Tỷ lệ sinh viên qua môn *(Nguồn: LMS AI sau khảo thí)*.
+* **2. Kỷ luật Vận hành (25%)**:
+  * `DT-06` (10% | 10đ): Nắm vững quy trình đào tạo *(Base khảo thí, LMS AI)*.
+  * `DT-07` (10% | 10đ): Tham gia đầy đủ các sự kiện của phòng và công ty *(Danh sách tham gia)*.
+  * `DT-08` (5% | 5đ): Tuân thủ quy định đào tạo: Nộp báo cáo ngày đầy đủ, tham gia giao ban 100% *(Worklane, Biên bản đào tạo nội bộ)*.
+* **3. Khảo sát Sinh viên (10%)**:
+  * `DT-09` (5% | 5đ): Điểm hài lòng sinh viên (Student CSAT) *(Khảo sát tự động LMS AI)*.
+  * `DT-10` (5% | 5đ): Tính tương tác & Truyền cảm hứng bài học *(LMS AI)*.
+* **4. Cống hiến & Cải tiến (15%)**:
+  * `DT-11` (5% | 5đ): Kèm cặp & Phụ đạo ngoài giờ cho SV yếu *(Log Support & Minh chứng)*.
+  * `DT-12` (5% | 5đ): Đóng góp cải tiến chất lượng giảng dạy *(Hội đồng Chuyên môn phê duyệt)*.
+  * `DT-13` (5% | 5đ): Tinh thần trách nhiệm & Hỗ trợ việc khẩn: Sẵn sàng nhận dạy thay, sự kiện, coi thi *(Trưởng ban QLĐT đánh giá)*.
 
 ---
 
-### 3.3. Phòng Quản lý Đào tạo (QLĐT / CVHT / Khảo thí)
-* **Nhóm 1: Nề nếp & Giữ chân Sinh viên (35 điểm - Operations Metrics)**:
-  * `QL-01` (15đ): Tỷ lệ duy trì sinh viên tiếp tục theo học (Retention Rate $\ge 95\%$).
-  * `QL-02` (10đ): Tỷ lệ phát hiện và can thiệp SV nguy cơ (100% SV dải đỏ có biên bản).
-  * `QL-03` (10đ): Tỷ lệ hỗ trợ trả nợ môn & đơn bảo lãnh hợp lệ cho sinh viên.
-* **Nhóm 2: Chuẩn xác Học vụ (35 điểm - Academic SLA)**:
-  * `QL-04` (10đ): Đúng hạn và chuẩn xác trong xếp TKB, điều phối phòng học (Zero xung đột).
-  * `QL-05` (10đ): Độ chính xác xét duyệt điều kiện thi, chốt danh sách thi đúng hạn 100%.
-  * `QL-06` (10đ): Quản lý dữ liệu điểm, chứng chỉ và đối soát Jaxtina/Lark Base khớp 100%.
-* **Nhóm 3: Khảo sát Khách hàng (15 điểm - Service Mindset)**:
-  * `QL-07` (10đ): Mức độ hài lòng của SV & Phụ huynh với công tác CVHT ($\ge 4.5/5.0$).
-  * `QL-08` (5đ): Tốc độ xử lý thủ tục hành chính, giấy tờ học vụ (SLA $\le 24$h).
-* **Nhóm 4: Phối hợp & Đổi mới (15 điểm - Cross-functional Rubric)**:
-  * `QL-09` (10đ): Hiệu quả điều phối liên phòng ban giữa Đào tạo - Doanh nghiệp (OJT) - Tuyển sinh.
-  * `QL-10` (5đ): Chủ động cải tiến quy trình học vụ, số hóa form mẫu tinh gọn.
+### 2.2. Phòng Thiết kế Giải pháp LMS (LMS AI & Tech) — *9 Tiêu chí (100%)*
+*(Đồng bộ theo Sheet `Tổng quan`)*
+
+* **1. Tiến độ & Chất lượng task (50%)**:
+  * `LMS-01` (25% | 10đ): Đảm bảo về tiến độ các task được giao trong Sprint / Roadmap *(Worklane / Jira)*.
+  * `LMS-02` (15% | 10đ): Đảm bảo chất lượng các task bàn giao, không phát sinh lỗi sau release *(Hệ thống kiểm thử / Log lỗi)*.
+  * `LMS-03` (10% | 10đ): Tốc độ xử lý các yêu cầu phát sinh khẩn cấp từ Ban Lãnh đạo & Khối Đào tạo *(Worklane / Biên bản yêu cầu)*.
+* **2. Hệ thống Ổn định & An toàn (25%)**:
+  * `LMS-04` (15% | 10đ): Đảm bảo hệ thống hoạt động ổn định, không gặp lỗi hay bị tấn công, Uptime $\ge 99.5\%$ *(Server Monitoring Log)*.
+  * `LMS-05` (10% | 10đ): Tốc độ xử lý và khắc phục khi hệ thống gặp lỗi (SLA $< 1-2$h) *(Báo cáo sự cố kỹ thuật)*.
+* **3. Khảo sát Người dùng (10%)**:
+  * `LMS-06` (5% | 5đ): Khảo sát định kỳ từ sinh viên về trải nghiệm hệ thống LMS AI *(Khảo sát định kỳ của sinh viên)*.
+  * `LMS-07` (5% | 5đ): Khảo sát định kỳ của các GV/TG về tính năng quản lý lớp học *(Khảo sát định kỳ của các GV/TG)*.
+* **4. Cải tiến & Tối ưu hóa (15%)**:
+  * `LMS-08` (10% | 10đ): Tối ưu hóa các quy trình để tăng hiệu suất cho các thầy/cô GV: Auto-grading, RPoint, Telemetry *(LMS AI)*.
+  * `LMS-09` (5% | 5đ): Nghiên cứu và ứng dụng giải pháp công nghệ AI mới vào hệ thống *(Hội đồng Chuyên môn / BLĐ)*.
 
 ---
 
-## 4. Cơ cấu Danh hiệu & Khen thưởng Dự kiến
+### 2.3. Ban QLĐT (QLĐT, CVHT, Khảo thí) — *10 Tiêu chí (100%)*
+*(Đồng bộ theo Sheet `Tổng quan`)*
 
-| Khối | Tên danh hiệu chính thức | Đối tượng áp dụng | Điều kiện tối thiểu | Số lượng | Mức thưởng gợi ý |
-| :--- | :--- | :--- | :--- | :---: | :---: |
-| **Đào tạo** | 🏆 **Nhà giáo Cống hiến Vàng 20/11** | Giảng viên | Tổng điểm $\ge 90$đ, CSAT $\ge 4.8$, CC $\ge 92\%$ | 02 | 3,000,000 VNĐ |
-| **Đào tạo** | 🥈 **Giảng viên Truyền cảm hứng** | Giảng viên | Điểm CSAT SV cao nhất, phương pháp dạy mới | 02 | 2,000,000 VNĐ |
-| **Đào tạo** | 🌟 **Trợ giảng Thắp lửa** | Trợ giảng | BTVN $\ge 85\%$, kèm cặp SV yếu xuất sắc | 02 | 1,500,000 VNĐ |
-| **LMS Tech** | 🚀 **Kỹ sư Giải pháp Tiên phong** | Kỹ sư LMS | Sáng kiến AI/Automation đột phá | 01 | 2,500,000 VNĐ |
-| **LMS Tech** | 🛡️ **Chiến binh Vận hành Ổn định** | System/DevOps | Uptime $\ge 99.8\%$, zero sự cố thi cử | 01 | 1,500,000 VNĐ |
-| **QLĐT** | 💼 **Ngôi sao Vận hành Học vụ** | QLĐT / Khảo thí | SLA xử lý 100%, đối soát chuẩn xác tuyệt đối | 01 | 2,000,000 VNĐ |
-| **QLĐT** | 🤝 **Cố vấn Học tập Tận tâm** | CVHT | Giữ chân SV $\ge 96\%$, can thiệp 100% SV đỏ | 02 | 1,500,000 VNĐ |
-| **Toàn Viện**| 👑 **GƯƠNG MẶT XUẤT SẮC TOÀN VIỆN** | Toàn thể CBNV | Điểm cao nhất hệ thống, không vi phạm | 01 | 5,000,000 VNĐ |
+* **1. Giữ chân SV & Cảnh báo sớm (40%)**:
+  * `QL-01` (15% | 10đ): Tăng tỷ lệ giữ chân sinh viên, giảm tỷ lệ bảo lưu, thôi học, bỏ học *(LMS AI & Báo cáo học vụ)*.
+  * `QL-02` (15% | 10đ): Đưa ra hệ thống cảnh báo nguy cơ cho từng lớp, từng sinh viên (can thiệp 100% SV dải đỏ) *(LMS AI & Biên bản tư vấn)*.
+  * `QL-03` (10% | 10đ): Hỗ trợ sinh viên nợ môn và giải quyết các trường hợp bảo lãnh học tập *(LMS AI & Danh sách mở lớp học lại)*.
+* **2. Chuẩn xác Khảo thí & Thời khóa biểu (35%)**:
+  * `QL-04` (15% | 10đ): Tối ưu hệ thống khảo thí và chuẩn xác quy trình xét duyệt thi, đối soát điểm 100% *(Base khảo thí & LMS AI)*.
+  * `QL-05` (10% | 10đ): Chuẩn xác và tối ưu về thời khóa biểu giảng dạy, zero trùng lịch *(Thời khóa biểu thực tế)*.
+  * `QL-06` (10% | 10đ): Chuẩn hóa lại toàn bộ quy trình đào tạo và kỷ luật báo cáo giao ban tuần *(Worklane & Biên bản đào tạo)*.
+* **3. Khảo sát Hài lòng (10%)**:
+  * `QL-07` (5% | 5đ): Mức độ hài lòng từ sinh viên đối với sự hỗ trợ của Ban QLĐT / CVHT *(Khảo sát định kỳ từ sinh viên)*.
+  * `QL-08` (5% | 5đ): Mức độ hài lòng từ phụ huynh và giải quyết thủ tục hành chính học vụ *(Nhật ký liên hệ phụ huynh & Sổ tiếp nhận)*.
+* **4. Phối hợp Liên phòng ban (15%)**:
+  * `QL-09` (10% | 10đ): Phối hợp liên phòng ban đảm bảo tiến độ và chất lượng giữa Đào tạo - Tuyển sinh - OJT Doanh nghiệp - Kế toán *(Biên bản đào tạo nội bộ)*.
+  * `QL-10` (5% | 5đ): Thích ứng và sẵn sàng trong mọi nhiệm vụ được giao từ phía đào tạo *(Trưởng ban QLĐT đánh giá)*.
 
 ---
 
-## 5. Cấu trúc Tệp Excel và Khả năng Tương thích Lark Base
-File Excel xuất ra tại:
-`output/02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/Bo_Tieu_Chi_Danh_Gia_Khen_Thuong_Khoi_Dao_Tao_LMS_QLDT_20261116.xlsx`
+## 3. Cơ Cấu Danh Hiệu Vinh Danh Khớp Chuẩn Sheet Tổng Quan
 
-Gồm 6 Sheet tiêu chuẩn:
-1. `00_Tong_Quan_Khung_Danh_Gia`: Khung tổng thể và bảng so sánh 3 khối.
-2. `01_Khoi_Dao_Tao_GVTG`: 13 tiêu chí chi tiết cho Giảng viên & Trợ giảng.
-3. `02_Phong_LMS_Giai_Phap`: 10 tiêu chí chi tiết cho Đội ngũ Kỹ thuật LMS.
-4. `03_Phong_Quan_Ly_Dao_Tao`: 10 tiêu chí chi tiết cho Đội ngũ Quản lý Học vụ & CVHT.
-5. `04_Co_Cau_Danh_Hieu_Khen_Thuong`: Bảng chi tiết điều kiện, giải thưởng và quyền lợi.
-6. `05_Mau_Import_LarkBase`: Bảng phẳng (Flat Table) 33 tiêu chí, định dạng sẵn kiểu dữ liệu trường (Single Select, Number, Text) để nhập 1-click vào Lark Base.
+1. **Khối Đào tạo (Giảng viên & Trợ giảng) — Trọng tâm 20/11**:
+   * 🏆 **Nhà giáo Cống hiến 20/11**
+   * 🥈 **Giảng viên Truyền cảm hứng**
+   * 🌟 **Trợ giảng Thắp lửa**
+2. **Phòng Thiết kế giải pháp LMS**:
+   * 🚀 **Kỹ sư Giải pháp Tiên phong**
+   * 🛡️ **Chiến binh Vận hành Ổn định**
+   * 💡 **Sáng kiến Công nghệ của năm**
+3. **Ban QLĐT**:
+   * 💼 **Ngôi sao Vận hành Học vụ**
+   * 🤝 **Cố vấn Học tập Tận tâm**
+   * 🎖️ **Cán bộ Khảo thí Chuẩn mực**
+4. **Giải Toàn Viện (Grand Award)**:
+   * 👑 **Gương mặt Xuất sắc Toàn viện (Grand Excellence Award)**
+
+---
+
+## 4. Danh Sách Sheet Chuẩn Trong Workbook Excel
+File: `output/02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/Bo_Tieu_Chi_Danh_Gia_Khen_Thuong_Khoi_Dao_Tao_LMS_QLDT_20261116.xlsx`
+
+1. `Tổng quan` *(Giữ nguyên 100% bản người dùng đã sửa)*.
+2. `Khối đào tạo` *(Giữ nguyên 100% bản người dùng đã sửa)*.
+3. `Phòng LMS` *(Được làm lại chuẩn từ ngữ và tỷ trọng 50/25/10/15)*.
+4. `Ban QLĐT` *(Được làm lại chuẩn từ ngữ và tỷ trọng 40/35/10/15)*.
+5. `Cơ cấu danh hiệu` *(Khớp 100% tên danh hiệu tại Sheet Tổng quan)*.
+6. `Mẫu Import LarkBase` *(Bảng phẳng 32 tiêu chí chuẩn hóa field types để import trực tiếp)*.
