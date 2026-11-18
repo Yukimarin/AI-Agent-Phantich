@@ -17,14 +17,14 @@
       background-color: #f8fafc;
       color: #0f172a;
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.5;
     }
     .font-mono { font-family: 'JetBrains Mono', monospace; }
     .card-clean {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 1rem;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+      border-radius: 0.875rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
     }
   </style>
 </head>
@@ -33,16 +33,16 @@
   <div class="max-w-7xl mx-auto space-y-8">
 
     <!-- HEADER / BANNER -->
-    <header class="card-clean p-6 sm:p-8 border-l-4 border-l-indigo-600 flex flex-col md:flex-row md:items-center justify-between gap-4">
-      <div class="space-y-2">
+    <header class="card-clean p-6 sm:p-7 border-l-4 border-l-indigo-600 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="space-y-1.5">
         <div class="flex flex-wrap items-center gap-2">
-          <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-indigo-50 text-indigo-700 border border-indigo-100">
+          <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-100">
             Học viện PTIT x Rikkei Education
           </span>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 text-slate-700">
+          <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700">
             Hệ Thống Đào Tạo Kỹ Sư CNTT Khóa K24
           </span>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-100">
+          <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-100">
             Dữ Liệu Đối Soát Chốt Ngày 04/11/2026
           </span>
         </div>
@@ -53,362 +53,396 @@
     </header>
 
     <!-- SECTION I: TỔNG QUAN PHỄU HỌC VỤ & BIẾN ĐỘNG SĨ SỐ -->
-    <section class="card-clean p-6 sm:p-8 space-y-6">
-      <div class="border-b border-slate-200 pb-4">
+    <section class="card-clean p-6 sm:p-7 space-y-6">
+      <div class="border-b border-slate-200 pb-3">
         <h2 class="text-xl font-bold text-slate-900 tracking-tight">
           I. TỔNG QUAN PHỄU HỌC VỤ & BIẾN ĐỘNG SĨ SỐ (342 SINH VIÊN)
         </h2>
-        <p class="text-xs text-slate-500 mt-1">
+        <p class="text-xs text-slate-500 mt-0.5">
           Dữ liệu đối soát chốt ngày 04/11/2026 trên toàn bộ 342 học viên chính thức mã PTIT-K2.
         </p>
       </div>
 
       <!-- 5 Thẻ Số Liệu Cốt Lõi -->
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/70">
-          <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Tổng Tuyển Sinh</div>
-          <div class="text-3xl font-extrabold text-slate-900 mt-1 font-mono">342</div>
-          <div class="text-xs text-slate-600 mt-1">HN: 259 | HCM: 83</div>
-          <div class="text-[11px] text-slate-500 mt-1">100% học viên duyệt gốc</div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3.5">
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/70">
+          <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Tổng Tuyển Sinh</div>
+          <div class="text-2xl font-extrabold text-slate-900 mt-0.5 font-mono">342</div>
+          <div class="text-[11px] text-slate-600 mt-0.5">HN: 259 | HCM: 83</div>
+          <div class="text-[10px] text-slate-500 mt-0.5">100% học viên duyệt gốc</div>
         </div>
 
-        <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/50">
-          <div class="text-xs font-semibold text-emerald-800 uppercase tracking-wider">Thực Học K24 Hiện Tại</div>
-          <div class="text-3xl font-extrabold text-emerald-700 mt-1 font-mono">188</div>
-          <div class="text-xs text-emerald-800 mt-1">HN: 145 | HCM: 43</div>
-          <div class="text-[11px] text-emerald-700 font-semibold mt-1">Tỷ lệ duy trì: 55.0%</div>
+        <div class="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/50">
+          <div class="text-[11px] font-semibold text-emerald-800 uppercase tracking-wider">Thực Học K24 Hiện Tại</div>
+          <div class="text-2xl font-extrabold text-emerald-700 mt-0.5 font-mono">188</div>
+          <div class="text-[11px] text-emerald-800 mt-0.5">HN: 145 | HCM: 43</div>
+          <div class="text-[10px] text-emerald-700 font-semibold mt-0.5">Tỷ lệ duy trì: 55.0%</div>
         </div>
 
-        <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/50">
-          <div class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Xuống Khóa K25/K26</div>
-          <div class="text-3xl font-extrabold text-amber-700 mt-1 font-mono">81</div>
-          <div class="text-xs text-amber-800 mt-1">HN: 61 | HCM: 20</div>
-          <div class="text-[11px] text-amber-700 font-medium mt-1">Tỷ lệ: 23.7%</div>
+        <div class="p-3.5 rounded-xl border border-amber-200 bg-amber-50/50">
+          <div class="text-[11px] font-semibold text-amber-800 uppercase tracking-wider">Xuống Khóa K25/K26</div>
+          <div class="text-2xl font-extrabold text-amber-700 mt-0.5 font-mono">81</div>
+          <div class="text-[11px] text-amber-800 mt-0.5">HN: 61 | HCM: 20</div>
+          <div class="text-[10px] text-amber-700 font-medium mt-0.5">Tỷ lệ: 23.7%</div>
         </div>
 
-        <div class="p-4 rounded-xl border border-purple-200 bg-purple-50/50">
-          <div class="text-xs font-semibold text-purple-800 uppercase tracking-wider">Bảo Lưu / Nghỉ</div>
-          <div class="text-3xl font-extrabold text-purple-700 mt-1 font-mono">39</div>
-          <div class="text-xs text-purple-800 mt-1">HN: 30 | HCM: 9</div>
-          <div class="text-[11px] text-purple-700 font-medium mt-1">Tỷ lệ: 11.4%</div>
+        <div class="p-3.5 rounded-xl border border-purple-200 bg-purple-50/50">
+          <div class="text-[11px] font-semibold text-purple-800 uppercase tracking-wider">Bảo Lưu / Nghỉ</div>
+          <div class="text-2xl font-extrabold text-purple-700 mt-0.5 font-mono">39</div>
+          <div class="text-[11px] text-purple-800 mt-0.5">HN: 30 | HCM: 9</div>
+          <div class="text-[10px] text-purple-700 font-medium mt-0.5">Tỷ lệ: 11.4%</div>
         </div>
 
-        <div class="p-4 rounded-xl border border-rose-200 bg-rose-50/50">
-          <div class="text-xs font-semibold text-rose-800 uppercase tracking-wider">Bỏ Học / Đình Chỉ</div>
-          <div class="text-3xl font-extrabold text-rose-700 mt-1 font-mono">25</div>
-          <div class="text-xs text-rose-800 mt-1">HN: 15 | HCM: 10</div>
-          <div class="text-[11px] text-rose-700 font-medium mt-1">Tỷ lệ: 7.3%</div>
+        <div class="p-3.5 rounded-xl border border-rose-200 bg-rose-50/50">
+          <div class="text-[11px] font-semibold text-rose-800 uppercase tracking-wider">Bỏ Học / Đình Chỉ</div>
+          <div class="text-2xl font-extrabold text-rose-700 mt-0.5 font-mono">25</div>
+          <div class="text-[11px] text-rose-800 mt-0.5">HN: 15 | HCM: 10</div>
+          <div class="text-[10px] text-rose-700 font-medium mt-0.5">Tỷ lệ: 7.3%</div>
         </div>
       </div>
 
-      <!-- Phân Tích Diễn Giải & Biểu Đồ -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-7 space-y-4 text-xs text-slate-700 leading-relaxed">
-          <div class="p-5 rounded-xl border border-slate-200 bg-white space-y-4">
+      <!-- Phân Tích Diễn Giải & Biểu Đồ (UI Cân Đối Khớp Hoàn Hảo, Không Khoảng Trắng Thừa) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+        
+        <!-- Cột Trái: Nhận Định Ngắn Gọn -->
+        <div class="lg:col-span-7 flex flex-col justify-between p-5 rounded-xl border border-slate-200 bg-white">
+          <div>
             <h4 class="font-bold text-slate-900 text-sm border-b border-slate-100 pb-2">
               Nhận định biến động qua 4 học kỳ:
             </h4>
 
-            <div class="space-y-3.5 text-xs">
+            <div class="space-y-2.5 text-xs pt-2.5">
               <!-- Kỳ 1 -->
-              <div class="p-3 rounded-lg bg-slate-50 border border-slate-100 space-y-1">
+              <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-100 space-y-0.5">
                 <div class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-indigo-600"></span> Kỳ 1 (Sàng lọc đầu khóa):
+                  <span class="w-2 h-2 rounded-full bg-indigo-600"></span> Kỳ 1:
                 </div>
                 <div class="text-slate-700 pl-3.5">
-                  <strong>Thống kê:</strong> Giảm 51 sinh viên (21 bạn bảo lưu, 11 bạn thôi học, 11 bạn xuống khóa K25 và 8 bạn xuống khóa K26).
+                  <strong>Thống kê:</strong> Giảm 51 SV (21 bảo lưu, 11 thôi học, 19 xuống khóa).
                 </div>
                 <div class="text-slate-600 pl-3.5">
-                  <strong>Nhận định:</strong> Đây là thời điểm sàng lọc ban đầu khi sinh viên bước vào môi trường đại học công nghệ, gặp trở ngại với tư duy thuật toán môn Lập trình C và kiến trúc Web căn bản.
+                  <strong>Nhận định:</strong> Sàng lọc đầu vào; sinh viên gặp trở ngại với Lập trình C và Web cơ bản.
                 </div>
               </div>
 
               <!-- Kỳ 2 -->
-              <div class="p-3 rounded-lg bg-slate-50 border border-slate-100 space-y-1">
+              <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-100 space-y-0.5">
                 <div class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-blue-600"></span> Kỳ 2 (Bắt đầu phân hóa chuyên ngành):
+                  <span class="w-2 h-2 rounded-full bg-blue-600"></span> Kỳ 2:
                 </div>
                 <div class="text-slate-700 pl-3.5">
-                  <strong>Thống kê:</strong> Giảm 36 sinh viên (23 bạn xuống khóa K25, 6 bạn bảo lưu, 7 bạn thôi học).
+                  <strong>Thống kê:</strong> Giảm 36 SV (23 xuống khóa, 6 bảo lưu, 7 thôi học).
                 </div>
                 <div class="text-slate-600 pl-3.5">
-                  <strong>Nhận định:</strong> Sinh viên bắt đầu tiếp cận môn cơ sở dữ liệu quan hệ (SQL) và lập trình hướng đối tượng OOP; các bạn hổng kiến thức tiên quyết không thể theo kịp tiến độ và chuyển xuống khóa sau học lại.
+                  <strong>Nhận định:</strong> Bắt đầu phân hóa học lực khi tiếp cận môn CSDL quan hệ (SQL) và OOP.
                 </div>
               </div>
 
               <!-- Kỳ 3 -->
-              <div class="p-3 rounded-lg bg-slate-50 border border-slate-100 space-y-1">
+              <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-100 space-y-0.5">
                 <div class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-amber-600"></span> Kỳ 3 (Giai đoạn biến động lớn nhất):
+                  <span class="w-2 h-2 rounded-full bg-amber-600"></span> Kỳ 3:
                 </div>
                 <div class="text-slate-700 pl-3.5">
-                  <strong>Thống kê:</strong> Giảm 63 sinh viên (47 bạn xuống khóa K25, 9 bạn bảo lưu, 7 bạn thôi học).
+                  <strong>Thống kê:</strong> Giảm 63 SV (47 xuống khóa, 9 bảo lưu, 7 thôi học).
                 </div>
                 <div class="text-slate-600 pl-3.5">
-                  <strong>Nhận định:</strong> Điểm gãy học vụ lớn nhất toàn khóa do khối lượng bài tập đồ án chuyên ngành tăng cao (Frontend ReactJS kết hợp Java Web Service); đòi hỏi cường độ thực hành lớn khiến tỷ lệ xuống khóa tăng vọt.
+                  <strong>Nhận định:</strong> Biến động lớn nhất; khối lượng đồ án chuyên ngành (ReactJS + Java API) tăng cao.
                 </div>
               </div>
 
               <!-- Kỳ 4 -->
-              <div class="p-3 rounded-lg bg-slate-50 border border-slate-100 space-y-1">
+              <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-100 space-y-0.5">
                 <div class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Kỳ 4 (Ổn định sĩ số thực học):
+                  <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Kỳ 4:
                 </div>
                 <div class="text-slate-700 pl-3.5">
-                  <strong>Thống kê:</strong> Giảm 4 sinh viên (3 bạn bảo lưu, 1 bạn thôi học; không có trường hợp xuống khóa).
+                  <strong>Thống kê:</strong> Giảm 4 SV (3 bảo lưu, 1 thôi học; không có trường hợp xuống khóa).
                 </div>
                 <div class="text-slate-600 pl-3.5">
-                  <strong>Nhận định:</strong> Sĩ số thực học ổn định tại mốc 188 sinh viên, sinh viên tập trung hoàn thiện các học phần cuối và chuẩn bị xét điều kiện thực tập doanh nghiệp (OJT).
+                  <strong>Nhận định:</strong> Sĩ số thực học ổn định tại mốc 188 SV, tập trung hoàn thiện học phần xét đi OJT.
                 </div>
               </div>
 
               <!-- So sánh 2 cơ sở -->
-              <div class="p-3 rounded-lg bg-indigo-50/40 border border-indigo-100 space-y-1">
+              <div class="p-2.5 rounded-lg bg-indigo-50/40 border border-indigo-100 space-y-0.5">
                 <div class="font-bold text-indigo-950 text-xs flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-purple-600"></span> So sánh 2 cơ sở đào tạo (Hà Nội vs TP.HCM):
+                  <span class="w-2 h-2 rounded-full bg-purple-600"></span> So sánh 2 cơ sở (Hà Nội vs TP.HCM):
                 </div>
                 <div class="text-slate-700 pl-3.5">
-                  <strong>Thống kê:</strong> Cơ sở Hà Nội duy trì 145/259 SV (56.0%); cơ sở TP.HCM duy trì 43/83 SV (51.8%). Tỷ lệ bỏ học/đình chỉ tại TP.HCM là 13.3% (11 SV), cao hơn Hà Nội là 5.8% (15 SV).
+                  <strong>Thống kê:</strong> HN duy trì 145/259 SV (56.0%); TP.HCM duy trì 43/83 SV (51.8%).
                 </div>
                 <div class="text-slate-600 pl-3.5">
-                  <strong>Nhận định:</strong> Tỷ lệ duy trì thực học giữa hai miền tương đương (52–56%), tuy nhiên TP.HCM có tỷ lệ thôi học dứt điểm cao hơn do tác động từ thị trường việc làm phía Nam và tính kỷ luật học tập đầu khóa cần được quản trị sát sao hơn.
+                  <strong>Nhận định:</strong> Tỷ lệ duy trì tương đương; TP.HCM có tỷ lệ thôi học cao hơn (13.3% vs 5.8%).
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="lg:col-span-5 h-80 p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex flex-col justify-between">
-          <div class="text-xs font-bold text-slate-700 border-b border-slate-200 pb-1.5">
-            Biến Động Sĩ Số Rời Khóa Qua 4 Học Kỳ (K1 &rarr; K4)
+        <!-- Cột Phải: Biểu Đồ Thanh (Khớp Chiều Cao, Không Khoảng Trắng) -->
+        <div class="lg:col-span-5 flex flex-col justify-between p-5 rounded-xl border border-slate-200 bg-white shadow-2xs">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
+            <span class="text-xs font-bold text-slate-900 uppercase tracking-wide">
+              Biến Động Sĩ Số Rời Khóa Qua 4 Học Kỳ
+            </span>
+            <span class="text-[11px] text-slate-500 font-mono">Đơn vị: SV</span>
           </div>
-          <div class="h-64">
+
+          <div class="flex-1 w-full min-h-[260px] relative">
             <canvas id="chartLeave"></canvas>
           </div>
+
+          <div class="mt-3 pt-2.5 border-t border-slate-100 grid grid-cols-3 gap-2 text-center text-[11px]">
+            <div class="p-1.5 rounded bg-amber-50 text-amber-800 font-medium">
+              Xuống khóa: <strong class="font-mono text-amber-900">89</strong>
+            </div>
+            <div class="p-1.5 rounded bg-purple-50 text-purple-800 font-medium">
+              Bảo lưu: <strong class="font-mono text-purple-900">39</strong>
+            </div>
+            <div class="p-1.5 rounded bg-rose-50 text-rose-800 font-medium">
+              Bỏ học: <strong class="font-mono text-rose-900">26</strong>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
 
     <!-- SECTION II: ĐÁNH GIÁ TỶ LỆ HOÀN THÀNH CHƯƠNG TRÌNH -->
-    <section class="card-clean p-6 sm:p-8 space-y-6">
-      <div class="border-b border-slate-200 pb-4">
+    <section class="card-clean p-6 sm:p-7 space-y-6">
+      <div class="border-b border-slate-200 pb-3">
         <h2 class="text-xl font-bold text-slate-900 tracking-tight">
-          II. ĐÁNH GIÁ TỶ LỆ HOÀN THÀNH CHƯƠNG TRÌNH (188 SINH VIÊN THỰC HỌC)
+          II. ĐÁNH GIÁ TỶ LỆ HOÀN THÀNH CHƯƠNG TRÌNH
         </h2>
-        <p class="text-xs text-slate-500 mt-1">
+        <p class="text-xs text-slate-500 mt-0.5">
           Phân loại theo số lượng môn nợ thực tế để xác định độ sẵn sàng tiếp nhận tại doanh nghiệp.
         </p>
       </div>
 
-      <!-- 4 Nhóm Nợ Môn (Bỏ dòng đánh giá dưới) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/40 space-y-1.5">
+      <!-- 4 Nhóm Nợ Môn -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+        <div class="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/40 space-y-1">
           <div class="flex items-center justify-between">
             <span class="text-xs font-bold text-emerald-800 uppercase">Hoàn thành 100%</span>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-200 text-emerald-900">0 môn nợ</span>
           </div>
-          <div class="text-3xl font-extrabold text-emerald-700 font-mono">47 <span class="text-xs text-emerald-800 font-normal">SV (25.0%)</span></div>
+          <div class="text-2xl font-extrabold text-emerald-700 font-mono">47 <span class="text-xs text-emerald-800 font-normal">SV (25.0%)</span></div>
           <div class="text-xs text-slate-600">HN: 37 SV (25.5%) | HCM: 10 SV (23.3%)</div>
         </div>
 
-        <div class="p-4 rounded-xl border border-blue-200 bg-blue-50/40 space-y-1.5">
+        <div class="p-3.5 rounded-xl border border-blue-200 bg-blue-50/40 space-y-1">
           <div class="flex items-center justify-between">
             <span class="text-xs font-bold text-blue-800 uppercase">Hoàn thành 80 – 90%</span>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-200 text-blue-900">Nợ 1–2 môn</span>
           </div>
-          <div class="text-3xl font-extrabold text-blue-700 font-mono">81 <span class="text-xs text-blue-800 font-normal">SV (43.1%)</span></div>
+          <div class="text-2xl font-extrabold text-blue-700 font-mono">81 <span class="text-xs text-blue-800 font-normal">SV (43.1%)</span></div>
           <div class="text-xs text-slate-600">HN: 57 SV (39.3%) | HCM: 24 SV (55.8%)</div>
         </div>
 
-        <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/40 space-y-1.5">
+        <div class="p-3.5 rounded-xl border border-amber-200 bg-amber-50/40 space-y-1">
           <div class="flex items-center justify-between">
             <span class="text-xs font-bold text-amber-800 uppercase">Hoàn thành 60 – 80%</span>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-200 text-amber-900">Nợ 3–4 môn</span>
           </div>
-          <div class="text-3xl font-extrabold text-amber-700 font-mono">41 <span class="text-xs text-amber-800 font-normal">SV (21.8%)</span></div>
+          <div class="text-2xl font-extrabold text-amber-700 font-mono">41 <span class="text-xs text-amber-800 font-normal">SV (21.8%)</span></div>
           <div class="text-xs text-slate-600">HN: 33 SV (22.8%) | HCM: 8 SV (18.6%)</div>
         </div>
 
-        <div class="p-4 rounded-xl border border-rose-200 bg-rose-50/40 space-y-1.5">
+        <div class="p-3.5 rounded-xl border border-rose-200 bg-rose-50/40 space-y-1">
           <div class="flex items-center justify-between">
             <span class="text-xs font-bold text-rose-800 uppercase">Hoàn thành &lt; 60%</span>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-200 text-rose-900">Nợ &ge; 5 môn</span>
           </div>
-          <div class="text-3xl font-extrabold text-rose-700 font-mono">19 <span class="text-xs text-rose-800 font-normal">SV (10.1%)</span></div>
+          <div class="text-2xl font-extrabold text-rose-700 font-mono">19 <span class="text-xs text-rose-800 font-normal">SV (10.1%)</span></div>
           <div class="text-xs text-slate-600">HN: 18 SV (12.4%) | HCM: 1 SV (2.3%)</div>
         </div>
       </div>
 
       <!-- Biểu đồ Hoàn thành & Trượt theo môn -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-5 h-72 p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex flex-col justify-between">
-          <div class="text-xs font-bold text-slate-700 border-b border-slate-200 pb-1.5">
-            Tỷ Lệ Phân Bổ Mức Độ Hoàn Thành (188 SV Thực Học)
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+        <div class="lg:col-span-5 flex flex-col justify-between p-5 rounded-xl border border-slate-200 bg-white shadow-2xs">
+          <div class="text-xs font-bold text-slate-900 uppercase tracking-wide border-b border-slate-100 pb-2 mb-2">
+            Tỷ Lệ Hoàn Thành Chương Trình (188 SV)
           </div>
-          <div class="h-56">
+          <div class="flex-1 w-full min-h-[240px] relative">
             <canvas id="chartCompletion"></canvas>
           </div>
         </div>
-        <div class="lg:col-span-7 h-72 p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex flex-col justify-between">
-          <div class="flex items-center justify-between border-b border-slate-200 pb-1.5">
-            <span class="text-xs font-bold text-slate-700">Tỷ Lệ Qua Môn / Nợ Môn Theo Từng Học Phần</span>
+        <div class="lg:col-span-7 flex flex-col justify-between p-5 rounded-xl border border-slate-200 bg-white shadow-2xs">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
+            <span class="text-xs font-bold text-slate-900 uppercase tracking-wide">Tỷ Lệ Đạt / Nợ Theo Từng Học Phần</span>
             <span class="text-[11px] text-indigo-700 font-semibold bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">
-              Tính trên 188 SV thực học K24
+              Tính trên 188 SV thực học
             </span>
           </div>
-          <div class="h-56">
+          <div class="flex-1 w-full min-h-[240px] relative">
             <canvas id="chartCoursePass"></canvas>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION III: KIẾN TRÚC LỘ TRÌNH ĐẦU RA K24: FULLSTACK – AI APPLICATION – CLOUD/DEVOPS -->
-    <section class="card-clean p-6 sm:p-8 space-y-6">
-      <div class="border-b border-slate-200 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <!-- SECTION III: LỘ TRÌNH TRIỂN KHAI ĐÀO TẠO K24 THEO FIGMA USE CASE -->
+    <section class="card-clean p-6 sm:p-7 space-y-6">
+      <div class="border-b border-slate-200 pb-3 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h2 class="text-xl font-bold text-slate-900 tracking-tight">
-            III. KIẾN TRÚC LỘ TRÌNH ĐẦU RA K24: FULLSTACK – AI APPLICATION – CLOUD/DEVOPS
+            III. KẾ HOẠCH TRIỂN KHAI ĐÀO TẠO & LỘ TRÌNH ĐẦU RA K24 (2026 – 2027)
           </h2>
-          <p class="text-xs text-slate-500 mt-1">
-            Mô hình phối hợp 3 giai đoạn: 1T Phân luồng &rarr; 3T 3 Tracks & Enterprise Project &rarr; 2T OJT Rikkei Jobs.
+          <p class="text-xs text-slate-500 mt-0.5">
+            Căn cứ theo bản vẽ mô hình triển khai đào tạo và use case của Giám đốc Đào tạo.
           </p>
         </div>
       </div>
 
-      <!-- SƠ ĐỒ QUY TRÌNH 3 GIAI ĐOẠN -->
-      <div class="space-y-4">
-        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
-          Quy Trình Phân Tuyến 3 Giai Đoạn (Lộ Trình Tổng Thể 6 Tháng)
-        </h3>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <!-- GIAI ĐOẠN 1 -->
-          <div class="rounded-xl border border-indigo-200 bg-indigo-50/20 p-5 space-y-4 flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-indigo-100 text-indigo-800">
-                  Giai đoạn 1 (1 Tháng)
-                </span>
-                <span class="text-xs font-semibold text-slate-500">Chuẩn bị & Sàng lọc</span>
-              </div>
-              <h4 class="font-bold text-slate-900 text-base">Nhu Cầu & Năng Lực — Phân Luồng</h4>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Đánh giá toàn diện 188 SV thực học K24 song song 2 nhánh độc lập để khớp nối cung - cầu:
-              </p>
-
-              <div class="space-y-2 text-xs pt-1">
-                <div class="p-3 bg-white rounded-lg border border-indigo-100 shadow-sm space-y-1">
-                  <div class="font-bold text-indigo-950 flex items-center gap-1.5">
-                    <span class="text-indigo-600 font-mono font-bold">1.1</span> Đánh Giá 8 Trục Năng Lực
-                  </div>
-                  <p class="text-slate-600 text-[11px]">
-                    Lập trình nền tảng, Kỹ năng giải quyết vấn đề, CSDL, Frontend, Backend, Cloud/DevOps, <strong>Applied AI Readiness</strong>, Kỹ năng mềm.
-                  </p>
-                </div>
-
-                <div class="p-3 bg-white rounded-lg border border-indigo-100 shadow-sm space-y-1">
-                  <div class="font-bold text-indigo-950 flex items-center gap-1.5">
-                    <span class="text-indigo-600 font-mono font-bold">1.2</span> Khảo Sát Nhu Cầu Doanh Nghiệp
-                  </div>
-                  <p class="text-slate-600 text-[11px]">
-                    Làm việc trực tiếp cùng Rikkeisoft, FrankieLabs, đối tác ngoài để chốt tiêu chuẩn tuyển dụng và JD chi tiết.
-                  </p>
-                </div>
-              </div>
+      <!-- SƠ ĐỒ 3 GIAI ĐOẠN ĐỐI CHIẾU CHUẨN XÁC VỚI FIGMA -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
+        
+        <!-- GIAI ĐOẠN 1 -->
+        <div class="rounded-xl border border-indigo-200 bg-indigo-50/20 p-5 space-y-3 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-indigo-100 text-indigo-800">
+                Giai đoạn 1 (1 Tháng)
+              </span>
+              <span class="text-xs font-semibold text-slate-500">26/10/2026 – 20/11/2026</span>
             </div>
+            
+            <h4 class="font-bold text-slate-900 text-base">Nhu Cầu & Năng Lực</h4>
 
-            <div class="p-2.5 rounded-lg bg-indigo-100/60 border border-indigo-200 text-center text-xs font-bold text-indigo-900">
-              &rarr; Đầu ra: Báo cáo AI Readiness & Phân luồng 3 Track
+            <div class="space-y-2.5 text-xs">
+              <!-- 1. Khảo sát nhu cầu -->
+              <div class="p-3 bg-white rounded-lg border border-indigo-100 shadow-2xs space-y-1">
+                <div class="font-bold text-indigo-950 flex items-center gap-1.5">
+                  <span class="text-indigo-600 font-mono font-bold">1.</span> Khảo Sát Nhu Cầu Tuyển Dụng
+                </div>
+                <ul class="text-slate-600 text-[11px] list-disc pl-4 space-y-0.5">
+                  <li>Khảo sát nhu cầu tuyển dụng IT từ Ban đối ngoại Rikkei Education</li>
+                  <li>Khảo sát từ các nền tảng IT (ITViec, TopCV, VietnamWorks)</li>
+                  <li>Khảo sát trực tiếp từ nhân sự các đơn vị IT</li>
+                </ul>
+              </div>
+
+              <!-- 2. Vị trí & 4 hướng đào tạo -->
+              <div class="p-3 bg-white rounded-lg border border-indigo-100 shadow-2xs space-y-1">
+                <div class="font-bold text-indigo-950 flex items-center gap-1.5">
+                  <span class="text-indigo-600 font-mono font-bold">2.</span> Vị Trí & Yêu Cầu Tuyển Dụng (4 Hướng)
+                </div>
+                <div class="grid grid-cols-1 gap-1 text-[11px] text-slate-700 pt-0.5">
+                  <div class="font-medium text-indigo-900">• Full-stack / Backend / Frontend Developer</div>
+                  <div class="font-medium text-blue-900">• DevOps / Cloud / System & Network Engineer</div>
+                  <div class="font-medium text-emerald-900">• AI Builder (AI-first Product Engineer / Automation)</div>
+                  <div class="font-medium text-purple-900">• AI Application Developer (GenAI / LLM)</div>
+                </div>
+              </div>
+
+              <!-- 3 & 4. Năng lực SV -->
+              <div class="p-3 bg-white rounded-lg border border-indigo-100 shadow-2xs space-y-0.5 text-[11px]">
+                <div class="font-bold text-indigo-950">3. Đánh giá năng lực tổng thể sinh viên</div>
+                <div class="font-bold text-indigo-950">4. Hình thành hồ sơ năng lực theo các vị trí công việc đã khảo sát</div>
+              </div>
             </div>
           </div>
 
-          <!-- GIAI ĐOẠN 2 -->
-          <div class="rounded-xl border border-blue-200 bg-blue-50/20 p-5 space-y-4 flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-blue-100 text-blue-800">
-                  Giai đoạn 2 (3 Tháng)
-                </span>
-                <span class="text-xs font-semibold text-slate-500">2T Học + 1T Project</span>
-              </div>
-              <h4 class="font-bold text-slate-900 text-base">Đào Tạo 3 Track Chuyên Sâu & Đồ Án</h4>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Đào tạo chuyên sâu 2 tháng theo 3 Track lớn, thi sát hạch (Pass Gate) và làm Đồ án Doanh nghiệp thực chiến 1 tháng:
-              </p>
-
-              <div class="space-y-2 text-xs pt-1">
-                <div class="p-2.5 bg-white rounded-lg border border-blue-100 shadow-sm">
-                  <div class="font-bold text-blue-950 flex items-center justify-between">
-                    <span>Track 1: Fullstack Development</span>
-                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 font-mono">115 SV</span>
-                  </div>
-                  <div class="text-[11px] text-slate-500 mt-1">Adv FE, Adv BE, Database Tuning, Architecture, Security, AI-Assisted Dev.</div>
-                </div>
-
-                <div class="p-2.5 bg-white rounded-lg border border-emerald-100 shadow-sm">
-                  <div class="font-bold text-emerald-950 flex items-center justify-between">
-                    <span>Track 2: AI Application</span>
-                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 font-mono">Trọng Tâm</span>
-                  </div>
-                  <div class="text-[11px] text-slate-500 mt-1">LLMs, RAG Pipeline, AI Agents & Tool Calling, System Security, Deployment.</div>
-                </div>
-
-                <div class="p-2.5 bg-white rounded-lg border border-amber-100 shadow-sm">
-                  <div class="font-bold text-amber-950 flex items-center justify-between">
-                    <span>Track 3: Cloud / DevOps</span>
-                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 font-mono">Hạ Tầng</span>
-                  </div>
-                  <div class="text-[11px] text-slate-500 mt-1">Linux/Network, Docker Container, CI/CD, Cloud AWS/GCP, Monitoring, IaC.</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="p-2.5 rounded-lg bg-blue-100/60 border border-blue-200 text-center text-xs font-bold text-blue-900">
-              &rarr; Đánh giá Gate Pass &rarr; Enterprise Project (1T)
-            </div>
-          </div>
-
-          <!-- GIAI ĐOẠN 3 -->
-          <div class="rounded-xl border border-emerald-200 bg-emerald-50/20 p-5 space-y-4 flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-100 text-emerald-800">
-                  Giai đoạn 3 (2 Tháng)
-                </span>
-                <span class="text-xs font-semibold text-slate-500">OJT & Tuyển dụng</span>
-              </div>
-              <h4 class="font-bold text-slate-900 text-base">Thực Tập Doanh Nghiệp & Việc Làm</h4>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Vận hành qua nền tảng tuyển dụng <strong>Rikkei Jobs</strong>, kết nối hệ sinh thái doanh nghiệp tiếp nhận:
-              </p>
-
-              <div class="space-y-2 text-xs pt-1">
-                <div class="p-3 bg-white rounded-lg border border-emerald-100 shadow-sm space-y-1">
-                  <div class="font-bold text-emerald-950">Hệ Sinh Thái Doanh Nghiệp Tiếp Nhận</div>
-                  <div class="flex flex-wrap gap-1.5 mt-1">
-                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-800 text-[11px] font-semibold">Rikkeisoft</span>
-                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-800 text-[11px] font-semibold">FrankieLabs</span>
-                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-800 text-[11px] font-semibold">Rikkei Japan</span>
-                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-800 text-[11px] font-semibold">Đối tác ngoài</span>
-                  </div>
-                </div>
-
-                <div class="p-3 bg-white rounded-lg border border-emerald-100 shadow-sm space-y-1">
-                  <div class="font-bold text-emerald-950">Bộ Công Cụ Rikkei Jobs Hỗ Trợ</div>
-                  <p class="text-slate-600 text-[11px]">
-                    Hồ sơ năng lực chuẩn hóa &bull; <strong>AI Career Assistant</strong> &bull; Ghép việc tự động theo JD &bull; Theo dõi tiến độ OJT 2 tháng.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="p-2.5 rounded-lg bg-emerald-100/60 border border-emerald-200 text-center text-xs font-bold text-emerald-900">
-              &rarr; Kết quả: Tốt Nghiệp & Nhận Offer Chính Thức
-            </div>
+          <div class="p-2.5 rounded-lg bg-indigo-100/70 border border-indigo-200 text-center text-xs font-bold text-indigo-900">
+            &rarr; Đầu ra: Hồ sơ năng lực & Phân luồng vị trí
           </div>
         </div>
+
+        <!-- GIAI ĐOẠN 2 -->
+        <div class="rounded-xl border border-blue-200 bg-blue-50/20 p-5 space-y-3 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-blue-100 text-blue-800">
+                Giai đoạn 2 (3 Tháng)
+              </span>
+              <span class="text-xs font-semibold text-slate-500">23/11/2026 – 28/02/2027</span>
+            </div>
+            
+            <h4 class="font-bold text-slate-900 text-base">Đào Tạo Chuyên Sâu & Thực Tập Theo Vị Trí</h4>
+
+            <div class="space-y-2.5 text-xs">
+              <!-- 1. Đào tạo chuyên sâu -->
+              <div class="p-3 bg-white rounded-lg border border-blue-100 shadow-2xs space-y-1.5">
+                <div class="font-bold text-blue-950 flex items-center justify-between">
+                  <span>1. Đào Tạo Chuyên Sâu (2 Tháng)</span>
+                  <span class="text-[10px] text-blue-700 font-mono">23/11/2026 – 22/01/2027</span>
+                </div>
+                <div class="space-y-1.5 pt-0.5">
+                  <div class="p-2 rounded bg-blue-50/60 border border-blue-100 text-[11px]">
+                    <strong class="text-blue-900">Fullstack / Backend:</strong><br>
+                    Học môn <span class="font-bold text-indigo-700">AI Agent Development</span>
+                  </div>
+                  <div class="p-2 rounded bg-amber-50/60 border border-amber-100 text-[11px]">
+                    <strong class="text-amber-900">Cloud / DevOps:</strong><br>
+                    Học môn <span class="font-bold text-amber-700">DevOps Advanced</span>
+                  </div>
+                </div>
+                <div class="text-[11px] text-slate-500 italic pt-0.5">
+                  * Lưu ý: Lịch học có 2 tuần nghỉ Tết Nguyên Đán.
+                </div>
+              </div>
+
+              <!-- 2. Thực tập theo vị trí -->
+              <div class="p-3 bg-white rounded-lg border border-blue-100 shadow-2xs space-y-1">
+                <div class="font-bold text-blue-950 flex items-center justify-between">
+                  <span>2. Thực Tập Theo Vị Trí (1 Tháng)</span>
+                  <span class="text-[10px] text-blue-700 font-mono">23/01/2027 – 28/02/2027</span>
+                </div>
+                <p class="text-slate-600 text-[11px] leading-relaxed">
+                  Làm đồ án thực tế mô phỏng theo từng vị trí công việc đã được đào tạo chuyên sâu.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-blue-100/70 border border-blue-200 text-center text-xs font-bold text-blue-900">
+            &rarr; Đầu ra: Hoàn thành đồ án thực tế theo vị trí
+          </div>
+        </div>
+
+        <!-- GIAI ĐOẠN 3 -->
+        <div class="rounded-xl border border-emerald-200 bg-emerald-50/20 p-5 space-y-3 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800">
+                Giai đoạn 3 (3 Tháng)
+              </span>
+              <span class="text-xs font-semibold text-slate-500">01/03/2027 – 30/06/2027</span>
+            </div>
+            
+            <h4 class="font-bold text-slate-900 text-base">Thực Tập Doanh Nghiệp & Việc Làm</h4>
+
+            <div class="space-y-2.5 text-xs">
+              <div class="p-3 bg-white rounded-lg border border-emerald-100 shadow-2xs space-y-2">
+                <div class="font-bold text-emerald-950">5 Hoạt Động Trọng Tâm:</div>
+                <ul class="space-y-1.5 text-[11px] text-slate-700 list-decimal pl-4">
+                  <li>
+                    <strong>Mock Interview:</strong> Luyện phỏng vấn chuyên sâu cùng RikkeiSoft.
+                  </li>
+                  <li>
+                    <strong>Thực tập doanh nghiệp:</strong> Thực tập trực tiếp tại <span class="font-bold text-emerald-800">TrainXLabs</span> và các công ty đối tác (IOC).
+                  </li>
+                  <li>
+                    <strong>Đào tạo bổ sung:</strong> Hỗ trợ bổ sung kiến thức và kỹ năng nếu cần.
+                  </li>
+                  <li>
+                    <strong>Tốt nghiệp chương trình:</strong> Nghiệm thu kết quả học tập và thực tập.
+                  </li>
+                  <li>
+                    <strong>Ứng tuyển & Tuyển dụng:</strong> Bàn giao sinh viên nhận việc chính thức.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-emerald-100/70 border border-emerald-200 text-center text-xs font-bold text-emerald-900">
+            &rarr; Đầu ra: Tốt Nghiệp & Nhận Offer Doanh Nghiệp
+          </div>
+        </div>
+
       </div>
     </section>
 
