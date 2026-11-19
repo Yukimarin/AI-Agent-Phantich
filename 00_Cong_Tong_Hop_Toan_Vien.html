@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cổng Tổng Hợp Ứng Dụng AI Cho Quản Lý Đào Tạo — PTIT x Rikkei Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          colors: {
+            slate: { 850: '#0f172a', 950: '#020617' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-card { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glass-card:hover { border-color: rgba(99, 102, 241, 0.4); transform: translateY(-3px); box-shadow: 0 12px 30px -10px rgba(79, 70, 229, 0.3); }
+    .glass-nav { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+    .gradient-text { background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+  <!-- TOP BAR -->
+  <header class="glass-nav sticky top-0 z-50 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25">
+          <i class="fa-solid fa-brain text-lg"></i>
+        </div>
+        <div>
+          <h1 class="text-base font-extrabold text-white tracking-tight flex items-center gap-2">
+            HỆ THỐNG ỨNG DỤNG AI QUẢN LÝ ĐÀO TẠO
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">AI-QLĐT v2.4</span>
+          </h1>
+          <p class="text-xs text-slate-400">Viện Công nghệ Thông tin &amp; Truyền thông PTIT • Hợp tác đào tạo Rikkei Academy</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Trực tuyến
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-6 py-10 space-y-10">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">
+        <i class="fa-solid fa-sparkles text-amber-400"></i> AI Agent Telemetry &amp; Automation Hub
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+        Bộ Giải Pháp <span class="gradient-text">Điều Hành Đào Tạo Thông Minh</span>
+      </h2>
+      <p class="text-sm md:text-base text-slate-400 leading-relaxed">
+        Tích hợp toàn diện dữ liệu LMS thời gian thực, mô hình chẩn đoán cảnh báo sớm nguy cơ bỏ học, đánh giá hiệu suất nhân sự Worklane và tự động hóa chấm công Mentor.
+      </p>
+    </div>
+
+    <!-- 4 REPORT CARDS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- CARD 1 -->
+      <a href="./10_Bao_Cao_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.html" class="glass-card rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+        <div class="space-y-4">
+          <div class="flex items-start justify-between">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition duration-300">
+              <i class="fa-solid fa-graduation-cap text-xl"></i>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-blue-500/10 text-blue-300 border border-blue-500/20">BÁO CÁO 01</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition">Chỉ Số Học Tập &amp; Xét Điều Kiện Thi</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Theo dõi 25 lớp đang có môn triển khai (KS26, KS25, KS24). Tích hợp số lượng sinh viên đủ điều kiện thi (95.1%), số SV nguy cơ cấm thi, và modal đối sánh trực tiếp với môn học kỳ trước.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-center font-mono">
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Số Lớp</div>
+              <div class="text-sm font-bold text-blue-400">25</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Sinh Viên</div>
+              <div class="text-sm font-bold text-white">976</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Đủ ĐK Thi</div>
+              <div class="text-sm font-bold text-emerald-400">95.1%</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-blue-400 group-hover:translate-x-1 transition">
+          <span>Khám phá báo cáo chi tiết</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
+
+      <!-- CARD 2 -->
+      <a href="./11_Bao_Cao_Du_Bao_Ty_Le_Qua_Mon_KS25_KS26.html" class="glass-card rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+        <div class="space-y-4">
+          <div class="flex items-start justify-between">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition duration-300">
+              <i class="fa-solid fa-shield-halved text-xl"></i>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-purple-500/10 text-purple-300 border border-purple-500/20">BÁO CÁO 02</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition">Dự Báo Tỷ Lệ Qua Môn &amp; Cảnh Báo Sớm</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Hệ thống Early Warning System đa chiều (6 tiêu chí: Chuyên cần, Bài tập, Elearning, Tồn đọng nợ môn, Điểm danh vắng, Lịch sử nợ quá khứ). Lọc chuẩn xác từng lớp, hỗ trợ xuất Excel 4 nhóm phân loại.
+            </p>
+          </div>
+          <div class="grid grid-cols-4 gap-2 pt-2 border-t border-slate-800 text-center font-mono">
+            <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+              <div class="text-[9px] text-emerald-400">An toàn</div>
+              <div class="text-sm font-bold text-emerald-300">522</div>
+            </div>
+            <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20">
+              <div class="text-[9px] text-amber-400">Nguy cơ</div>
+              <div class="text-sm font-bold text-amber-300">269</div>
+            </div>
+            <div class="p-2 rounded-lg bg-indigo-500/10 border border-indigo-500/20">
+              <div class="text-[9px] text-indigo-400">Bảo lưu</div>
+              <div class="text-sm font-bold text-indigo-300">67</div>
+            </div>
+            <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20">
+              <div class="text-[9px] text-rose-400">Bỏ học</div>
+              <div class="text-sm font-bold text-rose-300">107</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-purple-400 group-hover:translate-x-1 transition">
+          <span>Khám phá báo cáo chi tiết</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
+
+      <!-- CARD 3 -->
+      <a href="./12_Quan_Ly_Hieu_Suat_Va_Danh_Gia_KPI_Thang.html" class="glass-card rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+        <div class="space-y-4">
+          <div class="flex items-start justify-between">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition duration-300">
+              <i class="fa-solid fa-chart-line text-xl"></i>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-amber-500/10 text-amber-300 border border-amber-500/20">BÁO CÁO 03</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Quản Lý Hiệu Suất &amp; Đánh Giá KPI Tháng</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Đánh giá toàn diện 34 cán bộ thuộc Khối Đào tạo và LMS theo 5 nhóm hiệu suất chuẩn PMO. Tích hợp nút soạn thảo và gửi email nhắc nhở cá nhân hóa hoặc gửi hàng loạt đến 13 nhân sự hiệu suất thấp.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-center font-mono">
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Nhân Sự</div>
+              <div class="text-sm font-bold text-amber-400">34</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">KPI Trung Bình</div>
+              <div class="text-sm font-bold text-white">63.1</div>
+            </div>
+            <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20">
+              <div class="text-[10px] text-rose-400">Cần Đốc Thúc</div>
+              <div class="text-sm font-bold text-rose-300">13</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-amber-400 group-hover:translate-x-1 transition">
+          <span>Khám phá báo cáo chi tiết</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
+
+      <!-- CARD 4 -->
+      <a href="./13_Bao_Cao_Cham_Cong_Mentor_He_Ngan_Han.html" class="glass-card rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+        <div class="space-y-4">
+          <div class="flex items-start justify-between">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition duration-300">
+              <i class="fa-solid fa-business-time text-xl"></i>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">BÁO CÁO 04</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">Báo Cáo Chấm Công Mentor Hệ Ngắn Hạn</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Tổng hợp chi tiết dữ liệu chấm công từ Worklane cho Tháng 10 (19 mentor, 336.5h) và Tháng 11 (17 mentor, 313.0h). Tích hợp modal gửi mail với bảng tổng công và nhật ký buổi dạy chi tiết theo ngày.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-center font-mono">
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Mentor T10 / T11</div>
+              <div class="text-sm font-bold text-emerald-400">19 / 17</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Tổng Buổi Dạy</div>
+              <div class="text-sm font-bold text-white">246</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Tổng Giờ Dạy</div>
+              <div class="text-sm font-bold text-cyan-400">649.5h</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-emerald-400 group-hover:translate-x-1 transition">
+          <span>Khám phá báo cáo chi tiết</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- QUICK SUITE NAVIGATION FOOTER -->
+    <div class="glass-card rounded-2xl p-6 text-center space-y-4">
+      <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Bộ Điều Hướng Toàn Diện (Quick Jump Suite)</div>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a href="./10_Bao_Cao_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-blue-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-graduation-cap text-blue-400"></i> Báo cáo 1: Học tập &amp; ĐK Thi
+        </a>
+        <a href="./11_Bao_Cao_Du_Bao_Ty_Le_Qua_Mon_KS25_KS26.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-purple-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-shield-halved text-purple-400"></i> Báo cáo 2: Dự báo qua môn &amp; Cảnh báo
+        </a>
+        <a href="./12_Quan_Ly_Hieu_Suat_Va_Danh_Gia_KPI_Thang.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-amber-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-chart-line text-amber-400"></i> Báo cáo 3: Hiệu suất &amp; KPI Tháng
+        </a>
+        <a href="./13_Bao_Cao_Cham_Cong_Mentor_He_Ngan_Han.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-emerald-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-clock text-emerald-400"></i> Báo cáo 4: Chấm công Hệ ngắn hạn
+        </a>
+      </div>
+      <div class="text-[11px] text-slate-500 pt-2">
+        Hệ thống dữ liệu PMO Data Hub • Đã đồng bộ &amp; xác thực bảo mật thông tin nhân sự theo quy định nội bộ.
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
