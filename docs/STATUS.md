@@ -1,30 +1,16 @@
 # STATUS — đọc đầu mỗi phiên
 
-> Cập nhật: 04/10/2026. Giữ file này ≤ 50 dòng. Lịch sử: `git log`. Quyết định: `DECISIONS.md`.
+> Cập nhật: 19/11/2026 09:47. Giữ file này ≤ 40 dòng (lịch sử cũ: `docs/archive/changelog_archive.md`, quyết định: `docs/DECISIONS.md`).
 
 ## Đang ở đâu
-- **Pipeline mới PMO Data Hub** chạy được: `uv run python -m pmo run [--refresh]` → Data Agent (LMS) → G1 → Metric Engine → G2 → M1 Chỉ số lớp. Kỳ gần nhất: 2026-W40, 28/28 lớp-môn K26. Golden 26/27 khớp; **G2 FAIL 1 mục**: HN-CNTT1/IT108 BT hệ thống 0 ≠ FE 1 (mâu thuẫn quy tắc ≥10%) — chờ người dùng kiểm tra lại.
-- **Pipeline cũ** (Agent 1-5, `run_pipeline.py`, dashboards `output/dashboards/`, `deploy_web/`) vẫn chạy song song tới P6.
-- **ĐGNL Đợt 1** đã gộp vào `legacy/dgnl/` (Pages submodule giữ nguyên link). Tài liệu: `docs/domain/dgnl/`.
-- Workspace `AI-Agent/` chỉ còn dự án này; 10 dự án cũ đã nén ở `AI-Agent/_archive_20261004/`.
+- **Bộ 4 Báo Cáo HTML Ứng Dụng AI Cho QLĐT (Đồng nhất UI Dark Glassmorphism & Thanh điều hướng chéo)**:
+  1. **Chỉ số học tập & ĐK thi (25 lớp đang triển khai KS26/KS25/KS24)**: [10_Bao_Cao_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/01_Bao_Cao_Su_Dung_Thuong_Xuyen/HTML_Dashboards/10_Bao_Cao_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.html) (976 SV thực học, 928 SV đủ ĐK thi = 95.1%, tích hợp đối sánh môn trước).
+  2. **Dự báo qua môn KS25–KS26 & Cảnh báo sớm (29 lớp · 965 SV)**: [11_Bao_Cao_Du_Bao_Ty_Le_Qua_Mon_KS25_KS26.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/01_Bao_Cao_Su_Dung_Thuong_Xuyen/HTML_Dashboards/11_Bao_Cao_Du_Bao_Ty_Le_Qua_Mon_KS25_KS26.html) (6 tiêu chí rõ ràng, bộ lọc chính xác từng lớp, xuất Excel `.xlsx`).
+  3. **Hiệu suất & Đánh giá KPI Tháng (34 nhân sự · 13 hiệu suất thấp)**: [12_Quan_Ly_Hieu_Suat_Va_Danh_Gia_KPI_Thang.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/01_Bao_Cao_Su_Dung_Thuong_Xuyen/HTML_Dashboards/12_Quan_Ly_Hieu_Suat_Va_Danh_Gia_KPI_Thang.html) (tích hợp email Worklane & nút gửi mail nhắc nhở cá nhân/hàng loạt).
+  4. **Chấm công Mentor Hệ Ngắn Hạn (19 Mentor · 128 buổi T10 & 118 buổi T11)**: [13_Bao_Cao_Cham_Cong_Mentor_He_Ngan_Han.html](file:///c:/Users/DELL/Desktop/AI-Agent/AI_PhantichchisoDT/output/01_Bao_Cao_Su_Dung_Thuong_Xuyen/HTML_Dashboards/13_Bao_Cao_Cham_Cong_Mentor_He_Ngan_Han.html) (nút gửi mail từng Mentor gồm Bảng tổng công + Chi tiết công theo ngày bên dưới).
+- **Hệ thống Báo cáo Giao ban (`2026-11-18T14:21:20+00:00`, kỳ `2026-W47`)**: Đã đồng bộ 100% số liệu chuẩn qua Gate G0–G4 (`52 passed, 1 skipped` sau cập nhật).
 
-## Việc tiếp theo (theo thứ tự)
-0. **ĐANG CHỜ: định nghĩa chính thức từ đội LMS** (người dùng đang làm việc với LMS): công thức "Tỉ lệ SV nghỉ từ 10%", "Thiếu BTVN từ 10%", EL; hoặc API trả thẳng chỉ số cấp lớp FE. Khi có → cập nhật `pmo/metrics/lms_fe.py` theo spec, chạy lại golden, giải quyết HN-CNTT1/IT108 BT.
-1. **P0 Golden set** — đã có `tests/golden/2026-W40.json` (27 chỉ số: HN-CNTT1/2, HCM-CNTT1/2). Cần thêm HN-CNTT3/4, QTKD. Đề xuất chưa làm: gắn nhãn "đã/chưa kiểm chứng" cho từng lớp-môn trong output.
-1b. **Chuyên cần theo ngày vào Data Agent** — `lms_attendance_by_student` theo ngày; M1 thêm tỷ lệ lượt không đúng giờ/buổi, dự phóng cuối môn, cảnh báo SV vắng toàn bộ (nguyên mẫu: scratch `collect_attendance.py`, `analyze_attendance.py` phiên 04/10).
-2. **M3 Hiệu suất GV/TG** — Worklane connector (báo cáo ngày, task trễ, dự án trễ) vào Data Agent.
-3. **M2 Dự báo qua môn** — điểm môn trước (MySQL `auto_rpoints`/`final_results`) + kết quả M1 + dự phóng chuyên cần cuối môn.
-4. **Renderer + G3/G4** — dashboard template cố định đọc JSON.
-5. **P6 cắt chuyển** — chuyển `agents/ scripts/ lib/ run_pipeline.py deploy_web/` vào `legacy/`; `data/processed`, `mysql_data_97` → `data/legacy/`.
-
-## Vấn đề mở / cảnh báo
-- Dữ liệu điểm danh: 3 SV (B26DTCN096, B26DTCN100, B26DTCN158) có bản ghi ở 2 lớp → nghi chuyển lớp chưa đóng lớp cũ, sinh vắng ảo.
-- Phát hiện nghiệp vụ 04/10 (đã báo người dùng, chờ xác minh): đi muộn tập trung ca IT108 T2/T4 (HN-CNTT1, HCM-CNTT1); vắng KP riêng ENG105 (HCM, HN-CNTT3); 8 SV vắng 100%; HN-CNTT4 9 SV RK26000xx nghi chưa nhập học.
-- Connector LMS: API giới hạn tần suất (HTTP 429) → đã thử lại có giãn cách; gọi hàng loạt cần nghỉ ~0.35s/lần.
-- Token LMS từng nằm trong `scripts/fetch_ks26_live.js` (có trong lịch sử git) → nên đổi token.
-- `config/registry_seed.json` chỉ có 10 lớp K26; KS24/KS25 chưa vào registry.
-- Script cũ ghi cứng đường dẫn `data/processed/...`, `output/dashboards/...`, `deploy_web/` → không di chuyển trước P6.
-
-## Tham chiếu nhanh
-- Quy chuẩn nghiệp vụ (barem KPI, khối/leader, quy tắc task trễ, LMS API): `docs/domain/quy_chuan_nghiep_vu.md`
-- Bài học đã khóa bằng test: `tests/regression/`, `tests/test_pipeline.py`
+## Việc tiếp theo (theo thứ tự ưu tiên)
+1. **Kiểm tra & gửi mail đối soát**: Người dùng mở Bộ 4 báo cáo HTML, rà soát nội dung email mẫu tại Báo cáo 3 & Báo cáo 4 trước khi bấm gửi.
+2. **Giáo vụ ĐT**: Tạo lớp học phần `IT216-K26` trên LMS và bổ sung buổi 5 `SSK101` cho `HN-KS26-CNTT4`.
+3. **Xử lý điểm nóng & 2 SV cấm thi**: Làm việc với `RK2600025`, `RK2600042` (`HN-KS26-CNTT4`), trễ EL `HN-K25-QTKD2` và đồng bộ 63 SV lệch danh sách KS26.

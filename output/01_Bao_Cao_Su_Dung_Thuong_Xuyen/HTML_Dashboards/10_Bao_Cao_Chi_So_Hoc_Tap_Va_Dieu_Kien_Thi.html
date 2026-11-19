@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo Cáo 1: Chỉ Số Học Tập, Điều Kiện Dự Thi &amp; Đối Sánh Môn Trước — Rikkei Education QLĐT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 15% 10%, #0f172a 0%, #030712 75%);
+      background-attachment: fixed;
+      color: #f1f5f9;
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    }
+    .glass-card-hover {
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .glass-card-hover:hover {
+      transform: translateY(-2px);
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.5);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.25);
+      border-radius: 6px;
+    }
+    .nav-pill {
+      transition: all 0.2s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased pb-12">
+  <!-- Top Sticky Unified Suite Navigation -->
+  <nav class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/80">
+    <div class="max-w-[1680px] mx-auto px-4 sm:px-6 py-3 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <a href="./00_Cong_Tong_Hop_Toan_Vien.html" class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg shadow-blue-500/25" title="Về Cổng Tổng Hợp">
+          <i class="fa-solid fa-layer-group text-sm"></i>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-extrabold tracking-wider uppercase text-blue-400">Hệ Thống Quản Lý Đào Tạo PTIT × Rikkei</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">Bộ 4 Báo Cáo Đồng Bộ</span>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-0.5">Báo cáo 1/4 · Tổng hợp chỉ số học tập các lớp đang triển khai môn, tỷ lệ đủ điều kiện dự thi &amp; đối sánh các môn trước</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 overflow-x-auto w-full xl:w-auto pb-1 xl:pb-0">
+        <a href="./10_Bao_Cao_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.html" class="nav-pill px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center gap-2 whitespace-nowrap bg-blue-600 text-white shadow-lg shadow-blue-600/30 border-blue-400/40"><i class="fa-solid fa-graduation-cap"></i><span>BC 1: Chỉ số học tập &amp; ĐK thi</span></a><a href="./11_Bao_Cao_Du_Bao_Ty_Le_Qua_Mon_KS25_KS26.html" class="nav-pill px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center gap-2 whitespace-nowrap bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-800/80 border-slate-700/60"><i class="fa-solid fa-shield-halved"></i><span>BC 2: Dự báo qua môn KS25–KS26</span></a><a href="./12_Quan_Ly_Hieu_Suat_Va_Danh_Gia_KPI_Thang.html" class="nav-pill px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center gap-2 whitespace-nowrap bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-800/80 border-slate-700/60"><i class="fa-solid fa-chart-bar"></i><span>BC 3: Hiệu suất &amp; KPI Tháng</span></a><a href="./13_Bao_Cao_Cham_Cong_Mentor_He_Ngan_Han.html" class="nav-pill px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center gap-2 whitespace-nowrap bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-800/80 border-slate-700/60"><i class="fa-solid fa-clock"></i><span>BC 4: Chấm công Hệ ngắn hạn</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-[1680px] mx-auto px-4 sm:px-6 pt-6 space-y-6">
+    <!-- Header Banner -->
+    <section class="glass-card rounded-2xl p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+      <div>
+        <div class="flex flex-wrap items-center gap-2 mb-1.5">
+          <span class="px-2.5 py-0.5 rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">Báo cáo 01</span>
+          <span class="px-2.5 py-0.5 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 text-[11px] font-semibold">Chuẩn hóa Thực học &amp; Bảo lãnh học vụ</span>
+        </div>
+        <h1 class="text-2xl font-extrabold text-white tracking-tight">CHỈ SỐ HỌC TẬP CÁC LỚP ĐANG TRIỂN KHAI MÔN &amp; ĐIỀU KIỆN DỰ THI</h1>
+        <p class="text-xs text-slate-400 mt-1">
+          Số liệu được chuẩn hóa trên tập <strong class="text-slate-200">Sinh viên Thực học</strong> (loại trừ sinh viên đã bảo lưu/đình chỉ/nghỉ 100% và áp dụng rà soát bảo lãnh 1 buổi phép) · Cập nhật: <span class="font-mono text-blue-300">2026-11-19 09:40 GMT+7</span>
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-2.5">
+        <button onclick="exportReport1Excel()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2 shadow-lg shadow-emerald-600/25 transition">
+          <i class="fa-solid fa-file-excel"></i> Xuất Excel (.xlsx)
+        </button>
+      </div>
+    </section>
+
+    <!-- Top KPI Cards -->
+    <section class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+      <div class="glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Tổng Lớp Đang Triển Khai</div>
+        <div class="text-2xl font-extrabold text-white mt-2 font-mono" id="kpi-class-count">0</div>
+        <div class="text-[11px] text-slate-400 mt-1" id="kpi-student-count">0 SV thực học</div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Đạt Chuẩn Chuyên Cần</div>
+        <div class="text-2xl font-extrabold text-emerald-400 mt-2 font-mono" id="kpi-cc-good">0%</div>
+        <div class="text-[11px] text-slate-400 mt-1" id="kpi-cc-viol">Vi phạm thực học: 0%</div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1 h-full bg-cyan-500"></div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Hoàn Thành Bài Tập</div>
+        <div class="text-2xl font-extrabold text-cyan-400 mt-2 font-mono" id="kpi-bt-good">0%</div>
+        <div class="text-[11px] text-slate-400 mt-1" id="kpi-bt-viol">Thiếu BTVN: 0%</div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Tiến Độ E-Learning</div>
+        <div class="text-2xl font-extrabold text-indigo-300 mt-2 font-mono" id="kpi-el-good">0%</div>
+        <div class="text-[11px] text-slate-400 mt-1" id="kpi-el-viol">Chưa hoàn thành: 0%</div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden col-span-2 lg:col-span-1">
+        <div class="absolute top-0 left-0 w-1 h-full bg-amber-400"></div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Đủ Điều Kiện Dự Thi</div>
+        <div class="text-2xl font-extrabold text-amber-300 mt-2 font-mono" id="kpi-elig">0 SV</div>
+        <div class="text-[11px] text-emerald-300 font-semibold mt-1" id="kpi-elig-pct">Tỷ lệ: 0%</div>
+      </div>
+    </section>
+
+    <!-- Filters & Chart Row -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-8 glass-card rounded-2xl p-5 flex flex-col justify-between">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div>
+            <h2 class="text-sm font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-chart-column text-blue-400"></i> Biểu Đồ Đủ Điều Kiện Thi &amp; Chỉ Số Học Tập Theo Lớp
+            </h2>
+            <p class="text-[11px] text-slate-400">Đối chiếu tỷ lệ Đạt chuẩn Chuyên cần, Hoàn thành BTVN và Tỷ lệ Đủ điều kiện dự thi (%)</p>
+          </div>
+        </div>
+        <div class="h-72 relative">
+          <canvas id="chartReport1"></canvas>
+        </div>
+      </div>
+
+      <div class="lg:col-span-4 glass-card rounded-2xl p-5 space-y-4">
+        <h2 class="text-sm font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-sliders text-cyan-400"></i> Bộ Lọc Lớp Đang Triển Khai Môn
+        </h2>
+        <div class="space-y-3">
+          <div>
+            <label class="text-[11px] font-semibold text-slate-400 block mb-1">Khóa đào tạo</label>
+            <select id="f-cohort" onchange="applyR1Filters()" class="w-full bg-slate-900 border border-slate-700 text-slate-100 text-xs rounded-xl px-3 py-2 focus:border-blue-500 outline-none">
+              <option value="ALL">Tất cả 3 khóa (KS26, KS25, KS24)</option>
+              <option value="KS26">Khóa KS26 (10 lớp)</option>
+              <option value="KS25">Khóa KS25 (10 lớp)</option>
+              <option value="KS24">Khóa KS24 (5 lớp)</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="text-[11px] font-semibold text-slate-400 block mb-1">Cơ sở</label>
+              <select id="f-campus" onchange="applyR1Filters()" class="w-full bg-slate-900 border border-slate-700 text-slate-100 text-xs rounded-xl px-3 py-2 focus:border-blue-500 outline-none">
+                <option value="ALL">Tất cả cơ sở</option>
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="TP.HCM">TP.HCM</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-[11px] font-semibold text-slate-400 block mb-1">Ngành học</label>
+              <select id="f-major" onchange="applyR1Filters()" class="w-full bg-slate-900 border border-slate-700 text-slate-100 text-xs rounded-xl px-3 py-2 focus:border-blue-500 outline-none">
+                <option value="ALL">CNTT &amp; QTKD</option>
+                <option value="CNTT">CNTT</option>
+                <option value="QTKD">QTKD</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="text-[11px] font-semibold text-slate-400 block mb-1">Tìm lớp / Giảng viên / Môn học</label>
+            <input id="f-search" oninput="applyR1Filters()" type="text" placeholder="VD: HN-KS26-CNTT4, DevOps, Bùi Thanh Hải..." class="w-full bg-slate-900 border border-slate-700 text-slate-100 text-xs rounded-xl px-3 py-2 focus:border-blue-500 outline-none">
+          </div>
+          <div class="p-3.5 rounded-xl bg-blue-950/35 border border-blue-800/40 text-[11px] text-slate-300 space-y-1">
+            <div class="font-bold text-blue-300"><i class="fa-solid fa-circle-info mr-1"></i> Lưu ý chuẩn hóa chỉ số báo cáo:</div>
+            <p>Số liệu ưu tiên phản ánh chất lượng <strong class="text-white">tập sinh viên thực học</strong> sau khi tách hồ sơ bảo lưu/đình chỉ và rà soát diện bảo lãnh dự thi hợp lệ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Table -->
+    <section class="glass-card rounded-2xl overflow-hidden">
+      <div class="px-6 py-4 border-b border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <h2 class="text-base font-bold text-white">Bảng Tổng Hợp Chỉ Số Học Tập, Điều Kiện Thi &amp; Đối Sánh Các Môn Trước</h2>
+          <p class="text-xs text-slate-400">Nhấn <span class="text-blue-300 font-semibold">"Xem Môn Trước"</span> tại mỗi lớp để mở đối sánh chi tiết các môn đã triển khai trước đó.</p>
+        </div>
+        <span class="text-xs font-mono text-slate-400" id="r1-table-count">0 lớp</span>
+      </div>
+      <div class="overflow-x-auto custom-scrollbar">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900/90 text-[11px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-800">
+              <th class="px-4 py-3.5">STT</th>
+              <th class="px-4 py-3.5">Lớp / Khóa</th>
+              <th class="px-4 py-3.5">Môn Đang Triển Khai &amp; GV Bộ Môn</th>
+              <th class="px-4 py-3.5 text-center">Thực Học / DS Gốc</th>
+              <th class="px-4 py-3.5 text-center">Đạt Chuẩn CC</th>
+              <th class="px-4 py-3.5 text-center">Hoàn Thành BTVN</th>
+              <th class="px-4 py-3.5 text-center">Tiến Độ E-Learning</th>
+              <th class="px-4 py-3.5 text-center">SV Đủ ĐK Thi</th>
+              <th class="px-4 py-3.5">Môn Trước Tiêu Biểu</th>
+              <th class="px-4 py-3.5 text-right">Chi Tiết</th>
+            </tr>
+          </thead>
+          <tbody id="r1-tbody" class="divide-y divide-slate-800/60 text-xs"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal History Previous Courses -->
+  <div id="modal-prev" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+    <div class="glass-card rounded-2xl max-w-4xl w-full max-h-[88vh] flex flex-col overflow-hidden border border-slate-700">
+      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+        <div>
+          <h3 class="text-base font-bold text-white" id="mp-title">Đối sánh lịch sử môn học</h3>
+          <p class="text-xs text-slate-400 mt-0.5" id="mp-sub"></p>
+        </div>
+        <button onclick="closePrevModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto custom-scrollbar space-y-4">
+        <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300" id="mp-note"></div>
+        <div class="overflow-x-auto rounded-xl border border-slate-800">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-slate-900 text-[11px] uppercase text-slate-400 border-b border-slate-800">
+                <th class="px-4 py-3">Giai đoạn / Môn học</th>
+                <th class="px-4 py-3">GV Bộ Môn</th>
+                <th class="px-4 py-3 text-center">Thực Học</th>
+                <th class="px-4 py-3 text-center">Đạt CC (%)</th>
+                <th class="px-4 py-3 text-center">Hoàn thành BT (%)</th>
+                <th class="px-4 py-3 text-center">E-learning (%)</th>
+                <th class="px-4 py-3 text-center">Đủ ĐK Thi</th>
+              </tr>
+            </thead>
+            <tbody id="mp-tbody" class="divide-y divide-slate-800/70"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const R1_DATA = {"generatedAt": "2026-11-19 09:40 GMT+7", "rows": [{"className": "HCM-K26-QTKD1", "cohort": "KS26", "campus": "TP.HCM", "major": "QTKD", "currentCourseCode": "SEL101", "currentCourseName": "Kỹ năng bán hàng thực chiến", "subjectLecturer": "Lê Nhựt Mi", "rawSize": 22, "activeSize": 22, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 100.0, "ccViolPct": 0.0, "btViolPct": 0.0, "elViolPct": 0.0, "eligCount": 22, "eligPct": 100.0, "deltaVsPrevCc": 2.9, "previousCourses": [{"courseCode": "ENG105-K26", "courseName": "Basic Speaking", "teacher": "Huỳnh Thị Kim Khánh", "activeSize": 22, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 100.0, "eligCount": 22, "eligPct": 100.0}, {"courseCode": "MAN101", "courseName": "Quản trị học căn bản", "teacher": "Lê Nhựt Mi", "activeSize": 22, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 100.0, "eligCount": 22, "eligPct": 100.0}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Lê Nhựt Mi", "activeSize": 23, "ccGoodPct": 91.3, "btGoodPct": 91.3, "elGoodPct": 60.9, "eligCount": 21, "eligPct": 91.3}], "calibrationNote": "Đã chuẩn hóa trên 22/22 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HCM-KS26-CNTT1", "cohort": "KS26", "campus": "TP.HCM", "major": "CNTT", "currentCourseCode": "IT206-K26", "currentCourseName": "Kỹ Năng Promting với AI", "subjectLecturer": "Lê Hà Thanh Sang", "rawSize": 45, "activeSize": 44, "ccGoodPct": 95.5, "btGoodPct": 93.2, "elGoodPct": 95.5, "ccViolPct": 4.5, "btViolPct": 6.8, "elViolPct": 4.5, "eligCount": 42, "eligPct": 95.5, "deltaVsPrevCc": 8.9, "previousCourses": [{"courseCode": "ENG105-K26", "courseName": "Basic Speaking", "teacher": "Huỳnh Thị Kim Khánh", "activeSize": 36, "ccGoodPct": 97.2, "btGoodPct": 100.0, "elGoodPct": 94.4, "eligCount": 35, "eligPct": 97.2}, {"courseCode": "IT108-K26", "courseName": "Nhập Môn Công Nghệ Thông Tin", "teacher": "Lê Hà Thanh Sang", "activeSize": 45, "ccGoodPct": 77.8, "btGoodPct": 80.0, "elGoodPct": 64.4, "eligCount": 35, "eligPct": 77.8}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Nguyễn Bá Minh Đạo", "activeSize": 46, "ccGoodPct": 84.8, "btGoodPct": 47.8, "elGoodPct": 4.3, "eligCount": 39, "eligPct": 84.8}], "calibrationNote": "Đã chuẩn hóa trên 44/45 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HCM-KS26-CNTT2", "cohort": "KS26", "campus": "TP.HCM", "major": "CNTT", "currentCourseCode": "IT206-K26", "currentCourseName": "Kỹ Năng Promting với AI", "subjectLecturer": "Lê Hà Thanh Sang", "rawSize": 41, "activeSize": 41, "ccGoodPct": 97.6, "btGoodPct": 95.1, "elGoodPct": 92.7, "ccViolPct": 2.4, "btViolPct": 4.9, "elViolPct": 7.3, "eligCount": 40, "eligPct": 97.6, "deltaVsPrevCc": 3.3, "previousCourses": [{"courseCode": "ENG105-K26", "courseName": "Basic Speaking", "teacher": "Huỳnh Thị Kim Khánh", "activeSize": 37, "ccGoodPct": 94.6, "btGoodPct": 100.0, "elGoodPct": 89.2, "eligCount": 35, "eligPct": 94.6}, {"courseCode": "IT108-K26", "courseName": "Nhập Môn Công Nghệ Thông Tin", "teacher": "Lê Hà Thanh Sang", "activeSize": 40, "ccGoodPct": 95.0, "btGoodPct": 95.0, "elGoodPct": 90.0, "eligCount": 38, "eligPct": 95.0}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Nguyễn Bá Minh Đạo", "activeSize": 44, "ccGoodPct": 93.2, "btGoodPct": 50.0, "elGoodPct": 9.1, "eligCount": 41, "eligPct": 93.2}], "calibrationNote": "Đã chuẩn hóa trên 41/41 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HN-K26-QTKD1", "cohort": "KS26", "campus": "Hà Nội", "major": "QTKD", "currentCourseCode": "SEL101", "currentCourseName": "Kỹ năng bán hàng thực chiến", "subjectLecturer": "Hoàng Thị Hậu", "rawSize": 43, "activeSize": 43, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 95.3, "ccViolPct": 0.0, "btViolPct": 0.0, "elViolPct": 4.7, "eligCount": 43, "eligPct": 100.0, "deltaVsPrevCc": 3.3, "previousCourses": [{"courseCode": "ENG105-K26", "courseName": "Basic Speaking", "teacher": "Lò Thị Ngọc Anh", "activeSize": 39, "ccGoodPct": 94.9, "btGoodPct": 100.0, "elGoodPct": 89.7, "eligCount": 37, "eligPct": 94.9}, {"courseCode": "MAN101", "courseName": "Quản trị học căn bản", "teacher": "Đặng Quỳnh Trang", "activeSize": 41, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 100.0, "eligCount": 41, "eligPct": 100.0}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Hoàng Thị Hậu", "activeSize": 43, "ccGoodPct": 95.3, "btGoodPct": 97.7, "elGoodPct": 72.1, "eligCount": 40, "eligPct": 93.0}], "calibrationNote": "Đã chuẩn hóa trên 43/43 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HN-K26-QTKD2", "cohort": "KS26", "campus": "Hà Nội", "major": "QTKD", "currentCourseCode": "SEL101", "currentCourseName": "Kỹ năng bán hàng thực chiến", "subjectLecturer": "Đặng Quỳnh Trang", "rawSize": 43, "activeSize": 43, "ccGoodPct": 97.7, "btGoodPct": 97.7, "elGoodPct": 95.3, "ccViolPct": 2.3, "btViolPct": 2.3, "elViolPct": 4.7, "eligCount": 42, "eligPct": 97.7, "deltaVsPrevCc": -0.5, "previousCourses": [{"courseCode": "ENG105-K26", "courseName": "Basic Speaking", "teacher": "Nguyễn Hồng Nhung", "activeSize": 38, "ccGoodPct": 94.7, "btGoodPct": 100.0, "elGoodPct": 89.5, "eligCount": 36, "eligPct": 94.7}, {"courseCode": "MAN101", "courseName": "Quản trị học căn bản", "teacher": "Đặng Quỳnh Trang", "activeSize": 40, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 100.0, "eligCount": 40, "eligPct": 100.0}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Hoàng Thị Kim Oanh", "activeSize": 42, "ccGoodPct": 100.0, "btGoodPct": 97.6, "elGoodPct": 40.5, "eligCount": 42, "eligPct": 100.0}], "calibrationNote": "Đã chuẩn hóa trên 43/43 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HN-K26-QTKD3", "cohort": "KS26", "campus": "Hà Nội", "major": "QTKD", "currentCourseCode": "SEL101", "currentCourseName": "Kỹ năng bán hàng thực chiến", "subjectLecturer": "Hoàng Thị Kim Oanh", "rawSize": 42, "activeSize": 41, "ccGoodPct": 92.7, "btGoodPct": 95.1, "elGoodPct": 92.7, "ccViolPct": 7.3, "btViolPct": 4.9, "elViolPct": 7.3, "eligCount": 38, "eligPct": 92.7, "deltaVsPrevCc": -1.9, "previousCourses": [{"courseCode": "ENG105-K26", "courseName": "Basic Speaking", "teacher": "Nguyễn Hồng Nhung", "activeSize": 36, "ccGoodPct": 86.1, "btGoodPct": 100.0, "elGoodPct": 83.3, "eligCount": 31, "eligPct": 86.1}, {"courseCode": "MAN101", "courseName": "Quản trị học căn bản", "teacher": "Đặng Quỳnh Trang", "activeSize": 38, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 97.4, "eligCount": 37, "eligPct": 97.4}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Hoàng Thị Hậu", "activeSize": 41, "ccGoodPct": 97.6, "btGoodPct": 92.7, "elGoodPct": 63.4, "eligCount": 37, "eligPct": 90.2}], "calibrationNote": "Đã chuẩn hóa trên 41/42 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HN-KS26-CNTT1", "cohort": "KS26", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "IT206-K26", "currentCourseName": "Kỹ Năng Promting với AI", "subjectLecturer": "Hồ Xuân Hùng", "rawSize": 43, "activeSize": 42, "ccGoodPct": 95.2, "btGoodPct": 97.6, "elGoodPct": 100.0, "ccViolPct": 4.8, "btViolPct": 2.4, "elViolPct": 0.0, "eligCount": 40, "eligPct": 95.2, "deltaVsPrevCc": 1.5, "previousCourses": [{"courseCode": "IT108-K26", "courseName": "Nhập Môn Công Nghệ Thông Tin", "teacher": "Trịnh Quốc Hai", "activeSize": 43, "ccGoodPct": 86.0, "btGoodPct": 88.4, "elGoodPct": 83.7, "eligCount": 37, "eligPct": 86.0}, {"courseCode": "JPN105-K26", "courseName": "Tiếng Nhật cơ sở 1", "teacher": "Giáp Thị Minh Hằng", "activeSize": 42, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 95.2, "eligCount": 41, "eligPct": 97.6}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Trần Minh Cường", "activeSize": 41, "ccGoodPct": 95.1, "btGoodPct": 85.4, "elGoodPct": 39.0, "eligCount": 38, "eligPct": 92.7}], "calibrationNote": "Đã chuẩn hóa trên 42/43 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HN-KS26-CNTT2", "cohort": "KS26", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "IT206-K26", "currentCourseName": "Kỹ Năng Promting với AI", "subjectLecturer": "Trịnh Quốc Hai", "rawSize": 41, "activeSize": 40, "ccGoodPct": 100.0, "btGoodPct": 97.5, "elGoodPct": 97.5, "ccViolPct": 0.0, "btViolPct": 2.5, "elViolPct": 2.5, "eligCount": 40, "eligPct": 100.0, "deltaVsPrevCc": 6.6, "previousCourses": [{"courseCode": "ENG105-K26", "courseName": "Basic Speaking", "teacher": "Nguyễn Hồng Nhung", "activeSize": 40, "ccGoodPct": 92.5, "btGoodPct": 100.0, "elGoodPct": 95.0, "eligCount": 37, "eligPct": 92.5}, {"courseCode": "IT108-K26", "courseName": "Nhập Môn Công Nghệ Thông Tin", "teacher": "Trịnh Quốc Hai", "activeSize": 40, "ccGoodPct": 90.0, "btGoodPct": 90.0, "elGoodPct": 90.0, "eligCount": 36, "eligPct": 90.0}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Hồ Xuân Hùng", "activeSize": 42, "ccGoodPct": 97.6, "btGoodPct": 83.3, "elGoodPct": 97.6, "eligCount": 42, "eligPct": 100.0}], "calibrationNote": "Đã chuẩn hóa trên 40/41 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HN-KS26-CNTT3", "cohort": "KS26", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "IT206-K26", "currentCourseName": "Kỹ Năng Promting với AI", "subjectLecturer": "Lương Quốc Tuấn", "rawSize": 40, "activeSize": 40, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 100.0, "ccViolPct": 0.0, "btViolPct": 0.0, "elViolPct": 0.0, "eligCount": 40, "eligPct": 100.0, "deltaVsPrevCc": 1.7, "previousCourses": [{"courseCode": "ENG105-K26", "courseName": "Basic Speaking", "teacher": "Lò Thị Ngọc Anh", "activeSize": 39, "ccGoodPct": 97.4, "btGoodPct": 100.0, "elGoodPct": 94.9, "eligCount": 38, "eligPct": 97.4}, {"courseCode": "IT108-K26", "courseName": "Nhập Môn Công Nghệ Thông Tin", "teacher": "Lương Quốc Tuấn", "activeSize": 40, "ccGoodPct": 100.0, "btGoodPct": 100.0, "elGoodPct": 100.0, "eligCount": 40, "eligPct": 100.0}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Nguyễn Duy Quang", "activeSize": 40, "ccGoodPct": 97.5, "btGoodPct": 77.5, "elGoodPct": 100.0, "eligCount": 40, "eligPct": 100.0}], "calibrationNote": "Đã chuẩn hóa trên 40/40 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HN-KS26-CNTT4", "cohort": "KS26", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "IT206-K26", "currentCourseName": "Kỹ Năng Promting với AI", "subjectLecturer": "Lương Quốc Tuấn", "rawSize": 21, "activeSize": 21, "ccGoodPct": 90.5, "btGoodPct": 90.5, "elGoodPct": 90.5, "ccViolPct": 9.5, "btViolPct": 9.5, "elViolPct": 9.5, "eligCount": 19, "eligPct": 90.5, "deltaVsPrevCc": 5.4, "previousCourses": [{"courseCode": "IT108-K26", "courseName": "Nhập Môn Công Nghệ Thông Tin", "teacher": "Lương Quốc Tuấn", "activeSize": 24, "ccGoodPct": 75.0, "btGoodPct": 75.0, "elGoodPct": 79.2, "eligCount": 18, "eligPct": 75.0}, {"courseCode": "SSK101", "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân", "teacher": "Hoàng Thị Hậu", "activeSize": 21, "ccGoodPct": 95.2, "btGoodPct": 85.7, "elGoodPct": 57.1, "eligCount": 19, "eligPct": 90.5}], "calibrationNote": "Đã chuẩn hóa trên 21/21 SV thực học & áp dụng rà soát bảo lãnh dự thi"}, {"className": "HCM-KS25-CNTT5", "cohort": "KS25", "campus": "TP.HCM", "major": "CNTT", "currentCourseCode": "AGL201-K25", "currentCourseName": "Quản trị Dự án Agile & Scrum / Thiết kế HT", "subjectLecturer": "Trần Quốc Tuấn", "rawSize": 44, "activeSize": 43, "ccGoodPct": 94.3, "btGoodPct": 98.0, "elGoodPct": 98.9, "ccViolPct": 5.7, "btViolPct": 2.0, "elViolPct": 1.1, "eligCount": 41, "eligPct": 95.3, "deltaVsPrevCc": 1.9, "previousCourses": [{"courseCode": "IT105-K25", "courseName": "Phân tích & Thiết kế HT", "teacher": "Nguyễn Đức Minh", "activeSize": 44, "ccGoodPct": 94.3, "btGoodPct": 100.0, "elGoodPct": 90.9, "eligCount": 43, "eligPct": 97.7}, {"courseCode": "IT204-K25", "courseName": "Lập trình Web Python", "teacher": "Lê Hà Thanh Sang", "activeSize": 37, "ccGoodPct": 91.4, "btGoodPct": 88.0, "elGoodPct": 93.6, "eligCount": 33, "eligPct": 89.2}, {"courseCode": "IT202-K25", "courseName": "Cơ sở dữ liệu SQL", "teacher": "Lê Hà Thanh Sang", "activeSize": 39, "ccGoodPct": 91.4, "btGoodPct": 98.8, "elGoodPct": 96.2, "eligCount": 37, "eligPct": 94.9}], "calibrationNote": "Chuẩn hóa Thực học (43 SV đang học) & cập nhật dữ liệu Agile/PTTK ngày 2026-10-17"}, {"className": "HCM-KS25-CNTT6", "cohort": "KS25", "campus": "TP.HCM", "major": "CNTT", "currentCourseCode": "AGL201-K25", "currentCourseName": "Quản trị Dự án Agile & Scrum / Thiết kế HT", "subjectLecturer": "Nguyễn Đức Minh", "rawSize": 43, "activeSize": 41, "ccGoodPct": 92.2, "btGoodPct": 100.0, "elGoodPct": 90.7, "ccViolPct": 7.8, "btViolPct": 0.0, "elViolPct": 9.3, "eligCount": 39, "eligPct": 95.1, "deltaVsPrevCc": -1.4, "previousCourses": [{"courseCode": "IT105-K25", "courseName": "Phân tích & Thiết kế HT", "teacher": "Trần Quốc Tuấn", "activeSize": 43, "ccGoodPct": 92.2, "btGoodPct": 99.0, "elGoodPct": 96.5, "eligCount": 41, "eligPct": 95.3}, {"courseCode": "IT204-K25", "courseName": "Lập trình Web Python", "teacher": "Trần Quốc Tuấn", "activeSize": 40, "ccGoodPct": 93.7, "btGoodPct": 88.0, "elGoodPct": 88.8, "eligCount": 36, "eligPct": 90.0}, {"courseCode": "IT202-K25", "courseName": "Cơ sở dữ liệu SQL", "teacher": "Trần Quốc Tuấn", "activeSize": 41, "ccGoodPct": 94.9, "btGoodPct": 92.3, "elGoodPct": 91.5, "eligCount": 38, "eligPct": 92.7}], "calibrationNote": "Chuẩn hóa Thực học (41 SV đang học) & cập nhật dữ liệu Agile/PTTK ngày 2026-10-17"}, {"className": "HCM-KS25-CNTT7", "cohort": "KS25", "campus": "TP.HCM", "major": "CNTT", "currentCourseCode": "AGL201-K25", "currentCourseName": "Quản trị Dự án Agile & Scrum / Thiết kế HT", "subjectLecturer": "Nguyễn Đức Minh", "rawSize": 45, "activeSize": 42, "ccGoodPct": 89.7, "btGoodPct": 99.0, "elGoodPct": 95.6, "ccViolPct": 10.3, "btViolPct": 1.0, "elViolPct": 4.4, "eligCount": 39, "eligPct": 92.9, "deltaVsPrevCc": 1.6, "previousCourses": [{"courseCode": "IT105-K25", "courseName": "Phân tích & Thiết kế HT", "teacher": "Nguyễn Đức Minh", "activeSize": 44, "ccGoodPct": 84.5, "btGoodPct": 93.8, "elGoodPct": 90.2, "eligCount": 39, "eligPct": 88.6}, {"courseCode": "IT204-K25", "courseName": "Lập trình Web Python", "teacher": "Trần Quốc Tuấn", "activeSize": 39, "ccGoodPct": 84.9, "btGoodPct": 88.0, "elGoodPct": 89.7, "eligCount": 34, "eligPct": 87.2}, {"courseCode": "IT202-K25", "courseName": "Cơ sở dữ liệu SQL", "teacher": "Lê Hà Thanh Sang", "activeSize": 42, "ccGoodPct": 95.0, "btGoodPct": 96.8, "elGoodPct": 96.4, "eligCount": 40, "eligPct": 95.2}], "calibrationNote": "Chuẩn hóa Thực học (42 SV đang học) & cập nhật dữ liệu Agile/PTTK ngày 2026-10-17"}, {"className": "HN-KS25-CNTT1", "cohort": "KS25", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "AGL201-K25", "currentCourseName": "Quản trị Dự án Agile & Scrum / Thiết kế HT", "subjectLecturer": "Nguyễn Quảng An", "rawSize": 39, "activeSize": 39, "ccGoodPct": 87.1, "btGoodPct": 93.1, "elGoodPct": 92.3, "ccViolPct": 12.9, "btViolPct": 6.9, "elViolPct": 7.7, "eligCount": 35, "eligPct": 89.7, "deltaVsPrevCc": -0.9, "previousCourses": [{"courseCode": "IT105-K25", "courseName": "Phân tích & Thiết kế HT", "teacher": "Nguyễn Quảng An", "activeSize": 38, "ccGoodPct": 84.5, "btGoodPct": 91.7, "elGoodPct": 88.2, "eligCount": 33, "eligPct": 86.8}, {"courseCode": "IT204-K25", "courseName": "Lập trình Web Python", "teacher": "Lương Quốc Tuấn", "activeSize": 40, "ccGoodPct": 86.3, "btGoodPct": 88.0, "elGoodPct": 85.5, "eligCount": 35, "eligPct": 87.5}, {"courseCode": "IT202-K25", "courseName": "Cơ sở dữ liệu SQL", "teacher": "Lương Quốc Tuấn", "activeSize": 44, "ccGoodPct": 93.3, "btGoodPct": 92.8, "elGoodPct": 85.5, "eligCount": 41, "eligPct": 93.2}], "calibrationNote": "Chuẩn hóa Thực học (39 SV đang học) & cập nhật dữ liệu Agile/PTTK ngày 2026-10-28"}, {"className": "HN-KS25-CNTT2", "cohort": "KS25", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "AGL201-K25", "currentCourseName": "Quản trị Dự án Agile & Scrum / Thiết kế HT", "subjectLecturer": "Nguyễn Quảng An", "rawSize": 43, "activeSize": 42, "ccGoodPct": 86.3, "btGoodPct": 99.0, "elGoodPct": 96.5, "ccViolPct": 13.7, "btViolPct": 1.0, "elViolPct": 3.5, "eligCount": 39, "eligPct": 92.9, "deltaVsPrevCc": -1.0, "previousCourses": [{"courseCode": "IT105-K25", "courseName": "Phân tích & Thiết kế HT", "teacher": "Nguyễn Quảng An", "activeSize": 43, "ccGoodPct": 92.2, "btGoodPct": 96.9, "elGoodPct": 94.2, "eligCount": 41, "eligPct": 95.3}, {"courseCode": "IT204-K25", "courseName": "Lập trình Web Python", "teacher": "Lâm Tùng Dương", "activeSize": 38, "ccGoodPct": 83.5, "btGoodPct": 88.0, "elGoodPct": 85.5, "eligCount": 33, "eligPct": 86.8}, {"courseCode": "IT202-K25", "courseName": "Cơ sở dữ liệu SQL", "teacher": "Nguyễn Quảng An", "activeSize": 43, "ccGoodPct": 86.3, "btGoodPct": 88.0, "elGoodPct": 85.5, "eligCount": 37, "eligPct": 86.0}], "calibrationNote": "Chuẩn hóa Thực học (42 SV đang học) & cập nhật dữ liệu Agile/PTTK ngày 2026-10-28"}, {"className": "HN-KS25-CNTT3", "cohort": "KS25", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "AGL201-K25", "currentCourseName": "Quản trị Dự án Agile & Scrum / Thiết kế HT", "subjectLecturer": "Phạm Tuấn Bình", "rawSize": 42, "activeSize": 39, "ccGoodPct": 89.0, "btGoodPct": 97.9, "elGoodPct": 95.2, "ccViolPct": 11.0, "btViolPct": 2.1, "elViolPct": 4.8, "eligCount": 36, "eligPct": 92.3, "deltaVsPrevCc": 1.7, "previousCourses": [{"courseCode": "IT105-K25", "courseName": "Phân tích & Thiết kế HT", "teacher": "Phạm Tuấn Bình", "activeSize": 43, "ccGoodPct": 91.2, "btGoodPct": 99.0, "elGoodPct": 93.0, "eligCount": 41, "eligPct": 95.3}, {"courseCode": "IT204-K25", "courseName": "Lập trình Web Python", "teacher": "Nguyễn Quảng An", "activeSize": 35, "ccGoodPct": 83.5, "btGoodPct": 88.0, "elGoodPct": 85.5, "eligCount": 30, "eligPct": 85.7}, {"courseCode": "IT202-K25", "courseName": "Cơ sở dữ liệu SQL", "teacher": "Ngọ Văn Quý", "activeSize": 39, "ccGoodPct": 87.1, "btGoodPct": 88.0, "elGoodPct": 85.5, "eligCount": 34, "eligPct": 87.2}], "calibrationNote": "Chuẩn hóa Thực học (39 SV đang học) & cập nhật dữ liệu Agile/PTTK ngày 2026-10-28"}, {"className": "HN-KS25-CNTT4", "cohort": "KS25", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "AGL201-K25", "currentCourseName": "Quản trị Dự án Agile & Scrum / Thiết kế HT", "subjectLecturer": "Phạm Tuấn Bình", "rawSize": 41, "activeSize": 41, "ccGoodPct": 96.9, "btGoodPct": 98.9, "elGoodPct": 97.5, "ccViolPct": 3.1, "btViolPct": 1.1, "elViolPct": 2.5, "eligCount": 40, "eligPct": 97.6, "deltaVsPrevCc": 4.2, "previousCourses": [{"courseCode": "IT105-K25", "courseName": "Phân tích & Thiết kế HT", "teacher": "Phạm Tuấn Bình", "activeSize": 42, "ccGoodPct": 99.0, "btGoodPct": 96.8, "elGoodPct": 95.2, "eligCount": 41, "eligPct": 97.6}, {"courseCode": "IT204-K25", "courseName": "Lập trình Web Python", "teacher": "Nguyễn Quảng An", "activeSize": 40, "ccGoodPct": 92.7, "btGoodPct": 89.9, "elGoodPct": 88.8, "eligCount": 37, "eligPct": 92.5}, {"courseCode": "IT202-K25", "courseName": "Cơ sở dữ liệu SQL", "teacher": "Nguyễn Quảng An", "activeSize": 43, "ccGoodPct": 86.3, "btGoodPct": 88.0, "elGoodPct": 89.5, "eligCount": 37, "eligPct": 86.0}], "calibrationNote": "Chuẩn hóa Thực học (41 SV đang học) & cập nhật dữ liệu Agile/PTTK ngày 2026-10-28"}, {"className": "HN-KS25-CNTT5", "cohort": "KS25", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "AGL201-K25", "currentCourseName": "Quản trị Dự án Agile & Scrum / Thiết kế HT", "subjectLecturer": "Nguyễn Quảng An", "rawSize": 43, "activeSize": 41, "ccGoodPct": 88.3, "btGoodPct": 97.9, "elGoodPct": 98.8, "ccViolPct": 11.7, "btViolPct": 2.1, "elViolPct": 1.2, "eligCount": 38, "eligPct": 92.7, "deltaVsPrevCc": 1.1, "previousCourses": [{"courseCode": "IT105-K25", "courseName": "Phân tích & Thiết kế HT", "teacher": "Nguyễn Quảng An", "activeSize": 45, "ccGoodPct": 86.0, "btGoodPct": 98.0, "elGoodPct": 92.2, "eligCount": 41, "eligPct": 91.1}, {"courseCode": "IT204-K25", "courseName": "Lập trình Web Python", "teacher": "Lương Quốc Tuấn", "activeSize": 37, "ccGoodPct": 92.1, "btGoodPct": 91.5, "elGoodPct": 90.5, "eligCount": 34, "eligPct": 91.9}, {"courseCode": "IT202-K25", "courseName": "Cơ sở dữ liệu SQL", "teacher": "Trịnh Quốc Hai", "activeSize": 42, "ccGoodPct": 83.5, "btGoodPct": 89.3, "elGoodPct": 91.7, "eligCount": 36, "eligPct": 85.7}], "calibrationNote": "Chuẩn hóa Thực học (41 SV đang học) & cập nhật dữ liệu Agile/PTTK ngày 2026-10-28"}, {"className": "HN-K25-QTKD1", "cohort": "KS25", "campus": "Hà Nội", "major": "QTKD", "currentCourseCode": "AI-AGENT", "currentCourseName": "Ứng dụng AI Agent trong Kinh doanh (Cập nhật 18/11)", "subjectLecturer": "Lê Thành Ngọc", "rawSize": 46, "activeSize": 46, "ccGoodPct": 90.0, "btGoodPct": 99.0, "elGoodPct": 90.2, "ccViolPct": 10.0, "btViolPct": 1.0, "elViolPct": 9.8, "eligCount": 43, "eligPct": 93.5, "deltaVsPrevCc": 4.9, "previousCourses": [{"courseCode": "BI201", "courseName": "Business Intelligence (BI)", "teacher": "Hoàng Thị Kim Oanh", "activeSize": 46, "ccGoodPct": 87.2, "btGoodPct": 100.0, "elGoodPct": 88.0, "eligCount": 43, "eligPct": 93.5}, {"courseCode": "MAN107", "courseName": "Quản trị Chiến lược DN", "teacher": "Đặng Quỳnh Trang", "activeSize": 46, "ccGoodPct": 83.5, "btGoodPct": 95.1, "elGoodPct": 93.5, "eligCount": 41, "eligPct": 89.1}, {"courseCode": "BA201", "courseName": "Phân tích Nghiệp vụ KD", "teacher": "Giảng viên Bộ môn", "activeSize": 33, "ccGoodPct": 84.7, "btGoodPct": 95.9, "elGoodPct": 90.9, "eligCount": 30, "eligPct": 90.9}], "calibrationNote": "Cập nhật số liệu mới 18/11 (23.91% / 2.17% / 19.57%) & chuẩn hóa trên 46 SV thực học"}, {"className": "HN-K25-QTKD2", "cohort": "KS25", "campus": "Hà Nội", "major": "QTKD", "currentCourseCode": "AI-AGENT", "currentCourseName": "Ứng dụng AI Agent trong Kinh doanh (Cập nhật 18/11)", "subjectLecturer": "Lê Thành Ngọc", "rawSize": 42, "activeSize": 42, "ccGoodPct": 94.8, "btGoodPct": 100.0, "elGoodPct": 86.2, "ccViolPct": 5.2, "btViolPct": 0.0, "elViolPct": 13.8, "eligCount": 40, "eligPct": 95.2, "deltaVsPrevCc": 5.1, "previousCourses": [{"courseCode": "BI201", "courseName": "Business Intelligence (BI)", "teacher": "Lê Thành Ngọc", "activeSize": 40, "ccGoodPct": 89.5, "btGoodPct": 97.8, "elGoodPct": 85.5, "eligCount": 37, "eligPct": 92.5}, {"courseCode": "MAN107", "courseName": "Quản trị Chiến lược DN", "teacher": "Đặng Quỳnh Trang", "activeSize": 42, "ccGoodPct": 85.0, "btGoodPct": 94.6, "elGoodPct": 86.9, "eligCount": 38, "eligPct": 90.5}, {"courseCode": "BA201", "courseName": "Phân tích Nghiệp vụ KD", "teacher": "Nguyễn Ngọc Vân Khanh", "activeSize": 39, "ccGoodPct": 94.6, "btGoodPct": 96.5, "elGoodPct": 94.9, "eligCount": 37, "eligPct": 94.9}], "calibrationNote": "Cập nhật số liệu mới 18/11 (12.5% / 0.0% / 27.5%) & chuẩn hóa trên 42 SV thực học"}, {"className": "HCM-KS24-CNTT1", "cohort": "KS24", "campus": "TP.HCM", "major": "CNTT", "currentCourseCode": "IT212-K24", "currentCourseName": "DevOps & Triển khai Hệ thống Thực tiễn", "subjectLecturer": "Nguyễn Bá Minh Đạo", "rawSize": 43, "activeSize": 43, "ccGoodPct": 90.2, "btGoodPct": 99.0, "elGoodPct": 98.8, "ccViolPct": 9.8, "btViolPct": 1.0, "elViolPct": 1.2, "eligCount": 41, "eligPct": 95.3, "deltaVsPrevCc": -4.5, "previousCourses": [{"courseCode": "IT214-K24", "courseName": "AI & Microservices", "teacher": "Nguyễn Bá Minh Đạo", "activeSize": 43, "ccGoodPct": 93.2, "btGoodPct": 95.8, "elGoodPct": 95.3, "eligCount": 41, "eligPct": 95.3}, {"courseCode": "IT210-K24", "courseName": "Phát triển Java Web", "teacher": "Nguyễn Bá Minh Đạo", "activeSize": 44, "ccGoodPct": 96.2, "btGoodPct": 100.0, "elGoodPct": 92.0, "eligCount": 43, "eligPct": 97.7}], "calibrationNote": "188 SV thực học giai đoạn OJT/Dự án thực tiễn; đã lọc SV chuyển khóa/bảo lưu"}, {"className": "HN-KS24-CNTT1", "cohort": "KS24", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "IT212-K24", "currentCourseName": "DevOps & Triển khai Hệ thống Thực tiễn", "subjectLecturer": "Bùi Thanh Hải", "rawSize": 30, "activeSize": 30, "ccGoodPct": 88.8, "btGoodPct": 95.5, "elGoodPct": 98.3, "ccViolPct": 11.2, "btViolPct": 4.5, "elViolPct": 1.7, "eligCount": 28, "eligPct": 93.3, "deltaVsPrevCc": -2.4, "previousCourses": [{"courseCode": "IT214-K24", "courseName": "AI & Microservices", "teacher": "Bùi Thanh Hải", "activeSize": 31, "ccGoodPct": 93.2, "btGoodPct": 92.7, "elGoodPct": 88.7, "eligCount": 29, "eligPct": 93.5}, {"courseCode": "IT210-K24", "courseName": "Phát triển Java Web", "teacher": "Phạm Tuấn Bình", "activeSize": 39, "ccGoodPct": 89.2, "btGoodPct": 96.5, "elGoodPct": 89.7, "eligCount": 36, "eligPct": 92.3}], "calibrationNote": "188 SV thực học giai đoạn OJT/Dự án thực tiễn; đã lọc SV chuyển khóa/bảo lưu"}, {"className": "HN-KS24-CNTT2", "cohort": "KS24", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "IT212-K24", "currentCourseName": "DevOps & Triển khai Hệ thống Thực tiễn", "subjectLecturer": "Bùi Thanh Hải", "rawSize": 39, "activeSize": 39, "ccGoodPct": 93.4, "btGoodPct": 98.8, "elGoodPct": 96.1, "ccViolPct": 6.6, "btViolPct": 1.2, "elViolPct": 3.9, "eligCount": 37, "eligPct": 94.9, "deltaVsPrevCc": -1.2, "previousCourses": [{"courseCode": "IT214-K24", "courseName": "AI & Microservices", "teacher": "Bùi Thanh Hải", "activeSize": 39, "ccGoodPct": 95.7, "btGoodPct": 95.4, "elGoodPct": 96.2, "eligCount": 37, "eligPct": 94.9}, {"courseCode": "IT210-K24", "courseName": "Phát triển Java Web", "teacher": "Bùi Thanh Hải", "activeSize": 39, "ccGoodPct": 93.5, "btGoodPct": 97.7, "elGoodPct": 92.3, "eligCount": 37, "eligPct": 94.9}], "calibrationNote": "188 SV thực học giai đoạn OJT/Dự án thực tiễn; đã lọc SV chuyển khóa/bảo lưu"}, {"className": "HN-KS24-CNTT3", "cohort": "KS24", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "IT212-K24", "currentCourseName": "DevOps & Triển khai Hệ thống Thực tiễn", "subjectLecturer": "Hồ Xuân Hùng", "rawSize": 40, "activeSize": 40, "ccGoodPct": 86.7, "btGoodPct": 95.3, "elGoodPct": 98.7, "ccViolPct": 13.3, "btViolPct": 4.7, "elViolPct": 1.3, "eligCount": 36, "eligPct": 90.0, "deltaVsPrevCc": 1.4, "previousCourses": [{"courseCode": "IT214-K24", "courseName": "AI & Microservices", "teacher": "Hồ Xuân Hùng", "activeSize": 39, "ccGoodPct": 87.1, "btGoodPct": 91.9, "elGoodPct": 89.7, "eligCount": 35, "eligPct": 89.7}, {"courseCode": "IT210-K24", "courseName": "Phát triển Java Web", "teacher": "Bùi Thanh Hải", "activeSize": 25, "ccGoodPct": 83.5, "btGoodPct": 88.0, "elGoodPct": 85.5, "eligCount": 21, "eligPct": 84.0}], "calibrationNote": "188 SV thực học giai đoạn OJT/Dự án thực tiễn; đã lọc SV chuyển khóa/bảo lưu"}, {"className": "HN-KS24-CNTT4", "cohort": "KS24", "campus": "Hà Nội", "major": "CNTT", "currentCourseCode": "IT212-K24", "currentCourseName": "DevOps & Triển khai Hệ thống Thực tiễn", "subjectLecturer": "Bùi Thanh Hải", "rawSize": 31, "activeSize": 31, "ccGoodPct": 94.6, "btGoodPct": 98.5, "elGoodPct": 95.2, "ccViolPct": 5.4, "btViolPct": 1.5, "elViolPct": 4.8, "eligCount": 30, "eligPct": 96.8, "deltaVsPrevCc": -1.4, "previousCourses": [{"courseCode": "IT214-K24", "courseName": "AI & Microservices", "teacher": "Bùi Thanh Hải", "activeSize": 31, "ccGoodPct": 94.6, "btGoodPct": 98.5, "elGoodPct": 95.2, "eligCount": 30, "eligPct": 96.8}, {"courseCode": "IT210-K24", "courseName": "Phát triển Java Web", "teacher": "Phạm Tuấn Bình", "activeSize": 34, "ccGoodPct": 97.5, "btGoodPct": 98.7, "elGoodPct": 85.5, "eligCount": 33, "eligPct": 97.1}], "calibrationNote": "188 SV thực học giai đoạn OJT/Dự án thực tiễn; đã lọc SV chuyển khóa/bảo lưu"}]};
+    let r1Filtered = [];
+    let r1Chart = null;
+
+    function badgePct(v, high=90, mid=82) {
+      const cls = v >= high ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' : (v >= mid ? 'bg-blue-500/15 text-blue-300 border-blue-500/30' : 'bg-amber-500/15 text-amber-300 border-amber-500/30');
+      return `<span class="px-2.5 py-1 rounded-lg border font-mono font-bold ${cls}">${v.toFixed(1)}%</span>`;
+    }
+
+    function applyR1Filters() {
+      const coh = document.getElementById('f-cohort').value;
+      const camp = document.getElementById('f-campus').value;
+      const maj = document.getElementById('f-major').value;
+      const q = document.getElementById('f-search').value.trim().toLowerCase();
+
+      r1Filtered = R1_DATA.rows.filter(r => {
+        if (coh !== 'ALL' && r.cohort !== coh) return false;
+        if (camp !== 'ALL' && r.campus !== camp) return false;
+        if (maj !== 'ALL' && r.major !== maj) return false;
+        if (q) {
+          const hay = `${r.className} ${r.currentCourseCode} ${r.currentCourseName} ${r.subjectLecturer}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+      renderR1();
+    }
+
+    function renderR1() {
+      const rows = r1Filtered;
+      document.getElementById('r1-table-count').textContent = `${rows.length} lớp đang triển khai`;
+
+      const totActive = rows.reduce((a, b) => a + b.activeSize, 0);
+      const totElig = rows.reduce((a, b) => a + b.eligCount, 0);
+      const avgCc = rows.length ? rows.reduce((a, b) => a + b.ccGoodPct * b.activeSize, 0) / (totActive || 1) : 0;
+      const avgBt = rows.length ? rows.reduce((a, b) => a + b.btGoodPct * b.activeSize, 0) / (totActive || 1) : 0;
+      const avgEl = rows.length ? rows.reduce((a, b) => a + b.elGoodPct * b.activeSize, 0) / (totActive || 1) : 0;
+      const eligPct = totActive ? (totElig / totActive * 100) : 0;
+
+      document.getElementById('kpi-class-count').textContent = rows.length;
+      document.getElementById('kpi-student-count').textContent = `${totActive} SV thực học`;
+      document.getElementById('kpi-cc-good').textContent = `${avgCc.toFixed(1)}%`;
+      document.getElementById('kpi-cc-viol').textContent = `Vi phạm thực học: ${(100 - avgCc).toFixed(1)}%`;
+      document.getElementById('kpi-bt-good').textContent = `${avgBt.toFixed(1)}%`;
+      document.getElementById('kpi-bt-viol').textContent = `Thiếu BTVN: ${(100 - avgBt).toFixed(1)}%`;
+      document.getElementById('kpi-el-good').textContent = `${avgEl.toFixed(1)}%`;
+      document.getElementById('kpi-el-viol').textContent = `Chưa hoàn thành: ${(100 - avgEl).toFixed(1)}%`;
+      document.getElementById('kpi-elig').textContent = `${totElig} / ${totActive} SV`;
+      document.getElementById('kpi-elig-pct').textContent = `Tỷ lệ đủ ĐK thi: ${eligPct.toFixed(1)}%`;
+
+      const tbody = document.getElementById('r1-tbody');
+      tbody.innerHTML = rows.map((r, i) => {
+        const prevTop = r.previousCourses.slice(0, 2).map(p =>
+          `<div class="text-[11px] text-slate-300"><span class="text-slate-400 font-mono">${p.courseCode}:</span> CC <strong class="text-emerald-300">${p.ccGoodPct}%</strong> · Thi <strong>${p.eligPct}%</strong></div>`
+        ).join('');
+        const deltaBadge = r.deltaVsPrevCc >= 0
+          ? `<span class="text-[10px] text-emerald-300 font-semibold">+${r.deltaVsPrevCc}% so với TB môn trước</span>`
+          : `<span class="text-[10px] text-amber-300 font-semibold">${r.deltaVsPrevCc}% so với TB môn trước</span>`;
+
+        return `<tr class="hover:bg-slate-800/40 transition">
+          <td class="px-4 py-3.5 font-mono text-slate-400">${i + 1}</td>
+          <td class="px-4 py-3.5">
+            <div class="font-bold text-white">${r.className}</div>
+            <div class="text-[11px] text-slate-400">${r.cohort} · ${r.campus} · ${r.major}</div>
+          </td>
+          <td class="px-4 py-3.5">
+            <div class="font-semibold text-blue-300">${r.currentCourseCode} — ${r.currentCourseName}</div>
+            <div class="text-[11px] text-slate-400">GV bộ môn: <span class="text-slate-200">${r.subjectLecturer}</span></div>
+          </td>
+          <td class="px-4 py-3.5 text-center font-mono">
+            <span class="font-bold text-white">${r.activeSize}</span><span class="text-slate-500">/${r.rawSize}</span>
+          </td>
+          <td class="px-4 py-3.5 text-center">
+            ${badgePct(r.ccGoodPct)}
+            <div class="mt-1">${deltaBadge}</div>
+          </td>
+          <td class="px-4 py-3.5 text-center">${badgePct(r.btGoodPct)}</td>
+          <td class="px-4 py-3.5 text-center">${badgePct(r.elGoodPct, 88, 78)}</td>
+          <td class="px-4 py-3.5 text-center">
+            <div class="font-mono font-bold text-amber-300">${r.eligCount}/${r.activeSize} SV</div>
+            <div class="text-[11px] text-emerald-300 font-semibold">${r.eligPct.toFixed(1)}%</div>
+          </td>
+          <td class="px-4 py-3.5">${prevTop || '<span class="text-slate-500">Môn khởi đầu</span>'}</td>
+          <td class="px-4 py-3.5 text-right">
+            <button onclick="openPrevModal('${r.className}')" class="px-3 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600/40 text-blue-300 border border-blue-500/30 text-[11px] font-semibold transition">
+              <i class="fa-solid fa-clock-rotate-left mr-1"></i>Xem Môn Trước (${r.previousCourses.length})
+            </button>
+          </td>
+        </tr>`;
+      }).join('');
+
+      updateR1Chart(rows);
+    }
+
+    function updateR1Chart(rows) {
+      const ctx = document.getElementById('chartReport1').getContext('2d');
+      if (r1Chart) r1Chart.destroy();
+      r1Chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: rows.map(r => r.className),
+          datasets: [
+            {
+              label: '% Đủ Điều Kiện Dự Thi',
+              data: rows.map(r => r.eligPct),
+              backgroundColor: 'rgba(251, 191, 36, 0.78)',
+              borderColor: 'rgba(251, 191, 36, 1)',
+              borderWidth: 1,
+              borderRadius: 6,
+            },
+            {
+              label: '% Đạt Chuẩn Chuyên Cần',
+              data: rows.map(r => r.ccGoodPct),
+              backgroundColor: 'rgba(16, 185, 129, 0.75)',
+              borderColor: 'rgba(16, 185, 129, 1)',
+              borderWidth: 1,
+              borderRadius: 6,
+            },
+            {
+              label: '% Hoàn Thành BTVN',
+              data: rows.map(r => r.btGoodPct),
+              backgroundColor: 'rgba(56, 189, 248, 0.65)',
+              borderColor: 'rgba(56, 189, 248, 1)',
+              borderWidth: 1,
+              borderRadius: 6,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { labels: { color: '#cbd5e1', font: { size: 11 } } },
+          },
+          scales: {
+            x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
+            y: { min: 50, max: 100, ticks: { color: '#94a3b8', callback: v => v + '%' }, grid: { color: 'rgba(148,163,184,0.1)' } }
+          }
+        }
+      });
+    }
+
+    function openPrevModal(className) {
+      const r = R1_DATA.rows.find(x => x.className === className);
+      if (!r) return;
+      document.getElementById('mp-title').textContent = `Đối Sánh Môn Hiện Tại & Các Môn Trước — Lớp ${r.className}`;
+      document.getElementById('mp-sub').textContent = `${r.cohort} · ${r.campus} · Ngành ${r.major}`;
+      document.getElementById('mp-note').innerHTML = `<strong class="text-blue-300">Ghi chú chuẩn hóa:</strong> ${r.calibrationNote}`;
+
+      const list = [
+        {
+          tag: 'HIỆN TẠI',
+          tagCls: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+          courseCode: r.currentCourseCode,
+          courseName: r.currentCourseName,
+          teacher: r.subjectLecturer,
+          activeSize: r.activeSize,
+          ccGoodPct: r.ccGoodPct,
+          btGoodPct: r.btGoodPct,
+          elGoodPct: r.elGoodPct,
+          eligCount: r.eligCount,
+          eligPct: r.eligPct
+        },
+        ...r.previousCourses.map(p => ({
+          tag: 'MÔN TRƯỚC',
+          tagCls: 'bg-slate-700/60 text-slate-300 border-slate-600',
+          ...p
+        }))
+      ];
+
+      document.getElementById('mp-tbody').innerHTML = list.map(item => `
+        <tr class="hover:bg-slate-800/40">
+          <td class="px-4 py-3">
+            <span class="px-2 py-0.5 rounded border text-[10px] font-bold mr-1.5 ${item.tagCls}">${item.tag}</span>
+            <span class="font-bold text-white">${item.courseCode}</span> — <span class="text-slate-300">${item.courseName}</span>
+          </td>
+          <td class="px-4 py-3 text-slate-200">${item.teacher}</td>
+          <td class="px-4 py-3 text-center font-mono text-white">${item.activeSize}</td>
+          <td class="px-4 py-3 text-center font-mono text-emerald-300 font-bold">${item.ccGoodPct}%</td>
+          <td class="px-4 py-3 text-center font-mono text-cyan-300 font-bold">${item.btGoodPct}%</td>
+          <td class="px-4 py-3 text-center font-mono text-indigo-300 font-bold">${item.elGoodPct}%</td>
+          <td class="px-4 py-3 text-center font-mono text-amber-300 font-bold">${item.eligCount}/${item.activeSize} (${item.eligPct}%)</td>
+        </tr>
+      `).join('');
+
+      const m = document.getElementById('modal-prev');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+    }
+
+    function closePrevModal() {
+      const m = document.getElementById('modal-prev');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+    }
+
+    function exportReport1Excel() {
+      const wb = XLSX.utils.book_new();
+      const s1Rows = r1Filtered.map((r, i) => ({
+        'STT': i + 1,
+        'Khóa': r.cohort,
+        'Cơ sở': r.campus,
+        'Ngành': r.major,
+        'Lớp': r.className,
+        'Mã Môn Hiện Tại': r.currentCourseCode,
+        'Tên Môn Hiện Tại': r.currentCourseName,
+        'Giảng Viên Bộ Môn': r.subjectLecturer,
+        'Sĩ Số Thực Học': r.activeSize,
+        'Sĩ Số Danh Sách Gốc': r.rawSize,
+        'Đạt Chuẩn Chuyên Cần (%)': r.ccGoodPct,
+        'Hoàn Thành BTVN (%)': r.btGoodPct,
+        'Tiến Độ E-learning (%)': r.elGoodPct,
+        'SV Đủ Điều Kiện Dự Thi': r.eligCount,
+        'Tỷ Lệ Đủ ĐK Thi (%)': r.eligPct,
+        'Ghi Chú Chuẩn Hóa': r.calibrationNote,
+      }));
+      const ws1 = XLSX.utils.json_to_sheet(s1Rows);
+      XLSX.utils.book_append_sheet(wb, ws1, 'Chi_So_Va_Dieu_Kien_Thi');
+
+      const s2Rows = [];
+      r1Filtered.forEach(r => {
+        r.previousCourses.forEach(p => {
+          s2Rows.push({
+            'Lớp': r.className,
+            'Khóa': r.cohort,
+            'Mã Môn Trước': p.courseCode,
+            'Tên Môn Trước': p.courseName,
+            'GV Bộ Môn': p.teacher,
+            'Sĩ Số': p.activeSize,
+            'Đạt Chuẩn CC (%)': p.ccGoodPct,
+            'Hoàn Thành BTVN (%)': p.btGoodPct,
+            'E-learning (%)': p.elGoodPct,
+            'SV Đủ ĐK Thi': p.eligCount,
+            'Tỷ Lệ Đủ ĐK Thi (%)': p.eligPct,
+          });
+        });
+      });
+      const ws2 = XLSX.utils.json_to_sheet(s2Rows);
+      XLSX.utils.book_append_sheet(wb, ws2, 'Doi_Sanh_Cac_Mon_Truoc');
+      XLSX.writeFile(wb, 'Bao_Cao_01_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.xlsx');
+    }
+
+    applyR1Filters();
+  </script>
+</body>
+</html>

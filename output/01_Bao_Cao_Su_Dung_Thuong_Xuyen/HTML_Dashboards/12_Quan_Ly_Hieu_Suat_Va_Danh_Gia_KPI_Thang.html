@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo Cáo 3: Quản Lý Hiệu Suất &amp; Đánh Giá KPI Nhân Sự Hàng Tháng — Rikkei Education QLĐT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 15% 10%, #0f172a 0%, #030712 75%);
+      background-attachment: fixed;
+      color: #f1f5f9;
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    }
+    .glass-card-hover {
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .glass-card-hover:hover {
+      transform: translateY(-2px);
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.5);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.25);
+      border-radius: 6px;
+    }
+    .nav-pill {
+      transition: all 0.2s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased pb-12">
+  <!-- Top Sticky Unified Suite Navigation -->
+  <nav class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/80">
+    <div class="max-w-[1680px] mx-auto px-4 sm:px-6 py-3 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <a href="./00_Cong_Tong_Hop_Toan_Vien.html" class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg shadow-blue-500/25" title="Về Cổng Tổng Hợp">
+          <i class="fa-solid fa-layer-group text-sm"></i>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-extrabold tracking-wider uppercase text-blue-400">Hệ Thống Quản Lý Đào Tạo PTIT × Rikkei</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">Bộ 4 Báo Cáo Đồng Bộ</span>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-0.5">Báo cáo 3/4 · Đánh giá hiệu suất tác nghiệp Worklane &amp; điểm KPI tháng kèm nút gửi mail nhắc nhở cá nhân hiệu suất thấp</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 overflow-x-auto w-full xl:w-auto pb-1 xl:pb-0">
+        <a href="./10_Bao_Cao_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.html" class="nav-pill px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center gap-2 whitespace-nowrap bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-800/80 border-slate-700/60"><i class="fa-solid fa-graduation-cap"></i><span>BC 1: Chỉ số học tập &amp; ĐK thi</span></a><a href="./11_Bao_Cao_Du_Bao_Ty_Le_Qua_Mon_KS25_KS26.html" class="nav-pill px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center gap-2 whitespace-nowrap bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-800/80 border-slate-700/60"><i class="fa-solid fa-shield-halved"></i><span>BC 2: Dự báo qua môn KS25–KS26</span></a><a href="./12_Quan_Ly_Hieu_Suat_Va_Danh_Gia_KPI_Thang.html" class="nav-pill px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center gap-2 whitespace-nowrap bg-blue-600 text-white shadow-lg shadow-blue-600/30 border-blue-400/40"><i class="fa-solid fa-chart-bar"></i><span>BC 3: Hiệu suất &amp; KPI Tháng</span></a><a href="./13_Bao_Cao_Cham_Cong_Mentor_He_Ngan_Han.html" class="nav-pill px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center gap-2 whitespace-nowrap bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-800/80 border-slate-700/60"><i class="fa-solid fa-clock"></i><span>BC 4: Chấm công Hệ ngắn hạn</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-[1680px] mx-auto px-4 sm:px-6 pt-6 space-y-6">
+    <!-- Header -->
+    <section class="glass-card rounded-2xl p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+      <div>
+        <div class="flex flex-wrap items-center gap-2 mb-1.5">
+          <span class="px-2.5 py-0.5 rounded-lg bg-rose-500/15 text-rose-300 border border-rose-500/30 text-[11px] font-bold uppercase tracking-wider">Báo cáo 03</span>
+          <span class="px-2.5 py-0.5 rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/30 text-[11px] font-semibold">Đã đồng bộ Email nhân sự từ Worklane</span>
+        </div>
+        <h1 class="text-2xl font-extrabold text-white tracking-tight">QUẢN LÝ HIỆU SUẤT TÁC NGHIỆP &amp; ĐÁNH GIÁ KPI NHÂN SỰ HÀNG THÁNG</h1>
+        <p class="text-xs text-slate-400 mt-1">
+          Chu kỳ đánh giá: <strong class="text-slate-200">Kỳ 01/10 - 27/10/2026 (15 ngày làm việc - Đã trừ tuần nghỉ du lịch 20/10-23/10)</strong> · Tích hợp đối soát giờ Worklane &amp; Điểm KPI Khối Đào tạo.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-2.5">
+        <button onclick="openBulkLowPerfEmail()" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold flex items-center gap-2 shadow-lg shadow-rose-600/25 transition">
+          <i class="fa-solid fa-envelope-circle-check"></i> Gửi Mail Nhóm Hiệu Suất Thấp (<span id="btn-low-cnt">0</span>)
+        </button>
+        <button onclick="exportReport3Excel()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2 shadow-lg shadow-emerald-600/25 transition">
+          <i class="fa-solid fa-file-excel"></i> Xuất Bảng KPI Excel
+        </button>
+      </div>
+    </section>
+
+    <!-- KPI Cards -->
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Tổng Quân Số Đánh Giá</div>
+        <div class="text-2xl font-extrabold text-white mt-2 font-mono" id="r3-total">0</div>
+        <div class="text-[11px] text-slate-400 mt-1">Nhân sự chính thức Khối Đào tạo</div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1 h-full bg-rose-500"></div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Nhân Sự Hiệu Suất Thấp</div>
+        <div class="text-2xl font-extrabold text-rose-400 mt-2 font-mono" id="r3-low-cnt">0</div>
+        <div class="text-[11px] text-rose-300/80 mt-1">Định mức giờ &lt; 85% / BC ngày &lt; 85%</div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Điểm KPI Tổng Hợp TB</div>
+        <div class="text-2xl font-extrabold text-emerald-400 mt-2 font-mono" id="r3-avg-score">0</div>
+        <div class="text-[11px] text-slate-400 mt-1">50% Chuyên môn + 50% Worklane</div>
+      </div>
+      <div class="glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1 h-full bg-amber-400"></div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Tỷ Lệ Tuân Thủ BC Ngày</div>
+        <div class="text-2xl font-extrabold text-amber-300 mt-2 font-mono" id="r3-avg-comp">0%</div>
+        <div class="text-[11px] text-slate-400 mt-1">Chuẩn tháng 15 ngày công chuẩn</div>
+      </div>
+    </section>
+
+    <!-- Chart + Filters -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-8 glass-card rounded-2xl p-5">
+        <h2 class="text-sm font-bold text-white mb-1">Biểu Đồ Đối Chiếu Hiệu Suất Tháng Nhân Sự (Thang 100đ)</h2>
+        <p class="text-[11px] text-slate-400 mb-3">Màu đỏ đánh dấu cá nhân thuộc diện <strong class="text-rose-300">Hiệu suất thấp / Cần gửi mail nhắc nhở</strong></p>
+        <div class="h-64 relative">
+          <canvas id="chartReport3"></canvas>
+        </div>
+      </div>
+      <div class="lg:col-span-4 glass-card rounded-2xl p-5 space-y-3">
+        <h2 class="text-sm font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-filter text-blue-400"></i> Lọc Nhân Sự &amp; Nhóm Hiệu Suất
+        </h2>
+        <div>
+          <label class="text-[11px] font-semibold text-slate-400 block mb-1">Nhóm xếp loại hiệu suất</label>
+          <select id="r3-f-tier" onchange="applyR3Filters()" class="w-full bg-slate-900 border border-slate-700 text-slate-100 text-xs rounded-xl px-3 py-2 outline-none focus:border-blue-500">
+            <option value="ALL">Tất cả nhân sự</option>
+            <option value="LOW">Chỉ nhóm Hiệu suất thấp (Cần gửi mail)</option>
+            <option value="OK">Nhóm Đạt chuẩn &amp; Xuất sắc</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-[11px] font-semibold text-slate-400 block mb-1">Khối / Phòng ban</label>
+          <select id="r3-f-group" onchange="applyR3Filters()" class="w-full bg-slate-900 border border-slate-700 text-slate-100 text-xs rounded-xl px-3 py-2 outline-none focus:border-blue-500"></select>
+        </div>
+        <div>
+          <label class="text-[11px] font-semibold text-slate-400 block mb-1">Tìm kiếm Tên / Email</label>
+          <input id="r3-f-search" oninput="applyR3Filters()" type="text" placeholder="Nhập họ tên, email..." class="w-full bg-slate-900 border border-slate-700 text-slate-100 text-xs rounded-xl px-3 py-2 outline-none focus:border-blue-500">
+        </div>
+      </div>
+    </section>
+
+    <!-- Staff Table -->
+    <section class="glass-card rounded-2xl overflow-hidden">
+      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+        <h2 class="text-base font-bold text-white">Bảng Chi Tiết Hiệu Suất &amp; Đánh Giá KPI Nhân Sự</h2>
+        <span class="text-xs font-mono text-slate-400" id="r3-count">0 nhân sự</span>
+      </div>
+      <div class="overflow-x-auto custom-scrollbar">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="bg-slate-900/90 text-[11px] font-bold uppercase text-slate-400 border-b border-slate-800">
+              <th class="px-4 py-3.5">STT</th>
+              <th class="px-4 py-3.5">Họ Tên &amp; Email Worklane</th>
+              <th class="px-4 py-3.5">Khối / Vai Trò</th>
+              <th class="px-4 py-3.5 text-center">BC Ngày</th>
+              <th class="px-4 py-3.5 text-center">Giờ Worklane / ĐM</th>
+              <th class="px-4 py-3.5 text-center">KPI Chuyên Môn</th>
+              <th class="px-4 py-3.5 text-center">Điểm Tháng</th>
+              <th class="px-4 py-3.5 text-center">Phân Loại</th>
+              <th class="px-4 py-3.5">Nhận Định Hiệu Suất</th>
+              <th class="px-4 py-3.5 text-right">Thao Tác Mail</th>
+            </tr>
+          </thead>
+          <tbody id="r3-tbody" class="divide-y divide-slate-800/60"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Email Composer for Report 3 -->
+  <div id="modal-r3-mail" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+    <div class="glass-card rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-slate-700">
+      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+        <div>
+          <h3 class="text-base font-bold text-white" id="r3m-title">Soạn Email Đánh Giá KPI Tháng</h3>
+          <p class="text-xs text-slate-400 mt-0.5">Có thể kiểm tra &amp; chỉnh sửa nội dung trước khi mở trình gửi mail</p>
+        </div>
+        <button onclick="closeR3MailModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto custom-scrollbar space-y-4 text-xs">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div>
+            <label class="text-[11px] font-semibold text-slate-400 block mb-1">Người nhận (To - Email Worklane)</label>
+            <input id="r3m-to" type="text" class="w-full bg-slate-900 border border-slate-700 text-blue-300 rounded-xl px-3 py-2 font-mono outline-none focus:border-blue-500">
+          </div>
+          <div>
+            <label class="text-[11px] font-semibold text-slate-400 block mb-1">Tiêu đề Email (Subject)</label>
+            <input id="r3m-subj" type="text" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-3 py-2 outline-none focus:border-blue-500">
+          </div>
+        </div>
+        <div>
+          <label class="text-[11px] font-semibold text-slate-400 block mb-1">Nội dung Email (Có thể chỉnh sửa trực tiếp)</label>
+          <textarea id="r3m-body" rows="13" class="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-xl p-3.5 font-mono text-[11px] leading-relaxed outline-none focus:border-blue-500"></textarea>
+        </div>
+      </div>
+      <div class="px-6 py-4 border-t border-slate-800 flex flex-wrap items-center justify-end gap-2.5 bg-slate-900/60">
+        <button onclick="copyR3Mail()" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-1.5"><i class="fa-regular fa-copy"></i> Sao chép Nội Dung</button>
+        <button onclick="openR3Gmail()" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold flex items-center gap-1.5"><i class="fa-brands fa-google"></i> Mở Gmail Web</button>
+        <button onclick="openR3Mailto()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5"><i class="fa-solid fa-paper-plane"></i> Mở App Mail (mailto:)</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const R3_DATA = {"generatedAt": "2026-11-19 09:40 GMT+7", "auditPeriod": "Kỳ 01/10 - 27/10/2026 (15 ngày làm việc - Đã trừ tuần nghỉ du lịch 20/10-23/10)", "staff": [{"name": "Mai Xuân Chinh", "email": "chinhmai124@gmail.com", "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "role": "Giáo vụ", "rank": 2, "reportedDays": 5, "expectedDays": 15, "complianceRate": 33.3, "declaredHours": 37.0, "targetHours": 120.0, "pctTarget": 30.8, "deficitHours": 83.0, "excessTasks": 2, "freeFloatingTasks": 14, "kpiScore": 93.1, "monthlyScore": 62.5, "perfTier": "Hiệu suất thấp (Báo động)", "isLowPerf": true, "evaluationSummary": "Thiếu 83.0h định mức Worklane (đạt 30.8%); Chấp hành báo cáo ngày thấp (5/15 ngày = 33.3%)", "rating": "Xuất sắc · 💼 Ngôi sao Vận hành Học vụ", "actionNote": "Khai báo 37.0h/120.0h (đạt 30.8%). Còn thiếu 83.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Trịnh Quốc Hai", "email": "haitq@rikkeiacademy.com", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "role": "Giảng viên", "rank": 4, "reportedDays": 7, "expectedDays": 15, "complianceRate": 46.7, "declaredHours": 56.0, "targetHours": 120.0, "pctTarget": 46.7, "deficitHours": 64.0, "excessTasks": 14, "freeFloatingTasks": 13, "kpiScore": 85.4, "monthlyScore": 66.0, "perfTier": "Hiệu suất thấp (Báo động)", "isLowPerf": true, "evaluationSummary": "Thiếu 64.0h định mức Worklane (đạt 46.7%); Chấp hành báo cáo ngày thấp (7/15 ngày = 46.7%); 14 đầu việc khai vượt barem chuẩn Rank; Điểm KPI chuyên môn 85.4/100đ (nhóm Khá/Thấp)", "rating": "Khá · 🌟 Trợ giảng Thắp lửa", "actionNote": "Khai báo 56.0h/120.0h (đạt 46.7%). Còn thiếu 64.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Ngọ Văn Quý", "email": "quynv@rikkeiacademy.com", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Giảng viên", "rank": 4, "reportedDays": 6, "expectedDays": 15, "complianceRate": 40.0, "declaredHours": 57.8, "targetHours": 120.0, "pctTarget": 48.1, "deficitHours": 62.2, "excessTasks": 3, "freeFloatingTasks": 20, "kpiScore": 96.0, "monthlyScore": 70.4, "perfTier": "Hiệu suất thấp (Báo động)", "isLowPerf": true, "evaluationSummary": "Thiếu 62.2h định mức Worklane (đạt 48.1%); Chấp hành báo cáo ngày thấp (6/15 ngày = 40.0%)", "rating": "Xuất sắc · 🚀 Kỹ sư Giải pháp Tiên phong", "actionNote": "Khai báo 57.8h/120.0h (đạt 48.1%). Còn thiếu 62.2h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Phan Ngọc Tài", "email": "taipn@rikkeiedu.io.vn", "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "role": "Trợ giảng thử việc", "rank": 1, "reportedDays": 11, "expectedDays": 15, "complianceRate": 73.3, "declaredHours": 70.8, "targetHours": 120.0, "pctTarget": 59.0, "deficitHours": 49.2, "excessTasks": 12, "freeFloatingTasks": 38, "kpiScore": 82.9, "monthlyScore": 73.8, "perfTier": "Hiệu suất thấp (Báo động)", "isLowPerf": true, "evaluationSummary": "Thiếu 49.2h định mức Worklane (đạt 59.0%); Chấp hành báo cáo ngày thấp (11/15 ngày = 73.3%); 12 đầu việc khai vượt barem chuẩn Rank; Điểm KPI chuyên môn 82.9/100đ (nhóm Khá/Thấp)", "rating": "Khá · 🌟 Trợ giảng Thắp lửa", "actionNote": "Khai báo 70.8h/120.0h (đạt 59.0%). Còn thiếu 49.2h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Phạm Tuấn Bình", "email": "binhpt@rikkeiacademy.com", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "role": "Giảng viên", "rank": 3, "reportedDays": 11, "expectedDays": 15, "complianceRate": 73.3, "declaredHours": 88.0, "targetHours": 120.0, "pctTarget": 73.3, "deficitHours": 32.0, "excessTasks": 10, "freeFloatingTasks": 10, "kpiScore": 82.7, "monthlyScore": 78.0, "perfTier": "Cần cải thiện hiệu suất", "isLowPerf": true, "evaluationSummary": "Thiếu 32.0h định mức Worklane (đạt 73.3%); Chấp hành báo cáo ngày thấp (11/15 ngày = 73.3%); 10 đầu việc khai vượt barem chuẩn Rank; Điểm KPI chuyên môn 82.7/100đ (nhóm Khá/Thấp)", "rating": "Khá · 🌟 Trợ giảng Thắp lửa", "actionNote": "Khai báo 88.0h/120.0h (đạt 73.3%). Còn thiếu 32.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Nguyễn Thị Như Quỳnh", "email": "quynhntn@rikkeiacademy.net", "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Trợ giảng", "rank": 1, "reportedDays": 11, "expectedDays": 15, "complianceRate": 73.3, "declaredHours": 88.0, "targetHours": 120.0, "pctTarget": 73.3, "deficitHours": 32.0, "excessTasks": 0, "freeFloatingTasks": 27, "kpiScore": 84.9, "monthlyScore": 79.1, "perfTier": "Cần cải thiện hiệu suất", "isLowPerf": true, "evaluationSummary": "Thiếu 32.0h định mức Worklane (đạt 73.3%); Chấp hành báo cáo ngày thấp (11/15 ngày = 73.3%); Điểm KPI chuyên môn 84.9/100đ (nhóm Khá/Thấp)", "rating": "Khá · 🌟 Trợ giảng Thắp lửa", "actionNote": "Khai báo 88.0h/120.0h (đạt 73.3%). Còn thiếu 32.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Bùi Thanh Hải", "email": "haibt@rikkeiacademy.com", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "role": "Giảng viên", "rank": 5, "reportedDays": 10, "expectedDays": 15, "complianceRate": 66.7, "declaredHours": 72.0, "targetHours": 120.0, "pctTarget": 60.0, "deficitHours": 48.0, "excessTasks": 4, "freeFloatingTasks": 5, "kpiScore": 97.6, "monthlyScore": 80.1, "perfTier": "Hiệu suất thấp (Báo động)", "isLowPerf": true, "evaluationSummary": "Thiếu 48.0h định mức Worklane (đạt 60.0%); Chấp hành báo cáo ngày thấp (10/15 ngày = 66.7%)", "rating": "Xuất sắc · 🏆 Nhà giáo Cống hiến 20/11", "actionNote": "Khai báo 72.0h/120.0h (đạt 60.0%). Còn thiếu 48.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Phạm Ngọc Kiên", "email": "kienpn@rikkeiedu.io.vn", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Trợ giảng", "rank": 2, "reportedDays": 14, "expectedDays": 15, "complianceRate": 93.3, "declaredHours": 92.5, "targetHours": 120.0, "pctTarget": 77.1, "deficitHours": 27.5, "excessTasks": 9, "freeFloatingTasks": 55, "kpiScore": 84.8, "monthlyScore": 84.2, "perfTier": "Cần cải thiện hiệu suất", "isLowPerf": true, "evaluationSummary": "Thiếu 27.5h định mức Worklane (đạt 77.1%); Điểm KPI chuyên môn 84.8/100đ (nhóm Khá/Thấp)", "rating": "Khá · 🌟 Trợ giảng Thắp lửa", "actionNote": "Khai báo 92.5h/120.0h (đạt 77.1%). Còn thiếu 27.5h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Triệu Thị Thanh Tâm", "email": "tamttt@rikkeiedu.io.vn", "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Trợ giảng", "rank": 1, "reportedDays": 12, "expectedDays": 15, "complianceRate": 80.0, "declaredHours": 95.5, "targetHours": 120.0, "pctTarget": 79.6, "deficitHours": 24.5, "excessTasks": 0, "freeFloatingTasks": 47, "kpiScore": 89.6, "monthlyScore": 84.7, "perfTier": "Cần cải thiện hiệu suất", "isLowPerf": true, "evaluationSummary": "Thiếu 24.5h định mức Worklane (đạt 79.6%); Chấp hành báo cáo ngày thấp (12/15 ngày = 80.0%)", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 95.5h/120.0h (đạt 79.6%). Còn thiếu 24.5h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Lương Quốc Tuấn", "email": "tuanlq@rikkeiacademy.com", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Giảng viên", "rank": 3, "reportedDays": 12, "expectedDays": 15, "complianceRate": 80.0, "declaredHours": 96.2, "targetHours": 120.0, "pctTarget": 80.2, "deficitHours": 23.8, "excessTasks": 4, "freeFloatingTasks": 62, "kpiScore": 91.7, "monthlyScore": 85.9, "perfTier": "Cần cải thiện hiệu suất", "isLowPerf": true, "evaluationSummary": "Thiếu 23.8h định mức Worklane (đạt 80.2%); Chấp hành báo cáo ngày thấp (12/15 ngày = 80.0%)", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 96.2h/120.0h (đạt 80.2%). Còn thiếu 23.8h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Nguyễn Đức Minh", "email": "minhnd@rikkeiacademy.vn", "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "role": "Giảng viên", "rank": 4, "reportedDays": 13, "expectedDays": 15, "complianceRate": 86.7, "declaredHours": 96.0, "targetHours": 120.0, "pctTarget": 80.0, "deficitHours": 24.0, "excessTasks": 17, "freeFloatingTasks": 12, "kpiScore": 89.6, "monthlyScore": 86.1, "perfTier": "Cần cải thiện hiệu suất", "isLowPerf": true, "evaluationSummary": "Thiếu 24.0h định mức Worklane (đạt 80.0%); 17 đầu việc khai vượt barem chuẩn Rank", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 96.0h/120.0h (đạt 80.0%). Còn thiếu 24.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Lưu Hoàng Xuân Nguyên", "email": "nguyenlxh@rikkeieducation.com", "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "role": "Trợ giảng", "rank": 2, "reportedDays": 13, "expectedDays": 15, "complianceRate": 86.7, "declaredHours": 97.8, "targetHours": 120.0, "pctTarget": 81.5, "deficitHours": 22.2, "excessTasks": 2, "freeFloatingTasks": 64, "kpiScore": 90.4, "monthlyScore": 87.0, "perfTier": "Cần cải thiện hiệu suất", "isLowPerf": true, "evaluationSummary": "Thiếu 22.2h định mức Worklane (đạt 81.5%)", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 97.8h/120.0h (đạt 81.5%). Còn thiếu 22.2h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Trần Quốc Tuấn", "email": "tuantq@rikkeiacademy.com", "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "role": "Giảng viên", "rank": 3, "reportedDays": 13, "expectedDays": 15, "complianceRate": 86.7, "declaredHours": 100.0, "targetHours": 120.0, "pctTarget": 83.3, "deficitHours": 20.0, "excessTasks": 13, "freeFloatingTasks": 29, "kpiScore": 90.6, "monthlyScore": 87.6, "perfTier": "Cần cải thiện hiệu suất", "isLowPerf": true, "evaluationSummary": "Thiếu 20.0h định mức Worklane (đạt 83.3%); 13 đầu việc khai vượt barem chuẩn Rank", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 100.0h/120.0h (đạt 83.3%). Còn thiếu 20.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Đỗ Hà Khanh", "email": "dohakhanh81204@gmail.com", "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "role": "Giảng viên", "rank": 3, "reportedDays": 13, "expectedDays": 15, "complianceRate": 86.7, "declaredHours": 105.5, "targetHours": 120.0, "pctTarget": 87.9, "deficitHours": 14.5, "excessTasks": 0, "freeFloatingTasks": 70, "kpiScore": 86.0, "monthlyScore": 86.7, "perfTier": "Đạt chuẩn", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "THIẾU GIỜ 40H", "actionNote": "Khai báo 105.5h/120.0h (đạt 87.9%). Còn thiếu 14.5h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Nguyễn Ngọc Vân Khanh", "email": "khanhnnv@rikkeieducation.top", "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Giảng viên", "rank": 3, "reportedDays": 13, "expectedDays": 15, "complianceRate": 86.7, "declaredHours": 104.0, "targetHours": 120.0, "pctTarget": 86.7, "deficitHours": 16.0, "excessTasks": 5, "freeFloatingTasks": 15, "kpiScore": 90.2, "monthlyScore": 88.5, "perfTier": "Đạt chuẩn", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 104.0h/120.0h (đạt 86.7%). Còn thiếu 16.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Lê Hà Thanh Sang", "email": "sanglht@rikkeiacademy.com", "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "role": "Giảng viên", "rank": 4, "reportedDays": 13, "expectedDays": 15, "complianceRate": 86.7, "declaredHours": 104.0, "targetHours": 120.0, "pctTarget": 86.7, "deficitHours": 16.0, "excessTasks": 13, "freeFloatingTasks": 52, "kpiScore": 91.9, "monthlyScore": 89.3, "perfTier": "Đạt chuẩn", "isLowPerf": false, "evaluationSummary": "13 đầu việc khai vượt barem chuẩn Rank", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 104.0h/120.0h (đạt 86.7%). Còn thiếu 16.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Võ Thị Ngọc Giàu", "email": "giauvtn@rikkeiedu.org", "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hồ Chí Minh", "role": "Giảng viên", "rank": 3, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 111.2, "targetHours": 120.0, "pctTarget": 92.7, "deficitHours": 8.8, "excessTasks": 0, "freeFloatingTasks": 95, "kpiScore": 89.9, "monthlyScore": 92.8, "perfTier": "Đạt chuẩn", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 111.2h/120.0h (đạt 92.7%). Còn thiếu 8.8h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Đặng Quỳnh Trang", "email": "trangdq@rikkeieducation.com", "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Giảng viên", "rank": 3, "reportedDays": 14, "expectedDays": 15, "complianceRate": 93.3, "declaredHours": 119.8, "targetHours": 120.0, "pctTarget": 99.8, "deficitHours": 0.2, "excessTasks": 3, "freeFloatingTasks": 69, "kpiScore": 90.7, "monthlyScore": 93.9, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 119.8h/120.0h (đạt 99.8%). Còn thiếu 0.2h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Phạm Viết Hùng", "email": "22.phamviethung.12a12@gmail.com", "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "role": "Trợ giảng", "rank": 2, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 115.0, "targetHours": 120.0, "pctTarget": 95.8, "deficitHours": 5.0, "excessTasks": 31, "freeFloatingTasks": 43, "kpiScore": 90.5, "monthlyScore": 94.0, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "31 đầu việc khai vượt barem chuẩn Rank", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 115.0h/120.0h (đạt 95.8%). Còn thiếu 5.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Lê Thành Ngọc", "email": "ngoclt@rikkei.edu.vn", "group": "LMS AI", "campus": "Cơ sở Hồ Chí Minh", "role": "Giảng viên", "rank": 3, "reportedDays": 14, "expectedDays": 15, "complianceRate": 93.3, "declaredHours": 112.0, "targetHours": 120.0, "pctTarget": 93.3, "deficitHours": 8.0, "excessTasks": 14, "freeFloatingTasks": 17, "kpiScore": 94.7, "monthlyScore": 94.0, "perfTier": "Đạt chuẩn", "isLowPerf": false, "evaluationSummary": "14 đầu việc khai vượt barem chuẩn Rank", "rating": "Xuất sắc · 🚀 Kỹ sư Giải pháp Tiên phong", "actionNote": "Khai báo 112.0h/120.0h (đạt 93.3%). Còn thiếu 8.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Lê Nhựt Mi", "email": "miln@rikkeiedu.org", "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hồ Chí Minh", "role": "Giảng viên", "rank": 3, "reportedDays": 14, "expectedDays": 15, "complianceRate": 93.3, "declaredHours": 110.5, "targetHours": 120.0, "pctTarget": 92.1, "deficitHours": 9.5, "excessTasks": 2, "freeFloatingTasks": 75, "kpiScore": 97.8, "monthlyScore": 95.2, "perfTier": "Đạt chuẩn", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Xuất sắc · 🏆 Nhà giáo Cống hiến 20/11", "actionNote": "Khai báo 110.5h/120.0h (đạt 92.1%). Còn thiếu 9.5h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Nguyễn Thu Uyên", "email": "uyennt@rikkeieducation.com", "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "role": "Giảng viên", "rank": 3, "reportedDays": 13, "expectedDays": 13, "complianceRate": 100.0, "declaredHours": 107.0, "targetHours": 104.0, "pctTarget": 102.9, "deficitHours": 0.0, "excessTasks": 5, "freeFloatingTasks": 44, "kpiScore": 89.1, "monthlyScore": 95.4, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Đạt định mức 107.0h/104h nhưng có 44 task ngoài barem và dôi dư +28.0h so với chuẩn Master. Cần nghiệm thu sản phẩm thực tế."}, {"name": "Nguyễn Xuân Bách", "email": "bachnx@rikkeiacademy.com", "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "role": "Giảng viên", "rank": 4, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 110.0, "targetHours": 120.0, "pctTarget": 91.7, "deficitHours": 10.0, "excessTasks": 3, "freeFloatingTasks": 61, "kpiScore": 95.8, "monthlyScore": 95.4, "perfTier": "Đạt chuẩn", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Xuất sắc · 💼 Ngôi sao Vận hành Học vụ", "actionNote": "Khai báo 110.0h/120.0h (đạt 91.7%). Còn thiếu 10.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Nguyễn Công Hưởng", "email": "huongnc@rikkeiacademy.com", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "role": "Giảng viên", "rank": 3, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 124.0, "targetHours": 120.0, "pctTarget": 103.3, "deficitHours": 0.0, "excessTasks": 13, "freeFloatingTasks": 23, "kpiScore": 89.0, "monthlyScore": 95.5, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "13 đầu việc khai vượt barem chuẩn Rank", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Đạt định mức 124.0h/120h nhưng có 4 task nghiệp vụ làm chậm hơn 1.5x - 3x barem chuẩn. Đề xuất Leader phỏng vấn chuyên môn."}, {"name": "Nguyễn Hồng Nhung", "email": "nhungnh@rikkeiacademy.net", "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "role": "Giảng viên", "rank": 3, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 121.5, "targetHours": 120.0, "pctTarget": 101.2, "deficitHours": 0.0, "excessTasks": 2, "freeFloatingTasks": 55, "kpiScore": 90.2, "monthlyScore": 95.5, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Đạt định mức 121.5h/120h nhưng có 55 task ngoài barem và dôi dư +32.5h so với chuẩn Master. Cần nghiệm thu sản phẩm thực tế."}, {"name": "Hoàng Thị Hậu", "email": "hauht@rikkeieducation.com", "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Giảng viên", "rank": 5, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 119.0, "targetHours": 120.0, "pctTarget": 99.2, "deficitHours": 1.0, "excessTasks": 5, "freeFloatingTasks": 63, "kpiScore": 91.8, "monthlyScore": 95.7, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Khai báo 119.0h/120.0h (đạt 99.2%). Còn thiếu 1.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Lại Trung Lâm", "email": "laitrunglamjr@gmail.com", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Trợ giảng", "rank": 2, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 121.8, "targetHours": 120.0, "pctTarget": 101.5, "deficitHours": 0.0, "excessTasks": 5, "freeFloatingTasks": 88, "kpiScore": 92.5, "monthlyScore": 96.7, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Đạt định mức 121.8h/120h nhưng có 88 task ngoài barem và dôi dư +0.0h so với chuẩn Master. Cần nghiệm thu sản phẩm thực tế."}, {"name": "Lâm Tùng Dương", "email": "duonglt@rikkeieducation.com", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Giảng viên", "rank": 3, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 125.8, "targetHours": 120.0, "pctTarget": 104.8, "deficitHours": 0.0, "excessTasks": 9, "freeFloatingTasks": 71, "kpiScore": 90.7, "monthlyScore": 96.8, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Đạt định mức 125.8h/120h nhưng có 5 task nghiệp vụ làm chậm hơn 1.5x - 3x barem chuẩn. Đề xuất Leader phỏng vấn chuyên môn."}, {"name": "Nguyễn Quảng An", "email": "annq@rikkeiacademy.com", "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - Ngọc Trục", "role": "Giảng viên", "rank": 4, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 127.5, "targetHours": 120.0, "pctTarget": 106.2, "deficitHours": 0.0, "excessTasks": 18, "freeFloatingTasks": 3, "kpiScore": 90.0, "monthlyScore": 96.9, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "18 đầu việc khai vượt barem chuẩn Rank", "rating": "Tốt · 🥈 Giảng viên Truyền cảm hứng", "actionNote": "Đạt định mức 127.5h/120h nhưng có 17 task nghiệp vụ làm chậm hơn 1.5x - 3x barem chuẩn. Đề xuất Leader phỏng vấn chuyên môn."}, {"name": "Nguyễn Hữu Minh Dương", "email": "duongnhm@rikkeiacademy.com", "group": "Phòng Giải pháp LMS", "campus": "Hà Nội", "role": "Kỹ sư Hệ thống LMS", "rank": 5, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 120.0, "targetHours": 120.0, "pctTarget": 100.0, "deficitHours": 0.0, "excessTasks": 0, "freeFloatingTasks": 0, "kpiScore": 94.1, "monthlyScore": 97.0, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành xuất sắc KPI chuyên môn (94.1đ)", "rating": "Xuất sắc · 🚀 Kỹ sư Giải pháp Tiên phong", "actionNote": "Phát triển Core LMS, API Gateway, tối ưu cơ sở dữ liệu học tập"}, {"name": "Lê Thị Bảo Yến", "email": "yenltb@rikkeiedu.org", "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hồ Chí Minh", "role": "Trợ giảng", "rank": 2, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 118.0, "targetHours": 120.0, "pctTarget": 98.3, "deficitHours": 2.0, "excessTasks": 7, "freeFloatingTasks": 17, "kpiScore": 96.6, "monthlyScore": 97.8, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Xuất sắc · 🏆 Nhà giáo Cống hiến 20/11", "actionNote": "Khai báo 118.0h/120.0h (đạt 98.3%). Còn thiếu 2.0h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Trần Thị Mỹ Phước", "email": "phuocttm@rikkeieducation.id.vn", "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hồ Chí Minh", "role": "Giáo vụ", "rank": 2, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 119.5, "targetHours": 120.0, "pctTarget": 99.6, "deficitHours": 0.5, "excessTasks": 4, "freeFloatingTasks": 79, "kpiScore": 96.6, "monthlyScore": 98.2, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Xuất sắc · 💼 Ngôi sao Vận hành Học vụ", "actionNote": "Khai báo 119.5h/120.0h (đạt 99.6%). Còn thiếu 0.5h trong kỳ cần giải trình hoặc bù giờ."}, {"name": "Huỳnh Thị Kim Khánh", "email": "khanhhtk@rikkeieducation.com", "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hồ Chí Minh", "role": "Giảng viên", "rank": 3, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 123.2, "targetHours": 120.0, "pctTarget": 102.7, "deficitHours": 0.0, "excessTasks": 4, "freeFloatingTasks": 60, "kpiScore": 97.5, "monthlyScore": 99.6, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Xuất sắc · 🏆 Nhà giáo Cống hiến 20/11", "actionNote": "Đạt định mức 123.2h/120h nhưng có 60 task ngoài barem và dôi dư +0.2h so với chuẩn Master. Cần nghiệm thu sản phẩm thực tế."}, {"name": "Lò Thị Ngọc Anh", "email": "anhltn1@rikkeiacademy.net", "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "role": "Giảng viên", "rank": 5, "reportedDays": 15, "expectedDays": 15, "complianceRate": 100.0, "declaredHours": 135.5, "targetHours": 120.0, "pctTarget": 112.9, "deficitHours": 0.0, "excessTasks": 3, "freeFloatingTasks": 69, "kpiScore": 97.4, "monthlyScore": 101.7, "perfTier": "Xuất sắc", "isLowPerf": false, "evaluationSummary": "Hoàn thành tốt định mức giờ & chỉ số đào tạo", "rating": "Xuất sắc · 🏆 Nhà giáo Cống hiến 20/11", "actionNote": "Đạt định mức 135.5h/120h nhưng có 69 task ngoài barem và dôi dư +43.0h so với chuẩn Master. Cần nghiệm thu sản phẩm thực tế."}]};
+    let r3Filtered = [];
+    let r3Chart = null;
+
+    function initR3Filters() {
+      const grps = [...new Set(R3_DATA.staff.map(s => s.group))].sort();
+      const sel = document.getElementById('r3-f-group');
+      sel.innerHTML = '<option value="ALL">Tất cả Khối / Phòng ban</option>' + grps.map(g => `<option value="${g}">${g}</option>`).join('');
+    }
+
+    function applyR3Filters() {
+      const tier = document.getElementById('r3-f-tier').value;
+      const grp = document.getElementById('r3-f-group').value;
+      const q = document.getElementById('r3-f-search').value.trim().toLowerCase();
+
+      r3Filtered = R3_DATA.staff.filter(s => {
+        if (tier === 'LOW' && !s.isLowPerf) return false;
+        if (tier === 'OK' && s.isLowPerf) return false;
+        if (grp !== 'ALL' && s.group !== grp) return false;
+        if (q) {
+          const hay = `${s.name} ${s.email} ${s.role} ${s.group}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+      renderR3();
+    }
+
+    function renderR3() {
+      const rows = r3Filtered;
+      const allLow = R3_DATA.staff.filter(s => s.isLowPerf);
+      document.getElementById('btn-low-cnt').textContent = allLow.length;
+      document.getElementById('r3-total').textContent = rows.length;
+      document.getElementById('r3-low-cnt').textContent = rows.filter(s => s.isLowPerf).length;
+      const avgM = rows.length ? rows.reduce((a, b) => a + b.monthlyScore, 0) / rows.length : 0;
+      const avgC = rows.length ? rows.reduce((a, b) => a + b.complianceRate, 0) / rows.length : 0;
+      document.getElementById('r3-avg-score').textContent = avgM.toFixed(1) + 'đ';
+      document.getElementById('r3-avg-comp').textContent = avgC.toFixed(1) + '%';
+      document.getElementById('r3-count').textContent = `${rows.length} nhân sự`;
+
+      document.getElementById('r3-tbody').innerHTML = rows.map((s, i) => {
+        const tierCls = s.isLowPerf
+          ? 'bg-rose-500/15 text-rose-300 border-rose-500/30'
+          : (s.monthlyScore >= 93 ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' : 'bg-blue-500/15 text-blue-300 border-blue-500/30');
+        const mailBtn = s.isLowPerf
+          ? `<button onclick="openR3SingleMail('${s.name}')" class="px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-[11px] font-bold flex items-center gap-1.5 ml-auto shadow-md shadow-rose-600/20"><i class="fa-solid fa-envelope"></i> Gửi Mail Nhắc Nhở</button>`
+          : `<button onclick="openR3SingleMail('${s.name}')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-[11px] font-semibold flex items-center gap-1.5 ml-auto"><i class="fa-regular fa-envelope"></i> Gửi Mail</button>`;
+        return `<tr class="hover:bg-slate-800/40 transition ${s.isLowPerf ? 'bg-rose-950/15' : ''}">
+          <td class="px-4 py-3 font-mono text-slate-400">${i + 1}</td>
+          <td class="px-4 py-3">
+            <div class="font-bold text-white">${s.name}</div>
+            <div class="text-[11px] font-mono ${s.email ? 'text-blue-300' : 'text-slate-500'}">${s.email || 'Chưa gắn email'}</div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="text-slate-200 font-semibold">${s.role} (Rank ${s.rank})</div>
+            <div class="text-[11px] text-slate-400">${s.group}</div>
+          </td>
+          <td class="px-4 py-3 text-center font-mono">
+            <div class="${s.complianceRate < 85 ? 'text-rose-300 font-bold' : 'text-emerald-300'}">${s.reportedDays}/${s.expectedDays}</div>
+            <div class="text-[10px] text-slate-400">${s.complianceRate}%</div>
+          </td>
+          <td class="px-4 py-3 text-center font-mono">
+            <div class="${s.pctTarget < 85 ? 'text-rose-300 font-bold' : 'text-slate-200'}">${s.declaredHours}/${s.targetHours}h</div>
+            <div class="text-[10px] text-slate-400">${s.pctTarget}%</div>
+          </td>
+          <td class="px-4 py-3 text-center font-mono font-bold text-cyan-300">${s.kpiScore}đ</td>
+          <td class="px-4 py-3 text-center font-mono font-extrabold ${s.isLowPerf ? 'text-rose-400' : 'text-emerald-400'}">${s.monthlyScore}đ</td>
+          <td class="px-4 py-3 text-center"><span class="px-2 py-0.5 rounded-md border text-[10px] font-bold ${tierCls}">${s.perfTier}</span></td>
+          <td class="px-4 py-3 text-[11px] text-slate-300 max-w-xs">${s.evaluationSummary}</td>
+          <td class="px-4 py-3 text-right">${mailBtn}</td>
+        </tr>`;
+      }).join('');
+
+      const ctx = document.getElementById('chartReport3').getContext('2d');
+      if (r3Chart) r3Chart.destroy();
+      r3Chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: rows.map(s => s.name),
+          datasets: [{
+            label: 'Điểm Hiệu Suất Tháng (100đ)',
+            data: rows.map(s => s.monthlyScore),
+            backgroundColor: rows.map(s => s.isLowPerf ? 'rgba(244, 63, 94, 0.8)' : 'rgba(16, 185, 129, 0.72)'),
+            borderRadius: 5,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: '#94a3b8', font: { size: 9 } }, grid: { display: false } },
+            y: { min: 30, max: 100, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(148,163,184,0.1)' } }
+          }
+        }
+      });
+    }
+
+    function openR3SingleMail(name) {
+      const s = R3_DATA.staff.find(x => x.name === name);
+      if (!s) return;
+      document.getElementById('r3m-title').textContent = `Soạn Email Đánh Giá KPI — ${s.name}`;
+      document.getElementById('r3m-to').value = s.email || '';
+      document.getElementById('r3m-subj').value = `[Rikkei Education - Ban QLĐT] Thông báo kết quả hiệu suất & KPI tháng — ${s.name} (${s.perfTier})`;
+      document.getElementById('r3m-body').value = [
+        `Kính gửi Anh/Chị ${s.name} (${s.role} - ${s.group}),`,
+        ``,
+        `Ban Quản lý Đào tạo xin gửi thông báo đối soát hiệu suất tác nghiệp Worklane và đánh giá KPI tháng (${R3_DATA.auditPeriod}):`,
+        ``,
+        `I. TỔNG HỢP CHỈ SỐ HIỆU SUẤT THÁNG:`,
+        `- Chấp hành báo cáo ngày: ${s.reportedDays}/${s.expectedDays} ngày (${s.complianceRate}%)`,
+        `- Tổng giờ khai báo Worklane: ${s.declaredHours}h / ${s.targetHours}h định mức (${s.pctTarget}%) — Thiếu hụt: ${s.deficitHours}h`,
+        `- Điểm đánh giá KPI chuyên môn: ${s.kpiScore} / 100đ`,
+        `- Điểm Hiệu suất tổng hợp tháng: ${s.monthlyScore} / 100đ — Xếp loại: ${s.perfTier}`,
+        `- Đầu việc cần lưu ý: ${s.excessTasks} task khai vượt chuẩn Rank; ${s.freeFloatingTasks} task ngoài danh mục chuẩn.`,
+        ``,
+        `II. ĐÁNH GIÁ & YÊU CẦU KHẮC PHỤC:`,
+        `- Điểm cần cải thiện: ${s.evaluationSummary}`,
+        `- Đề nghị thực hiện trong kỳ tới: Thực hiện báo cáo ngày đầy đủ trên hệ thống Worklane trước 18h30 hàng ngày, chuẩn hóa đầu việc đúng định mức Rank và trao đổi trực tiếp với Leader khối nếu có biến động lịch giảng dạy.`,
+        ``,
+        `Mọi phản hồi đối soát xin gửi về Ban QLĐT trong vòng 48 giờ kể từ khi nhận email.`,
+        `Trân trọng,`,
+        `Ban Quản lý Đào tạo PTIT × Rikkei Education`
+      ].join('\n');
+      const m = document.getElementById('modal-r3-mail');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+    }
+
+    function openBulkLowPerfEmail() {
+      const lows = R3_DATA.staff.filter(s => s.isLowPerf);
+      const emails = lows.map(s => s.email).filter(Boolean).join(', ');
+      document.getElementById('r3m-title').textContent = `Gửi Email Hàng Loạt Nhóm Hiệu Suất Thấp (${lows.length} nhân sự)`;
+      document.getElementById('r3m-to').value = emails;
+      document.getElementById('r3m-subj').value = `[Rikkei Education - Ban QLĐT] Nhắc nhở chấn chỉnh hiệu suất báo cáo Worklane & KPI tháng`;
+      const lines = lows.map((s, idx) =>
+        `${idx + 1}. ${s.name} (${s.group}): Điểm tháng ${s.monthlyScore}đ | BC ngày ${s.reportedDays}/${s.expectedDays} (${s.complianceRate}%) | Giờ ${s.declaredHours}/${s.targetHours}h (${s.pctTarget}%)`
+      );
+      document.getElementById('r3m-body').value = [
+        `Kính gửi các Anh/Chị Giảng viên, Trợ giảng & Giáo vụ trong danh sách dưới đây,`,
+        ``,
+        `Qua rà soát dữ liệu Worklane và chỉ số KPI kỳ ${R3_DATA.auditPeriod}, Ban QLĐT ghi nhận một số nhân sự chưa đạt định mức giờ tác nghiệp (< 85%) hoặc thiếu báo cáo ngày:`,
+        ``,
+        ...lines,
+        ``,
+        `Đề nghị các Anh/Chị nghiêm túc rà soát, bổ sung đầy đủ nhật ký công việc hàng ngày và làm việc với Leader trực tiếp để khắc phục ngay trong tuần tới.`,
+        ``,
+        `Trân trọng,`,
+        `Ban Quản lý Đào tạo PTIT × Rikkei Education`
+      ].join('\n');
+      const m = document.getElementById('modal-r3-mail');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+    }
+
+    function closeR3MailModal() {
+      const m = document.getElementById('modal-r3-mail');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+    }
+
+    function copyR3Mail() {
+      const txt = `To: ${document.getElementById('r3m-to').value}\nSubject: ${document.getElementById('r3m-subj').value}\n\n${document.getElementById('r3m-body').value}`;
+      navigator.clipboard.writeText(txt).then(() => alert('Đã sao chép toàn bộ nội dung email!'));
+    }
+
+    function openR3Mailto() {
+      const to = encodeURIComponent(document.getElementById('r3m-to').value);
+      const su = encodeURIComponent(document.getElementById('r3m-subj').value);
+      const bo = encodeURIComponent(document.getElementById('r3m-body').value);
+      window.location.href = `mailto:${to}?subject=${su}&body=${bo}`;
+    }
+
+    function openR3Gmail() {
+      const to = encodeURIComponent(document.getElementById('r3m-to').value);
+      const su = encodeURIComponent(document.getElementById('r3m-subj').value);
+      const bo = encodeURIComponent(document.getElementById('r3m-body').value);
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${su}&body=${bo}`, '_blank');
+    }
+
+    function exportReport3Excel() {
+      const wb = XLSX.utils.book_new();
+      const rows = r3Filtered.map((s, i) => ({
+        'STT': i + 1,
+        'Họ và Tên': s.name,
+        'Email Worklane': s.email || 'Chưa có',
+        'Khối': s.group,
+        'Vai trò': s.role,
+        'Rank': s.rank,
+        'Số ngày báo cáo': `${s.reportedDays}/${s.expectedDays}`,
+        'Tuân thủ BC ngày (%)': s.complianceRate,
+        'Giờ Worklane': s.declaredHours,
+        'Định mức (h)': s.targetHours,
+        'Đạt định mức giờ (%)': s.pctTarget,
+        'KPI chuyên môn': s.kpiScore,
+        'Điểm tháng tổng hợp': s.monthlyScore,
+        'Xếp loại': s.perfTier,
+        'Nhận định chi tiết': s.evaluationSummary,
+      }));
+      XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'KPI_Nhan_Su_Thang');
+      XLSX.writeFile(wb, 'Bao_Cao_03_Quan_Ly_Hieu_Suat_KPI_Thang.xlsx');
+    }
+
+    initR3Filters();
+    applyR3Filters();
+  </script>
+</body>
+</html>
