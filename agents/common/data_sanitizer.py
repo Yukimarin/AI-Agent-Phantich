@@ -7,6 +7,10 @@ import re
 from datetime import datetime, date
 from collections import defaultdict
 from openpyxl.utils import get_column_letter
+try:
+    from excel_units import to_percent
+except ImportError:
+    from agents.common.excel_units import to_percent
 
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
@@ -190,9 +194,9 @@ def generate_classes_metrics_cache(excel_path, output_json_path="data/processed/
                     
                     if cc_val is not None or bt_val is not None or el_val is not None:
                         try:
-                            cc = float(cc_val) if cc_val is not None else 0.0
-                            bt = float(bt_val) if bt_val is not None else 0.0
-                            el = float(el_val) if el_val is not None else 0.0
+                            cc = to_percent(sheet, cc_val) if cc_val is not None else 0.0
+                            bt = to_percent(sheet, bt_val) if bt_val is not None else 0.0
+                            el = to_percent(sheet, el_val) if el_val is not None else 0.0
                             metrics_by_date[d_str] = {
                                 "cc": cc,
                                 "bt": bt,

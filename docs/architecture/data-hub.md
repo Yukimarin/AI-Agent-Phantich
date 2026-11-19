@@ -82,8 +82,10 @@ data/
 | **M1 Chỉ số lớp** | `student_metrics`, `registry` | Đánh giá từng lớp + đề xuất cải thiện theo vấn đề (CC/BT/EL) |
 | **M2 Dự báo qua môn** | Kết quả M1 + `grades` | Tỷ lệ qua môn dự báo theo lớp và sinh viên, Care List |
 | **M3 Hiệu suất GV/TG** | `staff_activity`, `registry`, kết quả M1 | Vi phạm báo cáo Worklane, trễ dự án/task, vi phạm quy định đào tạo → điểm hiệu suất |
+| **M4 Chẩn đoán lớp** (đã có, 09/10) | `student_metrics`, `raw/lms` (danh sách SV) | Gộp mọi môn của lớp: cấp lớp/cấp môn, SV vi phạm đa môn, vắng toàn bộ, mã tạm, lệch danh sách giữa các môn |
 
 Mỗi module xuất 2 file: `result.json` (đầy đủ, cho renderer) và `summary.json` (≤ 5KB, cho AI đọc).
+Nhận định của AI hiển thị trên báo cáo lưu riêng `nhan_dinh.json` trong thư mục module, gắn `dataAt` của manifest; renderer cảnh báo nếu `dataAt` lệch với dữ liệu hiện tại.
 **Thêm báo cáo mới** = tạo thư mục module mới theo cùng giao diện; không đụng tới dữ liệu hay module khác.
 
 ### 2.4 Bốn cổng kiểm định — nơi "ngữ cảnh trước đó" được thực thi

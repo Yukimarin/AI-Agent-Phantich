@@ -70,3 +70,17 @@ Tài liệu này lưu trữ chi tiết toàn bộ nhật ký các phiên làm vi
 1. **Tối ưu hóa import SQL dump khổng lồ (1.25 GB) qua MySQL binary stream**.
 2. **Đồng bộ hóa SQLite Fallback tinh gọn (1.30 MB)**.
 3. **Hiệu chuẩn tự động bộ tham số dự báo (Grid Search - Agent 2)**.
+
+
+## Lưu trữ nhật ký phiên 05/10/2026 – 26/10/2026 (chuyển từ STATUS.md ngày 28/10/2026)
+- **05/10**: `worklane_staff_audit.html` ma trận công suất tính theo kỳ đang chọn; loại Đinh Thành Nam, Nguyễn Huyền Trang, Ngô Quang Huấn; tách Leader sang `leader_details`; KNM thêm Võ Thị Ngọc Giàu, Nguyễn Thu Uyên, Huỳnh Thị Kim Khánh.
+- **06/10**: Form khai giảng HN 159/286 = 55,59%; thêm `asOf` cho golden W41 (`test_golden_asof.py`).
+- **07/10**: Excel mới + refresh KS26 (9 BĐ/9 ĐĐ/2 EL/8 CM).
+- **08/10**: 19 SV KS25 học ghép HN-K26-QTKD1/2/3; LMS rút 41 lượt SV ở 10 lớp-môn (xác nhận vắng ảo ENG105).
+- **09/10**: Thêm G1 "Dữ liệu gốc cùng một lần lấy"; phát hiện 30 SV lệch danh sách.
+- **13/10**: Thống kê SSK101 KS26 (372 SV, 41 KĐĐK thi, 58 không qua môn).
+- **14/10**: Thống kê KS24/KS25/KS26 06–13/10; SKL01 + SSK103 chốt R-point (341/365 đủ ĐK thi = 93,42%).
+- **15/10**: SSK102 chốt R-point 3/4 lớp (138/152 đủ ĐK = 90,79%).
+- **16/10**: Kiểm toán Worklane 12/10–15/10 (`week_12_16`, 35 NS, nộp 82,1%).
+- **19/10**: PMO W43 (28/28 lớp-môn LIVE); thống kê SV nguy cơ cao (95 lượt SV = 16,49%).
+- **26/10**: Đưa môn mới QTKD `MAN101` vào theo dõi và loại bỏ môn đã thi (`SKL01`, `SSK102`, `SSK103`) → còn 19 lớp-môn đang học thực tế.

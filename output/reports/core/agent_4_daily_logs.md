@@ -7,8 +7,8 @@
 
 ## I. TỔNG QUAN TUÂN THỦ BÁO CÁO NGÀY 21/09/2026
 
-- **Tỷ lệ nộp báo cáo ngày 21/09**: **28/42 nhân sự (66.7%)**.
-- **Số nhân sự chưa nộp báo cáo**: **14 nhân sự**.
+- **Tỷ lệ nộp báo cáo ngày 21/09**: **32/42 nhân sự (76.2%)**.
+- **Số nhân sự chưa nộp báo cáo**: **10 nhân sự**.
 
 ### ⚠️ Danh sách nhân sự chưa nộp báo cáo ngày 21/09/2026:
 
@@ -18,16 +18,12 @@
 | 2 | **Hồ Xuân Hùng** | Khối CNTT | Giảng viên |
 | 3 | **Nguyễn Bá Minh Đạo** | Khối CNTT | Giảng viên |
 | 4 | **Đinh Thành Nam** | Khối CNTT | Giảng viên |
-| 5 | **Ngọ Văn Quý** | Khối CNTT | Giảng viên |
-| 6 | **Nguyễn Xuân Bách** | Khối CNTT | Giảng viên |
-| 7 | **Lê Hà Thanh Sang** | Khối CNTT | Giảng viên |
-| 8 | **Lưu Hoàng Xuân Nguyên** | Khối CNTT | Giảng viên |
-| 9 | **Giáp Thị Minh Hằng** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên |
-| 10 | **Lò Thị Ngọc Anh** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên |
-| 11 | **Ngô Quang Huấn** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên |
-| 12 | **Lê Thị Đỏ** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên |
-| 13 | **Nguyễn Thị Tươi** | Khối QLCLĐT | Giảng viên |
-| 14 | **Nguyễn Huyền Trang** | Khối QLCLĐT | Giảng viên |
+| 5 | **Giáp Thị Minh Hằng** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên |
+| 6 | **Lò Thị Ngọc Anh** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên |
+| 7 | **Ngô Quang Huấn** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên |
+| 8 | **Lê Thị Đỏ** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên |
+| 9 | **Nguyễn Thị Tươi** | Khối QLCLĐT | Giảng viên |
+| 10 | **Nguyễn Huyền Trang** | Khối QLCLĐT | Giảng viên |
 
 ---
 
@@ -36,10 +32,10 @@
 | Khối / Phòng ban | Số lượt báo cáo kỳ vọng | Số lượt hoàn thành | Tỷ lệ nộp báo cáo (%) |
 | :--- | :-: | :-: | :-: |
 | **Khối QTKD** | 190 | 178 | **93.7%** |
-| **Khối CNTT** | 418 | 323 | **77.3%** |
+| **Khối CNTT** | 418 | 327 | **78.2%** |
 | **Khối Ngoại ngữ và kỹ năng mềm** | 111 | 80 | **72.1%** |
 | **Khối QLCLĐT** | 57 | 36 | **63.2%** |
-| **TOÀN VIỆN ĐÀO TẠO** | **776** | **617** | **79.5%** |
+| **TOÀN VIỆN ĐÀO TẠO** | **776** | **621** | **80.0%** |
 
 ---
 
@@ -56,19 +52,19 @@
 | **Đinh Thành Nam** | Khối CNTT | Giảng viên R3 | 12.0/19.0 | 85.0h / 152h | **55.9%** | -67.0h | 🔴 Chưa đạt chuẩn |
 | **Lê Thị Đỏ** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên R3 | 12.0/19.0 | 90.5h / 152h | **59.5%** | -61.5h | 🔴 Chưa đạt chuẩn |
 | **Lê Thành Ngọc** | Khối QTKD | Giảng viên R3 | 12.0/19.0 | 96.0h / 152h | **63.2%** | -56.0h | 🔴 Chưa đạt chuẩn |
-| **Nguyễn Xuân Bách** | Khối CNTT | Giảng viên R4 | 16.0/19.0 | 103.8h / 152h | **68.3%** | -48.2h | 🔴 Chưa đạt chuẩn |
-| **Lưu Hoàng Xuân Nguyên** | Khối CNTT | Giảng viên R3 | 16.0/19.0 | 107.8h / 152h | **70.9%** | -44.2h | 🔴 Chưa đạt chuẩn |
-| **Lê Hà Thanh Sang** | Khối CNTT | Giảng viên R3 | 16.0/19.0 | 112.5h / 152h | **74.0%** | -39.5h | 🔴 Chưa đạt chuẩn |
+| **Nguyễn Xuân Bách** | Khối CNTT | Giảng viên R4 | 17.0/19.0 | 112.2h / 152h | **73.8%** | -39.8h | 🔴 Chưa đạt chuẩn |
 | **Trần Quốc Tuấn** | Khối CNTT | Giảng viên R3 | 17.0/19.0 | 113.0h / 152h | **74.3%** | -39.0h | 🔴 Chưa đạt chuẩn |
 | **Nguyễn Đức Minh** | Khối CNTT | Giảng viên R3 | 18.0/19.0 | 114.2h / 152h | **75.2%** | -37.8h | 🟡 Cần rà soát |
+| **Lưu Hoàng Xuân Nguyên** | Khối CNTT | Giảng viên R3 | 17.0/19.0 | 114.8h / 152h | **75.5%** | -37.2h | 🟡 Cần rà soát |
 | **Phạm Ngọc Kiên** | Khối CNTT | Giảng viên R3 | 19.0/19.0 | 119.0h / 152h | **78.3%** | -33.0h | 🟡 Cần rà soát |
-| **Ngọ Văn Quý** | Khối CNTT | Giảng viên R3 | 12.0/19.0 | 122.5h / 152h | **80.6%** | -29.5h | 🟡 Cần rà soát |
+| **Lê Hà Thanh Sang** | Khối CNTT | Giảng viên R3 | 17.0/19.0 | 120.5h / 152h | **79.3%** | -31.5h | 🟡 Cần rà soát |
 | **Phan Ngọc Tài** | Khối CNTT | Giảng viên R3 | 18.0/19.0 | 125.5h / 152h | **82.6%** | -26.5h | 🟡 Cần rà soát |
 | **Bùi Thanh Hải** | Khối CNTT | Giảng viên R3 | 18.0/19.0 | 127.0h / 152h | **83.6%** | -25.0h | 🟡 Cần rà soát |
 | **Phạm Tuấn Bình** | Khối CNTT | Giảng viên R3 | 16.0/19.0 | 128.0h / 152h | **84.2%** | -24.0h | 🟡 Cần rà soát |
 | **Lương Quốc Tuấn** | Khối CNTT | Giảng viên R3 | 16.0/19.0 | 129.2h / 152h | **85.0%** | -22.8h | 🟡 Cần rà soát |
 | **Giáp Thị Minh Hằng** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên R3 | 17.0/19.0 | 131.5h / 152h | **86.5%** | -20.5h | 🟡 Cần rà soát |
 | **Triệu Thị Thanh Tâm** | Khối QTKD | Trợ giảng R1 | 17.0/19.0 | 131.8h / 152h | **86.7%** | -20.2h | 🟡 Cần rà soát |
+| **Ngọ Văn Quý** | Khối CNTT | Giảng viên R3 | 13.0/19.0 | 132.5h / 152h | **87.2%** | -19.5h | 🟡 Cần rà soát |
 | **Mai Xuân Chinh** | Khối CNTT | Giảng viên R3 | 17.0/19.0 | 139.0h / 152h | **91.4%** | -13.0h | 🟡 Cần rà soát |
 | **Đặng Quỳnh Trang** | Khối QTKD | Giảng viên R3 | 17.0/19.0 | 140.5h / 152h | **92.4%** | -11.5h | 🟡 Cần rà soát |
 | **Lò Thị Ngọc Anh** | Khối Ngoại ngữ và kỹ năng mềm | Giảng viên R3 | 16.0/19.0 | 141.0h / 152h | **92.8%** | -11.0h | 🟡 Cần rà soát |
@@ -99,4 +95,4 @@
 
 ---
 
-*Báo cáo được khởi tạo tự động bởi Agent 4 (Daily Log Auditor) - PMO Platform vào ngày 01/10/2026 14:10:00.*
+*Báo cáo được khởi tạo tự động bởi Agent 4 (Daily Log Auditor) - PMO Platform vào ngày 18/11/2026 21:40:43.*

@@ -25,12 +25,6 @@
       ],
       "assigned_projects": [
         {
-          "name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
           "name": "[QTKDS] CTĐT, PM Môn học K25, 26",
           "pic": "Lê Thành Ngọc",
           "health": "ON_TRACK",
@@ -62,13 +56,13 @@
       ],
       "assigned_projects": [
         {
-          "name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25",
+          "name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26",
           "pic": "Hoàng Thị Kim Oanh",
           "health": "ON_TRACK",
           "status": "COMPLETED"
         },
         {
-          "name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26",
+          "name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25",
           "pic": "Hoàng Thị Kim Oanh",
           "health": "ON_TRACK",
           "status": "COMPLETED"
@@ -76,12 +70,6 @@
         {
           "name": "QTKD - Các công việc khác",
           "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CTĐT, PM Môn học K25, 26",
-          "pic": "Lê Thành Ngọc",
           "health": "ON_TRACK",
           "status": "COMPLETED"
         },
@@ -102,24 +90,6 @@
           "pic": "Hoàng Thị Kim Oanh",
           "health": "ON_TRACK",
           "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
-          "pic": "Lê Nhựt Mi",
-          "health": "OFF_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKD] SX Tài nguyên học tập K26",
-          "pic": "Lê Thành Ngọc",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
         },
         {
           "name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107",
@@ -151,32 +121,8 @@
       "miss_days": [],
       "assigned_projects": [
         {
-          "name": "[QTKDS] CTĐT, PM Môn học K25, 26",
-          "pic": "Lê Thành Ngọc",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CÔNG VIỆC CHUNG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
           "name": "[QTKDS] Quy trình sản xuất học liệu video",
           "pic": "Hoàng Thị Hậu",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26",
-          "pic": "Lê Nhựt Mi",
           "health": "ON_TRACK",
           "status": "COMPLETED"
         },
@@ -185,18 +131,6 @@
           "pic": "Hoàng Thị Hậu",
           "health": "ON_TRACK",
           "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] VERIFY HỌC LIỆU K26, 25 - học kỳ 1",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
-          "pic": "Nguyễn Ngọc Vân Khanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
         }
       ]
     },
@@ -214,68 +148,7 @@
         "Task 'Giảng dạy QTKDS MAN107 QTKD1 SS12' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CTĐT, PM Môn học K25, 26",
-          "pic": "Lê Thành Ngọc",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CÔNG VIỆC CHUNG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Hành trình trải nghiệm sinh viên",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] VERIFY HỌC LIỆU K26, 25 - học kỳ 1",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
-          "pic": "Nguyễn Ngọc Vân Khanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Lê Nhựt Mi": {
       "group": "Khối QTKD",
@@ -293,33 +166,9 @@
       "miss_days": [],
       "assigned_projects": [
         {
-          "name": "QTKD - Các công việc khác",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CTĐT, PM Môn học K25, 26",
-          "pic": "Lê Thành Ngọc",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CÔNG VIỆC CHUNG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
           "name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
           "pic": "Lê Nhựt Mi",
-          "health": "OFF_TRACK",
+          "health": "ON_TRACK",
           "status": "ACTIVE"
         },
         {
@@ -333,24 +182,6 @@
           "pic": "Lê Nhựt Mi",
           "health": "ON_TRACK",
           "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
-          "pic": "Hoàng Thị Hậu",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] VERIFY HỌC LIỆU K26, 25 - học kỳ 1",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
-          "pic": "Nguyễn Ngọc Vân Khanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
         }
       ]
     },
@@ -368,62 +199,7 @@
         "Task 'Cố vấn học tập: Sinh hoạt lớp, bầu lớp trưởng, bí thư lắng nghe tâm tư SV' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "QTKD - Các công việc khác",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CÔNG VIỆC CHUNG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] CỐ VẤN HỌC TẬP",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
-          "pic": "Lê Nhựt Mi",
-          "health": "OFF_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Hành trình trải nghiệm sinh viên",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] VERIFY HỌC LIỆU K26, 25 - học kỳ 1",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
-          "pic": "Nguyễn Ngọc Vân Khanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Nguyễn Ngọc Vân Khanh": {
       "group": "Khối QTKD",
@@ -440,48 +216,6 @@
       ],
       "miss_days": [],
       "assigned_projects": [
-        {
-          "name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CTĐT, PM Môn học K25, 26",
-          "pic": "Lê Thành Ngọc",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CÔNG VIỆC CHUNG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] CỐ VẤN HỌC TẬP",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Hành trình trải nghiệm sinh viên",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] VERIFY HỌC LIỆU K26, 25 - học kỳ 1",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
         {
           "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
           "pic": "Nguyễn Ngọc Vân Khanh",
@@ -504,81 +238,14 @@
         "Task 'Trao đổi công việc học tập của lớp với các cô CVHT, TG lớp' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
-          "pic": "Nguyễn Thị Như Quỳnh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] CTĐT, PM Môn học K25, 26",
-          "pic": "Lê Thành Ngọc",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CÔNG VIỆC CHUNG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Hành trình trải nghiệm sinh viên",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Quy trình sản xuất học liệu video",
-          "pic": "Hoàng Thị Hậu",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] SXTN K25 - Điều chỉnh MAN107",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
-          "pic": "Hoàng Thị Hậu",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
-          "pic": "Nguyễn Ngọc Vân Khanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Nguyễn Thị Như Quỳnh": {
       "group": "Khối QTKD",
       "reported_days": 5,
       "expected_days": 5,
       "hours": 40.5,
-      "completion_rate": 97.22222222222221,
+      "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Kiểm tra BTVN - HN-K25-QTKD1 (SS10)' chưa định dạng (gán tạm 30 phút)",
         "Task 'Kiểm tra BTVN - HN-K25-QTKD2 (SS10)' chưa định dạng (gán tạm 30 phút)",
@@ -589,52 +256,10 @@
       "miss_days": [],
       "assigned_projects": [
         {
-          "name": "QTKD - Các công việc khác",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
           "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
           "pic": "Nguyễn Thị Như Quỳnh",
           "health": "ON_TRACK",
           "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CÔNG VIỆC CHUNG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] CỐ VẤN HỌC TẬP",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
-          "pic": "Lê Nhựt Mi",
-          "health": "OFF_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Hành trình trải nghiệm sinh viên",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
         }
       ]
     },
@@ -643,65 +268,16 @@
       "reported_days": 5,
       "expected_days": 5,
       "hours": 39.2,
-      "completion_rate": 97.05882352941177,
+      "completion_rate": 100.0,
       "warning_flags": [
         "Task 'QTKDDAO-18 Chuẩn bị giảng thử lần 1' chưa định dạng (gán tạm 30 phút)",
-        "UNVERIFIED: Task 'QTKDDAO-18 Chuẩn bị giảng thử lần 1' khai báo xong nhưng trên Worklane chưa DONE.",
         "Task 'Cố vấn học tập - lớp QTKD1' chưa định dạng (gán tạm 30 phút)",
         "Task 'Cố vấn học tập - lớp QTKD2' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Trao đổi cùng GV về tình hình sinh viên tại lớp' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Trao đổi cùng GV về tình hình sinh viên tại lớp' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Nghiên cứu giao diện báo cáo CVHT mới' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
-          "pic": "Nguyễn Thị Như Quỳnh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKD] Nghiên cứu ứng dụng AI Agent hỗ trợ công việc của GV/TG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] CÔNG VIỆC CHUNG",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] CỐ VẤN HỌC TẬP",
-          "pic": "Hoàng Thị Kim Oanh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
-          "pic": "Lê Nhựt Mi",
-          "health": "OFF_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[QTKDS] Hành trình trải nghiệm sinh viên",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Quy trình sản xuất học liệu video",
-          "pic": "Hoàng Thị Hậu",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QTKDS] Rà soát tiêu chuẩn học liệu K25, 26",
-          "pic": "Lê Nhựt Mi",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        }
-      ]
+      "assigned_projects": []
     },
     "Trần Minh Cường": {
       "group": "Khối CNTT",
@@ -717,14 +293,7 @@
         "2026-09-28",
         "2026-09-29"
       ],
-      "assigned_projects": [
-        {
-          "name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT",
-          "pic": "Nguyễn Thị Tươi",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Hồ Xuân Hùng": {
       "group": "Khối CNTT",
@@ -742,12 +311,6 @@
       ],
       "assigned_projects": [
         {
-          "name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action",
-          "pic": "Hồ Xuân Hùng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
           "name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action",
           "pic": "Hồ Xuân Hùng",
           "health": "ON_TRACK",
@@ -758,6 +321,12 @@
           "pic": "Hồ Xuân Hùng",
           "health": "OFF_TRACK",
           "status": "ACTIVE"
+        },
+        {
+          "name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action",
+          "pic": "Hồ Xuân Hùng",
+          "health": "ON_TRACK",
+          "status": "COMPLETED"
         }
       ]
     },
@@ -812,13 +381,13 @@
       ],
       "assigned_projects": [
         {
-          "name": "[KS24]_IT209_Devops_v2",
+          "name": "[KS24]_IT213_AI Intergration_v2",
           "pic": "Nguyễn Bá Minh Đạo",
           "health": "ON_TRACK",
           "status": "ACTIVE"
         },
         {
-          "name": "[KS24]_IT213_AI Intergration_v2",
+          "name": "[KS24]_IT209_Devops_v2",
           "pic": "Nguyễn Bá Minh Đạo",
           "health": "ON_TRACK",
           "status": "ACTIVE"
@@ -839,38 +408,7 @@
         "Task 'Xóa sinh viên ra khỏi lớp nhóm lớp trên lark của khóa HN-K25' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action",
-          "pic": "Hồ Xuân Hùng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action",
-          "pic": "Hồ Xuân Hùng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[KS24]_IT209_Devops_v2",
-          "pic": "Nguyễn Bá Minh Đạo",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[KS24]_IT213_AI Intergration_v2",
-          "pic": "Nguyễn Bá Minh Đạo",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[KS24]_IT212_Microservice_v2",
-          "pic": "Phạm Tuấn Bình",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Phạm Tuấn Bình": {
       "group": "Khối CNTT",
@@ -890,12 +428,6 @@
         "2026-09-25"
       ],
       "assigned_projects": [
-        {
-          "name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action",
-          "pic": "Hồ Xuân Hùng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
         {
           "name": "[KS24]_IT212_Microservice_v2",
           "pic": "Phạm Tuấn Bình",
@@ -920,26 +452,7 @@
       "miss_days": [
         "2026-09-24"
       ],
-      "assigned_projects": [
-        {
-          "name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action",
-          "pic": "Hồ Xuân Hùng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "Triển khai môn Dự án K24",
-          "pic": "Hồ Xuân Hùng",
-          "health": "OFF_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[KS24]_IT213_AI Intergration_v2",
-          "pic": "Nguyễn Bá Minh Đạo",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Đinh Thành Nam": {
       "group": "Khối CNTT",
@@ -955,32 +468,7 @@
         "2026-09-28",
         "2026-09-29"
       ],
-      "assigned_projects": [
-        {
-          "name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action",
-          "pic": "Hồ Xuân Hùng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action",
-          "pic": "Hồ Xuân Hùng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[KS24]_IT209_Devops_v2",
-          "pic": "Nguyễn Bá Minh Đạo",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[KS24]_IT213_AI Intergration_v2",
-          "pic": "Nguyễn Bá Minh Đạo",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Bùi Thanh Hải": {
       "group": "Khối CNTT",
@@ -998,20 +486,7 @@
       "miss_days": [
         "2026-09-25"
       ],
-      "assigned_projects": [
-        {
-          "name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action",
-          "pic": "Hồ Xuân Hùng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[KS24]_IT209_Devops_v2",
-          "pic": "Nguyễn Bá Minh Đạo",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Nguyễn Quảng An": {
       "group": "Khối CNTT",
@@ -1029,20 +504,7 @@
       "miss_days": [
         "2026-09-23"
       ],
-      "assigned_projects": [
-        {
-          "name": "[HN-KS25-CNTT] giảng dạy",
-          "pic": "Trịnh Quốc Hai",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[KS26]_IT102_Kỹ năng prompting với AI",
-          "pic": "Trịnh Quốc Hai",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Lương Quốc Tuấn": {
       "group": "Khối CNTT",
@@ -1060,20 +522,8 @@
       "miss_days": [],
       "assigned_projects": [
         {
-          "name": "[HN-KS25-CNTT] giảng dạy",
-          "pic": "Trịnh Quốc Hai",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
           "name": "[KS26]_IT101_Nhập môn CNTT",
           "pic": "Lương Quốc Tuấn",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[KS25]_IT303_Phân tích thiết kế hệ thống",
-          "pic": "Lê Hà Thanh Sang",
           "health": "ON_TRACK",
           "status": "ACTIVE"
         }
@@ -1093,26 +543,13 @@
         "Task 'Chăm sóc sinh viên - Lớp CNTT1-KS25' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "[HN-KS25-CNTT]Sản xuất tài nguyên Python Web",
-          "pic": "Trịnh Quốc Hai",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[KS26]_IT102_Kỹ năng prompting với AI",
-          "pic": "Trịnh Quốc Hai",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Ngọ Văn Quý": {
       "group": "Khối CNTT",
-      "reported_days": 2,
+      "reported_days": 3,
       "expected_days": 5,
-      "hours": 18.5,
+      "hours": 28.5,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Xây dựng hệ thống khảo thí chức năng thi tự luận' chưa định dạng (gán tạm 30 phút)",
@@ -1123,23 +560,15 @@
       ],
       "miss_days": [
         "2026-09-23",
-        "2026-09-25",
-        "2026-09-29"
+        "2026-09-25"
       ],
-      "assigned_projects": [
-        {
-          "name": "[HN-KS25-CNTT]Sản xuất tài nguyên Python Web",
-          "pic": "Trịnh Quốc Hai",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Nguyễn Xuân Bách": {
       "group": "Khối CNTT",
-      "reported_days": 4,
+      "reported_days": 5,
       "expected_days": 5,
-      "hours": 24.0,
+      "hours": 32.5,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Báo cáo chỉ số đào tạo' chưa định dạng (gán tạm 30 phút)",
@@ -1148,9 +577,7 @@
         "Task 'Theo dõi và xử lý các vi phạm của KS25' chưa định dạng (gán tạm 30 phút)",
         "Task 'Theo dõi và xử lý các vi phạm của KS26' chưa định dạng (gán tạm 30 phút)"
       ],
-      "miss_days": [
-        "2026-09-29"
-      ],
+      "miss_days": [],
       "assigned_projects": []
     },
     "Lại Trung Lâm": {
@@ -1167,20 +594,7 @@
         "Task 'đẩy môn js lên qldt ss8 phần homework' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "[HN-KS25-CNTT] giảng dạy",
-          "pic": "Trịnh Quốc Hai",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[KS26]_IT101_Nhập môn CNTT",
-          "pic": "Lương Quốc Tuấn",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Phạm Ngọc Kiên": {
       "group": "Khối CNTT",
@@ -1196,36 +610,22 @@
         "Task 'Sửa lỗi BTVN, mindmap môn nhập môn CNTT K26' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "[HN-KS25-CNTT] giảng dạy",
-          "pic": "Trịnh Quốc Hai",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[KS26]_IT101_Nhập môn CNTT",
-          "pic": "Lương Quốc Tuấn",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Lê Hà Thanh Sang": {
       "group": "Khối CNTT",
-      "reported_days": 4,
+      "reported_days": 5,
       "expected_days": 5,
-      "hours": 32.0,
+      "hours": 40.0,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Lên kịch bản giảng dạy Chương 1 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)",
         "Task 'Lên kịch bản giảng dạy Chương 2 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)",
         "Task 'Lên kịch bản giảng dạy Chương 3 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Lên kịch bản giảng dạy Chương 5 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Lên kịch bản giảng dạy Chương 5 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Tham gia khai giảng K26' chưa định dạng (gán tạm 30 phút)"
       ],
-      "miss_days": [
-        "2026-09-29"
-      ],
+      "miss_days": [],
       "assigned_projects": [
         {
           "name": "[KS25]_IT303_Phân tích thiết kế hệ thống",
@@ -1237,9 +637,9 @@
     },
     "Lưu Hoàng Xuân Nguyên": {
       "group": "Khối CNTT",
-      "reported_days": 4,
+      "reported_days": 5,
       "expected_days": 5,
-      "hours": 27.5,
+      "hours": 34.5,
       "completion_rate": 100.0,
       "warning_flags": [
         "Task 'Chăm sóc sinh viên KS26' chưa định dạng (gán tạm 30 phút)",
@@ -1248,23 +648,8 @@
         "Task 'Chấm bài tập về nhà CNTT1-KS26' chưa định dạng (gán tạm 30 phút)",
         "Task 'Chấm bài tập về nhà CNTT2-KS26' chưa định dạng (gán tạm 30 phút)"
       ],
-      "miss_days": [
-        "2026-09-29"
-      ],
-      "assigned_projects": [
-        {
-          "name": "[KS25]_IT304_Agile/Scrum",
-          "pic": "Trần Quốc Tuấn",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[KS25]_IT303_Phân tích thiết kế hệ thống",
-          "pic": "Lê Hà Thanh Sang",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "miss_days": [],
+      "assigned_projects": []
     },
     "Nguyễn Đức Minh": {
       "group": "Khối CNTT",
@@ -1282,14 +667,7 @@
       "miss_days": [
         "2026-09-28"
       ],
-      "assigned_projects": [
-        {
-          "name": "[KS24]_IT212_Microservice_v2",
-          "pic": "Phạm Tuấn Bình",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Phạm Viết Hùng": {
       "group": "Khối CNTT",
@@ -1305,14 +683,7 @@
         "Task 'Chăm sóc sinh viên HCM-KS25-CNTT5 + CNTT7' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "[KS24]_IT212_Microservice_v2",
-          "pic": "Phạm Tuấn Bình",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Phan Ngọc Tài": {
       "group": "Khối CNTT",
@@ -1328,14 +699,7 @@
         "Task 'HCM-KS25-CNTT6-IT105 -Session 18: Chăm sóc sinh viên' chưa định dạng (gán tạm 30 phút)"
       ],
       "miss_days": [],
-      "assigned_projects": [
-        {
-          "name": "[KS25]_IT303_Phân tích thiết kế hệ thống",
-          "pic": "Lê Hà Thanh Sang",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Trần Quốc Tuấn": {
       "group": "Khối CNTT",
@@ -1385,12 +749,6 @@
           "status": "COMPLETED"
         },
         {
-          "name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT",
-          "pic": "Nguyễn Thị Tươi",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
           "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25",
           "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
@@ -1403,18 +761,6 @@
           "status": "COMPLETED"
         },
         {
-          "name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project",
-          "pic": "Lê Thị Đỏ",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[PTIT-JPN] JPN105 - Tiếng Nhật cơ sở 1",
-          "pic": "Giáp Thị Minh Hằng",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
           "name": "[PTIT-JPN] Orientation Week 2026",
           "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
@@ -1422,6 +768,24 @@
         },
         {
           "name": "[JPCAREER] Hợp Tác ĐH Xây Dựng",
+          "pic": "Giáp Thị Minh Hằng",
+          "health": "ON_TRACK",
+          "status": "COMPLETED"
+        },
+        {
+          "name": "HN-KS26-CNTT1 - JPN105 - Tiếng Nhật cơ sở 1",
+          "pic": "Giáp Thị Minh Hằng",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "[RE-JPN] Thí điểm mô hình dạy sinh viên ĐH miễn phí",
+          "pic": "Giáp Thị Minh Hằng",
+          "health": "ON_TRACK",
+          "status": "ACTIVE"
+        },
+        {
+          "name": "JPN205-RL -  Sản xuất tài nguyên",
           "pic": "Giáp Thị Minh Hằng",
           "health": "ON_TRACK",
           "status": "ACTIVE"
@@ -1446,12 +810,6 @@
       ],
       "assigned_projects": [
         {
-          "name": "🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26",
-          "pic": "Lò Thị Ngọc Anh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
           "name": "🔵 [RE] ENGLISH EXAMINATION",
           "pic": "Lò Thị Ngọc Anh",
           "health": "ON_TRACK",
@@ -1464,8 +822,8 @@
           "status": "ACTIVE"
         },
         {
-          "name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT",
-          "pic": "Nguyễn Thị Tươi",
+          "name": "🔵 [RExPTIT] ENGLISH PROGRAM FOR K26",
+          "pic": "Lò Thị Ngọc Anh",
           "health": "ON_TRACK",
           "status": "ACTIVE"
         }
@@ -1520,44 +878,7 @@
         "2026-09-28",
         "2026-09-29"
       ],
-      "assigned_projects": [
-        {
-          "name": "🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật",
-          "pic": "Giáp Thị Minh Hằng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT",
-          "pic": "Nguyễn Thị Tươi",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25",
-          "pic": "Giáp Thị Minh Hằng",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101",
-          "pic": "Giáp Thị Minh Hằng",
-          "health": "ON_TRACK",
-          "status": "COMPLETED"
-        },
-        {
-          "name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project",
-          "pic": "Lê Thị Đỏ",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
-          "name": "[PTIT-JPN] JPN105 - Tiếng Nhật cơ sở 1",
-          "pic": "Giáp Thị Minh Hằng",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        }
-      ]
+      "assigned_projects": []
     },
     "Đỗ Hà Khanh": {
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
@@ -1652,12 +973,6 @@
       ],
       "assigned_projects": [
         {
-          "name": "🔵 [RE] ENGLISH EXAMINATION",
-          "pic": "Lò Thị Ngọc Anh",
-          "health": "ON_TRACK",
-          "status": "ACTIVE"
-        },
-        {
           "name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
           "pic": "Nguyễn Huyền Trang",
           "health": "OFF_TRACK",
@@ -1681,13 +996,13 @@
       "miss_days": [],
       "assigned_projects": [
         {
-          "name": "[QLĐT] - Soạn thảo bộ Quy định đào tạo (hê PTIT)",
+          "name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
           "pic": "Trần Thị Mỹ Phước",
           "health": "ON_TRACK",
           "status": "ACTIVE"
         },
         {
-          "name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
+          "name": "[QLĐT] - Soạn thảo bộ Quy định đào tạo (hê PTIT)",
           "pic": "Trần Thị Mỹ Phước",
           "health": "ON_TRACK",
           "status": "ACTIVE"
@@ -1697,19 +1012,13 @@
   },
   "projects": [
     {
-      "name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25",
+      "name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26",
       "pic": "Hoàng Thị Kim Oanh",
       "health": "ON_TRACK",
       "status": "COMPLETED"
     },
     {
-      "name": "🔵 [RE x PTIT] ENGLISH PROGRAM FOR K26",
-      "pic": "Lò Thị Ngọc Anh",
-      "health": "ON_TRACK",
-      "status": "ACTIVE"
-    },
-    {
-      "name": "[QTKD số] Rà soát, điều chỉnh CTĐT K25, 26",
+      "name": "[QTKD số] SXHL Dự án kinh doanh số 2 - K25",
       "pic": "Hoàng Thị Kim Oanh",
       "health": "ON_TRACK",
       "status": "COMPLETED"
@@ -1721,28 +1030,16 @@
       "status": "ACTIVE"
     },
     {
-      "name": "QTKD - Các công việc khác",
-      "pic": "Hoàng Thị Kim Oanh",
-      "health": "ON_TRACK",
-      "status": "COMPLETED"
-    },
-    {
       "name": "🔵 [RE] ENGLISH EXAMINATION",
       "pic": "Lò Thị Ngọc Anh",
       "health": "ON_TRACK",
       "status": "ACTIVE"
     },
     {
-      "name": "🔵 [RE x PREP/JAXTINA] CHƯƠNG TRÌNH TIẾNG ANH K24 & K25",
-      "pic": "Lò Thị Ngọc Anh",
+      "name": "QTKD - Các công việc khác",
+      "pic": "Hoàng Thị Kim Oanh",
       "health": "ON_TRACK",
-      "status": "ACTIVE"
-    },
-    {
-      "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
-      "pic": "Nguyễn Thị Như Quỳnh",
-      "health": "ON_TRACK",
-      "status": "ACTIVE"
+      "status": "COMPLETED"
     },
     {
       "name": "🇯🇵 [PTIT-JPN] Xây dựng chương trình đào tạo tiếng Nhật",
@@ -1751,16 +1048,16 @@
       "status": "COMPLETED"
     },
     {
+      "name": "🔵 [RE x PREP/JAXTINA] CHƯƠNG TRÌNH TIẾNG ANH K24 & K25",
+      "pic": "Lò Thị Ngọc Anh",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
       "name": "[HN-KS25-CNTT] giảng dạy",
       "pic": "Trịnh Quốc Hai",
       "health": "ON_TRACK",
       "status": "COMPLETED"
-    },
-    {
-      "name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT",
-      "pic": "Nguyễn Thị Tươi",
-      "health": "ON_TRACK",
-      "status": "ACTIVE"
     },
     {
       "name": "🇯🇵 [PTIT-JPN] Quản lý chất lượng bộ môn Tiếng Nhật KS24, KS25",
@@ -1769,9 +1066,27 @@
       "status": "ACTIVE"
     },
     {
+      "name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
+      "pic": "Trần Thị Mỹ Phước",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "[QLĐT] - Xây dựng bộ tiêu chuẩn QLĐT",
+      "pic": "Nguyễn Thị Tươi",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
       "name": "[QLĐT] - Xây dựng Quy trình khảo thí - New",
       "pic": "Nguyễn Huyền Trang",
       "health": "OFF_TRACK",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "🔵 [RExPTIT] ENGLISH PROGRAM FOR K26",
+      "pic": "Lò Thị Ngọc Anh",
+      "health": "ON_TRACK",
       "status": "ACTIVE"
     },
     {
@@ -1785,12 +1100,6 @@
       "pic": "Trần Thị Mỹ Phước",
       "health": "ON_TRACK",
       "status": "ACTIVE"
-    },
-    {
-      "name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action",
-      "pic": "Hồ Xuân Hùng",
-      "health": "ON_TRACK",
-      "status": "COMPLETED"
     },
     {
       "name": "[PTIT-K24] Triển khai giảng dạy K24 môn AI Application in Action",
@@ -1817,12 +1126,6 @@
       "status": "ACTIVE"
     },
     {
-      "name": "[QTKDS] CÔNG VIỆC CHUNG",
-      "pic": "Hoàng Thị Kim Oanh",
-      "health": "ON_TRACK",
-      "status": "ACTIVE"
-    },
-    {
       "name": "[RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT",
       "pic": "Ngô Quang Huấn",
       "health": "OFF_TRACK",
@@ -1835,8 +1138,20 @@
       "status": "ACTIVE"
     },
     {
+      "name": "[QTKDS] CÔNG VIỆC CHUNG",
+      "pic": "Hoàng Thị Kim Oanh",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
       "name": "[RExPTIT] Đánh giá năng lực tổng hợp KNM cho sinh viên CNTT và QTKDS Hà Nội",
       "pic": "Ngô Quang Huấn",
+      "health": "ON_TRACK",
+      "status": "COMPLETED"
+    },
+    {
+      "name": "[PTIT-K24] Sản xuất tài nguyên môn Microservice in Action",
+      "pic": "Hồ Xuân Hùng",
       "health": "ON_TRACK",
       "status": "COMPLETED"
     },
@@ -1865,8 +1180,8 @@
       "status": "ACTIVE"
     },
     {
-      "name": "[KS24]_IT209_Devops_v2",
-      "pic": "Nguyễn Bá Minh Đạo",
+      "name": "[KS25]_IT303_Phân tích thiết kế hệ thống",
+      "pic": "Lê Hà Thanh Sang",
       "health": "ON_TRACK",
       "status": "ACTIVE"
     },
@@ -1877,15 +1192,15 @@
       "status": "ACTIVE"
     },
     {
-      "name": "[KS25]_IT303_Phân tích thiết kế hệ thống",
-      "pic": "Lê Hà Thanh Sang",
+      "name": "[KS24]_IT209_Devops_v2",
+      "pic": "Nguyễn Bá Minh Đạo",
       "health": "ON_TRACK",
       "status": "ACTIVE"
     },
     {
       "name": "[QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ",
       "pic": "Lê Nhựt Mi",
-      "health": "OFF_TRACK",
+      "health": "ON_TRACK",
       "status": "ACTIVE"
     },
     {
@@ -1895,22 +1210,22 @@
       "status": "ACTIVE"
     },
     {
-      "name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101",
-      "pic": "Giáp Thị Minh Hằng",
-      "health": "ON_TRACK",
-      "status": "COMPLETED"
-    },
-    {
       "name": "[QTKDS] Hành trình trải nghiệm sinh viên",
       "pic": "Lê Nhựt Mi",
       "health": "ON_TRACK",
       "status": "COMPLETED"
     },
     {
-      "name": "[QTKD] SX Tài nguyên học tập K26",
-      "pic": "Lê Thành Ngọc",
+      "name": "[QTKDS] Câu lạc bộ chuyên môn BCC",
+      "pic": "Nguyễn Thị Như Quỳnh",
       "health": "ON_TRACK",
       "status": "ACTIVE"
+    },
+    {
+      "name": "🇯🇵 [PTIT-JPN] Sản xuất tài nguyên học kỳ 1 môn JPN101",
+      "pic": "Giáp Thị Minh Hằng",
+      "health": "ON_TRACK",
+      "status": "COMPLETED"
     },
     {
       "name": "[QTKDS] Quy trình sản xuất học liệu video",
@@ -1925,8 +1240,14 @@
       "status": "COMPLETED"
     },
     {
+      "name": "[QTKD] SX Tài nguyên học tập K26",
+      "pic": "Lê Thành Ngọc",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
       "name": "🇯🇵 [PTIT-JPN] JPN Talent 01 Project",
-      "pic": "Lê Thị Đỏ",
+      "pic": "Nguyễn Thu Uyên",
       "health": "ON_TRACK",
       "status": "ACTIVE"
     },
@@ -1935,6 +1256,12 @@
       "pic": "Hoàng Thị Kim Oanh",
       "health": "ON_TRACK",
       "status": "COMPLETED"
+    },
+    {
+      "name": "[PTIT-JPN] Orientation Week 2026",
+      "pic": "Giáp Thị Minh Hằng",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
     },
     {
       "name": "[QTKDS] Điều chỉnh KPI Master chi tiết",
@@ -1949,32 +1276,38 @@
       "status": "ACTIVE"
     },
     {
-      "name": "[QLĐT] - Xây dựng cổng hành chính 1 cửa trên HT LMS AI",
-      "pic": "Trần Thị Mỹ Phước",
-      "health": "ON_TRACK",
-      "status": "ACTIVE"
-    },
-    {
       "name": "[QTKDS] Nghiên cứu cập nhật kiến thức chuyên môn",
       "pic": "Nguyễn Ngọc Vân Khanh",
       "health": "ON_TRACK",
       "status": "ACTIVE"
     },
     {
-      "name": "[PTIT-JPN] JPN105 - Tiếng Nhật cơ sở 1",
-      "pic": "Giáp Thị Minh Hằng",
-      "health": "ON_TRACK",
-      "status": "ACTIVE"
-    },
-    {
-      "name": "[PTIT-JPN] Orientation Week 2026",
-      "pic": "Giáp Thị Minh Hằng",
-      "health": "ON_TRACK",
-      "status": "ACTIVE"
-    },
-    {
       "name": "[JPCAREER] Hợp Tác ĐH Xây Dựng",
       "pic": "Giáp Thị Minh Hằng",
+      "health": "ON_TRACK",
+      "status": "COMPLETED"
+    },
+    {
+      "name": "HN-KS26-CNTT1 - JPN105 - Tiếng Nhật cơ sở 1",
+      "pic": "Giáp Thị Minh Hằng",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "[RE-JPN] Thí điểm mô hình dạy sinh viên ĐH miễn phí",
+      "pic": "Giáp Thị Minh Hằng",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "JPN205-RL -  Sản xuất tài nguyên",
+      "pic": "Giáp Thị Minh Hằng",
+      "health": "ON_TRACK",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "JPN105-RL - Tiếng Nhật cơ sở 1",
+      "pic": "Nguyễn Thu Uyên",
       "health": "ON_TRACK",
       "status": "ACTIVE"
     }
@@ -1989,7 +1322,7 @@
     },
     "Khối CNTT": {
       "2": 5,
-      "3": 8,
+      "3": 4,
       "4": 7,
       "5": 5,
       "6": 7

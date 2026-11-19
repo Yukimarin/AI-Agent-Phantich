@@ -2,35 +2,35 @@
   "meta": {
     "title": "So Sánh Hiệu Suất & Giờ Công Worklane: Tháng 08/2026 vs Tuần 14/09 - 18/09/2026",
     "groups_count": 6,
-    "total_staff": 42
+    "total_staff": 32
   },
   "comparison": [
     {
       "group": "Khối CNTT Hà Nội",
       "short_label": "CNTT Hà Nội",
       "leader": "Hồ Xuân Hùng",
-      "staff_count": 13,
+      "staff_count": 10,
       "august": {
         "days": 20,
-        "declared_hours": 1718.7,
-        "standard_hours": 660.4,
-        "excess_hours": 1058.2,
-        "excess_pct": 160.3,
-        "excess_per_day_staff": 4.07,
-        "compliance_rate": 83.1
+        "declared_hours": 1437.5,
+        "standard_hours": 588.9,
+        "excess_hours": 848.5,
+        "excess_pct": 144.1,
+        "excess_per_day_staff": 4.24,
+        "compliance_rate": 89.5
       },
       "september": {
         "days": 5,
-        "declared_hours": 384.2,
-        "standard_hours": 313.8,
-        "excess_hours": 111.1,
-        "excess_pct": 22.4,
-        "excess_per_day_staff": 1.71,
-        "compliance_rate": 76.9
+        "declared_hours": 330.2,
+        "standard_hours": 282.4,
+        "excess_hours": 88.5,
+        "excess_pct": 16.9,
+        "excess_per_day_staff": 1.77,
+        "compliance_rate": 88.0
       },
       "delta": {
-        "excess_pct_change": -137.9,
-        "excess_per_day_change": -2.36,
+        "excess_pct_change": -127.2,
+        "excess_per_day_change": -2.47,
         "status": "CẢI THIỆN"
       }
     },
@@ -38,28 +38,28 @@
       "group": "Khối Quản trị Kinh doanh",
       "short_label": "Khối QTKD",
       "leader": "Hoàng Thị Kim Oanh",
-      "staff_count": 9,
+      "staff_count": 7,
       "august": {
         "days": 20,
-        "declared_hours": 1315.4,
-        "standard_hours": 822.8,
-        "excess_hours": 492.4,
-        "excess_pct": 59.9,
-        "excess_per_day_staff": 2.74,
-        "compliance_rate": 94.4
+        "declared_hours": 1018.1,
+        "standard_hours": 586.3,
+        "excess_hours": 431.7,
+        "excess_pct": 73.6,
+        "excess_per_day_staff": 3.08,
+        "compliance_rate": 94.9
       },
       "september": {
         "days": 5,
-        "declared_hours": 354.5,
-        "standard_hours": 328.9,
-        "excess_hours": 55.9,
-        "excess_pct": 7.8,
-        "excess_per_day_staff": 1.24,
-        "compliance_rate": 97.8
+        "declared_hours": 280.5,
+        "standard_hours": 282.7,
+        "excess_hours": 27.9,
+        "excess_pct": -0.8,
+        "excess_per_day_staff": 0.8,
+        "compliance_rate": 100.0
       },
       "delta": {
-        "excess_pct_change": -52.1,
-        "excess_per_day_change": -1.5,
+        "excess_pct_change": -74.4,
+        "excess_per_day_change": -2.28,
         "status": "CẢI THIỆN"
       }
     },
@@ -67,57 +67,57 @@
       "group": "Khối Ngoại ngữ và KNM",
       "short_label": "Ngoại Ngữ & KNM",
       "leader": "Giáp Thị Minh Hằng",
-      "staff_count": 7,
+      "staff_count": 5,
       "august": {
         "days": 20,
-        "declared_hours": 550.3,
-        "standard_hours": 457.3,
-        "excess_hours": 92.9,
-        "excess_pct": 20.3,
-        "excess_per_day_staff": 1.16,
-        "compliance_rate": 82.5
+        "declared_hours": 177.5,
+        "standard_hours": 145.0,
+        "excess_hours": 32.5,
+        "excess_pct": 22.4,
+        "excess_per_day_staff": 1.62,
+        "compliance_rate": 95.0
       },
       "september": {
         "days": 5,
-        "declared_hours": 208.0,
-        "standard_hours": 161.7,
-        "excess_hours": 49.3,
-        "excess_pct": 28.6,
-        "excess_per_day_staff": 1.41,
-        "compliance_rate": 68.6
+        "declared_hours": 203.5,
+        "standard_hours": 192.5,
+        "excess_hours": 37.5,
+        "excess_pct": 5.7,
+        "excess_per_day_staff": 1.5,
+        "compliance_rate": 100.0
       },
       "delta": {
-        "excess_pct_change": 8.3,
-        "excess_per_day_change": 0.25,
-        "status": "TĂNG DÔI DƯ"
+        "excess_pct_change": -16.7,
+        "excess_per_day_change": -0.12,
+        "status": "CẢI THIỆN"
       }
     },
     {
       "group": "Khối QLCLĐT Hà Nội",
-      "short_label": "QLCLĐT",
-      "leader": "Nguyễn Thị Tươi",
-      "staff_count": 4,
+      "short_label": "Phòng QLĐT",
+      "leader": "Phòng QLĐT (Trực thuộc BGĐ)",
+      "staff_count": 3,
       "august": {
         "days": 20,
-        "declared_hours": 606.6,
-        "standard_hours": 323.3,
-        "excess_hours": 283.3,
-        "excess_pct": 87.6,
-        "excess_per_day_staff": 3.54,
-        "compliance_rate": 96.1
+        "declared_hours": 446.5,
+        "standard_hours": 204.5,
+        "excess_hours": 242.0,
+        "excess_pct": 118.3,
+        "excess_per_day_staff": 4.03,
+        "compliance_rate": 96.7
       },
       "september": {
         "days": 5,
-        "declared_hours": 65.5,
-        "standard_hours": 39.5,
-        "excess_hours": 26.0,
-        "excess_pct": 65.8,
-        "excess_per_day_staff": 1.3,
-        "compliance_rate": 45.0
+        "declared_hours": 106.5,
+        "standard_hours": 62.4,
+        "excess_hours": 44.1,
+        "excess_pct": 70.7,
+        "excess_per_day_staff": 2.94,
+        "compliance_rate": 86.7
       },
       "delta": {
-        "excess_pct_change": -21.8,
-        "excess_per_day_change": -2.24,
+        "excess_pct_change": -47.6,
+        "excess_per_day_change": -1.09,
         "status": "CẢI THIỆN"
       }
     },
@@ -125,15 +125,15 @@
       "group": "Khối CNTT HCM",
       "short_label": "CNTT HCM",
       "leader": "Nguyễn Bá Minh Đạo",
-      "staff_count": 7,
+      "staff_count": 6,
       "august": {
         "days": 20,
         "declared_hours": 1029.2,
         "standard_hours": 525.7,
         "excess_hours": 503.5,
         "excess_pct": 95.8,
-        "excess_per_day_staff": 2.8,
-        "compliance_rate": 79.4
+        "excess_per_day_staff": 3.15,
+        "compliance_rate": 89.4
       },
       "september": {
         "days": 5,
@@ -141,12 +141,12 @@
         "standard_hours": 195.8,
         "excess_hours": 40.4,
         "excess_pct": 12.0,
-        "excess_per_day_staff": 1.15,
-        "compliance_rate": 85.7
+        "excess_per_day_staff": 1.35,
+        "compliance_rate": 100.0
       },
       "delta": {
         "excess_pct_change": -83.8,
-        "excess_per_day_change": -1.65,
+        "excess_per_day_change": -1.8,
         "status": "CẢI THIỆN"
       }
     },
@@ -154,15 +154,15 @@
       "group": "LMS AI",
       "short_label": "LMS AI",
       "leader": "Trần Minh Cường",
-      "staff_count": 2,
+      "staff_count": 1,
       "august": {
         "days": 20,
         "declared_hours": 96.0,
         "standard_hours": 42.0,
         "excess_hours": 54.0,
         "excess_pct": 128.6,
-        "excess_per_day_staff": 1.35,
-        "compliance_rate": 30.0
+        "excess_per_day_staff": 2.7,
+        "compliance_rate": 60.0
       },
       "september": {
         "days": 5,
@@ -170,12 +170,12 @@
         "standard_hours": 6.0,
         "excess_hours": 26.0,
         "excess_pct": 433.3,
-        "excess_per_day_staff": 2.6,
-        "compliance_rate": 40.0
+        "excess_per_day_staff": 5.2,
+        "compliance_rate": 80.0
       },
       "delta": {
         "excess_pct_change": 304.7,
-        "excess_per_day_change": 1.25,
+        "excess_per_day_change": 2.5,
         "status": "TĂNG DÔI DƯ"
       }
     }

@@ -1,28 +1,28 @@
 {
-    "generated_at": "2026-10-01T14:10:05.073843",
+    "generated_at": "2026-11-18T21:40:45.128763",
     "instructors": {
         "Bùi Thanh Hải": {
             "name": "Bùi Thanh Hải",
             "role": "GV",
             "classes": [
+                "HN-K24-CNTT1(30) (KS24_DevOps)",
                 "HN-K24-CNTT1(35-31) (KS24_AI_Microservice)",
-                "HN-K24-CNTT4(32-31) (KS24_AI_Microservice)",
-                "HN-K24-CNTT1(35-31) (KS24_DevOps)",
-                "HN-K24-CNTT4(32-31) (KS24_DevOps)",
                 "HN-K24-CNTT2(39) (KS24_DevOps)",
-                "HN-K24-CNTT2(39) (KS24_AI_Microservice)"
+                "HN-K24-CNTT4(32-31) (KS24_AI_Microservice)",
+                "HN-K24-CNTT2(39) (KS24_AI_Microservice)",
+                "HN-K24-CNTT4(31) (KS24_DevOps)"
             ],
-            "avg_violation_rate": 6.87,
-            "student_discipline_score": 93.1
+            "avg_violation_rate": 11.17,
+            "student_discipline_score": 88.8
         },
         "Hoàng Thị Hậu": {
             "name": "Hoàng Thị Hậu",
             "role": "GV",
             "classes": [
+                "HN-KS26-CNTT1(43) (KS26_KN_Lamviecnhom)",
                 "HN-KS26-CNTT2(40) (KS26_KN_Lamviecnhom)",
-                "HN-K26-QTKD1(44) (KS26_SKL_Chudong)",
                 "HN-K26-QTKD3(44) (KS26_SKL_Chudong)",
-                "HN-KS26-CNTT1(43) (KS26_KN_Lamviecnhom)"
+                "HN-K26-QTKD1(44) (KS26_SKL_Chudong)"
             ],
             "avg_violation_rate": 13.73,
             "student_discipline_score": 86.3
@@ -31,18 +31,18 @@
             "name": "Hoàng Thị Kim Oanh",
             "role": "GV",
             "classes": [
-                "HN-K25-QTKD1(46) (KS25_QTKD_BI)",
-                "HN-K26-QTKD2(44) (KS26_SKL_Chudong)"
+                "HN-K26-QTKD2(44) (KS26_SKL_Chudong)",
+                "HN-K25-QTKD1(46) (KS25_QTKD_BI)"
             ],
-            "avg_violation_rate": 17.0,
-            "student_discipline_score": 83.0
+            "avg_violation_rate": 24.96,
+            "student_discipline_score": 75.0
         },
         "Huỳnh Thị Kim Khánh": {
             "name": "Huỳnh Thị Kim Khánh",
             "role": "GV",
             "classes": [
-                "HCM-K26-QTKD1(23) (KS26_Basic_Speaking)",
-                "HCM-KS26-CNTT2(45) (KS26_Basic_Speaking)"
+                "HCM-KS26-CNTT2(45) (KS26_Basic_Speaking)",
+                "HCM-K26-QTKD1(23) (KS26_Basic_Speaking)"
             ],
             "avg_violation_rate": 6.92,
             "student_discipline_score": 93.1
@@ -52,19 +52,19 @@
             "role": "GV",
             "classes": [
                 "HN-K26-CNTT2(42) (KS26_SKL_Chudong)",
-                "HN-K24-CNTT3(42-39) (KS24_DevOps)",
-                "HN-K24-CNTT3(42-39) (KS24_AI_Microservice)"
+                "HN-K24-CNTT3(42-39) (KS24_AI_Microservice)",
+                "HN-K24-CNTT3(40) (KS24_DevOps)"
             ],
-            "avg_violation_rate": 11.05,
-            "student_discipline_score": 88.9
+            "avg_violation_rate": 16.02,
+            "student_discipline_score": 84.0
         },
         "Lê Hà Thanh Sang": {
             "name": "Lê Hà Thanh Sang",
             "role": "GV",
             "classes": [
-                "HCM-K26-QTKD1(23) (KS26_QTKD_Tinhocungdung)",
+                "HCM-KS26-CNTT1(46) (KS26_Nhapmon_CNTT)",
                 "HCM-KS26-CNTT2(45) (KS26_Nhapmon_CNTT)",
-                "HCM-KS26-CNTT1(46) (KS26_Nhapmon_CNTT)"
+                "HCM-K26-QTKD1(23) (KS26_QTKD_Tinhocungdung)"
             ],
             "avg_violation_rate": 3.65,
             "student_discipline_score": 96.4
@@ -82,10 +82,12 @@
             "name": "Lê Thành Ngọc",
             "role": "GV",
             "classes": [
-                "HN-K25-QTKD2(42) (KS25_QTKD_BI)"
+                "HN-K25-QTKD1(46) (KS25_QTKD_AI_Agent)",
+                "HN-K25-QTKD2(40) (KS25_QTKD_AI_Agent)",
+                "HN-K25-QTKD2(40) (KS25_QTKD_BI)"
             ],
-            "avg_violation_rate": 2.38,
-            "student_discipline_score": 97.6
+            "avg_violation_rate": 17.85,
+            "student_discipline_score": 82.2
         },
         "Lò Thị Ngọc Anh": {
             "name": "Lò Thị Ngọc Anh",
@@ -100,8 +102,8 @@
             "name": "Lương Quốc Tuấn",
             "role": "GV",
             "classes": [
-                "HN-KS26-CNTT4(27) (KS26_Nhapmon_CNTT)",
-                "HN-KS26-CNTT3(42) (KS26_Nhapmon_CNTT)"
+                "HN-KS26-CNTT3(42) (KS26_Nhapmon_CNTT)",
+                "HN-KS26-CNTT4(27) (KS26_Nhapmon_CNTT)"
             ],
             "avg_violation_rate": 3.7,
             "student_discipline_score": 96.3
@@ -112,11 +114,11 @@
             "classes": [
                 "HCM-KS26-CNTT2(45) (KS26_SKL_Chudong)",
                 "HCM-K24-CNTT1(43) (KS24_DevOps)",
-                "HCM-KS26-CNTT1(47) (KS26_SKL_Chudong)",
-                "HCM-K24-CNTT1(43) (KS24_AI_Microservice)"
+                "HCM-K24-CNTT1(43) (KS24_AI_Microservice)",
+                "HCM-KS26-CNTT1(47) (KS26_SKL_Chudong)"
             ],
-            "avg_violation_rate": 27.37,
-            "student_discipline_score": 72.6
+            "avg_violation_rate": 28.73,
+            "student_discipline_score": 71.3
         },
         "Nguyễn Duy Quang": {
             "name": "Nguyễn Duy Quang",
@@ -149,12 +151,15 @@
             "name": "Nguyễn Quảng An",
             "role": "GV",
             "classes": [
+                "HN-K25-CNTT2(43) (KS25_Agile)",
                 "HN-K25-CNTT1(41-39-40-38) (KS25_Phantichthietkehethong)",
                 "HN-K25-CNTT5(41-45) (KS25_Phantichthietkehethong)",
-                "HN-K25-CNTT2(41-45-44-43) (KS25_Phantichthietkehethong)"
+                "HN-K25-CNTT5(43) (KS25_Agile)",
+                "HN-K25-CNTT2(41-45-44-43) (KS25_Phantichthietkehethong)",
+                "HN-K25-CNTT1(39) (KS25_Agile)"
             ],
-            "avg_violation_rate": 16.75,
-            "student_discipline_score": 83.2
+            "avg_violation_rate": 17.1,
+            "student_discipline_score": 82.9
         },
         "Nguyễn Thị Hồng Minh": {
             "name": "Nguyễn Thị Hồng Minh",
@@ -165,25 +170,37 @@
             "avg_violation_rate": 9.09,
             "student_discipline_score": 90.9
         },
+        "Nguyễn Thị Như Quỳnh": {
+            "name": "Nguyễn Thị Như Quỳnh",
+            "role": "TG",
+            "classes": [
+                "HN-K25-QTKD1(46) (KS25_QTKD_AI_Agent)",
+                "HN-K25-QTKD2(40) (KS25_QTKD_AI_Agent)"
+            ],
+            "avg_violation_rate": 14.28,
+            "student_discipline_score": 85.7
+        },
         "Nguyễn Đức Minh": {
             "name": "Nguyễn Đức Minh",
             "role": "GV",
             "classes": [
-                "HCM-K25-CNTT7(43-44) (KS25_Phantichthietkehethong)",
-                "HCM-K25-CNTT5(39-44) (KS25_Phantichthietkehethong)"
+                "HCM-K25-CNTT6(41-42-43) (KS25_Agile)",
+                "HCM-K25-CNTT7(45) (KS25_Agile)"
             ],
-            "avg_violation_rate": 17.03,
-            "student_discipline_score": 83.0
+            "avg_violation_rate": 12.12,
+            "student_discipline_score": 87.9
         },
         "Phạm Tuấn Bình": {
             "name": "Phạm Tuấn Bình",
             "role": "GV",
             "classes": [
+                "HN-K25-CNTT4(40) (KS25_Agile)",
+                "HN-K25-CNTT3(42) (KS25_Agile)",
                 "HN-K25-CNTT4(38-42) (KS25_Phantichthietkehethong)",
                 "HN-K25-CNTT3(43-42-43) (KS25_Phantichthietkehethong)"
             ],
-            "avg_violation_rate": 6.64,
-            "student_discipline_score": 93.4
+            "avg_violation_rate": 9.31,
+            "student_discipline_score": 90.7
         },
         "Trần Minh Cường": {
             "name": "Trần Minh Cường",
@@ -198,10 +215,10 @@
             "name": "Trần Quốc Tuấn",
             "role": "GV",
             "classes": [
-                "HCM-K25-CNTT6(41-42-43) (KS25_Phantichthietkehethong)"
+                "HCM-K25-CNTT5(39-44) (KS25_Agile)"
             ],
-            "avg_violation_rate": 9.3,
-            "student_discipline_score": 90.7
+            "avg_violation_rate": 6.82,
+            "student_discipline_score": 93.2
         },
         "Trịnh Quốc Hai": {
             "name": "Trịnh Quốc Hai",
@@ -238,7 +255,7 @@
             },
             "instructor": "Bùi Thanh Hải",
             "assistant": "",
-            "today_violation": 10.76,
+            "today_violation": 15.8,
             "prev_violation": 18.28,
             "diff": 0.0,
             "anomaly_status": "SIZE_CHANGED",
@@ -263,7 +280,7 @@
             },
             "instructor": "Bùi Thanh Hải",
             "assistant": "",
-            "today_violation": 5.55,
+            "today_violation": 9.09,
             "prev_violation": 9.4,
             "diff": 0.0,
             "anomaly_status": "STABLE",
@@ -288,7 +305,7 @@
             },
             "instructor": "Hồ Xuân Hùng",
             "assistant": "",
-            "today_violation": 11.54,
+            "today_violation": 18.99,
             "prev_violation": 23.93,
             "diff": -0.85,
             "anomaly_status": "SIZE_CHANGED",
@@ -313,7 +330,7 @@
             },
             "instructor": "Bùi Thanh Hải",
             "assistant": "",
-            "today_violation": 4.3,
+            "today_violation": 8.6,
             "prev_violation": 8.6,
             "diff": 0.0,
             "anomaly_status": "SIZE_CHANGED",
@@ -338,7 +355,7 @@
             },
             "instructor": "Nguyễn Bá Minh Đạo",
             "assistant": "",
-            "today_violation": 7.76,
+            "today_violation": 10.47,
             "prev_violation": 10.08,
             "diff": 1.55,
             "anomaly_status": "STABLE",
@@ -363,14 +380,15 @@
             },
             "instructor": "Nguyễn Quảng An",
             "assistant": "",
-            "today_violation": 24.56,
-            "prev_violation": 23.68,
+            "today_violation": 23.41,
+            "prev_violation": 25.44,
             "diff": 0.88,
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
             "root_cause": "⚠️ Sĩ số biến động: 41 -> 38 (-3 SV)",
             "active_courses": [
-                "KS25_Phantichthietkehethong"
+                "KS25_Phantichthietkehethong",
+                "KS25_Agile"
             ]
         },
         "HN-K25-CNTT2": {
@@ -387,14 +405,15 @@
             },
             "instructor": "Nguyễn Quảng An",
             "assistant": "",
-            "today_violation": 11.63,
-            "prev_violation": 11.63,
+            "today_violation": 13.18,
+            "prev_violation": 12.4,
             "diff": 0.0,
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
             "root_cause": "⚠️ Sĩ số biến động: 41 -> 43 (+2 SV)",
             "active_courses": [
-                "KS25_Phantichthietkehethong"
+                "KS25_Phantichthietkehethong",
+                "KS25_Agile"
             ]
         },
         "HN-K25-CNTT3": {
@@ -411,14 +430,15 @@
             },
             "instructor": "Phạm Tuấn Bình",
             "assistant": "",
-            "today_violation": 8.53,
-            "prev_violation": 8.53,
-            "diff": 0.0,
+            "today_violation": 12.95,
+            "prev_violation": 10.08,
+            "diff": 2.33,
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
             "root_cause": "⚠️ Sĩ số biến động: 43 -> 43 (+0 SV)",
             "active_courses": [
-                "KS25_Phantichthietkehethong"
+                "KS25_Phantichthietkehethong",
+                "KS25_Agile"
             ]
         },
         "HN-K25-CNTT4": {
@@ -435,14 +455,15 @@
             },
             "instructor": "Phạm Tuấn Bình",
             "assistant": "",
-            "today_violation": 4.76,
-            "prev_violation": 4.76,
-            "diff": 0.0,
+            "today_violation": 5.67,
+            "prev_violation": 7.14,
+            "diff": -0.79,
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
             "root_cause": "⚠️ Sĩ số biến động: 38 -> 42 (+4 SV)",
             "active_courses": [
-                "KS25_Phantichthietkehethong"
+                "KS25_Phantichthietkehethong",
+                "KS25_Agile"
             ]
         },
         "HN-K25-CNTT5": {
@@ -459,44 +480,45 @@
             },
             "instructor": "Nguyễn Quảng An",
             "assistant": "",
-            "today_violation": 14.07,
-            "prev_violation": 14.07,
-            "diff": 0.0,
+            "today_violation": 14.71,
+            "prev_violation": 15.56,
+            "diff": 2.22,
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
             "root_cause": "⚠️ Sĩ số biến động: 41 -> 45 (+4 SV)",
             "active_courses": [
-                "KS25_Phantichthietkehethong"
+                "KS25_Phantichthietkehethong",
+                "KS25_Agile"
             ]
         },
         "HCM-K25-CNTT7": {
-            "class_name": "HCM-K25-CNTT7(43-44)",
+            "class_name": "HCM-K25-CNTT7(45)",
             "norm_name": "HCM-K25-CNTT7",
-            "sheet": "KS25_Phantichthietkehethong",
-            "size": 44,
+            "sheet": "KS25_Agile",
+            "size": 45,
             "size_info": {
-                "current_size": 44,
-                "initial_size": 43,
-                "has_changed": true,
-                "diff": 1,
-                "history_str": "43-44"
+                "current_size": 45,
+                "initial_size": 45,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "45"
             },
             "instructor": "Nguyễn Đức Minh",
             "assistant": "",
-            "today_violation": 23.46,
-            "prev_violation": 21.74,
-            "diff": 1.72,
-            "anomaly_status": "SIZE_CHANGED",
+            "today_violation": 11.85,
+            "prev_violation": 11.85,
+            "diff": 0.0,
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
             "tampering_suspect": false,
-            "root_cause": "⚠️ Sĩ số biến động: 43 -> 44 (+1 SV)",
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm",
             "active_courses": [
-                "KS25_Phantichthietkehethong"
+                "KS25_Agile"
             ]
         },
         "HCM-K25-CNTT6": {
             "class_name": "HCM-K25-CNTT6(41-42-43)",
             "norm_name": "HCM-K25-CNTT6",
-            "sheet": "KS25_Phantichthietkehethong",
+            "sheet": "KS25_Agile",
             "size": 43,
             "size_info": {
                 "current_size": 43,
@@ -505,22 +527,22 @@
                 "diff": 2,
                 "history_str": "41-42-43"
             },
-            "instructor": "Trần Quốc Tuấn",
+            "instructor": "Nguyễn Đức Minh",
             "assistant": "",
-            "today_violation": 9.3,
-            "prev_violation": 9.3,
+            "today_violation": 12.4,
+            "prev_violation": 12.4,
             "diff": 0.0,
-            "anomaly_status": "SIZE_CHANGED",
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
             "tampering_suspect": false,
-            "root_cause": "⚠️ Sĩ số biến động: 41 -> 43 (+2 SV)",
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm",
             "active_courses": [
-                "KS25_Phantichthietkehethong"
+                "KS25_Agile"
             ]
         },
         "HCM-K25-CNTT5": {
             "class_name": "HCM-K25-CNTT5(39-44)",
             "norm_name": "HCM-K25-CNTT5",
-            "sheet": "KS25_Phantichthietkehethong",
+            "sheet": "KS25_Agile",
             "size": 44,
             "size_info": {
                 "current_size": 44,
@@ -529,16 +551,16 @@
                 "diff": 5,
                 "history_str": "39-44"
             },
-            "instructor": "Nguyễn Đức Minh",
+            "instructor": "Trần Quốc Tuấn",
             "assistant": "",
-            "today_violation": 10.61,
-            "prev_violation": 12.12,
-            "diff": -1.51,
-            "anomaly_status": "SIZE_CHANGED",
+            "today_violation": 6.82,
+            "prev_violation": 6.82,
+            "diff": 0.0,
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
             "tampering_suspect": false,
-            "root_cause": "⚠️ Sĩ số biến động: 39 -> 44 (+5 SV)",
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm",
             "active_courses": [
-                "KS25_Phantichthietkehethong"
+                "KS25_Agile"
             ]
         },
         "HN-K25-QTKD1": {
@@ -554,8 +576,8 @@
                 "history_str": "46"
             },
             "instructor": "Đặng Quỳnh Trang",
-            "assistant": "",
-            "today_violation": 14.49,
+            "assistant": "Nguyễn Thị Như Quỳnh",
+            "today_violation": 20.05,
             "prev_violation": 26.81,
             "diff": 0.0,
             "anomaly_status": "SIZE_CHANGED",
@@ -563,7 +585,8 @@
             "root_cause": "⚠️ Sĩ số tăng mạnh: 33 -> 46 (+13 SV, +39.4% do sáp nhập SV từ QTKD3)",
             "active_courses": [
                 "KS25_QTKD_MAN107",
-                "KS25_QTKD_BI"
+                "KS25_QTKD_BI",
+                "KS25_QTKD_AI_Agent"
             ]
         },
         "HN-K25-QTKD2": {
@@ -579,8 +602,8 @@
                 "history_str": "42"
             },
             "instructor": "Đặng Quỳnh Trang",
-            "assistant": "",
-            "today_violation": 13.49,
+            "assistant": "Nguyễn Thị Như Quỳnh",
+            "today_violation": 20.98,
             "prev_violation": 24.6,
             "diff": 0.0,
             "anomaly_status": "SIZE_CHANGED",
@@ -588,7 +611,8 @@
             "root_cause": "⚠️ Sĩ số tăng: 39 -> 42 (+3 SV, +7.7% do sáp nhập SV từ QTKD3)",
             "active_courses": [
                 "KS25_QTKD_MAN107",
-                "KS25_QTKD_BI"
+                "KS25_QTKD_BI",
+                "KS25_QTKD_AI_Agent"
             ]
         },
         "HN-K26-CNTT1": {
@@ -977,30 +1001,30 @@
             "root_cause": "Bình thường"
         },
         "HN-K24-CNTT1_KS24_DevOps": {
-            "class_name": "HN-K24-CNTT1(35-31)",
+            "class_name": "HN-K24-CNTT1(30)",
             "norm_name": "HN-K24-CNTT1",
             "sheet": "KS24_DevOps",
-            "size": 31,
+            "size": 30,
             "size_info": {
-                "current_size": 31,
-                "initial_size": 35,
-                "has_changed": true,
-                "diff": -4,
-                "history_str": "35-31"
+                "current_size": 30,
+                "initial_size": 30,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "30"
             },
             "instructor": "Bùi Thanh Hải",
             "assistant": "",
-            "today_violation": 3.23,
-            "prev_violation": 8.6,
-            "diff": -5.38,
+            "today_violation": 13.33,
+            "prev_violation": 13.33,
+            "diff": 0.0,
             "scores": [
-                3.23,
-                0.0,
-                6.45
+                26.67,
+                10.0,
+                3.33
             ],
-            "anomaly_status": "SIZE_CHANGED",
+            "anomaly_status": "STABLE",
             "tampering_suspect": false,
-            "root_cause": "⚠️ Sĩ số biến động: 35 -> 31 (-4 SV)"
+            "root_cause": "Bình thường"
         },
         "HN-K24-CNTT2_KS24_DevOps": {
             "class_name": "HN-K24-CNTT2(39)",
@@ -1016,69 +1040,69 @@
             },
             "instructor": "Bùi Thanh Hải",
             "assistant": "",
-            "today_violation": 1.71,
-            "prev_violation": 3.42,
-            "diff": -1.71,
+            "today_violation": 8.77,
+            "prev_violation": 7.89,
+            "diff": 0.88,
             "scores": [
-                0.0,
-                0.0,
-                5.13
+                15.79,
+                2.63,
+                7.89
             ],
             "anomaly_status": "STABLE",
             "tampering_suspect": false,
             "root_cause": "Bình thường"
         },
         "HN-K24-CNTT3_KS24_DevOps": {
-            "class_name": "HN-K24-CNTT3(42-39)",
+            "class_name": "HN-K24-CNTT3(40)",
             "norm_name": "HN-K24-CNTT3",
             "sheet": "KS24_DevOps",
-            "size": 39,
+            "size": 40,
             "size_info": {
-                "current_size": 39,
-                "initial_size": 42,
-                "has_changed": true,
-                "diff": -3,
-                "history_str": "42-39"
+                "current_size": 40,
+                "initial_size": 40,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "40"
             },
             "instructor": "Hồ Xuân Hùng",
             "assistant": "",
-            "today_violation": 0.0,
-            "prev_violation": 11.38,
-            "diff": -11.38,
+            "today_violation": 14.91,
+            "prev_violation": 13.16,
+            "diff": 1.75,
             "scores": [
-                0.0,
-                0.0,
-                0.0
+                31.58,
+                10.53,
+                2.63
             ],
-            "anomaly_status": "SIZE_CHANGED",
+            "anomaly_status": "STABLE",
             "tampering_suspect": false,
-            "root_cause": "⚠️ Sĩ số biến động: 42 -> 39 (-3 SV)"
+            "root_cause": "Bình thường"
         },
         "HN-K24-CNTT4_KS24_DevOps": {
-            "class_name": "HN-K24-CNTT4(32-31)",
+            "class_name": "HN-K24-CNTT4(31)",
             "norm_name": "HN-K24-CNTT4",
             "sheet": "KS24_DevOps",
             "size": 31,
             "size_info": {
                 "current_size": 31,
-                "initial_size": 32,
-                "has_changed": true,
-                "diff": -1,
-                "history_str": "32-31"
+                "initial_size": 31,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "31"
             },
             "instructor": "Bùi Thanh Hải",
             "assistant": "",
-            "today_violation": 0.0,
-            "prev_violation": 4.3,
-            "diff": -4.3,
+            "today_violation": 8.6,
+            "prev_violation": 9.68,
+            "diff": -1.07,
             "scores": [
-                0.0,
-                0.0,
-                0.0
+                12.9,
+                3.23,
+                9.68
             ],
-            "anomaly_status": "SIZE_CHANGED",
+            "anomaly_status": "STABLE",
             "tampering_suspect": false,
-            "root_cause": "⚠️ Sĩ số biến động: 32 -> 31 (-1 SV)"
+            "root_cause": "Bình thường"
         },
         "HCM-K24-CNTT1_KS24_DevOps": {
             "class_name": "HCM-K24-CNTT1(43)",
@@ -1094,13 +1118,13 @@
             },
             "instructor": "Nguyễn Bá Minh Đạo",
             "assistant": "",
-            "today_violation": 3.88,
-            "prev_violation": 2.33,
-            "diff": 1.55,
+            "today_violation": 9.31,
+            "prev_violation": 6.2,
+            "diff": 3.1,
             "scores": [
-                4.65,
-                0.0,
-                6.98
+                23.26,
+                2.33,
+                2.33
             ],
             "anomaly_status": "STABLE",
             "tampering_suspect": false,
@@ -1120,11 +1144,11 @@
             },
             "instructor": "Nguyễn Quảng An",
             "assistant": "",
-            "today_violation": 24.56,
-            "prev_violation": 23.68,
+            "today_violation": 26.31,
+            "prev_violation": 25.44,
             "diff": 0.88,
             "scores": [
-                31.58,
+                36.84,
                 18.42,
                 23.68
             ],
@@ -1146,12 +1170,12 @@
             },
             "instructor": "Nguyễn Quảng An",
             "assistant": "",
-            "today_violation": 11.63,
-            "prev_violation": 11.63,
+            "today_violation": 12.4,
+            "prev_violation": 12.4,
             "diff": 0.0,
             "scores": [
                 18.6,
-                4.65,
+                6.98,
                 11.63
             ],
             "anomaly_status": "SIZE_CHANGED",
@@ -1172,13 +1196,13 @@
             },
             "instructor": "Phạm Tuấn Bình",
             "assistant": "",
-            "today_violation": 8.53,
-            "prev_violation": 8.53,
-            "diff": 0.0,
+            "today_violation": 12.4,
+            "prev_violation": 10.08,
+            "diff": 2.33,
             "scores": [
-                13.95,
-                0.0,
-                11.63
+                20.93,
+                2.33,
+                13.95
             ],
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
@@ -1198,13 +1222,13 @@
             },
             "instructor": "Phạm Tuấn Bình",
             "assistant": "",
-            "today_violation": 4.76,
-            "prev_violation": 4.76,
-            "diff": 0.0,
+            "today_violation": 6.35,
+            "prev_violation": 7.14,
+            "diff": -0.79,
             "scores": [
-                4.76,
                 2.38,
-                7.14
+                7.14,
+                9.52
             ],
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
@@ -1224,48 +1248,178 @@
             },
             "instructor": "Nguyễn Quảng An",
             "assistant": "",
-            "today_violation": 14.07,
-            "prev_violation": 14.07,
-            "diff": 0.0,
+            "today_violation": 17.78,
+            "prev_violation": 15.56,
+            "diff": 2.22,
             "scores": [
-                24.44,
+                33.33,
                 4.44,
-                13.33
+                15.56
             ],
             "anomaly_status": "SIZE_CHANGED",
             "tampering_suspect": false,
             "root_cause": "⚠️ Sĩ số biến động: 41 -> 45 (+4 SV)"
         },
-        "HCM-K25-CNTT7_KS25_Phantichthietkehethong": {
-            "class_name": "HCM-K25-CNTT7(43-44)",
-            "norm_name": "HCM-K25-CNTT7",
-            "sheet": "KS25_Phantichthietkehethong",
-            "size": 44,
+        "HN-K25-CNTT1_KS25_Agile": {
+            "class_name": "HN-K25-CNTT1(39)",
+            "norm_name": "HN-K25-CNTT1",
+            "sheet": "KS25_Agile",
+            "size": 39,
             "size_info": {
-                "current_size": 44,
+                "current_size": 39,
+                "initial_size": 39,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "39"
+            },
+            "instructor": "Nguyễn Quảng An",
+            "assistant": "",
+            "today_violation": 20.51,
+            "prev_violation": 20.51,
+            "diff": 0.0,
+            "scores": [
+                30.77,
+                15.38,
+                15.38
+            ],
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
+            "tampering_suspect": false,
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
+        },
+        "HN-K25-CNTT2_KS25_Agile": {
+            "class_name": "HN-K25-CNTT2(43)",
+            "norm_name": "HN-K25-CNTT2",
+            "sheet": "KS25_Agile",
+            "size": 43,
+            "size_info": {
+                "current_size": 43,
                 "initial_size": 43,
-                "has_changed": true,
-                "diff": 1,
-                "history_str": "43-44"
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "43"
+            },
+            "instructor": "Nguyễn Quảng An",
+            "assistant": "",
+            "today_violation": 13.96,
+            "prev_violation": 13.96,
+            "diff": 0.0,
+            "scores": [
+                32.56,
+                2.33,
+                6.98
+            ],
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
+            "tampering_suspect": false,
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
+        },
+        "HN-K25-CNTT3_KS25_Agile": {
+            "class_name": "HN-K25-CNTT3(42)",
+            "norm_name": "HN-K25-CNTT3",
+            "sheet": "KS25_Agile",
+            "size": 42,
+            "size_info": {
+                "current_size": 42,
+                "initial_size": 42,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "42"
+            },
+            "instructor": "Phạm Tuấn Bình",
+            "assistant": "",
+            "today_violation": 13.49,
+            "prev_violation": 13.49,
+            "diff": 0.0,
+            "scores": [
+                26.19,
+                4.76,
+                9.52
+            ],
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
+            "tampering_suspect": false,
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
+        },
+        "HN-K25-CNTT4_KS25_Agile": {
+            "class_name": "HN-K25-CNTT4(40)",
+            "norm_name": "HN-K25-CNTT4",
+            "sheet": "KS25_Agile",
+            "size": 40,
+            "size_info": {
+                "current_size": 40,
+                "initial_size": 40,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "40"
+            },
+            "instructor": "Phạm Tuấn Bình",
+            "assistant": "",
+            "today_violation": 5.0,
+            "prev_violation": 5.0,
+            "diff": 0.0,
+            "scores": [
+                7.5,
+                2.5,
+                5.0
+            ],
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
+            "tampering_suspect": false,
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
+        },
+        "HN-K25-CNTT5_KS25_Agile": {
+            "class_name": "HN-K25-CNTT5(43)",
+            "norm_name": "HN-K25-CNTT5",
+            "sheet": "KS25_Agile",
+            "size": 43,
+            "size_info": {
+                "current_size": 43,
+                "initial_size": 43,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "43"
+            },
+            "instructor": "Nguyễn Quảng An",
+            "assistant": "",
+            "today_violation": 11.63,
+            "prev_violation": 11.63,
+            "diff": 0.0,
+            "scores": [
+                27.91,
+                4.65,
+                2.33
+            ],
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
+            "tampering_suspect": false,
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
+        },
+        "HCM-K25-CNTT7_KS25_Agile": {
+            "class_name": "HCM-K25-CNTT7(45)",
+            "norm_name": "HCM-K25-CNTT7",
+            "sheet": "KS25_Agile",
+            "size": 45,
+            "size_info": {
+                "current_size": 45,
+                "initial_size": 45,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "45"
             },
             "instructor": "Nguyễn Đức Minh",
             "assistant": "",
-            "today_violation": 23.46,
-            "prev_violation": 21.74,
-            "diff": 1.72,
+            "today_violation": 11.85,
+            "prev_violation": 11.85,
+            "diff": 0.0,
             "scores": [
-                36.96,
-                13.84,
-                19.57
+                24.44,
+                2.22,
+                8.89
             ],
-            "anomaly_status": "SIZE_CHANGED",
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
             "tampering_suspect": false,
-            "root_cause": "⚠️ Sĩ số biến động: 43 -> 44 (+1 SV)"
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
         },
-        "HCM-K25-CNTT6_KS25_Phantichthietkehethong": {
+        "HCM-K25-CNTT6_KS25_Agile": {
             "class_name": "HCM-K25-CNTT6(41-42-43)",
             "norm_name": "HCM-K25-CNTT6",
-            "sheet": "KS25_Phantichthietkehethong",
+            "sheet": "KS25_Agile",
             "size": 43,
             "size_info": {
                 "current_size": 43,
@@ -1274,24 +1428,24 @@
                 "diff": 2,
                 "history_str": "41-42-43"
             },
-            "instructor": "Trần Quốc Tuấn",
+            "instructor": "Nguyễn Đức Minh",
             "assistant": "",
-            "today_violation": 9.3,
-            "prev_violation": 9.3,
+            "today_violation": 12.4,
+            "prev_violation": 12.4,
             "diff": 0.0,
             "scores": [
                 18.6,
-                2.33,
-                6.98
+                0.0,
+                18.6
             ],
-            "anomaly_status": "SIZE_CHANGED",
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
             "tampering_suspect": false,
-            "root_cause": "⚠️ Sĩ số biến động: 41 -> 43 (+2 SV)"
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
         },
-        "HCM-K25-CNTT5_KS25_Phantichthietkehethong": {
+        "HCM-K25-CNTT5_KS25_Agile": {
             "class_name": "HCM-K25-CNTT5(39-44)",
             "norm_name": "HCM-K25-CNTT5",
-            "sheet": "KS25_Phantichthietkehethong",
+            "sheet": "KS25_Agile",
             "size": 44,
             "size_info": {
                 "current_size": 44,
@@ -1300,19 +1454,19 @@
                 "diff": 5,
                 "history_str": "39-44"
             },
-            "instructor": "Nguyễn Đức Minh",
+            "instructor": "Trần Quốc Tuấn",
             "assistant": "",
-            "today_violation": 10.61,
-            "prev_violation": 12.12,
-            "diff": -1.51,
+            "today_violation": 6.82,
+            "prev_violation": 6.82,
+            "diff": 0.0,
             "scores": [
                 13.64,
-                0.0,
-                18.18
+                4.55,
+                2.27
             ],
-            "anomaly_status": "SIZE_CHANGED",
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
             "tampering_suspect": false,
-            "root_cause": "⚠️ Sĩ số biến động: 39 -> 44 (+5 SV)"
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
         },
         "HN-K25-QTKD1_KS25_QTKD_MAN107": {
             "class_name": "HN-K25-QTKD1(46)",
@@ -1380,39 +1534,39 @@
             },
             "instructor": "Hoàng Thị Kim Oanh",
             "assistant": "",
-            "today_violation": 2.17,
-            "prev_violation": 2.17,
+            "today_violation": 18.11,
+            "prev_violation": 18.11,
             "diff": 0.0,
             "scores": [
+                30.43,
                 0.0,
-                0.0,
-                6.52
+                23.91
             ],
             "anomaly_status": "STABLE",
             "tampering_suspect": false,
             "root_cause": "Bình thường"
         },
         "HN-K25-QTKD2_KS25_QTKD_BI": {
-            "class_name": "HN-K25-QTKD2(42)",
+            "class_name": "HN-K25-QTKD2(40)",
             "norm_name": "HN-K25-QTKD2",
             "sheet": "KS25_QTKD_BI",
-            "size": 42,
+            "size": 40,
             "size_info": {
-                "current_size": 42,
-                "initial_size": 42,
+                "current_size": 40,
+                "initial_size": 40,
                 "has_changed": false,
                 "diff": 0,
-                "history_str": "42"
+                "history_str": "40"
             },
             "instructor": "Lê Thành Ngọc",
             "assistant": "",
-            "today_violation": 2.38,
-            "prev_violation": 2.38,
-            "diff": 0.0,
+            "today_violation": 25.0,
+            "prev_violation": 20.0,
+            "diff": 5.0,
             "scores": [
-                0.0,
-                0.0,
-                7.14
+                25.0,
+                5.0,
+                45.0
             ],
             "anomaly_status": "STABLE",
             "tampering_suspect": false,
@@ -2015,6 +2169,58 @@
             "anomaly_status": "SPIKE_UP",
             "tampering_suspect": false,
             "root_cause": "🚨 CẢNH BÁO MÔN MỚI [QTKD_Tinhocungdung]: Vi phạm xuất hiện ngay buổi đầu (9.09%) so với mốc 0% ban đầu"
+        },
+        "HN-K25-QTKD1_KS25_QTKD_AI_Agent": {
+            "class_name": "HN-K25-QTKD1(46)",
+            "norm_name": "HN-K25-QTKD1",
+            "sheet": "KS25_QTKD_AI_Agent",
+            "size": 46,
+            "size_info": {
+                "current_size": 46,
+                "initial_size": 46,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "46"
+            },
+            "instructor": "Lê Thành Ngọc",
+            "assistant": "Nguyễn Thị Như Quỳnh",
+            "today_violation": 15.22,
+            "prev_violation": 15.22,
+            "diff": 0.0,
+            "scores": [
+                23.91,
+                2.17,
+                19.57
+            ],
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
+            "tampering_suspect": false,
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
+        },
+        "HN-K25-QTKD2_KS25_QTKD_AI_Agent": {
+            "class_name": "HN-K25-QTKD2(40)",
+            "norm_name": "HN-K25-QTKD2",
+            "sheet": "KS25_QTKD_AI_Agent",
+            "size": 40,
+            "size_info": {
+                "current_size": 40,
+                "initial_size": 40,
+                "has_changed": false,
+                "diff": 0,
+                "history_str": "40"
+            },
+            "instructor": "Lê Thành Ngọc",
+            "assistant": "Nguyễn Thị Như Quỳnh",
+            "today_violation": 13.33,
+            "prev_violation": 13.33,
+            "diff": 0.0,
+            "scores": [
+                12.5,
+                0.0,
+                27.5
+            ],
+            "anomaly_status": "NEW_COURSE_NO_COMPARE",
+            "tampering_suspect": false,
+            "root_cause": "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
         }
     },
     "size_alerts": [
@@ -2041,30 +2247,6 @@
             "current_size": 31,
             "diff": -1,
             "alert": "Lớp 'HN-K24-CNTT4(32-31)' tại môn [KS24_AI_Microservice] có biến động sĩ số: 32 -> 31 (-1 SV)"
-        },
-        {
-            "sheet": "KS24_DevOps",
-            "class_raw": "HN-K24-CNTT1(35-31)",
-            "initial_size": 35,
-            "current_size": 31,
-            "diff": -4,
-            "alert": "Lớp 'HN-K24-CNTT1(35-31)' tại môn [KS24_DevOps] có biến động sĩ số: 35 -> 31 (-4 SV)"
-        },
-        {
-            "sheet": "KS24_DevOps",
-            "class_raw": "HN-K24-CNTT3(42-39)",
-            "initial_size": 42,
-            "current_size": 39,
-            "diff": -3,
-            "alert": "Lớp 'HN-K24-CNTT3(42-39)' tại môn [KS24_DevOps] có biến động sĩ số: 42 -> 39 (-3 SV)"
-        },
-        {
-            "sheet": "KS24_DevOps",
-            "class_raw": "HN-K24-CNTT4(32-31)",
-            "initial_size": 32,
-            "current_size": 31,
-            "diff": -1,
-            "alert": "Lớp 'HN-K24-CNTT4(32-31)' tại môn [KS24_DevOps] có biến động sĩ số: 32 -> 31 (-1 SV)"
         },
         {
             "sheet": "KS25_Phantichthietkehethong",
@@ -2129,6 +2311,22 @@
             "current_size": 44,
             "diff": 5,
             "alert": "Lớp 'HCM-K25-CNTT5(39-44)' tại môn [KS25_Phantichthietkehethong] có biến động sĩ số: 39 -> 44 (+5 SV)"
+        },
+        {
+            "sheet": "KS25_Agile",
+            "class_raw": "HCM-K25-CNTT6(41-42-43)",
+            "initial_size": 41,
+            "current_size": 43,
+            "diff": 2,
+            "alert": "Lớp 'HCM-K25-CNTT6(41-42-43)' tại môn [KS25_Agile] có biến động sĩ số: 41 -> 43 (+2 SV)"
+        },
+        {
+            "sheet": "KS25_Agile",
+            "class_raw": "HCM-K25-CNTT5(39-44)",
+            "initial_size": 39,
+            "current_size": 44,
+            "diff": 5,
+            "alert": "Lớp 'HCM-K25-CNTT5(39-44)' tại môn [KS25_Agile] có biến động sĩ số: 39 -> 44 (+5 SV)"
         }
     ]
 }

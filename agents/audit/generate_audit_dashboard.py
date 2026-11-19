@@ -92,8 +92,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div class="flex items-center bg-slate-800/90 rounded-xl border border-slate-700/80 shadow-inner px-2 py-1">
                 <i class="fa-solid fa-clock-rotate-left text-indigo-400 mr-2"></i>
                 <select id="periodSelect" onchange="switchPeriod(this.value)" class="bg-transparent text-slate-200 text-xs font-semibold focus:outline-none focus:ring-0 cursor-pointer border-none py-1.5 pr-2 outline-none">
+                    <option value="oct_01_27" class="bg-slate-800 text-slate-200 font-medium">Kỳ 01/10 - 27/10/2026 (15 ngày làm việc - Trừ nghỉ du lịch 20-23/10)</option>
+                    <option value="week_12_16" class="bg-slate-800 text-slate-200 font-medium">Tuần 12/10 - 16/10 (5 ngày - 40h)</option>
+                    <option value="week_05_09" class="bg-slate-800 text-slate-200 font-medium">Tuần 05/10 - 09/10 (5 ngày - 40h)</option>
+                    <option value="week_28_02" class="bg-slate-800 text-slate-200 font-medium">Tuần 28/09 - 02/10 (40h)</option>
                     <option value="sept_full" class="bg-slate-800 text-slate-200 font-medium">Toàn bộ Tháng 09/2026 (01/09 - 30/09)</option>
-                    <option value="week_14_18" class="bg-slate-800 text-slate-200 font-medium">Tuần 21/09 - 25/09 (Tuần này - 40h)</option>
+                    <option value="week_14_18" class="bg-slate-800 text-slate-200 font-medium">Tuần 21/09 - 25/09 (40h)</option>
                     <option value="sept_01_08" class="bg-slate-800 text-slate-200 font-medium">Lũy kế 01/09 - 25/09 (17 ngày)</option>
                     <option value="august" class="bg-slate-800 text-slate-200 font-medium">Tháng 08/2026 (20 ngày)</option>
                 </select>
@@ -101,7 +105,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             <div class="bg-slate-800/80 border border-slate-700/80 rounded-lg px-3 py-1.5 flex items-center space-x-2 text-slate-300">
                 <i class="fa-regular fa-calendar text-indigo-400"></i>
-                <span id="lblPeriodDates">Tuần 14/09 - 18/09/2026 (5 ngày - Chuẩn 40h/tuần)</span>
+                <span id="lblPeriodDates">Kỳ 01/10 - 27/10/2026 (15 ngày làm việc - Trừ nghỉ du lịch 20/10-23/10)</span>
             </div>
             <button onclick="window.print()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-700 transition flex items-center space-x-1.5">
                 <i class="fa-solid fa-print"></i>
@@ -142,7 +146,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <div class="flex items-center space-x-2">
                     <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
                     <h2 class="text-xs font-bold uppercase tracking-wider text-slate-300">Tổng Quan Toàn Trung Tâm Đào Tạo Công Nghệ & Kinh Tế Số</h2>
-                    <span class="px-2 py-0.5 text-[11px] font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-md">6 Khối • 3 Cơ sở • 42 Nhân sự</span>
+                    <span id="lblStaffTotalBadge" class="px-2 py-0.5 text-[11px] font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-md">6 Khối • 3 Cơ sở • Nhân sự không tính Leader</span>
                 </div>
                 <span id="lblOverviewSubtitle" class="text-[11px] text-slate-500">Dữ liệu kiểm toán chuẩn hóa theo bộ 3 KPI Master mới</span>
             </div>
@@ -157,7 +161,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     </div>
                     <div class="flex items-baseline space-x-2">
                         <span id="valComplianceRate" class="text-2xl font-bold text-white">79.5%</span>
-                        <span class="text-xs text-slate-400">(42 NS)</span>
+                        <span id="lblStaffCountCard" class="text-xs text-slate-400"></span>
                     </div>
                     <div class="text-[11px] text-slate-400 mt-2 flex items-center space-x-1">
                         <i class="fa-solid fa-circle-check text-emerald-400"></i>
@@ -248,7 +252,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <!-- Hero 1: Toàn Viện -->
                 <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden shadow-inner">
                     <div class="flex items-center justify-between text-xs text-slate-400 font-bold uppercase tracking-wider">
-                        <span>TOÀN TRUNG TÂM (41 NS)</span>
+                        <span id="lblHeroTotalTitle">TOÀN TRUNG TÂM</span>
                         <i class="fa-solid fa-building-columns text-emerald-400 text-sm"></i>
                     </div>
                     <div class="flex items-baseline gap-2.5 my-2">
@@ -411,12 +415,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <label class="text-slate-400 font-medium"><i class="fa-solid fa-layer-group text-slate-500 mr-1"></i>Khối Đào Tạo:</label>
                     <select id="groupFilter" onchange="filterTable()" class="bg-slate-800 border border-slate-700 text-slate-200 rounded-lg px-3 py-1.5 text-xs focus:ring-1 focus:ring-indigo-500 focus:outline-none">
                         <option value="ALL">Tất cả các Khối (6 Khối)</option>
-                        <option value="Khối CNTT Hà Nội">Khối CNTT Hà Nội (13 NS - Leader Hồ Xuân Hùng)</option>
-                        <option value="Khối Quản trị Kinh doanh">Khối Quản trị Kinh doanh (9 NS - Leader Hoàng Thị Kim Oanh)</option>
-                        <option value="Khối Ngoại ngữ và KNM">Khối Ngoại ngữ và KNM (7 NS - Leader Giáp Thị Minh Hằng)</option>
-                        <option value="Khối QLCLĐT Hà Nội">Khối QLCLĐT Hà Nội (4 NS - Leader Nguyễn Thị Tươi)</option>
-                        <option value="Khối CNTT HCM">Khối CNTT HCM (7 NS - Leader Nguyễn Bá Minh Đạo)</option>
-                        <option value="LMS AI">LMS AI (2 NS - Leader Trần Minh Cường)</option>
+                        <option value="Khối CNTT Hà Nội">Khối CNTT Hà Nội (10 NS - Leader Hồ Xuân Hùng)</option>
+                        <option value="Khối Quản trị Kinh doanh">Khối Quản trị Kinh doanh (7 NS - Leader Hoàng Thị Kim Oanh)</option>
+                        <option value="Khối Ngoại ngữ và KNM">Khối Ngoại ngữ và KNM (6 NS - Leader Giáp Thị Minh Hằng)</option>
+                        <option value="Khối QLCLĐT Hà Nội">Phòng QLĐT / QLCLĐT (3 NS - Trực thuộc BGĐ)</option>
+                        <option value="Khối CNTT HCM">Khối CNTT HCM (6 NS - Leader Nguyễn Bá Minh Đạo)</option>
+                        <option value="LMS AI">LMS AI (1 NS - Leader Trần Minh Cường)</option>
                     </select>
                 </div>
 
@@ -582,7 +586,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         const comparisonData = __COMPARISON_JSON__;
         const capacityMatrixData = __CAPACITY_MATRIX_JSON__;
 
-        let currentPeriod = "week_14_18";
+        let currentPeriod = "oct_01_27";
         let currentData = (auditData.periods && auditData.periods[currentPeriod]) ? auditData.periods[currentPeriod] : auditData;
         let staffList = Object.values(currentData.staff_details || {});
         let currentSelectedStaff = null;
@@ -594,28 +598,28 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 role: "Leader Khối CNTT Hà Nội",
                 rank: 5,
                 groupKey: "Khối CNTT Hà Nội",
-                campuses: "HN - Ngọc Trục (6 NS) & HN - HPC (6 NS)",
-                totalSubs: 12
+                campuses: "HN - Ngọc Trục (6 NS) & HN - HPC (4 NS)",
+                totalSubs: 10
             },
             "Khối Quản trị Kinh doanh": {
                 name: "Hoàng Thị Kim Oanh",
                 role: "Leader Khối Quản trị Kinh doanh",
                 rank: 5,
                 groupKey: "Khối Quản trị Kinh doanh",
-                campuses: "Hà Nội - Ngọc Trục (6 NS) & TP. Hồ Chí Minh (2 NS)",
-                totalSubs: 8
+                campuses: "Hà Nội - Ngọc Trục (5 NS) & TP. Hồ Chí Minh (2 NS)",
+                totalSubs: 7
             },
             "Khối Ngoại ngữ và KNM": {
                 name: "Giáp Thị Minh Hằng",
                 role: "Leader Khối Ngoại ngữ & KNM",
                 rank: 5,
                 groupKey: "Khối Ngoại ngữ và KNM",
-                campuses: "Cơ sở Hà Nội - HPC (7 NS)",
+                campuses: "Hà Nội - HPC (4 NS) & TP. Hồ Chí Minh (2 NS)",
                 totalSubs: 6
             },
             "Khối QLCLĐT Hà Nội": {
-                name: "Nguyễn Thị Tươi",
-                role: "Leader Khối QLCLĐT Hà Nội",
+                name: "Phòng QLĐT (Trực thuộc BGĐ)",
+                role: "Bộ phận Quản lý Đào tạo (QLĐT)",
                 rank: 4,
                 groupKey: "Khối QLCLĐT Hà Nội",
                 campuses: "Hà Nội - HPC (2 NS) & TP. Hồ Chí Minh (1 NS)",
@@ -626,7 +630,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 role: "Leader Khối CNTT HCM",
                 rank: 5,
                 groupKey: "Khối CNTT HCM",
-                campuses: "Cơ sở TP. Hồ Chí Minh (7 NS)",
+                campuses: "Cơ sở TP. Hồ Chí Minh (6 NS)",
                 totalSubs: 6
             },
             "LMS AI": {
@@ -634,7 +638,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 role: "Leader Nhóm Dự án LMS AI",
                 rank: 5,
                 groupKey: "LMS AI",
-                campuses: "Hà Nội - HPC (1 NS) & TP. Hồ Chí Minh (1 NS)",
+                campuses: "TP. Hồ Chí Minh (1 NS)",
                 totalSubs: 1
             }
         };
@@ -648,6 +652,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             }
             staffList = Object.values(currentData.staff_details || {});
 
+            // Số nhân sự (không tính Leader) theo kỳ đang chọn
+            const nStaff = staffList.length;
+            const b1 = document.getElementById("lblStaffTotalBadge"); if (b1) b1.textContent = `6 Khối • 3 Cơ sở • ${nStaff} Nhân sự (không tính Leader)`;
+            const b2 = document.getElementById("lblStaffCountCard"); if (b2) b2.textContent = `(${nStaff} NS)`;
+            document.querySelectorAll('#groupFilter option').forEach(opt => {
+                const base = LEADER_DIRECTORY_BASE[opt.value];
+                if (!base) return;
+                const n = staffList.filter(s => s.group === opt.value || s.group.includes(opt.value)).length;
+                opt.textContent = `${opt.value} (${n} NS - ${base.name})`;
+            });
+
             const lblDates = document.getElementById("lblPeriodDates");
             const btnMd = document.getElementById("btnMarkdownReport");
             const selectEl = document.getElementById("periodSelect");
@@ -656,7 +671,19 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 selectEl.value = periodKey;
             }
 
-            if (periodKey === 'sept_full') {
+            if (periodKey === 'oct_01_27') {
+                lblDates.textContent = "Kỳ 01/10 - 27/10/2026 (15 ngày làm việc - Trừ nghỉ du lịch 20/10-23/10)";
+                if (btnMd) btnMd.href = "../../reports/core/agent_4_daily_logs.md";
+            } else if (periodKey === 'week_12_16') {
+                lblDates.textContent = "Tuần 12/10 - 16/10/2026 (5 ngày - Chuẩn 40h/tuần)";
+                if (btnMd) btnMd.href = "../../reports/core/agent_4_daily_logs.md";
+            } else if (periodKey === 'week_05_09') {
+                lblDates.textContent = "Tuần 05/10 - 09/10/2026 (5 ngày - Chuẩn 40h/tuần)";
+                if (btnMd) btnMd.href = "../../reports/core/agent_4_daily_logs.md";
+            } else if (periodKey === 'week_28_02') {
+                lblDates.textContent = "Tuần 28/09 - 02/10/2026 (5 ngày - Chuẩn 40h/tuần)";
+                if (btnMd) btnMd.href = "../../reports/core/agent_4_daily_logs.md";
+            } else if (periodKey === 'sept_full') {
                 lblDates.textContent = "Tháng 09/2026 (22 ngày làm việc - 01/09 đến 30/09)";
                 if (btnMd) btnMd.href = "../../reports/core/agent_4_daily_logs.md";
             } else if (periodKey === 'week_14_18') {
@@ -675,8 +702,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             document.getElementById("valHoursRatio").textContent = `Khai báo: ${s.total_declared_hours || 0}h / Chuẩn: ${s.total_standard_hours || 0}h`;
             document.getElementById("valExcessHours").textContent = "+" + (s.total_excess_hours || 0) + "h";
             
-            if (periodKey === 'week_14_18') {
-                const c3 = document.getElementById("lblCard3"); if (c3) c3.textContent = "CHƯA ĐẠT 40H/TUẦN";
+            if (periodKey === 'oct_01_27' || periodKey === 'week_14_18' || periodKey === 'week_28_02' || periodKey === 'week_05_09' || periodKey === 'week_12_16') {
+                const c3 = document.getElementById("lblCard3"); if (c3) c3.textContent = periodKey === 'oct_01_27' ? "CHƯA ĐẠT CHUẨN 120H (8H/NGÀY)" : "CHƯA ĐẠT 40H/TUẦN";
                 const c4 = document.getElementById("lblCard4"); if (c4) c4.textContent = "CÓ TASK NGOÀI MASTER";
                 document.getElementById("valReviewRank").textContent = (s.count_under_40h || 0) + " NS";
                 document.getElementById("valDeductHours").textContent = (s.count_free_tasks_staff || s.count_deduct_hours || 0) + " NS";
@@ -693,16 +720,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         function getLeaderSubordinates(leaderName, groupKey) {
             return staffList.filter(s => {
+                const isUnderGroup = s.group === groupKey || (s.group && s.group.includes(groupKey));
                 const isUnderLeader = s.campus_leader && s.campus_leader.includes(leaderName);
                 const notLeader = s.name !== leaderName;
-                return isUnderLeader && notLeader;
+                return (isUnderGroup || isUnderLeader) && notLeader;
             });
         }
 
         function getDynamicLeaderInfo(groupKey) {
             const base = LEADER_DIRECTORY_BASE[groupKey];
             if (!base) return null;
-            const leaderStaff = staffList.find(s => s.name === base.name);
+            // Leader không nằm trong staff_details (không tính giờ phòng ban) — lấy từ leader_details
+            const leaderStaff = Object.values(currentData.leader_details || {}).find(s => s.name === base.name);
             const subs = getLeaderSubordinates(base.name, base.groupKey);
             const excessHoursTotal = Math.round(subs.reduce((acc, s) => acc + s.excess_hours, 0) * 10) / 10;
             const reviewRankStaff = subs.filter(s => s.recommendation_category === "CẦN RÀ SOÁT RANK");
@@ -713,6 +742,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             if (leaderStaff) {
                 compliance = leaderStaff.compliance_rate;
                 reportedDays = `${leaderStaff.reported_days}/${leaderStaff.expected_days} ngày`;
+            } else if (groupKey === "Khối QLCLĐT Hà Nội" && subs.length > 0) {
+                compliance = Math.round(subs.reduce((acc, s) => acc + s.compliance_rate, 0) / subs.length * 10) / 10;
+                const totRep = subs.reduce((acc, s) => acc + s.reported_days, 0);
+                const totExp = subs.reduce((acc, s) => acc + s.expected_days, 0);
+                reportedDays = `${totRep}/${totExp} lượt ngày`;
             }
 
             let statusBadge = "🔴 Chưa làm gương (0%)";
@@ -733,28 +767,34 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             if (base.name === "Hồ Xuân Hùng") {
                 leaderReview = compliance === 0 
-                    ? "Leader chưa nộp báo cáo ngày trên Worklane trong kỳ này, cần tăng cường làm gương kỷ luật tác nghiệp cho 12 nhân sự trực thuộc." 
+                    ? "Leader chưa nộp báo cáo ngày trên Worklane trong kỳ này, cần tăng cường làm gương kỷ luật tác nghiệp cho 10 nhân sự trực thuộc." 
                     : `Leader đạt ${compliance}% báo cáo ngày, cần chỉ đạo sát sao việc chuyển đổi sang 18 loại Review theo Barem FINAL.`;
-                actionForDirector = "Giám đốc Đào tạo cần nhắc nhở trực tiếp và yêu cầu Leader cắt bỏ các task tự soạn slide của 9 nhân sự rà soát Rank.";
+                actionForDirector = "Giám đốc Đào tạo cần nhắc nhở trực tiếp và yêu cầu Leader rà soát định mức giờ công của 10 nhân sự khối CNTT Hà Nội.";
             } else if (base.name === "Giáp Thị Minh Hằng") {
                 leaderReview = `Leader làm gương chuẩn mực (${compliance}%), bám sát điều hành dự án tiếng Anh & tiếng Nhật theo Barem 118 định mức mới.`;
-                actionForDirector = "Phổ biến Barem Ngoại ngữ 118 định mức cho cô Lò Thị Ngọc Anh và cô Lê Thị Đỏ để chuẩn hóa thời lượng thẩm định đề thi.";
+                actionForDirector = "Phổ biến Barem Ngoại ngữ 118 định mức cho cô Lò Thị Ngọc Anh và đội ngũ giảng viên để chuẩn hóa thời lượng thẩm định đề thi.";
             } else if (base.name === "Hoàng Thị Kim Oanh") {
-                leaderReview = `Kỷ luật tuyệt đối (${compliance}%), 100% nhân sự trực thuộc nộp đầy đủ báo cáo ngày môn MAN107.`;
+                leaderReview = `Quản lý 7 nhân sự khối QTKD, cần đôn đốc kỷ luật báo cáo ngày và chuẩn hóa định mức giảng dạy môn MAN101.`;
                 actionForDirector = "Rà soát các task nghiên cứu tự do của nhân sự để chuyển thành sản phẩm nghiệm thu rõ ràng.";
             } else if (base.name === "Nguyễn Bá Minh Đạo") {
-                leaderReview = `Khai báo đúng khối lượng giảng dạy thực tế, tỷ lệ vênh thấp nhất toàn viện (+37.4%).`;
+                leaderReview = `Khai báo đúng khối lượng giảng dạy thực tế, tỷ lệ vênh thấp nhất toàn viện.`;
                 actionForDirector = "Biểu dương tinh thần tác nghiệp kỷ luật và sát thực tế của đội ngũ CNTT TP. Hồ Chí Minh.";
-            } else if (base.name === "Nguyễn Thị Tươi") {
-                leaderReview = `Leader đạt ${compliance}%, quản lý 3 nhân sự giáo vụ và kiểm toán chất lượng.`;
-                actionForDirector = "Chuẩn hóa định mức công việc giáo vụ và giám sát lớp học.";
+            } else if (groupKey === "Khối QLCLĐT Hà Nội") {
+                leaderReview = `Bộ phận QLĐT đạt ${compliance}% báo cáo ngày, gồm 3 nhân sự (Nguyễn Xuân Bách, Trần Thị Mỹ Phước, Mai Xuân Chinh chuyển từ khối CNTT HN sang).`;
+                actionForDirector = "Chuẩn hóa định mức công việc giáo vụ, khảo thí và xếp lịch thi toàn hệ thống cho Phòng QLĐT.";
             } else {
                 leaderReview = `Leader tập trung R&D LMS AI. Cần hoàn thiện barem định mức riêng cho khối công nghệ AI.`;
                 actionForDirector = "Ban hành barem định mức riêng cho các đầu việc lập trình và tích hợp LMS AI.";
             }
 
+            const campusCount = {};
+            subs.forEach(s => { campusCount[s.campus] = (campusCount[s.campus] || 0) + 1; });
+            const campuses = Object.entries(campusCount).map(([c, n]) => `${c.replace('Cơ sở ', '')} (${n} NS)`).join(' & ') || '—';
+
             return {
                 ...base,
+                campuses,
+                totalSubs: subs.length,
                 compliance,
                 reportedDays,
                 statusBadge,
@@ -796,7 +836,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         : "bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700";
                     return `<button onclick="selectGroupFilter('${g}')" class="px-2.5 py-1 rounded-lg text-xs border transition flex items-center gap-1 ${pillClass}">
                         <span>${item.name}</span>
-                        <span class="text-[10px] opacity-80">(${item.totalSubs} NS)</span>
+                        <span class="text-[10px] opacity-80">(${getLeaderSubordinates(item.name, item.groupKey).length} NS)</span>
                     </button>`;
                 }).join('');
 
@@ -1088,7 +1128,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <div class="text-[10px] text-slate-500"><i class="fa-solid fa-user-tie text-[9px] mr-1"></i>${s.campus_leader || ''}</div>
                     </td>
                     <td class="py-2.5 px-3">
-                        <div class="text-slate-300 font-medium">${s.role}</div>
+                        <div class="text-slate-300 font-medium">${s.role}${s.subject ? ' · ' + s.subject : ''}</div>
                         <div class="text-[11px] font-semibold text-indigo-400">Rank ${s.rank}</div>
                     </td>
                     <td class="py-2.5 px-3">
@@ -1295,7 +1335,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         function copyStaffAuditReport() {
             if (!currentSelectedStaff) return;
             const s = currentSelectedStaff;
-            const periodLabel = currentPeriod === 'sept_01_08' ? 'KỲ 01/09 - 08/09/2026' : 'THÁNG 08/2026';
+            const periodLabel = (currentData.audit_month || (document.getElementById("lblPeriodDates") || {}).textContent || currentPeriod).toUpperCase();
             let text = `PHIẾU LÀM VIỆC 1-1 KIỂM TOÁN HIỆU SUẤT (${periodLabel})\\n`;
             text += `===============================================\\n`;
             text += `Họ và tên: ${s.name} (Rank ${s.rank} - ${s.role})\\n`;
@@ -1488,12 +1528,24 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         function renderCapacityMatrix(periodKey) {
             if (!capacityMatrixData) return;
-            const periodData = capacityMatrixData[periodKey === 'sept_01_08' ? 'september' : 'august'];
-            if (!periodData) return;
+            const periodData = capacityMatrixData[periodKey];
+            const tbodyEl = document.getElementById("capacityMatrixTbody");
+            if (!periodData) {
+                // Không được giữ số của kỳ khác — báo rõ thiếu dữ liệu
+                const badge = document.getElementById("badgeMatrixPeriod");
+                if (badge) badge.textContent = "Chưa có ma trận công suất cho kỳ này";
+                ["heroTotalPct","heroTotalStd","heroTotalDec","heroCnttPct","heroCnttStd","heroCnttDec","heroMasterEff","heroMasterStd"].forEach(id => {
+                    const el = document.getElementById(id); if (el) el.textContent = "—";
+                });
+                if (tbodyEl) tbodyEl.innerHTML = '<tr><td colspan="6" class="py-4 px-4 text-center text-amber-300">⚠️ Chưa có dữ liệu ma trận cho kỳ này — chạy agents/audit/compute_worklane_comparisons.py</td></tr>';
+                return;
+            }
 
             // Cập nhật nhãn kỳ
             const badgePeriod = document.getElementById("badgeMatrixPeriod");
             if (badgePeriod) badgePeriod.textContent = periodData.period_name;
+            const heroTitle = document.getElementById("lblHeroTotalTitle");
+            if (heroTitle) heroTitle.textContent = `TOÀN TRUNG TÂM (${periodData.total_summary.staff_count} NS)`;
 
             // Cập nhật 3 Hero Cards Tổng Quan
             const heroTotPct = document.getElementById("heroTotalPct");
@@ -1553,7 +1605,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </td>
                         <td class="py-4 px-4 text-center">
                             <div class="font-mono text-sm font-bold text-slate-200">
-                                <span class="text-slate-400 text-xs">${r.staff_count} × 40h =</span> <span class="text-indigo-300 text-base font-extrabold">${r.cap_40h.toFixed(1)}h</span>
+                                <span class="text-slate-400 text-xs">${r.staff_count} NS · chuẩn</span> <span class="text-indigo-300 text-base font-extrabold">${r.cap_40h.toFixed(1)}h</span>
                             </div>
                         </td>
                         <td class="py-4 px-4 text-center">
@@ -1591,7 +1643,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </td>
                         <td class="py-4 px-4 text-center">
                             <div class="font-mono text-sm font-bold text-indigo-200">
-                                <span class="text-indigo-300/70 text-xs">22 × 40h =</span> <span class="text-indigo-200 text-base font-black">${cntt.cap_40h.toFixed(1)}h</span>
+                                <span class="text-indigo-300/70 text-xs">${cntt.staff_count} NS · chuẩn</span> <span class="text-indigo-200 text-base font-black">${cntt.cap_40h.toFixed(1)}h</span>
                             </div>
                         </td>
                         <td class="py-4 px-4 text-center">
@@ -1629,7 +1681,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </td>
                         <td class="py-4 px-4 text-center">
                             <div class="font-mono text-sm font-bold text-white">
-                                <span class="text-slate-400 text-xs">41 × 40h =</span> <span class="text-emerald-400 text-base font-black">${tot.cap_40h.toFixed(1)}h</span>
+                                <span class="text-slate-400 text-xs">${tot.staff_count} NS · chuẩn</span> <span class="text-emerald-400 text-base font-black">${tot.cap_40h.toFixed(1)}h</span>
                             </div>
                         </td>
                         <td class="py-4 px-4 text-center">

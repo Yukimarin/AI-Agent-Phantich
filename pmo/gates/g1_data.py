@@ -4,7 +4,7 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import datetime, timezone
 
-from pmo.config import MAX_DATA_AGE_HOURS
+from pmo.config import MAX_DATA_AGE_HOURS, MAX_RAW_SPREAD_HOURS
 from pmo.data_agent import raw_name
 from pmo.gates.base import FAIL, PASS, WARN, Check
 from pmo.registry import is_valid_course_class_id
@@ -50,6 +50,20 @@ def run(snapshot: Snapshot, now: datetime | None = None) -> list[Check]:
         age_h = (now - datetime.fromisoformat(data_at)).total_seconds() / 3600
         checks.append(Check(G, "Độ mới dữ liệu", FAIL if age_h > MAX_DATA_AGE_HOURS else PASS,
                             f"Lấy lúc {data_at} ({age_h:.1f} giờ trước)"))
+
+    # Bài học 09/10: raw cache cũ trộn với raw mới (refresh lỗi giữa chừng rồi chạy lại không --refresh)
+    mtimes = {}
+    for r in valid:
+        p = snapshot.path(raw_name(r["courseClassId"]))
+        if p.exists():
+            mtimes[f"{r['className']}/{r['courseCode']}"] = p.stat().st_mtime
+    if mtimes:
+        newest = max(mtimes.values())
+        lagging = [f"{k} (cũ hơn {(newest - t) / 3600:.1f} giờ)" for k, t in mtimes.items()
+                   if (newest - t) / 3600 > MAX_RAW_SPREAD_HOURS]
+        checks.append(Check(G, "Dữ liệu gốc cùng một lần lấy", FAIL if lagging else PASS,
+                            f"{len(lagging)} lớp-môn dùng raw cũ — xóa file raw tương ứng hoặc chạy --refresh"
+                            if lagging else f"Chênh lệch ≤ {MAX_RAW_SPREAD_HOURS} giờ", lagging))
 
     # Bài học #3: sĩ số 0 trong khi cùng môn ở lớp khác đang có SV ⇒ nghi courseClassId cũ
     sizes: dict[str, int] = {}

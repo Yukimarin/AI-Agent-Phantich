@@ -59,9 +59,9 @@ def build_executive_dataset():
         {"name": "HCM-K25-CNTT6", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Phantichthietkehethong", "gv": "Trần Quốc Tuấn", "tg": "Lưu Hoàng Xuân Nguyên"},
         {"name": "HCM-K25-CNTT7", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)", "batch": "KS25", "dept": "Khối CNTT", "campus": "HCM", "subject": "KS25_Phantichthietkehethong", "gv": "Nguyễn Đức Minh", "tg": "Lưu Hoàng Xuân Nguyên"},
         
-        # Khóa KS25 QTKD — Hà Nội (2 lớp - Môn Business Intelligence [BI])
-        {"name": "HN-K25-QTKD1", "group_title": "Khối KS25 QTKD (Kỳ II — Business Intelligence)", "batch": "KS25", "dept": "Khối QTKD", "campus": "HN", "subject": "KS25_QTKD_BI", "gv": "Hoàng Thị Kim Oanh", "tg": "Hoàng Thị Kim Oanh"},
-        {"name": "HN-K25-QTKD2", "group_title": "Khối KS25 QTKD (Kỳ II — Business Intelligence)", "batch": "KS25", "dept": "Khối QTKD", "campus": "HN", "subject": "KS25_QTKD_BI", "gv": "Lê Thành Ngọc", "tg": "Lê Thành Ngọc"}
+        # Khóa KS25 QTKD — Hà Nội (2 lớp - Môn Ứng dụng AI Agent)
+        {"name": "HN-K25-QTKD1", "group_title": "Khối KS25 QTKD (Kỳ II — Ứng dụng AI Agent)", "batch": "KS25", "dept": "Khối QTKD", "campus": "HN", "subject": "KS25_QTKD_AI_Agent", "gv": "Lê Thành Ngọc", "tg": "Nguyễn Thị Như Quỳnh"},
+        {"name": "HN-K25-QTKD2", "group_title": "Khối KS25 QTKD (Kỳ II — Ứng dụng AI Agent)", "batch": "KS25", "dept": "Khối QTKD", "campus": "HN", "subject": "KS25_QTKD_AI_Agent", "gv": "Lê Thành Ngọc", "tg": "Nguyễn Thị Như Quỳnh"}
     ]
 
     classes_list = []

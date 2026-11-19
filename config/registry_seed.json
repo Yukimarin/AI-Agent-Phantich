@@ -7,7 +7,7 @@
       "classId": "6aac917e6fde2b6e692ed504",
       "className": "HCM-K26-QTKD1",
       "classCode": "HCM-K26-QTKD1",
-      "totalCourses": 5,
+      "totalCourses": 7,
       "assignedCourses": [
         {
           "courseClassId": "6ab4fc502fbc7e0fab04401f",
@@ -43,6 +43,20 @@
           "courseName": "Định hướng đầu khóa",
           "courseCode": "Orientation",
           "teacherName": "Trần Thị Mỹ Phước"
+        },
+        {
+          "courseClassId": "6add67f11682537aa0884d21",
+          "courseId": "6a98e37917c71a5181521502",
+          "courseName": "Quản trị học căn bản",
+          "courseCode": "MAN101",
+          "teacherName": "Lê Nhựt Mi"
+        },
+        {
+          "courseClassId": "6af266722055f940ba56f723",
+          "courseId": "6aad0965f00919310d3f11b7",
+          "courseName": "Kỹ năng bán hàng thực chiến",
+          "courseCode": "SEL101",
+          "teacherName": "Lê Nhựt Mi"
         }
       ]
     },
@@ -195,7 +209,7 @@
           "teacherName": "Nguyễn Ngọc Vân Khanh"
         },
         {
-          "courseClassId": "6aafaa13a7defdd54c03c945",
+          "courseClassId": "6ab5e3dd2fbc7e0fab150308",
           "courseId": "6aad0943f00919310d3f10f5",
           "courseName": "Tin học ứng dụng",
           "courseCode": "SSK102",
@@ -221,17 +235,17 @@
       "classId": "6aac91686fde2b6e692ed4eb",
       "className": "HN-K26-QTKD2",
       "classCode": "HN-K26-QTKD2",
-      "totalCourses": 5,
+      "totalCourses": 7,
       "assignedCourses": [
         {
-          "courseClassId": "6ab4d8222f8b9a21479d3175",
+          "courseClassId": "6ab5e4412fbc7e0fab150866",
           "courseId": "6aad0fc1f00919310d3f19cb",
           "courseName": "Tư duy phân tích",
           "courseCode": "SSK103",
           "teacherName": "Nguyễn Thị Hồng Minh"
         },
         {
-          "courseClassId": "6ab4d8142f8b9a21479d2eac",
+          "courseClassId": "6ab5e40b2fbc7e0fab150584",
           "courseId": "6aad0943f00919310d3f10f5",
           "courseName": "Tin học ứng dụng",
           "courseCode": "SSK102",
@@ -257,6 +271,20 @@
           "courseName": "Định hướng đầu khóa",
           "courseCode": "Orientation",
           "teacherName": "Nguyễn Xuân Bách"
+        },
+        {
+          "courseClassId": "6add6af31682537aa0885b4b",
+          "courseId": "6a98e37917c71a5181521502",
+          "courseName": "Quản trị học căn bản",
+          "courseCode": "MAN101",
+          "teacherName": "Đặng Quỳnh Trang"
+        },
+        {
+          "courseClassId": "6af266392055f940ba56e7a6",
+          "courseId": "6aad0965f00919310d3f11b7",
+          "courseName": "Kỹ năng bán hàng thực chiến",
+          "courseCode": "SEL101",
+          "teacherName": "Đặng Quỳnh Trang"
         }
       ]
     },
@@ -264,7 +292,7 @@
       "classId": "6aac916e6fde2b6e692ed4f1",
       "className": "HN-K26-QTKD3",
       "classCode": "HN-K26-QTKD3",
-      "totalCourses": 5,
+      "totalCourses": 7,
       "assignedCourses": [
         {
           "courseClassId": "6ab4d8782f8b9a21479d3781",
@@ -300,6 +328,20 @@
           "courseName": "Định hướng đầu khóa",
           "courseCode": "Orientation",
           "teacherName": "Nguyễn Xuân Bách"
+        },
+        {
+          "courseClassId": "6add6b111682537aa0885cae",
+          "courseId": "6a98e37917c71a5181521502",
+          "courseName": "Quản trị học căn bản",
+          "courseCode": "MAN101",
+          "teacherName": "Đặng Quỳnh Trang"
+        },
+        {
+          "courseClassId": "6af265b52055f940ba56d54d",
+          "courseId": "6aad0965f00919310d3f11b7",
+          "courseName": "Kỹ năng bán hàng thực chiến",
+          "courseCode": "SEL101",
+          "teacherName": "Hoàng Thị Kim Oanh"
         }
       ]
     },
@@ -436,7 +478,7 @@
       "classId": "6aac91536fde2b6e692ed461",
       "className": "HN-KS26-CNTT4",
       "classCode": "HN-KS26-CNTT4",
-      "totalCourses": 1,
+      "totalCourses": 3,
       "assignedCourses": [
         {
           "courseClassId": "6ab4e2762f8b9a21479e7420",
@@ -444,6 +486,20 @@
           "courseName": "Nhập Môn Công Nghệ Thông Tin",
           "courseCode": "IT108-K26",
           "teacherName": "Lương Quốc Tuấn"
+        },
+        {
+          "courseClassId": "6ae9a4d0c05b5fde4e5aea3c",
+          "courseId": "6a87f15aeece8cf70963e89b",
+          "courseName": "Kỹ Năng Promting với AI",
+          "courseCode": "IT206-K26",
+          "teacherName": "Lương Quốc Tuấn"
+        },
+        {
+          "courseClassId": "6ae991d9c05b5fde4e55c845",
+          "courseId": "6aad0918f00919310d3f102b",
+          "courseName": "Kỹ năng Học tập chủ động & Phát triển bản thân",
+          "courseCode": "SSK101",
+          "teacherName": "Hoàng Thị Hậu"
         }
       ]
     }

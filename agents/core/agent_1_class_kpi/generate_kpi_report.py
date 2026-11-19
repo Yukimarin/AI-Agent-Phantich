@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import sys
 import openpyxl
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', 'common'))
+from excel_units import to_percent  # noqa: E402
 from datetime import datetime, date, timedelta
 from collections import defaultdict
 import numpy as np
@@ -214,17 +217,20 @@ weekly_groups = {
     },
     'KS25_CNTT_HCM': {
         'classes': ['HCM-K25-CNTT5', 'HCM-K25-CNTT6', 'HCM-K25-CNTT7'],
-        'sheet_curr': 'KS25_Phantichthietkehethong',
+        'sheet_curr': 'KS25_Agile' if 'KS25_Agile' in wb.sheetnames else 'KS25_Phantichthietkehethong',
         'sheet_prev': None,
         'is_new_course': True,
-        'label': 'Khóa KS25 CNTT TP. HCM (Kỳ II — Phân tích thiết kế hệ thống — Đang tiếp tục học)'
+        # Môn mới Agile Scrum (05/10/2026): chỉ hiển thị số liệu, KHÔNG so sánh tăng/giảm
+        'no_compare': 'KS25_Agile' in wb.sheetnames,
+        'label': 'Khóa KS25 CNTT TP. HCM (Kỳ II — Agile Scrum — Môn mới bắt đầu 05/10)'
     },
     'KS25_QTKD_HN': {
         'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2'],
-        'sheet_curr': 'KS25_QTKD_BI' if 'KS25_QTKD_BI' in wb.sheetnames else 'KS25_QTKD_MAN107',
-        'sheet_prev': 'KS25_QTKD_MAN107',
-        'is_new_course': True if 'KS25_QTKD_BI' in wb.sheetnames else False,
-        'label': 'Khóa KS25 QTKD Hà Nội (Kỳ II — Business Intelligence [BI] — Buổi 2)'
+        'sheet_curr': 'KS25_QTKD_AI_Agent' if 'KS25_QTKD_AI_Agent' in wb.sheetnames else ('KS25_QTKD_BI' if 'KS25_QTKD_BI' in wb.sheetnames else 'KS25_QTKD_MAN107'),
+        'sheet_prev': 'KS25_QTKD_BI',
+        'is_new_course': True,
+        'no_compare': 'KS25_QTKD_AI_Agent' in wb.sheetnames,
+        'label': 'Khóa KS25 QTKD Hà Nội (Kỳ II — Ứng dụng AI Agent — Đang học)' if 'KS25_QTKD_AI_Agent' in wb.sheetnames else 'Khóa KS25 QTKD Hà Nội (Kỳ II — Business Intelligence [BI] — Buổi 2)'
     },
     'KS24_CNTT_HN': {
         'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HCM-K24-CNTT1'],
@@ -284,7 +290,9 @@ weekly_groups = {
     }
 }
 
-def format_weekly_cell(curr_val, prev_val):
+def format_weekly_cell(curr_val, prev_val, is_new_course=False):
+    if is_new_course:
+        return f"{curr_val:.2f}%"
     diff = curr_val - prev_val
     if diff > 0.05:
         return f"{curr_val:.2f}% <span style='color:#ef4444; font-weight:600;'>(▲ +{diff:.2f}%)</span>"
@@ -349,7 +357,8 @@ def get_weekly_metrics(sheetname, classes_target, start_date, end_date):
                 val = sheet.cell(row=r, column=c_idx + 1).value
                 if val is not None:
                     try:
-                        date_metrics[d][val4] = float(val)
+                        fval = to_percent(sheet, val)
+                        date_metrics[d][val4] = fval
                     except ValueError:
                         pass
             
@@ -437,7 +446,11 @@ def read_class_metrics_for_date(sheet_obj, class_name, target_date):
             for col_idx, metric in cols:
                 val = sheet_obj.cell(row=r, column=col_idx).value
                 if val is not None:
-                    metrics[metric] = float(val)
+                    try:
+                        fval = to_percent(sheet_obj, val)
+                        metrics[metric] = fval
+                    except ValueError:
+                        pass
                     
             if not is_tg:
                 gv_name = name
@@ -564,7 +577,9 @@ for gkey, ginfo in weekly_groups.items():
         'label': ginfo['label'],
         'classes': classes,
         'curr': curr_data,
-        'prev': prev_data
+        'prev': prev_data,
+        'is_new_course': is_new_course,
+        'no_compare': ginfo.get('no_compare', False)
     }
 
 all_sheets = []
@@ -622,7 +637,7 @@ for sheetname in all_sheets:
                 val = sheet.cell(row=r, column=c_idx + 1).value
                 if val is not None:
                     try:
-                        val_f = float(val)
+                        val_f = to_percent(sheet, val)
                         if val4 == 'Chuyên cần': gv_cc_vals.append(val_f)
                         elif val4 == 'Bài tập': gv_bt_vals.append(val_f)
                         elif val4 == 'Elearning': gv_el_vals.append(val_f)
@@ -899,7 +914,7 @@ markdown_content = f"""# BÁO CÁO THỐNG KÊ CHỈ SỐ VI PHẠM HÀNG NGÀY 
 > [!NOTE]
 > **TÌNH HÌNH TIẾN ĐỘ & CẬP NHẬT ĐÀO TẠO CÁC KHÓA (CẬP NHẬT 28/09/2026):**
 > 1. **Khóa KS24 CNTT:** Đã **chốt RPoint** để kết thúc môn Microservices System Design và bước vào giai đoạn tổ chức thi hết môn.
-> 2. **Khóa KS25 CNTT:** Các lớp **Hà Nội vẫn đang tiếp tục học** môn Phân tích thiết kế hệ thống; cơ sở **TP. HCM đã chốt RPoint**.
+> 2. **Khóa KS25 CNTT:** Các lớp **Hà Nội vẫn đang tiếp tục học** môn Phân tích thiết kế hệ thống; cơ sở **TP. HCM đã chốt RPoint PTTKHT và bắt đầu môn mới Agile Scrum từ 05/10** (chỉ hiển thị số liệu, không so sánh tăng/giảm).
 > 3. **Khóa KS25 QTKD:** Đã hoàn thành thi hết môn **MAN107** (Quản trị học) trong ngày 28/09. Môn tiếp theo là **Business Intelligence (BI)**.
 > 4. **Khóa KS26 Tân sinh viên:** Đang học **đồng thời nhiều môn học** (Chuyên ngành, Ngoại ngữ, Kỹ năng mềm). Chỉ số kỷ luật được chuẩn hóa theo đúng thuật toán LMS Frontend: Vi phạm Chuyên cần tính theo ngưỡng >10%, Vi phạm BTVN chỉ tính bài tập đã đến hạn (buổi 1 = 0%), và Elearning tính theo tỷ lệ nộp muộn thực tế.
 """
@@ -1039,7 +1054,13 @@ def generate_cohort_section(cohort_id, weekly_stats_group):
         ]
 
     ai_insights = ""
-    if issues:
+    if weekly_stats_group.get('no_compare'):
+        ai_insights = """
+<div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.25);border-left:4px solid #3b82f6;border-radius:10px;padding:13px 17px;margin:16px 0;">
+    <strong style="color:#93c5fd;">🆕 Môn mới Agile Scrum (bắt đầu 05/10/2026):</strong> <span style="color:#e2e8f0;">chỉ hiển thị số liệu buổi học, không so sánh tăng/giảm với môn trước (PTTKHT đã chốt RPoint).</span>
+</div>
+"""
+    elif issues:
         issues_html = "".join(f"<li>{i}</li>" for i in issues)
         gv_html = "".join(f"<li style='margin-bottom:5px;'>{a}</li>" for a in gv_final)
         cv_html = "".join(f"<li style='margin-bottom:5px;'>{a}</li>" for a in cv_final)
@@ -1111,14 +1132,24 @@ def generate_cohort_section(cohort_id, weekly_stats_group):
         curr_info = weekly_stats_group['curr'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}, 'teacher': 'N/A', 'tg': 'N/A'})
         prev_info = weekly_stats_group['prev'].get(cls, {'metrics': {'Chuyên cần': 0.0, 'Bài tập': 0.0, 'Elearning': 0.0}})
         c_m, p_m = curr_info['metrics'], prev_info['metrics']
-        cc_cell = format_weekly_cell(c_m['Chuyên cần'], p_m['Chuyên cần'])
-        bt_cell = format_weekly_cell(c_m['Bài tập'], p_m['Bài tập'])
-        el_cell = format_weekly_cell(c_m['Elearning'], p_m['Elearning'])
+        is_new_course = weekly_stats_group.get('is_new_course', False)
+        cc_cell = format_weekly_cell(c_m['Chuyên cần'], p_m['Chuyên cần'], is_new_course)
+        bt_cell = format_weekly_cell(c_m['Bài tập'], p_m['Bài tập'], is_new_course)
+        el_cell = format_weekly_cell(c_m['Elearning'], p_m['Elearning'], is_new_course)
         cc_diff = c_m['Chuyên cần'] - p_m['Chuyên cần']
         bt_diff = c_m['Bài tập'] - p_m['Bài tập']
         el_diff = c_m['Elearning'] - p_m['Elearning']
         
-        status_html = "<span class='badge badge-danger'>🚨 Tăng</span>" if (cc_diff > 1.0 or bt_diff > 1.0 or el_diff > 1.0) else "<span class='badge badge-success'>✅ Ổn định</span>"
+        if weekly_stats_group.get('no_compare'):
+            status_html = "<span class='badge badge-info'>🆕 Môn mới — chỉ số liệu</span>"
+        elif is_new_course:
+            if c_m['Chuyên cần'] > 5.0 or c_m['Bài tập'] > 5.0 or c_m['Elearning'] > 10.0:
+                status_html = "<span class='badge badge-warning'>🟡 Chú ý</span>"
+            else:
+                status_html = "<span class='badge badge-success'>✅ Khởi động tốt</span>"
+        else:
+            status_html = "<span class='badge badge-danger'>🚨 Tăng</span>" if (cc_diff > 1.0 or bt_diff > 1.0 or el_diff > 1.0) else "<span class='badge badge-success'>✅ Ổn định</span>"
+            
         html += f"| **{cls}** | {curr_info['teacher']} | {curr_info['tg']} | {cc_cell} | {bt_cell} | {el_cell} | {status_html} |\n"
     
     html += """
@@ -1129,11 +1160,61 @@ def generate_cohort_section(cohort_id, weekly_stats_group):
 # KS24: Hà Nội + HCM-CNTT1 gộp chung sau tái cơ cấu lớp
 markdown_content += generate_cohort_section('KS24-CNTT (HN & HCM-CNTT1) [Đã chốt RPoint Microservices]', weekly_stats['KS24_CNTT_HN'])
 markdown_content += generate_cohort_section('HN-KS25-CNTT [Phân tích thiết kế hệ thống - Đang tiếp tục học]', weekly_stats['KS25_CNTT_HN'])
-markdown_content += generate_cohort_section('HCM-KS25-CNTT [Phân tích thiết kế hệ thống - Đã chốt RPoint]', weekly_stats['KS25_CNTT_HCM'])
-markdown_content += generate_cohort_section('HN-KS25-QTKD [MAN107 Quản trị học - Đã thi kết thúc môn, môn sau: BI]', weekly_stats['KS25_QTKD_HN'])
+markdown_content += generate_cohort_section('HCM-KS25-CNTT [Agile Scrum - Môn mới bắt đầu 05/10, chỉ hiển thị số liệu]' if weekly_stats['KS25_CNTT_HCM'].get('no_compare') else 'HCM-KS25-CNTT [Phân tích thiết kế hệ thống - Đã chốt RPoint]', weekly_stats['KS25_CNTT_HCM'])
+markdown_content += generate_cohort_section('HN-KS25-QTKD [Ứng dụng AI Agent - Đang học]' if weekly_stats['KS25_QTKD_HN'].get('no_compare') else 'HN-KS25-QTKD [MAN107 Quản trị học - Đã thi kết thúc môn, môn sau: BI]', weekly_stats['KS25_QTKD_HN'])
 
 # MA TRẬN ĐA MÔN HỌC ĐỒNG THỜI KHÓA KS26
-markdown_content += """
+# Nguồn ưu tiên: PMO Data Hub (module M1, số liệu LMS đã qua gate). Script này CHỈ ĐỌC result.json, không tính lại.
+def render_pmo_ks26_matrix():
+    import json as _json
+    from pathlib import Path as _Path
+    out_root = _Path("output")
+    periods = sorted([p for p in out_root.glob("20??-W??") if (p / "m1_chi_so_lop" / "result.json").exists()], reverse=True)
+    for p in periods:
+        rr = p / "run_report.md"
+        if not rr.exists() or "✅ ĐẠT" not in rr.read_text(encoding="utf-8"):
+            continue  # gate FAIL ⇒ không dùng số liệu kỳ này
+        res = _json.loads((p / "m1_chi_so_lop" / "result.json").read_text(encoding="utf-8"))
+        gates = _json.loads((p / "gates.json").read_text(encoding="utf-8")) if (p / "gates.json").exists() else []
+        fetched = ""
+        for g in gates:
+            if "Lấy lúc" in str(g.get("message", "")):
+                fetched = str(g.get("message", "")).split("(")[0].strip()
+        golden_warn = any("Golden" in g.get("name", "") and g.get("status") == "warn" for g in gates)
+        rows = sorted(res.get("classes", []), key=lambda r: (r.get("campus", ""), r.get("className", ""), r.get("courseCode", "")))
+        badge_cls = {"Báo động": "badge-danger", "Đôn đốc": "badge-warning", "Nhắc EL": "badge-warning", "Chuẩn mực": "badge-success"}
+        md = f"""
+---
+## 🌟 MA TRẬN THEO DÕI ĐÀO TẠO ĐA MÔN HỌC ĐỒNG THỜI KHÓA KS26 (SỐ LIỆU HỆ THỐNG LMS)
+
+> [!IMPORTANT]
+> **Nguồn:** PMO Data Hub — module M1, kỳ **{p.name}** ({len(rows)} lớp-môn), {fetched}. Cổng kiểm định G1/G2: **ĐẠT**.
+> Chỉ số theo quy tắc LMS FE: CC = % SV vắng vượt 10% số buổi; BT = % SV thiếu BTVN ≥ 10%; EL = % SV trễ Elearning.{" ⚠️ Chưa có golden set đối chiếu cho kỳ này (số liệu chưa được xác nhận chéo với màn hình LMS)." if golden_warn else ""}
+
+<div class="data-grid-container" markdown="1">
+
+| Lớp | Sĩ số | Môn học | Giảng viên | Vi phạm CC (>10%) | Vi phạm BT (≥10%) | Vi phạm Elearning | Đánh giá |
+| :--- | :---: | :--- | :--- | :---: | :---: | :---: | :--- |
+"""
+        prev_cls = None
+        for r in rows:
+            cls_cell = f"**{r['className']}**" if r["className"] != prev_cls else ""
+            size_cell = str(r.get("totalStudents", "")) if r["className"] != prev_cls else ""
+            prev_cls = r["className"]
+            def _c(m):
+                v = r.get(m) or {}
+                return f"{v.get('percent', 0):.2f}% ({v.get('count', 0)} SV)"
+            b = r.get("badge", "")
+            md += (f"| {cls_cell} | {size_cell} | {r.get('courseName', '')} ({r.get('courseCode', '')}) | {r.get('teacherName', '')} | "
+                   f"{_c('cc')} | {_c('bt')} | {_c('el')} | <span class='badge {badge_cls.get(b, 'badge-info')}'>{r.get('badgeEmoji', '')} {b}</span> |\n")
+        md += "\n</div>\n"
+        return md, p.name
+    return "", None
+
+_PMO_KS26_MD, _PMO_KS26_PERIOD = render_pmo_ks26_matrix()
+
+# Bảng ghi cứng 28/09 — chỉ dùng dự phòng khi không có kết quả PMO đạt gate
+_LEGACY_KS26_MATRIX = """
 ---
 ## 🌟 MA TRẬN THEO DÕI ĐÀO TẠO ĐA MÔN HỌC ĐỒNG THỜI KHÓA KS26 (TÂN SINH VIÊN)
 
@@ -1188,6 +1269,15 @@ markdown_content += """
 
 </div>
 """
+
+if _PMO_KS26_MD:
+    markdown_content += _PMO_KS26_MD
+    # Đã có số liệu hệ thống ⇒ bỏ các mục KS26 tính từ Excel để không có hai bộ số mâu thuẫn
+    for _k in [k for k in weekly_stats if k.startswith('KS26_')]:
+        weekly_stats.pop(_k)
+else:
+    print("⚠️ CẢNH BÁO: không có kết quả PMO M1 đạt gate — dùng bảng KS26 dự phòng (số liệu cũ 28/09).")
+    markdown_content += _LEGACY_KS26_MATRIX
 
 # Chi tiết các môn học của KS26
 if 'KS26_CNTT_IT108' in weekly_stats and weekly_stats['KS26_CNTT_IT108']['curr']:

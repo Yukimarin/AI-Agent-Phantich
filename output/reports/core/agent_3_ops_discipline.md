@@ -1,6 +1,6 @@
 # Báo cáo Vi phạm Kỷ luật tác nghiệp GV/TG (Agent 3)
 
-*Thời gian đối chiếu: 01/10/2026 14:10:11*
+*Thời gian đối chiếu: 18/11/2026 21:41:01*
 
 > [!IMPORTANT]
 > Báo cáo này quét và đối chiếu tự động toàn bộ vi phạm trên hệ thống Worklane PM và QLĐT.
@@ -2659,7 +2659,7 @@
 | 2026-02-03 | IT103B-K25 | HN-K25-CNTT2 | Buổi 05 | Session 05 - Array | **Nguyễn Quảng An** | `annq@rikkeiacademy.com` | GV | N/A | Khối HN-CNTT Ngọc Trục | `QLDT-DOC-LATE` | Upload tài nguyên học tập chậm trễ lúc 2026-03-05 07:19:33 (Hạn: 2026-02-04 07:00:00) |
 | 2026-02-03 | IT103B-K25 | HN-K25-CNTT2 | Buổi 05 | Session 05 - Array | **Nguyễn Quảng An** | `annq@rikkeiacademy.com` | GV | N/A | Khối HN-CNTT Ngọc Trục | `QLDT-EX-LATE` | Cập nhật trạng thái BTVN chậm trễ lúc 2026-03-27 08:34:40 (Hạn: 2026-02-04 07:00:00) |
 | 2026-02-03 | IT103B-K25 | HN-K25-CNTT6 | Buổi 05 | Session 05 - Array | **Nguyễn Quảng An** | `annq@rikkeiacademy.com` | GV | N/A | Khối HN-CNTT Ngọc Trục | `QLDT-DOC-LATE` | Upload tài nguyên học tập chậm trễ lúc 2026-03-05 07:17:56 (Hạn: 2026-02-04 07:00:00) |
-| 2026-02-03 | IT103B-K25 | HN-K25-CNTT6 | Buổi 05 | Session 05 - Array | **Nguyễn Quảng An** | `annq@rikkeiacademy.com` | GV | N/A | Khối HN-CNTT Ngọc Trục | `QLDT-EX-LATE` | Cập nhật trạng thái BTVN chậm trễ lúc 2026-02-09 21:20:07 (Hạn: 2026-02-04 07:00:00) |
+| 2026-02-03 | IT103B-K25 | HN-K25-CNTT6 | Buổi 05 | Session 05 - Array | **Nguyễn Quảng An** | `annq@rikkeiacademy.com` | GV | N/A | Khối HN-CNTT Ngọc Trục | `QLDT-EX-LATE` | Cập nhật trạng thái BTVN chậm trễ lúc 2026-10-02 15:31:18 (Hạn: 2026-02-04 07:00:00) |
 | 2026-02-06 | IT103B-K25 | HN-K25-CNTT2 | Buổi 07 | Session 07 - Function | **Nguyễn Quảng An** | `annq@rikkeiacademy.com` | GV | N/A | Khối HN-CNTT Ngọc Trục | `QLDT-DOC-LATE` | Upload tài nguyên học tập chậm trễ lúc 2026-03-05 07:19:36 (Hạn: 2026-02-07 07:00:00) |
 | 2026-02-06 | IT103B-K25 | HN-K25-CNTT2 | Buổi 07 | Session 07 - Function | **Nguyễn Quảng An** | `annq@rikkeiacademy.com` | GV | N/A | Khối HN-CNTT Ngọc Trục | `QLDT-EX-LATE` | Cập nhật trạng thái BTVN chậm trễ lúc 2026-02-26 13:32:02 (Hạn: 2026-02-07 07:00:00) |
 | 2026-02-06 | IT103B-K25 | HN-K25-CNTT6 | Buổi 07 | Session 07 - Function | **Nguyễn Quảng An** | `annq@rikkeiacademy.com` | GV | N/A | Khối HN-CNTT Ngọc Trục | `QLDT-DOC-LATE` | Upload tài nguyên học tập chậm trễ lúc 2026-03-05 07:18:12 (Hạn: 2026-02-07 07:00:00) |
@@ -3194,7 +3194,7 @@
 | 2026-02-02 | IT103B-K25 | HN-K25-CNTT3 | Buổi 04 | Session 04 - Hệ thống kiến thức vòng lặp (Loop)	 | **Nguyễn Xuân Thức** | `thucnx@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT | `QLDT-DOC-MISSING` | Chưa upload tài nguyên học tập (Lark link + Source code) quá 24h sau ca học |
 | 2026-02-02 | IT103B-K25 | HN-K25-CNTT3 | Buổi 04 | Session 04 - Hệ thống kiến thức vòng lặp (Loop)	 | **Nguyễn Xuân Thức** | `thucnx@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT | `QLDT-EX-LATE` | Cập nhật trạng thái BTVN chậm trễ lúc 2026-03-18 12:40:48 (Hạn: 2026-02-03 07:00:00) |
 | 2026-02-02 | IT103B-K25 | HN-K25-CNTT5 | Buổi 04 | Session 04 - Hệ thống kiến thức vòng lặp (Loop)	 | **Nguyễn Xuân Thức** | `thucnx@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT | `QLDT-DOC-MISSING` | Chưa upload tài nguyên học tập (Lark link + Source code) quá 24h sau ca học |
-| 2026-02-02 | IT103B-K25 | HN-K25-CNTT5 | Buổi 04 | Session 04 - Hệ thống kiến thức vòng lặp (Loop)	 | **Nguyễn Xuân Thức** | `thucnx@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT | `QLDT-EX-LATE` | Cập nhật trạng thái BTVN chậm trễ lúc 2026-03-21 02:38:08 (Hạn: 2026-02-03 07:00:00) |
+| 2026-02-02 | IT103B-K25 | HN-K25-CNTT5 | Buổi 04 | Session 04 - Hệ thống kiến thức vòng lặp (Loop)	 | **Nguyễn Xuân Thức** | `thucnx@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT | `QLDT-EX-LATE` | Cập nhật trạng thái BTVN chậm trễ lúc 2026-10-06 13:20:49 (Hạn: 2026-02-03 07:00:00) |
 | 2026-02-04 | IT103B-K25 | HN-K25-CNTT3 | Buổi 06 | Session 06 - Hệ thống kiến thức về Array		 | **Nguyễn Xuân Thức** | `thucnx@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT | `QLDT-DOC-MISSING` | Chưa upload tài nguyên học tập (Lark link + Source code) quá 24h sau ca học |
 | 2026-02-04 | IT103B-K25 | HN-K25-CNTT3 | Buổi 06 | Session 06 - Hệ thống kiến thức về Array		 | **Nguyễn Xuân Thức** | `thucnx@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT | `QLDT-EX-LATE` | Cập nhật trạng thái BTVN chậm trễ lúc 2026-03-25 12:58:41 (Hạn: 2026-02-05 07:00:00) |
 | 2026-02-04 | IT103B-K25 | HN-K25-CNTT5 | Buổi 06 | Session 06 - Hệ thống kiến thức về Array		 | **Nguyễn Xuân Thức** | `thucnx@rikkei.edu.vn` | TG | N/A | Khối HN-CNTT | `QLDT-DOC-MISSING` | Chưa upload tài nguyên học tập (Lark link + Source code) quá 24h sau ca học |

@@ -59,6 +59,34 @@ ALL_DATES_SEPT = [
     "2026-09-28", "2026-09-29", "2026-09-30"
 ]
 
+WORKDAYS_OCT_01_27 = [
+    "2026-10-01", "2026-10-02",
+    "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09",
+    "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16",
+    "2026-10-19",
+    # 2026-10-20 đến 2026-10-23: Công ty nghỉ du lịch — loại bỏ toàn bộ khỏi tính hiệu suất
+    "2026-10-26", "2026-10-27"
+]
+
+# Các kỳ tuần / lũy kế (chuẩn 8h/ngày): key -> (cache, ngày làm việc, tiêu đề, ngày chốt, loại NS nghỉ trước ngày)
+WEEKLY_PERIODS = {
+    "oct_01_27": (r"data/processed/daily_reports_raw_cache.json",
+                  WORKDAYS_OCT_01_27,
+                  "Kỳ 01/10 - 27/10/2026 (15 ngày làm việc - Đã trừ tuần nghỉ du lịch 20/10-23/10)", "2026-10-27", "2026-10-01"),
+    "week_14_18": (r"data/processed/daily_reports_sept_01_08.json",
+                   ["2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25"],
+                   "Tuần 21/09 - 25/09/2026 (5 ngày - Hiệu suất 40h/tuần)", "2026-09-25", "2026-09-15"),
+    "week_28_02": (r"data/processed/daily_reports_raw_cache.json",
+                   ["2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02"],
+                   "Tuần 28/09 - 02/10/2026 (5 ngày - Hiệu suất 40h/tuần)", "2026-10-02", "2026-09-28"),
+    "week_05_09": (r"data/processed/daily_reports_raw_cache.json",
+                   ["2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09"],
+                   "Tuần 05/10 - 09/10/2026 (5 ngày - Hiệu suất 40h/tuần)", "2026-10-09", "2026-10-05"),
+    "week_12_16": (r"data/processed/daily_reports_raw_cache.json",
+                   ["2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16"],
+                   "Tuần 12/10 - 16/10/2026 (5 ngày - Hiệu suất 40h/tuần)", "2026-10-16", "2026-10-12"),
+}
+
 EXACT_STAFF_ROSTER = {
     # 1. Khối CNTT Hà Nội - Leader: Hồ Xuân Hùng (Rank 5)
     "hồ xuân hùng": {"name": "Hồ Xuân Hùng", "role": "Leader", "rank": 5, "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - Ngọc Trục", "leader": "Hồ Xuân Hùng"},
@@ -73,15 +101,12 @@ EXACT_STAFF_ROSTER = {
     "trịnh quốc hai": {"name": "Trịnh Quốc Hai", "role": "Giảng viên", "rank": 4, "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Hồ Xuân Hùng"},
     "nguyễn công hưởng": {"name": "Nguyễn Công Hưởng", "role": "Giảng viên", "rank": 3, "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Hồ Xuân Hùng"},
     "phạm tuấn bình": {"name": "Phạm Tuấn Bình", "role": "Giảng viên", "rank": 3, "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Hồ Xuân Hùng"},
-    "đinh thành nam": {"name": "Đinh Thành Nam", "role": "Trợ giảng", "rank": 2, "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Hồ Xuân Hùng"},
-    "mai xuân chinh": {"name": "Mai Xuân Chinh", "role": "Trợ giảng", "rank": 2, "group": "Khối CNTT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Hồ Xuân Hùng"},
 
     # 2. Khối QTKD - Leader: Hoàng Thị Kim Oanh (Rank 5)
     "hoàng thị kim oanh": {"name": "Hoàng Thị Kim Oanh", "role": "Leader", "rank": 5, "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "leader": "Hoàng Thị Kim Oanh"},
     "hoàng thị hậu": {"name": "Hoàng Thị Hậu", "role": "Giảng viên", "rank": 5, "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "leader": "Hoàng Thị Kim Oanh"},
     "đặng quỳnh trang": {"name": "Đặng Quỳnh Trang", "role": "Giảng viên", "rank": 3, "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "leader": "Hoàng Thị Kim Oanh"},
     "nguyễn ngọc vân khanh": {"name": "Nguyễn Ngọc Vân Khanh", "role": "Giảng viên", "rank": 3, "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "leader": "Hoàng Thị Kim Oanh"},
-    "nguyễn thị hồng minh": {"name": "Nguyễn Thị Hồng Minh", "role": "Giảng viên", "rank": 3, "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "leader": "Hoàng Thị Kim Oanh"},
     "nguyễn thị như quỳnh": {"name": "Nguyễn Thị Như Quỳnh", "role": "Trợ giảng", "rank": 1, "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "leader": "Hoàng Thị Kim Oanh"},
     "triệu thị thanh tâm": {"name": "Triệu Thị Thanh Tâm", "role": "Trợ giảng", "rank": 1, "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hà Nội - Ngọc Trục", "leader": "Hoàng Thị Kim Oanh"},
     "lê nhựt mi": {"name": "Lê Nhựt Mi", "role": "Giảng viên", "rank": 3, "group": "Khối Quản trị Kinh doanh", "campus": "Cơ sở Hồ Chí Minh", "leader": "Hoàng Thị Kim Oanh"},
@@ -90,17 +115,18 @@ EXACT_STAFF_ROSTER = {
     # 3. Khối Ngoại ngữ & KNM - Leader: Giáp Thị Minh Hằng (Rank 5)
     "giáp thị minh hằng": {"name": "Giáp Thị Minh Hằng", "role": "Leader", "rank": 5, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng"},
     "lò thị ngọc anh": {"name": "Lò Thị Ngọc Anh", "role": "Giảng viên", "rank": 5, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng"},
-    "lê thị đỏ": {"name": "Lê Thị Đỏ", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng"},
-    "ngô quang huấn": {"name": "Ngô Quang Huấn", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng"},
-    "đỗ hà khanh": {"name": "Đỗ Hà Khanh", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-08"},
-    "huỳnh thị kim khánh": {"name": "Huỳnh Thị Kim Khánh", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-15"},
-    "nguyễn hồng nhung": {"name": "Nguyễn Hồng Nhung", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-18"},
+    # Tiếng Anh (cập nhật 05/10/2026)
+    "đỗ hà khanh": {"name": "Đỗ Hà Khanh", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "subject": "Tiếng Anh", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-08"},
+    "võ thị ngọc giàu": {"name": "Võ Thị Ngọc Giàu", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "subject": "Tiếng Anh", "campus": "Cơ sở Hồ Chí Minh", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-22"},  # ngày đầu có báo cáo Worklane; cơ sở HCM (xác nhận 05/10)
+    "huỳnh thị kim khánh": {"name": "Huỳnh Thị Kim Khánh", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "subject": "Tiếng Anh", "campus": "Cơ sở Hồ Chí Minh", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-15"},  # dạy ENG105 các lớp HCM trên LMS
+    "nguyễn hồng nhung": {"name": "Nguyễn Hồng Nhung", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "subject": "Tiếng Anh", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-09-18"},
+    # Tiếng Nhật (cập nhật 05/10/2026) — onboard 05/10/2026: không tính các kỳ trước ngày vào
+    "nguyễn thu uyên": {"name": "Nguyễn Thu Uyên", "role": "Giảng viên", "rank": 3, "group": "Khối Ngoại ngữ và KNM", "subject": "Tiếng Nhật", "campus": "Cơ sở Hà Nội - HPC", "leader": "Giáp Thị Minh Hằng", "start_date": "2026-10-05"},
 
-    # 4. Khối QLCLĐT Hà Nội - Leader: Nguyễn Thị Tươi (Rank 4)
-    "nguyễn thị tươi": {"name": "Nguyễn Thị Tươi", "role": "Leader", "rank": 4, "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Nguyễn Thị Tươi"},
-    "nguyễn huyền trang": {"name": "Nguyễn Huyền Trang", "role": "Giáo vụ", "rank": 2, "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Nguyễn Thị Tươi"},
-    "trần thị mỹ phước": {"name": "Trần Thị Mỹ Phước", "role": "Giáo vụ", "rank": 2, "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Thị Tươi"},
-    "nguyễn xuân bách": {"name": "Nguyễn Xuân Bách", "role": "Giảng viên", "rank": 4, "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Nguyễn Thị Tươi"},
+    # 4. Phòng QLĐT / Khối QLCLĐT Hà Nội (Cô Nguyễn Thị Tươi đã nghỉ; Thầy Mai Xuân Chinh chuyển từ CNTT HN sang QLĐT)
+    "trần thị mỹ phước": {"name": "Trần Thị Mỹ Phước", "role": "Giáo vụ", "rank": 2, "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hồ Chí Minh", "leader": "Phòng QLĐT"},
+    "nguyễn xuân bách": {"name": "Nguyễn Xuân Bách", "role": "Giảng viên", "rank": 4, "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Phòng QLĐT"},
+    "mai xuân chinh": {"name": "Mai Xuân Chinh", "role": "Giáo vụ", "rank": 2, "group": "Khối QLCLĐT Hà Nội", "campus": "Cơ sở Hà Nội - HPC", "leader": "Phòng QLĐT"},
 
     # 5. Khối CNTT HCM - Leader: Nguyễn Bá Minh Đạo (Rank 5)
     "nguyễn bá minh đạo": {"name": "Nguyễn Bá Minh Đạo", "role": "Leader", "rank": 5, "group": "Khối CNTT HCM", "campus": "Cơ sở Hồ Chí Minh", "leader": "Nguyễn Bá Minh Đạo"},
@@ -118,13 +144,34 @@ EXACT_STAFF_ROSTER = {
     "lê thành ngọc": {"name": "Lê Thành Ngọc", "role": "Giảng viên", "rank": 3, "group": "LMS AI", "campus": "Cơ sở Hồ Chí Minh", "leader": "Trần Minh Cường"}
 }
 
+# Nhân sự đã nghỉ / loại khỏi hệ thống kiểm toán (yêu cầu 05/10 & 28/10/2026) — chặn cả khi ai đó thêm lại vào roster
+EXCLUDED_STAFF = {
+    "đinh thành nam", "nguyễn huyền trang", "ngô quang huấn",
+    "lê thị đỏ", "nguyễn thị tươi", "nguyễn thị hồng minh"
+}
+
+ROSTER_CONFIG_PATH = os.path.join("config", "worklane_roster.json")
+if os.path.exists(ROSTER_CONFIG_PATH):
+    try:
+        with open(ROSTER_CONFIG_PATH, "r", encoding="utf-8") as _f:
+            _roster_cfg = json.load(_f)
+        if "excludedStaff" in _roster_cfg:
+            EXCLUDED_STAFF = set(_roster_cfg["excludedStaff"])
+        if "staffRoster" in _roster_cfg:
+            EXACT_STAFF_ROSTER = _roster_cfg["staffRoster"]
+    except Exception as _e:
+        print(f"Warning loading {ROSTER_CONFIG_PATH}: {_e}")
+
+
 def load_staff_database():
-    return EXACT_STAFF_ROSTER.copy()
+    return {k: v for k, v in EXACT_STAFF_ROSTER.items() if k not in EXCLUDED_STAFF}
 
 def load_foreign_lang_kpi_master():
     nn_standards = []
     nn_mappings = {}
-    nn_path = r"C:\Users\DELL\Downloads\[ENG&JPN] KPI MASTER KHỐI ĐÀO TẠO NGOẠI NGỮ.xlsx"
+    nn_path = r"config/kpi_masters/03_KPI_Master_Khoi_Ngoai_Ngu_ENG_JPN.xlsx"
+    if not os.path.exists(nn_path):
+        nn_path = r"C:\Users\DELL\Downloads\[ENG&JPN] KPI MASTER KHỐI ĐÀO TẠO NGOẠI NGỮ.xlsx"
     if not os.path.exists(nn_path):
         nn_path = r"output/reports/KPI_Master_Khoi_Ngoai_Ngu.xlsx"
         
@@ -174,10 +221,11 @@ def load_kpi_masters_v2():
     qtkd_master = []
     cntt_master = []
     
-    # 1. QTKD KPI Master (Ưu tiên bản Draft 8/2026 mới nhất)
+    # 1. QTKD KPI Master (Ưu tiên bản chuẩn trong config/kpi_masters/)
+    qtkd_cfg_path = r"config/kpi_masters/02_KPI_Master_Khoi_QTKD.xlsx"
     qtkd_new_path = r"C:\Users\DELL\Downloads\[QTKDS] KPI Master (Draft - 8_2026).xlsx"
     qtkd_old_path = r"C:\Users\DELL\Downloads\_Task Management_ QL Khối QTKD (3).xlsx"
-    qtkd_path = qtkd_new_path if os.path.exists(qtkd_new_path) else qtkd_old_path
+    qtkd_path = qtkd_cfg_path if os.path.exists(qtkd_cfg_path) else (qtkd_new_path if os.path.exists(qtkd_new_path) else qtkd_old_path)
     
     if os.path.exists(qtkd_path):
         try:
@@ -223,8 +271,10 @@ def load_kpi_masters_v2():
         except Exception as e:
             print("Lỗi đọc QTKD KPI Master:", e)
             
-    # 2. CNTT KPI Master (Ưu tiên bản FINAL mới nhất)
-    cntt_final_path = r"C:\Users\DELL\Downloads\KPI_MASTER_Giang_vien_Tro_giang_FINAL.xlsx"
+    # 2. CNTT KPI Master (Ưu tiên bản chuẩn trong config/kpi_masters/)
+    cntt_cfg_path = r"config/kpi_masters/01_KPI_Master_Khoi_CNTT_FINAL.xlsx"
+    cntt_dl_path = r"C:\Users\DELL\Downloads\KPI_MASTER_Giang_vien_Tro_giang_FINAL.xlsx"
+    cntt_final_path = cntt_cfg_path if os.path.exists(cntt_cfg_path) else cntt_dl_path
     cntt_path_old = r"C:\Users\DELL\Downloads\Quản lý hiệu suất đào tạo (2).xlsx"
     cntt_path_alt = r"C:\Users\DELL\Downloads\Quản lý hiệu suất đào tạo.xlsx"
     
@@ -472,14 +522,12 @@ def audit_period_data(period_name="week_14_18"):
     qtkd_master, cntt_master = load_kpi_masters_v2()
     nn_standards, nn_mappings = load_foreign_lang_kpi_master()
     
-    if period_name == "week_14_18":
-        cache_path = r"data/processed/daily_reports_sept_01_08.json"
-        effective_workdays = ["2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25"]
-        all_dates_to_scan = ["2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25"]
-        period_title = "Tuần 21/09 - 25/09/2026 (5 ngày - Hiệu suất 40h/tuần)"
-        audit_date_str = "2026-09-25"
-        excess_hours_threshold = 8.0
-        free_tasks_threshold = 3
+    is_weekly = period_name in WEEKLY_PERIODS
+    if is_weekly:
+        cache_path, effective_workdays, period_title, audit_date_str, drop_before = WEEKLY_PERIODS[period_name]
+        all_dates_to_scan = effective_workdays
+        excess_hours_threshold = 15.0 if len(effective_workdays) >= 10 else 8.0
+        free_tasks_threshold = 4 if len(effective_workdays) >= 10 else 3
     elif period_name == "sept_01_08":
         cache_path = r"data/processed/daily_reports_sept_01_08.json"
         effective_workdays = WORKDAYS_SEPT
@@ -525,7 +573,9 @@ def audit_period_data(period_name="week_14_18"):
     results = {}
 
     for norm_name, s_info in staff_db.items():
-        if period_name in ["week_14_18", "sept_01_08"] and s_info.get("end_date") and s_info.get("end_date") < "2026-09-15":
+        if is_weekly and s_info.get("end_date") and s_info.get("end_date") < drop_before:
+            continue # Nhân sự đã nghỉ trước kỳ tuần
+        if period_name == "sept_01_08" and s_info.get("end_date") and s_info.get("end_date") < "2026-09-15":
             continue # Bỏ nhân sự ra khỏi danh sách từ ngày 15/09 theo yêu cầu
         if period_name == "august" and s_info.get("start_date") and s_info.get("start_date") > "2026-08-31":
             continue # Chưa vào làm trong tháng 8
@@ -541,6 +591,8 @@ def audit_period_data(period_name="week_14_18"):
         if s_info.get("start_date"):
             staff_effective_days = [d for d in staff_effective_days if d >= s_info["start_date"]]
         expected_days_count = len(staff_effective_days)
+        if expected_days_count == 0 and s_info.get("start_date"):
+            continue  # Chưa vào làm trong kỳ này (vd. onboard sau ngày chốt kỳ) — không tính
         
         reported_days_count = 0
         total_declared_hours = 0.0
@@ -561,8 +613,8 @@ def audit_period_data(period_name="week_14_18"):
             campus_leader = "Hoàng Thị Kim Oanh (Leader Khối QTKD)"
         elif "Hằng" in l_name:
             campus_leader = "Giáp Thị Minh Hằng (Leader Khối Ngoại ngữ & KNM)"
-        elif "Tươi" in l_name:
-            campus_leader = "Nguyễn Thị Tươi (Leader Khối QLCLĐT Hà Nội)"
+        elif "QLĐT" in l_name or "Tươi" in l_name:
+            campus_leader = "Phòng QLĐT (Trực thuộc BGĐ)"
         elif "Đạo" in l_name:
             campus_leader = "Nguyễn Bá Minh Đạo (Leader Khối CNTT HCM)"
         elif "Cường" in l_name:
@@ -658,27 +710,28 @@ def audit_period_data(period_name="week_14_18"):
         
         core_excess = [t for t in excess_tasks if any(k in t['title'].lower() for k in ["giảng dạy", "chuẩn bị", "soạn", "chấm", "lên lớp", "buổi", "review", "duyệt"])]
         
-        if period_name == "week_14_18":
+        if is_weekly:
+            target_lbl = "40h/tuần" if expected_hours_target == 40 else f"{expected_hours_target:g}h ({expected_days_count} ngày)"
             if reported_days_count == 0:
                 rec_cat = "CHƯA NỘP BÁO CÁO"
                 rec_label = f"Bỏ trống báo cáo (0/{expected_days_count} ngày)"
                 badge_class = "badge-danger"
-                action_note = f"Thiếu trọn vẹn {expected_days_count}/{expected_days_count} ngày báo cáo tuần qua trên Worklane (0.0h/{expected_hours_target}h). Đề xuất Leader trực tiếp nhắc nhở và trừ điểm kỷ luật tác nghiệp."
+                action_note = f"Thiếu trọn vẹn {expected_days_count}/{expected_days_count} ngày báo cáo trong kỳ trên Worklane (0.0h/{expected_hours_target}h). Đề xuất Leader trực tiếp nhắc nhở và trừ điểm kỷ luật tác nghiệp."
             elif is_under_target:
                 rec_cat = "THIẾU GIỜ 40H"
-                rec_label = f"Chưa đạt 40h/tuần (Thiếu -{deficit_hours}h)"
+                rec_label = f"Chưa đạt {target_lbl} (Thiếu -{deficit_hours}h)"
                 badge_class = "badge-danger"
-                action_note = f"Khai báo {round(total_declared_hours, 1)}h/{expected_hours_target}h (đạt {round(total_declared_hours/expected_hours_target*100, 1)}%). Còn thiếu {deficit_hours}h trong tuần qua cần giải trình hoặc bù giờ."
+                action_note = f"Khai báo {round(total_declared_hours, 1)}h/{expected_hours_target}h (đạt {round(total_declared_hours/expected_hours_target*100, 1)}%). Còn thiếu {deficit_hours}h trong kỳ cần giải trình hoặc bù giờ."
             elif len(core_excess) >= 2 and rank >= 2:
                 rec_cat = "CẦN RÀ SOÁT RANK"
                 rec_label = f"Cần rà soát hạ Rank ({len(core_excess)} task vượt chuẩn)"
                 badge_class = "badge-warning"
-                action_note = f"Đạt định mức {round(total_declared_hours, 1)}h/40h nhưng có {len(core_excess)} task nghiệp vụ làm chậm hơn 1.5x - 3x barem chuẩn. Đề xuất Leader phỏng vấn chuyên môn."
+                action_note = f"Đạt định mức {round(total_declared_hours, 1)}h/{expected_hours_target:g}h nhưng có {len(core_excess)} task nghiệp vụ làm chậm hơn 1.5x - 3x barem chuẩn. Đề xuất Leader phỏng vấn chuyên môn."
             elif len(free_floating_tasks) >= free_tasks_threshold or excess_hours >= excess_hours_threshold:
                 rec_cat = "CẢNH BÁO BÙ GIỜ"
                 rec_label = f"Khai bù giờ (Dôi dư +{excess_hours}h nghi vấn)"
                 badge_class = "badge-danger"
-                action_note = f"Đạt định mức {round(total_declared_hours, 1)}h/40h nhưng có {len(free_floating_tasks)} task ngoài barem và dôi dư +{excess_hours}h so với chuẩn Master. Cần nghiệm thu sản phẩm thực tế."
+                action_note = f"Đạt định mức {round(total_declared_hours, 1)}h/{expected_hours_target:g}h nhưng có {len(free_floating_tasks)} task ngoài barem và dôi dư +{excess_hours}h so với chuẩn Master. Cần nghiệm thu sản phẩm thực tế."
             else:
                 rec_cat = "CHUẨN MỰC"
                 rec_label = f"Đạt chuẩn ({round(total_declared_hours, 1)}h/{expected_hours_target}h)"
@@ -736,7 +789,14 @@ def audit_period_data(period_name="week_14_18"):
             "badge_class": badge_class,
             "action_note": action_note
         }
-        
+        if s_info.get("subject"):
+            results[norm_name]["subject"] = s_info["subject"]
+
+    # Leader KHÔNG tính vào danh sách nhân sự và tổng giờ phòng ban (yêu cầu 05/10/2026);
+    # giữ riêng ở leader_details chỉ để hiển thị mục trách nhiệm Leader.
+    leader_details = {k: v for k, v in results.items() if v["role"] == "Leader"}
+    results = {k: v for k, v in results.items() if v["role"] != "Leader"}
+
     total_staff = len(results)
     total_exp_days = sum(s["expected_days"] for s in results.values())
     total_rep_days = sum(s["reported_days"] for s in results.values())
@@ -769,7 +829,8 @@ def audit_period_data(period_name="week_14_18"):
             "count_free_tasks_staff": count_free_tasks_staff,
             "count_compliant": count_compliant
         },
-        "staff_details": results
+        "staff_details": results,
+        "leader_details": leader_details
     }
     return output_payload
 
@@ -804,11 +865,43 @@ def audit_all_staff_v2():
         json.dump(payload_sept_full, f, indent=2, ensure_ascii=False)
     print(f"✓ Đã xuất kiểm toán Tháng 09/2026 vào: {sept_full_file}")
 
+    # 3.6 Kiểm toán Tuần 28/09 - 02/10/2026
+    payload_w40 = audit_period_data("week_28_02")
+    w40_file = r"data/processed/worklane_audit_week_28_02.json"
+    with open(w40_file, "w", encoding="utf-8") as f:
+        json.dump(payload_w40, f, indent=2, ensure_ascii=False)
+    print(f"✓ Đã xuất kiểm toán Tuần 28/09 - 02/10/2026 vào: {w40_file}")
+
+    # 3.7 Kiểm toán Tuần 05/10 - 09/10/2026 (tuần gần nhất, 40h/tuần)
+    payload_w41 = audit_period_data("week_05_09")
+    w41_file = r"data/processed/worklane_audit_week_05_09.json"
+    with open(w41_file, "w", encoding="utf-8") as f:
+        json.dump(payload_w41, f, indent=2, ensure_ascii=False)
+    print(f"✓ Đã xuất kiểm toán Tuần 05/10 - 09/10/2026 vào: {w41_file}")
+
+    # 3.8 Kiểm toán Tuần 12/10 - 16/10/2026 (5 ngày - 40h/tuần)
+    payload_w42 = audit_period_data("week_12_16")
+    w42_file = r"data/processed/worklane_audit_week_12_16.json"
+    with open(w42_file, "w", encoding="utf-8") as f:
+        json.dump(payload_w42, f, indent=2, ensure_ascii=False)
+    print(f"✓ Đã xuất kiểm toán Tuần 12/10 - 16/10/2026 vào: {w42_file}")
+
+    # 3.9 Kiểm toán Kỳ 01/10 - 27/10/2026 (15 ngày làm việc, trừ nghỉ du lịch 20/10-23/10)
+    payload_oct_01_27 = audit_period_data("oct_01_27")
+    oct_file = r"data/processed/worklane_audit_oct_01_27.json"
+    with open(oct_file, "w", encoding="utf-8") as f:
+        json.dump(payload_oct_01_27, f, indent=2, ensure_ascii=False)
+    print(f"✓ Đã xuất kiểm toán Kỳ 01/10 - 27/10/2026 (15 ngày) vào: {oct_file}")
+
     # 4. Xuất file tổng hợp tương thích (Combined Detailed)
-    # Mặc định summary và staff_details là kỳ Tuần qua (week_14_18) để đo hiệu suất tuần!
+    # Mặc định summary và staff_details là kỳ 01/10 - 27/10/2026 (oct_01_27)
     combined_payload = {
-        **payload_week,
+        **payload_oct_01_27,
         "periods": {
+            "oct_01_27": payload_oct_01_27,
+            "week_12_16": payload_w42,
+            "week_05_09": payload_w41,
+            "week_28_02": payload_w40,
             "week_14_18": payload_week,
             "sept_01_08": payload_sept,
             "sept_full": payload_sept_full,
@@ -819,10 +912,15 @@ def audit_all_staff_v2():
     out_file = r"data/processed/worklane_audit_detailed.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(combined_payload, f, indent=2, ensure_ascii=False)
-    print(f"✓ Đã cập nhật worklane_audit_detailed.json bốn kỳ (Mặc định: Tuần 14/09 - 18/09/2026).")
+    print(f"✓ Đã cập nhật worklane_audit_detailed.json các kỳ (Mặc định: Kỳ 01/10 - 27/10/2026, 15 ngày làm việc).")
 
-    print("\n--- TỔNG KẾT KỲ TUẦN QUA 14/09 - 18/09/2026 (40H/TUẦN) ---")
-    s = payload_week['summary']
+    print("\n--- TỔNG KẾT KỲ 01/10 - 27/10/2026 (15 NGÀY LÀM VIỆC, ĐÃ TRỪ NGHỈ DU LỊCH 20-23/10) ---")
+    s_oct = payload_oct_01_27['summary']
+    print(f"- Tổng nhân sự: {s_oct['total_staff']} | Nộp báo cáo: {s_oct['overall_compliance_rate']}% | Khai: {s_oct['total_declared_hours']}h | Chuẩn Master: {s_oct['total_standard_hours']}h | Dôi dư: +{s_oct['total_excess_hours']}h")
+    print(f"- Chưa đạt chuẩn giờ: {s_oct['count_under_40h']} | Bỏ trống: {s_oct['count_missing']} | Chuẩn mực: {s_oct['count_compliant']} | Có task ngoài Master: {s_oct['count_free_tasks_staff']}")
+
+    print("\n--- TỔNG KẾT KỲ TUẦN 05/10 - 09/10/2026 (40H/TUẦN) ---")
+    s = payload_w41['summary']
     print(f"- Tổng nhân sự: {s['total_staff']}")
     print(f"- Tỷ lệ nộp báo cáo: {s['overall_compliance_rate']}%")
     print(f"- Tổng giờ khai báo: {s['total_declared_hours']}h | Chuẩn Master: {s['total_standard_hours']}h | Dôi dư: +{s['total_excess_hours']}h")

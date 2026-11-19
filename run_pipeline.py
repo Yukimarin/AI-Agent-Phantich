@@ -10,28 +10,15 @@ if sys.stdout.encoding != 'utf-8':
 
 def run_script(name, path, with_deps=None, extra_args=None):
     start_time = time.time()
-    print("=" * 80, flush=True)
-    print(f"BẮT ĐẦU CHẠY: {name}", flush=True)
-    print(f"Path: {path}", flush=True)
-    print("=" * 80, flush=True)
-    
-    if with_deps:
-        cmd = ["uv", "run"]
-        for dep in with_deps:
-            cmd += ["--with", dep]
-        cmd.append(path)
-    else:
-        cmd = ["uv", "run", "python", path]
-        
+    # Sử dụng trực tiếp sys.executable trong .venv đã đồng bộ qua pyproject.toml
+    cmd = [sys.executable, path]
     if extra_args:
         cmd.extend(extra_args)
-    
+
     try:
         result = subprocess.run(cmd, check=True, capture_output=True, text=True, encoding='utf-8')
-        if result.stdout:
-            print(result.stdout.strip(), flush=True)
         elapsed = time.time() - start_time
-        print(f"✓ HOÀN THÀNH: {name} ({elapsed:.2f}s)\n", flush=True)
+        print(f"✓ HOÀN THÀNH: {name} ({elapsed:.2f}s)", flush=True)
         return True
     except subprocess.CalledProcessError as e:
         elapsed = time.time() - start_time
@@ -40,17 +27,21 @@ def run_script(name, path, with_deps=None, extra_args=None):
             print(e.stdout, flush=True)
         if e.stderr:
             print(e.stderr, flush=True)
-        print(f"! FALLBACK: Bỏ qua lỗi tại {name} để hệ thống tiếp tục chạy.\n", flush=True)
         return False
 
-def validate_output(file_path, file_type):
+def validate_output(file_path, file_type, min_mtime=None):
     if not os.path.exists(file_path):
-        print(f"✗ Cảnh báo: File {file_path} chưa được tạo ra.")
+        print(f"✗ LỖI KIỂM ĐỊNH: File {file_path} không tồn tại!")
         return False
     file_size = os.path.getsize(file_path)
     if file_size == 0:
-        print(f"✗ Cảnh báo: File {file_path} bị rỗng (0 bytes).")
+        print(f"✗ LỖI KIỂM ĐỊNH: File {file_path} bị rỗng (0 bytes)!")
         return False
+    if min_mtime is not None:
+        mtime = os.path.getmtime(file_path)
+        if mtime < min_mtime:
+            print(f"⚠️ CẢNH BÁO: File {file_path} không được ghi mới trong lần chạy này (mtime: {mtime} < {min_mtime})")
+            return False
     return True
 
 def ensure_mysql_started():
@@ -157,127 +148,157 @@ def main():
     os.makedirs("output/reports/core", exist_ok=True)
     os.makedirs("output/reports/management", exist_ok=True)
 
+    pipeline_errors = []
+
     # Bước 0: DataSanitizer (Làm sạch dữ liệu & Single Source Cache)
-    run_script(
+    ok_sanitizer = run_script(
         "DataSanitizer: Làm sạch dữ liệu & Tạo Single Cache JSON", 
         "agents/common/data_sanitizer.py",
         with_deps=["openpyxl"],
         extra_args=fast_args
     )
+    if not ok_sanitizer:
+        print("❌ DataSanitizer thất bại! Dừng toàn bộ pipeline vì dữ liệu nguồn lỗi.")
+        sys.exit(1)
 
     # Bước 0.5: Kiểm tra Database
     ensure_mysql_started()
 
-    # Bước 1 & 2: Chạy song song Nhánh A (Học thuật) và Nhánh B (Tác nghiệp)
+    # Bước 1 & 2: Chạy song song 3 nhánh độc lập: Agent 1 (Kỷ luật SV) // Agent 2 (Dự báo học vụ) // Nhánh B (Agent 4 -> Agent 3)
     from concurrent.futures import ThreadPoolExecutor
 
-    def run_branch_academic():
-        print("\n[NHÁNH A] Bắt đầu xử lý Kỷ luật SV & Dự báo học thuật...")
-        # Agent 1 - Kỷ luật học viên
-        run_script(
-            "Agent 1: Kỷ luật học viên (Class KPI)", 
+    def run_branch_agent1():
+        print("\n[NHÁNH A1] Bắt đầu xử lý Agent 1: Kỷ luật học viên...")
+        ok = run_script(
+            "Agent 1: Kỷ luật học viên (Class KPI)",
             "agents/core/agent_1_class_kpi/run.py",
-            with_deps=["openpyxl", "numpy", "markdown"]
         )
-        validate_output("data/processed/agent1_output.json", "json")
-        validate_output("output/dashboards/core/agent_1_student_discipline.html", "html")
-        
-        # Agent 2 - Dự báo học vụ
-        run_script(
-            "Agent 2: Dự báo học vụ (Academic Predictor)", 
+        if not ok or not validate_output("data/processed/agent1_output.json", "json", min_mtime=total_start) or not validate_output("output/dashboards/core/agent_1_student_discipline.html", "html", min_mtime=total_start):
+            return "Agent 1 (Class KPI)"
+        return None
+
+    def run_branch_agent2():
+        print("\n[NHÁNH A2] Bắt đầu xử lý Agent 2: Dự báo học vụ...")
+        ok = run_script(
+            "Agent 2: Dự báo học vụ (Academic Predictor)",
             "agents/core/agent_2_academic_pred/run.py",
-            with_deps=["mysql-connector-python", "openpyxl", "numpy"]
         )
-        validate_output("data/processed/agent2_output.json", "json")
-        validate_output("output/dashboards/core/agent_2_academic_prediction.html", "html")
-        print("[NHÁNH A] ✓ Hoàn thành toàn bộ Kỷ luật SV & Dự báo học thuật!")
-        return True
+        if not ok or not validate_output("data/processed/agent2_output.json", "json", min_mtime=total_start) or not validate_output("output/dashboards/core/agent_2_academic_prediction.html", "html", min_mtime=total_start):
+            return "Agent 2 (Academic Predictor)"
+        return None
 
     def run_branch_operations():
         print("\n[NHÁNH B] Bắt đầu xử lý Nhật ký công việc & Kỷ luật tác nghiệp...")
-        # Agent 4 - Nhật ký công việc & Sync Worklane
-        run_script(
-            "Agent 4: Nhật ký công việc (Daily Logs Auditor)", 
+        ok_a4 = run_script(
+            "Agent 4: Nhật ký công việc (Daily Logs Auditor)",
             "agents/core/agent_4_daily_logs/run.py",
-            with_deps=["openpyxl"],
             extra_args=fast_args
         )
-        validate_output("data/processed/daily_log_analysis.json", "json")
-        validate_output("output/dashboards/core/agent_4_daily_logs.html", "html")
-        
-        # Agent 3 - Kỷ luật tác nghiệp GV/TG
-        run_script(
-            "Agent 3: Kỷ luật tác nghiệp GV/TG (Ops Discipline)", 
+        if not ok_a4 or not validate_output("data/processed/daily_log_analysis.json", "json", min_mtime=total_start) or not validate_output("output/dashboards/core/agent_4_daily_logs.html", "html", min_mtime=total_start):
+            return "Agent 4 (Daily Logs Auditor)"
+
+        ok_a3 = run_script(
+            "Agent 3: Kỷ luật tác nghiệp GV/TG (Ops Discipline)",
             "agents/core/agent_3_ops_discipline/run.py",
-            with_deps=["mysql-connector-python", "openpyxl"]
         )
-        validate_output("data/processed/agent3_output.json", "json")
-        validate_output("output/dashboards/core/agent_3_ops_discipline.html", "html")
-        print("[NHÁNH B] ✓ Hoàn thành toàn bộ Nhật ký công việc & Kỷ luật tác nghiệp!")
-        return True
+        if not ok_a3 or not validate_output("data/processed/agent3_output.json", "json", min_mtime=total_start) or not validate_output("output/dashboards/core/agent_3_ops_discipline.html", "html", min_mtime=total_start):
+            return "Agent 3 (Ops Discipline)"
+        return None
 
     print("\n" + "=" * 80)
-    print("🚀 KHỞI CHẠY ĐỒNG THỜI 2 NHÁNH ĐỘC LẬP: HỌC THUẬT // TÁC NGHIỆP...")
+    print("🚀 KHỞI CHẠY ĐỒNG THỜI 3 NHÁNH ĐỘC LẬP: AGENT 1 // AGENT 2 // NHÁNH TÁC NGHIỆP...")
     print("=" * 80)
-    with ThreadPoolExecutor(max_workers=2) as executor:
-        f_acad = executor.submit(run_branch_academic)
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        f_a1 = executor.submit(run_branch_agent1)
+        f_a2 = executor.submit(run_branch_agent2)
         f_ops = executor.submit(run_branch_operations)
-        f_acad.result()
-        f_ops.result()
+        for res_err in [f_a1.result(), f_a2.result(), f_ops.result()]:
+            if res_err:
+                pipeline_errors.append(res_err)
 
-    # Bước 3: Master Lead Portal & Báo cáo KPI Markdown
-    run_script(
-        "Agent 5: Biên dịch Executive Dashboard (Master Portal)", 
-        "agents/master/agent_5_master_portal/generate_unified_dashboard.py"
-    )
-    validate_output("output/dashboards/core/agent_5_master_portal.html", "html")
-    
-    run_script(
-        "Agent 5: Biên dịch Báo cáo KPI GV/TG Markdown", 
-        "agents/master/agent_5_master_portal/generate_kpi_report.py"
-    )
-    validate_output("data/report_kpi_gv_tg.md", "markdown")
-
-    # Bước 4: Quản trị & Kiểm toán (Management Dashboards: director_cockpit.html & worklane_staff_audit.html)
+    # Bước 3, 4 & 5: Biên dịch song song các Báo cáo & Dashboard quản trị cốt lõi
     print("\n" + "=" * 80)
-    print("📊 BIÊN DỊCH BÁO CÁO QUẢN TRỊ & KIỂM TOÁN (MANAGEMENT DASHBOARDS)...")
+    print("⚡ BIÊN DỊCH SONG SONG CÁC BÁO CÁO & DASHBOARDS CỐT LÕI...")
     print("=" * 80)
-    run_script(
-        "Management: Báo cáo Giám đốc Đào tạo (Director Cockpit)",
-        "agents/advanced/management_audit/generate_report_director.py",
-        with_deps=["openpyxl"]
-    )
-    validate_output("output/dashboards/management/director_cockpit.html", "html")
 
-    run_script(
-        "Management: Kiểm toán Nhân sự Worklane Đa Kỳ (Staff Audit)",
-        "agents/audit/generate_audit_dashboard.py"
-    )
-    validate_output("output/dashboards/management/worklane_staff_audit.html", "html")
+    render_tasks = [
+        (
+            "Agent 5: Executive Dashboard (Master Portal)",
+            "agents/master/agent_5_master_portal/generate_unified_dashboard.py",
+            ["output/dashboards/core/agent_5_master_portal.html"],
+        ),
+        (
+            "Agent 5: Báo cáo KPI GV/TG Markdown",
+            "agents/master/agent_5_master_portal/generate_kpi_report.py",
+            ["output/reports/core/agent_5_master_portal.md"],
+        ),
+        (
+            "Management: Báo cáo Giám đốc Đào tạo (Director Cockpit)",
+            "agents/advanced/management_audit/generate_report_director.py",
+            ["output/dashboards/management/director_cockpit.html"],
+        ),
+        (
+            "Management: Kiểm toán Nhân sự Worklane Đa Kỳ (Staff Audit)",
+            "agents/audit/generate_audit_dashboard.py",
+            ["output/dashboards/management/worklane_staff_audit.html"],
+        ),
+        (
+            "Management: Báo cáo Giao ban Đào tạo Tuần (Weekly Director Report)",
+            "scripts/generate_weekly_director_dashboard.py",
+            ["output/dashboards/management/weekly_director_report.html"],
+        ),
+    ]
 
-    run_script(
-        "Management: Báo cáo Giao ban Đào tạo Tuần (Weekly Director Report)",
-        "scripts/generate_weekly_director_dashboard.py"
-    )
-    validate_output("output/dashboards/management/weekly_director_report.html", "html")
+    # Chỉ chạy dashboard chuyên sâu môn cũ nếu có yêu cầu riêng
+    if "--include-legacy-cohorts" in sys.argv:
+        render_tasks.append((
+            "Academic: Báo cáo Chuyên sâu Môn cũ KS24, KS25, KS26",
+            "scripts/generate_academic_cohort_dashboards.py",
+            [
+                "output/dashboards/academic/ks24/it214_microservices_cntt.html",
+                "output/dashboards/academic/ks25/it105_fastapi_cntt.html",
+                "output/dashboards/academic/ks25/man107_qtkd.html",
+                "output/dashboards/academic/ks26/ssk101_cntt.html",
+                "output/dashboards/academic/ks26/ssk101_qtkd.html",
+                "output/dashboards/academic/index.html",
+            ],
+        ))
 
-    # Bước 5: Báo cáo Chuyên sâu Vấn đề Học vụ 3 Khóa (KS24, KS25, KS26)
-    print("\n" + "=" * 80)
-    print("🎓 BIÊN DỊCH BÁO CÁO CHUYÊN SÂU VẤN ĐỀ THEO MÔN (KS24, KS25, KS26)...")
-    print("=" * 80)
-    run_script(
-        "Academic: Báo cáo Chuyên sâu Học vụ KS24, KS25, KS26",
-        "scripts/generate_academic_cohort_dashboards.py"
-    )
-    validate_output("output/dashboards/academic/ks24/it214_microservices_cntt.html", "html")
-    validate_output("output/dashboards/academic/ks25/it105_fastapi_cntt.html", "html")
-    validate_output("output/dashboards/academic/ks25/man107_qtkd.html", "html")
-    validate_output("output/dashboards/academic/ks26/ssk101_cntt.html", "html")
-    validate_output("output/dashboards/academic/ks26/ssk101_qtkd.html", "html")
-    validate_output("output/dashboards/academic/index.html", "html")
+    def _run_render_task(task):
+        t_name, t_path, t_outputs = task
+        ok = run_script(t_name, t_path)
+        if not ok:
+            return t_name
+        for out_file in t_outputs:
+            if not validate_output(out_file, "file", min_mtime=total_start):
+                return f"{t_name} (out: {out_file})"
+        return None
 
-    # Bước 6: Tự động đồng bộ vào deploy_web/
+    with ThreadPoolExecutor(max_workers=min(len(render_tasks), 5)) as executor:
+        futures = [executor.submit(_run_render_task, t) for t in render_tasks]
+        for f in futures:
+            err = f.result()
+            if err:
+                pipeline_errors.append(err)
+
+    if pipeline_errors:
+        print("\n" + "!" * 80)
+        print("❌ PIPELINE CÓ LỖI TẠI CÁC BƯỚC SAU:")
+        for pe in pipeline_errors:
+            print(f"  - {pe}")
+        print("!" * 80)
+        sys.exit(1)
+
+    # Bước 6: Tự động đồng bộ vào deploy_web/ & Xuất bản tên Tiếng Việt chuẩn hóa
     sync_to_deploy_web()
+    try:
+        from pmo import publisher, retention
+        publisher.organize_adhoc_and_mixed_files()
+        publisher.publish_regular_reports()
+        retention.enforce_retention(keep_recent=2)
+        print("✓ Đã chuẩn hóa tên file Tiếng Việt tại output/01_Bao_Cao_Su_Dung_Thuong_Xuyen/")
+    except Exception as e:
+        print(f"Warning khi đồng bộ tên file chuẩn: {e}")
 
     total_elapsed = time.time() - total_start
     print("=" * 80)
@@ -286,6 +307,8 @@ def main():
     print("  - Core Dashboards:       output/dashboards/core/ (Agent 1 - 5)")
     print("  - Management Dashboards: output/dashboards/management/ (Director Cockpit & Worklane Staff Audit)")
     print("  - Academic Cohort Issues: output/dashboards/academic/ (KS24, KS25, KS26)")
+    print("  - Web Deploy Portal:     deploy_web/ (Sẵn sàng mở hoặc host web)")
+    print("================================================================================")
     print("  - Web Deploy Portal:     deploy_web/ (Sẵn sàng mở hoặc host web)")
     print("================================================================================")
 

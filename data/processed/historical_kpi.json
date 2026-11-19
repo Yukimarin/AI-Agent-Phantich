@@ -2914,7 +2914,7 @@
     }
   },
   "2026-09-29": {
-    "Ngô Quang Huấn": {
+    "huannq@rikkeiedu.io.vn": {
       "execution_faults": {
         "REXPCHUO2 - [RExPTIT] Chương trình đào tạo KNM K24, 25,26 CNTT": {
           "count": 3,
@@ -2926,33 +2926,6 @@
         }
       },
       "review_faults": {}
-    },
-    "Triệu Thị Thanh Tâm": {
-      "execution_faults": {
-        "QTKDDAO - [QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ": {
-          "count": 3,
-          "type": "Thi công chậm (Cần làm/Đang làm)"
-        }
-      },
-      "review_faults": {}
-    },
-    "Nguyễn Thị Như Quỳnh": {
-      "execution_faults": {
-        "QTKDDAO - [QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ": {
-          "count": 1,
-          "type": "Thi công chậm (Cần làm/Đang làm)"
-        }
-      },
-      "review_faults": {}
-    },
-    "Lê Nhựt Mi": {
-      "execution_faults": {},
-      "review_faults": {
-        "QTKDDAO - [QTKDS] ĐÀO TẠO, BỒI DƯỠNG NHÂN SỰ": {
-          "count": 1,
-          "type": "Chậm duyệt bài (Chờ duyệt)"
-        }
-      }
     }
   }
 }

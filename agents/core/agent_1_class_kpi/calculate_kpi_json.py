@@ -2,6 +2,9 @@ import os
 import sys
 import json
 import openpyxl
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', 'common'))
+from excel_units import to_percent  # noqa: E402
 from datetime import datetime, date, timedelta
 from collections import defaultdict
 import re
@@ -117,13 +120,19 @@ def main():
         'KS25_Phantichthietkehethong',
         'KS25_QTKD_BI',
         'KS25_QTKD_MAN107',
+        'KS25_QTKD_AI_Agent',
         'KS26_Nhapmon_CNTT',
         'KS26_KN_Lamviecnhom',
         'KS26_Basic_Speaking',
         'KS26_QTKD_Tuduyphantich',
         'KS26_QTKD_Tinhocungdung',
-        'KS26_SKL_Chudong'
+        'KS26_SKL_Chudong',
+        'KS25_Agile'
     ])
+    # Môn mới chỉ hiển thị số liệu, KHÔNG so sánh tăng/giảm (yêu cầu 05/10/2026: KS25 HCM bắt đầu Agile Scrum)
+    NO_COMPARE_SHEETS = {'KS25_Agile', 'KS25_QTKD_AI_Agent'}
+    # Lớp HCM-K25 đã chốt RPoint PTTKHT và chuyển sang Agile → không lấy dòng HCM ở sheet PTTKHT nữa
+    hcm_k25_moved_to_agile = 'KS25_Agile' in wb.sheetnames
     # Fallback cho KS24 nếu chưa có DevOps hoặc AI_Microservice
     if 'KS24_DevOps' not in wb.sheetnames and 'KS24_AI_Microservice' not in wb.sheetnames:
         if 'KS24_AI_Intergration (2)' in wb.sheetnames:
@@ -210,6 +219,8 @@ def main():
                 # Bỏ qua lớp HCM-K25-CNTT8 theo yêu cầu nghiệp vụ (đã giải thể/sáp nhập)
                 if 'CNTT8' in norm_class or 'K25-CNTT8' in norm_class:
                     continue
+                if hcm_k25_moved_to_agile and sheet == 'KS25_Phantichthietkehethong' and norm_class.startswith('HCM-K25'):
+                    continue
                     
                 # Chỉ xử lý các lớp thuộc khóa phù hợp với sheet môn học
                 if 'K24' in norm_class and 'KS24' not in sheet:
@@ -225,7 +236,8 @@ def main():
                         val = sheet_obj.cell(row=r, column=col_idx).value
                         if val is not None:
                             try:
-                                date_vals[d][metric] = float(val)
+                                fval = to_percent(sheet_obj, val)
+                                date_vals[d][metric] = fval
                             except ValueError:
                                 pass
                                 
@@ -268,6 +280,8 @@ def main():
                     instructors_data[name]['Classes'].add(f"{current_class} ({sheet})")
                     instructors_data[name]['ViolationRates'].append(avg_violation_today)
                     
+                    if latest_scores and sheet in NO_COMPARE_SHEETS:
+                        avg_violation_prev = avg_violation_today
                     diff = round(avg_violation_today - avg_violation_prev, 2)
                     anomaly_status = "STABLE"
                     tampering_flag = False
@@ -275,7 +289,10 @@ def main():
                     
                     # Phát hiện biến động sỹ số lớp
                     effective_diff = current_size_info['diff']
-                    if norm_class == 'HN-K25-QTKD1' and sheet == 'KS25_QTKD_MAN107':
+                    if sheet in NO_COMPARE_SHEETS:
+                        anomaly_status = "NEW_COURSE_NO_COMPARE"
+                        root_cause = "🆕 Môn mới (Agile Scrum) — chỉ hiển thị số liệu, không so sánh tăng/giảm"
+                    elif norm_class == 'HN-K25-QTKD1' and sheet == 'KS25_QTKD_MAN107':
                         effective_diff = 13
                         anomaly_status = "SIZE_CHANGED"
                         root_cause = f"⚠️ Sĩ số tăng mạnh: 33 -> 46 (+13 SV, +39.4% do sáp nhập SV từ QTKD3)"
@@ -307,22 +324,28 @@ def main():
                         
                     # Lưu từng môn học riêng biệt (hỗ trợ đa môn KS26)
                     course_entry_key = f"{norm_class}_{sheet}"
-                    class_course_metrics[course_entry_key] = {
-                        "class_name": current_class,
-                        "norm_name": norm_class,
-                        "sheet": sheet,
-                        "size": current_size,
-                        "size_info": current_size_info,
-                        "instructor": name if role == 'GV' else "",
-                        "assistant": name if role == 'TG' else "",
-                        "today_violation": round(avg_violation_today, 2),
-                        "prev_violation": round(avg_violation_prev, 2),
-                        "diff": diff,
-                        "scores": latest_scores,
-                        "anomaly_status": anomaly_status,
-                        "tampering_suspect": tampering_flag,
-                        "root_cause": root_cause
-                    }
+                    if course_entry_key in class_course_metrics:
+                        if role == 'GV':
+                            class_course_metrics[course_entry_key]["instructor"] = name
+                        elif role == 'TG':
+                            class_course_metrics[course_entry_key]["assistant"] = name
+                    else:
+                        class_course_metrics[course_entry_key] = {
+                            "class_name": current_class,
+                            "norm_name": norm_class,
+                            "sheet": sheet,
+                            "size": current_size,
+                            "size_info": current_size_info,
+                            "instructor": name if role == 'GV' else "",
+                            "assistant": name if role == 'TG' else "",
+                            "today_violation": round(avg_violation_today, 2),
+                            "prev_violation": round(avg_violation_prev, 2),
+                            "diff": diff,
+                            "scores": latest_scores,
+                            "anomaly_status": anomaly_status,
+                            "tampering_suspect": tampering_flag,
+                            "root_cause": root_cause
+                        }
                     
                     # Thu thập tổng hợp theo lớp học
                     if norm_class not in class_metrics_data:

@@ -11,12 +11,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 import time
 
-from pmo import data_agent
-from pmo.config import OUTPUT_DIR
-from pmo.gates import g1_data, g2_metrics
+from pmo import data_agent, digest, publisher, retention
+from pmo.config import OUTPUT_DIR, ROOT
+from pmo.gates import g0_excel, g1_data, g2_metrics, g4_ui
 from pmo.gates.base import Check, passed, render_markdown
 from pmo.metrics.build import build_student_metrics
 from pmo.modules import REGISTRY
@@ -65,7 +66,7 @@ def cmd_run(args: argparse.Namespace) -> int:
 
     info = data_agent.fetch(snap, refresh=args.refresh, offline=args.offline)
     print(f"  Data Agent: {info['fetched']} lấy mới, {info['cached']} dùng cache, {len(info['errors'])} lỗi")
-    checks = g1_data.run(snap)
+    checks = g0_excel.run() + g1_data.run(snap)
     if not passed(checks):
         return _stop(period, checks, notes, t0)
 
@@ -87,6 +88,19 @@ def cmd_run(args: argparse.Namespace) -> int:
             outputs.append(str((mdir / fname).relative_to(OUTPUT_DIR.parent)))
         print(f"  Module {key}: OK")
 
+    checks += g4_ui.run(snap)
+    if not passed(checks):
+        return _stop(period, checks, notes, t0)
+
+    digest_path = digest.build_digest(period)
+    outputs.append(str(digest_path.relative_to(OUTPUT_DIR.parent)))
+    print(f"  AI Digest: {digest_path.relative_to(OUTPUT_DIR.parent)}")
+
+    publisher.organize_adhoc_and_mixed_files()
+    pub_info = publisher.publish_regular_reports(period)
+    ret_info = retention.enforce_retention(keep_recent=2)
+    print(f"  Publisher: {pub_info['html']} HTML + {pub_info['md']} MD chuẩn hóa | Retention: giữ {ret_info['kept']}")
+
     status = "✅ ĐẠT — mọi gate bắt buộc đã qua"
     if any(c.status == "warn" for c in checks):
         status += " (có cảnh báo, xem bảng)"
@@ -99,13 +113,47 @@ def cmd_verify(args: argparse.Namespace) -> int:
     t0 = time.time()
     period = args.period or current_period()
     snap = Snapshot(period)
-    checks = g1_data.run(snap)
+    checks = g0_excel.run() + g1_data.run(snap)
     if snap.exists("student_metrics.json"):
         checks += g2_metrics.run(snap, run_tests=not args.skip_tests)
+    checks += g4_ui.run(snap)
     ok = passed(checks)
     path = _write_report(period, checks, "✅ ĐẠT" if ok else "❌ KHÔNG ĐẠT", [], [], time.time() - t0)
     print(("✅" if ok else "❌") + f" Xem {path}")
     return 0 if ok else 1
+
+
+def cmd_digest(args: argparse.Namespace) -> int:
+    period = args.period or current_period()
+    path = digest.build_digest(period)
+    print(f"✅ Đã xuất AI Digest: {path}")
+    return 0
+
+
+def cmd_daily(args: argparse.Namespace) -> int:
+    from pmo import daily
+    term_text, md_path = daily.generate_daily_report(args.period)
+    print(term_text)
+    return 0
+
+
+def cmd_pipeline(args: argparse.Namespace) -> int:
+    rc = cmd_run(args)
+    if rc != 0:
+        return rc
+    cmd = [sys.executable, str(ROOT / "run_pipeline.py")]
+    if getattr(args, "fast", False):
+        cmd.append("--fast")
+    res = subprocess.run(cmd)
+    if res.returncode != 0:
+        print(f"\n❌ Pipeline thất bại (exit code {res.returncode}). Không xuất bản báo cáo mới.")
+        return res.returncode
+    period = args.period or current_period()
+    digest.build_digest(period)
+    publisher.organize_adhoc_and_mixed_files()
+    publisher.publish_regular_reports(period)
+    retention.enforce_retention(keep_recent=2)
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -124,6 +172,20 @@ def main(argv: list[str] | None = None) -> int:
     v.add_argument("--period")
     v.add_argument("--skip-tests", action="store_true")
     v.set_defaults(func=cmd_verify)
+    d = sub.add_parser("digest", help="Sinh file tóm tắt ai_digest.md (tối ưu token cho AI)")
+    d.add_argument("--period")
+    d.set_defaults(func=cmd_digest)
+    dl = sub.add_parser("daily", help="Báo cáo giao ban nhanh ngày (chỉ quét môn đang học, < 10s)")
+    dl.add_argument("--period")
+    dl.set_defaults(func=cmd_daily)
+    pl = sub.add_parser("pipeline", help="Chạy trọn gói PMO Data Hub + Toàn bộ Dashboards + AI Digest")
+    pl.add_argument("--period")
+    pl.add_argument("--refresh", action="store_true")
+    pl.add_argument("--offline", action="store_true")
+    pl.add_argument("--only")
+    pl.add_argument("--skip-tests", action="store_true")
+    pl.add_argument("--fast", action="store_true", help="Chế độ nhanh (tái sử dụng cache Worklane)")
+    pl.set_defaults(func=cmd_pipeline)
     args = p.parse_args(argv)
     return args.func(args)
 

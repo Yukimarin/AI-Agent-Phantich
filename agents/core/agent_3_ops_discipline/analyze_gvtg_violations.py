@@ -91,7 +91,9 @@ def load_staff_emails(json_path="data/processed/daily_log_analysis.json"):
             
     return emails
 
-def load_all_staffs(md_path="data/inputs/staff_roles_ranks.md", emails_db=None):
+def load_all_staffs(md_path="docs/domain/staff_roles_ranks.md", emails_db=None):
+    if not os.path.exists(md_path) and os.path.exists("data/inputs/staff_roles_ranks.md"):
+        md_path = "data/inputs/staff_roles_ranks.md"
     staffs = {}
     if not emails_db:
         emails_db = {}
@@ -770,10 +772,13 @@ def main():
         except Exception as e:
             print("Error checking Anti-tampering in Agent 3:", e)
 
-    # Ghi JSON
+    # Ghi JSON (atomic write tránh lỗi bộ đệm I/O trên Windows)
     os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
-    with open(output_json_path, "w", encoding="utf-8") as f:
-        json.dump(violations, f, ensure_ascii=False, indent=2)
+    tmp_json_path = output_json_path + ".tmp"
+    json_payload = json.dumps(violations, ensure_ascii=False, indent=2)
+    with open(tmp_json_path, "w", encoding="utf-8") as f:
+        f.write(json_payload)
+    os.replace(tmp_json_path, output_json_path)
     print(f"Đã lưu kết quả JSON tại: {output_json_path}")
     
     # Ghi Markdown

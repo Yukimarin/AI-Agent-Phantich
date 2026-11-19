@@ -3,6 +3,8 @@ import os
 import json
 import sqlite3
 import openpyxl
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'common'))
+from excel_units import to_percent  # noqa: E402
 
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
@@ -17,7 +19,7 @@ def strip_accents(text):
 
 # Load staff roles and ranks configuration
 staff_roles = {}
-rank_file_path = "data/inputs/staff_roles_ranks.md"
+rank_file_path = "docs/domain/staff_roles_ranks.md" if os.path.exists("docs/domain/staff_roles_ranks.md") else "data/inputs/staff_roles_ranks.md"
 if os.path.exists(rank_file_path):
     with open(rank_file_path, "r", encoding="utf-8") as f:
         for line in f:
@@ -221,8 +223,8 @@ weekly_groups = {
         'sheet_curr': 'KS25_Phantichthietkehethong'
     },
     'KS25_QTKD_HN': {
-        'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2'] if 'KS25_QTKD_MAN107' in wb.sheetnames else ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
-        'sheet_curr': 'KS25_QTKD_MAN107' if 'KS25_QTKD_MAN107' in wb.sheetnames else 'KS25_QTKD_BA201'
+        'classes': ['HN-K25-QTKD1', 'HN-K25-QTKD2'] if ('KS25_QTKD_MAN107' in wb.sheetnames or 'KS25_QTKD_AI_Agent' in wb.sheetnames) else ['HN-K25-QTKD1', 'HN-K25-QTKD2', 'HN-K25-QTKD3'],
+        'sheet_curr': 'KS25_QTKD_AI_Agent' if 'KS25_QTKD_AI_Agent' in wb.sheetnames else ('KS25_QTKD_BI' if 'KS25_QTKD_BI' in wb.sheetnames else ('KS25_QTKD_MAN107' if 'KS25_QTKD_MAN107' in wb.sheetnames else 'KS25_QTKD_BA201'))
     },
     'KS24_CNTT_HN': {
         'classes': ['HN-K24-CNTT1', 'HN-K24-CNTT2', 'HN-K24-CNTT3', 'HN-K24-CNTT4', 'HCM-K24-CNTT1'],
@@ -328,7 +330,7 @@ for sheet in active_sheets:
                     val = sheet_obj.cell(row=r, column=col_idx).value
                     if val is not None:
                         try:
-                            date_vals[d][metric] = float(val)
+                            date_vals[d][metric] = to_percent(sheet_obj, val)
                         except ValueError:
                             pass
                             

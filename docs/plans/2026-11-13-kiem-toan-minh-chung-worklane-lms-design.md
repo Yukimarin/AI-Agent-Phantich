@@ -127,3 +127,4 @@ Chuyển tiếp sang bước lập kế hoạch thực thi chi tiết (`writing-
 - **Task 2:** Xây dựng module kiểm toán Heuristic Giai đoạn 1 trong `pmo/modules/m2_worklane_audit.py` (loại trừ tài khoản Trưởng ban QLĐT).
 - **Task 3:** Thiết kế schema và tích hợp telemetry logs LMS AI cho Giai đoạn 2.
 - **Task 4:** Viết unit test & regression test khóa bộ quy tắc kiểm toán.
+

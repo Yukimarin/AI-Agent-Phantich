@@ -7,6 +7,17 @@ import os
 
 sys.stdout.reconfigure(encoding='utf-8')
 
+def _get_worklane_token():
+    token = os.environ.get("WORKLANE_TOKEN", "").strip()
+    if not token and os.path.exists(".env"):
+        with open(".env", "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip().startswith("WORKLANE_TOKEN="):
+                    token = line.strip().split("=", 1)[1].strip().strip('"').strip("'")
+                    break
+    return token
+
+
 def call_mcp_tool(tool_name, arguments={}):
     url = "https://pm.rikkei.edu.vn/api/mcp"
     payload = {
@@ -19,7 +30,7 @@ def call_mcp_tool(tool_name, arguments={}):
         }
     }
     headers = {
-        "Authorization": "Bearer wl_jtpd1dOgxnUm5n2d7V6dxBT_AZHNrnCK",
+        "Authorization": f"Bearer {_get_worklane_token()}",
         "Content-Type": "application/json",
         "Accept": "application/json, text/event-stream"
     }

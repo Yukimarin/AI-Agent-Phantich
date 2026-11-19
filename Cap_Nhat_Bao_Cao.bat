@@ -7,33 +7,25 @@ echo ===========================================================================
 echo        HỆ THỐNG CẬP NHẬT TỰ ĐỘNG BÁO CÁO & DASHBOARD ĐÀO TẠO (AI PMO)
 echo ===============================================================================
 echo.
-echo  1. DataSanitizer: Làm sạch dữ liệu từ PTIT_Chiso.xlsx và đồng bộ cache
-echo  2. Chạy song song: Kỷ luật sinh viên & Dự báo học vụ (Agent 1 + Agent 2)
-echo  3. Chạy song song: Nhật ký công việc & Kỷ luật GV/TG (Agent 4 + Agent 3)
-echo  4. Biên dịch Master Executive Portal & Báo cáo KPI Markdown (Agent 5)
-echo  5. Biên dịch Management Dashboards: Director Cockpit & Worklane Staff Audit
-echo  6. Biên dịch Academic Issues: Báo cáo chuyên sâu theo môn KS24, KS25, KS26
-echo  7. Đồng bộ tự động toàn bộ sang deploy_web/
-echo.
-echo ===============================================================================
+echo  Đang chạy đường ống hợp nhất (PMO Data Hub + Gates + Dashboards + Chuẩn hóa tên file)...
 echo.
 
 cd /d "%~dp0"
-uv run python run_pipeline.py
+uv run python -m pmo pipeline --fast
 
 echo.
 echo ===============================================================================
-echo  HOÀN TẤT CẬP NHẬT BÁO CÁO! BẠN CÓ THỂ MỞ:
-echo   - Master Portal:       output\dashboards\core\agent_5_master_portal.html
-echo   - Báo cáo Tuần GĐĐT:   output\dashboards\management\weekly_director_report.html
-echo   - Director Cockpit:    output\dashboards\management\director_cockpit.html
-echo   - Worklane Staff Audit:output\dashboards\management\worklane_staff_audit.html
-echo   - Cổng Học Vụ Toàn Viện:output\dashboards\academic\index.html
-echo   - KS24 Microservices:  output\dashboards\academic\ks24\it214_microservices_cntt.html
-echo   - KS25 CNTT FastAPI:   output\dashboards\academic\ks25\it105_fastapi_cntt.html
-echo   - KS25 QTKD MAN107:    output\dashboards\academic\ks25\man107_qtkd.html
-echo   - KS26 CNTT SSK101:    output\dashboards\academic\ks26\ssk101_cntt.html
-echo   - KS26 QTKD SSK101:    output\dashboards\academic\ks26\ssk101_qtkd.html
+echo  HOÀN TẤT CẬP NHẬT! MỞ BÁO CÁO SỬ DỤNG THƯỜNG XUYÊN TẠI:
+echo   [Thư mục chính]: output\01_Bao_Cao_Su_Dung_Thuong_Xuyen\HTML_Dashboards\
+echo    - 00_Cong_Tong_Hop_Toan_Vien.html
+echo    - 01_Bao_Cao_Giao_Ban_Dao_Tao_Tuan.html
+echo    - 02_Kiem_Toan_Hieu_Suat_Nhan_Su_Worklane.html
+echo    - 03_Bang_Dieu_Khien_Giam_Doc_Dao_Tao.html
+echo    - 04_Theo_Doi_Ne_Nep_Hoc_Tap_Sinh_Vien.html
+echo    - 05_Du_Bao_Ket_Qua_Hoc_Tap_Va_Nguy_Co.html
+echo    - 06_Kiem_Toan_Ky_Luat_Tac_Nghiep_GV_TG.html
+echo    - 07_Phan_Tich_Nhat_Ky_Bao_Cao_Ngay.html
+echo    - 08_Chuyen_Sau_Hoc_Vu_Theo_Khoa\
 echo ===============================================================================
 echo.
 pause

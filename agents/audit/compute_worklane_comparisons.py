@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 import json
 import os
+import re
 import sys
+
+# Các kỳ kiểm toán Worklane — key trùng với <option value> của dropdown trong worklane_staff_audit.html
+AUDIT_PERIODS = ["oct_01_27", "week_12_16", "week_05_09", "week_28_02", "week_14_18", "sept_01_08", "sept_full", "august"]
 
 if sys.platform == "win32":
     try:
@@ -35,7 +39,7 @@ def compute_all():
         "Khối CNTT Hà Nội": "Hồ Xuân Hùng",
         "Khối Quản trị Kinh doanh": "Hoàng Thị Kim Oanh",
         "Khối Ngoại ngữ và KNM": "Giáp Thị Minh Hằng",
-        "Khối QLCLĐT Hà Nội": "Nguyễn Thị Tươi",
+        "Khối QLCLĐT Hà Nội": "Phòng QLĐT (Trực thuộc BGĐ)",
         "Khối CNTT HCM": "Nguyễn Bá Minh Đạo",
         "LMS AI": "Trần Minh Cường"
     }
@@ -44,30 +48,24 @@ def compute_all():
         "Khối CNTT Hà Nội": "CNTT Hà Nội",
         "Khối Quản trị Kinh doanh": "Khối QTKD",
         "Khối Ngoại ngữ và KNM": "Ngoại Ngữ & KNM",
-        "Khối QLCLĐT Hà Nội": "QLCLĐT",
+        "Khối QLCLĐT Hà Nội": "Phòng QLĐT",
         "Khối CNTT HCM": "CNTT HCM",
         "LMS AI": "LMS AI"
     }
 
-    # 1. Tính toán Capacity Matrix cho cả 3 kỳ
+    # 1. Tính toán Capacity Matrix cho MỌI kỳ có file kiểm toán (key = value của dropdown chọn kỳ)
     capacity_results = {}
-    periods_map = {
-        "week_14_18": {
-            "data": data_week,
-            "days": 5,
-            "period_name": "Tuần 14/09 - 18/09/2026 (5 ngày - Chuẩn 40h/tuần)"
-        },
-        "september": {
-            "data": data_sept,
-            "days": 12,
-            "period_name": "Lũy kế Tháng 9 (01/09 - 18/09/2026 - 12 ngày)"
-        },
-        "august": {
-            "data": data_aug,
-            "days": 20,
-            "period_name": "Tháng 08/2026 (20 ngày làm việc)"
-        }
-    }
+    periods_map = {}
+    for p_key in AUDIT_PERIODS:
+        path = f"data/processed/worklane_audit_{p_key}.json"
+        if not os.path.exists(path):
+            print(f"⚠️ Thiếu {path} — bỏ qua kỳ {p_key} trong ma trận công suất")
+            continue
+        with open(path, "r", encoding="utf-8") as f:
+            d = json.load(f)
+        label = d.get("audit_month", p_key)
+        m = re.search(r"\((\d+) ngày", label)
+        periods_map[p_key] = {"data": d, "days": int(m.group(1)) if m else 0, "period_name": label}
 
     for p_key, p_cfg in periods_map.items():
         p_data = p_cfg["data"]
@@ -99,10 +97,8 @@ def compute_all():
             tot_std_master += std
             tot_excess += exc
 
-            if p_key == "week_14_18":
-                cap_40h = sum(s.get('target_hours', 40.0) for s in staff)
-            else:
-                cap_40h = ns * 40.0
+            # Chuẩn giờ của kỳ = tổng target_hours (đã tính theo số ngày làm việc của kỳ trong file kiểm toán)
+            cap_40h = sum((s.get('target_hours') or days * 8.0) for s in staff)
 
             tot_cap_40h += cap_40h
             cap_period = ns * days * 8.0
@@ -180,8 +176,6 @@ def compute_all():
             'total_summary': total_summary
         }
 
-    # Giữ alias "sept_01_08" trỏ đến "week_14_18" hoặc "september" để tương thích ngược tuyệt đối
-    capacity_results["sept_01_08"] = capacity_results["week_14_18"]
 
     matrix_file = r"data/processed/capacity_matrix_data.json"
     with open(matrix_file, "w", encoding="utf-8") as f:
@@ -259,7 +253,7 @@ def compute_all():
         "meta": {
             "title": "So Sánh Hiệu Suất & Giờ Công Worklane: Tháng 08/2026 vs Tuần 14/09 - 18/09/2026",
             "groups_count": len(comparison_results),
-            "total_staff": 42
+            "total_staff": len(data_week["staff_details"])
         },
         "comparison": comparison_results
     }

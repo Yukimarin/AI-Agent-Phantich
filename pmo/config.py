@@ -12,11 +12,13 @@ GOLDEN_DIR = ROOT / "tests" / "golden"
 
 LMS_API_URL = "https://lmsapi.rikkeiedu.com/v1/mcp/analytics"
 
-# Môn đang theo dõi (Orientation và SSK101 đã kết thúc) — đồng bộ với scripts/fetch_ks26_live.js
-TRACKED_COURSES = ["IT108-K26", "SKL01", "ENG105-K26", "SSK103", "SSK102", "JPN105-K26"]
+# Môn đang theo dõi (Orientation, SSK101, SKL01, SSK102, SSK103 đã kết thúc) — đồng bộ với scripts/fetch_ks26_live.js
+TRACKED_COURSES = ["IT108-K26", "MAN101", "ENG105-K26", "JPN105-K26", "IT206-K26", "SSK101", "SEL101"]
 
 # Dữ liệu cũ hơn số giờ này bị Gate 1 coi là quá hạn
 MAX_DATA_AGE_HOURS = 24 * 7
+# Raw LMS trong một kỳ phải cùng một lần lấy: chênh lệch giờ ghi tối đa giữa các file
+MAX_RAW_SPREAD_HOURS = 2
 
 
 def _load_dotenv() -> None:

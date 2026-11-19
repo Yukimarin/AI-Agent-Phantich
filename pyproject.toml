@@ -3,7 +3,12 @@ name = "pmo-analytics"
 version = "0.1.0"
 description = "PMO Data Hub: lấy dữ liệu 1 lần/kỳ, tính chỉ số chuẩn LMS FE, kiểm định tự động, xuất báo cáo"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "openpyxl>=3.1.0",
+    "numpy>=1.26.0",
+    "markdown>=3.5.0",
+    "mysql-connector-python>=8.3.0",
+]
 
 [dependency-groups]
 dev = ["pytest>=8"]

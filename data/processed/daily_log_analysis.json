@@ -22,26 +22,6 @@
       "role": "Giảng viên"
     },
     {
-      "name": "Ngọ Văn Quý",
-      "group": "Khối CNTT",
-      "role": "Giảng viên"
-    },
-    {
-      "name": "Nguyễn Xuân Bách",
-      "group": "Khối CNTT",
-      "role": "Giảng viên"
-    },
-    {
-      "name": "Lê Hà Thanh Sang",
-      "group": "Khối CNTT",
-      "role": "Giảng viên"
-    },
-    {
-      "name": "Lưu Hoàng Xuân Nguyên",
-      "group": "Khối CNTT",
-      "role": "Giảng viên"
-    },
-    {
       "name": "Giáp Thị Minh Hằng",
       "group": "Khối Ngoại ngữ và kỹ năng mềm",
       "role": "Giảng viên"
@@ -1138,10 +1118,10 @@
       "reported_days": 5,
       "missing_days": [],
       "total_tasks": 36,
-      "completed_tasks": 35,
-      "completion_rate": 97.22222222222221,
+      "completed_tasks": 36,
+      "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 98.9,
+      "work_score": 100.0,
       "declared_hours": 40.5,
       "expected_hours": 40.0,
       "deficit_hours": 0.0,
@@ -1152,8 +1132,8 @@
       "severity": "Đạt chuẩn",
       "kpi_over_report_count": 0,
       "kpi_wildcard_count": 36,
-      "unverified_count": 1,
-      "kpi_issues_count": 37,
+      "unverified_count": 0,
+      "kpi_issues_count": 36,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -1220,20 +1200,20 @@
           "detail": "Khai báo ngoài barem KPI Master khối (2.5h)"
         },
         {
-          "type": "UNVERIFIED_WORKLANE",
-          "date": "2026-09-23",
-          "task": "QTKDDAO-19 Chuẩn bị giảng thử lần 1 - Học tập bồi dưỡng chuyên môn",
-          "hours": 2.5,
-          "std_hours": 0.5,
-          "detail": "Khai báo 100% nhưng ticket Worklane chưa DONE"
-        },
-        {
           "type": "OUT_OF_MASTER",
           "date": "2026-09-23",
           "task": "Nghiên cứu web báo cáo CVHT (mới cập nhật lại)",
           "hours": 0.75,
           "std_hours": 0.5,
           "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
+        },
+        {
+          "type": "OUT_OF_MASTER",
+          "date": "2026-09-24",
+          "task": "Kiểm tra BTVN - HN-K25-QTKD1 (SS11)",
+          "hours": 1.5,
+          "std_hours": 0.5,
+          "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
         }
       ],
       "time_violations": [],
@@ -1244,9 +1224,7 @@
         "Task 'CSSV - HN-K25-QTKD2' chưa định dạng (gán tạm 30 phút)",
         "Task 'CVHT - HN-K26-QTKD1' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "QTKDDAO-19 Chuẩn bị giảng thử lần 1 - Học tập bồi dưỡng chuyên môn (UNVERIFIED)"
-      ]
+      "uncompleted_tasks": []
     },
     "triệu thị thanh tâm": {
       "name": "Triệu Thị Thanh Tâm",
@@ -1256,10 +1234,10 @@
       "reported_days": 5,
       "missing_days": [],
       "total_tasks": 34,
-      "completed_tasks": 33,
-      "completion_rate": 97.05882352941177,
+      "completed_tasks": 34,
+      "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 98.8,
+      "work_score": 100.0,
       "declared_hours": 39.2,
       "expected_hours": 40.0,
       "deficit_hours": 0.8,
@@ -1276,8 +1254,8 @@
       "severity": "Đạt chuẩn",
       "kpi_over_report_count": 0,
       "kpi_wildcard_count": 34,
-      "unverified_count": 1,
-      "kpi_issues_count": 35,
+      "unverified_count": 0,
+      "kpi_issues_count": 34,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -1286,14 +1264,6 @@
           "hours": 2.5,
           "std_hours": 0.5,
           "detail": "Khai báo ngoài barem KPI Master khối (2.5h)"
-        },
-        {
-          "type": "UNVERIFIED_WORKLANE",
-          "date": "2026-09-23",
-          "task": "QTKDDAO-18 Chuẩn bị giảng thử lần 1",
-          "hours": 2.5,
-          "std_hours": 0.5,
-          "detail": "Khai báo 100% nhưng ticket Worklane chưa DONE"
         },
         {
           "type": "OUT_OF_MASTER",
@@ -1358,19 +1328,25 @@
           "hours": 1.0,
           "std_hours": 0.5,
           "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+        },
+        {
+          "type": "OUT_OF_MASTER",
+          "date": "2026-09-24",
+          "task": "Trao đổi cùng GV/TG về các sinh viên không đủ điều kiện thi cuối môn",
+          "hours": 1.0,
+          "std_hours": 0.5,
+          "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
         }
       ],
       "time_violations": [],
       "warning_flags": [
         "Task 'QTKDDAO-18 Chuẩn bị giảng thử lần 1' chưa định dạng (gán tạm 30 phút)",
-        "UNVERIFIED: Task 'QTKDDAO-18 Chuẩn bị giảng thử lần 1' khai báo xong nhưng trên Worklane chưa DONE.",
         "Task 'Cố vấn học tập - lớp QTKD1' chưa định dạng (gán tạm 30 phút)",
         "Task 'Cố vấn học tập - lớp QTKD2' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Trao đổi cùng GV về tình hình sinh viên tại lớp' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Trao đổi cùng GV về tình hình sinh viên tại lớp' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Nghiên cứu giao diện báo cáo CVHT mới' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "QTKDDAO-18 Chuẩn bị giảng thử lần 1 (UNVERIFIED)"
-      ]
+      "uncompleted_tasks": []
     },
     "trần minh cường": {
       "name": "Trần Minh Cường",
@@ -2618,23 +2594,22 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 2,
+      "reported_days": 3,
       "missing_days": [
         "2026-09-23",
-        "2026-09-25",
-        "2026-09-29"
+        "2026-09-25"
       ],
-      "total_tasks": 7,
-      "completed_tasks": 7,
+      "total_tasks": 11,
+      "completed_tasks": 11,
       "completion_rate": 100.0,
-      "time_score": 100.0,
-      "work_score": 76.0,
-      "declared_hours": 18.5,
+      "time_score": 90.0,
+      "work_score": 82.0,
+      "declared_hours": 28.5,
       "expected_hours": 40.0,
-      "deficit_hours": 21.5,
-      "capacity_pct": 46.2,
-      "avg_hours_per_day": 3.7,
-      "under_8h_days_count": 3,
+      "deficit_hours": 11.5,
+      "capacity_pct": 71.2,
+      "avg_hours_per_day": 5.7,
+      "under_8h_days_count": 2,
       "under_8h_details": [
         {
           "date": "2026-09-23",
@@ -2645,18 +2620,13 @@
           "date": "2026-09-25",
           "hours": 0.0,
           "deficit": 8.0
-        },
-        {
-          "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
         }
       ],
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-      "kpi_over_report_count": 0,
-      "kpi_wildcard_count": 7,
+      "kpi_over_report_count": 2,
+      "kpi_wildcard_count": 9,
       "unverified_count": 0,
-      "kpi_issues_count": 7,
+      "kpi_issues_count": 11,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -2713,9 +2683,36 @@
           "hours": 0.5,
           "std_hours": 0.5,
           "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+        },
+        {
+          "type": "OVER_REPORTING",
+          "date": "2026-09-29",
+          "task": "Sản xuất và review môn IT103 - Thiết kế UI, UX",
+          "hours": 3.0,
+          "std_hours": 0.4166666666666667,
+          "detail": "Vượt định mức (3.0h vs 0.4h barem)"
+        },
+        {
+          "type": "OVER_REPORTING",
+          "date": "2026-09-29",
+          "task": "Sản xuất và review môn IT104  -Thiết kế giao diện web",
+          "hours": 3.0,
+          "std_hours": 0.4166666666666667,
+          "detail": "Vượt định mức (3.0h vs 0.4h barem)"
+        },
+        {
+          "type": "OUT_OF_MASTER",
+          "date": "2026-09-29",
+          "task": "Xây dựng chức năng quản lý điểm ở lms sinh viên",
+          "hours": 2.0,
+          "std_hours": 0.5,
+          "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
         }
       ],
-      "time_violations": [],
+      "time_violations": [
+        "29/09: Task 'Sản xuất và review môn IT103 - Thiết kế UI, UX' khai báo 3.0h so với định mức tiêu chuẩn 0.4h",
+        "29/09: Task 'Sản xuất và review môn IT104  -Thiết kế giao diện web' khai báo 3.0h so với định mức tiêu chuẩn 0.4h"
+      ],
       "warning_flags": [
         "Task 'Xây dựng hệ thống khảo thí chức năng thi tự luận' chưa định dạng (gán tạm 30 phút)",
         "Task 'Xây dựng hệ thống khảo thí chức năng đồng bộ điểm lên lms' chưa định dạng (gán tạm 30 phút)",
@@ -2730,21 +2727,19 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "4",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-09-29"
-      ],
-      "total_tasks": 25,
-      "completed_tasks": 25,
+      "reported_days": 5,
+      "missing_days": [],
+      "total_tasks": 36,
+      "completed_tasks": 36,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 92.0,
-      "declared_hours": 24.0,
+      "work_score": 100.0,
+      "declared_hours": 32.5,
       "expected_hours": 40.0,
-      "deficit_hours": 16.0,
-      "capacity_pct": 60.0,
-      "avg_hours_per_day": 4.8,
-      "under_8h_days_count": 5,
+      "deficit_hours": 7.5,
+      "capacity_pct": 81.2,
+      "avg_hours_per_day": 6.5,
+      "under_8h_days_count": 4,
       "under_8h_details": [
         {
           "date": "2026-09-23",
@@ -2765,18 +2760,13 @@
           "date": "2026-09-28",
           "hours": 5.25,
           "deficit": 2.8
-        },
-        {
-          "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
         }
       ],
-      "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
+      "severity": "Cảnh báo (Thiếu 8h-20h hoặc công suất 75-90%)",
       "kpi_over_report_count": 0,
-      "kpi_wildcard_count": 25,
+      "kpi_wildcard_count": 36,
       "unverified_count": 0,
-      "kpi_issues_count": 25,
+      "kpi_issues_count": 36,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -3137,33 +3127,25 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-09-29"
-      ],
-      "total_tasks": 92,
-      "completed_tasks": 92,
+      "reported_days": 5,
+      "missing_days": [],
+      "total_tasks": 115,
+      "completed_tasks": 115,
       "completion_rate": 100.0,
       "time_score": 90.0,
-      "work_score": 90.0,
-      "declared_hours": 32.0,
+      "work_score": 98.0,
+      "declared_hours": 40.0,
       "expected_hours": 40.0,
-      "deficit_hours": 8.0,
-      "capacity_pct": 80.0,
-      "avg_hours_per_day": 6.4,
-      "under_8h_days_count": 1,
-      "under_8h_details": [
-        {
-          "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
-        }
-      ],
-      "severity": "Cảnh báo (Thiếu 8h-20h hoặc công suất 75-90%)",
+      "deficit_hours": 0.0,
+      "capacity_pct": 100.0,
+      "avg_hours_per_day": 8.0,
+      "under_8h_days_count": 0,
+      "under_8h_details": [],
+      "severity": "Đạt chuẩn",
       "kpi_over_report_count": 3,
-      "kpi_wildcard_count": 4,
+      "kpi_wildcard_count": 5,
       "unverified_count": 0,
-      "kpi_issues_count": 7,
+      "kpi_issues_count": 8,
       "kpi_issues_detail": [
         {
           "type": "OVER_REPORTING",
@@ -3220,6 +3202,14 @@
           "hours": 3.0,
           "std_hours": 2.0,
           "detail": "Vượt định mức (3.0h vs 2.0h barem)"
+        },
+        {
+          "type": "OUT_OF_MASTER",
+          "date": "2026-09-29",
+          "task": "Tham gia khai giảng K26",
+          "hours": 2.5,
+          "std_hours": 0.5,
+          "detail": "Khai báo ngoài barem KPI Master khối (2.5h)"
         }
       ],
       "time_violations": [
@@ -3231,7 +3221,8 @@
         "Task 'Lên kịch bản giảng dạy Chương 1 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)",
         "Task 'Lên kịch bản giảng dạy Chương 2 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)",
         "Task 'Lên kịch bản giảng dạy Chương 3 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)",
-        "Task 'Lên kịch bản giảng dạy Chương 5 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)"
+        "Task 'Lên kịch bản giảng dạy Chương 5 môn Nhập môn CNTT' chưa định dạng (gán tạm 30 phút)",
+        "Task 'Tham gia khai giảng K26' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": []
     },
@@ -3240,20 +3231,18 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 4,
-      "missing_days": [
-        "2026-09-29"
-      ],
-      "total_tasks": 22,
-      "completed_tasks": 22,
+      "reported_days": 5,
+      "missing_days": [],
+      "total_tasks": 31,
+      "completed_tasks": 31,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 92.0,
-      "declared_hours": 27.5,
+      "work_score": 100.0,
+      "declared_hours": 34.5,
       "expected_hours": 40.0,
-      "deficit_hours": 12.5,
-      "capacity_pct": 68.8,
-      "avg_hours_per_day": 5.5,
+      "deficit_hours": 5.5,
+      "capacity_pct": 86.2,
+      "avg_hours_per_day": 6.9,
       "under_8h_days_count": 4,
       "under_8h_details": [
         {
@@ -3273,15 +3262,15 @@
         },
         {
           "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
+          "hours": 7.0,
+          "deficit": 1.0
         }
       ],
-      "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
+      "severity": "Cảnh báo (Thiếu 8h-20h hoặc công suất 75-90%)",
       "kpi_over_report_count": 0,
-      "kpi_wildcard_count": 20,
+      "kpi_wildcard_count": 28,
       "unverified_count": 0,
-      "kpi_issues_count": 20,
+      "kpi_issues_count": 28,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -6044,10 +6033,10 @@
       "reported_days": 19,
       "missing_days": [],
       "total_tasks": 109,
-      "completed_tasks": 108,
-      "completion_rate": 99.08256880733946,
+      "completed_tasks": 109,
+      "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 99.6,
+      "work_score": 100.0,
       "declared_hours": 152.2,
       "expected_hours": 152.0,
       "deficit_hours": 0.0,
@@ -6064,8 +6053,8 @@
       "severity": "Đạt chuẩn",
       "kpi_over_report_count": 0,
       "kpi_wildcard_count": 109,
-      "unverified_count": 1,
-      "kpi_issues_count": 110,
+      "unverified_count": 0,
+      "kpi_issues_count": 109,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -6156,9 +6145,7 @@
         "Task 'CSSV - QTKD2' chưa định dạng (gán tạm 30 phút)",
         "Task 'Trao đổi định kỳ - CVHT - QTKD1 & QTKD3' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "QTKDDAO-19 Chuẩn bị giảng thử lần 1 - Học tập bồi dưỡng chuyên môn (UNVERIFIED)"
-      ]
+      "uncompleted_tasks": []
     },
     "triệu thị thanh tâm": {
       "name": "Triệu Thị Thanh Tâm",
@@ -6171,10 +6158,10 @@
         "2026-09-15"
       ],
       "total_tasks": 102,
-      "completed_tasks": 101,
-      "completion_rate": 99.01960784313727,
+      "completed_tasks": 102,
+      "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 95.4,
+      "work_score": 95.8,
       "declared_hours": 131.8,
       "expected_hours": 152.0,
       "deficit_hours": 20.2,
@@ -6211,8 +6198,8 @@
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 0,
       "kpi_wildcard_count": 102,
-      "unverified_count": 1,
-      "kpi_issues_count": 103,
+      "unverified_count": 0,
+      "kpi_issues_count": 102,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -6303,9 +6290,7 @@
         "Task 'Trao đổi cùng cô Ngọc Anh về tình trạng sinh viên phản ánh về môn Tiếng Anh' chưa định dạng (gán tạm 30 phút)",
         "Task 'Trao đổi cùng GV về tình hình chuyên cần của lớp' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "QTKDDAO-18 Chuẩn bị giảng thử lần 1 (UNVERIFIED)"
-      ]
+      "uncompleted_tasks": []
     },
     "trần minh cường": {
       "name": "Trần Minh Cường",
@@ -8155,27 +8140,26 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 12,
+      "reported_days": 13,
       "missing_days": [
         "2026-09-04",
         "2026-09-11",
         "2026-09-14",
         "2026-09-17",
         "2026-09-23",
-        "2026-09-25",
-        "2026-09-29"
+        "2026-09-25"
       ],
-      "total_tasks": 37,
-      "completed_tasks": 37,
+      "total_tasks": 41,
+      "completed_tasks": 41,
       "completion_rate": 100.0,
-      "time_score": 90.0,
-      "work_score": 83.3,
-      "declared_hours": 122.5,
+      "time_score": 80.0,
+      "work_score": 83.4,
+      "declared_hours": 132.5,
       "expected_hours": 152.0,
-      "deficit_hours": 29.5,
-      "capacity_pct": 80.6,
-      "avg_hours_per_day": 6.45,
-      "under_8h_days_count": 7,
+      "deficit_hours": 19.5,
+      "capacity_pct": 87.2,
+      "avg_hours_per_day": 6.97,
+      "under_8h_days_count": 6,
       "under_8h_details": [
         {
           "date": "2026-09-04",
@@ -8206,18 +8190,13 @@
           "date": "2026-09-25",
           "hours": 0.0,
           "deficit": 8.0
-        },
-        {
-          "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
         }
       ],
-      "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-      "kpi_over_report_count": 2,
-      "kpi_wildcard_count": 34,
+      "severity": "Cảnh báo (Thiếu 8h-20h hoặc công suất 75-90%)",
+      "kpi_over_report_count": 4,
+      "kpi_wildcard_count": 36,
       "unverified_count": 0,
-      "kpi_issues_count": 36,
+      "kpi_issues_count": 40,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -8302,7 +8281,9 @@
       ],
       "time_violations": [
         "21/09: Task 'Review học liệu lớp học lại môn JavaScript + Lập trình C session 04, 05 và 06' khai báo 2.0h so với định mức tiêu chuẩn 0.4h",
-        "22/09: Task 'Review và đẩy học liệu môn lập trình C' khai báo 1.0h so với định mức tiêu chuẩn 0.4h"
+        "22/09: Task 'Review và đẩy học liệu môn lập trình C' khai báo 1.0h so với định mức tiêu chuẩn 0.4h",
+        "29/09: Task 'Sản xuất và review môn IT103 - Thiết kế UI, UX' khai báo 3.0h so với định mức tiêu chuẩn 0.4h",
+        "29/09: Task 'Sản xuất và review môn IT104  -Thiết kế giao diện web' khai báo 3.0h so với định mức tiêu chuẩn 0.4h"
       ],
       "warning_flags": [
         "Task 'Trông thi cuối môn cho K24' chưa định dạng (gán tạm 30 phút)",
@@ -8318,23 +8299,22 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "4",
-      "reported_days": 16,
+      "reported_days": 17,
       "missing_days": [
         "2026-09-04",
-        "2026-09-22",
-        "2026-09-29"
+        "2026-09-22"
       ],
-      "total_tasks": 102,
-      "completed_tasks": 102,
+      "total_tasks": 113,
+      "completed_tasks": 113,
       "completion_rate": 100.0,
       "time_score": 100.0,
-      "work_score": 93.7,
-      "declared_hours": 103.8,
+      "work_score": 95.8,
+      "declared_hours": 112.2,
       "expected_hours": 152.0,
-      "deficit_hours": 48.2,
-      "capacity_pct": 68.3,
-      "avg_hours_per_day": 5.46,
-      "under_8h_days_count": 16,
+      "deficit_hours": 39.8,
+      "capacity_pct": 73.8,
+      "avg_hours_per_day": 5.91,
+      "under_8h_days_count": 15,
       "under_8h_details": [
         {
           "date": "2026-09-04",
@@ -8410,18 +8390,13 @@
           "date": "2026-09-28",
           "hours": 5.25,
           "deficit": 2.8
-        },
-        {
-          "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
         }
       ],
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 0,
-      "kpi_wildcard_count": 101,
+      "kpi_wildcard_count": 112,
       "unverified_count": 0,
-      "kpi_issues_count": 101,
+      "kpi_issues_count": 112,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -8810,23 +8785,22 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 16,
+      "reported_days": 17,
       "missing_days": [
         "2026-09-07",
-        "2026-09-14",
-        "2026-09-29"
+        "2026-09-14"
       ],
-      "total_tasks": 229,
-      "completed_tasks": 229,
+      "total_tasks": 252,
+      "completed_tasks": 252,
       "completion_rate": 100.0,
       "time_score": 45.0,
-      "work_score": 82.7,
-      "declared_hours": 112.5,
+      "work_score": 84.8,
+      "declared_hours": 120.5,
       "expected_hours": 152.0,
-      "deficit_hours": 39.5,
-      "capacity_pct": 74.0,
-      "avg_hours_per_day": 5.92,
-      "under_8h_days_count": 11,
+      "deficit_hours": 31.5,
+      "capacity_pct": 79.3,
+      "avg_hours_per_day": 6.34,
+      "under_8h_days_count": 10,
       "under_8h_details": [
         {
           "date": "2026-09-03",
@@ -8877,18 +8851,13 @@
           "date": "2026-09-21",
           "hours": 7.0,
           "deficit": 1.0
-        },
-        {
-          "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
         }
       ],
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 12,
-      "kpi_wildcard_count": 19,
+      "kpi_wildcard_count": 20,
       "unverified_count": 0,
-      "kpi_issues_count": 31,
+      "kpi_issues_count": 32,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -8992,22 +8961,21 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 16,
+      "reported_days": 17,
       "missing_days": [
         "2026-09-09",
-        "2026-09-14",
-        "2026-09-29"
+        "2026-09-14"
       ],
-      "total_tasks": 88,
-      "completed_tasks": 86,
-      "completion_rate": 97.72727272727273,
+      "total_tasks": 97,
+      "completed_tasks": 95,
+      "completion_rate": 97.9381443298969,
       "time_score": 100.0,
-      "work_score": 92.8,
-      "declared_hours": 107.8,
+      "work_score": 95.0,
+      "declared_hours": 114.8,
       "expected_hours": 152.0,
-      "deficit_hours": 44.2,
-      "capacity_pct": 70.9,
-      "avg_hours_per_day": 5.67,
+      "deficit_hours": 37.2,
+      "capacity_pct": 75.5,
+      "avg_hours_per_day": 6.04,
       "under_8h_days_count": 15,
       "under_8h_details": [
         {
@@ -9082,15 +9050,15 @@
         },
         {
           "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
+          "hours": 7.0,
+          "deficit": 1.0
         }
       ],
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 0,
-      "kpi_wildcard_count": 86,
+      "kpi_wildcard_count": 94,
       "unverified_count": 0,
-      "kpi_issues_count": 86,
+      "kpi_issues_count": 94,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -9934,10 +9902,10 @@
         "2026-09-29"
       ],
       "total_tasks": 90,
-      "completed_tasks": 89,
-      "completion_rate": 98.88888888888889,
+      "completed_tasks": 90,
+      "completion_rate": 100.0,
       "time_score": 90.0,
-      "work_score": 93.3,
+      "work_score": 93.8,
       "declared_hours": 131.5,
       "expected_hours": 152.0,
       "deficit_hours": 20.5,
@@ -9969,8 +9937,8 @@
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 2,
       "kpi_wildcard_count": 87,
-      "unverified_count": 1,
-      "kpi_issues_count": 90,
+      "unverified_count": 0,
+      "kpi_issues_count": 89,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -10064,9 +10032,7 @@
         "Task 'Tham gia buổi dạy thử cô Thủy GV TA' chưa định dạng (gán tạm 30 phút)",
         "Task 'Xử lý duyệt đề thi N4 làm việc với đối tác' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "PTITORIE-4 Tạo bộ câu hỏi cho quiz văn hóa Nhật Bản (UNVERIFIED)"
-      ]
+      "uncompleted_tasks": []
     },
     "lò thị ngọc anh": {
       "name": "Lò Thị Ngọc Anh",
@@ -13231,10 +13197,10 @@
         "2026-08-07"
       ],
       "total_tasks": 306,
-      "completed_tasks": 304,
-      "completion_rate": 99.34640522875817,
+      "completed_tasks": 305,
+      "completion_rate": 99.67320261437908,
       "time_score": 95.0,
-      "work_score": 95.5,
+      "work_score": 95.6,
       "declared_hours": 426.5,
       "expected_hours": 488.0,
       "deficit_hours": 61.5,
@@ -13406,8 +13372,8 @@
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 1,
       "kpi_wildcard_count": 304,
-      "unverified_count": 1,
-      "kpi_issues_count": 306,
+      "unverified_count": 0,
+      "kpi_issues_count": 305,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -13501,8 +13467,7 @@
         "Task 'Tìm hiểu, đọc thêm học liệu liên quan đến môn Dự án kinh doanh số 2' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": [
-        "Xây dựng, hoàn thành danh sách sinh viên cần theo dõi trong kỳ tới (90%)",
-        "QTKDDAO-19 Chuẩn bị giảng thử lần 1 - Học tập bồi dưỡng chuyên môn (UNVERIFIED)"
+        "Xây dựng, hoàn thành danh sách sinh viên cần theo dõi trong kỳ tới (90%)"
       ]
     },
     "triệu thị thanh tâm": {
@@ -13516,10 +13481,10 @@
         "2026-09-15"
       ],
       "total_tasks": 305,
-      "completed_tasks": 296,
-      "completion_rate": 97.04918032786885,
+      "completed_tasks": 298,
+      "completion_rate": 97.70491803278688,
       "time_score": 70.0,
-      "work_score": 91.5,
+      "work_score": 91.8,
       "declared_hours": 431.2,
       "expected_hours": 496.0,
       "deficit_hours": 64.8,
@@ -13676,8 +13641,8 @@
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 8,
       "kpi_wildcard_count": 296,
-      "unverified_count": 2,
-      "kpi_issues_count": 306,
+      "unverified_count": 0,
+      "kpi_issues_count": 304,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -15757,10 +15722,10 @@
         "2026-09-24"
       ],
       "total_tasks": 185,
-      "completed_tasks": 170,
-      "completion_rate": 91.8918918918919,
+      "completed_tasks": 185,
+      "completion_rate": 100.0,
       "time_score": 80.0,
-      "work_score": 85.7,
+      "work_score": 88.9,
       "declared_hours": 399.8,
       "expected_hours": 496.0,
       "deficit_hours": 96.2,
@@ -15867,8 +15832,8 @@
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 4,
       "kpi_wildcard_count": 174,
-      "unverified_count": 15,
-      "kpi_issues_count": 193,
+      "unverified_count": 0,
+      "kpi_issues_count": 178,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -15964,13 +15929,7 @@
         "Task 'PTITTRIE-42 [Buổi 08] Chăm sóc SV — IT212 K24 (HN-KS24-CNTT3)' chưa định dạng (gán tạm 30 phút)",
         "Task 'PTITTRIE-49 [Buổi 10] Check BTVN — IT212 K24 (HN-KS24-CNTT2)' chưa định dạng (gán tạm 30 phút)"
       ],
-      "uncompleted_tasks": [
-        "TRIEKHAI-22 Hỗ trợ SV làm dự án — CNTT2 (UNVERIFIED)",
-        "TRIEKHAI-24 Hỗ trợ SV làm dự án — CNTT3 (UNVERIFIED)",
-        "TRIEKHAI-18 Hỗ trợ SV làm dự án — CNTT4 (UNVERIFIED)",
-        "TRIEKHAI-2 [Buổi 1] Hỗ trợ triển khai DA K24 — CNTT4 (UNVERIFIED)",
-        "TRIEKHAI-5 [Buổi 1] Hỗ trợ triển khai DA K24 — CNTT2 (UNVERIFIED)"
-      ]
+      "uncompleted_tasks": []
     },
     "đinh thành nam": {
       "name": "Đinh Thành Nam",
@@ -17259,7 +17218,7 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 40,
+      "reported_days": 41,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -17281,20 +17240,19 @@
         "2026-09-14",
         "2026-09-17",
         "2026-09-23",
-        "2026-09-25",
-        "2026-09-29"
+        "2026-09-25"
       ],
-      "total_tasks": 110,
-      "completed_tasks": 110,
+      "total_tasks": 114,
+      "completed_tasks": 114,
       "completion_rate": 100.0,
-      "time_score": 85.0,
-      "work_score": 82.8,
-      "declared_hours": 363.0,
+      "time_score": 75.0,
+      "work_score": 81.5,
+      "declared_hours": 373.0,
       "expected_hours": 496.0,
-      "deficit_hours": 133.0,
-      "capacity_pct": 73.2,
-      "avg_hours_per_day": 5.85,
-      "under_8h_days_count": 22,
+      "deficit_hours": 123.0,
+      "capacity_pct": 75.2,
+      "avg_hours_per_day": 6.02,
+      "under_8h_days_count": 21,
       "under_8h_details": [
         {
           "date": "2026-07-01",
@@ -17400,18 +17358,13 @@
           "date": "2026-09-25",
           "hours": 0.0,
           "deficit": 8.0
-        },
-        {
-          "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
         }
       ],
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-      "kpi_over_report_count": 3,
-      "kpi_wildcard_count": 105,
+      "kpi_over_report_count": 5,
+      "kpi_wildcard_count": 107,
       "unverified_count": 0,
-      "kpi_issues_count": 108,
+      "kpi_issues_count": 112,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -17497,7 +17450,9 @@
       "time_violations": [
         "20/08: Task 'Họp review AI agent với bên Quản trị kinh doanh' khai báo 1.5h so với định mức tiêu chuẩn 0.4h",
         "21/09: Task 'Review học liệu lớp học lại môn JavaScript + Lập trình C session 04, 05 và 06' khai báo 2.0h so với định mức tiêu chuẩn 0.4h",
-        "22/09: Task 'Review và đẩy học liệu môn lập trình C' khai báo 1.0h so với định mức tiêu chuẩn 0.4h"
+        "22/09: Task 'Review và đẩy học liệu môn lập trình C' khai báo 1.0h so với định mức tiêu chuẩn 0.4h",
+        "29/09: Task 'Sản xuất và review môn IT103 - Thiết kế UI, UX' khai báo 3.0h so với định mức tiêu chuẩn 0.4h",
+        "29/09: Task 'Sản xuất và review môn IT104  -Thiết kế giao diện web' khai báo 3.0h so với định mức tiêu chuẩn 0.4h"
       ],
       "warning_flags": [
         "Task 'Trông thi hackathon lớp CNTT 3' chưa định dạng (gán tạm 30 phút)",
@@ -17513,7 +17468,7 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "4",
-      "reported_days": 54,
+      "reported_days": 55,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -17521,20 +17476,19 @@
         "2026-07-07",
         "2026-07-31",
         "2026-09-04",
-        "2026-09-22",
-        "2026-09-29"
+        "2026-09-22"
       ],
-      "total_tasks": 294,
-      "completed_tasks": 294,
+      "total_tasks": 305,
+      "completed_tasks": 305,
       "completion_rate": 100.0,
       "time_score": 85.0,
-      "work_score": 91.8,
-      "declared_hours": 391.2,
+      "work_score": 92.5,
+      "declared_hours": 399.8,
       "expected_hours": 496.0,
-      "deficit_hours": 104.8,
-      "capacity_pct": 78.9,
-      "avg_hours_per_day": 6.31,
-      "under_8h_days_count": 40,
+      "deficit_hours": 96.2,
+      "capacity_pct": 80.6,
+      "avg_hours_per_day": 6.45,
+      "under_8h_days_count": 39,
       "under_8h_details": [
         {
           "date": "2026-07-01",
@@ -17730,18 +17684,13 @@
           "date": "2026-09-28",
           "hours": 5.25,
           "deficit": 2.8
-        },
-        {
-          "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
         }
       ],
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 3,
-      "kpi_wildcard_count": 287,
+      "kpi_wildcard_count": 298,
       "unverified_count": 0,
-      "kpi_issues_count": 290,
+      "kpi_issues_count": 301,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -17853,10 +17802,10 @@
         "2026-08-06"
       ],
       "total_tasks": 342,
-      "completed_tasks": 338,
-      "completion_rate": 98.83040935672514,
+      "completed_tasks": 340,
+      "completion_rate": 99.41520467836257,
       "time_score": 0.0,
-      "work_score": 75.7,
+      "work_score": 75.9,
       "declared_hours": 466.8,
       "expected_hours": 496.0,
       "deficit_hours": 29.2,
@@ -17908,8 +17857,8 @@
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 22,
       "kpi_wildcard_count": 316,
-      "unverified_count": 2,
-      "kpi_issues_count": 340,
+      "unverified_count": 0,
+      "kpi_issues_count": 338,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -17920,28 +17869,12 @@
           "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
         },
         {
-          "type": "UNVERIFIED_WORKLANE",
-          "date": "2026-07-01",
-          "task": "giảng dạy thực hành lớp CNTT1 SS6",
-          "hours": 2.25,
-          "std_hours": 0.5,
-          "detail": "Khai báo 100% nhưng ticket Worklane chưa DONE"
-        },
-        {
           "type": "OUT_OF_MASTER",
           "date": "2026-07-01",
           "task": "giảng dạy thực hành lớp CNTT5 SS6",
           "hours": 2.25,
           "std_hours": 0.5,
           "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
-        },
-        {
-          "type": "UNVERIFIED_WORKLANE",
-          "date": "2026-07-01",
-          "task": "giảng dạy thực hành lớp CNTT5 SS6",
-          "hours": 2.25,
-          "std_hours": 0.5,
-          "detail": "Khai báo 100% nhưng ticket Worklane chưa DONE"
         },
         {
           "type": "OUT_OF_MASTER",
@@ -17990,6 +17923,22 @@
           "hours": 2.25,
           "std_hours": 0.5,
           "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
+        },
+        {
+          "type": "OUT_OF_MASTER",
+          "date": "2026-07-03",
+          "task": "chấm bài và record ss7 lớp CNTT1 Và lớp CNTT5",
+          "hours": 1.0,
+          "std_hours": 0.5,
+          "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+        },
+        {
+          "type": "OUT_OF_MASTER",
+          "date": "2026-07-03",
+          "task": "chấm bài và record ss6 lớp CNTT2",
+          "hours": 0.5,
+          "std_hours": 0.5,
+          "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
         }
       ],
       "time_violations": [
@@ -18001,14 +17950,12 @@
       ],
       "warning_flags": [
         "Task 'giảng dạy thực hành lớp CNTT1 SS6' chưa định dạng (gán tạm 30 phút)",
-        "UNVERIFIED: Task 'giảng dạy thực hành lớp CNTT1 SS6' khai báo xong nhưng trên Worklane chưa DONE.",
         "Task 'giảng dạy thực hành lớp CNTT5 SS6' chưa định dạng (gán tạm 30 phút)",
-        "UNVERIFIED: Task 'giảng dạy thực hành lớp CNTT5 SS6' khai báo xong nhưng trên Worklane chưa DONE.",
-        "Task 'CHẤM BÀI TẬP SS4 SS5 LỚP CNTT1' chưa định dạng (gán tạm 30 phút)"
+        "Task 'CHẤM BÀI TẬP SS4 SS5 LỚP CNTT1' chưa định dạng (gán tạm 30 phút)",
+        "Task 'CHẤM BÀI TẬP SS3 LỚP CNTT2' chưa định dạng (gán tạm 30 phút)",
+        "Task 'CHẤM BÀI TẬP LỚP CNTT5 SS5' chưa định dạng (gán tạm 30 phút)"
       ],
       "uncompleted_tasks": [
-        "giảng dạy thực hành lớp CNTT1 SS6 (UNVERIFIED)",
-        "giảng dạy thực hành lớp CNTT5 SS6 (UNVERIFIED)",
         "chuẩn bị cho môn k26( lesson 1) quizz + bài đọc+ câu hỏi tự luận (0%)",
         "Chấm bài lớp CNTT1 2 5 (0%)"
       ]
@@ -18231,7 +18178,7 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 50,
+      "reported_days": 51,
       "missing_days": [
         "2026-07-01",
         "2026-07-03",
@@ -18243,20 +18190,19 @@
         "2026-08-19",
         "2026-08-28",
         "2026-09-07",
-        "2026-09-14",
-        "2026-09-29"
+        "2026-09-14"
       ],
-      "total_tasks": 452,
-      "completed_tasks": 452,
+      "total_tasks": 475,
+      "completed_tasks": 475,
       "completion_rate": 100.0,
       "time_score": 0.0,
-      "work_score": 72.3,
-      "declared_hours": 368.0,
+      "work_score": 72.9,
+      "declared_hours": 376.0,
       "expected_hours": 496.0,
-      "deficit_hours": 128.0,
-      "capacity_pct": 74.2,
-      "avg_hours_per_day": 5.94,
-      "under_8h_days_count": 36,
+      "deficit_hours": 120.0,
+      "capacity_pct": 75.8,
+      "avg_hours_per_day": 6.06,
+      "under_8h_days_count": 35,
       "under_8h_details": [
         {
           "date": "2026-07-01",
@@ -18432,18 +18378,13 @@
           "date": "2026-09-21",
           "hours": 7.0,
           "deficit": 1.0
-        },
-        {
-          "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
         }
       ],
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 26,
-      "kpi_wildcard_count": 203,
+      "kpi_wildcard_count": 204,
       "unverified_count": 0,
-      "kpi_issues_count": 229,
+      "kpi_issues_count": 230,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -18547,7 +18488,7 @@
       "group": "Khối CNTT",
       "role": "Giảng viên",
       "rank": "3",
-      "reported_days": 40,
+      "reported_days": 41,
       "missing_days": [
         "2026-07-01",
         "2026-07-02",
@@ -18569,19 +18510,18 @@
         "2026-08-21",
         "2026-08-28",
         "2026-09-09",
-        "2026-09-14",
-        "2026-09-29"
+        "2026-09-14"
       ],
-      "total_tasks": 223,
-      "completed_tasks": 221,
-      "completion_rate": 99.10313901345292,
+      "total_tasks": 232,
+      "completed_tasks": 230,
+      "completion_rate": 99.13793103448276,
       "time_score": 55.0,
-      "work_score": 76.4,
-      "declared_hours": 282.8,
+      "work_score": 77.1,
+      "declared_hours": 289.8,
       "expected_hours": 496.0,
-      "deficit_hours": 213.2,
-      "capacity_pct": 57.0,
-      "avg_hours_per_day": 4.56,
+      "deficit_hours": 206.2,
+      "capacity_pct": 58.4,
+      "avg_hours_per_day": 4.67,
       "under_8h_days_count": 50,
       "under_8h_details": [
         {
@@ -18831,15 +18771,15 @@
         },
         {
           "date": "2026-09-29",
-          "hours": 0.0,
-          "deficit": 8.0
+          "hours": 7.0,
+          "deficit": 1.0
         }
       ],
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 12,
-      "kpi_wildcard_count": 204,
+      "kpi_wildcard_count": 212,
       "unverified_count": 0,
-      "kpi_issues_count": 216,
+      "kpi_issues_count": 224,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -20182,10 +20122,10 @@
         "2026-09-29"
       ],
       "total_tasks": 286,
-      "completed_tasks": 281,
-      "completion_rate": 98.25174825174825,
+      "completed_tasks": 282,
+      "completion_rate": 98.6013986013986,
       "time_score": 60.0,
-      "work_score": 88.7,
+      "work_score": 88.9,
       "declared_hours": 461.2,
       "expected_hours": 496.0,
       "deficit_hours": 34.8,
@@ -20232,8 +20172,8 @@
       "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
       "kpi_over_report_count": 8,
       "kpi_wildcard_count": 274,
-      "unverified_count": 1,
-      "kpi_issues_count": 283,
+      "unverified_count": 0,
+      "kpi_issues_count": 282,
       "kpi_issues_detail": [
         {
           "type": "OUT_OF_MASTER",
@@ -20334,8 +20274,7 @@
         "Review khảo thí bộ môn tiếng Anh (0%)",
         "Họp sản xuất tài nguyên học tập (0%)",
         "nghi om (0%)",
-        "Ra đề thi nói cuối kỳ (0%)",
-        "PTITORIE-4 Tạo bộ câu hỏi cho quiz văn hóa Nhật Bản (UNVERIFIED)"
+        "Ra đề thi nói cuối kỳ (0%)"
       ]
     },
     "lò thị ngọc anh": {
@@ -22217,9 +22156,9 @@
     }
   },
   "weekly_summary": {
-    "overall_rate": 72.9,
+    "overall_rate": 74.8,
     "total_expected": 210,
-    "total_completed": 153,
+    "total_completed": 157,
     "groups": {
       "Khối QTKD": {
         "expected": 50,
@@ -22228,8 +22167,8 @@
       },
       "Khối CNTT": {
         "expected": 110,
-        "completed": 78,
-        "rate": 70.9
+        "completed": 82,
+        "rate": 74.5
       },
       "Khối Ngoại ngữ và kỹ năng mềm": {
         "expected": 35,
@@ -22244,9 +22183,9 @@
     }
   },
   "september_summary": {
-    "overall_rate": 79.5,
+    "overall_rate": 80.0,
     "total_expected": 776,
-    "total_completed": 617,
+    "total_completed": 621,
     "groups": {
       "Khối QTKD": {
         "expected": 190,
@@ -22255,8 +22194,8 @@
       },
       "Khối CNTT": {
         "expected": 418,
-        "completed": 323,
-        "rate": 77.3
+        "completed": 327,
+        "rate": 78.2
       },
       "Khối Ngoại ngữ và kỹ năng mềm": {
         "expected": 111,
@@ -22271,9 +22210,9 @@
     }
   },
   "monthly_summary": {
-    "overall_rate": 79.5,
+    "overall_rate": 79.7,
     "total_expected": 2449,
-    "total_completed": 1948,
+    "total_completed": 1952,
     "groups": {
       "Khối QTKD": {
         "expected": 618,
@@ -22282,8 +22221,8 @@
       },
       "Khối CNTT": {
         "expected": 1363,
-        "completed": 1009,
-        "rate": 74.0
+        "completed": 1013,
+        "rate": 74.3
       },
       "Khối Ngoại ngữ và kỹ năng mềm": {
         "expected": 283,
@@ -22313,8 +22252,8 @@
         "Khối CNTT": {
           "total_staff": 22,
           "under_staff": 22,
-          "total_deficit": 920.0,
-          "total_hours": 2430.0
+          "total_deficit": 886.5999999999999,
+          "total_hours": 2463.4
         },
         "Khối Ngoại ngữ và kỹ năng mềm": {
           "total_staff": 7,
@@ -23150,12 +23089,12 @@
           "role": "Giảng viên",
           "rank": "4",
           "expected_hours": 152.0,
-          "declared_hours": 103.8,
-          "deficit_hours": 48.2,
-          "capacity_pct": 68.3,
-          "avg_hours_per_day": 5.46,
-          "under_8h_days_count": 16,
-          "missing_days_count": 3,
+          "declared_hours": 112.2,
+          "deficit_hours": 39.8,
+          "capacity_pct": 73.8,
+          "avg_hours_per_day": 5.91,
+          "under_8h_days_count": 15,
+          "missing_days_count": 2,
           "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
           "under_8h_details": [
             {
@@ -23232,173 +23171,6 @@
               "date": "2026-09-28",
               "hours": 5.25,
               "deficit": 2.8
-            },
-            {
-              "date": "2026-09-29",
-              "hours": 0.0,
-              "deficit": 8.0
-            }
-          ]
-        },
-        {
-          "name": "Lưu Hoàng Xuân Nguyên",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "expected_hours": 152.0,
-          "declared_hours": 107.8,
-          "deficit_hours": 44.2,
-          "capacity_pct": 70.9,
-          "avg_hours_per_day": 5.67,
-          "under_8h_days_count": 15,
-          "missing_days_count": 3,
-          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-          "under_8h_details": [
-            {
-              "date": "2026-09-04",
-              "hours": 6.0,
-              "deficit": 2.0
-            },
-            {
-              "date": "2026-09-07",
-              "hours": 5.0,
-              "deficit": 3.0
-            },
-            {
-              "date": "2026-09-08",
-              "hours": 5.25,
-              "deficit": 2.8
-            },
-            {
-              "date": "2026-09-09",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-10",
-              "hours": 5.5,
-              "deficit": 2.5
-            },
-            {
-              "date": "2026-09-11",
-              "hours": 5.5,
-              "deficit": 2.5
-            },
-            {
-              "date": "2026-09-14",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-15",
-              "hours": 7.25,
-              "deficit": 0.8
-            },
-            {
-              "date": "2026-09-16",
-              "hours": 6.75,
-              "deficit": 1.2
-            },
-            {
-              "date": "2026-09-18",
-              "hours": 7.5,
-              "deficit": 0.5
-            },
-            {
-              "date": "2026-09-22",
-              "hours": 7.5,
-              "deficit": 0.5
-            },
-            {
-              "date": "2026-09-23",
-              "hours": 7.5,
-              "deficit": 0.5
-            },
-            {
-              "date": "2026-09-24",
-              "hours": 7.0,
-              "deficit": 1.0
-            },
-            {
-              "date": "2026-09-25",
-              "hours": 5.0,
-              "deficit": 3.0
-            },
-            {
-              "date": "2026-09-29",
-              "hours": 0.0,
-              "deficit": 8.0
-            }
-          ]
-        },
-        {
-          "name": "Lê Hà Thanh Sang",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "expected_hours": 152.0,
-          "declared_hours": 112.5,
-          "deficit_hours": 39.5,
-          "capacity_pct": 74.0,
-          "avg_hours_per_day": 5.92,
-          "under_8h_days_count": 11,
-          "missing_days_count": 3,
-          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-          "under_8h_details": [
-            {
-              "date": "2026-09-03",
-              "hours": 7.0,
-              "deficit": 1.0
-            },
-            {
-              "date": "2026-09-04",
-              "hours": 6.5,
-              "deficit": 1.5
-            },
-            {
-              "date": "2026-09-07",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-08",
-              "hours": 6.25,
-              "deficit": 1.8
-            },
-            {
-              "date": "2026-09-10",
-              "hours": 1.5,
-              "deficit": 6.5
-            },
-            {
-              "date": "2026-09-11",
-              "hours": 6.5,
-              "deficit": 1.5
-            },
-            {
-              "date": "2026-09-14",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-15",
-              "hours": 5.25,
-              "deficit": 2.8
-            },
-            {
-              "date": "2026-09-16",
-              "hours": 7.25,
-              "deficit": 0.8
-            },
-            {
-              "date": "2026-09-21",
-              "hours": 7.0,
-              "deficit": 1.0
-            },
-            {
-              "date": "2026-09-29",
-              "hours": 0.0,
-              "deficit": 8.0
             }
           ]
         },
@@ -23585,6 +23357,97 @@
           ]
         },
         {
+          "name": "Lưu Hoàng Xuân Nguyên",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "expected_hours": 152.0,
+          "declared_hours": 114.8,
+          "deficit_hours": 37.2,
+          "capacity_pct": 75.5,
+          "avg_hours_per_day": 6.04,
+          "under_8h_days_count": 15,
+          "missing_days_count": 2,
+          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
+          "under_8h_details": [
+            {
+              "date": "2026-09-04",
+              "hours": 6.0,
+              "deficit": 2.0
+            },
+            {
+              "date": "2026-09-07",
+              "hours": 5.0,
+              "deficit": 3.0
+            },
+            {
+              "date": "2026-09-08",
+              "hours": 5.25,
+              "deficit": 2.8
+            },
+            {
+              "date": "2026-09-09",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-10",
+              "hours": 5.5,
+              "deficit": 2.5
+            },
+            {
+              "date": "2026-09-11",
+              "hours": 5.5,
+              "deficit": 2.5
+            },
+            {
+              "date": "2026-09-14",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-15",
+              "hours": 7.25,
+              "deficit": 0.8
+            },
+            {
+              "date": "2026-09-16",
+              "hours": 6.75,
+              "deficit": 1.2
+            },
+            {
+              "date": "2026-09-18",
+              "hours": 7.5,
+              "deficit": 0.5
+            },
+            {
+              "date": "2026-09-22",
+              "hours": 7.5,
+              "deficit": 0.5
+            },
+            {
+              "date": "2026-09-23",
+              "hours": 7.5,
+              "deficit": 0.5
+            },
+            {
+              "date": "2026-09-24",
+              "hours": 7.0,
+              "deficit": 1.0
+            },
+            {
+              "date": "2026-09-25",
+              "hours": 5.0,
+              "deficit": 3.0
+            },
+            {
+              "date": "2026-09-29",
+              "hours": 7.0,
+              "deficit": 1.0
+            }
+          ]
+        },
+        {
           "name": "Phạm Ngọc Kiên",
           "group": "Khối CNTT",
           "role": "Giảng viên",
@@ -23641,28 +23504,48 @@
           ]
         },
         {
-          "name": "Ngọ Văn Quý",
+          "name": "Lê Hà Thanh Sang",
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
           "expected_hours": 152.0,
-          "declared_hours": 122.5,
-          "deficit_hours": 29.5,
-          "capacity_pct": 80.6,
-          "avg_hours_per_day": 6.45,
-          "under_8h_days_count": 7,
-          "missing_days_count": 7,
+          "declared_hours": 120.5,
+          "deficit_hours": 31.5,
+          "capacity_pct": 79.3,
+          "avg_hours_per_day": 6.34,
+          "under_8h_days_count": 10,
+          "missing_days_count": 2,
           "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
           "under_8h_details": [
             {
+              "date": "2026-09-03",
+              "hours": 7.0,
+              "deficit": 1.0
+            },
+            {
               "date": "2026-09-04",
+              "hours": 6.5,
+              "deficit": 1.5
+            },
+            {
+              "date": "2026-09-07",
               "hours": 0.0,
               "deficit": 8.0
             },
             {
+              "date": "2026-09-08",
+              "hours": 6.25,
+              "deficit": 1.8
+            },
+            {
+              "date": "2026-09-10",
+              "hours": 1.5,
+              "deficit": 6.5
+            },
+            {
               "date": "2026-09-11",
-              "hours": 0.0,
-              "deficit": 8.0
+              "hours": 6.5,
+              "deficit": 1.5
             },
             {
               "date": "2026-09-14",
@@ -23670,24 +23553,19 @@
               "deficit": 8.0
             },
             {
-              "date": "2026-09-17",
-              "hours": 0.0,
-              "deficit": 8.0
+              "date": "2026-09-15",
+              "hours": 5.25,
+              "deficit": 2.8
             },
             {
-              "date": "2026-09-23",
-              "hours": 0.0,
-              "deficit": 8.0
+              "date": "2026-09-16",
+              "hours": 7.25,
+              "deficit": 0.8
             },
             {
-              "date": "2026-09-25",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-29",
-              "hours": 0.0,
-              "deficit": 8.0
+              "date": "2026-09-21",
+              "hours": 7.0,
+              "deficit": 1.0
             }
           ]
         },
@@ -23979,6 +23857,52 @@
               "date": "2026-09-28",
               "hours": 7.25,
               "deficit": 0.8
+            }
+          ]
+        },
+        {
+          "name": "Ngọ Văn Quý",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "expected_hours": 152.0,
+          "declared_hours": 132.5,
+          "deficit_hours": 19.5,
+          "capacity_pct": 87.2,
+          "avg_hours_per_day": 6.97,
+          "under_8h_days_count": 6,
+          "missing_days_count": 6,
+          "severity": "Cảnh báo (Thiếu 8h-20h hoặc công suất 75-90%)",
+          "under_8h_details": [
+            {
+              "date": "2026-09-04",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-11",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-14",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-17",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-23",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-25",
+              "hours": 0.0,
+              "deficit": 8.0
             }
           ]
         },
@@ -24573,7 +24497,7 @@
       "period": "5 ngày gần nhất (15/09 - 21/09/2026)",
       "expected_days": 5,
       "total_staff": 42,
-      "under_staff_count": 26,
+      "under_staff_count": 25,
       "by_block": {
         "Khối QTKD": {
           "total_staff": 10,
@@ -24583,9 +24507,9 @@
         },
         "Khối CNTT": {
           "total_staff": 22,
-          "under_staff": 17,
-          "total_deficit": 297.5,
-          "total_hours": 591.7
+          "under_staff": 16,
+          "total_deficit": 264.0,
+          "total_hours": 625.2
         },
         "Khối Ngoại ngữ và kỹ năng mềm": {
           "total_staff": 7,
@@ -24971,37 +24895,6 @@
           ]
         },
         {
-          "name": "Ngọ Văn Quý",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "expected_hours": 40.0,
-          "declared_hours": 18.5,
-          "deficit_hours": 21.5,
-          "capacity_pct": 46.2,
-          "avg_hours_per_day": 3.7,
-          "under_8h_days_count": 3,
-          "missing_days_count": 3,
-          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-          "under_8h_details": [
-            {
-              "date": "2026-09-23",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-25",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-29",
-              "hours": 0.0,
-              "deficit": 8.0
-            }
-          ]
-        },
-        {
           "name": "Phạm Tuấn Bình",
           "group": "Khối CNTT",
           "role": "Giảng viên",
@@ -25022,47 +24915,6 @@
             },
             {
               "date": "2026-09-25",
-              "hours": 0.0,
-              "deficit": 8.0
-            }
-          ]
-        },
-        {
-          "name": "Nguyễn Xuân Bách",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "4",
-          "expected_hours": 40.0,
-          "declared_hours": 24.0,
-          "deficit_hours": 16.0,
-          "capacity_pct": 60.0,
-          "avg_hours_per_day": 4.8,
-          "under_8h_days_count": 5,
-          "missing_days_count": 1,
-          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-          "under_8h_details": [
-            {
-              "date": "2026-09-23",
-              "hours": 7.75,
-              "deficit": 0.2
-            },
-            {
-              "date": "2026-09-24",
-              "hours": 5.5,
-              "deficit": 2.5
-            },
-            {
-              "date": "2026-09-25",
-              "hours": 5.5,
-              "deficit": 2.5
-            },
-            {
-              "date": "2026-09-28",
-              "hours": 5.25,
-              "deficit": 2.8
-            },
-            {
-              "date": "2026-09-29",
               "hours": 0.0,
               "deficit": 8.0
             }
@@ -25095,36 +24947,26 @@
           ]
         },
         {
-          "name": "Lưu Hoàng Xuân Nguyên",
+          "name": "Ngọ Văn Quý",
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
           "expected_hours": 40.0,
-          "declared_hours": 27.5,
-          "deficit_hours": 12.5,
-          "capacity_pct": 68.8,
-          "avg_hours_per_day": 5.5,
-          "under_8h_days_count": 4,
-          "missing_days_count": 1,
+          "declared_hours": 28.5,
+          "deficit_hours": 11.5,
+          "capacity_pct": 71.2,
+          "avg_hours_per_day": 5.7,
+          "under_8h_days_count": 2,
+          "missing_days_count": 2,
           "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
           "under_8h_details": [
             {
               "date": "2026-09-23",
-              "hours": 7.5,
-              "deficit": 0.5
-            },
-            {
-              "date": "2026-09-24",
-              "hours": 7.0,
-              "deficit": 1.0
+              "hours": 0.0,
+              "deficit": 8.0
             },
             {
               "date": "2026-09-25",
-              "hours": 5.0,
-              "deficit": 3.0
-            },
-            {
-              "date": "2026-09-29",
               "hours": 0.0,
               "deficit": 8.0
             }
@@ -25193,27 +25035,6 @@
           "under_8h_details": [
             {
               "date": "2026-09-23",
-              "hours": 0.0,
-              "deficit": 8.0
-            }
-          ]
-        },
-        {
-          "name": "Lê Hà Thanh Sang",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "expected_hours": 40.0,
-          "declared_hours": 32.0,
-          "deficit_hours": 8.0,
-          "capacity_pct": 80.0,
-          "avg_hours_per_day": 6.4,
-          "under_8h_days_count": 1,
-          "missing_days_count": 1,
-          "severity": "Cảnh báo (Thiếu 8h-20h hoặc công suất 75-90%)",
-          "under_8h_details": [
-            {
-              "date": "2026-09-29",
               "hours": 0.0,
               "deficit": 8.0
             }
@@ -25298,6 +25119,42 @@
           ]
         },
         {
+          "name": "Nguyễn Xuân Bách",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "4",
+          "expected_hours": 40.0,
+          "declared_hours": 32.5,
+          "deficit_hours": 7.5,
+          "capacity_pct": 81.2,
+          "avg_hours_per_day": 6.5,
+          "under_8h_days_count": 4,
+          "missing_days_count": 0,
+          "severity": "Cảnh báo (Thiếu 8h-20h hoặc công suất 75-90%)",
+          "under_8h_details": [
+            {
+              "date": "2026-09-23",
+              "hours": 7.75,
+              "deficit": 0.2
+            },
+            {
+              "date": "2026-09-24",
+              "hours": 5.5,
+              "deficit": 2.5
+            },
+            {
+              "date": "2026-09-25",
+              "hours": 5.5,
+              "deficit": 2.5
+            },
+            {
+              "date": "2026-09-28",
+              "hours": 5.25,
+              "deficit": 2.8
+            }
+          ]
+        },
+        {
           "name": "Trần Quốc Tuấn",
           "group": "Khối CNTT",
           "role": "Giảng viên",
@@ -25330,6 +25187,42 @@
               "date": "2026-09-28",
               "hours": 7.0,
               "deficit": 1.0
+            },
+            {
+              "date": "2026-09-29",
+              "hours": 7.0,
+              "deficit": 1.0
+            }
+          ]
+        },
+        {
+          "name": "Lưu Hoàng Xuân Nguyên",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "expected_hours": 40.0,
+          "declared_hours": 34.5,
+          "deficit_hours": 5.5,
+          "capacity_pct": 86.2,
+          "avg_hours_per_day": 6.9,
+          "under_8h_days_count": 4,
+          "missing_days_count": 0,
+          "severity": "Cảnh báo (Thiếu 8h-20h hoặc công suất 75-90%)",
+          "under_8h_details": [
+            {
+              "date": "2026-09-23",
+              "hours": 7.5,
+              "deficit": 0.5
+            },
+            {
+              "date": "2026-09-24",
+              "hours": 7.0,
+              "deficit": 1.0
+            },
+            {
+              "date": "2026-09-25",
+              "hours": 5.0,
+              "deficit": 3.0
             },
             {
               "date": "2026-09-29",
@@ -25474,6 +25367,21 @@
         },
         {
           "name": "Lại Trung Lâm",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "expected_hours": 40.0,
+          "declared_hours": 40.0,
+          "deficit_hours": 0.0,
+          "capacity_pct": 100.0,
+          "avg_hours_per_day": 8.0,
+          "under_8h_days_count": 0,
+          "missing_days_count": 0,
+          "severity": "Đạt chuẩn",
+          "under_8h_details": []
+        },
+        {
+          "name": "Lê Hà Thanh Sang",
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
@@ -25701,8 +25609,8 @@
         "Khối CNTT": {
           "total_staff": 22,
           "under_staff": 22,
-          "total_deficit": 3099.399999999999,
-          "total_hours": 7804.6
+          "total_deficit": 3065.799999999999,
+          "total_hours": 7838.200000000001
         },
         "Khối Ngoại ngữ và kỹ năng mềm": {
           "total_staff": 7,
@@ -26833,17 +26741,178 @@
           ]
         },
         {
+          "name": "Lê Thành Ngọc",
+          "group": "Khối QTKD",
+          "role": "Giảng viên",
+          "rank": "3",
+          "expected_hours": 496.0,
+          "declared_hours": 283.0,
+          "deficit_hours": 213.0,
+          "capacity_pct": 57.1,
+          "avg_hours_per_day": 4.56,
+          "under_8h_days_count": 29,
+          "missing_days_count": 26,
+          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
+          "under_8h_details": [
+            {
+              "date": "2026-07-01",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-02",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-03",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-06",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-07",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-08",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-10",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-13",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-17",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-21",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-28",
+              "hours": 7.5,
+              "deficit": 0.5
+            },
+            {
+              "date": "2026-07-29",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-30",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-03",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-04",
+              "hours": 7.5,
+              "deficit": 0.5
+            },
+            {
+              "date": "2026-08-05",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-06",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-07",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-13",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-18",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-19",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-26",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-09",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-10",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-15",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-16",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-17",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-18",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-24",
+              "hours": 0.0,
+              "deficit": 8.0
+            }
+          ]
+        },
+        {
           "name": "Lưu Hoàng Xuân Nguyên",
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
           "expected_hours": 496.0,
-          "declared_hours": 282.8,
-          "deficit_hours": 213.2,
-          "capacity_pct": 57.0,
-          "avg_hours_per_day": 4.56,
+          "declared_hours": 289.8,
+          "deficit_hours": 206.2,
+          "capacity_pct": 58.4,
+          "avg_hours_per_day": 4.67,
           "under_8h_days_count": 50,
-          "missing_days_count": 22,
+          "missing_days_count": 21,
           "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
           "under_8h_details": [
             {
@@ -27093,169 +27162,8 @@
             },
             {
               "date": "2026-09-29",
-              "hours": 0.0,
-              "deficit": 8.0
-            }
-          ]
-        },
-        {
-          "name": "Lê Thành Ngọc",
-          "group": "Khối QTKD",
-          "role": "Giảng viên",
-          "rank": "3",
-          "expected_hours": 496.0,
-          "declared_hours": 283.0,
-          "deficit_hours": 213.0,
-          "capacity_pct": 57.1,
-          "avg_hours_per_day": 4.56,
-          "under_8h_days_count": 29,
-          "missing_days_count": 26,
-          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-          "under_8h_details": [
-            {
-              "date": "2026-07-01",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-02",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-03",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-06",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-07",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-08",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-10",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-13",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-17",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-21",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-28",
-              "hours": 7.5,
-              "deficit": 0.5
-            },
-            {
-              "date": "2026-07-29",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-30",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-03",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-04",
-              "hours": 7.5,
-              "deficit": 0.5
-            },
-            {
-              "date": "2026-08-05",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-06",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-07",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-13",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-18",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-19",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-26",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-09",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-10",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-15",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-16",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-17",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-18",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-24",
-              "hours": 0.0,
-              "deficit": 8.0
+              "hours": 7.0,
+              "deficit": 1.0
             }
           ]
         },
@@ -27486,132 +27394,6 @@
             },
             {
               "date": "2026-09-18",
-              "hours": 0.0,
-              "deficit": 8.0
-            }
-          ]
-        },
-        {
-          "name": "Ngọ Văn Quý",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "expected_hours": 496.0,
-          "declared_hours": 363.0,
-          "deficit_hours": 133.0,
-          "capacity_pct": 73.2,
-          "avg_hours_per_day": 5.85,
-          "under_8h_days_count": 22,
-          "missing_days_count": 22,
-          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-          "under_8h_details": [
-            {
-              "date": "2026-07-01",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-02",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-03",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-06",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-07",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-08",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-09",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-10",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-14",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-17",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-22",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-23",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-24",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-27",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-14",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-04",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-11",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-14",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-17",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-23",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-25",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-29",
               "hours": 0.0,
               "deficit": 8.0
             }
@@ -27849,17 +27631,279 @@
           ]
         },
         {
+          "name": "Ngọ Văn Quý",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "expected_hours": 496.0,
+          "declared_hours": 373.0,
+          "deficit_hours": 123.0,
+          "capacity_pct": 75.2,
+          "avg_hours_per_day": 6.02,
+          "under_8h_days_count": 21,
+          "missing_days_count": 21,
+          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
+          "under_8h_details": [
+            {
+              "date": "2026-07-01",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-02",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-03",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-06",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-07",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-08",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-09",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-10",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-14",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-17",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-22",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-23",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-24",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-27",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-14",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-04",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-11",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-14",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-17",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-23",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-25",
+              "hours": 0.0,
+              "deficit": 8.0
+            }
+          ]
+        },
+        {
+          "name": "Đinh Thành Nam",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "expected_hours": 496.0,
+          "declared_hours": 375.5,
+          "deficit_hours": 120.5,
+          "capacity_pct": 75.7,
+          "avg_hours_per_day": 6.06,
+          "under_8h_days_count": 25,
+          "missing_days_count": 15,
+          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
+          "under_8h_details": [
+            {
+              "date": "2026-07-02",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-07",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-08",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-22",
+              "hours": 7.0,
+              "deficit": 1.0
+            },
+            {
+              "date": "2026-07-29",
+              "hours": 7.0,
+              "deficit": 1.0
+            },
+            {
+              "date": "2026-07-31",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-06",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-13",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-18",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-20",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-21",
+              "hours": 4.0,
+              "deficit": 4.0
+            },
+            {
+              "date": "2026-08-24",
+              "hours": 7.5,
+              "deficit": 0.5
+            },
+            {
+              "date": "2026-09-08",
+              "hours": 6.0,
+              "deficit": 2.0
+            },
+            {
+              "date": "2026-09-10",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-14",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-16",
+              "hours": 6.0,
+              "deficit": 2.0
+            },
+            {
+              "date": "2026-09-17",
+              "hours": 6.0,
+              "deficit": 2.0
+            },
+            {
+              "date": "2026-09-18",
+              "hours": 6.0,
+              "deficit": 2.0
+            },
+            {
+              "date": "2026-09-21",
+              "hours": 7.0,
+              "deficit": 1.0
+            },
+            {
+              "date": "2026-09-22",
+              "hours": 6.0,
+              "deficit": 2.0
+            },
+            {
+              "date": "2026-09-23",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-24",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-25",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-28",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-29",
+              "hours": 0.0,
+              "deficit": 8.0
+            }
+          ]
+        },
+        {
           "name": "Lê Hà Thanh Sang",
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
           "expected_hours": 496.0,
-          "declared_hours": 368.0,
-          "deficit_hours": 128.0,
-          "capacity_pct": 74.2,
-          "avg_hours_per_day": 5.94,
-          "under_8h_days_count": 36,
-          "missing_days_count": 12,
+          "declared_hours": 376.0,
+          "deficit_hours": 120.0,
+          "capacity_pct": 75.8,
+          "avg_hours_per_day": 6.06,
+          "under_8h_days_count": 35,
+          "missing_days_count": 11,
           "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
           "under_8h_details": [
             {
@@ -28036,152 +28080,6 @@
               "date": "2026-09-21",
               "hours": 7.0,
               "deficit": 1.0
-            },
-            {
-              "date": "2026-09-29",
-              "hours": 0.0,
-              "deficit": 8.0
-            }
-          ]
-        },
-        {
-          "name": "Đinh Thành Nam",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "expected_hours": 496.0,
-          "declared_hours": 375.5,
-          "deficit_hours": 120.5,
-          "capacity_pct": 75.7,
-          "avg_hours_per_day": 6.06,
-          "under_8h_days_count": 25,
-          "missing_days_count": 15,
-          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-          "under_8h_details": [
-            {
-              "date": "2026-07-02",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-07",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-08",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-22",
-              "hours": 7.0,
-              "deficit": 1.0
-            },
-            {
-              "date": "2026-07-29",
-              "hours": 7.0,
-              "deficit": 1.0
-            },
-            {
-              "date": "2026-07-31",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-06",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-13",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-18",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-20",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-21",
-              "hours": 4.0,
-              "deficit": 4.0
-            },
-            {
-              "date": "2026-08-24",
-              "hours": 7.5,
-              "deficit": 0.5
-            },
-            {
-              "date": "2026-09-08",
-              "hours": 6.0,
-              "deficit": 2.0
-            },
-            {
-              "date": "2026-09-10",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-14",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-16",
-              "hours": 6.0,
-              "deficit": 2.0
-            },
-            {
-              "date": "2026-09-17",
-              "hours": 6.0,
-              "deficit": 2.0
-            },
-            {
-              "date": "2026-09-18",
-              "hours": 6.0,
-              "deficit": 2.0
-            },
-            {
-              "date": "2026-09-21",
-              "hours": 7.0,
-              "deficit": 1.0
-            },
-            {
-              "date": "2026-09-22",
-              "hours": 6.0,
-              "deficit": 2.0
-            },
-            {
-              "date": "2026-09-23",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-24",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-25",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-28",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-29",
-              "hours": 0.0,
-              "deficit": 8.0
             }
           ]
         },
@@ -28870,17 +28768,128 @@
           ]
         },
         {
+          "name": "Mai Xuân Chinh",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "expected_hours": 496.0,
+          "declared_hours": 399.8,
+          "deficit_hours": 96.2,
+          "capacity_pct": 80.6,
+          "avg_hours_per_day": 6.45,
+          "under_8h_days_count": 19,
+          "missing_days_count": 11,
+          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
+          "under_8h_details": [
+            {
+              "date": "2026-07-01",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-02",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-06",
+              "hours": 7.25,
+              "deficit": 0.8
+            },
+            {
+              "date": "2026-07-07",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-09",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-15",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-23",
+              "hours": 6.0,
+              "deficit": 2.0
+            },
+            {
+              "date": "2026-07-27",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-07-30",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-06",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-07",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-13",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-08-27",
+              "hours": 4.0,
+              "deficit": 4.0
+            },
+            {
+              "date": "2026-09-10",
+              "hours": 7.0,
+              "deficit": 1.0
+            },
+            {
+              "date": "2026-09-11",
+              "hours": 7.0,
+              "deficit": 1.0
+            },
+            {
+              "date": "2026-09-15",
+              "hours": 6.0,
+              "deficit": 2.0
+            },
+            {
+              "date": "2026-09-17",
+              "hours": 6.0,
+              "deficit": 2.0
+            },
+            {
+              "date": "2026-09-18",
+              "hours": 0.0,
+              "deficit": 8.0
+            },
+            {
+              "date": "2026-09-24",
+              "hours": 0.0,
+              "deficit": 8.0
+            }
+          ]
+        },
+        {
           "name": "Nguyễn Xuân Bách",
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "4",
           "expected_hours": 496.0,
-          "declared_hours": 391.2,
-          "deficit_hours": 104.8,
-          "capacity_pct": 78.9,
-          "avg_hours_per_day": 6.31,
-          "under_8h_days_count": 40,
-          "missing_days_count": 8,
+          "declared_hours": 399.8,
+          "deficit_hours": 96.2,
+          "capacity_pct": 80.6,
+          "avg_hours_per_day": 6.45,
+          "under_8h_days_count": 39,
+          "missing_days_count": 7,
           "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
           "under_8h_details": [
             {
@@ -29077,122 +29086,6 @@
               "date": "2026-09-28",
               "hours": 5.25,
               "deficit": 2.8
-            },
-            {
-              "date": "2026-09-29",
-              "hours": 0.0,
-              "deficit": 8.0
-            }
-          ]
-        },
-        {
-          "name": "Mai Xuân Chinh",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "expected_hours": 496.0,
-          "declared_hours": 399.8,
-          "deficit_hours": 96.2,
-          "capacity_pct": 80.6,
-          "avg_hours_per_day": 6.45,
-          "under_8h_days_count": 19,
-          "missing_days_count": 11,
-          "severity": "Nghiêm trọng (Thiếu > 20h hoặc công suất < 75%)",
-          "under_8h_details": [
-            {
-              "date": "2026-07-01",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-02",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-06",
-              "hours": 7.25,
-              "deficit": 0.8
-            },
-            {
-              "date": "2026-07-07",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-09",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-15",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-23",
-              "hours": 6.0,
-              "deficit": 2.0
-            },
-            {
-              "date": "2026-07-27",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-07-30",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-06",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-07",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-13",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-08-27",
-              "hours": 4.0,
-              "deficit": 4.0
-            },
-            {
-              "date": "2026-09-10",
-              "hours": 7.0,
-              "deficit": 1.0
-            },
-            {
-              "date": "2026-09-11",
-              "hours": 7.0,
-              "deficit": 1.0
-            },
-            {
-              "date": "2026-09-15",
-              "hours": 6.0,
-              "deficit": 2.0
-            },
-            {
-              "date": "2026-09-17",
-              "hours": 6.0,
-              "deficit": 2.0
-            },
-            {
-              "date": "2026-09-18",
-              "hours": 0.0,
-              "deficit": 8.0
-            },
-            {
-              "date": "2026-09-24",
-              "hours": 0.0,
-              "deficit": 8.0
             }
           ]
         },
@@ -31390,22 +31283,22 @@
       "period": "Tháng 9 (01/09 - 21/09/2026)",
       "by_block": {
         "Khối QTKD": {
-          "total_issues": 757,
+          "total_issues": 755,
           "over_reporting": 56,
           "wildcard": 699,
-          "unverified": 2
+          "unverified": 0
         },
         "Khối CNTT": {
-          "total_issues": 1453,
-          "over_reporting": 114,
-          "wildcard": 1339,
+          "total_issues": 1477,
+          "over_reporting": 116,
+          "wildcard": 1361,
           "unverified": 0
         },
         "Khối Ngoại ngữ và kỹ năng mềm": {
-          "total_issues": 420,
+          "total_issues": 419,
           "over_reporting": 14,
           "wildcard": 405,
-          "unverified": 1
+          "unverified": 0
         },
         "Khối QLCLĐT": {
           "total_issues": 239,
@@ -31600,6 +31493,98 @@
           ]
         },
         {
+          "name": "Nguyễn Xuân Bách",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "4",
+          "total_issues": 112,
+          "over_reporting_count": 0,
+          "wildcard_count": 112,
+          "unverified_count": 0,
+          "sample_issues": [
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Làm báo cáo họp giao ban",
+              "hours": 0.75,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Họp giao ban nội bộ đào tạo",
+              "hours": 2.25,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Phối hợp làm quy trình up môn học lên LMS AI - Cô Tươi",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Báo cáo chỉ số đào tạo",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Phối họp test hệ thống AI Interview - Hiếu Rika",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Tổng hợp chỉ số để làm KPI hiệu suất tháng - Thầy Cường",
+              "hours": 1.25,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.25h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "Báo cáo chỉ số đào tạo",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "Hỗ trợ làm KPI Master khối Ngoại ngữ",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "Trao đổi về KPI tháng 8 với QTKD",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "Cập nhật KPI Master QTKD để tiến hành đo lương hiệu suất",
+              "hours": 0.75,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
+            }
+          ]
+        },
+        {
           "name": "Lò Thị Ngọc Anh",
           "group": "Khối Ngoại ngữ và kỹ năng mềm",
           "role": "Giảng viên",
@@ -31685,98 +31670,6 @@
               "type": "OUT_OF_MASTER",
               "date": "2026-09-04",
               "task": "REXPENGL-114 [RE] DUYỆT CV VÀ LÀM VIỆC VỚI HR VỀ TUYỂN DỤNG (04/09)",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            }
-          ]
-        },
-        {
-          "name": "Nguyễn Thị Như Quỳnh",
-          "group": "Khối QTKD",
-          "role": "Trợ giảng",
-          "rank": "1",
-          "total_issues": 110,
-          "over_reporting_count": 0,
-          "wildcard_count": 109,
-          "unverified_count": 1,
-          "sample_issues": [
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Nghiên cứu và hệ thống hoá kiến thức môn Quản trị học - Chương 3-4-5",
-              "hours": 6.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (6.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Kiểm tra BTVN - QTKD2",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "CSSV - QTKD2",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-04",
-              "task": "CSSV - QTKD2",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-04",
-              "task": "Trao đổi định kỳ - CVHT - QTKD1 & QTKD3",
-              "hours": 3.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-04",
-              "task": "NGHIÊN CỨU VÀ HỆ THỐNG HÓA KIẾN THỨC - QUẢN TRỊ HỌC (C6)",
-              "hours": 4.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (4.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "Nghiên cứu và hệ thống hoá kiến thức môn Quản trị học - Chương 7-8-9 - Tổng kết",
-              "hours": 5.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (5.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "Hoàn thành báo cáo bồi dưỡng môn Quản trị học",
-              "hours": 0.75,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "Rà soát hệ số năng suất Tháng 8",
-              "hours": 0.75,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "Nghiên cứu Bộ tiêu chí đánh giá chất lượng đào tạo mới & KPI master",
               "hours": 1.0,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
@@ -31872,6 +31765,98 @@
               "hours": 3.0,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
+            }
+          ]
+        },
+        {
+          "name": "Nguyễn Thị Như Quỳnh",
+          "group": "Khối QTKD",
+          "role": "Trợ giảng",
+          "rank": "1",
+          "total_issues": 109,
+          "over_reporting_count": 0,
+          "wildcard_count": 109,
+          "unverified_count": 0,
+          "sample_issues": [
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Nghiên cứu và hệ thống hoá kiến thức môn Quản trị học - Chương 3-4-5",
+              "hours": 6.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (6.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Kiểm tra BTVN - QTKD2",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "CSSV - QTKD2",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-04",
+              "task": "CSSV - QTKD2",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-04",
+              "task": "Trao đổi định kỳ - CVHT - QTKD1 & QTKD3",
+              "hours": 3.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-04",
+              "task": "NGHIÊN CỨU VÀ HỆ THỐNG HÓA KIẾN THỨC - QUẢN TRỊ HỌC (C6)",
+              "hours": 4.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (4.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "Nghiên cứu và hệ thống hoá kiến thức môn Quản trị học - Chương 7-8-9 - Tổng kết",
+              "hours": 5.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (5.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "Hoàn thành báo cáo bồi dưỡng môn Quản trị học",
+              "hours": 0.75,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "Rà soát hệ số năng suất Tháng 8",
+              "hours": 0.75,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "Nghiên cứu Bộ tiêu chí đánh giá chất lượng đào tạo mới & KPI master",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
             }
           ]
         },
@@ -32060,98 +32045,6 @@
           ]
         },
         {
-          "name": "Triệu Thị Thanh Tâm",
-          "group": "Khối QTKD",
-          "role": "Trợ giảng",
-          "rank": "1",
-          "total_issues": 103,
-          "over_reporting_count": 0,
-          "wildcard_count": 102,
-          "unverified_count": 1,
-          "sample_issues": [
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Làm biên bản về sự việc thay đổi lớp trưởng của lớp QTKD2",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Check BTVN và chăm sóc sinh viên 2 lớp QTKD1,3",
-              "hours": 2.25,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Công tác CVHT",
-              "hours": 2.25,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Trao đổi cùng cô Ngọc Anh về tình trạng sinh viên phản ánh về môn Tiếng Anh",
-              "hours": 0.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Trao đổi cùng GV về tình hình chuyên cần của lớp",
-              "hours": 0.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Tạo form thu thập thông tin cho sinh viên về sự việc phản ánh môn Tiếng Anh",
-              "hours": 0.75,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Đọc lại tài liệu về CVHT mới nhất",
-              "hours": 0.75,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-04",
-              "task": "Công tác CVHT",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-04",
-              "task": "Trao đổi cùng CTSV về điểm và đăng kí phúc khảo môn PRJ302",
-              "hours": 0.75,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-04",
-              "task": "Trao đổi cùng giảng viên về tình hình cuối môn và sinh viên xuống khoá",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            }
-          ]
-        },
-        {
           "name": "Phạm Viết Hùng",
           "group": "Khối CNTT",
           "role": "Giảng viên",
@@ -32237,6 +32130,98 @@
               "type": "OUT_OF_MASTER",
               "date": "2026-09-04",
               "task": "Kiểm tra bài tập về nhà sinh viên K25 + KS24",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            }
+          ]
+        },
+        {
+          "name": "Triệu Thị Thanh Tâm",
+          "group": "Khối QTKD",
+          "role": "Trợ giảng",
+          "rank": "1",
+          "total_issues": 102,
+          "over_reporting_count": 0,
+          "wildcard_count": 102,
+          "unverified_count": 0,
+          "sample_issues": [
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Làm biên bản về sự việc thay đổi lớp trưởng của lớp QTKD2",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Check BTVN và chăm sóc sinh viên 2 lớp QTKD1,3",
+              "hours": 2.25,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Công tác CVHT",
+              "hours": 2.25,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Trao đổi cùng cô Ngọc Anh về tình trạng sinh viên phản ánh về môn Tiếng Anh",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Trao đổi cùng GV về tình hình chuyên cần của lớp",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Tạo form thu thập thông tin cho sinh viên về sự việc phản ánh môn Tiếng Anh",
+              "hours": 0.75,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Đọc lại tài liệu về CVHT mới nhất",
+              "hours": 0.75,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-04",
+              "task": "Công tác CVHT",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-04",
+              "task": "Trao đổi cùng CTSV về điểm và đăng kí phúc khảo môn PRJ302",
+              "hours": 0.75,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-04",
+              "task": "Trao đổi cùng giảng viên về tình hình cuối môn và sinh viên xuống khoá",
               "hours": 1.0,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
@@ -32336,197 +32321,13 @@
           ]
         },
         {
-          "name": "Nguyễn Xuân Bách",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "4",
-          "total_issues": 101,
-          "over_reporting_count": 0,
-          "wildcard_count": 101,
-          "unverified_count": 0,
-          "sample_issues": [
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Làm báo cáo họp giao ban",
-              "hours": 0.75,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Họp giao ban nội bộ đào tạo",
-              "hours": 2.25,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Phối hợp làm quy trình up môn học lên LMS AI - Cô Tươi",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Báo cáo chỉ số đào tạo",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Phối họp test hệ thống AI Interview - Hiếu Rika",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Tổng hợp chỉ số để làm KPI hiệu suất tháng - Thầy Cường",
-              "hours": 1.25,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.25h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "Báo cáo chỉ số đào tạo",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "Hỗ trợ làm KPI Master khối Ngoại ngữ",
-              "hours": 0.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "Trao đổi về KPI tháng 8 với QTKD",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "Cập nhật KPI Master QTKD để tiến hành đo lương hiệu suất",
-              "hours": 0.75,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
-            }
-          ]
-        },
-        {
-          "name": "Giáp Thị Minh Hằng",
-          "group": "Khối Ngoại ngữ và kỹ năng mềm",
-          "role": "Giảng viên",
-          "rank": "3",
-          "total_issues": 90,
-          "over_reporting_count": 2,
-          "wildcard_count": 87,
-          "unverified_count": 1,
-          "sample_issues": [
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "PTITXAY-21 bàn giao lại CTĐT ngoại ngữ K26 qua email",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "PTITJPN-4 Soạn Cam kết lớp Talent",
-              "hours": 1.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Giao ban tuần Phòng ĐT",
-              "hours": 1.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Tham gia buổi dạy thử cô Thủy GV TA",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Xử lý duyệt đề thi N4 làm việc với đối tác",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Gửi kết quả lớp Talent + thông tin buổi học số 1",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-04",
-              "task": "Chương trình định hướng đầu khóa KS26",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-04",
-              "task": "PTITQUAN-49 Xử lý SV thuộc diện cảnh báo học vụ lần 2",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-04",
-              "task": "PTITQUAN-46 Nhận và xử lý báo cáo từ RIKI",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "check timeline chương trình học lớp Talent",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            }
-          ]
-        },
-        {
           "name": "Lưu Hoàng Xuân Nguyên",
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
-          "total_issues": 86,
+          "total_issues": 94,
           "over_reporting_count": 0,
-          "wildcard_count": 86,
+          "wildcard_count": 94,
           "unverified_count": 0,
           "sample_issues": [
             {
@@ -32608,6 +32409,98 @@
               "hours": 1.0,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            }
+          ]
+        },
+        {
+          "name": "Giáp Thị Minh Hằng",
+          "group": "Khối Ngoại ngữ và kỹ năng mềm",
+          "role": "Giảng viên",
+          "rank": "3",
+          "total_issues": 89,
+          "over_reporting_count": 2,
+          "wildcard_count": 87,
+          "unverified_count": 0,
+          "sample_issues": [
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "PTITXAY-21 bàn giao lại CTĐT ngoại ngữ K26 qua email",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "PTITJPN-4 Soạn Cam kết lớp Talent",
+              "hours": 1.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Giao ban tuần Phòng ĐT",
+              "hours": 1.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Tham gia buổi dạy thử cô Thủy GV TA",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Xử lý duyệt đề thi N4 làm việc với đối tác",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Gửi kết quả lớp Talent + thông tin buổi học số 1",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-04",
+              "task": "Chương trình định hướng đầu khóa KS26",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-04",
+              "task": "PTITQUAN-49 Xử lý SV thuộc diện cảnh báo học vụ lần 2",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-04",
+              "task": "PTITQUAN-46 Nhận và xử lý báo cáo từ RIKI",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "check timeline chương trình học lớp Talent",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
             }
           ]
         },
@@ -34452,6 +34345,98 @@
           ]
         },
         {
+          "name": "Ngọ Văn Quý",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "total_issues": 40,
+          "over_reporting_count": 4,
+          "wildcard_count": 36,
+          "unverified_count": 0,
+          "sample_issues": [
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Trông thi cuối môn cho K24",
+              "hours": 4.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (4.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-03",
+              "task": "Phát triển giao diện và ghép API dự án khảo thí",
+              "hours": 5.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (5.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-07",
+              "task": "Xây dựng LMS AI chức năng quản trị (quản lý ca thi)",
+              "hours": 9.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (9.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-08",
+              "task": "Demo LMS AI và Agent sản xuát tài nguyên học tập",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-08",
+              "task": "Phát triển tính năng dự án khảo thí",
+              "hours": 8.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (8.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-09",
+              "task": "Báo cáo tiến độ LMS AI và khảo thí",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-09",
+              "task": "Phát triển tính năng của khảo thí",
+              "hours": 7.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (7.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-09",
+              "task": "Xây dựng UI dự án mobile app phụ huynh và sinh viên",
+              "hours": 4.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (4.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-10",
+              "task": "Xây dựng UI app phụ huynh",
+              "hours": 3.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-09-10",
+              "task": "Xây dựng API cho app phụ huynh",
+              "hours": 5.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (5.0h)"
+            }
+          ]
+        },
+        {
           "name": "Đinh Thành Nam",
           "group": "Khối CNTT",
           "role": "Giảng viên",
@@ -34540,98 +34525,6 @@
               "hours": 3.0,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
-            }
-          ]
-        },
-        {
-          "name": "Ngọ Văn Quý",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "total_issues": 36,
-          "over_reporting_count": 2,
-          "wildcard_count": 34,
-          "unverified_count": 0,
-          "sample_issues": [
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Trông thi cuối môn cho K24",
-              "hours": 4.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (4.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-03",
-              "task": "Phát triển giao diện và ghép API dự án khảo thí",
-              "hours": 5.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (5.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-07",
-              "task": "Xây dựng LMS AI chức năng quản trị (quản lý ca thi)",
-              "hours": 9.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (9.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-08",
-              "task": "Demo LMS AI và Agent sản xuát tài nguyên học tập",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-08",
-              "task": "Phát triển tính năng dự án khảo thí",
-              "hours": 8.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (8.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-09",
-              "task": "Báo cáo tiến độ LMS AI và khảo thí",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-09",
-              "task": "Phát triển tính năng của khảo thí",
-              "hours": 7.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (7.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-09",
-              "task": "Xây dựng UI dự án mobile app phụ huynh và sinh viên",
-              "hours": 4.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (4.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-10",
-              "task": "Xây dựng UI app phụ huynh",
-              "hours": 3.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-09-10",
-              "task": "Xây dựng API cho app phụ huynh",
-              "hours": 5.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (5.0h)"
             }
           ]
         },
@@ -34732,9 +34625,9 @@
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
-          "total_issues": 31,
+          "total_issues": 32,
           "over_reporting_count": 12,
-          "wildcard_count": 19,
+          "wildcard_count": 20,
           "unverified_count": 0,
           "sample_issues": [
             {
@@ -35146,22 +35039,22 @@
       "period": "Toàn kỳ (01/07 - 21/09/2026)",
       "by_block": {
         "Khối QTKD": {
-          "total_issues": 2535,
+          "total_issues": 2532,
           "over_reporting": 99,
           "wildcard": 2433,
-          "unverified": 3
+          "unverified": 0
         },
         "Khối CNTT": {
-          "total_issues": 4329,
-          "over_reporting": 330,
-          "wildcard": 3982,
-          "unverified": 17
+          "total_issues": 4336,
+          "over_reporting": 332,
+          "wildcard": 4004,
+          "unverified": 0
         },
         "Khối Ngoại ngữ và kỹ năng mềm": {
-          "total_issues": 984,
+          "total_issues": 983,
           "over_reporting": 29,
           "wildcard": 954,
-          "unverified": 1
+          "unverified": 0
         },
         "Khối QLCLĐT": {
           "total_issues": 922,
@@ -35544,10 +35437,10 @@
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
-          "total_issues": 340,
+          "total_issues": 338,
           "over_reporting_count": 22,
           "wildcard_count": 316,
-          "unverified_count": 2,
+          "unverified_count": 0,
           "sample_issues": [
             {
               "type": "OUT_OF_MASTER",
@@ -35558,28 +35451,12 @@
               "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
             },
             {
-              "type": "UNVERIFIED_WORKLANE",
-              "date": "2026-07-01",
-              "task": "giảng dạy thực hành lớp CNTT1 SS6",
-              "hours": 2.25,
-              "std_hours": 0.5,
-              "detail": "Khai báo 100% nhưng ticket Worklane chưa DONE"
-            },
-            {
               "type": "OUT_OF_MASTER",
               "date": "2026-07-01",
               "task": "giảng dạy thực hành lớp CNTT5 SS6",
               "hours": 2.25,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
-            },
-            {
-              "type": "UNVERIFIED_WORKLANE",
-              "date": "2026-07-01",
-              "task": "giảng dạy thực hành lớp CNTT5 SS6",
-              "hours": 2.25,
-              "std_hours": 0.5,
-              "detail": "Khai báo 100% nhưng ticket Worklane chưa DONE"
             },
             {
               "type": "OUT_OF_MASTER",
@@ -35628,6 +35505,22 @@
               "hours": 2.25,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (2.25h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-03",
+              "task": "chấm bài và record ss7 lớp CNTT1 Và lớp CNTT5",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-03",
+              "task": "chấm bài và record ss6 lớp CNTT2",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
             }
           ]
         },
@@ -35728,10 +35621,10 @@
           "group": "Khối QTKD",
           "role": "Trợ giảng",
           "rank": "1",
-          "total_issues": 306,
+          "total_issues": 305,
           "over_reporting_count": 1,
           "wildcard_count": 304,
-          "unverified_count": 1,
+          "unverified_count": 0,
           "sample_issues": [
             {
               "type": "OUT_OF_MASTER",
@@ -35820,10 +35713,10 @@
           "group": "Khối QTKD",
           "role": "Trợ giảng",
           "rank": "1",
-          "total_issues": 306,
+          "total_issues": 304,
           "over_reporting_count": 8,
           "wildcard_count": 296,
-          "unverified_count": 2,
+          "unverified_count": 0,
           "sample_issues": [
             {
               "type": "OUT_OF_MASTER",
@@ -35904,6 +35797,98 @@
               "hours": 0.75,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
+            }
+          ]
+        },
+        {
+          "name": "Nguyễn Xuân Bách",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "4",
+          "total_issues": 301,
+          "over_reporting_count": 3,
+          "wildcard_count": 298,
+          "unverified_count": 0,
+          "sample_issues": [
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Họp giao ban �'ào tạo",
+              "hours": 3.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "H�- trợ sinh viên kh�Yi nguyên",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Báo cáo ch�? s�' �'ào tạo",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Dự giờ l�>p HN-KS25-CNTT8",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Nghiên cứu AI-Agent về phân tích ch�? s�' �'ào tạo",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Cập nhật �'i�fm bảo v�? PRJ MD1-TSU260428",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Xử lý các vi phạm và giải quyết ch�? s�' �'ào tạo",
+              "hours": 3.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Chuẩn b�< giảng dạy MD2 - TSU260428",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Họp team \"Kh�Yi nguyên\"",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Họp tri�fn khai kế hoạch \"C�' vấn học tập\"",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
             }
           ]
         },
@@ -36000,106 +35985,14 @@
           ]
         },
         {
-          "name": "Nguyễn Xuân Bách",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "4",
-          "total_issues": 290,
-          "over_reporting_count": 3,
-          "wildcard_count": 287,
-          "unverified_count": 0,
-          "sample_issues": [
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Họp giao ban �'ào tạo",
-              "hours": 3.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "H�- trợ sinh viên kh�Yi nguyên",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Báo cáo ch�? s�' �'ào tạo",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Dự giờ l�>p HN-KS25-CNTT8",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Nghiên cứu AI-Agent về phân tích ch�? s�' �'ào tạo",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Cập nhật �'i�fm bảo v�? PRJ MD1-TSU260428",
-              "hours": 0.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Xử lý các vi phạm và giải quyết ch�? s�' �'ào tạo",
-              "hours": 3.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (3.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Chuẩn b�< giảng dạy MD2 - TSU260428",
-              "hours": 0.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Họp team \"Kh�Yi nguyên\"",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Họp tri�fn khai kế hoạch \"C�' vấn học tập\"",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            }
-          ]
-        },
-        {
           "name": "Giáp Thị Minh Hằng",
           "group": "Khối Ngoại ngữ và kỹ năng mềm",
           "role": "Giảng viên",
           "rank": "3",
-          "total_issues": 283,
+          "total_issues": 282,
           "over_reporting_count": 8,
           "wildcard_count": 274,
-          "unverified_count": 1,
+          "unverified_count": 0,
           "sample_issues": [
             {
               "type": "OUT_OF_MASTER",
@@ -36648,9 +36541,9 @@
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
-          "total_issues": 229,
+          "total_issues": 230,
           "over_reporting_count": 26,
-          "wildcard_count": 203,
+          "wildcard_count": 204,
           "unverified_count": 0,
           "sample_issues": [
             {
@@ -36920,6 +36813,98 @@
           ]
         },
         {
+          "name": "Lưu Hoàng Xuân Nguyên",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "total_issues": 224,
+          "over_reporting_count": 12,
+          "wildcard_count": 212,
+          "unverified_count": 0,
+          "sample_issues": [
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "kiểm tra bài tập về nhà CNTT6",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "kiểm tra bài tập về nhà CNTT7",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "triển khai hoạt động nhóm CNTT6",
+              "hours": 1.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "triển khai hoạt động nhóm CNTT7",
+              "hours": 1.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Quản lý chỉ số 2 lớp CNTT6, 7",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Hop đào tạo HCM",
+              "hours": 1.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "Báo cáo chỉ số đào tạo",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+            },
+            {
+              "type": "OVER_REPORTING",
+              "date": "2026-07-09",
+              "task": "Triển khai thực hành CNTT",
+              "hours": 4.0,
+              "std_hours": 2.0,
+              "detail": "Vượt định mức (4.0h vs 2.0h barem)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-09",
+              "task": "Chấm bài tập Về nhà",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-09",
+              "task": "Báo cáo chỉ số lớp",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+            }
+          ]
+        },
+        {
           "name": "Lương Quốc Tuấn",
           "group": "Khối CNTT",
           "role": "Giảng viên",
@@ -37100,98 +37085,6 @@
               "hours": 1.0,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            }
-          ]
-        },
-        {
-          "name": "Lưu Hoàng Xuân Nguyên",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "total_issues": 216,
-          "over_reporting_count": 12,
-          "wildcard_count": 204,
-          "unverified_count": 0,
-          "sample_issues": [
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "kiểm tra bài tập về nhà CNTT6",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "kiểm tra bài tập về nhà CNTT7",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "triển khai hoạt động nhóm CNTT6",
-              "hours": 1.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "triển khai hoạt động nhóm CNTT7",
-              "hours": 1.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Quản lý chỉ số 2 lớp CNTT6, 7",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Hop đào tạo HCM",
-              "hours": 1.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "Báo cáo chỉ số đào tạo",
-              "hours": 0.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
-            },
-            {
-              "type": "OVER_REPORTING",
-              "date": "2026-07-09",
-              "task": "Triển khai thực hành CNTT",
-              "hours": 4.0,
-              "std_hours": 2.0,
-              "detail": "Vượt định mức (4.0h vs 2.0h barem)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-09",
-              "task": "Chấm bài tập Về nhà",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-09",
-              "task": "Báo cáo chỉ số lớp",
-              "hours": 0.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
             }
           ]
         },
@@ -37472,98 +37365,6 @@
           ]
         },
         {
-          "name": "Mai Xuân Chinh",
-          "group": "Khối CNTT",
-          "role": "Giảng viên",
-          "rank": "3",
-          "total_issues": 193,
-          "over_reporting_count": 4,
-          "wildcard_count": 174,
-          "unverified_count": 15,
-          "sample_issues": [
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-03",
-              "task": "PTITTRIE-60 [Trông thi] IT212 K24 (HN-KS24-CNTT2)",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-03",
-              "task": "PTITTRIE-49 [Buổi 10] Check BTVN — IT212 K24 (HN-KS24-CNTT4)",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-03",
-              "task": "PTITTRIE-41 [Buổi 08] Check BTVN — IT212 K24 (HN-KS24-CNTT3)",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-03",
-              "task": "PTITTRIE-42 [Buổi 08] Chăm sóc SV — IT212 K24 (HN-KS24-CNTT3)",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-03",
-              "task": "PTITTRIE-49 [Buổi 10] Check BTVN — IT212 K24 (HN-KS24-CNTT2)",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-03",
-              "task": "Dạy cntt3",
-              "hours": 2.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "PTITTRIE-57 [Buổi 14] Check BTVN — IT212 K24 (HN-KS24-CNTT4)",
-              "hours": 1.0,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "PTITTRIE-54 [Buổi 12] Chăm sóc SV — IT212 K24 (HN-KS24-CNTT4)",
-              "hours": 0.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "PTITTRIE-48 [Buổi 12] Chăm sóc SV — IT212 K24 (HN-KS24-CNTT3)",
-              "hours": 0.5,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
-            },
-            {
-              "type": "OUT_OF_MASTER",
-              "date": "2026-07-06",
-              "task": "PTITTRIE-47 [Buổi 12] Check BTVN — IT212 K24 (HN-KS24-CNTT3)",
-              "hours": 0.75,
-              "std_hours": 0.5,
-              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
-            }
-          ]
-        },
-        {
           "name": "Nguyễn Quảng An",
           "group": "Khối CNTT",
           "role": "Giảng viên",
@@ -37652,6 +37453,98 @@
               "hours": 1.0,
               "std_hours": 0.5,
               "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            }
+          ]
+        },
+        {
+          "name": "Mai Xuân Chinh",
+          "group": "Khối CNTT",
+          "role": "Giảng viên",
+          "rank": "3",
+          "total_issues": 178,
+          "over_reporting_count": 4,
+          "wildcard_count": 174,
+          "unverified_count": 0,
+          "sample_issues": [
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-03",
+              "task": "PTITTRIE-60 [Trông thi] IT212 K24 (HN-KS24-CNTT2)",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-03",
+              "task": "PTITTRIE-49 [Buổi 10] Check BTVN — IT212 K24 (HN-KS24-CNTT4)",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-03",
+              "task": "PTITTRIE-41 [Buổi 08] Check BTVN — IT212 K24 (HN-KS24-CNTT3)",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-03",
+              "task": "PTITTRIE-42 [Buổi 08] Chăm sóc SV — IT212 K24 (HN-KS24-CNTT3)",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-03",
+              "task": "PTITTRIE-49 [Buổi 10] Check BTVN — IT212 K24 (HN-KS24-CNTT2)",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-03",
+              "task": "Dạy cntt3",
+              "hours": 2.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (2.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "PTITTRIE-57 [Buổi 14] Check BTVN — IT212 K24 (HN-KS24-CNTT4)",
+              "hours": 1.0,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (1.0h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "PTITTRIE-54 [Buổi 12] Chăm sóc SV — IT212 K24 (HN-KS24-CNTT4)",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "PTITTRIE-48 [Buổi 12] Chăm sóc SV — IT212 K24 (HN-KS24-CNTT3)",
+              "hours": 0.5,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.5h)"
+            },
+            {
+              "type": "OUT_OF_MASTER",
+              "date": "2026-07-06",
+              "task": "PTITTRIE-47 [Buổi 12] Check BTVN — IT212 K24 (HN-KS24-CNTT3)",
+              "hours": 0.75,
+              "std_hours": 0.5,
+              "detail": "Khai báo ngoài barem KPI Master khối (0.75h)"
             }
           ]
         },
@@ -38304,9 +38197,9 @@
           "group": "Khối CNTT",
           "role": "Giảng viên",
           "rank": "3",
-          "total_issues": 108,
-          "over_reporting_count": 3,
-          "wildcard_count": 105,
+          "total_issues": 112,
+          "over_reporting_count": 5,
+          "wildcard_count": 107,
           "unverified_count": 0,
           "sample_issues": [
             {
@@ -39188,28 +39081,7 @@
           "detail": "Vượt định mức (1.0h vs 0.4h barem)"
         }
       ],
-      "sample_unverified": [
-        {
-          "staff": "Lại Trung Lâm",
-          "group": "Khối CNTT",
-          "type": "UNVERIFIED_WORKLANE",
-          "date": "2026-07-01",
-          "task": "giảng dạy thực hành lớp CNTT1 SS6",
-          "hours": 2.25,
-          "std_hours": 0.5,
-          "detail": "Khai báo 100% nhưng ticket Worklane chưa DONE"
-        },
-        {
-          "staff": "Lại Trung Lâm",
-          "group": "Khối CNTT",
-          "type": "UNVERIFIED_WORKLANE",
-          "date": "2026-07-01",
-          "task": "giảng dạy thực hành lớp CNTT5 SS6",
-          "hours": 2.25,
-          "std_hours": 0.5,
-          "detail": "Khai báo 100% nhưng ticket Worklane chưa DONE"
-        }
-      ]
+      "sample_unverified": []
     }
   },
   "raw_reports": {
@@ -86586,7 +86458,46 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-09-29": null
+          "2026-09-29": {
+            "user": "Ngọ Văn Quý",
+            "email": "quynv@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Sản xuất và review môn IT103 - Thiết kế UI, UX",
+                "done": false,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "Sản xuất và review môn IT104  -Thiết kế giao diện web",
+                "done": true,
+                "percent": 100,
+                "hours": 3
+              },
+              {
+                "title": "Xây dựng chức năng quản lý điểm ở lms sinh viên",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "Sửa chức năng khảo thí lấy điểm quá trình",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "• Sản xuất và review môn IT103 - Thiết kế UI, UX (100%, 3h)\n✓ Sản xuất và review môn IT104  -Thiết kế giao diện web (100%, 3h)\n✓ Xây dựng chức năng quản lý điểm ở lms sinh viên (100%, 2h)\n✓ Sửa chức năng khảo thí lấy điểm quá trình (100%, 2h)",
+            "stats": {
+              "total": 4,
+              "done": 3,
+              "hours": 10
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Nguyễn Xuân Bách": {
@@ -89227,7 +89138,88 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-09-29": null
+          "2026-09-29": {
+            "user": "Nguyễn Xuân Bách",
+            "email": "bachnx@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Báo cáo chỉ số đào tạo",
+                "done": true,
+                "percent": 100,
+                "hours": 1.25
+              },
+              {
+                "title": "Trao đổi với sinh viên KS26-CNTT1",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Trao đổi với sinh viên KS26-CNTT2",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Trao đổi với sinh viên KS26-QTKD2",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Trao đổi với sinh viên KS26-QTKD3",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Hiệu chỉnh kết quả thống kê về KS26 môn Kỹ năng học tập chủ động",
+                "done": true,
+                "percent": 100,
+                "hours": 0.75
+              },
+              {
+                "title": "Làm báo cáo về KS26 môn Kỹ năng học tập chủ động",
+                "done": true,
+                "percent": 100,
+                "hours": 1.25
+              },
+              {
+                "title": "Trao đổi về các sinh viên không tham gia học KS26- Cô Dương",
+                "done": true,
+                "percent": 100,
+                "hours": 0.75
+              },
+              {
+                "title": "Trao đổi về việc verify đề thi KS25- Thầy Tuấn, thầy DƯơng",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Xử lý tin nhắn chăm sóc sinh viên KS26",
+                "done": true,
+                "percent": 100,
+                "hours": 0.75
+              },
+              {
+                "title": "Nhận bàn giao công việc - Cô Trang, Cô Tươi",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              }
+            ],
+            "summary": "✓ Báo cáo chỉ số đào tạo (100%, 1.25h)\n✓ Trao đổi với sinh viên KS26-CNTT1 (100%, 0.25h)\n✓ Trao đổi với sinh viên KS26-CNTT2 (100%, 0.25h)\n✓ Trao đổi với sinh viên KS26-QTKD2 (100%, 0.25h)\n✓ Trao đổi với sinh viên KS26-QTKD3 (100%, 0.5h)\n✓ Hiệu chỉnh kết quả thống kê về KS26 môn Kỹ năng học tập chủ động (100%, 0.75h)\n✓ Làm báo cáo về KS26 môn Kỹ năng học tập chủ động (100%, 1.25h)\n✓ Trao đổi về các sinh viên không tham gia học KS26- Cô Dương (100%, 0.75h)\n✓ Trao đổi về việc verify đề thi KS25- Thầy Tuấn, thầy DƯơng (100%, 0.5h)\n✓ Xử lý tin nhắn chăm sóc sinh viên KS26 (100%, 0.75h)\n✓ Nhận bàn giao công việc - Cô Trang, Cô Tươi (100%, 2h)",
+            "stats": {
+              "total": 11,
+              "done": 11,
+              "hours": 8.5
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Lại Trung Lâm": {
@@ -97858,7 +97850,160 @@
             "difficulties": "Cơ sở Man Thiện cúp điện liên tục, ảnh hưởng khá nhiều đến quá trình giảng dạy và làm việc ạ",
             "plan": ""
           },
-          "2026-09-29": null
+          "2026-09-29": {
+            "user": "Lê Hà Thanh Sang",
+            "email": "sanglht@rikkeiacademy.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 05 Lesson 01",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review Quiz Lesson - Môn Agile/Scrum Session 05 Lesson 01",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review bài đọc và câu hỏi tự luận - Môn Agile/Scrum Session 05 Lesson 01",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 05 Lesson 02",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 05 Lesson 03",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 05 Lesson 04",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review Quiz Lesson - Môn Agile/Scrum Session 05 Lesson 02",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review Quiz Lesson - Môn Agile/Scrum Session 05 Lesson 03",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review Quiz Lesson - Môn Agile/Scrum Session 05 Lesson 04",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review bài đọc và câu hỏi tự luận - Môn Agile/Scrum Session 05 Lesson 02",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review bài đọc và câu hỏi tự luận - Môn Agile/Scrum Session 05 Lesson 03",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review bài đọc và câu hỏi tự luận - Môn Agile/Scrum Session 05 Lesson 04",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Tham gia khai giảng K26",
+                "done": true,
+                "percent": 100,
+                "hours": 2.5
+              },
+              {
+                "title": "Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 01",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 02",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 03",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 04",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 05",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 01",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 02",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 03",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 04",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              },
+              {
+                "title": "Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 05",
+                "done": true,
+                "percent": 100,
+                "hours": 0.25
+              }
+            ],
+            "summary": "✓ Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 05 Lesson 01 (100%, 0.25h)\n✓ Review Quiz Lesson - Môn Agile/Scrum Session 05 Lesson 01 (100%, 0.25h)\n✓ Review bài đọc và câu hỏi tự luận - Môn Agile/Scrum Session 05 Lesson 01 (100%, 0.25h)\n✓ Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 05 Lesson 02 (100%, 0.25h)\n✓ Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 05 Lesson 03 (100%, 0.25h)\n✓ Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 05 Lesson 04 (100%, 0.25h)\n✓ Review Quiz Lesson - Môn Agile/Scrum Session 05 Lesson 02 (100%, 0.25h)\n✓ Review Quiz Lesson - Môn Agile/Scrum Session 05 Lesson 03 (100%, 0.25h)\n✓ Review Quiz Lesson - Môn Agile/Scrum Session 05 Lesson 04 (100%, 0.25h)\n✓ Review bài đọc và câu hỏi tự luận - Môn Agile/Scrum Session 05 Lesson 02 (100%, 0.25h)\n✓ Review bài đọc và câu hỏi tự luận - Môn Agile/Scrum Session 05 Lesson 03 (100%, 0.25h)\n✓ Review bài đọc và câu hỏi tự luận - Môn Agile/Scrum Session 05 Lesson 04 (100%, 0.25h)\n✓ Tham gia khai giảng K26 (100%, 2.5h)\n✓ Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 01 (100%, 0.25h)\n✓ Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 02 (100%, 0.25h)\n✓ Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 03 (100%, 0.25h)\n✓ Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 04 (100%, 0.25h)\n✓ Review video bài học và câu hỏi popup - Môn Agile/Scrum Session 07 Lesson 05 (100%, 0.25h)\n✓ Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 01 (100%, 0.25h)\n✓ Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 02 (100%, 0.25h)\n✓ Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 03 (100%, 0.25h)\n✓ Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 04 (100%, 0.25h)\n✓ Review Quiz Lesson - Môn Agile/Scrum Session 07 Lesson 05 (100%, 0.25h)",
+            "stats": {
+              "total": 23,
+              "done": 23,
+              "hours": 8
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Lưu Hoàng Xuân Nguyên": {
@@ -99863,7 +100008,76 @@
             "difficulties": "",
             "plan": ""
           },
-          "2026-09-29": null
+          "2026-09-29": {
+            "user": "Lưu Hoàng Xuân Nguyên",
+            "email": "nguyenlxh@rikkeieducation.com",
+            "department": "Đào tạo",
+            "project": null,
+            "tasks": [
+              {
+                "title": "Chăm sóc sinh viên KS26",
+                "done": true,
+                "percent": 100,
+                "hours": 1
+              },
+              {
+                "title": "xử lý vấn đề tỷ lệ vắng nghỉ, các vấn đề phát sinh ở K26",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Rà soát danh sách sinh viên K25",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Chuẩn bị thực hành",
+                "done": true,
+                "percent": 100,
+                "hours": 0.75
+              },
+              {
+                "title": "Tham gia lễ chào mừng sinh viên",
+                "done": true,
+                "percent": 100,
+                "hours": 2
+              },
+              {
+                "title": "CVHT Tổng hợp báo cáo các lớp KS25",
+                "done": true,
+                "percent": 100,
+                "hours": 0.75
+              },
+              {
+                "title": "Chia nhóm lớp KS26-CNTT1",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Chia nhóm lớp KS26-CNTT2",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              },
+              {
+                "title": "Báo cáo chỉ số đào tạo",
+                "done": true,
+                "percent": 100,
+                "hours": 0.5
+              }
+            ],
+            "summary": "✓ Chăm sóc sinh viên KS26 (100%, 1h)\n✓ xử lý vấn đề tỷ lệ vắng nghỉ, các vấn đề phát sinh ở K26 (100%, 0.5h)\n✓ Rà soát danh sách sinh viên K25 (100%, 0.5h)\n✓ Chuẩn bị thực hành (100%, 0.75h)\n✓ Tham gia lễ chào mừng sinh viên (100%, 2h)\n✓ CVHT Tổng hợp báo cáo các lớp KS25 (100%, 0.75h)\n✓ Chia nhóm lớp KS26-CNTT1 (100%, 0.5h)\n✓ Chia nhóm lớp KS26-CNTT2 (100%, 0.5h)\n✓ Báo cáo chỉ số đào tạo (100%, 0.5h)",
+            "stats": {
+              "total": 9,
+              "done": 9,
+              "hours": 7
+            },
+            "difficulties": "",
+            "plan": ""
+          }
         }
       },
       "Nguyễn Đức Minh": {
