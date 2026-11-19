@@ -28,3 +28,36 @@ data/processed/*.log
 data/warehouse/
 .pytest_cache/
 
+
+# === OPTIMIZATION 19/11/2026 ===
+# Large processed caches (regenerable by pipeline)
+data/processed/worklane_audit_detailed.json
+data/processed/kpi_opportunities.json
+data/processed/daily_log_analysis.json
+data/processed/tkb_rows_cache.json
+
+# Legacy archives (not needed in git)
+legacy/archive_docs/
+legacy/archive_periods/
+legacy/scratch_archive/
+legacy/skills_archive/
+legacy/one_off_pmo/
+legacy/*.jpg
+legacy/*.png
+
+# Output weekly snapshots (regenerable)
+output/2026-W*/
+output/live_lms_timetable_k26.json
+
+# Ad-hoc task outputs
+output/02_Thong_Ke_Dot_Xuat_Theo_Task/
+
+# Conflict reports (transient)
+pmo/conflict_report.json
+
+# Tech job market data
+data/inputs/tech_job_market/
+
+# Test caches
+.pytest_cache/
+tests/__pycache__/

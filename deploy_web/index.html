@@ -1,899 +1,287 @@
 <!DOCTYPE html>
 <html lang="vi" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Báo Cáo Điều Hành Giám Sát Chất Lượng Đào Tạo — Rikkei Education &amp; PTIT</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
-                    colors: {
-                        brand: { 50: '#eef2ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#312e81' }
-                    }
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cổng Tổng Hợp Ứng Dụng AI Cho Quản Lý Đào Tạo — PTIT x Rikkei Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          colors: {
+            slate: { 850: '#0f172a', 950: '#020617' }
+          }
         }
-    </script>
-    <style>
-        body {
-            background-color: #090d16;
-            color: #f8fafc;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 14px;
-            line-height: 1.55;
-            overflow-x: hidden;
-        }
-        .glass-panel {
-            background: rgba(15, 23, 42, 0.92);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-card {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.78) 0%, rgba(15, 23, 42, 0.94) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
-        }
-        .nav-btn.active {
-            background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
-            color: #ffffff;
-            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.45);
-            border-color: rgba(99, 102, 241, 0.5);
-        }
-        .filter-chip.active {
-            background: #4f46e5;
-            color: #ffffff;
-            border-color: #6366f1;
-        }
-        .staff-pill-btn.active {
-            background: #4f46e5;
-            color: #ffffff;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
-        }
-        #master-slide-drawer {
-            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        #master-slide-drawer.open {
-            transform: translateX(0);
-        }
-        ::-webkit-scrollbar { width: 7px; height: 7px; }
-        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
-        ::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.45); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.85); }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-card { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glass-card:hover { border-color: rgba(99, 102, 241, 0.4); transform: translateY(-3px); box-shadow: 0 12px 30px -10px rgba(79, 70, 229, 0.3); }
+    .glass-nav { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+    .gradient-text { background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
 
-    <!-- HEADER TỐI CAO BAN LÃNH ĐẠO -->
-    <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/80 px-6 py-4 shadow-xl">
-        <div class="max-w-[1600px] mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-            
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-400 flex items-center justify-center text-white text-xl shadow-lg shadow-indigo-500/30">
-                    <i class="fas fa-university"></i>
-                </div>
-                <div>
-                    <div class="flex items-center gap-2.5">
-                        <h1 class="text-lg font-extrabold text-white tracking-tight">BÁO CÁO ĐIỀU HÀNH GIÁM SÁT CHẤT LƯỢNG ĐÀO TẠO</h1>
-                        <span class="px-3 py-0.5 rounded-full text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Rikkei Education</span>
-                    </div>
-                    <p class="text-sm text-slate-300 mt-0.5">Phạm vi: <strong class="text-slate-100">15 Lớp Học Kỳ II</strong> • <strong class="text-slate-100">42 Cán bộ Giảng viên/Trợ giảng</strong> • <strong class="text-slate-100">1236 Học viên PTIT</strong></p>
-                </div>
-            </div>
-
-            <!-- Bộ Lọc Nhanh C-Level -->
-            <div class="flex flex-wrap items-center gap-3">
-                <div class="flex items-center bg-slate-950/80 p-1.5 rounded-xl border border-slate-800 text-sm">
-                    <span class="px-3 py-1 text-slate-400 font-semibold"><i class="fas fa-building mr-1.5"></i>Cơ sở:</span>
-                    <button onclick="setFilter('campus', 'ALL')" id="filter-campus-ALL" class="filter-chip active px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition font-medium">Tất cả</button>
-                    <button onclick="setFilter('campus', 'HN')" id="filter-campus-HN" class="filter-chip px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition font-medium">Hà Nội</button>
-                    <button onclick="setFilter('campus', 'HCM')" id="filter-campus-HCM" class="filter-chip px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition font-medium">TP. HCM</button>
-                </div>
-
-                <div class="flex items-center bg-slate-950/80 p-1.5 rounded-xl border border-slate-800 text-sm">
-                    <span class="px-3 py-1 text-slate-400 font-semibold"><i class="fas fa-layer-group mr-1.5"></i>Khối:</span>
-                    <button onclick="setFilter('dept', 'ALL')" id="filter-dept-ALL" class="filter-chip active px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition font-medium">Tất cả</button>
-                    <button onclick="setFilter('dept', 'Khối CNTT')" id="filter-dept-CNTT" class="filter-chip px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition font-medium">Khối CNTT</button>
-                    <button onclick="setFilter('dept', 'Khối QTKD')" id="filter-dept-QTKD" class="filter-chip px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition font-medium">Khối QTKD</button>
-                </div>
-
-                <button onclick="location.reload()" class="p-2.5 bg-slate-800/80 hover:bg-slate-700 text-slate-300 rounded-xl border border-slate-700 transition" title="Tải lại số liệu">
-                    <i class="fas fa-sync-alt"></i>
-                </button>
-            </div>
-
+  <!-- TOP BAR -->
+  <header class="glass-nav sticky top-0 z-50 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25">
+          <i class="fa-solid fa-brain text-lg"></i>
         </div>
-
-        <!-- THANH ĐIỀU HƯỚNG TAB CHÍNH -->
-        <div class="max-w-[1600px] mx-auto mt-4 pt-3 border-t border-slate-800/60 flex items-center justify-between flex-wrap gap-2">
-            <div class="flex items-center gap-2.5 overflow-x-auto pb-1">
-                <button onclick="switchMasterTab('cockpit')" id="nav-cockpit" class="nav-btn active px-4 py-2.5 rounded-xl text-sm font-bold border border-slate-700 text-slate-200 transition flex items-center gap-2">
-                    <i class="fas fa-tachometer-alt"></i> Bảng Điều Hành Tổng Thể
-                </button>
-                <button onclick="switchMasterTab('agent1')" id="nav-agent1" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-bold border border-transparent hover:border-slate-700 text-slate-300 hover:text-white transition flex items-center gap-2">
-                    <i class="fas fa-user-shield"></i> 1. Kỷ Luật Sinh Viên
-                </button>
-                <button onclick="switchMasterTab('agent2')" id="nav-agent2" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-bold border border-transparent hover:border-slate-700 text-slate-300 hover:text-white transition flex items-center gap-2">
-                    <i class="fas fa-graduation-cap"></i> 2. Dự Báo &amp; Care List
-                </button>
-                <button onclick="switchMasterTab('agent3')" id="nav-agent3" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-bold border border-transparent hover:border-slate-700 text-slate-300 hover:text-white transition flex items-center gap-2">
-                    <i class="fas fa-chalkboard-teacher"></i> 3. Kỷ Luật Giảng Dạy
-                </button>
-                <button onclick="switchMasterTab('agent4')" id="nav-agent4" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-bold border border-transparent hover:border-slate-700 text-slate-300 hover:text-white transition flex items-center gap-2">
-                    <i class="fas fa-clipboard-check"></i> 4. Tiến Độ &amp; Báo Cáo PMO
-                </button>
-            </div>
-            
-            <div class="text-xs text-slate-400 flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                Dữ liệu đồng bộ: <span class="text-slate-200 font-bold">15 Lớp Học Kỳ II</span> • <span class="text-slate-200 font-bold">42 Nhân sự</span>
-            </div>
+        <div>
+          <h1 class="text-base font-extrabold text-white tracking-tight flex items-center gap-2">
+            HỆ THỐNG ỨNG DỤNG AI QUẢN LÝ ĐÀO TẠO
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">AI-QLĐT v2.4</span>
+          </h1>
+          <p class="text-xs text-slate-400">Viện Công nghệ Thông tin &amp; Truyền thông PTIT • Hợp tác đào tạo Rikkei Academy</p>
         </div>
-    </header>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Trực tuyến
+        </span>
+      </div>
+    </div>
+  </header>
 
-    <!-- TAB 0: BẢNG ĐIỀU HÀNH TỔNG THỂ (EXECUTIVE VIEW) -->
-    <section id="tab-cockpit-view" class="max-w-[1600px] mx-auto px-6 py-6 space-y-6 w-full">
-
-        <!-- TẦNG 1: 4 CHỈ SỐ HOẠT ĐỘNG TRỌNG YẾU (CORE TRAINING KPIS) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            
-            <!-- KPI 1 -->
-            <div class="glass-card p-5 rounded-2xl relative overflow-hidden flex flex-col justify-between border-t-4 border-t-indigo-500">
-                <div>
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Dự Báo Hoàn Thành Môn Học</span>
-                        <span class="p-2.5 rounded-xl bg-indigo-500/15 text-indigo-400 text-base"><i class="fas fa-graduation-cap"></i></span>
-                    </div>
-                    <div class="mt-3.5 flex items-baseline gap-3">
-                        <div class="text-4xl font-black text-white" id="card-pass-rate">48.2%</div>
-                        <span class="text-xs font-bold text-indigo-300">Mục tiêu: ≥ 85%</span>
-                    </div>
-                </div>
-                <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-300 flex items-start gap-2">
-                    <i class="fas fa-info-circle text-indigo-400 mt-0.5"></i>
-                    <span>Tỷ lệ hoàn thành bình quân 19 lớp học kỳ II (đã trừ hệ số phạt môi trường).</span>
-                </div>
-            </div>
-
-            <!-- KPI 2 -->
-            <div class="glass-card p-5 rounded-2xl relative overflow-hidden flex flex-col justify-between border-t-4 border-t-emerald-500">
-                <div>
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Chỉ Số Kỷ Luật Học Đường</span>
-                        <span class="p-2.5 rounded-xl bg-emerald-500/15 text-emerald-400 text-base"><i class="fas fa-user-check"></i></span>
-                    </div>
-                    <div class="mt-3.5 flex items-baseline gap-3">
-                        <div class="text-4xl font-black text-emerald-400" id="card-discipline-rate">86.5%</div>
-                        <span class="text-xs text-slate-400 font-medium">Vi phạm: 13.5%</span>
-                    </div>
-                </div>
-                <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-300 flex items-start gap-2">
-                    <i class="fas fa-info-circle text-emerald-400 mt-0.5"></i>
-                    <span>Tổng hợp từ Chuyên cần (vắng), Nợ bài tập và Chậm hoàn thành Elearning.</span>
-                </div>
-            </div>
-
-            <!-- KPI 3 -->
-            <div class="glass-card p-5 rounded-2xl relative overflow-hidden flex flex-col justify-between border-t-4 border-t-amber-500">
-                <div>
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Kỷ Luật Tác Nghiệp Đội Ngũ</span>
-                        <span class="p-2.5 rounded-xl bg-amber-500/15 text-amber-400 text-base"><i class="fas fa-chalkboard-teacher"></i></span>
-                    </div>
-                    <div class="mt-3.5 flex items-baseline gap-3">
-                        <div class="text-4xl font-black text-amber-400" id="card-ops-score">38.7 <span class="text-sm font-normal text-slate-400">/ 100đ</span></div>
-                        <span class="text-xs text-slate-400 font-medium">Khung chế tài T6/2026</span>
-                    </div>
-                </div>
-                <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-300 flex items-start gap-2">
-                    <i class="fas fa-info-circle text-amber-400 mt-0.5"></i>
-                    <span>Đánh giá mức độ tuân thủ quy chế lên lớp, chấm BTVN và cập nhật tài nguyên.</span>
-                </div>
-            </div>
-
-            <!-- KPI 4 -->
-            <div class="glass-card p-5 rounded-2xl relative overflow-hidden flex flex-col justify-between border-t-4 border-t-rose-500">
-                <div>
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Kỷ Luật Báo Cáo Điều Hành</span>
-                        <span class="p-2.5 rounded-xl bg-rose-500/15 text-rose-400 text-base"><i class="fas fa-tasks"></i></span>
-                    </div>
-                    <div class="mt-3.5 flex items-baseline gap-3">
-                        <div class="text-4xl font-black text-white" id="card-log-rate">81.0%</div>
-                        <span class="text-xs font-bold text-rose-400 px-2.5 py-1 rounded-full bg-rose-500/20">4 Cán bộ Quản lý Chưa Nộp</span>
-                    </div>
-                </div>
-                <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-300 flex items-start gap-2">
-                    <i class="fas fa-info-circle text-rose-400 mt-0.5"></i>
-                    <span>Tỷ lệ nộp nhật ký điều hành và hoàn thành nhiệm vụ theo chuẩn Worklane.</span>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- TẦNG 2: BẢNG CHẨN ĐOÁN CĂN NGUYÊN & NĂNG LỰC THỰC CHIẾN 3 KHỐI ĐÀO TẠO -->
-        <div class="glass-card p-6 rounded-2xl">
-            <div class="flex items-center justify-between mb-5 pb-3 border-b border-slate-800">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-base">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-base font-bold text-slate-100">Báo Cáo Chẩn Đoán Căn Nguyên &amp; Năng Lực Thực Chiến (Theo 3 Khối Đào Tạo)</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">Đối soát từ kết quả thi ĐGNL, lịch sử học tập database và tiến độ các môn học Học kỳ II</p>
-                    </div>
-                </div>
-                <span class="text-xs px-3 py-1.5 rounded-lg bg-indigo-600/30 text-indigo-200 font-mono">Curriculum Analytics</span>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 text-sm">
-                
-                <!-- Khối 1: KS24 CNTT -->
-                <div class="p-5 rounded-xl bg-slate-950/60 border border-slate-800 flex flex-col justify-between space-y-4">
-                    <div>
-                        <div class="flex items-center justify-between pb-2.5 border-b border-slate-800">
-                            <span class="font-extrabold text-slate-100 text-base">1. Khối KS24 CNTT (Kỳ IV)</span>
-                            <span class="px-2.5 py-1 rounded text-xs font-bold bg-indigo-500/20 text-indigo-300">AI Integration</span>
-                        </div>
-                        <div class="mt-3.5 space-y-2.5 text-slate-300">
-                            <p><strong>• Hiện trạng:</strong> 4/5 lớp vận hành ổn định (vi phạm &lt; 10%). Riêng lớp <strong class="text-rose-400">HN-K24-CNTT3</strong> vi phạm 30.9%, nợ bài 26.8%, dự báo đỗ chỉ 36.0%.</p>
-                            <p><strong>• Căn nguyên:</strong> Môn AI Integration có hàm lượng thực hành API/LLM lớn. Lớp CNTT3 sĩ số đông (42 bạn) nhưng Trợ giảng chưa kèm phụ đạo sát sao.</p>
-                        </div>
-                    </div>
-                    <div class="pt-3 border-t border-slate-800/80 text-xs text-indigo-300 font-semibold">
-                        ⚡ <strong>Chỉ đạo:</strong> TG mở 2 ca phụ đạo trong tuần; GV chốt sản phẩm Mini-Project.
-                    </div>
-                </div>
-
-                <!-- Khối 2: KS25 CNTT -->
-                <div class="p-5 rounded-xl bg-slate-950/60 border border-slate-800 flex flex-col justify-between space-y-4">
-                    <div>
-                        <div class="flex items-center justify-between pb-2.5 border-b border-slate-800">
-                            <span class="font-extrabold text-slate-100 text-base">2. Khối KS25 CNTT (Kỳ II)</span>
-                            <span class="px-2.5 py-1 rounded text-xs font-bold bg-amber-500/20 text-amber-300">Python Web &amp; FastAPI</span>
-                        </div>
-                        <div class="mt-3.5 space-y-2.5 text-slate-300">
-                            <p><strong>• Hiện trạng:</strong> Đang ở giai đoạn then chốt. Bài học từ kỳ thi ĐGNL vừa qua trượt thực hành <strong class="text-rose-400">85.9%</strong> cho thấy lỗ hổng lớn về kỹ năng tự viết code độc lập.</p>
-                            <p><strong>• Căn nguyên:</strong> Mất gốc tích lũy từ JS/DB kỳ trước. Nếu TG buông lỏng việc chấm BTVN các session đầu, học viên sẽ bỏ cuộc khi vào phần Database ORM.</p>
-                        </div>
-                    </div>
-                    <div class="pt-3 border-t border-slate-800/80 text-xs text-amber-300 font-semibold">
-                        ⚡ <strong>Chỉ đạo:</strong> TG nghiệm thu bài tập 100% từng buổi; GV tăng 50% thời lượng Live-Code.
-                    </div>
-                </div>
-
-                <!-- Khối 3: KS25 QTKD -->
-                <div class="p-5 rounded-xl bg-slate-950/60 border border-slate-800 flex flex-col justify-between space-y-4">
-                    <div>
-                        <div class="flex items-center justify-between pb-2.5 border-b border-slate-800">
-                            <span class="font-extrabold text-slate-100 text-base">3. Khối KS25 QTKD (Kỳ II)</span>
-                            <span class="px-2.5 py-1 rounded text-xs font-bold bg-emerald-500/20 text-emerald-300">Business Analysis BA201</span>
-                        </div>
-                        <div class="mt-3.5 space-y-2.5 text-slate-300">
-                            <p><strong>• Hiện trạng:</strong> Đạt chuẩn xuất sắc toàn diện. Cả 3 lớp tỷ lệ vi phạm dưới <strong class="text-emerald-400">8.0%</strong>, tỷ lệ dự báo qua môn đạt trên 85%.</p>
-                            <p><strong>• Căn nguyên:</strong> Đội ngũ GV/TG QTKD (cô Hồng Minh, cô Vân Khanh) duy trì nề nếp điểm danh và kiểm tra bài tập Case Study nghiêm túc.</p>
-                        </div>
-                    </div>
-                    <div class="pt-3 border-t border-slate-800/80 text-xs text-emerald-300 font-semibold">
-                        ⚡ <strong>Chỉ đạo:</strong> Duy trì tiến độ; nhân rộng mô hình kiểm soát nề nếp sang các khối khác.
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- TẦNG 3: BẢNG PHÂN BỔ 4 NHÓM NGUY CƠ HỌC VIÊN TOÀN TRƯỜNG -->
-        <div class="glass-card p-6 rounded-2xl">
-            <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-sm">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-sm font-bold text-slate-100 uppercase tracking-wider">Phân Bổ Học Viên Theo 4 Cấp Độ Năng Lực &amp; Nguy Cơ (Toàn trường: 1236 SV)</h3>
-                </div>
-                <span class="text-xs text-slate-300">Tổng Danh sách Can thiệp (Care List): <strong class="text-rose-400 text-sm font-bold">246 SV</strong> (8.8%)</span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="p-4 rounded-xl bg-rose-500/10 border border-rose-500/30">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-rose-400">🔴 Nhóm 1: Cứu điểm khẩn cấp</span>
-                        <span class="text-xs font-black text-rose-300">8.8%</span>
-                    </div>
-                    <div class="mt-2.5 text-2xl font-black text-white">109 <span class="text-xs font-normal text-slate-400">học viên</span></div>
-                    <div class="text-xs text-slate-300 mt-1.5">GPA dưới 4.0 / Nguy cơ trượt môn cao</div>
-                </div>
-
-                <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-amber-400">🟡 Nhóm 2: Cảnh báo cấm thi</span>
-                        <span class="text-xs font-black text-amber-300">4.3%</span>
-                    </div>
-                    <div class="mt-2.5 text-2xl font-black text-white">53 <span class="text-xs font-normal text-slate-400">học viên</span></div>
-                    <div class="text-xs text-slate-300 mt-1.5">Vắng cận 20% hoặc Nợ bài tập >40%</div>
-                </div>
-
-                <div class="p-4 rounded-xl bg-purple-500/10 border border-purple-500/30">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-purple-400">⚡ Nhóm 3: Nghịch lý Kỷ luật</span>
-                        <span class="text-xs font-black text-purple-300">4.3%</span>
-                    </div>
-                    <div class="mt-2.5 text-2xl font-black text-white">53 <span class="text-xs font-normal text-slate-400">học viên</span></div>
-                    <div class="text-xs text-slate-300 mt-1.5">Điểm cao (≥8.0) nhưng đối mặt cấm thi</div>
-                </div>
-
-                <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400">🟢 Nhóm 4: Vùng An toàn</span>
-                        <span class="text-xs font-black text-emerald-300">80.1%</span>
-                    </div>
-                    <div class="mt-2.5 text-2xl font-black text-white">990 <span class="text-xs font-normal text-slate-400">học viên</span></div>
-                    <div class="text-xs text-slate-300 mt-1.5">Dự báo đạt chuẩn qua môn theo quy chế</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TẦNG 4: DANH MỤC THẺ 19 LỚP HỌC KỲ II THEO TỪNG KHỐI (GROUPED CLASS CARDS GRID) -->
-        <div class="glass-card p-6 rounded-2xl space-y-6">
-            <div class="flex items-center justify-between pb-3.5 border-b border-slate-800">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-base">
-                        <i class="fas fa-th-large"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-base font-bold text-slate-100">Bảng Giám Sát 19 Lớp Học Kỳ II Đang Vận Hành (Phân Theo Khối &amp; Cơ Sở)</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">Nhấp vào thẻ lớp học bất kỳ để mở ngăn kéo tra cứu danh sách học viên và chỉ số chuyên sâu</p>
-                    </div>
-                </div>
-                <span class="text-xs px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 font-mono font-bold" id="class-grid-count">15 lớp học</span>
-            </div>
-
-            <!-- Container Thẻ Lớp Học Được Phân Nhóm Theo Khối -->
-            <div id="grouped-class-cards-container" class="space-y-6">
-                <!-- Rendered by JS -->
-            </div>
-        </div>
-
-        <!-- TẦNG 5: ĐÁNH GIÁ ĐỘI NGŨ NHÂN SỰ TOÀN DIỆN (FULL-WIDTH, KHÔNG CUỘN TRỤC X/Y) -->
-        <div class="glass-card p-6 rounded-2xl space-y-5">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-800">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-base">
-                        <i class="fas fa-id-badge"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-base font-bold text-slate-100">Bảng Đánh Giá KPI &amp; Xếp Loại Năng Lực Đội Ngũ Nhân Sự Đào Tạo</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">Hiển thị trọn vẹn toàn bộ cán bộ, không bị giới hạn cuộn (Scroll-free Executive View)</p>
-                    </div>
-                </div>
-
-                <!-- Nút Chuyển Phân Tầng Nhân Sự -->
-                <div class="flex items-center bg-slate-950 p-1.5 rounded-xl border border-slate-800 text-sm">
-                    <button onclick="switchStaffSubView('teaching')" id="btn-staff-teaching" class="staff-pill-btn active px-4 py-2 rounded-lg font-bold transition flex items-center gap-2">
-                        <i class="fas fa-chalkboard-teacher"></i> Đội Ngũ Đứng Lớp (14 Cán bộ)
-                    </button>
-                    <button onclick="switchStaffSubView('support')" id="btn-staff-support" class="staff-pill-btn px-4 py-2 rounded-lg text-slate-400 hover:text-white font-bold transition flex items-center gap-2">
-                        <i class="fas fa-user-cog"></i> Khối Gián Tiếp / PMO (28 Cán bộ)
-                    </button>
-                </div>
-            </div>
-
-            <!-- VIEW 1: ĐỘI NGŨ TRỰC TIẾP ĐỨNG LỚP (FULL-WIDTH TABLE) -->
-            <div id="view-teaching-staff" class="w-full">
-                <table class="w-full text-left text-sm border-collapse">
-                    <thead class="bg-slate-950/90 text-slate-400 uppercase text-xs font-bold border-b border-slate-800">
-                        <tr>
-                            <th class="py-3.5 px-4">Họ và Tên Cán Bộ</th>
-                            <th class="py-3.5 px-3">Cơ Sở &amp; Rank</th>
-                            <th class="py-3.5 px-3">Lớp Phụ Trách</th>
-                            <th class="py-3.5 px-3">Vai Trò</th>
-                            <th class="py-3.5 px-3 text-center">Tác Nghiệp (20%)</th>
-                            <th class="py-3.5 px-3 text-center">Báo Cáo (30%)</th>
-                            <th class="py-3.5 px-3 text-center">Học Tập SV (30%)</th>
-                            <th class="py-3.5 px-3 text-center">Kỷ Luật SV (20%)</th>
-                            <th class="py-3.5 px-4 text-center">KPI Tổng</th>
-                            <th class="py-3.5 px-4 text-center">Xếp Loại</th>
-                        </tr>
-                    </thead>
-                    <tbody id="teaching-staff-tbody" class="divide-y divide-slate-800/40">
-                        <!-- Rendered by JS -->
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- VIEW 2: KHỐI CHUYÊN MÔN GIÁN TIẾP / HỖ TRỢ / R&D (FULL-WIDTH TABLE) -->
-            <div id="view-support-staff" class="w-full hidden">
-                <table class="w-full text-left text-sm border-collapse">
-                    <thead class="bg-slate-950/90 text-slate-400 uppercase text-xs font-bold border-b border-slate-800">
-                        <tr>
-                            <th class="py-3.5 px-4">Họ và Tên Cán Bộ</th>
-                            <th class="py-3.5 px-3">Cơ Sở &amp; Rank</th>
-                            <th class="py-3.5 px-3">Khối Chuyên Môn</th>
-                            <th class="py-3.5 px-3">Chức Vụ</th>
-                            <th class="py-3.5 px-3 text-center">Tác Nghiệp (40%)</th>
-                            <th class="py-3.5 px-3 text-center">Báo Cáo PMO (60%)</th>
-                            <th class="py-3.5 px-3 text-center">Tổng Giờ Khai</th>
-                            <th class="py-3.5 px-4 text-center">Điểm PMO</th>
-                            <th class="py-3.5 px-4 text-center">Trạng Thái</th>
-                        </tr>
-                    </thead>
-                    <tbody id="support-staff-tbody" class="divide-y divide-slate-800/40">
-                        <!-- Rendered by JS -->
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="pt-3 border-t border-slate-800/60 text-xs text-slate-400 flex items-center justify-between">
-                <span>💡 <em>Nhấp vào hàng nhân sự bất kỳ để mở ngăn kéo xem hồ sơ đánh giá chi tiết và nhật ký báo cáo.</em></span>
-                <span class="text-slate-300 font-medium">Khung chuẩn đánh giá KPI &amp; Chế tài đào tạo 2026</span>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- CONTAINER CÁC TAB CHI TIẾT CON (AGENT 1, 2, 3, 4) QUA FULL-SCREEN NATIVE VIEWPORT (SEAMLESS SCROLL-FREE) -->
-    <div id="subagents-viewport" class="fixed inset-x-0 bottom-0 top-[76px] w-full h-[calc(100vh-76px)] z-30 bg-slate-950 hidden">
-        <div id="tab-agent1-container" class="spa-tab-content hidden w-full h-full">
-            <iframe src="agent_1_student_discipline.html" class="w-full h-full border-0 bg-slate-950 block" loading="lazy"></iframe>
-        </div>
-
-        <div id="tab-agent2-pred-container" class="spa-tab-content hidden w-full h-full">
-            <iframe src="agent_2_academic_prediction.html" class="w-full h-full border-0 bg-slate-950 block" loading="lazy"></iframe>
-        </div>
-
-        <div id="tab-agent3-container" class="spa-tab-content hidden w-full h-full">
-            <iframe src="agent_3_ops_discipline.html" class="w-full h-full border-0 bg-slate-950 block" loading="lazy"></iframe>
-        </div>
-
-        <div id="tab-agent4-container" class="spa-tab-content hidden w-full h-full">
-            <iframe src="agent_4_daily_logs.html" class="w-full h-full border-0 bg-slate-950 block" loading="lazy"></iframe>
-        </div>
+  <!-- HERO SECTION -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-6 py-10 space-y-10">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">
+        <i class="fa-solid fa-sparkles text-amber-400"></i> AI Agent Telemetry &amp; Automation Hub
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+        Bộ Giải Pháp <span class="gradient-text">Điều Hành Đào Tạo Thông Minh</span>
+      </h2>
+      <p class="text-sm md:text-base text-slate-400 leading-relaxed">
+        Tích hợp toàn diện dữ liệu LMS thời gian thực, mô hình chẩn đoán cảnh báo sớm nguy cơ bỏ học, đánh giá hiệu suất nhân sự Worklane và tự động hóa chấm công Mentor.
+      </p>
     </div>
 
-    <!-- SLIDE-OVER DRAWER RIÊNG CHO MASTER COCKPIT (FULL CHIỀU DÀI, CUỘN MƯỢT MÀ KHÔNG BỊ GIỚI HẠN) -->
-    <div id="master-drawer-backdrop" onclick="closeMasterDrawer()" class="fixed inset-0 bg-black/75 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-    <div id="master-slide-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-[580px] bg-slate-900 border-l border-slate-700/80 z-50 translate-x-full shadow-2xl p-6 flex flex-col justify-between h-screen">
-        <div class="flex flex-col h-full overflow-hidden">
-            <div class="flex items-center justify-between pb-4 border-b border-slate-800 flex-shrink-0">
-                <div class="flex items-center gap-3">
-                    <div id="master-drawer-icon" class="w-9 h-9 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-base">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 id="master-drawer-title" class="text-lg font-extrabold text-white">Chi tiết lớp học</h3>
-                </div>
-                <button onclick="closeMasterDrawer()" class="text-slate-400 hover:text-white text-lg p-2 rounded-lg hover:bg-slate-800 transition">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <!-- Vùng cuộn tự nhiên toàn màn hình cho Drawer -->
-            <div id="master-drawer-body" class="mt-5 space-y-4 text-sm overflow-y-auto flex-1 pr-1.5">
-                <!-- Nội dung chi tiết được điền tự động bằng JavaScript -->
-            </div>
+    <!-- 4 REPORT CARDS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <div class="pt-4 mt-2 border-t border-slate-800 text-right flex-shrink-0">
-                <button onclick="closeMasterDrawer()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-bold transition">Đóng ngăn kéo</button>
+      <!-- CARD 1 -->
+      <a href="./10_Bao_Cao_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.html" class="glass-card rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+        <div class="space-y-4">
+          <div class="flex items-start justify-between">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition duration-300">
+              <i class="fa-solid fa-graduation-cap text-xl"></i>
             </div>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-blue-500/10 text-blue-300 border border-blue-500/20">BÁO CÁO 01</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition">Chỉ Số Học Tập &amp; Xét Điều Kiện Thi</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Theo dõi 25 lớp đang có môn triển khai (KS26, KS25, KS24). Tích hợp số lượng sinh viên đủ điều kiện thi (95.1%), số SV nguy cơ cấm thi, và modal đối sánh trực tiếp với môn học kỳ trước.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-center font-mono">
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Số Lớp</div>
+              <div class="text-sm font-bold text-blue-400">25</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Sinh Viên</div>
+              <div class="text-sm font-bold text-white">976</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Đủ ĐK Thi</div>
+              <div class="text-sm font-bold text-emerald-400">95.1%</div>
+            </div>
+          </div>
         </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-blue-400 group-hover:translate-x-1 transition">
+          <span>Khám phá báo cáo chi tiết</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
+
+      <!-- CARD 2 -->
+      <a href="./11_Bao_Cao_Du_Bao_Ty_Le_Qua_Mon_KS25_KS26.html" class="glass-card rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+        <div class="space-y-4">
+          <div class="flex items-start justify-between">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition duration-300">
+              <i class="fa-solid fa-shield-halved text-xl"></i>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-purple-500/10 text-purple-300 border border-purple-500/20">BÁO CÁO 02</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition">Dự Báo Tỷ Lệ Qua Môn &amp; Cảnh Báo Sớm</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Hệ thống Early Warning System đa chiều (6 tiêu chí: Chuyên cần, Bài tập, Elearning, Tồn đọng nợ môn, Điểm danh vắng, Lịch sử nợ quá khứ). Lọc chuẩn xác từng lớp, hỗ trợ xuất Excel 4 nhóm phân loại.
+            </p>
+          </div>
+          <div class="grid grid-cols-4 gap-2 pt-2 border-t border-slate-800 text-center font-mono">
+            <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+              <div class="text-[9px] text-emerald-400">An toàn</div>
+              <div class="text-sm font-bold text-emerald-300">522</div>
+            </div>
+            <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20">
+              <div class="text-[9px] text-amber-400">Nguy cơ</div>
+              <div class="text-sm font-bold text-amber-300">269</div>
+            </div>
+            <div class="p-2 rounded-lg bg-indigo-500/10 border border-indigo-500/20">
+              <div class="text-[9px] text-indigo-400">Bảo lưu</div>
+              <div class="text-sm font-bold text-indigo-300">67</div>
+            </div>
+            <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20">
+              <div class="text-[9px] text-rose-400">Bỏ học</div>
+              <div class="text-sm font-bold text-rose-300">107</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-purple-400 group-hover:translate-x-1 transition">
+          <span>Khám phá báo cáo chi tiết</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
+
+      <!-- CARD 3 -->
+      <a href="./12_Quan_Ly_Hieu_Suat_Va_Danh_Gia_KPI_Thang.html" class="glass-card rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+        <div class="space-y-4">
+          <div class="flex items-start justify-between">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition duration-300">
+              <i class="fa-solid fa-chart-line text-xl"></i>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-amber-500/10 text-amber-300 border border-amber-500/20">BÁO CÁO 03</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Quản Lý Hiệu Suất &amp; Đánh Giá KPI Tháng</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Đánh giá toàn diện 34 cán bộ thuộc Khối Đào tạo và LMS theo 5 nhóm hiệu suất chuẩn PMO. Tích hợp nút soạn thảo và gửi email nhắc nhở cá nhân hóa hoặc gửi hàng loạt đến 13 nhân sự hiệu suất thấp.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-center font-mono">
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Nhân Sự</div>
+              <div class="text-sm font-bold text-amber-400">34</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">KPI Trung Bình</div>
+              <div class="text-sm font-bold text-white">63.1</div>
+            </div>
+            <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20">
+              <div class="text-[10px] text-rose-400">Cần Đốc Thúc</div>
+              <div class="text-sm font-bold text-rose-300">13</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-amber-400 group-hover:translate-x-1 transition">
+          <span>Khám phá báo cáo chi tiết</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
+
+      <!-- CARD 4 -->
+      <a href="./13_Bao_Cao_Cham_Cong_Mentor_He_Ngan_Han.html" class="glass-card rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+        <div class="space-y-4">
+          <div class="flex items-start justify-between">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition duration-300">
+              <i class="fa-solid fa-business-time text-xl"></i>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">BÁO CÁO 04</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">Báo Cáo Chấm Công Mentor Hệ Ngắn Hạn</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Tổng hợp chi tiết dữ liệu chấm công từ Worklane cho Tháng 10 (19 mentor, 336.5h) và Tháng 11 (17 mentor, 313.0h). Tích hợp modal gửi mail với bảng tổng công và nhật ký buổi dạy chi tiết theo ngày.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-center font-mono">
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Mentor T10 / T11</div>
+              <div class="text-sm font-bold text-emerald-400">19 / 17</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Tổng Buổi Dạy</div>
+              <div class="text-sm font-bold text-white">246</div>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/60">
+              <div class="text-[10px] text-slate-400">Tổng Giờ Dạy</div>
+              <div class="text-sm font-bold text-cyan-400">649.5h</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-emerald-400 group-hover:translate-x-1 transition">
+          <span>Khám phá báo cáo chi tiết</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
+
     </div>
 
-    <!-- SCRIPT ĐIỀU HÀNH EXECUTIVE DASHBOARD -->
-    <script>
-        const EXECUTIVE_DATA = {"macro_kpis": {"avg_pass_rate": 48.2, "avg_violation": 13.5, "avg_ops_score": 38.7, "avg_log_rate": 81.0, "total_classes": 15, "teaching_staff_count": 14, "support_staff_count": 28, "missing_leaders_count": 4}, "risk_breakdown": {"total_students": 1236, "care_list_total": 246, "r1_count": 109, "r1_pct": 8.8, "r2_count": 53, "r2_pct": 4.3, "r3_count": 53, "r3_pct": 4.3, "r4_count": 990, "r4_pct": 80.1}, "classes": [{"class_name": "HN-K24-CNTT1", "group_title": "Khối KS24 CNTT (Kỳ IV — DevOps)", "subject": "KS24_DevOps", "batch": "KS24", "campus": "HN", "dept": "Khối CNTT", "size": 35, "latest_date": "2026-10-15", "cc": 26.7, "bt": 10.0, "el": 3.3, "v_class": 13.3, "discipline_score": 86.7, "pred_pass": 46.8, "gv": "Bùi Thanh Hải", "tg": "Phạm Tuấn Bình", "care_count": 25, "paradox_count": 3, "red_sv_count": 5, "banned_sv_count": 3, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Phạm Tuấn Bình tổ chức phụ đạo gấp; GV Bùi Thanh Hải tăng cường kiểm soát kỷ luật lớp (Vắng CC 26.67%, Elearning 3.33%)", "care_list": [{"student_id": 120, "full_name": "Mai Duy Anh", "risk_level": "GREEN", "gpa": 29.9, "att": 12.2, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 262, "full_name": "Nguyễn Đăng Quang", "risk_level": "GREEN", "gpa": 48.5, "att": 4.1, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 247, "full_name": "La Thế Phong", "risk_level": "GREEN", "gpa": 45.7, "att": 4.1, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 115, "full_name": "Lê Tiến Đức", "risk_level": "RED", "gpa": 0.0, "att": 28.4, "hw": 65.2, "is_excellent": true, "is_failed_new": true}, {"student_id": 82, "full_name": "Nguyễn Sơn Minh", "risk_level": "GREEN", "gpa": 34.5, "att": 6.1, "hw": 90.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 133, "full_name": "Hoàng Văn Lương", "risk_level": "GREEN", "gpa": 31.5, "att": 6.1, "hw": 90.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 213, "full_name": "Nguyễn Mạnh Thắng", "risk_level": "GREEN", "gpa": 22.6, "att": 8.1, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 263, "full_name": "Nguyễn Thạc Hưng", "risk_level": "RED", "gpa": 28.6, "att": 4.1, "hw": 75.2, "is_excellent": true, "is_failed_new": true}, {"student_id": 152, "full_name": "Nguyễn Nhật Minh", "risk_level": "RED", "gpa": 0.0, "att": 16.2, "hw": 85.2, "is_excellent": true, "is_failed_new": false}, {"student_id": 392, "full_name": "Nguyễn Hoàng Phúc", "risk_level": "GREEN", "gpa": 30.1, "att": 2.0, "hw": 90.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 411, "full_name": "Đinh Đình Thành", "risk_level": "GREEN", "gpa": 47.2, "att": 2.0, "hw": 90.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 401, "full_name": "Lê Phương Linh", "risk_level": "GREEN", "gpa": 35.5, "att": 2.0, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 398, "full_name": "Nguyễn Quang Vinh", "risk_level": "GREEN", "gpa": 26.0, "att": 6.1, "hw": 90.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 304, "full_name": "Hoàng Cương Cát", "risk_level": "GREEN", "gpa": 17.5, "att": 6.1, "hw": 80.2, "is_excellent": true, "is_failed_new": false}, {"student_id": 89, "full_name": "Trần Hữu Nhật", "risk_level": "GREEN", "gpa": 32.7, "att": 8.1, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 240, "full_name": "Phùng Văn Vượng", "risk_level": "GREEN", "gpa": 20.4, "att": 6.1, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 124, "full_name": "Hoàng Văn Chung", "risk_level": "GREEN", "gpa": 35.7, "att": 6.1, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 103, "full_name": "Đinh Trọng An", "risk_level": "GREEN", "gpa": 47.2, "att": 6.1, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 192, "full_name": "Đặng Quốc Toàn", "risk_level": "GREEN", "gpa": 45.2, "att": 2.0, "hw": 80.2, "is_excellent": true, "is_failed_new": false}, {"student_id": 102, "full_name": "Quách Văn Sơn Bách", "risk_level": "RED", "gpa": 0.0, "att": 52.8, "hw": 40.1, "is_excellent": true, "is_failed_new": true}, {"student_id": 249, "full_name": "Lê Xuân Ánh", "risk_level": "GREEN", "gpa": 21.5, "att": 8.1, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 242, "full_name": "Lê Duy Minh", "risk_level": "GREEN", "gpa": 20.1, "att": 10.2, "hw": 90.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 214, "full_name": "Vũ Nguyễn Hoàng Dương", "risk_level": "GREEN", "gpa": 31.5, "att": 4.1, "hw": 95.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 288, "full_name": "Nguyễn Văn Tùng", "risk_level": "RED", "gpa": 0.0, "att": 16.2, "hw": 90.3, "is_excellent": true, "is_failed_new": false}, {"student_id": 203, "full_name": "Trần Quang Hiệp", "risk_level": "YELLOW", "gpa": 0.0, "att": 8.1, "hw": 85.2, "is_excellent": true, "is_failed_new": false}]}, {"class_name": "HN-K24-CNTT2", "group_title": "Khối KS24 CNTT (Kỳ IV — DevOps)", "subject": "KS24_DevOps", "batch": "KS24", "campus": "HN", "dept": "Khối CNTT", "size": 39, "latest_date": "2026-10-15", "cc": 15.8, "bt": 2.6, "el": 7.9, "v_class": 8.8, "discipline_score": 91.2, "pred_pass": 55.8, "gv": "Bùi Thanh Hải", "tg": "Đinh Thành Nam", "care_count": 19, "paradox_count": 1, "red_sv_count": 1, "banned_sv_count": 1, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Đinh Thành Nam tổ chức phụ đạo gấp; GV Bùi Thanh Hải tăng cường kiểm soát kỷ luật lớp (Vắng CC 15.79%, Elearning 7.89%)", "care_list": [{"student_id": 243, "full_name": "Phan Thuận Thành", "risk_level": "GREEN", "gpa": 21.5, "att": 3.9, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 98, "full_name": "Nguyễn Dương Phương Trang", "risk_level": "GREEN", "gpa": 46.5, "att": 3.9, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 85, "full_name": "Lê Đức Anh", "risk_level": "GREEN", "gpa": 44.0, "att": 1.3, "hw": 83.9, "is_excellent": true, "is_failed_new": false}, {"student_id": 202, "full_name": "Cao Chí Thiện", "risk_level": "GREEN", "gpa": 34.5, "att": 1.3, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 188, "full_name": "Lê Nhật Linh", "risk_level": "GREEN", "gpa": 43.0, "att": 1.3, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 134, "full_name": "Nguyễn Quang Huy 7", "risk_level": "GREEN", "gpa": 25.0, "att": 3.9, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 225, "full_name": "Nguyễn Thị Yến", "risk_level": "GREEN", "gpa": 39.0, "att": 1.3, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 268, "full_name": "Phùng Quang Tiến", "risk_level": "GREEN", "gpa": 46.0, "att": 3.9, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 195, "full_name": "Bùi Thái Sơn", "risk_level": "GREEN", "gpa": 36.0, "att": 2.6, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 117, "full_name": "An Hải Dũng", "risk_level": "GREEN", "gpa": 28.0, "att": 1.3, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 211, "full_name": "Phạm Việt An", "risk_level": "GREEN", "gpa": 49.0, "att": 2.6, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 106, "full_name": "Ngô Trung Chiến", "risk_level": "GREEN", "gpa": 24.5, "att": 0.0, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 399, "full_name": "Đặng Thanh Bình", "risk_level": "GREEN", "gpa": 35.0, "att": 1.3, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 68, "full_name": "Đỗ Tiến Đạt", "risk_level": "RED", "gpa": 65.0, "att": 35.0, "hw": 21.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 97, "full_name": "Đỗ Hoàng Anh", "risk_level": "GREEN", "gpa": 12.5, "att": 6.5, "hw": 99.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 139, "full_name": "Nguyễn Văn Kiên", "risk_level": "GREEN", "gpa": 20.0, "att": 5.2, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 167, "full_name": "Tô Anh Tuấn", "risk_level": "GREEN", "gpa": 21.0, "att": 3.9, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 414, "full_name": "Trần Thị Thu Trang", "risk_level": "GREEN", "gpa": 25.5, "att": 3.9, "hw": 99.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 390, "full_name": "Phạm Hương Quỳnh", "risk_level": "GREEN", "gpa": 31.5, "att": 3.9, "hw": 94.4, "is_excellent": true, "is_failed_new": false}]}, {"class_name": "HN-K24-CNTT3", "group_title": "Khối KS24 CNTT (Kỳ IV — DevOps)", "subject": "KS24_DevOps", "batch": "KS24", "campus": "HN", "dept": "Khối CNTT", "size": 43, "latest_date": "2026-10-15", "cc": 31.6, "bt": 10.5, "el": 2.6, "v_class": 14.9, "discipline_score": 85.1, "pred_pass": 38.6, "gv": "Hồ Xuân Hùng", "tg": "Phạm Tuấn Bình", "care_count": 29, "paradox_count": 4, "red_sv_count": 11, "banned_sv_count": 11, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Phạm Tuấn Bình tổ chức phụ đạo gấp; GV Hồ Xuân Hùng tăng cường kiểm soát kỷ luật lớp (Vắng CC 31.58%, Elearning 2.63%)", "care_list": [{"student_id": 162, "full_name": "Bùi Văn Phương", "risk_level": "GREEN", "gpa": 15.0, "att": 18.4, "hw": 97.7, "is_excellent": true, "is_failed_new": false}, {"student_id": 151, "full_name": "Tạ Xuân Chiến", "risk_level": "GREEN", "gpa": 30.5, "att": 18.4, "hw": 92.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 244, "full_name": "Nguyễn Trường An", "risk_level": "GREEN", "gpa": 21.0, "att": 7.4, "hw": 97.7, "is_excellent": true, "is_failed_new": false}, {"student_id": 239, "full_name": "Nguyễn Ngọc Thanh", "risk_level": "RED", "gpa": 0.0, "att": 22.1, "hw": 92.6, "is_excellent": true, "is_failed_new": true}, {"student_id": 122, "full_name": "Trương Hà Cẩm Linh", "risk_level": "GREEN", "gpa": 48.0, "att": 3.7, "hw": 97.7, "is_excellent": true, "is_failed_new": false}, {"student_id": 173, "full_name": "Đỗ Gia Hưng", "risk_level": "RED", "gpa": 45.5, "att": 22.1, "hw": 92.6, "is_excellent": true, "is_failed_new": true}, {"student_id": 218, "full_name": "Hoàng Trung Dũng", "risk_level": "RED", "gpa": 0.0, "att": 40.4, "hw": 87.5, "is_excellent": true, "is_failed_new": true}, {"student_id": 226, "full_name": "Hoàng Thiên Sơn", "risk_level": "RED", "gpa": 55.0, "att": 25.7, "hw": 92.6, "is_excellent": true, "is_failed_new": true}, {"student_id": 402, "full_name": "Bàng Trọng Tú", "risk_level": "GREEN", "gpa": 48.0, "att": 3.7, "hw": 97.7, "is_excellent": true, "is_failed_new": false}, {"student_id": 236, "full_name": "Đoàn Việt Anh", "risk_level": "GREEN", "gpa": 40.0, "att": 18.4, "hw": 92.6, "is_excellent": true, "is_failed_new": false}, {"student_id": 227, "full_name": "Đỗ Hồng Kỳ", "risk_level": "GREEN", "gpa": 34.5, "att": 11.0, "hw": 92.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 887, "full_name": "Nguyễn Minh Hoàng", "risk_level": "GREEN", "gpa": 16.0, "att": 0.0, "hw": 82.3, "is_excellent": false, "is_failed_new": false}, {"student_id": 285, "full_name": "Nguyễn Văn Hiếu", "risk_level": "GREEN", "gpa": 41.5, "att": 3.7, "hw": 97.7, "is_excellent": true, "is_failed_new": false}, {"student_id": 273, "full_name": "Nguyễn Tiến Thành", "risk_level": "GREEN", "gpa": 25.5, "att": 3.7, "hw": 97.7, "is_excellent": true, "is_failed_new": false}, {"student_id": 254, "full_name": "Hồ Khánh Linh", "risk_level": "GREEN", "gpa": 47.5, "att": 3.7, "hw": 97.7, "is_excellent": true, "is_failed_new": false}, {"student_id": 416, "full_name": "Nguyễn Hoàng Nhật", "risk_level": "RED", "gpa": 0.0, "att": 51.5, "hw": 72.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 303, "full_name": "Nguyễn Thế Kiên", "risk_level": "GREEN", "gpa": 20.0, "att": 11.0, "hw": 97.7, "is_excellent": true, "is_failed_new": false}, {"student_id": 308, "full_name": "Đỗ Chung Hiếu", "risk_level": "RED", "gpa": 23.0, "att": 22.1, "hw": 97.7, "is_excellent": false, "is_failed_new": true}, {"student_id": 238, "full_name": "Lê Thanh Tùng", "risk_level": "GREEN", "gpa": 42.5, "att": 3.7, "hw": 92.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 298, "full_name": "Lê Hoàng Xuân Vinh", "risk_level": "GREEN", "gpa": 33.0, "att": 11.0, "hw": 92.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 902, "full_name": "Trịnh Khắc Hưng", "risk_level": "RED", "gpa": 54.5, "att": 25.7, "hw": 87.5, "is_excellent": false, "is_failed_new": true}, {"student_id": 933, "full_name": "Ngô Quang Anh", "risk_level": "RED", "gpa": 0.0, "att": 99.2, "hw": 46.3, "is_excellent": false, "is_failed_new": true}, {"student_id": 910, "full_name": "Đặng Tô Ngọc Dũng", "risk_level": "RED", "gpa": 20.0, "att": 29.4, "hw": 97.7, "is_excellent": false, "is_failed_new": true}, {"student_id": 99, "full_name": "Đỗ Thảo Minh", "risk_level": "GREEN", "gpa": 48.0, "att": 18.4, "hw": 92.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 223, "full_name": "Trần Anh Dũng", "risk_level": "GREEN", "gpa": 33.0, "att": 7.4, "hw": 97.7, "is_excellent": false, "is_failed_new": false}]}, {"class_name": "HN-K24-CNTT4", "group_title": "Khối KS24 CNTT (Kỳ IV — DevOps)", "subject": "KS24_DevOps", "batch": "KS24", "campus": "HN", "dept": "Khối CNTT", "size": 32, "latest_date": "2026-10-15", "cc": 12.9, "bt": 3.2, "el": 9.7, "v_class": 8.6, "discipline_score": 91.4, "pred_pass": 55.0, "gv": "Bùi Thanh Hải", "tg": "Đinh Thành Nam", "care_count": 8, "paradox_count": 1, "red_sv_count": 2, "banned_sv_count": 2, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Đinh Thành Nam tổ chức phụ đạo gấp; GV Bùi Thanh Hải tăng cường kiểm soát kỷ luật lớp (Vắng CC 12.9%, Elearning 9.68%)", "care_list": [{"student_id": 146, "full_name": "Lê Trung Chiến", "risk_level": "GREEN", "gpa": 49.5, "att": 0.0, "hw": 98.9, "is_excellent": true, "is_failed_new": false}, {"student_id": 138, "full_name": "Nguyễn Trí Thắng", "risk_level": "GREEN", "gpa": 46.5, "att": 2.7, "hw": 98.9, "is_excellent": true, "is_failed_new": false}, {"student_id": 265, "full_name": "Vũ Thu Trang", "risk_level": "GREEN", "gpa": 21.0, "att": 5.4, "hw": 98.9, "is_excellent": true, "is_failed_new": false}, {"student_id": 888, "full_name": "Nguyễn Quang Vinh", "risk_level": "RED", "gpa": 19.0, "att": 21.5, "hw": 88.5, "is_excellent": false, "is_failed_new": true}, {"student_id": 248, "full_name": "Đặng Văn Luyện", "risk_level": "GREEN", "gpa": 45.5, "att": 5.4, "hw": 98.9, "is_excellent": true, "is_failed_new": false}, {"student_id": 96, "full_name": "Nguyễn Thị Phương", "risk_level": "RED", "gpa": 0.0, "att": 21.5, "hw": 98.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 109, "full_name": "Đoàn Mạnh Duy", "risk_level": "GREEN", "gpa": 32.0, "att": 2.7, "hw": 98.9, "is_excellent": true, "is_failed_new": false}, {"student_id": 81, "full_name": "Đoàn Trung Nguyên", "risk_level": "GREEN", "gpa": 23.5, "att": 5.4, "hw": 98.9, "is_excellent": true, "is_failed_new": false}]}, {"class_name": "HCM-K24-CNTT1", "group_title": "Khối KS24 CNTT (Kỳ IV — DevOps)", "subject": "KS24_DevOps", "batch": "KS24", "campus": "HCM", "dept": "Khối CNTT", "size": 43, "latest_date": "2026-10-15", "cc": 23.3, "bt": 2.3, "el": 2.3, "v_class": 9.3, "discipline_score": 90.7, "pred_pass": 47.8, "gv": "Nguyễn Bá Minh Đạo", "tg": "Phan Ngọc Tài", "care_count": 20, "paradox_count": 4, "red_sv_count": 7, "banned_sv_count": 7, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Phan Ngọc Tài tổ chức phụ đạo gấp; GV Nguyễn Bá Minh Đạo tăng cường kiểm soát kỷ luật lớp (Vắng CC 23.26%, Elearning 2.33%)", "care_list": [{"student_id": 605, "full_name": "Nguyễn Quang Anh", "risk_level": "GREEN", "gpa": 24.6, "att": 4.0, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 635, "full_name": "Võ Thanh Khang", "risk_level": "RED", "gpa": 32.5, "att": 28.3, "hw": 100.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 639, "full_name": "Đoàn Nhật Cường", "risk_level": "RED", "gpa": 0.0, "att": 32.4, "hw": 100.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 618, "full_name": "Phan Văn Đạt", "risk_level": "RED", "gpa": 50.6, "att": 20.2, "hw": 100.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 591, "full_name": "Hồ Quốc Khải", "risk_level": "GREEN", "gpa": 43.5, "att": 16.2, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 588, "full_name": "Huỳnh La Tiến Lộc", "risk_level": "GREEN", "gpa": 49.8, "att": 16.2, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 594, "full_name": "Lê Hữu Nhật Hào", "risk_level": "GREEN", "gpa": 45.8, "att": 8.1, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 628, "full_name": "Trần Minh Đức", "risk_level": "GREEN", "gpa": 29.6, "att": 16.2, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 615, "full_name": "Phan Lê Duy Thịnh", "risk_level": "RED", "gpa": 10.0, "att": 36.4, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 671, "full_name": "Bùi Tuấn Giang", "risk_level": "GREEN", "gpa": 47.2, "att": 0.0, "hw": 94.8, "is_excellent": true, "is_failed_new": false}, {"student_id": 610, "full_name": "Nguyễn Tá Thọ", "risk_level": "GREEN", "gpa": 33.3, "att": 4.0, "hw": 89.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 686, "full_name": "Phạm Thanh Phong", "risk_level": "GREEN", "gpa": 39.7, "att": 8.1, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 625, "full_name": "Trần Hoàng Duy", "risk_level": "GREEN", "gpa": 40.3, "att": 0.0, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 626, "full_name": "Trần Hoàng Thanh", "risk_level": "RED", "gpa": 51.3, "att": 24.3, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 676, "full_name": "Hoàng Đình Tùng", "risk_level": "GREEN", "gpa": 33.0, "att": 16.2, "hw": 94.8, "is_excellent": true, "is_failed_new": false}, {"student_id": 631, "full_name": "Trần Võ Hữu Tài", "risk_level": "GREEN", "gpa": 41.6, "att": 0.0, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 593, "full_name": "Lâm Gia Huy", "risk_level": "GREEN", "gpa": 47.3, "att": 0.0, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 684, "full_name": "Nguyễn Trọng Đăng Dương", "risk_level": "RED", "gpa": 57.0, "att": 24.3, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 690, "full_name": "Trương Công Quý", "risk_level": "GREEN", "gpa": 36.9, "att": 16.2, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 616, "full_name": "Phan Trung Kiên", "risk_level": "RED", "gpa": 0.0, "att": 52.6, "hw": 79.0, "is_excellent": true, "is_failed_new": true}]}, {"class_name": "HN-K25-CNTT1", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Phân tích thiết kế hệ thống)", "subject": "KS25_Phantichthietkehethong", "batch": "KS25", "campus": "HN", "dept": "Khối CNTT", "size": 42, "latest_date": "2026-10-05", "cc": 36.8, "bt": 18.4, "el": 23.7, "v_class": 26.3, "discipline_score": 73.7, "pred_pass": 41.0, "gv": "Nguyễn Quảng An", "tg": "Lại Trung Lâm", "care_count": 18, "paradox_count": 0, "red_sv_count": 9, "banned_sv_count": 9, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Lại Trung Lâm tổ chức phụ đạo gấp; GV Nguyễn Quảng An tăng cường kiểm soát kỷ luật lớp (Vắng CC 36.84%, Elearning 23.68%)", "care_list": [{"student_id": 1402, "full_name": "Hoàng Triệu Gia Bách", "risk_level": "RED", "gpa": 0.0, "att": 82.4, "hw": 31.4, "is_excellent": false, "is_failed_new": true}, {"student_id": 1640, "full_name": "Trịnh Huy Hoàng", "risk_level": "GREEN", "gpa": 38.5, "att": 4.8, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1693, "full_name": "Khổng Ngô Gia Hưng", "risk_level": "GREEN", "gpa": 88.5, "att": 19.4, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 1293, "full_name": "Nguyễn Đình Đức", "risk_level": "YELLOW", "gpa": 23.0, "att": 9.7, "hw": 99.3, "is_excellent": false, "is_failed_new": false}, {"student_id": 1510, "full_name": "Nguyễn Việt Hưng 7", "risk_level": "RED", "gpa": 0.0, "att": 55.8, "hw": 57.5, "is_excellent": false, "is_failed_new": true}, {"student_id": 1415, "full_name": "Trần Bảo Hưng", "risk_level": "GREEN", "gpa": 38.5, "att": 9.7, "hw": 99.3, "is_excellent": false, "is_failed_new": false}, {"student_id": 1436, "full_name": "Đặng Việt Dũng", "risk_level": "GREEN", "gpa": 48.7, "att": 17.0, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1347, "full_name": "Đồng Nguyễn Tiến Đạt", "risk_level": "GREEN", "gpa": 49.1, "att": 14.5, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 299, "full_name": "Chu Văn Ninh", "risk_level": "RED", "gpa": 0.0, "att": 72.7, "hw": 47.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 1399, "full_name": "Trịnh Anh Đức", "risk_level": "RED", "gpa": 0.0, "att": 9.7, "hw": 57.5, "is_excellent": false, "is_failed_new": true}, {"student_id": 1499, "full_name": "Nguyễn Xuân Sơn 2", "risk_level": "YELLOW", "gpa": 0.0, "att": 14.5, "hw": 99.3, "is_excellent": false, "is_failed_new": false}, {"student_id": 1453, "full_name": "Nguyễn Tuấn Dũng 2", "risk_level": "RED", "gpa": 0.0, "att": 60.6, "hw": 52.3, "is_excellent": false, "is_failed_new": true}, {"student_id": 1535, "full_name": "Nguyễn Hoàng Anh 7", "risk_level": "RED", "gpa": 0.0, "att": 33.9, "hw": 78.4, "is_excellent": false, "is_failed_new": true}, {"student_id": 394, "full_name": "Nguyễn Hoàng Long", "risk_level": "RED", "gpa": 0.0, "att": 29.1, "hw": 78.4, "is_excellent": false, "is_failed_new": true}, {"student_id": 1502, "full_name": "Hà Duy Thành", "risk_level": "YELLOW", "gpa": 0.0, "att": 14.5, "hw": 99.3, "is_excellent": false, "is_failed_new": false}, {"student_id": 1552, "full_name": "Đoàn Huy Hoàng 2", "risk_level": "RED", "gpa": 0.0, "att": 84.9, "hw": 57.5, "is_excellent": false, "is_failed_new": true}, {"student_id": 176, "full_name": "Trần Anh Quốc", "risk_level": "YELLOW", "gpa": 41.7, "att": 9.7, "hw": 99.3, "is_excellent": false, "is_failed_new": false}, {"student_id": 228, "full_name": "Trịnh Cao Nhật Nam", "risk_level": "RED", "gpa": 0.0, "att": 67.9, "hw": 68.0, "is_excellent": false, "is_failed_new": true}]}, {"class_name": "HN-K25-CNTT2", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Phân tích thiết kế hệ thống)", "subject": "KS25_Phantichthietkehethong", "batch": "KS25", "campus": "HN", "dept": "Khối CNTT", "size": 45, "latest_date": "2026-10-05", "cc": 18.6, "bt": 7.0, "el": 11.6, "v_class": 12.4, "discipline_score": 87.6, "pred_pass": 46.7, "gv": "Nguyễn Quảng An", "tg": "Lại Trung Lâm", "care_count": 10, "paradox_count": 0, "red_sv_count": 5, "banned_sv_count": 5, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Lại Trung Lâm tổ chức phụ đạo gấp; GV Nguyễn Quảng An tăng cường kiểm soát kỷ luật lớp (Vắng CC 18.6%, Elearning 11.63%)", "care_list": [{"student_id": 1317, "full_name": "Nguyễn Minh Hiếu 6", "risk_level": "GREEN", "gpa": 47.5, "att": 5.7, "hw": 92.7, "is_excellent": false, "is_failed_new": false}, {"student_id": 1419, "full_name": "Phùng Duy Đạt", "risk_level": "RED", "gpa": 73.5, "att": 22.8, "hw": 97.9, "is_excellent": false, "is_failed_new": true}, {"student_id": 1427, "full_name": "Trần Minh Đức 3", "risk_level": "GREEN", "gpa": 37.2, "att": 8.5, "hw": 97.9, "is_excellent": false, "is_failed_new": false}, {"student_id": 1359, "full_name": "Phạm Hồng Phong", "risk_level": "RED", "gpa": 69.7, "att": 31.3, "hw": 97.9, "is_excellent": false, "is_failed_new": true}, {"student_id": 1297, "full_name": "Nguyễn Đức Toàn", "risk_level": "GREEN", "gpa": 45.7, "att": 0.0, "hw": 92.7, "is_excellent": false, "is_failed_new": false}, {"student_id": 1574, "full_name": "Nguyễn Phú Tài", "risk_level": "RED", "gpa": 0.0, "att": 22.8, "hw": 97.9, "is_excellent": false, "is_failed_new": true}, {"student_id": 1615, "full_name": "Vũ Quốc Khánh", "risk_level": "YELLOW", "gpa": 65.7, "att": 11.4, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1580, "full_name": "Hoàng Minh Tuấn", "risk_level": "GREEN", "gpa": 33.2, "att": 8.5, "hw": 97.9, "is_excellent": false, "is_failed_new": false}, {"student_id": 1308, "full_name": "Nguyễn Thành Đạt 2", "risk_level": "RED", "gpa": 0.0, "att": 79.6, "hw": 61.8, "is_excellent": false, "is_failed_new": true}, {"student_id": 1651, "full_name": "Nguyễn Đức Tuấn", "risk_level": "RED", "gpa": 34.5, "att": 28.4, "hw": 67.0, "is_excellent": false, "is_failed_new": true}]}, {"class_name": "HN-K25-CNTT3", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Phân tích thiết kế hệ thống)", "subject": "KS25_Phantichthietkehethong", "batch": "KS25", "campus": "HN", "dept": "Khối CNTT", "size": 44, "latest_date": "2026-10-05", "cc": 20.9, "bt": 2.3, "el": 13.9, "v_class": 12.4, "discipline_score": 87.6, "pred_pass": 51.4, "gv": "Phạm Tuấn Bình", "tg": "Phạm Ngọc Kiên", "care_count": 14, "paradox_count": 0, "red_sv_count": 2, "banned_sv_count": 2, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Phạm Ngọc Kiên tổ chức phụ đạo gấp; GV Phạm Tuấn Bình tăng cường kiểm soát kỷ luật lớp (Vắng CC 20.93%, Elearning 13.95%)", "care_list": [{"student_id": 1361, "full_name": "Vũ Anh Đức", "risk_level": "GREEN", "gpa": 42.8, "att": 6.9, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1420, "full_name": "Trần Tùng Dương 2", "risk_level": "YELLOW", "gpa": 31.4, "att": 1.7, "hw": 97.2, "is_excellent": false, "is_failed_new": false}, {"student_id": 1430, "full_name": "Vũ Minh Hải", "risk_level": "GREEN", "gpa": 29.9, "att": 8.7, "hw": 97.2, "is_excellent": false, "is_failed_new": false}, {"student_id": 1349, "full_name": "Tạ Phúc Minh Hiếu", "risk_level": "GREEN", "gpa": 46.9, "att": 5.2, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 113, "full_name": "Chu Đình Minh", "risk_level": "GREEN", "gpa": 45.8, "att": 8.7, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1611, "full_name": "Bùi Hữu Nhân", "risk_level": "GREEN", "gpa": 38.8, "att": 10.4, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1646, "full_name": "Nguyễn Cao Nguyên", "risk_level": "YELLOW", "gpa": 34.3, "att": 10.4, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1675, "full_name": "Ngô Xuân Tài", "risk_level": "GREEN", "gpa": 48.0, "att": 3.5, "hw": 92.1, "is_excellent": false, "is_failed_new": false}, {"student_id": 178, "full_name": "Nguyễn Danh Nam Khánh", "risk_level": "GREEN", "gpa": 47.8, "att": 5.2, "hw": 97.2, "is_excellent": false, "is_failed_new": false}, {"student_id": 116, "full_name": "Hà Bích Ngọc", "risk_level": "GREEN", "gpa": 48.0, "att": 5.2, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 101, "full_name": "Trần Văn Thắng", "risk_level": "RED", "gpa": 25.9, "att": 20.8, "hw": 97.2, "is_excellent": false, "is_failed_new": true}, {"student_id": 1671, "full_name": "Nguyễn Phúc Minh Duy", "risk_level": "YELLOW", "gpa": 0.0, "att": 10.4, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 112, "full_name": "Nguyễn Hải Đăng 2", "risk_level": "YELLOW", "gpa": 44.3, "att": 13.9, "hw": 97.2, "is_excellent": false, "is_failed_new": false}, {"student_id": 1398, "full_name": "Trần Ngọc Sơn 2", "risk_level": "RED", "gpa": 0.0, "att": 46.9, "hw": 66.5, "is_excellent": false, "is_failed_new": true}]}, {"class_name": "HN-K25-CNTT4", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Phân tích thiết kế hệ thống)", "subject": "KS25_Phantichthietkehethong", "batch": "KS25", "campus": "HN", "dept": "Khối CNTT", "size": 42, "latest_date": "2026-10-05", "cc": 2.4, "bt": 7.1, "el": 9.5, "v_class": 6.3, "discipline_score": 93.7, "pred_pass": 53.4, "gv": "Phạm Tuấn Bình", "tg": "Phạm Ngọc Kiên", "care_count": 11, "paradox_count": 0, "red_sv_count": 2, "banned_sv_count": 2, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Phạm Ngọc Kiên tổ chức phụ đạo gấp; GV Phạm Tuấn Bình tăng cường kiểm soát kỷ luật lớp (Vắng CC 2.38%, Elearning 9.52%)", "care_list": [{"student_id": 1494, "full_name": "Phạm Quốc Anh 2", "risk_level": "GREEN", "gpa": 35.5, "att": 0.0, "hw": 97.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 1310, "full_name": "Đỗ Việt Anh", "risk_level": "GREEN", "gpa": 40.0, "att": 1.4, "hw": 97.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 1309, "full_name": "Nguyễn Việt Đức", "risk_level": "YELLOW", "gpa": 29.9, "att": 5.4, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1684, "full_name": "Nguyễn Tiến Đạt 7", "risk_level": "GREEN", "gpa": 28.6, "att": 2.7, "hw": 97.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 1306, "full_name": "Đinh Nguyễn Khánh Toàn", "risk_level": "GREEN", "gpa": 38.5, "att": 1.4, "hw": 97.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 1548, "full_name": "Ngô Trung Kiên", "risk_level": "RED", "gpa": 61.5, "att": 34.0, "hw": 56.5, "is_excellent": false, "is_failed_new": true}, {"student_id": 1447, "full_name": "Phạm Gia Huy 2", "risk_level": "GREEN", "gpa": 43.1, "att": 2.7, "hw": 97.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 174, "full_name": "Nguyễn Vũ Thành", "risk_level": "YELLOW", "gpa": 31.4, "att": 4.1, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1599, "full_name": "Trịnh Quốc Trung", "risk_level": "GREEN", "gpa": 37.6, "att": 2.7, "hw": 97.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 1301, "full_name": "Vũ Dũng", "risk_level": "YELLOW", "gpa": 27.6, "att": 4.1, "hw": 97.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 1687, "full_name": "Nguyễn Đức Phong 2", "risk_level": "RED", "gpa": 70.7, "att": 6.8, "hw": 66.8, "is_excellent": false, "is_failed_new": true}]}, {"class_name": "HN-K25-CNTT5", "group_title": "Khối KS25 CNTT — Cơ sở Hà Nội (Kỳ II — Phân tích thiết kế hệ thống)", "subject": "KS25_Phantichthietkehethong", "batch": "KS25", "campus": "HN", "dept": "Khối CNTT", "size": 45, "latest_date": "2026-10-05", "cc": 33.3, "bt": 4.4, "el": 15.6, "v_class": 17.8, "discipline_score": 82.2, "pred_pass": 52.6, "gv": "Nguyễn Quảng An", "tg": "Lại Trung Lâm", "care_count": 14, "paradox_count": 0, "red_sv_count": 4, "banned_sv_count": 4, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Lại Trung Lâm tổ chức phụ đạo gấp; GV Nguyễn Quảng An tăng cường kiểm soát kỷ luật lớp (Vắng CC 33.33%, Elearning 15.56%)", "care_list": [{"student_id": 1312, "full_name": "Trịnh Hoàng Anh", "risk_level": "GREEN", "gpa": 81.7, "att": 17.7, "hw": 100.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 1449, "full_name": "Trịnh Huy Đại", "risk_level": "GREEN", "gpa": 23.4, "att": 0.0, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1441, "full_name": "Ngô Tiến Khang", "risk_level": "GREEN", "gpa": 46.8, "att": 6.6, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1649, "full_name": "Trần Đại Vũ", "risk_level": "GREEN", "gpa": 45.5, "att": 17.7, "hw": 98.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 1567, "full_name": "Nông Văn Sơn", "risk_level": "GREEN", "gpa": 49.9, "att": 8.9, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1602, "full_name": "Lương Thiện Nhân", "risk_level": "GREEN", "gpa": 38.8, "att": 8.9, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 121, "full_name": "Phạm Quốc Khánh", "risk_level": "GREEN", "gpa": 40.0, "att": 8.9, "hw": 98.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 107, "full_name": "Nguyễn Khắc Hưng", "risk_level": "GREEN", "gpa": 45.6, "att": 11.1, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1588, "full_name": "Nguyễn Thạch Anh", "risk_level": "GREEN", "gpa": 28.1, "att": 11.1, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1283, "full_name": "Vũ Văn Hiếu", "risk_level": "RED", "gpa": 0.0, "att": 28.8, "hw": 83.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 1562, "full_name": "Hoàng Văn Thắng", "risk_level": "RED", "gpa": 44.0, "att": 22.2, "hw": 93.4, "is_excellent": false, "is_failed_new": true}, {"student_id": 1384, "full_name": "Hoàng Quốc Bảo", "risk_level": "GREEN", "gpa": 9.0, "att": 0.0, "hw": 98.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 1551, "full_name": "Trịnh Xuân Hùng", "risk_level": "RED", "gpa": 0.0, "att": 62.0, "hw": 67.5, "is_excellent": false, "is_failed_new": true}, {"student_id": 1578, "full_name": "Trần Nhật Anh 2", "risk_level": "RED", "gpa": 0.0, "att": 62.0, "hw": 67.5, "is_excellent": false, "is_failed_new": true}]}, {"class_name": "HCM-K25-CNTT5", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)", "subject": "KS25_Phantichthietkehethong", "batch": "KS25", "campus": "HCM", "dept": "Khối CNTT", "size": 44, "latest_date": "2026-09-30", "cc": 13.6, "bt": 0.0, "el": 18.2, "v_class": 10.6, "discipline_score": 89.4, "pred_pass": 59.0, "gv": "Nguyễn Đức Minh", "tg": "Lưu Hoàng Xuân Nguyên", "care_count": 6, "paradox_count": 0, "red_sv_count": 1, "banned_sv_count": 1, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Lưu Hoàng Xuân Nguyên tổ chức phụ đạo gấp; GV Nguyễn Đức Minh tăng cường kiểm soát kỷ luật lớp (Vắng CC 13.64%, Elearning 18.18%)", "care_list": [{"student_id": 1482, "full_name": "Vũ Hoàng Nhiệm", "risk_level": "GREEN", "gpa": 48.5, "att": 5.6, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1556, "full_name": "Phùng Thanh Tùng 2", "risk_level": "RED", "gpa": 42.0, "att": 36.6, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 1292, "full_name": "Huỳnh Nhơn Nguyên Nghiệp", "risk_level": "GREEN", "gpa": 24.5, "att": 0.0, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1666, "full_name": "Nguyễn Phương Vy", "risk_level": "GREEN", "gpa": 35.5, "att": 2.8, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1501, "full_name": "Lê Minh Trí 2", "risk_level": "GREEN", "gpa": 49.5, "att": 5.6, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1572, "full_name": "Nguyễn Vĩnh Thành", "risk_level": "GREEN", "gpa": 16.0, "att": 2.8, "hw": 96.6, "is_excellent": false, "is_failed_new": false}]}, {"class_name": "HCM-K25-CNTT6", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)", "subject": "KS25_Phantichthietkehethong", "batch": "KS25", "campus": "HCM", "dept": "Khối CNTT", "size": 51, "latest_date": "2026-09-30", "cc": 18.6, "bt": 2.3, "el": 7.0, "v_class": 9.3, "discipline_score": 90.7, "pred_pass": 50.4, "gv": "Trần Quốc Tuấn", "tg": "Lưu Hoàng Xuân Nguyên", "care_count": 12, "paradox_count": 0, "red_sv_count": 8, "banned_sv_count": 7, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Lưu Hoàng Xuân Nguyên tổ chức phụ đạo gấp; GV Trần Quốc Tuấn tăng cường kiểm soát kỷ luật lớp (Vắng CC 18.6%, Elearning 6.98%)", "care_list": [{"student_id": 1598, "full_name": "Huỳnh Thị Ánh Hồng", "risk_level": "GREEN", "gpa": 46.0, "att": 5.2, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1643, "full_name": "Vũ Hữu Tài", "risk_level": "RED", "gpa": 0.0, "att": 28.7, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 1466, "full_name": "Hồ Thanh Tài", "risk_level": "GREEN", "gpa": 40.0, "att": 7.8, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 718, "full_name": "Nguyễn Gia Huy", "risk_level": "RED", "gpa": 63.0, "att": 26.1, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 586, "full_name": "Dương Trung Dũng", "risk_level": "RED", "gpa": 63.5, "att": 31.3, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 692, "full_name": "Võ Thanh Nguyên", "risk_level": "RED", "gpa": 46.5, "att": 20.9, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 611, "full_name": "Nguyễn Việt Hoàng Anh", "risk_level": "RED", "gpa": 74.5, "att": 20.9, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 633, "full_name": "Võ Chí Đức", "risk_level": "GREEN", "gpa": 45.0, "att": 10.4, "hw": 91.6, "is_excellent": false, "is_failed_new": false}, {"student_id": 599, "full_name": "Nguyễn Bá Hòa", "risk_level": "GREEN", "gpa": 46.0, "att": 10.4, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 619, "full_name": "Phan Đình Nghị", "risk_level": "RED", "gpa": 58.5, "att": 18.3, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 681, "full_name": "Nguyễn Anh Dũng", "risk_level": "RED", "gpa": 0.0, "att": 47.0, "hw": 66.2, "is_excellent": false, "is_failed_new": true}, {"student_id": 1512, "full_name": "Trần Phạm Minh Cường", "risk_level": "RED", "gpa": 0.0, "att": 20.9, "hw": 100.0, "is_excellent": false, "is_failed_new": true}]}, {"class_name": "HCM-K25-CNTT7", "group_title": "Khối KS25 CNTT — Cơ sở TP. HCM (Kỳ II — Phân tích thiết kế hệ thống)", "subject": "KS25_Phantichthietkehethong", "batch": "KS25", "campus": "HCM", "dept": "Khối CNTT", "size": 46, "latest_date": "2026-09-30", "cc": 37.0, "bt": 13.8, "el": 19.6, "v_class": 23.5, "discipline_score": 76.5, "pred_pass": 40.7, "gv": "Nguyễn Đức Minh", "tg": "Lưu Hoàng Xuân Nguyên", "care_count": 20, "paradox_count": 2, "red_sv_count": 14, "banned_sv_count": 14, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Lưu Hoàng Xuân Nguyên tổ chức phụ đạo gấp; GV Nguyễn Đức Minh tăng cường kiểm soát kỷ luật lớp (Vắng CC 36.96%, Elearning 19.57%)", "care_list": [{"student_id": 1392, "full_name": "Tăng Duy Khánh", "risk_level": "GREEN", "gpa": 39.0, "att": 7.9, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1405, "full_name": "Đinh Quang Hào", "risk_level": "GREEN", "gpa": 34.5, "att": 19.8, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1497, "full_name": "Nguyễn Kim Thành Đạt", "risk_level": "RED", "gpa": 69.0, "att": 23.7, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 1480, "full_name": "Đặng Đức Tín", "risk_level": "RED", "gpa": 78.0, "att": 27.7, "hw": 100.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 1532, "full_name": "Trần Đức Ngọc", "risk_level": "RED", "gpa": 54.5, "att": 47.4, "hw": 95.1, "is_excellent": false, "is_failed_new": true}, {"student_id": 1459, "full_name": "Đỗ Minh Đặng", "risk_level": "GREEN", "gpa": 46.0, "att": 15.8, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1477, "full_name": "Đỗ Xuân Tân", "risk_level": "GREEN", "gpa": 37.0, "att": 11.9, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1443, "full_name": "Phạm Thanh Đài", "risk_level": "RED", "gpa": 72.5, "att": 31.6, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 1533, "full_name": "Nguyễn Khắc Duy 2", "risk_level": "RED", "gpa": 0.0, "att": 43.5, "hw": 80.1, "is_excellent": false, "is_failed_new": true}, {"student_id": 1608, "full_name": "Trần Quang Long 2", "risk_level": "GREEN", "gpa": 34.5, "att": 15.8, "hw": 100.0, "is_excellent": false, "is_failed_new": false}, {"student_id": 1691, "full_name": "Phạm Ngọc Quỳnh Như", "risk_level": "RED", "gpa": 82.5, "att": 27.7, "hw": 100.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 1621, "full_name": "Nguyễn Văn Hoàn", "risk_level": "GREEN", "gpa": 23.0, "att": 7.9, "hw": 95.1, "is_excellent": false, "is_failed_new": false}, {"student_id": 1517, "full_name": "Hồ Hữu Hoài Nam", "risk_level": "RED", "gpa": 62.5, "att": 27.7, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 1647, "full_name": "Huỳnh Quốc Huy", "risk_level": "RED", "gpa": 0.0, "att": 23.7, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 636, "full_name": "Vũ Trần Anh Hoàng", "risk_level": "RED", "gpa": 65.5, "att": 59.3, "hw": 35.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 644, "full_name": "Đỗ Hoàng Sơn", "risk_level": "RED", "gpa": 63.0, "att": 27.7, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 627, "full_name": "Trần Minh Ân", "risk_level": "RED", "gpa": 0.0, "att": 39.5, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 587, "full_name": "Hoàng Công Dũng", "risk_level": "RED", "gpa": 33.5, "att": 51.4, "hw": 80.1, "is_excellent": false, "is_failed_new": true}, {"student_id": 589, "full_name": "Huỳnh Nguyễn Thành Đạt", "risk_level": "RED", "gpa": 61.5, "att": 31.6, "hw": 100.0, "is_excellent": false, "is_failed_new": true}, {"student_id": 643, "full_name": "Đỗ Đình Long", "risk_level": "RED", "gpa": 0.0, "att": 100.0, "hw": 30.0, "is_excellent": false, "is_failed_new": true}]}, {"class_name": "HN-K25-QTKD1", "group_title": "Khối KS25 QTKD (Kỳ II — Ứng dụng AI Agent)", "subject": "KS25_QTKD_AI_Agent", "batch": "KS25", "campus": "HN", "dept": "Khối QTKD", "size": 46, "latest_date": "2026-11-18", "cc": 23.9, "bt": 2.2, "el": 19.6, "v_class": 15.2, "discipline_score": 84.8, "pred_pass": 30.6, "gv": "Lê Thành Ngọc", "tg": "Nguyễn Thị Như Quỳnh", "care_count": 26, "paradox_count": 26, "red_sv_count": 26, "banned_sv_count": 26, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Nguyễn Thị Như Quỳnh tổ chức phụ đạo gấp; GV Lê Thành Ngọc tăng cường kiểm soát kỷ luật lớp (Vắng CC 23.91%, Elearning 19.57%)", "care_list": [{"student_id": 1738, "full_name": "Hồ Xuân Dũng", "risk_level": "RED", "gpa": 80.0, "att": 22.3, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1789, "full_name": "Phạm Cao Thảo Nguyên", "risk_level": "RED", "gpa": 85.0, "att": 29.8, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1781, "full_name": "Lãnh Thái Ngọc", "risk_level": "RED", "gpa": 100.0, "att": 22.3, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1727, "full_name": "Nguyễn Trần Ngọc Hùng", "risk_level": "RED", "gpa": 72.0, "att": 22.3, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1702, "full_name": "Trần Thị Diễm Quỳnh", "risk_level": "RED", "gpa": 100.0, "att": 22.3, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1700, "full_name": "Ngô Công Sơn", "risk_level": "RED", "gpa": 50.0, "att": 29.8, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1717, "full_name": "Lê Gia Dương", "risk_level": "RED", "gpa": 80.0, "att": 29.8, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1772, "full_name": "Lê Vũ Hoàng", "risk_level": "RED", "gpa": 80.0, "att": 22.3, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1813, "full_name": "Nguyễn Thị Hồng Hạnh", "risk_level": "RED", "gpa": 75.0, "att": 37.2, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1736, "full_name": "Trần Đức Minh", "risk_level": "RED", "gpa": 0.0, "att": 100.0, "hw": 61.5, "is_excellent": true, "is_failed_new": true}, {"student_id": 1808, "full_name": "Hùng Gia Linh", "risk_level": "RED", "gpa": 85.0, "att": 22.3, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1792, "full_name": "Đinh Hà Vy", "risk_level": "RED", "gpa": 0.0, "att": 100.0, "hw": 53.8, "is_excellent": true, "is_failed_new": true}, {"student_id": 1721, "full_name": "Lê Minh Đức Anh", "risk_level": "RED", "gpa": 80.0, "att": 29.8, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1711, "full_name": "Nguyễn Nhật Anh", "risk_level": "RED", "gpa": 50.0, "att": 22.3, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1731, "full_name": "Đinh Ngọc Đỉnh", "risk_level": "RED", "gpa": 40.0, "att": 37.2, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1708, "full_name": "Lê Yến Như", "risk_level": "RED", "gpa": 70.0, "att": 29.8, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1770, "full_name": "Nguyễn Văn Chiết", "risk_level": "RED", "gpa": 85.0, "att": 29.8, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1707, "full_name": "Trần Khánh An 2", "risk_level": "RED", "gpa": 70.0, "att": 37.2, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1749, "full_name": "Đào Quỳnh Trang", "risk_level": "RED", "gpa": 0.0, "att": 100.0, "hw": 61.5, "is_excellent": true, "is_failed_new": true}, {"student_id": 1714, "full_name": "Vũ Thanh Thảo", "risk_level": "RED", "gpa": 0.0, "att": 100.0, "hw": 53.8, "is_excellent": true, "is_failed_new": true}, {"student_id": 1776, "full_name": "Cao Thị Thảo Hiền", "risk_level": "RED", "gpa": 0.0, "att": 100.0, "hw": 61.5, "is_excellent": true, "is_failed_new": true}, {"student_id": 1777, "full_name": "Đặng Ngọc Đạt", "risk_level": "RED", "gpa": 85.0, "att": 37.2, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1734, "full_name": "Bùi Hà Uyên", "risk_level": "RED", "gpa": 75.0, "att": 29.8, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1771, "full_name": "Phạm Thuỳ Trang", "risk_level": "RED", "gpa": 90.0, "att": 22.3, "hw": 99.9, "is_excellent": true, "is_failed_new": true}, {"student_id": 1751, "full_name": "Trần Thị Hà", "risk_level": "RED", "gpa": 100.0, "att": 37.2, "hw": 99.9, "is_excellent": true, "is_failed_new": true}]}, {"class_name": "HN-K25-QTKD2", "group_title": "Khối KS25 QTKD (Kỳ II — Ứng dụng AI Agent)", "subject": "KS25_QTKD_AI_Agent", "batch": "KS25", "campus": "HN", "dept": "Khối QTKD", "size": 42, "latest_date": "2026-11-18", "cc": 12.5, "bt": 0.0, "el": 27.5, "v_class": 13.3, "discipline_score": 86.7, "pred_pass": 53.0, "gv": "Lê Thành Ngọc", "tg": "Nguyễn Thị Như Quỳnh", "care_count": 14, "paradox_count": 12, "red_sv_count": 12, "banned_sv_count": 12, "health": "RED", "status_text": "🔴 Báo động Đỏ", "action_takeaway": "TG Nguyễn Thị Như Quỳnh tổ chức phụ đạo gấp; GV Lê Thành Ngọc tăng cường kiểm soát kỷ luật lớp (Vắng CC 12.5%, Elearning 27.5%)", "care_list": [{"student_id": 1764, "full_name": "Lê Anh Khôi", "risk_level": "RED", "gpa": 100.0, "att": 37.3, "hw": 98.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 1766, "full_name": "Phạm Lê", "risk_level": "RED", "gpa": 100.0, "att": 69.2, "hw": 67.8, "is_excellent": true, "is_failed_new": true}, {"student_id": 1730, "full_name": "Hoàng Quốc Trung", "risk_level": "GREEN", "gpa": 90.0, "att": 16.0, "hw": 98.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 1753, "full_name": "Trần Võ Huy Thành", "risk_level": "RED", "gpa": 0.0, "att": 100.0, "hw": 75.4, "is_excellent": true, "is_failed_new": true}, {"student_id": 1719, "full_name": "Trần Thị Thu Thảo", "risk_level": "RED", "gpa": 100.0, "att": 21.3, "hw": 98.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 1743, "full_name": "Nguyễn Đức Mạnh 4", "risk_level": "RED", "gpa": 0.0, "att": 100.0, "hw": 60.3, "is_excellent": true, "is_failed_new": true}, {"student_id": 1775, "full_name": "Vũ Anh Thư", "risk_level": "RED", "gpa": 85.0, "att": 21.3, "hw": 98.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 1732, "full_name": "Đào Thị Hải Ninh", "risk_level": "RED", "gpa": 80.0, "att": 42.6, "hw": 90.4, "is_excellent": true, "is_failed_new": true}, {"student_id": 1728, "full_name": "Nguyễn Phương Thảo 3", "risk_level": "GREEN", "gpa": 90.0, "att": 16.0, "hw": 98.0, "is_excellent": true, "is_failed_new": false}, {"student_id": 1725, "full_name": "Hoàng Thanh Nam", "risk_level": "RED", "gpa": 70.0, "att": 26.6, "hw": 98.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 1750, "full_name": "Vũ Khánh Linh 2", "risk_level": "RED", "gpa": 0.0, "att": 100.0, "hw": 67.8, "is_excellent": true, "is_failed_new": true}, {"student_id": 1762, "full_name": "Nguyễn Văn Việt", "risk_level": "RED", "gpa": 60.0, "att": 21.3, "hw": 98.0, "is_excellent": true, "is_failed_new": true}, {"student_id": 1694, "full_name": "Nguyễn An Khánh", "risk_level": "RED", "gpa": 50.0, "att": 21.3, "hw": 90.4, "is_excellent": true, "is_failed_new": true}, {"student_id": 1779, "full_name": "Vũ Ruy Hoàng", "risk_level": "RED", "gpa": 80.0, "att": 26.6, "hw": 98.0, "is_excellent": true, "is_failed_new": true}]}], "teaching_staff": [{"name": "Phan Ngọc Tài", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HCM", "rep_days": 5, "missing_days": [], "kpi_total": 81.3, "score_sv": 85.0, "score_ops": 100.0, "score_acad": 47.8, "score_log": 100.0, "violation_count": 0, "is_unverified": false, "perf_group": "✓ Đạt Chuẩn", "group_badge": "bg-indigo-500/20 text-indigo-300 border-indigo-500/40", "classes_assigned": ["HCM-K24-CNTT1"]}, {"name": "Nguyễn Đức Minh", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 4, "missing_days": ["2026-09-28"], "kpi_total": 79.0, "score_sv": 87.9, "score_ops": 82.0, "score_acad": 49.9, "score_log": 100.0, "violation_count": 3, "is_unverified": false, "perf_group": "✓ Đạt Chuẩn", "group_badge": "bg-indigo-500/20 text-indigo-300 border-indigo-500/40", "classes_assigned": ["HCM-K25-CNTT5", "HCM-K25-CNTT7"]}, {"name": "Trần Quốc Tuấn", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HCM", "rep_days": 5, "missing_days": [], "kpi_total": 69.8, "score_sv": 93.2, "score_ops": 30.0, "score_acad": 50.4, "score_log": 100.0, "violation_count": 201, "is_unverified": false, "perf_group": "⚠️ Kỷ Luật Tác Nghiệp", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40", "classes_assigned": ["HCM-K25-CNTT6"]}, {"name": "Bùi Thanh Hải", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 4, "missing_days": ["2026-09-25"], "kpi_total": 69.5, "score_sv": 88.8, "score_ops": 30.0, "score_acad": 52.5, "score_log": 100.0, "violation_count": 35, "is_unverified": false, "perf_group": "⚠️ Kỷ Luật Tác Nghiệp", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40", "classes_assigned": ["HN-K24-CNTT1", "HN-K24-CNTT2", "HN-K24-CNTT4"]}, {"name": "Phạm Ngọc Kiên", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "kpi_total": 68.7, "score_sv": 85.0, "score_ops": 30.0, "score_acad": 52.4, "score_log": 100.0, "violation_count": 39, "is_unverified": false, "perf_group": "⚠️ Kỷ Luật Tác Nghiệp", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40", "classes_assigned": ["HN-K25-CNTT3", "HN-K25-CNTT4"]}, {"name": "Phạm Tuấn Bình", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 3, "missing_days": ["2026-09-23", "2026-09-25"], "kpi_total": 68.4, "score_sv": 90.7, "score_ops": 30.0, "score_acad": 47.5, "score_log": 100.0, "violation_count": 235, "is_unverified": false, "perf_group": "⚠️ Kỷ Luật Tác Nghiệp", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40", "classes_assigned": ["HN-K24-CNTT1", "HN-K24-CNTT3", "HN-K25-CNTT3", "HN-K25-CNTT4"]}, {"name": "Lưu Hoàng Xuân Nguyên", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HCM", "rep_days": 5, "missing_days": [], "kpi_total": 68.0, "score_sv": 85.0, "score_ops": 30.0, "score_acad": 50.0, "score_log": 100.0, "violation_count": 356, "is_unverified": false, "perf_group": "⚠️ Kỷ Luật Tác Nghiệp", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40", "classes_assigned": ["HCM-K25-CNTT5", "HCM-K25-CNTT6", "HCM-K25-CNTT7"]}, {"name": "Lại Trung Lâm", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "kpi_total": 67.0, "score_sv": 85.0, "score_ops": 30.0, "score_acad": 46.8, "score_log": 100.0, "violation_count": 20, "is_unverified": false, "perf_group": "⚠️ Kỷ Luật Tác Nghiệp", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40", "classes_assigned": ["HN-K25-CNTT1", "HN-K25-CNTT2", "HN-K25-CNTT5"]}, {"name": "Nguyễn Quảng An", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 4, "missing_days": ["2026-09-23"], "kpi_total": 66.6, "score_sv": 82.9, "score_ops": 30.0, "score_acad": 46.8, "score_log": 100.0, "violation_count": 207, "is_unverified": false, "perf_group": "⚠️ Kỷ Luật Tác Nghiệp", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40", "classes_assigned": ["HN-K25-CNTT1", "HN-K25-CNTT2", "HN-K25-CNTT5"]}, {"name": "Nguyễn Thị Như Quỳnh", "role": "Trợ giảng", "rank": "1", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "kpi_total": 65.7, "score_sv": 85.7, "score_ops": 30.0, "score_acad": 41.8, "score_log": 100.0, "violation_count": 25, "is_unverified": false, "perf_group": "⚠️ Kỷ Luật Tác Nghiệp", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40", "classes_assigned": ["HN-K25-QTKD1", "HN-K25-QTKD2"]}, {"name": "Lê Thành Ngọc", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 4, "missing_days": ["2026-09-24"], "kpi_total": 65.0, "score_sv": 82.2, "score_ops": 30.0, "score_acad": 41.8, "score_log": 100.0, "violation_count": 99, "is_unverified": false, "perf_group": "⚠️ Kỷ Luật Tác Nghiệp", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40", "classes_assigned": ["HN-K25-QTKD1", "HN-K25-QTKD2"]}, {"name": "Đinh Thành Nam", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 0, "missing_days": ["2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29"], "kpi_total": 39.6, "score_sv": 85.0, "score_ops": 30.0, "score_acad": 55.4, "score_log": 0.0, "violation_count": 16, "is_unverified": false, "perf_group": "🚨 Cần Tái Đào Tạo", "group_badge": "bg-rose-500/20 text-rose-300 border-rose-500/40", "classes_assigned": ["HN-K24-CNTT2", "HN-K24-CNTT4"]}, {"name": "Nguyễn Bá Minh Đạo", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 0, "missing_days": ["2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29"], "kpi_total": 34.6, "score_sv": 71.3, "score_ops": 30.0, "score_acad": 47.8, "score_log": 0.0, "violation_count": 105, "is_unverified": false, "perf_group": "🚨 Cần Tái Đào Tạo", "group_badge": "bg-rose-500/20 text-rose-300 border-rose-500/40", "classes_assigned": ["HCM-K24-CNTT1"]}, {"name": "Hồ Xuân Hùng", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 0, "missing_days": ["2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29"], "kpi_total": 34.4, "score_sv": 84.0, "score_ops": 30.0, "score_acad": 38.6, "score_log": 0.0, "violation_count": 110, "is_unverified": false, "perf_group": "🚨 Cần Tái Đào Tạo", "group_badge": "bg-rose-500/20 text-rose-300 border-rose-500/40", "classes_assigned": ["HN-K24-CNTT3"]}], "support_staff": [{"name": "Lê Nhựt Mi", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HCM", "rep_days": 5, "missing_days": [], "pmo_kpi": 100.0, "score_ops": 100.0, "score_log": 100.0, "declared_hours": 39.5, "violation_count": 0, "is_unverified": false, "perf_group": "⭐ Hoàn Thành Tốt", "group_badge": "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"}, {"name": "Lê Thị Bảo Yến", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HCM", "rep_days": 5, "missing_days": [], "pmo_kpi": 100.0, "score_ops": 100.0, "score_log": 100.0, "declared_hours": 39.5, "violation_count": 0, "is_unverified": false, "perf_group": "⭐ Hoàn Thành Tốt", "group_badge": "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"}, {"name": "Đỗ Hà Khanh", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 100.0, "score_ops": 100.0, "score_log": 100.0, "declared_hours": 41.0, "violation_count": 0, "is_unverified": false, "perf_group": "⭐ Hoàn Thành Tốt", "group_badge": "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"}, {"name": "Huỳnh Thị Kim Khánh", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 100.0, "score_ops": 100.0, "score_log": 100.0, "declared_hours": 40.5, "violation_count": 0, "is_unverified": false, "perf_group": "⭐ Hoàn Thành Tốt", "group_badge": "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"}, {"name": "Nguyễn Hồng Nhung", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 100.0, "score_ops": 100.0, "score_log": 100.0, "declared_hours": 41.0, "violation_count": 0, "is_unverified": false, "perf_group": "⭐ Hoàn Thành Tốt", "group_badge": "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"}, {"name": "Trần Thị Mỹ Phước", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 100.0, "score_ops": 100.0, "score_log": 100.0, "declared_hours": 40.0, "violation_count": 0, "is_unverified": false, "perf_group": "⭐ Hoàn Thành Tốt", "group_badge": "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"}, {"name": "Giáp Thị Minh Hằng", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 3, "missing_days": ["2026-09-24", "2026-09-29"], "pmo_kpi": 95.2, "score_ops": 88.0, "score_log": 100.0, "declared_hours": 24.5, "violation_count": 2, "is_unverified": false, "perf_group": "⭐ Hoàn Thành Tốt", "group_badge": "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"}, {"name": "Lò Thị Ngọc Anh", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 4, "missing_days": ["2026-09-29"], "pmo_kpi": 83.2, "score_ops": 58.0, "score_log": 100.0, "declared_hours": 37.0, "violation_count": 7, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Nguyễn Xuân Bách", "role": "Giảng viên", "rank": "4", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 73.6, "score_ops": 34.0, "score_log": 100.0, "declared_hours": 32.5, "violation_count": 11, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Hoàng Thị Kim Oanh", "role": "Giảng viên", "rank": "5", "dept": "Khối CNTT", "campus": "HN", "rep_days": 4, "missing_days": ["2026-09-24"], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 32.5, "violation_count": 43, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Hoàng Thị Hậu", "role": "Giảng viên", "rank": "5", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 40.0, "violation_count": 45, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Đặng Quỳnh Trang", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 41.0, "violation_count": 149, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Nguyễn Ngọc Vân Khanh", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HCM", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 42.0, "violation_count": 95, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Nguyễn Thị Hồng Minh", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 40.0, "violation_count": 85, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Triệu Thị Thanh Tâm", "role": "Trợ giảng", "rank": "1", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 39.2, "violation_count": 27, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Trịnh Quốc Hai", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 40.2, "violation_count": 160, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Nguyễn Công Hưởng", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 47.5, "violation_count": 133, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Mai Xuân Chinh", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 4, "missing_days": ["2026-09-24"], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 41.0, "violation_count": 25, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Lương Quốc Tuấn", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 40.0, "violation_count": 419, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Lâm Tùng Dương", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 40.5, "violation_count": 479, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Ngọ Văn Quý", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 3, "missing_days": ["2026-09-23", "2026-09-25"], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 28.5, "violation_count": 117, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Lê Hà Thanh Sang", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HCM", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 40.0, "violation_count": 105, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Phạm Viết Hùng", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 5, "missing_days": [], "pmo_kpi": 72.0, "score_ops": 30.0, "score_log": 100.0, "declared_hours": 40.0, "violation_count": 310, "is_unverified": false, "perf_group": "⚠️ Chậm Tiến Độ", "group_badge": "bg-amber-500/20 text-amber-300 border-amber-500/40"}, {"name": "Lê Thị Đỏ", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 0, "missing_days": ["2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29"], "pmo_kpi": 32.8, "score_ops": 82.0, "score_log": 0.0, "declared_hours": 0.0, "violation_count": 3, "is_unverified": false, "perf_group": "🚨 Chưa Nộp Báo Cáo", "group_badge": "bg-rose-500/20 text-rose-300 border-rose-500/40"}, {"name": "Nguyễn Thị Tươi", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 0, "missing_days": ["2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29"], "pmo_kpi": 23.2, "score_ops": 58.0, "score_log": 0.0, "declared_hours": 0.0, "violation_count": 7, "is_unverified": false, "perf_group": "🚨 Chưa Nộp Báo Cáo", "group_badge": "bg-rose-500/20 text-rose-300 border-rose-500/40"}, {"name": "Trần Minh Cường", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 0, "missing_days": ["2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29"], "pmo_kpi": 12.0, "score_ops": 30.0, "score_log": 0.0, "declared_hours": 0.0, "violation_count": 64, "is_unverified": false, "perf_group": "🚨 Chưa Nộp Báo Cáo", "group_badge": "bg-rose-500/20 text-rose-300 border-rose-500/40"}, {"name": "Ngô Quang Huấn", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 0, "missing_days": ["2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29"], "pmo_kpi": 12.0, "score_ops": 30.0, "score_log": 0.0, "declared_hours": 0.0, "violation_count": 72, "is_unverified": false, "perf_group": "🚨 Chưa Nộp Báo Cáo", "group_badge": "bg-rose-500/20 text-rose-300 border-rose-500/40"}, {"name": "Nguyễn Huyền Trang", "role": "Giảng viên", "rank": "3", "dept": "Khối CNTT", "campus": "HN", "rep_days": 0, "missing_days": ["2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29"], "pmo_kpi": 12.0, "score_ops": 30.0, "score_log": 0.0, "declared_hours": 0.0, "violation_count": 82, "is_unverified": false, "perf_group": "🚨 Chưa Nộp Báo Cáo", "group_badge": "bg-rose-500/20 text-rose-300 border-rose-500/40"}], "missing_leaders": ["Trần Minh Cường", "Ngô Quang Huấn", "Nguyễn Bá Minh Đạo", "Hồ Xuân Hùng"]};
-        let currentCampus = 'ALL';
-        let currentDept = 'ALL';
+    <!-- BÁO CÁO BỔ SUNG: BAN GIÁM ĐỐC -->
+    <div class="mt-2">
+      <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center gap-2">
+        <span class="w-8 h-px bg-slate-700"></span> Báo Cáo Dành Cho Ban Giám Đốc <span class="flex-1 h-px bg-slate-700"></span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="./director_cockpit.html" class="glass-card rounded-2xl p-5 transition duration-300 flex items-center gap-5 group">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-white transition duration-300 shrink-0">
+            <i class="fa-solid fa-gauge-high text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-cyan-400 transition">Bảng Điều Khiển Giám Đốc Đào Tạo</h3>
+            <p class="text-[11px] text-slate-400 mt-1">Tổng quan toàn viện: tỷ lệ đạt, chuyên cần, care list, nhân sự — cập nhật theo tuần.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right text-cyan-400 opacity-0 group-hover:opacity-100 transition ml-auto"></i>
+        </a>
+        <a href="./weekly_director_report.html" class="glass-card rounded-2xl p-5 transition duration-300 flex items-center gap-5 group">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 group-hover:bg-indigo-500 group-hover:text-white transition duration-300 shrink-0">
+            <i class="fa-solid fa-newspaper text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-indigo-400 transition">Báo Cáo Giao Ban Đào Tạo Tuần</h3>
+            <p class="text-[11px] text-slate-400 mt-1">Nội dung giao ban hàng tuần: điểm nóng, tiến độ lớp học, nhân sự cần can thiệp.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right text-indigo-400 opacity-0 group-hover:opacity-100 transition ml-auto"></i>
+        </a>
+      </div>
+    </div>
 
-        function switchMasterTab(tabKey) {
-            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-            const activeBtn = document.getElementById('nav-' + tabKey);
-            if (activeBtn) activeBtn.classList.add('active');
-
-            const cockpitView = document.getElementById('tab-cockpit-view');
-            const subagentsViewport = document.getElementById('subagents-viewport');
-
-            document.getElementById('tab-agent1-container').classList.add('hidden');
-            document.getElementById('tab-agent2-pred-container').classList.add('hidden');
-            document.getElementById('tab-agent3-container').classList.add('hidden');
-            document.getElementById('tab-agent4-container').classList.add('hidden');
-
-            if (tabKey === 'cockpit') {
-                cockpitView.classList.remove('hidden');
-                subagentsViewport.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            } else {
-                cockpitView.classList.add('hidden');
-                subagentsViewport.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-
-                if (tabKey === 'agent1') {
-                    document.getElementById('tab-agent1-container').classList.remove('hidden');
-                } else if (tabKey === 'agent2') {
-                    document.getElementById('tab-agent2-pred-container').classList.remove('hidden');
-                } else if (tabKey === 'agent3') {
-                    document.getElementById('tab-agent3-container').classList.remove('hidden');
-                } else if (tabKey === 'agent4') {
-                    document.getElementById('tab-agent4-container').classList.remove('hidden');
-                }
-            }
-            window.dispatchEvent(new Event('resize'));
-        }
-
-        function switchStaffSubView(viewType) {
-            if (viewType === 'teaching') {
-                document.getElementById('btn-staff-teaching').classList.add('active');
-                document.getElementById('btn-staff-teaching').classList.remove('text-slate-400');
-                document.getElementById('btn-staff-support').classList.remove('active');
-                document.getElementById('btn-staff-support').classList.add('text-slate-400');
-                document.getElementById('view-teaching-staff').classList.remove('hidden');
-                document.getElementById('view-support-staff').classList.add('hidden');
-            } else {
-                document.getElementById('btn-staff-support').classList.add('active');
-                document.getElementById('btn-staff-support').classList.remove('text-slate-400');
-                document.getElementById('btn-staff-teaching').classList.remove('active');
-                document.getElementById('btn-staff-teaching').classList.add('text-slate-400');
-                document.getElementById('view-support-staff').classList.remove('hidden');
-                document.getElementById('view-teaching-staff').classList.add('hidden');
-            }
-        }
-
-        function setFilter(type, val) {
-            if (type === 'campus') {
-                currentCampus = val;
-                document.querySelectorAll('[id^="filter-campus-"]').forEach(el => el.classList.remove('active'));
-                document.getElementById('filter-campus-' + val).classList.add('active');
-            } else if (type === 'dept') {
-                currentDept = val;
-                document.querySelectorAll('[id^="filter-dept-"]').forEach(el => el.classList.remove('active'));
-                const key = val === 'ALL' ? 'ALL' : (val.includes('CNTT') ? 'CNTT' : 'QTKD');
-                document.getElementById('filter-dept-' + key).classList.add('active');
-            }
-            applyExecutiveFilters();
-        }
-
-        function applyExecutiveFilters() {
-            const filteredClasses = EXECUTIVE_DATA.classes.filter(c => {
-                const matchCampus = (currentCampus === 'ALL' || c.campus === currentCampus);
-                const matchDept = (currentDept === 'ALL' || c.dept === currentDept);
-                return matchCampus && matchDept;
-            });
-
-            const filteredTeachingStaff = EXECUTIVE_DATA.teaching_staff.filter(s => {
-                const matchCampus = (currentCampus === 'ALL' || s.campus === currentCampus);
-                const matchDept = (currentDept === 'ALL' || s.dept.includes(currentDept.replace('Khối ', '')));
-                return matchCampus && matchDept;
-            });
-
-            const filteredSupportStaff = EXECUTIVE_DATA.support_staff.filter(s => {
-                const matchCampus = (currentCampus === 'ALL' || s.campus === currentCampus);
-                const matchDept = (currentDept === 'ALL' || s.dept.includes(currentDept.replace('Khối ', '')));
-                return matchCampus && matchDept;
-            });
-
-            if (filteredClasses.length > 0) {
-                const avgPass = (filteredClasses.reduce((sum, c) => sum + c.pred_pass, 0) / filteredClasses.length).toFixed(1);
-                const avgViol = (filteredClasses.reduce((sum, c) => sum + c.v_class, 0) / filteredClasses.length).toFixed(1);
-                document.getElementById('card-pass-rate').innerText = avgPass + '%';
-                document.getElementById('card-discipline-rate').innerText = (100.0 - avgViol).toFixed(1) + '%';
-            }
-
-            renderGroupedClassCards(filteredClasses);
-            renderStaffTables(filteredTeachingStaff, filteredSupportStaff);
-        }
-
-        function renderGroupedClassCards(classList) {
-            const container = document.getElementById('grouped-class-cards-container');
-            document.getElementById('class-grid-count').innerText = classList.length + ' lớp học';
-            if (!container) return;
-
-            const groupsMap = {};
-            classList.forEach((c) => {
-                if (!groupsMap[c.group_title]) groupsMap[c.group_title] = [];
-                groupsMap[c.group_title].push(c);
-            });
-
-            let html = '';
-            for (const [gTitle, gClasses] of Object.entries(groupsMap)) {
-                html += `
-                <div class="space-y-3.5">
-                    <div class="flex items-center gap-2.5 pb-2 border-b border-slate-800">
-                        <span class="w-3 h-3 rounded-full bg-indigo-500"></span>
-                        <h4 class="text-sm font-extrabold text-slate-100 tracking-wide uppercase">${gTitle}</h4>
-                        <span class="text-xs text-slate-400 font-mono">(${gClasses.length} lớp)</span>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                `;
-
-                gClasses.forEach((c) => {
-                    const borderCls = c.health === 'RED' ? 'border-rose-500/40 bg-gradient-to-br from-rose-500/10 via-slate-900/80 to-slate-900' : (c.health === 'YELLOW' ? 'border-amber-500/40 bg-gradient-to-br from-amber-500/10 via-slate-900/80 to-slate-900' : 'border-slate-800 bg-slate-950/70 hover:border-indigo-500/40');
-                    const badgeCls = c.health === 'RED' ? 'bg-rose-500/20 text-rose-300 border-rose-500/30' : (c.health === 'YELLOW' ? 'bg-amber-500/20 text-amber-300 border-amber-500/30' : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30');
-                    const passCls = c.pred_pass < 60 ? 'text-rose-400 font-black' : (c.pred_pass < 80 ? 'text-amber-400 font-bold' : 'text-emerald-400 font-bold');
-
-                    html += `
-                        <div onclick="openMasterClassDrawerByName('${c.class_name}')" class="glass-card p-5 rounded-xl border ${borderCls} cursor-pointer transition-all hover:scale-[1.01] flex flex-col justify-between space-y-3.5">
-                            <div>
-                                <div class="flex items-center justify-between pb-2.5 border-b border-slate-800/80">
-                                    <div class="flex items-center gap-2">
-                                        <span class="font-black text-slate-100 text-base">${c.class_name}</span>
-                                        <span class="text-xs text-slate-400 font-medium">(${c.campus})</span>
-                                    </div>
-                                    <span class="px-2.5 py-1 rounded text-xs font-bold border ${badgeCls}">${c.status_text}</span>
-                                </div>
-
-                                <div class="mt-3 grid grid-cols-2 gap-3 text-xs">
-                                    <div>
-                                        <span class="text-slate-400 font-medium">Môn học:</span>
-                                        <div class="font-bold text-indigo-300 truncate text-sm mt-0.5">${c.subject}</div>
-                                    </div>
-                                    <div>
-                                        <span class="text-slate-400 font-medium">Giảng dạy:</span>
-                                        <div class="font-semibold text-slate-200 truncate mt-0.5">GV: ${c.gv}</div>
-                                        <div class="text-slate-400 truncate mt-0.5">TG: ${c.tg}</div>
-                                    </div>
-                                </div>
-
-                                <div class="mt-3 p-2.5 rounded-lg bg-slate-950/85 border border-slate-800/80 grid grid-cols-3 text-center text-xs">
-                                    <div>
-                                        <div class="text-slate-400 font-medium">Dự Báo Đỗ</div>
-                                        <div class="text-sm mt-0.5 ${passCls}">${c.pred_pass}%</div>
-                                    </div>
-                                    <div>
-                                        <div class="text-slate-400 font-medium">Vi Phạm</div>
-                                        <div class="text-sm mt-0.5 font-bold ${c.v_class > 15 ? 'text-rose-400' : 'text-slate-200'}">${c.v_class}%</div>
-                                    </div>
-                                    <div>
-                                        <div class="text-slate-400 font-medium">Care List</div>
-                                        <div class="text-sm mt-0.5 font-bold text-amber-300">${c.care_count} SV</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="pt-2.5 border-t border-slate-800/60 flex items-center justify-between text-xs">
-                                <span class="text-slate-300 truncate max-w-[280px]">⚡ ${c.action_takeaway}</span>
-                                <span class="text-indigo-400 font-bold hover:underline">Chi tiết &rarr;</span>
-                            </div>
-                        </div>
-                    `;
-                });
-
-                html += `
-                    </div>
-                </div>
-                `;
-            }
-
-            container.innerHTML = html;
-        }
-
-        function openMasterClassDrawerByName(className) {
-            const found = EXECUTIVE_DATA.classes.find(c => c.class_name === className);
-            if (found) {
-                openMasterClassDrawer(found);
-            }
-        }
-
-        function renderStaffTables(teachingList, supportList) {
-            const tBody = document.getElementById('teaching-staff-tbody');
-            if (tBody) {
-                let html = '';
-                teachingList.forEach((s) => {
-                    const reportCell = s.rep_days === 0 ? '<span class="text-rose-400 font-bold">0/3 ngày 🚨</span>' : `<span class="text-slate-200">${s.rep_days}/3 ngày</span>`;
-                    const classesStr = s.classes_assigned && s.classes_assigned.length ? s.classes_assigned.join(', ') : '—';
-                    html += `
-                    <tr onclick="openMasterStaffDrawerByName('${s.name}', true)" class="hover:bg-slate-800/60 cursor-pointer transition text-sm">
-                        <td class="py-3 px-4 font-semibold text-slate-100">
-                            ${s.name}
-                        </td>
-                        <td class="py-3 px-3 text-slate-300">${s.campus} • Rank ${s.rank}</td>
-                        <td class="py-3 px-3 text-indigo-300 font-mono text-xs">${classesStr}</td>
-                        <td class="py-3 px-3 text-slate-300">${s.role}</td>
-                        <td class="py-3 px-3 text-center font-bold text-slate-200">${s.score_ops}đ</td>
-                        <td class="py-3 px-3 text-center font-medium">${reportCell}</td>
-                        <td class="py-3 px-3 text-center text-slate-300">${s.score_acad}đ</td>
-                        <td class="py-3 px-3 text-center text-slate-300">${s.score_sv}đ</td>
-                        <td class="py-3 px-4 text-center font-black text-emerald-400 text-base">${s.kpi_total}đ</td>
-                        <td class="py-3 px-4 text-center">
-                            <span class="px-2.5 py-1 rounded text-xs font-bold border inline-block whitespace-nowrap ${s.group_badge}">${s.perf_group}</span>
-                        </td>
-                    </tr>
-                    `;
-                });
-                tBody.innerHTML = html;
-            }
-
-            const sBody = document.getElementById('support-staff-tbody');
-            if (sBody) {
-                let html = '';
-                supportList.forEach((s) => {
-                    const reportCell = s.rep_days === 0 ? '<span class="text-rose-400 font-bold">0/3 ngày 🚨</span>' : `<span class="text-slate-200">${s.rep_days}/3 ngày</span>`;
-                    html += `
-                    <tr onclick="openMasterStaffDrawerByName('${s.name}', false)" class="hover:bg-slate-800/60 cursor-pointer transition text-sm">
-                        <td class="py-3 px-4 font-semibold text-slate-100">
-                            ${s.name}
-                        </td>
-                        <td class="py-3 px-3 text-slate-300">${s.campus} • Rank ${s.rank}</td>
-                        <td class="py-3 px-3 text-indigo-300 font-medium">${s.dept}</td>
-                        <td class="py-3 px-3 text-slate-300">${s.role}</td>
-                        <td class="py-3 px-3 text-center font-bold text-slate-200">${s.score_ops}đ</td>
-                        <td class="py-3 px-3 text-center font-medium">${reportCell}</td>
-                        <td class="py-3 px-3 text-center text-slate-300">${s.declared_hours}h</td>
-                        <td class="py-3 px-4 text-center font-black text-indigo-300 text-base">${s.pmo_kpi}đ</td>
-                        <td class="py-3 px-4 text-center">
-                            <span class="px-2.5 py-1 rounded text-xs font-bold border inline-block whitespace-nowrap ${s.group_badge}">${s.perf_group}</span>
-                        </td>
-                    </tr>
-                    `;
-                });
-                sBody.innerHTML = html;
-            }
-        }
-
-        function openMasterStaffDrawerByName(staffName, isTeaching) {
-            const list = isTeaching ? EXECUTIVE_DATA.teaching_staff : EXECUTIVE_DATA.support_staff;
-            const found = list.find(s => s.name === staffName);
-            if (found) {
-                openMasterStaffDrawer(found, isTeaching);
-            }
-        }
-
-        function openMasterClassDrawer(c) {
-            if (!c) return;
-            document.getElementById('master-drawer-title').innerText = c.class_name;
-            document.getElementById('master-drawer-icon').innerHTML = '<i class="fas fa-graduation-cap text-indigo-400"></i>';
-
-            let careHtml = '';
-            if (c.care_list && c.care_list.length > 0) {
-                careHtml = '<div class="mt-4"><div class="font-bold text-slate-100 text-sm mb-2.5 flex items-center justify-between"><span>👥 Danh sách Học viên Care List (' + c.care_count + ' SV):</span><span class="text-xs text-rose-400 font-semibold">' + c.banned_sv_count + ' SV bị cấm thi</span></div><div class="space-y-2">';
-                c.care_list.forEach(s => {
-                    const badgeCls = s.risk_level === 'RED' ? 'bg-rose-500/20 text-rose-300 border-rose-500/40' : 'bg-amber-500/20 text-amber-300 border-amber-500/40';
-                    const paradoxTag = (s.is_excellent && s.is_failed_new) ? '<span class="text-xs text-purple-300 font-bold ml-1.5">⚡ Nghịch lý</span>' : '';
-                    const gpaVal = typeof s.gpa === 'number' ? s.gpa : 0.0;
-                    const attVal = typeof s.att === 'number' ? s.att : 0.0;
-                    const hwVal = typeof s.hw === 'number' ? (100 - s.hw).toFixed(1) : '0.0';
-
-                    careHtml += `
-                    <div class="p-3.5 rounded-lg bg-slate-950/85 border border-slate-800 flex items-center justify-between text-xs">
-                        <div>
-                            <div class="font-bold text-slate-100 text-sm">${s.full_name} <span class="text-xs text-slate-400 font-normal">(${s.student_id})</span>${paradoxTag}</div>
-                            <div class="text-xs text-slate-300 mt-1">GPA: <strong class="text-slate-100">${gpaVal}</strong> • Vắng: <strong class="text-slate-100">${attVal}%</strong> • Nợ BT: <strong class="text-slate-100">${hwVal}%</strong></div>
-                        </div>
-                        <span class="text-xs px-2.5 py-1 rounded font-bold border whitespace-nowrap ${badgeCls}">${s.risk_level}</span>
-                    </div>`;
-                });
-                careHtml += '</div></div>';
-            } else {
-                careHtml = '<div class="mt-3 p-3.5 rounded-lg bg-emerald-500/10 text-emerald-400 text-center text-xs"><i class="fas fa-check-circle mr-1.5"></i>Không có học viên trong danh sách nguy cơ cao.</div>';
-            }
-
-            document.getElementById('master-drawer-body').innerHTML = `
-                <div class="p-4 rounded-xl bg-slate-950/85 border border-slate-800 space-y-2.5 text-xs">
-                    <div class="flex justify-between">
-                        <span class="text-slate-400 font-medium">Môn học & Cơ sở:</span>
-                        <span class="font-bold text-slate-200">${c.subject} • ${c.campus} (${c.dept})</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-slate-400 font-medium">Đội ngũ giảng dạy:</span>
-                        <span class="font-bold text-slate-200">GV: ${c.gv} | TG: ${c.tg}</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-slate-400 font-medium">Dự báo Tỷ lệ Đỗ:</span>
-                        <span class="font-black text-base ${c.pred_pass < 60 ? 'text-rose-400' : 'text-indigo-400'}">${c.pred_pass}%</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-slate-400 font-medium">Tỷ lệ Vi phạm Tổng hợp:</span>
-                        <span class="font-bold text-rose-400">${c.v_class}% (CC: ${c.cc}% • BT: ${c.bt}% • EL: ${c.el}%)</span>
-                    </div>
-                </div>
-
-                <div class="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-200 text-xs">
-                    <div class="font-bold text-sm mb-1"><i class="fas fa-bullhorn mr-1.5"></i>Chỉ đạo điều hành:</div>
-                    <div class="leading-relaxed">${c.action_takeaway}</div>
-                </div>
-
-                ${careHtml}
-            `;
-
-            document.getElementById('master-drawer-backdrop').classList.remove('opacity-0', 'pointer-events-none');
-            document.getElementById('master-slide-drawer').classList.add('open');
-        }
-
-        function openMasterStaffDrawer(s, isTeaching) {
-            if (!s) return;
-            document.getElementById('master-drawer-title').innerText = s.name;
-            document.getElementById('master-drawer-icon').innerHTML = '<i class="fas fa-user-tie text-emerald-400"></i>';
-
-            let reportStatusHtml = s.rep_days === 0 
-                ? '<div class="p-3 rounded-lg bg-rose-500/20 text-rose-300 font-bold text-xs"><i class="fas fa-exclamation-circle mr-1.5"></i>Chưa nộp bất kỳ báo cáo ngày nào (0/3 ngày)! Cần giải trình Ban Giám đốc.</div>'
-                : `<div class="text-slate-200 text-xs">Đã nộp: <strong class="text-emerald-400 font-bold">${s.rep_days}/3 ngày</strong> (Điểm báo cáo: <strong>${s.score_log}đ</strong>)</div>`;
-
-            let detailsHtml = '';
-            if (isTeaching) {
-                detailsHtml = `
-                <div class="grid grid-cols-2 gap-2.5 text-center text-xs">
-                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                        <div class="text-slate-400 font-medium">Kỷ Luật SV (20%)</div>
-                        <div class="font-bold text-slate-100 text-sm mt-1">${s.score_sv}đ</div>
-                    </div>
-                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                        <div class="text-slate-400 font-medium">Tác Nghiệp GV (20%)</div>
-                        <div class="font-bold text-slate-100 text-sm mt-1">${s.score_ops}đ</div>
-                    </div>
-                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                        <div class="text-slate-400 font-medium">Học Tập SV (30%)</div>
-                        <div class="font-bold text-slate-100 text-sm mt-1">${s.score_acad}đ</div>
-                    </div>
-                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                        <div class="text-slate-400 font-medium">Báo Cáo Ngày (30%)</div>
-                        <div class="font-bold text-sm mt-1 ${s.score_log === 0 ? 'text-rose-400' : 'text-slate-100'}">${s.score_log}đ</div>
-                    </div>
-                </div>
-
-                <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs">
-                    <div class="font-bold text-slate-200 mb-1">Lớp đang phụ trách:</div>
-                    <div class="text-slate-300 font-medium">${s.classes_assigned && s.classes_assigned.length ? s.classes_assigned.join(', ') : 'Đang phân công'}</div>
-                </div>
-                `;
-            } else {
-                detailsHtml = `
-                <div class="grid grid-cols-2 gap-2.5 text-center text-xs">
-                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                        <div class="text-slate-400 font-medium">Báo Cáo PMO (60%)</div>
-                        <div class="font-bold text-sm mt-1 ${s.score_log === 0 ? 'text-rose-400' : 'text-slate-100'}">${s.score_log}đ</div>
-                    </div>
-                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                        <div class="text-slate-400 font-medium">Kỷ Luật Tác Nghiệp (40%)</div>
-                        <div class="font-bold text-slate-100 text-sm mt-1">${s.score_ops}đ</div>
-                    </div>
-                </div>
-                `;
-            }
-
-            document.getElementById('master-drawer-body').innerHTML = `
-                <div class="p-4 rounded-xl bg-slate-950/85 border border-slate-800 space-y-2.5 text-xs">
-                    <div class="flex justify-between">
-                        <span class="text-slate-400 font-medium">Vai trò & Rank:</span>
-                        <span class="font-bold text-slate-100">${s.role} • Rank ${s.rank} (${s.campus})</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-slate-400 font-medium">Khối chuyên môn:</span>
-                        <span class="font-bold text-indigo-300">${s.dept}</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-slate-400 font-medium">Điểm Đánh Giá Tổng Hợp:</span>
-                        <span class="text-lg font-black text-emerald-400">${isTeaching ? s.kpi_total : s.pmo_kpi} đ</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-slate-400 font-medium">Xếp loại Năng lực:</span>
-                        <span class="text-xs font-bold px-2.5 py-1 rounded border ${s.group_badge}">${s.perf_group}</span>
-                    </div>
-                </div>
-
-                ${detailsHtml}
-
-                <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
-                    <div class="font-bold text-slate-200 mb-1.5 text-xs">Tình trạng Nhật ký Báo cáo:</div>
-                    ${reportStatusHtml}
-                </div>
-            `;
-
-            document.getElementById('master-drawer-backdrop').classList.remove('opacity-0', 'pointer-events-none');
-            document.getElementById('master-slide-drawer').classList.add('open');
-        }
-
-        function closeMasterDrawer() {
-            document.getElementById('master-drawer-backdrop').classList.add('opacity-0', 'pointer-events-none');
-            document.getElementById('master-slide-drawer').classList.remove('open');
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            applyExecutiveFilters();
-        });
-    </script>
+    <!-- QUICK SUITE NAVIGATION FOOTER -->
+    <div class="glass-card rounded-2xl p-6 text-center space-y-4">
+      <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Bộ Điều Hướng Toàn Diện (Quick Jump Suite)</div>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a href="./10_Bao_Cao_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-blue-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-graduation-cap text-blue-400"></i> BC 1: Học tập &amp; ĐK Thi
+        </a>
+        <a href="./11_Bao_Cao_Du_Bao_Ty_Le_Qua_Mon_KS25_KS26.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-purple-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-shield-halved text-purple-400"></i> BC 2: Dự báo &amp; Cảnh báo
+        </a>
+        <a href="./12_Quan_Ly_Hieu_Suat_Va_Danh_Gia_KPI_Thang.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-amber-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-chart-line text-amber-400"></i> BC 3: KPI Tháng
+        </a>
+        <a href="./13_Bao_Cao_Cham_Cong_Mentor_He_Ngan_Han.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-emerald-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-clock text-emerald-400"></i> BC 4: Chấm công Mentor
+        </a>
+        <a href="./director_cockpit.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-cyan-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-gauge-high text-cyan-400"></i> Cockpit Giám Đốc
+        </a>
+        <a href="./weekly_director_report.html" class="px-4 py-2 rounded-xl bg-slate-900/90 text-slate-300 hover:text-white hover:bg-indigo-600/30 border border-slate-700/80 text-xs font-semibold flex items-center gap-2 transition">
+          <i class="fa-solid fa-newspaper text-indigo-400"></i> Giao Ban Tuần
+        </a>
+      </div>
+      <div class="text-[11px] text-slate-500 pt-2">
+        Hệ thống dữ liệu PMO Data Hub • Đã đồng bộ &amp; xác thực bảo mật thông tin nhân sự theo quy định nội bộ.
+      </div>
+    </div>
+  </main>
 
 </body>
 </html>
