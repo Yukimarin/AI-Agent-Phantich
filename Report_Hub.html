@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Hub — Trung tâm Báo cáo Đào tạo Toàn diện · Rikkei × PTIT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F1F5F9;
+      --surface: #FFFFFF;
+      --surface-soft: #F8FAFC;
+      --surface-hover: #F1F5F9;
+      --border: #E2E8F0;
+      --border-strong: #CBD5E1;
+      --text: #0F172A;
+      --text-sec: #334155;
+      --text-muted: #64748B;
+      --primary: #2563EB;
+      --primary-hover: #1D4ED8;
+      --primary-soft: #EFF6FF;
+      --primary-border: #BFDBFE;
+      --ok-bg: #ECFDF5; --ok-text: #047857; --ok-border: #A7F3D0;
+      --warn-bg: #FFFBEB; --warn-text: #B45309; --warn-border: #FDE68A;
+      --purple-bg: #F5F3FF; --purple-text: #6D28D9; --purple-border: #DDD6FE;
+      --rose-bg: #FFF1F2; --rose-text: #BE123C; --rose-border: #FECDD3;
+      --cyan-bg: #ECFEFF; --cyan-text: #0E7490; --cyan-border: #A5F3FC;
+      --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.1);
+      --radius-lg: 16px;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Header */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-xs);
+    }
+    .topbar-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 13px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-icon {
+      width: 40px; height: 40px; border-radius: 11px;
+      background: linear-gradient(135deg, #2563EB, #1E40AF);
+      color: #FFFFFF; font-weight: 800; font-size: 15px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 3px 8px rgba(37, 99, 235, 0.25);
+    }
+    .brand-title { font-size: 16px; font-weight: 800; color: var(--text); }
+    .brand-sub { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    .topbar-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .btn-crm {
+      display: inline-flex; align-items: center; gap: 8px;
+      height: 38px; padding: 0 15px; border-radius: var(--radius-sm);
+      background: var(--primary); color: #FFFFFF;
+      font-size: 13px; font-weight: 700; text-decoration: none;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+      transition: background 0.15s;
+    }
+    .btn-crm:hover { background: var(--primary-hover); }
+
+    /* Main Container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px 24px 48px 24px;
+    }
+
+    /* Hero Stats & Search */
+    .hero-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px 24px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 22px;
+    }
+    .hero-top {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap; margin-bottom: 18px;
+    }
+    .hero-title { font-size: 21px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; margin-bottom: 4px; }
+    .hero-desc { font-size: 13.5px; color: var(--text-sec); }
+    .stat-chips { display: flex; gap: 10px; flex-wrap: wrap; }
+    .stat-chip {
+      padding: 8px 14px; border-radius: 10px;
+      background: var(--surface-soft); border: 1px solid var(--border);
+      display: flex; flex-direction: column;
+    }
+    .stat-chip-val { font-size: 18px; font-weight: 800; color: var(--primary); line-height: 1.1; }
+    .stat-chip-lbl { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-top: 2px; }
+
+    .controls-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px; flex-wrap: wrap;
+    }
+    .search-box { position: relative; flex: 1; min-width: 260px; }
+    .search-box input {
+      width: 100%; height: 42px; padding: 0 16px 0 40px;
+      border-radius: 10px; border: 1.5px solid var(--border-strong);
+      font-size: 14px; font-family: inherit; outline: none;
+    }
+    .search-box input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12); }
+    .search-box span { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); font-size: 15px; }
+
+    .cat-tabs { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+    .cat-tab {
+      height: 36px; padding: 0 14px; border-radius: 999px;
+      border: 1px solid var(--border-strong); background: var(--surface-soft);
+      color: var(--text-sec); font-size: 12.5px; font-weight: 700;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .cat-tab:hover { background: var(--surface-hover); color: var(--text); }
+    .cat-tab.active { background: var(--primary); border-color: var(--primary); color: #FFFFFF; }
+
+    /* Section Group */
+    .section-block { margin-bottom: 30px; }
+    .section-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 14px;
+    }
+    .section-title { font-size: 16.5px; font-weight: 800; color: var(--text); }
+    .section-count {
+      padding: 2px 10px; border-radius: 999px;
+      background: var(--primary-soft); color: var(--primary);
+      border: 1px solid var(--primary-border);
+      font-size: 12px; font-weight: 700;
+    }
+    .section-line { flex: 1; height: 1px; background: var(--border-strong); }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 14px;
+    }
+    .report-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow-xs);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.16s ease;
+    }
+    .report-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .card-top {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .card-code {
+      font-family: var(--font-mono); font-size: 11.5px; font-weight: 700;
+      padding: 3px 9px; border-radius: 6px;
+    }
+    .code-blue { background: var(--primary-soft); color: var(--primary); border: 1px solid var(--primary-border); }
+    .code-green { background: var(--ok-bg); color: var(--ok-text); border: 1px solid var(--ok-border); }
+    .code-amber { background: var(--warn-bg); color: var(--warn-text); border: 1px solid var(--warn-border); }
+    .code-purple { background: var(--purple-bg); color: var(--purple-text); border: 1px solid var(--purple-border); }
+    .code-rose { background: var(--rose-bg); color: var(--rose-text); border: 1px solid var(--rose-border); }
+    .code-cyan { background: var(--cyan-bg); color: var(--cyan-text); border: 1px solid var(--cyan-border); }
+
+    .card-type {
+      font-size: 11px; font-weight: 700; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .card-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.35; margin-top: 8px; }
+    .card-desc { font-size: 12.5px; color: var(--text-sec); line-height: 1.5; margin-top: 6px; }
+    .card-footer {
+      padding-top: 10px; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    }
+    .card-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+    .card-tag {
+      font-size: 11px; font-weight: 600; padding: 2px 8px;
+      border-radius: 999px; background: var(--surface-soft);
+      border: 1px solid var(--border); color: var(--text-sec);
+    }
+    .card-open { font-size: 12.5px; font-weight: 700; color: var(--primary); white-space: nowrap; }
+
+    .footer {
+      text-align: center; padding: 20px; font-size: 12.5px;
+      color: var(--text-muted); border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-icon">PMO</div>
+        <div>
+          <div class="brand-title">Report Hub · Trung tâm Báo cáo &amp; Phân tích Đào tạo</div>
+          <div class="brand-sub">Tích hợp toàn bộ Dashboard HTML, Báo cáo Excel, Word &amp; Markdown · PTIT × Rikkei</div>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <a href="../../../student_lookup_app/Tra_Cuu_Sinh_Vien.html" target="_blank" class="btn-crm">
+          🎓 Mở Cổng Tra cứu Sinh viên (CRM Tư vấn viên) →
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-panel">
+      <div class="hero-top">
+        <div>
+          <h1 class="hero-title">Danh mục Toàn bộ Báo cáo Dự án Đào tạo</h1>
+          <p class="hero-desc">Tất cả báo cáo định kỳ, chuyên đề học vụ, kiểm toán nhân sự và tệp Excel/Word đột xuất đã được chuẩn hóa &amp; khử trùng lặp.</p>
+        </div>
+        <div class="stat-chips">
+          <div class="stat-chip">
+            <span class="stat-chip-val">14</span>
+            <span class="stat-chip-lbl">Dashboard Định kỳ</span>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-chip-val">12</span>
+            <span class="stat-chip-lbl">HTML Chuyên đề</span>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-chip-val">14</span>
+            <span class="stat-chip-lbl">File Excel Chuẩn</span>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-chip-val">14</span>
+            <span class="stat-chip-lbl">Báo cáo Word / MD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-row">
+        <div class="search-box">
+          <span>🔍</span>
+          <input id="searchInput" type="text" placeholder="Tìm nhanh báo cáo theo tên, mã (BC-10, K24, KS26, KPI, Mentor, Công nợ, Excel...)" autocomplete="off" />
+        </div>
+        <div class="cat-tabs" id="catTabs">
+          <button class="cat-tab active" onclick="setCat('ALL')">Tất cả</button>
+          <button class="cat-tab" onclick="setCat('REGULAR')">1. Dashboard Định kỳ (14)</button>
+          <button class="cat-tab" onclick="setCat('SPECIAL_HTML')">2. HTML Chuyên đề (12)</button>
+          <button class="cat-tab" onclick="setCat('EXCEL')">3. Báo cáo Excel (14)</button>
+          <button class="cat-tab" onclick="setCat('DOC_MD')">4. Word &amp; Tổng hợp MD (14)</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="hubContainer"></div>
+  </main>
+
+  <footer class="footer">
+    PMO Data Hub · Kho dữ liệu kỳ 2026-W48 · Tất cả liên kết mở trực tiếp tệp báo cáo chuẩn trong dự án.
+  </footer>
+
+  <script>
+    let ACTIVE_CAT = 'ALL';
+
+    const SECTIONS = [
+      {
+        id: 'REGULAR',
+        title: '1. Dashboard HTML Định kỳ & Điều hành Thường xuyên (14 Báo cáo)',
+        items: [
+          { code: 'BC-00', badge: 'code-blue', type: 'HTML Dashboard', name: 'Cổng Tổng hợp Toàn viện', desc: 'Trang cổng điều hướng tổng quan hệ thống báo cáo điều hành đào tạo.', href: './00_Cong_Tong_Hop_Toan_Vien.html', tags: ['Tổng quan', 'Điều hành'] },
+          { code: 'BC-01', badge: 'code-blue', type: 'HTML Dashboard', name: 'Báo cáo Giao ban Đào tạo Tuần', desc: 'Tổng hợp chỉ số lớp-môn KS26, điểm nóng học vụ và tiến độ nhân sự phục vụ họp giao ban tuần.', href: './01_Bao_Cao_Giao_Ban_Dao_Tao_Tuan.html', tags: ['Giao ban', 'Hàng tuần', 'KS26'] },
+          { code: 'BC-02', badge: 'code-amber', type: 'HTML Dashboard', name: 'Kiểm toán Hiệu suất Nhân sự Worklane', desc: 'Kiểm toán tiến độ xử lý task, tỷ lệ quá hạn và hiệu suất từng phòng ban trên Worklane.', href: './02_Kiem_Toan_Hieu_Suat_Nhan_Su_Worklane.html', tags: ['Worklane', 'Nhân sự'] },
+          { code: 'BC-03', badge: 'code-cyan', type: 'HTML Dashboard', name: 'Bảng Điều khiển Giám đốc Đào tạo (Director Cockpit)', desc: 'Cockpit chỉ số vĩ mô toàn viện: tỷ lệ đạt, chuyên cần, danh sách lớp báo động đỏ và care list.', href: './03_Bang_Dieu_Khien_Giam_Doc_Dao_Tao.html', tags: ['BGĐ', 'Cockpit'] },
+          { code: 'BC-04', badge: 'code-blue', type: 'HTML Dashboard', name: 'Theo dõi Nề nếp Học tập Sinh viên', desc: 'Theo dõi chuyên cần, tỷ lệ làm bài tập và tiến độ E-Learning của sinh viên các lớp.', href: './04_Theo_Doi_Ne_Nep_Hoc_Tap_Sinh_Vien.html', tags: ['Chuyên cần', 'Bài tập', 'EL'] },
+          { code: 'BC-05', badge: 'code-purple', type: 'HTML Dashboard', name: 'Dự báo Kết quả Học tập & Nguy cơ', desc: 'Mô hình cảnh báo sớm sinh viên có nguy cơ trượt môn hoặc cấm thi.', href: './05_Du_Bao_Ket_Qua_Hoc_Tap_Va_Nguy_Co.html', tags: ['Dự báo', 'Cảnh báo sớm'] },
+          { code: 'BC-06', badge: 'code-rose', type: 'HTML Dashboard', name: 'Kiểm toán Kỷ luật Tác nghiệp GV/TG', desc: 'Theo dõi kỷ luật điểm danh, chấm bài và cập nhật tiến độ giảng dạy của Giảng viên & Trợ giảng.', href: './06_Kiem_Toan_Ky_Luat_Tac_Nghiep_GV_TG.html', tags: ['GV/TG', 'Kỷ luật'] },
+          { code: 'BC-07', badge: 'code-green', type: 'HTML Dashboard', name: 'Phân tích Nhật ký Báo cáo Ngày Worklane', desc: 'Thống kê tần suất, độ trễ và chất lượng nộp báo cáo ngày của đội ngũ vận hành.', href: './07_Phan_Tich_Nhat_Ky_Bao_Cao_Ngay.html', tags: ['Daily Report', 'Worklane'] },
+          { code: 'BC-09', badge: 'code-purple', type: 'HTML Dashboard', name: 'Báo cáo Toàn cảnh Học vụ & Năng lực K24', desc: 'Phân tích toàn diện 342 SV K24: tỷ lệ qua môn, phân luồng thực tập 4 tracks (Backend, FE, BA, Tester).', href: './09_Bao_Cao_Toan_Canh_Hoc_Vu_Va_Nang_Luc_K24.html', tags: ['KS24', 'Thực tập', '4 Tracks'] },
+          { code: 'BC-10', badge: 'code-blue', type: 'HTML Dashboard', name: 'Báo cáo Chỉ số Học tập & Điều kiện Thi', desc: 'Theo dõi trực tiếp các lớp đang triển khai, tỷ lệ đủ ĐK thi R-Point và đối sánh kỳ trước.', href: './10_Bao_Cao_Chi_So_Hoc_Tap_Va_Dieu_Kien_Thi.html', tags: ['R-Point', 'Điều kiện thi', 'KS26'] },
+          { code: 'BC-11', badge: 'code-purple', type: 'HTML Dashboard', name: 'Dự báo Tỷ lệ Qua môn KS25 & KS26 (Early Warning)', desc: 'Phân loại 4 nhóm: An toàn, Nguy cơ, Bảo lưu, Bỏ học theo 6 tiêu chí học vụ; hỗ trợ xuất Excel.', href: './11_Bao_Cao_Du_Bao_Ty_Le_Qua_Mon_KS25_KS26.html', tags: ['KS25', 'KS26', 'EWS'] },
+          { code: 'BC-12', badge: 'code-amber', type: 'HTML Dashboard', name: 'Quản lý Hiệu suất & Đánh giá KPI Tháng', desc: 'Đánh giá 34 nhân sự khối Đào tạo & LMS theo 5 nhóm hiệu suất chuẩn PMO.', href: './12_Quan_Ly_Hieu_Suat_Va_Danh_Gia_KPI_Thang.html', tags: ['KPI Tháng', '34 Nhân sự'] },
+          { code: 'BC-13', badge: 'code-green', type: 'HTML Dashboard', name: 'Báo cáo Chấm công Mentor Hệ Ngắn hạn', desc: 'Tổng hợp số buổi dạy, tổng giờ công Tháng 10 & Tháng 11 của đội ngũ Mentor từ Worklane.', href: './13_Bao_Cao_Cham_Cong_Mentor_He_Ngan_Han.html', tags: ['Mentor', 'Chấm công'] },
+          { code: 'KH-2027', badge: 'code-cyan', type: 'HTML Kế hoạch', name: 'Chiến lược & Kế hoạch Khối Đào tạo 2027', desc: 'Định hướng mục tiêu, quy mô vận hành và lộ trình phát triển Khối Đào tạo năm 2027.', href: './Khoi-dao-tao-2027.html', tags: ['Kế hoạch 2027', 'Chiến lược'] }
+        ]
+      },
+      {
+        id: 'SPECIAL_HTML',
+        title: '2. Báo cáo HTML Chuyên đề & Phân tích Sâu (12 Báo cáo)',
+        items: [
+          { code: 'CĐ-01', badge: 'code-cyan', type: 'HTML Chuyên đề', name: 'Chuyên đề Chuyển dịch Hành vi Học tập KS26', desc: 'Phân tích sự thay đổi chuyên cần, bài tập và E-Learning của SV KS26 giữa các giai đoạn.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/KS26_Chuyen_De_Chuyen_Dich_Hanh_Vi.html', tags: ['KS26', 'Hành vi'] },
+          { code: 'CĐ-02', badge: 'code-rose', type: 'HTML Chuyên đề', name: 'Chuyên đề Phân tích Vi phạm Học vụ KS26', desc: 'Bóc tách chi tiết các nhóm vi phạm kỷ luật học tập của sinh viên khóa KS26.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/KS26_Chuyen_De_Phan_Tich_Vi_Pham.html', tags: ['KS26', 'Vi phạm'] },
+          { code: 'CĐ-03', badge: 'code-amber', type: 'HTML Chuyên đề', name: 'Báo cáo Toàn diện Ngành QTKD', desc: 'Phân tích chuyên sâu tình hình học tập, tỷ lệ qua môn và chuyên cần khối Quản trị Kinh doanh.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/Bao_Cao_Toan_Dien_QTKD.html', tags: ['QTKD', 'Chuyên sâu'] },
+          { code: 'CĐ-04', badge: 'code-blue', type: 'HTML Chuyên đề', name: 'Thống kê Tuần 16–19 Môn IT206 & SEL101', desc: 'Theo dõi chi tiết chỉ số môn Kỹ năng Prompting với AI (IT206) và SEL101 tại HN & HCM.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/Thong_Ke_Tuan_16_19_IT206_SEL101.html', tags: ['IT206', 'SEL101'] },
+          { code: 'CĐ-05', badge: 'code-purple', type: 'HTML Kiến trúc', name: 'Đề xuất Mô hình Quản lý Đào tạo Tập trung', desc: 'Thiết kế luồng dữ liệu tập trung PMO Data Hub và chuẩn hóa quy trình báo cáo.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/Mo_Hinh_Quan_Ly_Tap_Trung.html', tags: ['Mô hình', 'PMO'] },
+          { code: 'CĐ-06', badge: 'code-blue', type: 'HTML Học vụ', name: 'Cổng Học vụ 3 Khóa KS24 · KS25 · KS26', desc: 'Tổng hợp báo cáo chuyên sâu theo từng môn học trọng điểm của 3 khóa.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/08_Chuyen_Sau_Hoc_Vu_Theo_Khoa_Mon_Cu_Luu_Tru/00_Cong_Hoc_Vu_Ba_Khoa_KS24_25_26.html', tags: ['3 Khóa', 'Tổng hợp'] },
+          { code: 'CĐ-07', badge: 'code-purple', type: 'HTML Môn học', name: 'KS24 CNTT — Microservices (IT214)', desc: 'Phân tích kết quả học tập và đồ án môn Microservices khóa KS24.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/08_Chuyen_Sau_Hoc_Vu_Theo_Khoa_Mon_Cu_Luu_Tru/KS24_CNTT_Microservices_IT214.html', tags: ['KS24', 'IT214'] },
+          { code: 'CĐ-08', badge: 'code-blue', type: 'HTML Môn học', name: 'KS25 CNTT — FastAPI (IT105)', desc: 'Báo cáo kết quả môn Xây dựng ứng dụng Web với FastAPI của khóa KS25.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/08_Chuyen_Sau_Hoc_Vu_Theo_Khoa_Mon_Cu_Luu_Tru/KS25_CNTT_FastAPI_IT105.html', tags: ['KS25', 'IT105'] },
+          { code: 'CĐ-09', badge: 'code-amber', type: 'HTML Môn học', name: 'KS25 QTKD — AI Agent', desc: 'Đánh giá tiến độ và điểm số môn AI Agent của sinh viên KS25 ngành QTKD.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/08_Chuyen_Sau_Hoc_Vu_Theo_Khoa_Mon_Cu_Luu_Tru/KS25_QTKD_AI_Agent.html', tags: ['KS25', 'QTKD'] },
+          { code: 'CĐ-10', badge: 'code-amber', type: 'HTML Môn học', name: 'KS25 QTKD — Quản trị Chiến lược (MAN107)', desc: 'Phân tích chuyên cần và kết quả môn Quản trị Chiến lược MAN107 khóa KS25.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/08_Chuyen_Sau_Hoc_Vu_Theo_Khoa_Mon_Cu_Luu_Tru/KS25_QTKD_QuanTriChienLuoc_MAN107.html', tags: ['KS25', 'MAN107'] },
+          { code: 'CĐ-11', badge: 'code-green', type: 'HTML Môn học', name: 'KS26 CNTT — Kỹ năng Học tập (SSK101)', desc: 'Báo cáo môn Kỹ năng học tập SSK101 khối CNTT khóa KS26.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/08_Chuyen_Sau_Hoc_Vu_Theo_Khoa_Mon_Cu_Luu_Tru/KS26_CNTT_KyNangHocTap_SSK101.html', tags: ['KS26', 'SSK101'] },
+          { code: 'CĐ-12', badge: 'code-green', type: 'HTML Môn học', name: 'KS26 QTKD — Kỹ năng Học tập (SSK101)', desc: 'Báo cáo môn Kỹ năng học tập SSK101 khối QTKD khóa KS26.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/HTML_Chuyen_De_Le/08_Chuyen_Sau_Hoc_Vu_Theo_Khoa_Mon_Cu_Luu_Tru/KS26_QTKD_KyNangHocTap_SSK101.html', tags: ['KS26', 'QTKD'] }
+        ]
+      },
+      {
+        id: 'EXCEL',
+        title: '3. Kho Báo cáo Excel Chuẩn hóa theo 5 Nhóm Nghiệp vụ (14 File .xlsx)',
+        items: [
+          { code: 'XLS-K24-1', badge: 'code-green', type: 'Excel · Học vụ K24', name: 'Danh sách Chốt SV Thực tập BA (10 SV & DS 20 Nam + Nữ KS24)', desc: 'Bao gồm sheet Chot_10_SV_Bo_Do (10 SV bôi đỏ đủ Mã SV, SĐT, Email, Tỷ lệ qua môn, Chuyên cần, Điểm TB Project, Số môn nợ) và danh sách đầy đủ.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/01_Hoc_Vu_K24/Danh_Sach_Chot_SV_Thuc_Tap_BA.xlsx', tags: ['KS24', 'Thực tập BA', '10 SV'] },
+          { code: 'XLS-K24-2', badge: 'code-green', type: 'Excel · Học vụ K24', name: 'Đánh giá Chi tiết Năng lực K24 theo 4 Tracks (Figma v2)', desc: 'Bảng đánh giá năng lực toàn diện sinh viên K24 theo 4 định hướng chuyên ngành.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/01_Hoc_Vu_K24/Danh_Gia_Chi_Tiet_Nang_Luc_K24_4_Tracks_Figma_20261117_v2.xlsx', tags: ['KS24', '4 Tracks'] },
+          { code: 'XLS-K24-3', badge: 'code-green', type: 'Excel · Học vụ K24', name: 'Phân luồng Học vụ Chi tiết K24 (342 SV)', desc: 'Dữ liệu gốc phân luồng 342 sinh viên K24 theo tình trạng nợ môn và đủ điều kiện thực tập.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/01_Hoc_Vu_K24/Phan_Luong_Hoc_Vu_Chi_Tiet_K24_342SV_20261116.xlsx', tags: ['KS24', '342 SV'] },
+          { code: 'XLS-K24-4', badge: 'code-green', type: 'Excel · Học vụ K24', name: 'Kế hoạch Đào tạo K24 CNTT', desc: 'Khung chương trình và lộ trình môn học khóa K24 ngành CNTT.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/01_Hoc_Vu_K24/Ke_Hoach_Dao_Tao_K24_CNTT.xlsx', tags: ['KS24', 'Kế hoạch'] },
+          { code: 'XLS-K25-1', badge: 'code-blue', type: 'Excel · K25 & PTIT', name: 'Báo cáo Học vụ K25 & Tín chỉ Xuống khóa K26 (LarkBase v2)', desc: 'Tổng hợp trạng thái học vụ K25, số tín chỉ nợ và danh sách học ghép xuống K26.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/02_Hoc_Vu_K25_Va_Doi_Soat_PTIT/Bao_Cao_Hoc_Vu_K25_Trang_Thai_Va_Tin_Chi_Xuong_Khoa_K26_LarkBase_v2.xlsx', tags: ['KS25', 'Tín chỉ'] },
+          { code: 'XLS-K25-2', badge: 'code-blue', type: 'Excel · K25 & PTIT', name: 'Báo cáo Tư vấn Học viên PTIT (CCCD & Nguy cơ)', desc: 'Danh sách đối soát thông tin CCCD, liên hệ và phân nhóm nguy cơ để tư vấn.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/02_Hoc_Vu_K25_Va_Doi_Soat_PTIT/Bao_Cao_Tu_Van_Hoc_Vien_PTIT_CCCD_Va_Nguy_Co_20261105.xlsx', tags: ['Tư vấn', 'CCCD'] },
+          { code: 'XLS-K25-3', badge: 'code-blue', type: 'Excel · K25 & PTIT', name: 'Đối soát Học viên PTIT & Tỷ lệ Trượt môn', desc: 'Bảng đối soát sĩ số và thống kê tỷ lệ trượt môn theo từng học phần.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/02_Hoc_Vu_K25_Va_Doi_Soat_PTIT/Doi_Soat_Hoc_Vien_PTIT_Va_Ty_Le_Truot_Mon_20261104.xlsx', tags: ['Đối soát', 'Trượt môn'] },
+          { code: 'XLS-K25-4', badge: 'code-blue', type: 'Excel · K25 & PTIT', name: 'Thống kê Nợ môn K24–K25 & Hồ sơ Sinh viên Quay lại', desc: 'Danh sách tổng hợp sinh viên nợ môn K24, K25 và theo dõi hồ sơ bảo lưu quay lại học.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/02_Hoc_Vu_K25_Va_Doi_Soat_PTIT/Thong_Ke_No_Mon_K24_K25_Va_Ho_So_Sinh_Vien_Quay_Lai.xlsx', tags: ['Nợ môn', 'K24-K25'] },
+          { code: 'XLS-NS-1', badge: 'code-amber', type: 'Excel · Nhân sự & KPI', name: 'Bảng Đánh giá Chi tiết Nhân sự Từng Phòng ban (v2)', desc: 'Chấm điểm KPI chi tiết cho từng nhân sự thuộc các phòng ban khối Đào tạo.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/03_Nhan_Su_Va_Danh_Gia_KPI/Bang_Danh_Gia_Chi_Tiet_Nhan_Su_Tung_Phong_Ban_20261117_v2.xlsx', tags: ['Nhân sự', 'KPI'] },
+          { code: 'XLS-NS-2', badge: 'code-amber', type: 'Excel · Nhân sự & KPI', name: 'Bộ Tiêu chí Đánh giá Khen thưởng Khối Đào tạo (LMS & QLĐT)', desc: 'Khung tiêu chí và trọng số đánh giá hiệu suất, khen thưởng cuối kỳ.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/03_Nhan_Su_Va_Danh_Gia_KPI/Bo_Tieu_Chi_Danh_Gia_Khen_Thuong_Khoi_Dao_Tao_LMS_QLDT_20261116.xlsx', tags: ['Tiêu chí', 'Khen thưởng'] },
+          { code: 'XLS-NS-3', badge: 'code-amber', type: 'Excel · Nhân sự & KPI', name: 'Danh sách Nhân sự Khối Đào tạo theo Rank', desc: 'Phân hạng nhân sự khối Đào tạo theo kết quả đánh giá năng lực & KPI.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/03_Nhan_Su_Va_Danh_Gia_KPI/Danh_Sach_Nhan_Su_Khoi_Dao_Tao_Theo_Rank.xlsx', tags: ['Rank', 'Nhân sự'] },
+          { code: 'XLS-TA-1', badge: 'code-purple', type: 'Excel · Tiếng Anh & TKB', name: 'Phân loại Sinh viên Tiếng Anh Jaxtina (18/11)', desc: 'Danh sách phân lớp và kết quả kiểm tra đầu vào/đầu ra Tiếng Anh phối hợp Jaxtina.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/04_Tieng_Anh_Va_TKB/Phan_Loai_SV_Jaxtina_18_11.xlsx', tags: ['Jaxtina', 'Tiếng Anh'] },
+          { code: 'XLS-TA-2', badge: 'code-purple', type: 'Excel · Tiếng Anh & TKB', name: 'Backup Thời khóa biểu Hiện tại LMS K26', desc: 'Bản lưu trữ toàn bộ lịch học, ca học và phân công giảng viên khóa KS26 trên LMS.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/04_Tieng_Anh_Va_TKB/Backup_Thoi_Khoa_Bieu_Hien_Tai_LMS_K26_20261107.xlsx', tags: ['TKB', 'KS26'] },
+          { code: 'XLS-TC-1', badge: 'code-rose', type: 'Excel · Tài chính (Cách ly)', name: 'Báo cáo Công nợ Tháng 11 (Từng Nghiệp vụ Riêng Sheet)', desc: 'Tệp theo dõi công nợ học phí tách biệt hoàn toàn khỏi luồng học vụ đào tạo.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Excel_Xlsx/05_Tai_Chinh_Cong_No/Bao_Cao_Cong_No_T11_Tung_Nghiep_Vu_Rieng_Sheet.xlsx', tags: ['Công nợ', 'Tài chính'] }
+        ]
+      },
+      {
+        id: 'DOC_MD',
+        title: '4. Báo cáo Word (.docx) & Văn bản Tổng hợp Markdown (14 Tài liệu)',
+        items: [
+          { code: 'DOC-01', badge: 'code-blue', type: 'Word (.docx)', name: 'Báo cáo Kế hoạch Mở lớp Học lại K24–K25 (Chốt Phương án)', desc: 'Tờ trình phương án tổ chức lớp học lại, lịch trình và định biên cho SV nợ môn K24, K25.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Word_Docx/Bao_Cao_Ke_Hoach_Mo_Lop_K24_K25_Chot_Phuong_An_20261106.docx', tags: ['Word', 'Học lại K24-K25'] },
+          { code: 'DOC-02', badge: 'code-purple', type: 'Word (.docx)', name: 'Đề xuất Quản lý Đào tạo Tập trung (Trình bày 10 phút)', desc: 'Tài liệu tóm tắt mô hình quản lý đào tạo tập trung phục vụ báo cáo nhanh BGĐ.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Word_Docx/De_Xuat_QLDT_Tap_Trung_10phut.docx', tags: ['Word', 'Đề xuất QLĐT'] },
+          { code: 'DOC-03', badge: 'code-rose', type: 'Word (.docx)', name: 'Báo cáo Vi phạm Học vụ KS26 Trình BGĐ', desc: 'Văn bản báo cáo chính thức trình Ban Giám đốc về tình hình vi phạm và biện pháp xử lý KS26.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Word_Docx/KS26_Bao_Cao_Vi_Pham_Trinh_BGĐ.docx', tags: ['Word', 'Trình BGĐ'] },
+          { code: 'MD-W48', badge: 'code-cyan', type: 'Markdown Tuần', name: 'Báo cáo Tổng hợp Tuần 2026-W48 (Mới nhất — Chốt Rpoint IT206)', desc: 'Bản tổng hợp toàn bộ 39 lớp-môn kỳ W48 và thống kê chốt Rpoint môn Kỹ năng Prompting với AI (215/224 đủ ĐK thi).', href: '../Markdown_Tong_Hop/01_Bao_Cao_Tong_Hop_Tuan_2026-W48.md', tags: ['2026-W48', 'IT206-K26'] },
+          { code: 'MD-W47', badge: 'code-cyan', type: 'Markdown Tuần', name: 'Báo cáo Tổng hợp Tuần 2026-W47', desc: 'Bản tổng hợp chỉ số học tập và nhân sự kỳ 2026-W47.', href: '../Markdown_Tong_Hop/01_Bao_Cao_Tong_Hop_Tuan_2026-W47.md', tags: ['2026-W47', 'Tổng hợp'] },
+          { code: 'MD-00', badge: 'code-blue', type: 'Markdown Định kỳ', name: 'Báo cáo Giao ban Ngày', desc: 'Bản ghi nhanh chỉ số giao ban hàng ngày khối Đào tạo.', href: '../Markdown_Tong_Hop/00_Bao_Cao_Giao_Ban_Ngay.md', tags: ['Giao ban ngày'] },
+          { code: 'MD-02', badge: 'code-amber', type: 'Markdown Định kỳ', name: 'Đánh giá KPI Giảng viên & Trợ giảng', desc: 'Tài liệu phân tích chi tiết chỉ số KPI đội ngũ Giảng viên và Trợ giảng.', href: '../Markdown_Tong_Hop/02_Danh_Gia_KPI_Giang_Vien_Tro_Giang.md', tags: ['KPI GV/TG'] },
+          { code: 'MD-03', badge: 'code-cyan', type: 'Markdown Định kỳ', name: 'Báo cáo Giám đốc Đào tạo', desc: 'Bản nhận định chiến lược và đề xuất hành động dành cho Giám đốc Đào tạo.', href: '../Markdown_Tong_Hop/03_Bao_Cao_Giam_Doc_Dao_Tao.md', tags: ['Giám đốc ĐT'] },
+          { code: 'MD-04', badge: 'code-blue', type: 'Markdown Định kỳ', name: 'Chi tiết Nề nếp Sinh viên', desc: 'Phân tích văn bản chi tiết về tình hình chuyên cần và bài tập các lớp.', href: '../Markdown_Tong_Hop/04_Chi_Tiet_Ne_Nep_Sinh_Vien.md', tags: ['Nề nếp SV'] },
+          { code: 'MD-05', badge: 'code-purple', type: 'Markdown Định kỳ', name: 'Chi tiết Dự báo Học vụ', desc: 'Danh sách và phân tích các trường hợp sinh viên nguy cơ cao.', href: '../Markdown_Tong_Hop/05_Chi_Tiet_Du_Bao_Hoc_Vu.md', tags: ['Dự báo'] },
+          { code: 'MD-06', badge: 'code-rose', type: 'Markdown Định kỳ', name: 'Chi tiết Vi phạm Tác nghiệp GV/TG', desc: 'Bản ghi nhận chi tiết các lỗi tác nghiệp LMS và lớp học của GV/TG.', href: '../Markdown_Tong_Hop/06_Chi_Tiet_Vi_Pham_Tac_Nghiep_GV_TG.md', tags: ['Vi phạm GV/TG'] },
+          { code: 'MD-07', badge: 'code-green', type: 'Markdown Định kỳ', name: 'Chi tiết Báo cáo Ngày Worklane', desc: 'Tổng hợp nội dung báo cáo ngày trên hệ thống Worklane.', href: '../Markdown_Tong_Hop/07_Chi_Tiet_Bao_Cao_Ngay_Worklane.md', tags: ['Worklane'] },
+          { code: 'MD-K24', badge: 'code-purple', type: 'Markdown Chuyên đề', name: 'Báo cáo Đánh giá Năng lực K24 4 Tracks & Kế hoạch Thực tập', desc: 'Phân tích chuyên sâu năng lực 342 SV K24 và phương án phân bổ thực tập doanh nghiệp.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Markdown_Phan_Tich_Le/2026-11-17_Bao_Cao_Danh_Gia_Nang_Luc_K24_4_Tracks_Figma.md', tags: ['KS24', 'Thực tập'] },
+          { code: 'MD-KT', badge: 'code-amber', type: 'Markdown Chuyên đề', name: 'Báo cáo Đánh giá Khen thưởng Từng Phòng ban', desc: 'Tổng hợp kết quả đánh giá và đề xuất khen thưởng các bộ phận.', href: '../../02_Thong_Ke_Dot_Xuat_Theo_Task/Markdown_Phan_Tich_Le/2026-11-17_Bao_Cao_Danh_Gia_Khen_Thuong_Tung_Phong_Ban.md', tags: ['Khen thưởng'] }
+        ]
+      }
+    ];
+
+    function norm(s) {
+      return String(s || '')
+        .replace(/đ/g, 'd').replace(/Đ/g, 'D')
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    function setCat(catId) {
+      ACTIVE_CAT = catId;
+      const btns = document.querySelectorAll('#catTabs .cat-tab');
+      const ids = ['ALL', 'REGULAR', 'SPECIAL_HTML', 'EXCEL', 'DOC_MD'];
+      btns.forEach((b, idx) => b.classList.toggle('active', ids[idx] === catId));
+      renderHub();
+    }
+
+    function renderHub() {
+      const q = norm(document.getElementById('searchInput').value).trim();
+      const tokens = q ? q.split(/\s+/).filter(Boolean) : [];
+      const container = document.getElementById('hubContainer');
+      const htmlParts = [];
+
+      for (const sec of SECTIONS) {
+        if (ACTIVE_CAT !== 'ALL' && sec.id !== ACTIVE_CAT) continue;
+        const matched = sec.items.filter(item => {
+          if (!tokens.length) return true;
+          const hay = norm(`${item.code} ${item.type} ${item.name} ${item.desc} ${item.tags.join(' ')}`);
+          return tokens.every(t => hay.includes(t));
+        });
+        if (!matched.length) continue;
+
+        htmlParts.push(`
+          <section class="section-block">
+            <div class="section-header">
+              <h2 class="section-title">${sec.title}</h2>
+              <span class="section-count">${matched.length} báo cáo</span>
+              <div class="section-line"></div>
+            </div>
+            <div class="cards-grid">
+              ${matched.map(r => `
+                <a class="report-card" href="${r.href}" target="_blank" rel="noopener">
+                  <div>
+                    <div class="card-top">
+                      <span class="card-code ${r.badge}">${r.code}</span>
+                      <span class="card-type">${r.type}</span>
+                    </div>
+                    <div class="card-title">${r.name}</div>
+                    <div class="card-desc">${r.desc}</div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-tags">
+                      ${r.tags.map(t => `<span class="card-tag">${t}</span>`).join('')}
+                    </div>
+                    <span class="card-open">Mở báo cáo →</span>
+                  </div>
+                </a>
+              `).join('')}
+            </div>
+          </section>
+        `);
+      }
+
+      container.innerHTML = htmlParts.length
+        ? htmlParts.join('')
+        : '<div style="text-align:center;padding:60px 20px;color:var(--text-muted);background:#FFF;border-radius:12px;border:1px solid var(--border);">Không tìm thấy báo cáo nào khớp với từ khóa tìm kiếm.</div>';
+    }
+
+    document.getElementById('searchInput').addEventListener('input', renderHub);
+    renderHub();
+  </script>
+</body>
+</html>
